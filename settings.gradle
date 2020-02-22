@@ -8,4 +8,20 @@
  */
 
 rootProject.name = 'JavaBLEUtil'
+
 include 'core'
+include ':desciptor:u2900'
+include ':desciptor:u2901'
+include ':desciptor:u2902'
+include ':desciptor:u2903'
+include ':desciptor:u2904'
+include ':desciptor:u2905'
+include ':desciptor:u2906'
+include ':desciptor:u2907'
+include ':desciptor:u2908'
+include ':desciptor:u2909'
+include ':desciptor:u290a'
+include ':desciptor:u290b'
+include ':desciptor:u290c'
+include ':desciptor:u290d'
+include ':desciptor:u290e'

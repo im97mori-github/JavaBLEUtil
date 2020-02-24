@@ -48,4 +48,40 @@ public class AggregateTest {
         assertArrayEquals(Arrays.copyOfRange(data, 0, 2), result1.getAnalogInput(0));
     }
 
+    @Test
+    public void test_parcelable101() {
+        //@formatter:off
+        byte[] data = new byte[3];
+        data[ 0] = AutomationIoUtils.DIGITAL_INACTIVE;
+        data[ 1] = 0x01;
+        data[ 2] = 0x02;
+        //@formatter:on
+
+        Aggregate result1 = new Aggregate(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable102() {
+        //@formatter:off
+        byte[] data = new byte[1];
+        data[ 0] = AutomationIoUtils.DIGITAL_ACTIVE;
+        //@formatter:on
+
+        Aggregate result1 = new Aggregate(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable103() {
+        //@formatter:off
+        byte[] data = new byte[2];
+        data[ 0] = 0x01;
+        data[ 1] = 0x02;
+        //@formatter:on
+
+        Aggregate result1 = new Aggregate(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+    
 }

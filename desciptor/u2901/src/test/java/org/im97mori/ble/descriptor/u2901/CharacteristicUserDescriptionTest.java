@@ -1,5 +1,6 @@
 package org.im97mori.ble.descriptor.u2901;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -16,4 +17,16 @@ public class CharacteristicUserDescriptionTest {
         CharacteristicUserDescription result = new CharacteristicUserDescription(value);
         assertEquals(text, result.getUserDescription());
     }
+    
+    @Test
+    public void test_parcelable002() {
+        //@formatter:off
+        String text = "abced";
+        byte[] value = text.getBytes();
+        //@formatter:on
+
+        CharacteristicUserDescription result1 = new CharacteristicUserDescription(value);
+        assertArrayEquals(value, result1.getBytes());
+    }
+    
 }

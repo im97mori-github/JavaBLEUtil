@@ -38,4 +38,16 @@ public class CharacteristicAggregateFormatTest {
         assertEquals((value[2] & 0xff) | ((value[3] & 0xff) << 8), result.getHandle(1));
     }
 
+    @Test
+    public void test_parcelable002() {
+        //@formatter:off
+        byte[] value = new byte[2];
+        value[ 0] = 0x01;
+        value[ 1] = 0x02;
+        //@formatter:on
+
+        CharacteristicAggregateFormat result1 = new CharacteristicAggregateFormat(value);
+        assertArrayEquals(value, result1.getBytes());
+    }
+
 }

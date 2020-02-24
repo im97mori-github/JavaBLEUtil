@@ -1,5 +1,6 @@
 package org.im97mori.ble.descriptor.u290b;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -41,6 +42,17 @@ public class EnvironmentalSensingConfigurationTest {
         EnvironmentalSensingConfiguration result = new EnvironmentalSensingConfiguration(value);
         assertFalse(result.isTriggerLogicValueBooleanAnd());
         assertTrue(result.isTriggerLogicValueBooleanOr());
+    }
+
+    @Test
+    public void test_parcelable002() {
+        //@formatter:off
+        byte[] value = new byte[1];
+        value[ 0] = 0x01;
+        //@formatter:on
+
+        EnvironmentalSensingConfiguration result1 = new EnvironmentalSensingConfiguration(value);
+        assertArrayEquals(value, result1.getBytes());
     }
 
 }

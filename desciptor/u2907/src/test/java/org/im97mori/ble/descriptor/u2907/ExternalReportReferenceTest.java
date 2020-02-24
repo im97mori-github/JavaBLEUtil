@@ -28,4 +28,16 @@ public class ExternalReportReferenceTest {
         assertEquals(uuid, result.getExternalReportReferenceUuid());
     }
 
+    @Test
+    public void test_parcelable002() {
+        //@formatter:off
+        byte[] value = new byte[2];
+        value[ 0] = 0x01;
+        value[ 1] = 0x02;
+        //@formatter:on
+
+        ExternalReportReference result1 = new ExternalReportReference(value);
+        assertArrayEquals(value, result1.getBytes());
+    }
+
 }

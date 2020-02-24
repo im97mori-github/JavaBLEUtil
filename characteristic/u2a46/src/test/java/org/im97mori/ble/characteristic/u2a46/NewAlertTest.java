@@ -1,5 +1,6 @@
 package org.im97mori.ble.characteristic.u2a46;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -170,6 +171,141 @@ public class NewAlertTest {
         assertEquals(0xff, result1.getNumberOfNewAlert());
         assertNotNull(result1.getTextStringInformation());
         assertEquals("ab", result1.getTextStringInformation());
+    }
+
+    @Test
+    public void test_parcelable101() {
+        //@formatter:off
+        byte[] data = new byte[2];
+        data[ 0] = AlertCategoryIdUtils.CATEGORY_ID_SIMPLE_ALERT;
+        data[ 1] = 0;
+        //@formatter:on
+
+        NewAlert result1 = new NewAlert(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable102() {
+        //@formatter:off
+        byte[] data = new byte[2];
+        data[ 0] = AlertCategoryIdUtils.CATEGORY_ID_EMAIL;
+        data[ 1] = (byte) 0xff;
+        //@formatter:on
+
+        NewAlert result1 = new NewAlert(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable103() {
+        //@formatter:off
+        byte[] data = new byte[3];
+        data[ 0] = AlertCategoryIdUtils.CATEGORY_ID_NEWS;
+        data[ 1] = (byte) 0xff;
+        data[ 2] = 'a';
+        //@formatter:on
+
+        NewAlert result1 = new NewAlert(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable104() {
+        //@formatter:off
+        byte[] data = new byte[4];
+        data[ 0] = AlertCategoryIdUtils.CATEGORY_ID_CALL;
+        data[ 1] = (byte) 0xff;
+        data[ 2] = 'a';
+        data[ 3] = 'b';
+        //@formatter:on
+
+        NewAlert result1 = new NewAlert(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable105() {
+        //@formatter:off
+        byte[] data = new byte[4];
+        data[ 0] = AlertCategoryIdUtils.CATEGORY_ID_MISSED_CALL;
+        data[ 1] = (byte) 0xff;
+        data[ 2] = 'a';
+        data[ 3] = 'b';
+        //@formatter:on
+
+        NewAlert result1 = new NewAlert(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable106() {
+        //@formatter:off
+        byte[] data = new byte[4];
+        data[ 0] = AlertCategoryIdUtils.CATEGORY_ID_SMS_MMS;
+        data[ 1] = (byte) 0xff;
+        data[ 2] = 'a';
+        data[ 3] = 'b';
+        //@formatter:on
+
+        NewAlert result1 = new NewAlert(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable107() {
+        //@formatter:off
+        byte[] data = new byte[4];
+        data[ 0] = AlertCategoryIdUtils.CATEGORY_ID_VOICE_MAIL;
+        data[ 1] = (byte) 0xff;
+        data[ 2] = 'a';
+        data[ 3] = 'b';
+        //@formatter:on
+
+        NewAlert result1 = new NewAlert(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable108() {
+        //@formatter:off
+        byte[] data = new byte[4];
+        data[ 0] = AlertCategoryIdUtils.CATEGORY_ID_SCHEDULE;
+        data[ 1] = (byte) 0xff;
+        data[ 2] = 'a';
+        data[ 3] = 'b';
+        //@formatter:on
+
+        NewAlert result1 = new NewAlert(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable109() {
+        //@formatter:off
+        byte[] data = new byte[4];
+        data[ 0] = AlertCategoryIdUtils.CATEGORY_ID_HIGH_PRIORITIZED_ALERT;
+        data[ 1] = (byte) 0xff;
+        data[ 2] = 'a';
+        data[ 3] = 'b';
+        //@formatter:on
+
+        NewAlert result1 = new NewAlert(data);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable110() {
+        //@formatter:off
+        byte[] data = new byte[4];
+        data[ 0] = AlertCategoryIdUtils.CATEGORY_ID_INSTANT_MESSAGE;
+        data[ 1] = (byte) 0xff;
+        data[ 2] = 'a';
+        data[ 3] = 'b';
+        //@formatter:on
+
+        NewAlert result1 = new NewAlert(data);
+        assertArrayEquals(data, result1.getBytes());
     }
 
 }

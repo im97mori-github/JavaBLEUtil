@@ -1163,7 +1163,6 @@ public class CharacteristicPresentationFormatTest {
         value[ 6] = (byte) 0xff;
         //@formatter:on
 
-
         CharacteristicPresentationFormat result = new CharacteristicPresentationFormat(value);
         assertFalse(result.isFormatBoolean());
         assertFalse(result.isFormatUnsigned2BitInteger());
@@ -1227,4 +1226,22 @@ public class CharacteristicPresentationFormatTest {
         CharacteristicPresentationFormat result = new CharacteristicPresentationFormat(value);
         assertTrue(result.isNamespaceBluetoothSigAssignedNumbers());
     }
+
+    @Test
+    public void test_parcelable002() {
+        //@formatter:off
+        byte[] value = new byte[7];
+        value[ 0] = 0x01;
+        value[ 1] = 0x02;
+        value[ 2] = 0x03;
+        value[ 3] = 0x04;
+        value[ 4] = 0x05;
+        value[ 5] = 0x06;
+        value[ 6] = 0x07;
+        //@formatter:on
+
+        CharacteristicPresentationFormat result1 = new CharacteristicPresentationFormat(value);
+        assertArrayEquals(value, result1.getBytes());
+    }
+
 }

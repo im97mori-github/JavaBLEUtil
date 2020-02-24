@@ -1,5 +1,6 @@
 package org.im97mori.ble.descriptor.u290d;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -218,6 +219,17 @@ public class EnvironmentalSensingTriggerSettingTest {
         assertFalse(result.isConditionsTriggerWhileGreaterThanOrEqualToTheSpecifiedValue());
         assertFalse(result.isConditionsTriggerWhileEqualToTheSpecifiedValue());
         assertTrue(result.isConditionsTriggerWhileNotEqualToTheSpecifiedValue());
+    }
+    
+    @Test
+    public void test_parcelable002() {
+        //@formatter:off
+        byte[] value = new byte[1];
+        value[ 0] = 0x01;
+        //@formatter:on
+
+        EnvironmentalSensingTriggerSetting result1 = new EnvironmentalSensingTriggerSetting(value);
+        assertArrayEquals(value, result1.getBytes());
     }
 
 }

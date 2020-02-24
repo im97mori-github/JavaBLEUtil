@@ -2223,4 +2223,25 @@ public class EnvironmentalSensingMeasurementTest {
         assertFalse(result.isMeasurementUncertaintyInformationNotAvailable());
     }
 
+    @Test
+    public void test_parcelable002() {
+        //@formatter:off
+        byte[] value = new byte[11];
+        value[ 0] = 0x01;
+        value[ 1] = 0x02;
+        value[ 2] = 0x03;
+        value[ 3] = 0x04;
+        value[ 4] = 0x05;
+        value[ 5] = 0x06;
+        value[ 6] = 0x07;
+        value[ 7] = 0x08;
+        value[ 8] = 0x09;
+        value[ 9] = 0x0a;
+        value[10] = 0x0b;
+        //@formatter:on
+
+        EnvironmentalSensingMeasurement result1 = new EnvironmentalSensingMeasurement(value);
+        assertArrayEquals(value, result1.getBytes());
+    }
+
 }

@@ -1,5 +1,6 @@
 package org.im97mori.ble.descriptor.u2908;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -61,6 +62,18 @@ public class ReportReferenceTest {
         assertFalse(result.isReportTypeInputReport());
         assertFalse(result.isReportTypeOutputReport());
         assertTrue(result.isReportTypeFeatureReport());
+    }
+
+    @Test
+    public void test_parcelable002() {
+        //@formatter:off
+        byte[] value = new byte[2];
+        value[ 0] = 0x01;
+        value[ 1] = 0x02;
+        //@formatter:on
+
+        ReportReference result1 = new ReportReference(value);
+        assertArrayEquals(value, result1.getBytes());
     }
 
 }

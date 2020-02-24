@@ -1,5 +1,6 @@
 package org.im97mori.ble.descriptor.u290e;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -107,5 +108,23 @@ public class TimeTriggerSettingTest {
         assertFalse(result.isConditionNotIndicatedOrNotifiedMoreOftenThanASettableTime());
         assertTrue(result.isConditionChangedMoreOfthenThan());
     }
+    
+    @Test
+    public void test_parcelable002() {
+        //@formatter:off
+        byte[] value = new byte[7];
+        value[ 0] = 0x01;
+        value[ 1] = 0x02;
+        value[ 2] = 0x03;
+        value[ 3] = 0x04;
+        value[ 4] = 0x05;
+        value[ 5] = 0x06;
+        value[ 6] = 0x07;
+        //@formatter:on
+
+        TimeTriggerSetting result1 = new TimeTriggerSetting(value);
+        assertArrayEquals(value, result1.getBytes());
+    }
+
 
 }

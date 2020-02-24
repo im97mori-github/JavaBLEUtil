@@ -275,4 +275,41 @@ public class ValueTriggerSettingTest {
         assertEquals(0xff070605L, result.getValueAnalogInterval());
     }
 
+    @Test
+    public void test_parcelable002() {
+        //@formatter:off
+        byte[] value = new byte[8];
+        value[ 0] = 0x01;
+        value[ 1] = 0x02;
+        value[ 2] = 0x03;
+        value[ 3] = 0x04;
+        value[ 4] = 0x05;
+        value[ 5] = 0x06;
+        value[ 6] = 0x07;
+        value[ 7] = 0x08;
+        //@formatter:on
+
+        ValueTriggerSetting result1 = new ValueTriggerSetting(value);
+        assertArrayEquals(value, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable005() {
+        //@formatter:off
+        byte[] value = new byte[9];
+        value[ 0] = 0x01;
+        value[ 1] = 0x02;
+        value[ 2] = 0x03;
+        value[ 3] = 0x04;
+        value[ 4] = 0x05;
+        value[ 5] = 0x06;
+        value[ 6] = 0x07;
+        value[ 7] = 0x08;
+        value[ 8] = 0x09;
+        //@formatter:on
+
+        ValueTriggerSetting result1 = new ValueTriggerSetting(value);
+        assertArrayEquals(value, result1.getBytes());
+    }
+
 }

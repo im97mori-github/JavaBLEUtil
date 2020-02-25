@@ -226,6 +226,18 @@ ext.characteristicU2a9c = [
         , uploadVersionName: '0.1.0'
 ]
 
+ext.characteristicU2aa4 = [
+        artifactId         : 'ble-characteristic-u2aa4'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2aa5 = [
+        artifactId         : 'ble-characteristic-u2aa5'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
 ext.apiCore = "${groupId}:${core.artifactId}:${core.versionName}"
 ext.apiCharacteristicCore = "${groupId}:${characteristicCore.artifactId}:${characteristicCore.versionName}"
 ext.junit = 'junit:junit:4.13'

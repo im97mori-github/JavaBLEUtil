@@ -214,6 +214,12 @@ ext.characteristicU2a2b = [
         , uploadVersionName: '0.1.0'
 ]
 
+ext.characteristicU2a2c = [
+        artifactId         : 'ble-characteristic-u2a2c'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
 ext.characteristicU2a35 = [
         artifactId         : 'ble-characteristic-u2a35'
         , versionName      : '0.1.0'
@@ -334,6 +340,109 @@ ext.characteristicU2a66 = [
         , uploadVersionName: '0.1.0'
 ]
 
+ext.characteristicU2a6c = [
+        artifactId         : 'ble-characteristic-u2a6c'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a6d = [
+        artifactId         : 'ble-characteristic-u2a6d'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a6e = [
+        artifactId         : 'ble-characteristic-u2a6e'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a6f = [
+        artifactId         : 'ble-characteristic-u2a6f'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a70 = [
+        artifactId         : 'ble-characteristic-u2a70'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a71 = [
+        artifactId         : 'ble-characteristic-u2a71'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a72 = [
+        artifactId         : 'ble-characteristic-u2a72'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a73 = [
+        artifactId         : 'ble-characteristic-u2a73'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a74 = [
+        artifactId         : 'ble-characteristic-u2a74'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a75 = [
+        artifactId         : 'ble-characteristic-u2a75'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a76 = [
+        artifactId         : 'ble-characteristic-u2a76'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a77 = [
+        artifactId         : 'ble-characteristic-u2a77'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a78 = [
+        artifactId         : 'ble-characteristic-u2a78'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a79 = [
+        artifactId         : 'ble-characteristic-u2a79'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a7a = [
+        artifactId         : 'ble-characteristic-u2a7a'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a7b = [
+        artifactId         : 'ble-characteristic-u2a7b'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+
+ext.characteristicU2a7d = [
+        artifactId         : 'ble-characteristic-u2a7d'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
 ext.characteristicU2a9b = [
         artifactId         : 'ble-characteristic-u2a9b'
         , versionName      : '0.1.0'
@@ -342,6 +451,24 @@ ext.characteristicU2a9b = [
 
 ext.characteristicU2a9c = [
         artifactId         : 'ble-characteristic-u2a9c'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2aa0 = [
+        artifactId         : 'ble-characteristic-u2aa0'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2aa1 = [
+        artifactId         : 'ble-characteristic-u2aa1'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2aa3 = [
+        artifactId         : 'ble-characteristic-u2aa3'
         , versionName      : '0.1.0'
         , uploadVersionName: '0.1.0'
 ]

@@ -484,6 +484,36 @@ ext.characteristicU2a66 = [
         , uploadVersionName: '0.1.0'
 ]
 
+ext.characteristicU2a67 = [
+        artifactId         : 'ble-characteristic-u2a67'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a68 = [
+        artifactId         : 'ble-characteristic-u2a68'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a69 = [
+        artifactId         : 'ble-characteristic-u2a69'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a6a = [
+        artifactId         : 'ble-characteristic-u2a6a'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a6b = [
+        artifactId         : 'ble-characteristic-u2a6b'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
 ext.characteristicU2a6c = [
         artifactId         : 'ble-characteristic-u2a6c'
         , versionName      : '0.1.0'

@@ -208,6 +208,18 @@ ext.characteristicU2a14 = [
         , uploadVersionName: '0.1.0'
 ]
 
+ext.characteristicU2a16 = [
+        artifactId         : 'ble-characteristic-u2a16'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a17 = [
+        artifactId         : 'ble-characteristic-u2a17'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
 ext.characteristicU2a19 = [
         artifactId         : 'ble-characteristic-u2a19'
         , versionName      : '0.1.0'

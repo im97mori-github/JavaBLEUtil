@@ -436,6 +436,18 @@ ext.characteristicU2a50 = [
         , uploadVersionName: '0.1.0'
 ]
 
+ext.characteristicU2a53 = [
+        artifactId         : 'ble-characteristic-u2a53'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2a54 = [
+        artifactId         : 'ble-characteristic-u2a54'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
 ext.characteristicU2a55 = [
         artifactId         : 'ble-characteristic-u2a55'
         , versionName      : '0.1.0'

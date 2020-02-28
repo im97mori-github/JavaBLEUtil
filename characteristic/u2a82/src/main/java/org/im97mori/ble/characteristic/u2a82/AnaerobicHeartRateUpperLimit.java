@@ -1,0 +1,48 @@
+package org.im97mori.ble.characteristic.u2a82;
+
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
+import org.im97mori.ble.ByteArrayInterface;
+
+import androidx.annotation.NonNull;
+
+/**
+ * Anaerobic Heart Rate Upper Limit (Characteristics UUID: 0x2A82)
+ */
+public class AnaerobicHeartRateUpperLimit implements ByteArrayInterface {
+
+    /**
+     * Anaerobic Heart Rate Upper Limit
+     */
+    private final int mAnaerobicHeartRateUpperLimit;
+
+    /**
+     * Constructor from {@link BluetoothGattCharacteristic}
+     *
+     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A82
+     */
+    public AnaerobicHeartRateUpperLimit(@NonNull byte[] values) {
+        mAnaerobicHeartRateUpperLimit = (values[0] & 0xff);
+    }
+
+    /**
+     * @return Anaerobic Heart Rate Upper Limit
+     */
+    public int getAnaerobicHeartRateUpperLimit() {
+        return mAnaerobicHeartRateUpperLimit;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @NonNull
+    public byte[] getBytes() {
+        byte[] data = new byte[1];
+        ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+        byteBuffer.put((byte) mAnaerobicHeartRateUpperLimit);
+        return data;
+    }
+
+}

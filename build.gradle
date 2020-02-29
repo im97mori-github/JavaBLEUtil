@@ -22,7 +22,7 @@ subprojects {
 
     dependencies {
         implementation 'androidx.annotation:annotation:1.1.0'
-        testImplementation 'junit:junit:4.12'
+        testImplementation 'junit:junit:4.13'
     }
 
     task sourceJar(type: Jar) {
@@ -1016,6 +1016,96 @@ ext.characteristicU2abc = [
 
 ext.characteristicU2ac9 = [
         artifactId         : 'ble-characteristic-u2ac9'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2acc = [
+        artifactId         : 'ble-characteristic-u2acc'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2acd = [
+        artifactId         : 'ble-characteristic-u2acd'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ace = [
+        artifactId         : 'ble-characteristic-u2ace'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2acf = [
+        artifactId         : 'ble-characteristic-u2acf'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ad0 = [
+        artifactId         : 'ble-characteristic-u2ad0'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ad1 = [
+        artifactId         : 'ble-characteristic-u2ad1'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ad2 = [
+        artifactId         : 'ble-characteristic-u2ad2'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ad3 = [
+        artifactId         : 'ble-characteristic-u2ad3'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ad4 = [
+        artifactId         : 'ble-characteristic-u2ad4'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ad5 = [
+        artifactId         : 'ble-characteristic-u2ad5'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ad6 = [
+        artifactId         : 'ble-characteristic-u2ad6'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ad7 = [
+        artifactId         : 'ble-characteristic-u2ad7'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ad8 = [
+        artifactId         : 'ble-characteristic-u2ad8'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ad9 = [
+        artifactId         : 'ble-characteristic-u2ad9'
+        , versionName      : '0.1.0'
+        , uploadVersionName: '0.1.0'
+]
+
+ext.characteristicU2ada = [
+        artifactId         : 'ble-characteristic-u2ada'
         , versionName      : '0.1.0'
         , uploadVersionName: '0.1.0'
 ]

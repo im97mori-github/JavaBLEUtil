@@ -1050,7 +1050,7 @@ public class BodyCompositionMeasurement implements ByteArrayInterface {
     public double getHeightImperialInches() {
         return HEIGHT_IMPERIAL_RESOLUTION * mHeightImperial;
     }
-    
+
     /**
      * {@inheritDoc}
      */

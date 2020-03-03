@@ -1,17 +1,17 @@
 allprojects {
+    apply plugin: 'eclipse'
+    apply plugin: 'java-library'
+    apply plugin: 'maven-publish'
+
     repositories {
-//        maven { url "https://github.com/im97mori-github/maven/raw/master" }
-        maven { url System.getenv('MAVEN_REPOSITORY_URL') }
+        maven { url "https://github.com/im97mori-github/maven/raw/master" }
+//        maven { url System.getenv('MAVEN_REPOSITORY_URL') }
         google()
         jcenter()
     }
 }
 
 subprojects {
-    apply plugin: 'eclipse'
-    apply plugin: 'java-library'
-    apply plugin: 'maven-publish'
-
     def defaultEncoding = 'UTF-8'
     tasks.withType(JavaCompile) {
         options.encoding = defaultEncoding
@@ -32,6 +32,7 @@ subprojects {
 }
 
 ext.groupId = 'org.im97mori'
+def GROUP_ID = groupId
 
 ext.stacklogVersionName = "0.0.2"
 
@@ -42,6 +43,12 @@ ext.uploadVersionName = 'uploadVersionName'
 
 ext.core = [
         artifactId         : 'ble-core'
+        , versionName      : '0.2.0'
+        , uploadVersionName: '0.2.0'
+]
+
+ext.advertising = [
+        artifactId         : 'ble-advertising'
         , versionName      : '0.2.0'
         , uploadVersionName: '0.2.0'
 ]
@@ -134,6 +141,12 @@ ext.descriptorU290e = [
         artifactId         : 'ble-descriptor-u290e'
         , versionName      : '0.1.0'
         , uploadVersionName: '0.1.0'
+]
+
+ext.descriptor = [
+        artifactId         : 'ble-descriptor'
+        , versionName      : '0.2.0'
+        , uploadVersionName: '0.2.0'
 ]
 
 ext.characteristicCore = [
@@ -664,7 +677,6 @@ ext.characteristicU2a7b = [
         , uploadVersionName: '0.1.0'
 ]
 
-
 ext.characteristicU2a7d = [
         artifactId         : 'ble-characteristic-u2a7d'
         , versionName      : '0.1.0'
@@ -935,7 +947,6 @@ ext.characteristicU2aaf = [
         , uploadVersionName: '0.1.0'
 ]
 
-
 ext.characteristicU2ab0 = [
         artifactId         : 'ble-characteristic-u2ab0'
         , versionName      : '0.1.0'
@@ -1140,6 +1151,55 @@ ext.characteristicU2b2a = [
         , uploadVersionName: '0.1.0'
 ]
 
+ext.characteristic = [
+        artifactId         : 'ble-characteristic'
+        , versionName: '0.2.0'
+        , uploadVersionName: '0.2.0'
+]
+
+ext.bleJava = [
+        artifactId         : 'ble-java'
+        , versionName      : '0.1.0'
+]
+
 ext.apiCore = "${groupId}:${core.artifactId}:${core.versionName}"
 ext.apiCharacteristicCore = "${groupId}:${characteristicCore.artifactId}:${characteristicCore.versionName}"
 ext.junit = 'junit:junit:4.13'
+
+dependencies {
+    api "${groupId}:${advertising.artifactId}:${advertising.versionName}"
+    api "${groupId}:${descriptor.artifactId}:${descriptor.versionName}"
+    api "${groupId}:${characteristic.artifactId}:${characteristic.versionName}"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId GROUP_ID
+            artifactId "${bleJava.artifactId}"
+            version "${bleJava.versionName}"
+            from components.java
+            pom {
+                name = 'BLE Core Utility for Java'
+                url = 'https://github.com/im97mori-github/JavaBLEUtil'
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                        distribution = 'repo'
+                    }
+                }
+                developers {
+                    developer {
+                        email = 'github@im97mori.org'
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            url System.getenv('MAVEN_REPOSITORY_URL')
+        }
+    }
+}

@@ -38,6 +38,15 @@ public class HTTPSSecurity implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param httpsSecurity HTTPS Security
+     */
+    public HTTPSSecurity(int httpsSecurity) {
+        mHttpsSecurity = httpsSecurity;
+    }
+
+    /**
      * @return HTTPS Security
      */
     public int getHttpsSecurity() {

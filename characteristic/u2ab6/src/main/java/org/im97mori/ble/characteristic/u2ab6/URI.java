@@ -24,6 +24,15 @@ public class URI implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param uri URI
+     */
+    public URI(@NonNull String uri) {
+        mUri = uri;
+    }
+
+    /**
      * @return URI
      */
     public String getUri() {

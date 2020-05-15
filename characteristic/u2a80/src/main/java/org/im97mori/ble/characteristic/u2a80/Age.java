@@ -27,6 +27,15 @@ public class Age implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param age Age
+     */
+    public Age(int age) {
+        mAge = age;
+    }
+
+    /**
      * @return Age
      */
     public int getAge() {

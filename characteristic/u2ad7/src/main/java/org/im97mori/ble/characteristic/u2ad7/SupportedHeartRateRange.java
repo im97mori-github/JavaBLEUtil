@@ -39,6 +39,19 @@ public class SupportedHeartRateRange implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param minimumHeartRate Minimum Heart Rate
+     * @param maximumHeartRate Maximum Heart Rate
+     * @param minimumIncrement Minimum Increment
+     */
+    public SupportedHeartRateRange(int minimumHeartRate, int maximumHeartRate, int minimumIncrement) {
+        mMinimumHeartRate = minimumHeartRate;
+        mMaximumHeartRate = maximumHeartRate;
+        mMinimumIncrement = minimumIncrement;
+    }
+
+    /**
      * @return Minimum Heart Rate
      */
     public int getMinimumHeartRate() {

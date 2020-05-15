@@ -29,6 +29,14 @@ public class AnaerobicHeartRateLowerLimitTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int anaerobicHeartRateLowerLimit = 1;
+
+        AnaerobicHeartRateLowerLimit result1 = new AnaerobicHeartRateLowerLimit(anaerobicHeartRateLowerLimit);
+        assertEquals(anaerobicHeartRateLowerLimit, result1.getAnaerobicHeartRateLowerLimit());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[1];

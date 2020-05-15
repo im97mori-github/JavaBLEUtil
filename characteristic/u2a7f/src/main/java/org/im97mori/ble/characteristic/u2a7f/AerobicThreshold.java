@@ -27,6 +27,15 @@ public class AerobicThreshold implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param aerobicThreshold Aerobic Threshold
+     */
+    public AerobicThreshold(int aerobicThreshold) {
+        mAerobicThreshold = aerobicThreshold;
+    }
+
+    /**
      * @return Aerobic Threshold
      */
     public int getAerobicThreshold() {

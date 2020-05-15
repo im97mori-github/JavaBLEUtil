@@ -27,6 +27,15 @@ public class Uncertainty implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param uncertainty Uncertainty
+     */
+    public Uncertainty(int uncertainty) {
+        mUncertainty = uncertainty;
+    }
+
+    /**
      * @return Uncertainty
      */
     public int getUncertainty() {

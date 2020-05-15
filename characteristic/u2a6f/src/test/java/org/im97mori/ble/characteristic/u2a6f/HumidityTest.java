@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class HumidityTest {
 
     //@formatter:off
@@ -51,6 +51,14 @@ public class HumidityTest {
         Humidity result1 = new Humidity(data);
         assertEquals(0x0201, result1.getHumidity());
         assertEquals(Humidity.HUMIDITY_RESOLUTION * 0x0201, result1.getHumidityPercent(), 0);
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int humidity = 1;
+
+        Humidity result1 = new Humidity(humidity);
+        assertEquals(humidity, result1.getHumidity());
     }
 
     @Test

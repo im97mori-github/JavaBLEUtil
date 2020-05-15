@@ -34,6 +34,14 @@ public class WeightTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int weight = 1;
+
+        Weight result1 = new Weight(weight);
+        assertEquals(weight, result1.getWeight());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[2];

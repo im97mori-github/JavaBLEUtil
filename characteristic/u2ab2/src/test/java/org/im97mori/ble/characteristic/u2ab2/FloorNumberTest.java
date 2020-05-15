@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class FloorNumberTest {
 
     //@formatter:off
@@ -49,6 +49,14 @@ public class FloorNumberTest {
 
         FloorNumber result1 = new FloorNumber(data);
         assertEquals(0x01, result1.getFloorNumber());
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int floorNumber = 1;
+
+        FloorNumber result1 = new FloorNumber(floorNumber);
+        assertEquals(floorNumber, result1.getFloorNumber());
     }
 
     @Test

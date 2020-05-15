@@ -108,7 +108,21 @@ public class TimeTriggerSettingTest {
         assertFalse(result.isConditionNotIndicatedOrNotifiedMoreOftenThanASettableTime());
         assertTrue(result.isConditionChangedMoreOfthenThan());
     }
-    
+
+    @Test
+    public void test_constructor006() {
+        int condition = 1;
+        int valueNone = 2;
+        int valueTimerInterval = 3;
+        int valueCount = 4;
+
+        TimeTriggerSetting result = new TimeTriggerSetting(condition, valueNone, valueTimerInterval, valueCount);
+        assertEquals(condition, result.getCondition());
+        assertEquals(valueNone, result.getValueNone());
+        assertEquals(valueTimerInterval, result.getValueTimeInterval());
+        assertEquals(valueCount, result.getValueCount());
+    }
+
     @Test
     public void test_parcelable002() {
         //@formatter:off
@@ -125,6 +139,5 @@ public class TimeTriggerSettingTest {
         TimeTriggerSetting result1 = new TimeTriggerSetting(value);
         assertArrayEquals(value, result1.getBytes());
     }
-
 
 }

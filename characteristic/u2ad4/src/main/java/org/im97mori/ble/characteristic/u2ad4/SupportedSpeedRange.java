@@ -55,6 +55,19 @@ public class SupportedSpeedRange implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param minimumSpeed     Minimum Speed
+     * @param maximumSpeed     Maximum Speed
+     * @param minimumIncrement Minimum Increment
+     */
+    public SupportedSpeedRange(int minimumSpeed, int maximumSpeed, int minimumIncrement) {
+        mMinimumSpeed = minimumSpeed;
+        mMaximumSpeed = maximumSpeed;
+        mMinimumIncrement = minimumIncrement;
+    }
+
+    /**
      * @return Minimum Speed
      */
     public int getMinimumSpeed() {

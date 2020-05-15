@@ -24,6 +24,15 @@ public class ManufacturerNameString implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param manufacturerName Manufacturer Name
+     */
+    public ManufacturerNameString(@NonNull String manufacturerName) {
+        mManufacturerName = manufacturerName;
+    }
+
+    /**
      * @return Manufacturer Name
      */
     public String getManufacturerName() {

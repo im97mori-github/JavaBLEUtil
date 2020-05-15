@@ -380,6 +380,41 @@ public class LocationAndSpeed implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags              Flags
+     * @param instantaneousSpeed Instantaneous Speed
+     * @param totalDistance      Total Distance
+     * @param locationLatitude   Location - Latitude
+     * @param locationLongitude  Location - Longitude
+     * @param elevation          Elevation
+     * @param heading            Heading
+     * @param rollingTime        Rolling Time
+     * @param year               Year
+     * @param month              Month
+     * @param day                Day
+     * @param hours              Hours
+     * @param minutes            Minutes
+     * @param seconds            Seconds
+     */
+    public LocationAndSpeed(@NonNull byte[] flags, int instantaneousSpeed, int totalDistance, int locationLatitude, int locationLongitude, int elevation, int heading, int rollingTime, int year, int month, int day, int hours, int minutes, int seconds) {
+        mFlags = flags;
+        mInstantaneousSpeed = instantaneousSpeed;
+        mTotalDistance = totalDistance;
+        mLocationLatitude = locationLatitude;
+        mLocationLongitude = locationLongitude;
+        mElevation = elevation;
+        mHeading = heading;
+        mRollingTime = rollingTime;
+        mYear = year;
+        mMonth = month;
+        mDay = day;
+        mHours = hours;
+        mMinutes = minutes;
+        mSeconds = seconds;
+    }
+
+    /**
      * @return Flags
      */
     public byte[] getFlags() {
@@ -589,7 +624,6 @@ public class LocationAndSpeed implements ByteArrayInterface {
         return mTotalDistance;
     }
 
-
     /**
      * @return Total Distance(meters)
      */
@@ -652,7 +686,6 @@ public class LocationAndSpeed implements ByteArrayInterface {
     public double getHeadingDegrees() {
         return HEADING_RESOLUTION * mHeading;
     }
-
 
     /**
      * @return Rolling Time
@@ -758,32 +791,7 @@ public class LocationAndSpeed implements ByteArrayInterface {
      * check Weight Scale Feature
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #FLAGS_INSTANTANEOUS_SPEED_PRESENT_FALSE}
-     *               , {@link #FLAGS_INSTANTANEOUS_SPEED_PRESENT_TRUE}
-     *               , {@link #FLAGS_TOTAL_DISTANCE_PRESENT_FALSE}
-     *               , {@link #FLAGS_TOTAL_DISTANCE_PRESENT_TRUE}
-     *               , {@link #FLAGS_LOCATION_PRESENT_FALSE}
-     *               , {@link #FLAGS_LOCATION_PRESENT_TRUE}
-     *               , {@link #FLAGS_ELEVATION_PRESENT_FALSE}
-     *               , {@link #FLAGS_ELEVATION_PRESENT_TRUE}
-     *               , {@link #FLAGS_HEADING_PRESENT_FALSE}
-     *               , {@link #FLAGS_HEADING_PRESENT_TRUE}
-     *               , {@link #FLAGS_ROLLING_TIME_PRESENT_FALSE}
-     *               , {@link #FLAGS_ROLLING_TIME_PRESENT_TRUE}
-     *               , {@link #FLAGS_UTC_TIME_PRESENT_FALSE}
-     *               , {@link #FLAGS_UTC_TIME_PRESENT_TRUE}
-     *               , {@link #FLAGS_POSITION_SATUS_NO_POSITION}
-     *               , {@link #FLAGS_POSITION_SATUS_POSITION_OK}
-     *               , {@link #FLAGS_POSITION_SATUS_ESTIMATED_POSITION}
-     *               , {@link #FLAGS_POSITION_SATUS_LAST_KNOWN_POSITION}
-     *               , {@link #FLAGS_SPEED_AND_DISTANCE_FORMAT_2D}
-     *               , {@link #FLAGS_SPEED_AND_DISTANCE_FORMAT_3D}
-     *               , {@link #FLAGS_ELEVATION_SOURCE_POSITION_SYSTEM}
-     *               , {@link #FLAGS_ELEVATION_SOURCE_BAROMETRIC_AIR_PRESSURE}
-     *               , {@link #FLAGS_ELEVATION_SOURCE_DATABASE_SERVICE}
-     *               , {@link #FLAGS_ELEVATION_SOURCE_OTHER}
-     *               , {@link #FLAGS_HEADING_SOURCE_HEADING_BASED_ON_MOVEMENT}
-     *               , {@link #FLAGS_HEADING_SOURCE_HEADING_BASED_ON_MAGNETIC_COMPASS}
+     * @param expect one of {@link #FLAGS_INSTANTANEOUS_SPEED_PRESENT_FALSE} , {@link #FLAGS_INSTANTANEOUS_SPEED_PRESENT_TRUE} , {@link #FLAGS_TOTAL_DISTANCE_PRESENT_FALSE} , {@link #FLAGS_TOTAL_DISTANCE_PRESENT_TRUE} , {@link #FLAGS_LOCATION_PRESENT_FALSE} , {@link #FLAGS_LOCATION_PRESENT_TRUE} , {@link #FLAGS_ELEVATION_PRESENT_FALSE} , {@link #FLAGS_ELEVATION_PRESENT_TRUE} , {@link #FLAGS_HEADING_PRESENT_FALSE} , {@link #FLAGS_HEADING_PRESENT_TRUE} , {@link #FLAGS_ROLLING_TIME_PRESENT_FALSE} , {@link #FLAGS_ROLLING_TIME_PRESENT_TRUE} , {@link #FLAGS_UTC_TIME_PRESENT_FALSE} , {@link #FLAGS_UTC_TIME_PRESENT_TRUE} , {@link #FLAGS_POSITION_SATUS_NO_POSITION} , {@link #FLAGS_POSITION_SATUS_POSITION_OK} , {@link #FLAGS_POSITION_SATUS_ESTIMATED_POSITION} , {@link #FLAGS_POSITION_SATUS_LAST_KNOWN_POSITION} , {@link #FLAGS_SPEED_AND_DISTANCE_FORMAT_2D} , {@link #FLAGS_SPEED_AND_DISTANCE_FORMAT_3D} , {@link #FLAGS_ELEVATION_SOURCE_POSITION_SYSTEM} , {@link #FLAGS_ELEVATION_SOURCE_BAROMETRIC_AIR_PRESSURE} , {@link #FLAGS_ELEVATION_SOURCE_DATABASE_SERVICE} , {@link #FLAGS_ELEVATION_SOURCE_OTHER} , {@link #FLAGS_HEADING_SOURCE_HEADING_BASED_ON_MOVEMENT} , {@link #FLAGS_HEADING_SOURCE_HEADING_BASED_ON_MAGNETIC_COMPASS}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isFlagsMatched(int mask, int expect) {

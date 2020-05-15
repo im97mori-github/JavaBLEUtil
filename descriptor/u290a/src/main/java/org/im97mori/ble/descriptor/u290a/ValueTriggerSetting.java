@@ -86,6 +86,21 @@ public class ValueTriggerSetting implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param condition           Condition
+     * @param valueAnalog         Value (Analog)
+     * @param valueBitMask        Value (Bit Mask)
+     * @param valueAnalogInterval Value (Analog Interval)
+     */
+    public ValueTriggerSetting(int condition, int valueAnalog, @NonNull byte[] valueBitMask, long valueAnalogInterval) {
+        mCondition = condition;
+        mValueAnalog = valueAnalog;
+        mValueBitMask = valueBitMask;
+        mValueAnalogInterval = valueAnalogInterval;
+    }
+
+    /**
      * @return Condition
      */
     public int getCondition() {

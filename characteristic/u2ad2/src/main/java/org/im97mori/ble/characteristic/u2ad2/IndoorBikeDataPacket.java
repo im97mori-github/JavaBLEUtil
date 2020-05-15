@@ -186,6 +186,45 @@ public class IndoorBikeDataPacket implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                Flags
+     * @param instantaneousSpeed   Instantaneous Speed
+     * @param averageSpeed         Average Speed
+     * @param instantaneousCadence Instantaneous Cadence
+     * @param averageCadence       Average Cadence
+     * @param totalDistance        Total Distance
+     * @param resistanceLevel      Resistance Level
+     * @param instantaneousPower   Instantaneous Power
+     * @param averagePower         Average Power
+     * @param totalEnergy          Total Energy
+     * @param energyPerHour        Energy Per Hour
+     * @param energyPerMinute      Energy Per Minute
+     * @param heartRate            Heart Rate
+     * @param metabolicEquivalent  Metabolic Equivalent
+     * @param elapsedTime          Elapsed Time
+     * @param remainingTime        Remaining Time
+     */
+    public IndoorBikeDataPacket(@NonNull byte[] flags, int instantaneousSpeed, int averageSpeed, int instantaneousCadence, int averageCadence, int totalDistance, int resistanceLevel, int instantaneousPower, int averagePower, int totalEnergy, int energyPerHour, int energyPerMinute, int heartRate, int metabolicEquivalent, int elapsedTime, int remainingTime) {
+        mFlags = flags;
+        mInstantaneousSpeed = instantaneousSpeed;
+        mAverageSpeed = averageSpeed;
+        mInstantaneousCadence = instantaneousCadence;
+        mAverageCadence = averageCadence;
+        mTotalDistance = totalDistance;
+        mResistanceLevel = resistanceLevel;
+        mInstantaneousPower = instantaneousPower;
+        mAveragePower = averagePower;
+        mTotalEnergy = totalEnergy;
+        mEnergyPerHour = energyPerHour;
+        mEnergyPerMinute = energyPerMinute;
+        mHeartRate = heartRate;
+        mMetabolicEquivalent = metabolicEquivalent;
+        mElapsedTime = elapsedTime;
+        mRemainingTime = remainingTime;
+    }
+
+    /**
      * @return Flags
      */
     public byte[] getFlags() {

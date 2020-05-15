@@ -44,6 +44,19 @@ public class NewAlert implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param categoryId            Category ID
+     * @param numberOfNewAlert      Number of New Alert
+     * @param textStringInformation Text String Information
+     */
+    public NewAlert(int categoryId, int numberOfNewAlert, @NonNull String textStringInformation) {
+        mCategoryId = categoryId;
+        mNumberOfNewAlert = numberOfNewAlert;
+        mTextStringInformation = textStringInformation;
+    }
+
+    /**
      * @return Category ID
      */
     public int getCategoryId() {

@@ -32,6 +32,15 @@ public class ScanRefresh implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param scanRefreshValue Scan Refresh Value
+     */
+    public ScanRefresh(int scanRefreshValue) {
+        mScanRefreshValue = scanRefreshValue;
+    }
+
+    /**
      * @return Scan Refresh Value
      */
     public int getScanRefreshValue() {

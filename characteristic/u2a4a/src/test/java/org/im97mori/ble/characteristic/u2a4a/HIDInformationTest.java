@@ -143,6 +143,18 @@ public class HIDInformationTest {
     }
 
     @Test
+    public void test_constructor_00005() {
+        int bcdhid = 1;
+        int bcountrycode = 2;
+        int flags = 3;
+
+        HIDInformation result1 = new HIDInformation(bcdhid, bcountrycode, flags);
+        assertEquals(bcdhid, result1.getBcdhid());
+        assertEquals(bcountrycode, result1.getBcountrycode());
+        assertEquals(flags, result1.getFlags());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

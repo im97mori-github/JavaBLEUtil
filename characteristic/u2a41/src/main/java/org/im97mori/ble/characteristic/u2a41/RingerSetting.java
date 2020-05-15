@@ -37,6 +37,15 @@ public class RingerSetting implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param ringerSetting Ringer SettingRinger Setting
+     */
+    public RingerSetting(int ringerSetting) {
+        mRingerSetting = ringerSetting;
+    }
+
+    /**
      * @return Ringer Setting
      */
     public int getRingerSetting() {

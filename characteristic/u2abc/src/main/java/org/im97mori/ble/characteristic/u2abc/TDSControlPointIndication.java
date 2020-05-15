@@ -45,6 +45,19 @@ public class TDSControlPointIndication implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param requestedOpCode   Requested Op Code
+     * @param resultCode        Result Code
+     * @param responseParameter Response Parameter
+     */
+    public TDSControlPointIndication(int requestedOpCode, int resultCode, @NonNull byte[] responseParameter) {
+        mRequestedOpCode = requestedOpCode;
+        mResultCode = resultCode;
+        mResponseParameter = responseParameter;
+    }
+
+    /**
      * @return Requested Op Code
      */
     public int getRequestedOpCode() {

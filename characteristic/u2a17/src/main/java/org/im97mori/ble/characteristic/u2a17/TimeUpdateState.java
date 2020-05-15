@@ -73,6 +73,17 @@ public class TimeUpdateState implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param currentState Current State
+     * @param result       Result
+     */
+    public TimeUpdateState(int currentState, int result) {
+        mCurrentState = currentState;
+        mResult = result;
+    }
+
+    /**
      * @return Current State
      */
     public int getCurrentState() {

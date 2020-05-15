@@ -273,6 +273,35 @@ public class Navigation implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                     Flags
+     * @param bearing                   Bearing
+     * @param heading                   Heading
+     * @param remainingDistance         Remaining Distance
+     * @param remainingVerticalDistance Remaining Vertical Distance
+     * @param year                      Year
+     * @param month                     Month
+     * @param day                       Day
+     * @param hours                     Hours
+     * @param minutes                   Minutes
+     * @param seconds                   Seconds
+     */
+    public Navigation(@NonNull byte[] flags, int bearing, int heading, int remainingDistance, int remainingVerticalDistance, int year, int month, int day, int hours, int minutes, int seconds) {
+        mFlags = flags;
+        mBearing = bearing;
+        mHeading = heading;
+        mRemainingDistance = remainingDistance;
+        mRemainingVerticalDistance = remainingVerticalDistance;
+        mYear = year;
+        mMonth = month;
+        mDay = day;
+        mHours = hours;
+        mMinutes = minutes;
+        mSeconds = seconds;
+    }
+
+    /**
      * @return Flags
      */
     public byte[] getFlags() {
@@ -543,24 +572,7 @@ public class Navigation implements ByteArrayInterface {
      * check Weight Scale Feature
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #FLAGS_REMAINING_DISTANCE_PRESENT_FALSE}
-     *               , {@link #FLAGS_REMAINING_DISTANCE_PRESENT_TRUE}
-     *               , {@link #FLAGS_REMAINING_VERTICAL_DISTANCE_PRESENT_FALSE}
-     *               , {@link #FLAGS_REMAINING_VERTICAL_DISTANCE_PRESENT_TRUE}
-     *               , {@link #FLAGS_ESTIMATED_TIME_OF_ARRIVAL_PRESENT_FALSE}
-     *               , {@link #FLAGS_ESTIMATED_TIME_OF_ARRIVAL_PRESENT_TRUE}
-     *               , {@link #FLAGS_POSITION_STATUS_NO_POSITION}
-     *               , {@link #FLAGS_POSITION_STATUS_POSITION_OK}
-     *               , {@link #FLAGS_POSITION_STATUS_ESTIMATED_POSITION}
-     *               , {@link #FLAGS_POSITION_STATUS_LAST_KNOWN_POSITION}
-     *               , {@link #FLAGS_HEADING_SOURCE_HEADING_BASED_ON_MOVEMENT}
-     *               , {@link #FLAGS_HEADING_SOURCE_HEADING_BASED_ON_MAGNETIC_COMPASS}
-     *               , {@link #FLAGS_NAVIGATION_INDICATOR_TYPE_TO_WAYPOINT}
-     *               , {@link #FLAGS_NAVIGATION_INDICATOR_TYPE_TO_DESTINATION}
-     *               , {@link #FLAGS_WAYPOINT_REACHED_FALSE}
-     *               , {@link #FLAGS_WAYPOINT_REACHED_TRUE}
-     *               , {@link #FLAGS_DESTINATION_REACHED_FALSE}
-     *               , {@link #FLAGS_DESTINATION_REACHED_TRUE}
+     * @param expect one of {@link #FLAGS_REMAINING_DISTANCE_PRESENT_FALSE} , {@link #FLAGS_REMAINING_DISTANCE_PRESENT_TRUE} , {@link #FLAGS_REMAINING_VERTICAL_DISTANCE_PRESENT_FALSE} , {@link #FLAGS_REMAINING_VERTICAL_DISTANCE_PRESENT_TRUE} , {@link #FLAGS_ESTIMATED_TIME_OF_ARRIVAL_PRESENT_FALSE} , {@link #FLAGS_ESTIMATED_TIME_OF_ARRIVAL_PRESENT_TRUE} , {@link #FLAGS_POSITION_STATUS_NO_POSITION} , {@link #FLAGS_POSITION_STATUS_POSITION_OK} , {@link #FLAGS_POSITION_STATUS_ESTIMATED_POSITION} , {@link #FLAGS_POSITION_STATUS_LAST_KNOWN_POSITION} , {@link #FLAGS_HEADING_SOURCE_HEADING_BASED_ON_MOVEMENT} , {@link #FLAGS_HEADING_SOURCE_HEADING_BASED_ON_MAGNETIC_COMPASS} , {@link #FLAGS_NAVIGATION_INDICATOR_TYPE_TO_WAYPOINT} , {@link #FLAGS_NAVIGATION_INDICATOR_TYPE_TO_DESTINATION} , {@link #FLAGS_WAYPOINT_REACHED_FALSE} , {@link #FLAGS_WAYPOINT_REACHED_TRUE} , {@link #FLAGS_DESTINATION_REACHED_FALSE} , {@link #FLAGS_DESTINATION_REACHED_TRUE}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isFlagsMatched(int mask, int expect) {

@@ -286,6 +286,14 @@ public class SportTypeForAerobicAndAnaerobicThresholdsTest {
     }
 
     @Test
+    public void test_constructor013() {
+        int sportTypeForAerobicAndAnaerobicThresholds = 1;
+
+        SportTypeForAerobicAndAnaerobicThresholds result1 = new SportTypeForAerobicAndAnaerobicThresholds(sportTypeForAerobicAndAnaerobicThresholds);
+        assertEquals(sportTypeForAerobicAndAnaerobicThresholds, result1.getSportTypeForAerobicAndAnaerobicThresholds());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[1];

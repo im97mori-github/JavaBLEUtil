@@ -341,6 +341,17 @@ public class RCFeature implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param e2eCrc     E2E-CRC
+     * @param rcFeatures RC Features
+     */
+    public RCFeature(int e2eCrc, @NonNull byte[] rcFeatures) {
+        mE2eCrc = e2eCrc;
+        mRcFeatures = rcFeatures;
+    }
+
+    /**
      * @return E2E-CRC
      */
     public int getE2eCrc() {

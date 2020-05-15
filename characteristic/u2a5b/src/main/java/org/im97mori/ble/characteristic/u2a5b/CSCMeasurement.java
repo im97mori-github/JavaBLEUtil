@@ -109,6 +109,23 @@ public class CSCMeasurement implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                      Flags
+     * @param cumulativeWheelRevolutions Cumulative Wheel Revolutions
+     * @param lastWheelEventTime         Last Wheel Event Time
+     * @param cumulativeCrankRevolutions Cumulative Crank Revolutions
+     * @param lastCrankEventTime         Last Crank Event Time
+     */
+    public CSCMeasurement(int flags, long cumulativeWheelRevolutions, int lastWheelEventTime, int cumulativeCrankRevolutions, int lastCrankEventTime) {
+        mFlags = flags;
+        mCumulativeWheelRevolutions = cumulativeWheelRevolutions;
+        mLastWheelEventTime = lastWheelEventTime;
+        mCumulativeCrankRevolutions = cumulativeCrankRevolutions;
+        mLastCrankEventTime = lastCrankEventTime;
+    }
+
+    /**
      * @return Flags
      */
     public int getFlags() {
@@ -212,10 +229,7 @@ public class CSCMeasurement implements ByteArrayInterface {
      * check Flags
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #FLAGS_WHEEL_REVOLUTION_DATA_PRESENT_FALSE}
-     *               , {@link #FLAGS_WHEEL_REVOLUTION_DATA_PRESENT_TRUE}
-     *               , {@link #FLAGS_CRANK_REVOLUTION_DATA_PRESENT_FALSE}
-     *               , {@link #FLAGS_CRANK_REVOLUTION_DATA_PRESENT_TRUE}
+     * @param expect one of {@link #FLAGS_WHEEL_REVOLUTION_DATA_PRESENT_FALSE} , {@link #FLAGS_WHEEL_REVOLUTION_DATA_PRESENT_TRUE} , {@link #FLAGS_CRANK_REVOLUTION_DATA_PRESENT_FALSE} , {@link #FLAGS_CRANK_REVOLUTION_DATA_PRESENT_TRUE}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isFlagsMatched(int mask, int expect) {

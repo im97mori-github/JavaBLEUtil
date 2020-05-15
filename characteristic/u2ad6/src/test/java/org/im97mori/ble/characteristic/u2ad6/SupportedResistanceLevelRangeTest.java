@@ -62,6 +62,18 @@ public class SupportedResistanceLevelRangeTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int minimumResistanceLevel = 1;
+        int maximumResistanceLevel = 2;
+        int minimumIncrement = 3;
+
+        SupportedResistanceLevelRange result1 = new SupportedResistanceLevelRange(minimumResistanceLevel, maximumResistanceLevel, minimumIncrement);
+        assertEquals(minimumResistanceLevel, result1.getMinimumResistanceLevel());
+        assertEquals(maximumResistanceLevel, result1.getMaximumResistanceLevel());
+        assertEquals(minimumIncrement, result1.getMinimumIncrement());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

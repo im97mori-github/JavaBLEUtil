@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class UVIndexTest {
 
     //@formatter:off
@@ -49,6 +49,14 @@ public class UVIndexTest {
 
         UVIndex result1 = new UVIndex(data);
         assertEquals(0x01, result1.getUVIndex());
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int UVIndex = 1;
+
+        UVIndex result1 = new UVIndex(UVIndex);
+        assertEquals(UVIndex, result1.getUVIndex());
     }
 
     @Test

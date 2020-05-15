@@ -24,6 +24,15 @@ public class HardwareRevisionString implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param hardwareRevision Hardware Revision
+     */
+    public HardwareRevisionString(@NonNull String hardwareRevision) {
+        mHardwareRevision = hardwareRevision;
+    }
+
+    /**
      * @return Hardware Revision
      */
     public String getHardwareRevision() {

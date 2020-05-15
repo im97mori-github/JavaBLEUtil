@@ -58,7 +58,7 @@ public class BodyCompositionMeasurementConstructorTest {
         data[29] = 0x1c;
         //@formatter:on
 
-        BodyCompositionMeasurement result1 = new BodyCompositionMeasurement(new BodyCompositionMeasurementPacket[]{new BodyCompositionMeasurementPacket(data)});
+        BodyCompositionMeasurement result1 = new BodyCompositionMeasurement(new BodyCompositionMeasurementPacket[] { new BodyCompositionMeasurementPacket(data) });
         assertArrayEquals(Arrays.copyOfRange(data, 0, 2), result1.getFlags());
         assertEquals(0x0201, result1.getBodyFatPercentage());
         assertEquals(0x0403, result1.getYear());
@@ -160,7 +160,7 @@ public class BodyCompositionMeasurementConstructorTest {
         data2[29] = 0x3c;
         //@formatter:on
 
-        BodyCompositionMeasurement result1 = new BodyCompositionMeasurement(new BodyCompositionMeasurementPacket[]{new BodyCompositionMeasurementPacket(data1), new BodyCompositionMeasurementPacket(data2)});
+        BodyCompositionMeasurement result1 = new BodyCompositionMeasurement(new BodyCompositionMeasurementPacket[] { new BodyCompositionMeasurementPacket(data1), new BodyCompositionMeasurementPacket(data2) });
         assertArrayEquals(Arrays.copyOfRange(data1, 0, 2), result1.getFlags());
         assertEquals(0x2221, result1.getBodyFatPercentage());
         assertEquals(0x2423, result1.getYear());
@@ -179,6 +179,61 @@ public class BodyCompositionMeasurementConstructorTest {
         assertEquals(0x3837, result1.getImpedance());
         assertEquals(0x3a39, result1.getWeightSi());
         assertEquals(0x3c3b, result1.getHeightSi());
+    }
+
+    @Test
+    public void test_constructor003() {
+        byte[] flags = new byte[] { 1 };
+        int bodyFatPercentage = 2;
+        int year = 3;
+        int month = 4;
+        int day = 5;
+        int hours = 6;
+        int minutes = 7;
+        int seconds = 8;
+        int userId = 9;
+        int basalMetabolism = 10;
+        int musclePercentage = 11;
+        int muscleMassSi = 12;
+        int muscleMassImperial = 13;
+        int fatFreeMassSi = 14;
+        int fatFreeMassImperial = 15;
+        int softLeanMassSi = 16;
+        int softLeanMassImperial = 17;
+        int bodyWaterSi = 18;
+        int bodyWaterImperial = 19;
+        int impedance = 20;
+        int weightSi = 21;
+        int weightImperial = 22;
+        int heightSi = 23;
+        int heightImperial = 24;
+
+        BodyCompositionMeasurement result1 = new BodyCompositionMeasurement(
+                flags, bodyFatPercentage, year, month, day, hours, minutes, seconds, userId, basalMetabolism, musclePercentage, muscleMassSi, muscleMassImperial, fatFreeMassSi, fatFreeMassImperial, softLeanMassSi, softLeanMassImperial, bodyWaterSi, bodyWaterImperial, impedance, weightSi, weightImperial, heightSi, heightImperial);
+        assertArrayEquals(flags, result1.getFlags());
+        assertEquals(bodyFatPercentage, result1.getBodyFatPercentage());
+        assertEquals(year, result1.getYear());
+        assertEquals(month, result1.getMonth());
+        assertEquals(day, result1.getDay());
+        assertEquals(hours, result1.getHours());
+        assertEquals(minutes, result1.getMinutes());
+        assertEquals(seconds, result1.getSeconds());
+        assertEquals(userId, result1.getUserId());
+        assertEquals(basalMetabolism, result1.getBasalMetabolism());
+        assertEquals(musclePercentage, result1.getMusclePercentage());
+        assertEquals(muscleMassSi, result1.getMuscleMassSi());
+        assertEquals(muscleMassImperial, result1.getMuscleMassImperial());
+        assertEquals(fatFreeMassSi, result1.getFatFreeMassSi());
+        assertEquals(fatFreeMassImperial, result1.getFatFreeMassImperial());
+        assertEquals(softLeanMassSi, result1.getSoftLeanMassSi());
+        assertEquals(softLeanMassImperial, result1.getSoftLeanMassImperial());
+        assertEquals(bodyWaterSi, result1.getBodyWaterMassSi());
+        assertEquals(bodyWaterImperial, result1.getBodyWaterMassImperial());
+        assertEquals(impedance, result1.getImpedance());
+        assertEquals(weightSi, result1.getWeightSi());
+        assertEquals(weightImperial, result1.getWeightImperial());
+        assertEquals(heightSi, result1.getHeightSi());
+        assertEquals(heightImperial, result1.getHeightImperial());
     }
 
 }

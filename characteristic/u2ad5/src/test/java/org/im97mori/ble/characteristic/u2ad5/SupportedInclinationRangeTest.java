@@ -62,6 +62,18 @@ public class SupportedInclinationRangeTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int minimumInclination = 1;
+        int maximumInclination = 2;
+        int minimumIncrement = 3;
+
+        SupportedInclinationRange result1 = new SupportedInclinationRange(minimumInclination, maximumInclination, minimumIncrement);
+        assertEquals(minimumInclination, result1.getMinimumInclination());
+        assertEquals(maximumInclination, result1.getMaximumInclination());
+        assertEquals(minimumIncrement, result1.getMinimumIncrement());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

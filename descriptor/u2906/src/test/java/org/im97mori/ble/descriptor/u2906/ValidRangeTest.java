@@ -164,7 +164,17 @@ public class ValidRangeTest {
         assertEquals(0xffffffffL, result.getLowerInclusiveValueUint32());
         assertEquals(0xfefefefeL, result.getUpperInclusiveValueUint32());
     }
-    
+
+    @Test
+    public void test_constructor009() {
+        byte[] lowerInclusiveValue = new byte[] { 0 };
+        byte[] upperInclusiveValue = new byte[] { 1 };
+
+        ValidRange result = new ValidRange(lowerInclusiveValue, upperInclusiveValue);
+        assertArrayEquals(lowerInclusiveValue, result.getLowerInclusiveValue());
+        assertArrayEquals(upperInclusiveValue, result.getUpperInclusiveValue());
+    }
+
     public void test_parcelable002() {
         //@formatter:off
         byte[] value = new byte[2];
@@ -175,7 +185,7 @@ public class ValidRangeTest {
         ValidRange result1 = new ValidRange(value);
         assertArrayEquals(value, result1.getBytes());
     }
-    
+
     @Test
     public void test_parcelable005() {
         //@formatter:off

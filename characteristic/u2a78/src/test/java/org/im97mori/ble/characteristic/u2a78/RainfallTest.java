@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class RainfallTest {
 
     //@formatter:off
@@ -51,6 +51,14 @@ public class RainfallTest {
         Rainfall result1 = new Rainfall(data);
         assertEquals(0x0201, result1.getRainfall());
         assertEquals(Rainfall.RAINFALL_RESOLUTION * 0x0201, result1.getRainfallMilliMeters(), 0);
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int rainfall = 1;
+
+        Rainfall result1 = new Rainfall(rainfall);
+        assertEquals(rainfall, result1.getRainfall());
     }
 
     @Test

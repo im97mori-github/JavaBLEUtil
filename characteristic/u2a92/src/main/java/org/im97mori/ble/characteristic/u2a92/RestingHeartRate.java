@@ -27,6 +27,15 @@ public class RestingHeartRate implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param restingHeartRate Resting Heart Rate
+     */
+    public RestingHeartRate(int restingHeartRate) {
+        mRestingHeartRate = restingHeartRate;
+    }
+
+    /**
      * @return Resting Heart Rate
      */
     public int getRestingHeartRate() {

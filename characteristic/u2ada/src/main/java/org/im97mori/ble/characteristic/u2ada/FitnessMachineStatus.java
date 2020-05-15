@@ -257,6 +257,17 @@ public class FitnessMachineStatus implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param opCode    Op Code
+     * @param parameter Parameter
+     */
+    public FitnessMachineStatus(int opCode, @NonNull byte[] parameter) {
+        mOpCode = opCode;
+        mParameter = parameter;
+    }
+
+    /**
      * @return Op Code
      */
     public int getOpCode() {

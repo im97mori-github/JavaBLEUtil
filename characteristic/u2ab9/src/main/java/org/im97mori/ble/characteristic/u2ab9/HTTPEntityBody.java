@@ -24,6 +24,15 @@ public class HTTPEntityBody implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param httpEntityBody HTTP Entity Body
+     */
+    public HTTPEntityBody(@NonNull String httpEntityBody) {
+        mHttpEntityBody = httpEntityBody;
+    }
+
+    /**
      * @return HTTP Entity Body
      */
     public String getHttpEntityBody() {

@@ -48,6 +48,17 @@ public class ReportReference implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param reportId   Report ID
+     * @param reportType Report Type
+     */
+    public ReportReference(int reportId, int reportType) {
+        mReportId = reportId;
+        mReportType = reportType;
+    }
+
+    /**
      * @return Report ID
      */
     public int getReportId() {

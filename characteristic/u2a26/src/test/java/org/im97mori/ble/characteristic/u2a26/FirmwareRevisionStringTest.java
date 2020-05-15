@@ -26,6 +26,14 @@ public class FirmwareRevisionStringTest {
     }
 
     @Test
+    public void test_constructor003() {
+        String firmwareRevision = "99.99";
+
+        FirmwareRevisionString result1 = new FirmwareRevisionString(firmwareRevision);
+        assertEquals(firmwareRevision, result1.getFirmwareRevision());
+    }
+
+    @Test
     public void test_parcelable003() {
         String firmwareRevision = "12.34";
 

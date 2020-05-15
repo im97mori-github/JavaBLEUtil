@@ -647,6 +647,18 @@ public class TrainingStatusTest {
     }
 
     @Test
+    public void test_constructor_00217() {
+        int flags = 1;
+        int trainingStatus = 2;
+        String trainingStatusString = "3";
+
+        TrainingStatus result1 = new TrainingStatus(flags, trainingStatus, trainingStatusString);
+        assertEquals(flags, result1.getFlags());
+        assertEquals(trainingStatus, result1.getTrainingStatus());
+        assertEquals(trainingStatusString, result1.getTrainingStatusString());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

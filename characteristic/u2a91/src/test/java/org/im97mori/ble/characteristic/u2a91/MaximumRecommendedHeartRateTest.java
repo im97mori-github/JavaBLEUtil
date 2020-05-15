@@ -29,6 +29,14 @@ public class MaximumRecommendedHeartRateTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int maximumRecommendedHeartRate = 1;
+
+        MaximumRecommendedHeartRate result1 = new MaximumRecommendedHeartRate(maximumRecommendedHeartRate);
+        assertEquals(maximumRecommendedHeartRate, result1.getMaximumRecommendedHeartRate());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[1];

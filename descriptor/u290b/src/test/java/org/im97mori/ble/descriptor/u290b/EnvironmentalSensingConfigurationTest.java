@@ -45,6 +45,14 @@ public class EnvironmentalSensingConfigurationTest {
     }
 
     @Test
+    public void test_constructor004() {
+        int triggerLogicValue = 1;
+
+        EnvironmentalSensingConfiguration result = new EnvironmentalSensingConfiguration(triggerLogicValue);
+        assertEquals(triggerLogicValue, result.getTriggerLogicValue());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] value = new byte[1];

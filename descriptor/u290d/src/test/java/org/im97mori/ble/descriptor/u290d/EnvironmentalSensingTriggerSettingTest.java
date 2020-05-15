@@ -16,7 +16,6 @@ public class EnvironmentalSensingTriggerSettingTest {
         value[ 0] = 0x01;
         //@formatter:on
 
-
         EnvironmentalSensingTriggerSetting result = new EnvironmentalSensingTriggerSetting(value);
         assertEquals(0x01, result.getConditions());
     }
@@ -220,7 +219,15 @@ public class EnvironmentalSensingTriggerSettingTest {
         assertFalse(result.isConditionsTriggerWhileEqualToTheSpecifiedValue());
         assertTrue(result.isConditionsTriggerWhileNotEqualToTheSpecifiedValue());
     }
-    
+
+    @Test
+    public void test_constructor012() {
+        int conditions = 1;
+
+        EnvironmentalSensingTriggerSetting result = new EnvironmentalSensingTriggerSetting(conditions);
+        assertEquals(conditions, result.getConditions());
+    }
+
     @Test
     public void test_parcelable002() {
         //@formatter:off

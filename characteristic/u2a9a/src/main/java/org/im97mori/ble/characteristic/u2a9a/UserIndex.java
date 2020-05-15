@@ -27,6 +27,15 @@ public class UserIndex implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param userIndex User Index
+     */
+    public UserIndex(int userIndex) {
+        mUserIndex = userIndex;
+    }
+
+    /**
      * @return User Index
      */
     public int getUserIndex() {

@@ -27,6 +27,15 @@ public class AnaerobicThreshold implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param anaerobicThreshold Anaerobic Threshold
+     */
+    public AnaerobicThreshold(int anaerobicThreshold) {
+        mAnaerobicThreshold = anaerobicThreshold;
+    }
+
+    /**
      * @return Anaerobic Threshold
      */
     public int getAnaerobicThreshold() {

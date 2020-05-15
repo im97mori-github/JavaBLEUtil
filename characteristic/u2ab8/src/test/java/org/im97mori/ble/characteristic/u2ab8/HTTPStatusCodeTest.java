@@ -223,6 +223,16 @@ public class HTTPStatusCodeTest {
     }
 
     @Test
+    public void test_constructor_00303() {
+        int statusCode = 1;
+        int dataStatus = 2;
+
+        HTTPStatusCode result1 = new HTTPStatusCode(statusCode, dataStatus);
+        assertEquals(statusCode, result1.getStatusCode());
+        assertEquals(dataStatus, result1.getDataStatus());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

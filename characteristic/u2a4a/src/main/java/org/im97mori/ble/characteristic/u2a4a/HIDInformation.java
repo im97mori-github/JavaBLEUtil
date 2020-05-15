@@ -72,6 +72,19 @@ public class HIDInformation implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param bcdhid       bcdHID
+     * @param bcountrycode bCountryCode
+     * @param flags        Flags
+     */
+    public HIDInformation(int bcdhid, int bcountrycode, int flags) {
+        mBcdhid = bcdhid;
+        mBcountrycode = bcountrycode;
+        mFlags = flags;
+    }
+
+    /**
      * @return bcdHID
      */
     public int getBcdhid() {

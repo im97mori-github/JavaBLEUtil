@@ -283,6 +283,25 @@ public class EnvironmentalSensingMeasurement implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                  Flags
+     * @param samplingFunction       Sampling Function
+     * @param measurementPeriod      Measurement Period
+     * @param internalUpdateInterval Internal Update Interval
+     * @param application            Application
+     * @param measurementUncertainty Measurement Uncertainty
+     */
+    public EnvironmentalSensingMeasurement(@NonNull byte[] flags, int samplingFunction, int measurementPeriod, int internalUpdateInterval, int application, int measurementUncertainty) {
+        mFlags = flags;
+        mSamplingFunction = samplingFunction;
+        mMeasurementPeriod = measurementPeriod;
+        mInternalUpdateInterval = internalUpdateInterval;
+        mApplication = application;
+        mMeasurementUncertainty = measurementUncertainty;
+    }
+
+    /**
      * @return Flags
      */
     @NonNull

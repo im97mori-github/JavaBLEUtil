@@ -36,6 +36,14 @@ public class MeasurementIntervalTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int measurementInterval = 1;
+
+        MeasurementInterval result1 = new MeasurementInterval(measurementInterval);
+        assertEquals(measurementInterval, result1.getMeasurementInterval());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[2];

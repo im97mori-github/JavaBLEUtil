@@ -98,6 +98,17 @@ public class HTTPStatusCode implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param statusCode Status Code
+     * @param dataStatus Data Status
+     */
+    public HTTPStatusCode(int statusCode, int dataStatus) {
+        mStatusCode = statusCode;
+        mDataStatus = dataStatus;
+    }
+
+    /**
      * @return Status Code
      */
     public int getStatusCode() {

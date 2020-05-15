@@ -156,6 +156,25 @@ public class UserControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param opCode        Op Code
+     * @param userIndex     User Index
+     * @param consentCode   Consent Code
+     * @param requestOpCode Request Op Code
+     * @param responseValue Response Value
+     * @param numberOfUsers Number of users
+     */
+    public UserControlPoint(int opCode, int userIndex, int consentCode, int requestOpCode, int responseValue, int numberOfUsers) {
+        mOpCode = opCode;
+        mUserIndex = userIndex;
+        mConsentCode = consentCode;
+        mRequestOpCode = requestOpCode;
+        mResponseValue = responseValue;
+        mNumberOfUsers = numberOfUsers;
+    }
+
+    /**
      * @return Op Code
      */
     public int getOpCode() {
@@ -270,7 +289,6 @@ public class UserControlPoint implements ByteArrayInterface {
     public boolean isResponseValueUserNotAuthorized(int responseValue) {
         return RESPONSE_VALUE_USER_NOT_AUTHORIZED == responseValue;
     }
-
 
     /**
      * @return User Index

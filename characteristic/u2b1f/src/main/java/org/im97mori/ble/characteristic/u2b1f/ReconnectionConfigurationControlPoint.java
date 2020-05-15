@@ -594,6 +594,25 @@ public class ReconnectionConfigurationControlPoint implements ByteArrayInterface
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param opcode          Opcode
+     * @param operand         Operand
+     * @param e2eCrc          E2E-CRC
+     * @param requestOpcodes  Request Opcode
+     * @param resultCode      Result Codes
+     * @param resultParameter Result Parameter
+     */
+    public ReconnectionConfigurationControlPoint(int opcode, @NonNull byte[] operand, @Nullable Integer e2eCrc, int requestOpcodes, int resultCode, @NonNull byte[] resultParameter) {
+        mOpcode = opcode;
+        mOperand = operand;
+        mE2eCrc = e2eCrc;
+        mRequestOpcodes = requestOpcodes;
+        mResultCode = resultCode;
+        mResultParameter = resultParameter;
+    }
+
+    /**
      * @return Opcode
      */
     public int getOpcode() {

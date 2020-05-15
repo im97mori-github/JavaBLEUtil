@@ -56,6 +56,21 @@ public class PnpId implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param vendorIdSource Vendor ID Source
+     * @param vendorId       Vendor ID
+     * @param productId      Product ID
+     * @param productVersion Product Version
+     */
+    public PnpId(int vendorIdSource, int vendorId, int productId, int productVersion) {
+        mVendorIdSource = vendorIdSource;
+        mVendorId = vendorId;
+        mProductId = productId;
+        mProductVersion = productVersion;
+    }
+
+    /**
      * @return Vendor ID Source
      */
     public int getVendorIdSource() {

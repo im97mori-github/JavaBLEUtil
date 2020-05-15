@@ -14,7 +14,7 @@ import java.util.UUID;
 import org.im97mori.ble.BLEUtils;
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class DescriptorValueChangedTest {
 
     //@formatter:off
@@ -369,6 +369,16 @@ public class DescriptorValueChangedTest {
         UUID uuid = new UUID(msb, lsb);
 
         assertEquals(uuid, result1.createCharacteristicUUID());
+    }
+
+    @Test
+    public void test_constructor_50003() {
+        int flags = 1;
+        byte[] characteristicUUID = new byte[] { 1 };
+
+        DescriptorValueChanged result1 = new DescriptorValueChanged(flags, characteristicUUID);
+        assertEquals(flags, result1.getFlags());
+        assertArrayEquals(characteristicUUID, result1.getCharacteristicUUID());
     }
 
     @Test

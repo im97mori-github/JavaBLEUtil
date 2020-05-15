@@ -29,6 +29,14 @@ public class AerobicThresholdTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int aerobicThreshold = 1;
+
+        AerobicThreshold result1 = new AerobicThreshold(aerobicThreshold);
+        assertEquals(aerobicThreshold, result1.getAerobicThreshold());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[1];

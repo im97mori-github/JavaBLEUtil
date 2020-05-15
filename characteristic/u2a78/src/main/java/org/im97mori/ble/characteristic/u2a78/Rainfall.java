@@ -33,6 +33,15 @@ public class Rainfall implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param rainfall Rainfall
+     */
+    public Rainfall(int rainfall) {
+        mRainfall = rainfall;
+    }
+
+    /**
      * @return Rainfall
      */
     public int getRainfall() {

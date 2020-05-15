@@ -217,6 +217,18 @@ public class DateOfBirthTest {
     }
 
     @Test
+    public void test_constructor014() {
+        int year = 1;
+        int month = 2;
+        int day = 3;
+
+        DateOfBirth result1 = new DateOfBirth(year, month, day);
+        assertEquals(year, result1.getYear());
+        assertEquals(month, result1.getMonth());
+        assertEquals(day, result1.getDay());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[4];
@@ -225,7 +237,6 @@ public class DateOfBirthTest {
         data[ 2] = DateTimeUtils.MONTH_JANUARY;
         data[ 3] = 1;
         //@formatter:on
-
 
         DateOfBirth result1 = new DateOfBirth(data);
         assertArrayEquals(data, result1.getBytes());

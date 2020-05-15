@@ -269,6 +269,29 @@ public class PositionQuality implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                     Flags
+     * @param numberOfBeaconsInSolution Number of Beacons in Solution
+     * @param numberOfBeaconsInView     Number of Beacons in View
+     * @param timeToFirstFix            Time to First Fix
+     * @param ehpe                      EHPE
+     * @param evpe                      EVPE
+     * @param hdop                      HDOP
+     * @param vdop                      VDOP
+     */
+    public PositionQuality(@NonNull byte[] flags, int numberOfBeaconsInSolution, int numberOfBeaconsInView, int timeToFirstFix, long ehpe, long evpe, int hdop, int vdop) {
+        mFlags = flags;
+        mNumberOfBeaconsInSolution = numberOfBeaconsInSolution;
+        mNumberOfBeaconsInView = numberOfBeaconsInView;
+        mTimeToFirstFix = timeToFirstFix;
+        mEhpe = ehpe;
+        mEvpe = evpe;
+        mHdop = hdop;
+        mVdop = vdop;
+    }
+
+    /**
      * @return Flags
      */
     public byte[] getFlags() {
@@ -531,24 +554,7 @@ public class PositionQuality implements ByteArrayInterface {
      * check Weight Scale Feature
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #FLAGS_NUMBER_OF_BEACONS_IN_SOLUTION_PRESENT_FALSE}
-     *               , {@link #FLAGS_NUMBER_OF_BEACONS_IN_SOLUTION_PRESENT_TRUE}
-     *               , {@link #FLAGS_NUMBER_OF_BEACONS_IN_VIEW_PRESENT_FALSE}
-     *               , {@link #FLAGS_NUMBER_OF_BEACONS_IN_VIEW_PRESENT_TRUE}
-     *               , {@link #FLAGS_TIME_TO_FIRST_FIX_PRESENT_FALSE}
-     *               , {@link #FLAGS_TIME_TO_FIRST_FIX_PRESENT_TRUE}
-     *               , {@link #FLAGS_EHPE_PRESENT_FALSE}
-     *               , {@link #FLAGS_EHPE_PRESENT_TRUE}
-     *               , {@link #FLAGS_EVPE_PRESENT_FALSE}
-     *               , {@link #FLAGS_EVPE_PRESENT_TRUE}
-     *               , {@link #FLAGS_HDOP_PRESENT_FALSE}
-     *               , {@link #FLAGS_HDOP_PRESENT_TRUE}
-     *               , {@link #FLAGS_VDOP_PRESENT_FALSE}
-     *               , {@link #FLAGS_VDOP_PRESENT_TRUE}
-     *               , {@link #FLAGS_POSITION_STATUS_NO_POSITION}
-     *               , {@link #FLAGS_POSITION_STATUS_POSITION_OK}
-     *               , {@link #FLAGS_POSITION_STATUS_ESTIMATED_POSITION}
-     *               , {@link #FLAGS_POSITION_STATUS_LAST_KNOWN_POSITION}
+     * @param expect one of {@link #FLAGS_NUMBER_OF_BEACONS_IN_SOLUTION_PRESENT_FALSE} , {@link #FLAGS_NUMBER_OF_BEACONS_IN_SOLUTION_PRESENT_TRUE} , {@link #FLAGS_NUMBER_OF_BEACONS_IN_VIEW_PRESENT_FALSE} , {@link #FLAGS_NUMBER_OF_BEACONS_IN_VIEW_PRESENT_TRUE} , {@link #FLAGS_TIME_TO_FIRST_FIX_PRESENT_FALSE} , {@link #FLAGS_TIME_TO_FIRST_FIX_PRESENT_TRUE} , {@link #FLAGS_EHPE_PRESENT_FALSE} , {@link #FLAGS_EHPE_PRESENT_TRUE} , {@link #FLAGS_EVPE_PRESENT_FALSE} , {@link #FLAGS_EVPE_PRESENT_TRUE} , {@link #FLAGS_HDOP_PRESENT_FALSE} , {@link #FLAGS_HDOP_PRESENT_TRUE} , {@link #FLAGS_VDOP_PRESENT_FALSE} , {@link #FLAGS_VDOP_PRESENT_TRUE} , {@link #FLAGS_POSITION_STATUS_NO_POSITION} , {@link #FLAGS_POSITION_STATUS_POSITION_OK} , {@link #FLAGS_POSITION_STATUS_ESTIMATED_POSITION} , {@link #FLAGS_POSITION_STATUS_LAST_KNOWN_POSITION}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isFlagsMatched(int mask, int expect) {

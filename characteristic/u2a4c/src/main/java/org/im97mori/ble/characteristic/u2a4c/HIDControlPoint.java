@@ -37,6 +37,15 @@ public class HIDControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param hidControlPointCommand HID Control Point Command
+     */
+    public HIDControlPoint(int hidControlPointCommand) {
+        mHidControlPointCommand = hidControlPointCommand;
+    }
+
+    /**
      * @return HID Control Point Command
      */
     public int getHidControlPointCommand() {

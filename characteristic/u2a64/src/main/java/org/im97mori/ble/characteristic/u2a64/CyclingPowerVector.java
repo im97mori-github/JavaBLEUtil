@@ -216,6 +216,25 @@ public class CyclingPowerVector implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                                         Flags
+     * @param crankRevolutionDataCumulativeCrankRevolutions Crank Revolution Data - Cumulative Crank Revolutions
+     * @param crankRevolutionDataLastCrankEventTime         Crank Revolution Data - Last Crank Event Time
+     * @param firstCrankMeasurementAngle                    First Crank Measurement Angle
+     * @param instantaneousForceMagnitudeArray              Instantaneous Force Magnitude Array
+     * @param instantaneousTorqueMagnitudeArray             Instantaneous Torque Magnitude Array
+     */
+    public CyclingPowerVector(int flags, int crankRevolutionDataCumulativeCrankRevolutions, int crankRevolutionDataLastCrankEventTime, int firstCrankMeasurementAngle, @NonNull int[] instantaneousForceMagnitudeArray, @NonNull int[] instantaneousTorqueMagnitudeArray) {
+        mFlags = flags;
+        mCrankRevolutionDataCumulativeCrankRevolutions = crankRevolutionDataCumulativeCrankRevolutions;
+        mCrankRevolutionDataLastCrankEventTime = crankRevolutionDataLastCrankEventTime;
+        mFirstCrankMeasurementAngle = firstCrankMeasurementAngle;
+        mInstantaneousForceMagnitudeArray = instantaneousForceMagnitudeArray;
+        mInstantaneousTorqueMagnitudeArray = instantaneousTorqueMagnitudeArray;
+    }
+
+    /**
      * @return Flags
      */
     public int getFlags() {

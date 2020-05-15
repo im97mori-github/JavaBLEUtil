@@ -203,6 +203,47 @@ public class RowerData implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags               Flags
+     * @param strokeRate          Stroke Rate
+     * @param strokeCount         Stroke Count
+     * @param averageStrokeRate   Average Stroke Rate
+     * @param totalDistance       Total Distance
+     * @param instantaneousPace   Instantaneous Pace
+     * @param averagePace         Average Pace
+     * @param instantaneousPower  Instantaneous Power
+     * @param averagePower        Average Power
+     * @param resistanceLevel     Resistance Level
+     * @param totalEnergy         Total Energy
+     * @param energyPerHour       Energy Per Hour
+     * @param energyPerMinute     Energy Per Minute
+     * @param heartRate           Heart Rate
+     * @param metabolicEquivalent Metabolic Equivalent
+     * @param elapsedTime         Elapsed Time
+     * @param remainingTime       Remaining Time
+     */
+    public RowerData(@NonNull byte[] flags, int strokeRate, int strokeCount, int averageStrokeRate, int totalDistance, int instantaneousPace, int averagePace, int instantaneousPower, int averagePower, int resistanceLevel, int totalEnergy, int energyPerHour, int energyPerMinute, int heartRate, int metabolicEquivalent, int elapsedTime, int remainingTime) {
+        mFlags = flags;
+        mStrokeRate = strokeRate;
+        mStrokeCount = strokeCount;
+        mAverageStrokeRate = averageStrokeRate;
+        mTotalDistance = totalDistance;
+        mInstantaneousPace = instantaneousPace;
+        mAveragePace = averagePace;
+        mInstantaneousPower = instantaneousPower;
+        mAveragePower = averagePower;
+        mResistanceLevel = resistanceLevel;
+        mTotalEnergy = totalEnergy;
+        mEnergyPerHour = energyPerHour;
+        mEnergyPerMinute = energyPerMinute;
+        mHeartRate = heartRate;
+        mMetabolicEquivalent = metabolicEquivalent;
+        mElapsedTime = elapsedTime;
+        mRemainingTime = remainingTime;
+    }
+
+    /**
      * @return Flags
      */
     public byte[] getFlags() {
@@ -391,5 +432,5 @@ public class RowerData implements ByteArrayInterface {
         }
         return Arrays.copyOfRange(data, 0, length);
     }
-    
+
 }

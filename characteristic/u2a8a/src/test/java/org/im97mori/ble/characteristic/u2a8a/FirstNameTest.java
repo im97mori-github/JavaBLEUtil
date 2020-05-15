@@ -101,6 +101,14 @@ public class FirstNameTest {
     }
 
     @Test
+    public void test_constructor_00004() {
+        String firstName = "a";
+
+        FirstName result1 = new FirstName(firstName);
+        assertEquals(firstName, result1.getFirstName());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] FirstName = "github@im97mori.org".getBytes();
 

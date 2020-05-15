@@ -33,6 +33,17 @@ public class ThreeZoneHeartRateLimits implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param threeZoneHeartRateLimitsLightFatBurnModerateAerobicLimit  Three zone Heart Rate Limits - Light (Fat burn) / Moderate (Aerobic) Limit
+     * @param threeZoneHeartRateLimitsModerateAerobicHardAnaerobicLimit Three zone Heart Rate Limits - Moderate (Aerobic) / Hard (Anaerobic) Limit
+     */
+    public ThreeZoneHeartRateLimits(int threeZoneHeartRateLimitsLightFatBurnModerateAerobicLimit, int threeZoneHeartRateLimitsModerateAerobicHardAnaerobicLimit) {
+        mThreeZoneHeartRateLimitsLightFatBurnModerateAerobicLimit = threeZoneHeartRateLimitsLightFatBurnModerateAerobicLimit;
+        mThreeZoneHeartRateLimitsModerateAerobicHardAnaerobicLimit = threeZoneHeartRateLimitsModerateAerobicHardAnaerobicLimit;
+    }
+
+    /**
      * @return Three zone Heart Rate Limits - Light (Fat burn) / Moderate (Aerobic) Limit
      */
     public int getThreeZoneHeartRateLimitsLightFatBurnModerateAerobicLimit() {

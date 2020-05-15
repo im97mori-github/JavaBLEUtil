@@ -54,6 +54,14 @@ public class ScanRefreshTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int scanRefreshValue = 1;
+
+        ScanRefresh result1 = new ScanRefresh(scanRefreshValue);
+        assertEquals(scanRefreshValue, result1.getScanRefreshValue());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

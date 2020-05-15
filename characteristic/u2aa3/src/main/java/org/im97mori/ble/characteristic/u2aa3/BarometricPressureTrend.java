@@ -77,6 +77,15 @@ public class BarometricPressureTrend implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param barometricPressureTrend Barometric Pressure Trend
+     */
+    public BarometricPressureTrend(int barometricPressureTrend) {
+        mBarometricPressureTrend = barometricPressureTrend;
+    }
+
+    /**
      * @return Barometric Pressure Trend
      */
     public int getBarometricPressureTrend() {
@@ -131,12 +140,14 @@ public class BarometricPressureTrend implements ByteArrayInterface {
     public boolean isBarometricPressureTrendFallingBeforeAGreaterRise() {
         return BAROMETRIC_PRESSURE_TREND_FALLING_BEFORE_A_GREATER_RISE == mBarometricPressureTrend;
     }
+
     /**
      * @return {@code true}:Rising before a greater fall, {@code false}:not Rising before a greater fall
      */
     public boolean isBarometricPressureTrendRisingBeforeAGreaterFall() {
         return BAROMETRIC_PRESSURE_TREND_RISING_BEFORE_A_GREATER_FALL == mBarometricPressureTrend;
     }
+
     /**
      * @return {@code true}:Rising before a lesser fall, {@code false}:not Rising before a lesser fall
      */

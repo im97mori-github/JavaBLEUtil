@@ -42,6 +42,15 @@ public class Gender implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param gender Gender
+     */
+    public Gender(int gender) {
+        mGender = gender;
+    }
+
+    /**
      * @return Gender
      */
     public int getGender() {

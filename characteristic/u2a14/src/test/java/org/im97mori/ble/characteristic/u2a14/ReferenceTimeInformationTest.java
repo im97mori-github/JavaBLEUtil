@@ -32,20 +32,18 @@ public class ReferenceTimeInformationTest {
         assertTrue(result1.isAccuracyOutOfRange());
         assertFalse(result1.isAccuracyUnknown());
         assertEquals(ReferenceTimeInformation.ACCURACY_UNIT_FRACTIONS256_SUPPORTED_MILLIS
-                        * ReferenceTimeInformation.ACCURACY_OUT_OF_RANGE
-                , result1.getAccuracyFraction256SupportedMillis());
+                * ReferenceTimeInformation.ACCURACY_OUT_OF_RANGE, result1.getAccuracyFraction256SupportedMillis());
         assertEquals(ReferenceTimeInformation.ACCURACY_UNIT_FRACTIONS256_NOT_SUPPORTED_MILLIS
-                        * ReferenceTimeInformation.ACCURACY_OUT_OF_RANGE
-                , result1.getAccuracyFraction256NotSupportedMillis());
+                * ReferenceTimeInformation.ACCURACY_OUT_OF_RANGE, result1.getAccuracyFraction256NotSupportedMillis());
         assertEquals(ReferenceTimeInformation.DAYS_SINCE_UPDATE_255_OR_MORE_DAYS, result1.getDaysSinceUpdate());
         assertTrue(result1.isDaysSinceUpdate255OrMoreDays());
         assertEquals(ReferenceTimeInformation.DAYS_SINCE_UPDATE_255_OR_MORE_HOURS, result1.getHoursSinceUpdate());
         assertTrue(result1.isHoursSinceUpdate255OrMoreHours());
         assertEquals(86400000L
-                        * ReferenceTimeInformation.DAYS_SINCE_UPDATE_255_OR_MORE_DAYS
-                        + 3600000L
-                        * ReferenceTimeInformation.DAYS_SINCE_UPDATE_255_OR_MORE_DAYS
-                , result1.getTimeFromUpdateMillis());
+                * ReferenceTimeInformation.DAYS_SINCE_UPDATE_255_OR_MORE_DAYS
+                + 3600000L
+                        * ReferenceTimeInformation.DAYS_SINCE_UPDATE_255_OR_MORE_DAYS,
+                result1.getTimeFromUpdateMillis());
     }
 
     @Test
@@ -71,11 +69,9 @@ public class ReferenceTimeInformationTest {
         assertFalse(result1.isAccuracyOutOfRange());
         assertTrue(result1.isAccuracyUnknown());
         assertEquals(ReferenceTimeInformation.ACCURACY_UNIT_FRACTIONS256_SUPPORTED_MILLIS
-                        * ReferenceTimeInformation.ACCURACY_UNKNOWN
-                , result1.getAccuracyFraction256SupportedMillis());
+                * ReferenceTimeInformation.ACCURACY_UNKNOWN, result1.getAccuracyFraction256SupportedMillis());
         assertEquals(ReferenceTimeInformation.ACCURACY_UNIT_FRACTIONS256_NOT_SUPPORTED_MILLIS
-                        * ReferenceTimeInformation.ACCURACY_UNKNOWN
-                , result1.getAccuracyFraction256NotSupportedMillis());
+                * ReferenceTimeInformation.ACCURACY_UNKNOWN, result1.getAccuracyFraction256NotSupportedMillis());
         assertEquals(0, result1.getDaysSinceUpdate());
         assertFalse(result1.isDaysSinceUpdate255OrMoreDays());
         assertEquals(0, result1.getHoursSinceUpdate());
@@ -114,7 +110,8 @@ public class ReferenceTimeInformationTest {
         assertEquals(86400000L
                 * 254
                 + 3600000L
-                * 23, result1.getTimeFromUpdateMillis());
+                        * 23,
+                result1.getTimeFromUpdateMillis());
     }
 
     @Test
@@ -150,7 +147,8 @@ public class ReferenceTimeInformationTest {
         assertEquals(86400000L
                 * 254
                 + 3600000L
-                * 23, result1.getTimeFromUpdateMillis());
+                        * 23,
+                result1.getTimeFromUpdateMillis());
     }
 
     @Test
@@ -186,7 +184,8 @@ public class ReferenceTimeInformationTest {
         assertEquals(86400000L
                 * 254
                 + 3600000L
-                * 23, result1.getTimeFromUpdateMillis());
+                        * 23,
+                result1.getTimeFromUpdateMillis());
     }
 
     @Test
@@ -222,7 +221,8 @@ public class ReferenceTimeInformationTest {
         assertEquals(86400000L
                 * 254
                 + 3600000L
-                * 23, result1.getTimeFromUpdateMillis());
+                        * 23,
+                result1.getTimeFromUpdateMillis());
     }
 
     @Test
@@ -258,7 +258,23 @@ public class ReferenceTimeInformationTest {
         assertEquals(86400000L
                 * 254
                 + 3600000L
-                * 23, result1.getTimeFromUpdateMillis());
+                        * 23,
+                result1.getTimeFromUpdateMillis());
+    }
+
+    @Test
+    public void test_constructor008() {
+        int timeSource = 1;
+        int accuracy = 2;
+        int daysSinceUpdate = 3;
+        int hoursSinceUpdate = 4;
+
+        ReferenceTimeInformation result1 = new ReferenceTimeInformation(timeSource, accuracy, daysSinceUpdate, hoursSinceUpdate);
+        assertEquals(timeSource, result1.getTimeSource());
+        assertEquals(accuracy, result1.getAccuracy());
+        assertEquals(daysSinceUpdate, result1.getDaysSinceUpdate());
+        assertFalse(result1.isDaysSinceUpdate255OrMoreDays());
+        assertEquals(hoursSinceUpdate, result1.getHoursSinceUpdate());
     }
 
     @Test

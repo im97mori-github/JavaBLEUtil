@@ -7311,6 +7311,24 @@ public class ReconnectionConfigurationControlPointTest {
     }
 
     @Test
+    public void test_constructor_01604() {
+        int opcode = 1;
+        byte[] operand = new byte[] { 2 };
+        int e2eCrc = 3;
+        int requestOpcodes = 4;
+        int resultCode = 5;
+        byte[] resultParameter = new byte[] { 6 };
+
+        ReconnectionConfigurationControlPoint result1 = new ReconnectionConfigurationControlPoint(opcode, operand, e2eCrc, requestOpcodes, resultCode, resultParameter);
+        assertEquals(opcode, result1.getOpcode());
+        assertArrayEquals(operand, result1.getOperand());
+        assertEquals(e2eCrc, result1.getE2eCrc().intValue());
+        assertEquals(requestOpcodes, result1.getRequestOpcodes());
+        assertEquals(resultCode, result1.getResultCode());
+        assertArrayEquals(resultParameter, result1.getResultParameter());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

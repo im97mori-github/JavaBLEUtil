@@ -37,6 +37,15 @@ public class EnvironmentalSensingConfiguration implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param triggerLogicValue Trigger Logic Value
+     */
+    public EnvironmentalSensingConfiguration(int triggerLogicValue) {
+        mTriggerLogicValue = triggerLogicValue;
+    }
+
+    /**
      * @return Trigger Logic Value
      */
     public int getTriggerLogicValue() {
@@ -44,7 +53,7 @@ public class EnvironmentalSensingConfiguration implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:triger logic value  is {@link #TRIGGER_LOGIC_VALUE_BOOLAEN_AND}, {@code false}:not {@link #TRIGGER_LOGIC_VALUE_BOOLAEN_AND}
+     * @return {@code true}:triger logic value is {@link #TRIGGER_LOGIC_VALUE_BOOLAEN_AND}, {@code false}:not {@link #TRIGGER_LOGIC_VALUE_BOOLAEN_AND}
      */
     public boolean isTriggerLogicValueBooleanAnd() {
         return TRIGGER_LOGIC_VALUE_BOOLAEN_AND == mTriggerLogicValue;

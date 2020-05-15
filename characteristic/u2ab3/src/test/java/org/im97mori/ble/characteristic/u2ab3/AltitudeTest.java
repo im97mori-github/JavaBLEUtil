@@ -53,6 +53,14 @@ public class AltitudeTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int altitude = 1;
+
+        Altitude result1 = new Altitude(altitude);
+        assertEquals(altitude, result1.getAltitude());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

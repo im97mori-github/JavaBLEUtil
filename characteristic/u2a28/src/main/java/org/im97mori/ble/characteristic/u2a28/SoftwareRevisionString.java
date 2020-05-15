@@ -24,6 +24,15 @@ public class SoftwareRevisionString implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param softwareRevision Software Revision
+     */
+    public SoftwareRevisionString(@NonNull String softwareRevision) {
+        mSoftwareRevision = softwareRevision;
+    }
+
+    /**
      * @return Software Revision
      */
     public String getSoftwareRevision() {

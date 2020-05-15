@@ -56,6 +56,18 @@ public class SupportedHeartRateRangeTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int minimumHeartRate = 1;
+        int maximumHeartRate = 2;
+        int minimumIncrement = 3;
+
+        SupportedHeartRateRange result1 = new SupportedHeartRateRange(minimumHeartRate, maximumHeartRate, minimumIncrement);
+        assertEquals(minimumHeartRate, result1.getMinimumHeartRate());
+        assertEquals(maximumHeartRate, result1.getMaximumHeartRate());
+        assertEquals(minimumIncrement, result1.getMinimumIncrement());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

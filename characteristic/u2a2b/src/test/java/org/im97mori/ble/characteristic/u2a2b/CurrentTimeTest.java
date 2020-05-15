@@ -50,10 +50,9 @@ public class CurrentTimeTest {
         assertEquals(0d, result1.getFractions256WithUnit(), 0);
         assertEquals(0L, result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST, result1.getAdjustReason());
         assertTrue(result1.isAdjustReasonNoManualTimeUpdate());
         assertFalse(result1.isAdjustReasonManualTimeUpdate());
         assertTrue(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -104,10 +103,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST, result1.getAdjustReason());
         assertFalse(result1.isAdjustReasonNoManualTimeUpdate());
         assertTrue(result1.isAdjustReasonManualTimeUpdate());
         assertTrue(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -158,10 +156,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST, result1.getAdjustReason());
         assertTrue(result1.isAdjustReasonNoManualTimeUpdate());
         assertFalse(result1.isAdjustReasonManualTimeUpdate());
         assertFalse(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -212,10 +209,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST, result1.getAdjustReason());
         assertFalse(result1.isAdjustReasonNoManualTimeUpdate());
         assertTrue(result1.isAdjustReasonManualTimeUpdate());
         assertFalse(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -266,10 +262,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST, result1.getAdjustReason());
         assertTrue(result1.isAdjustReasonNoManualTimeUpdate());
         assertFalse(result1.isAdjustReasonManualTimeUpdate());
         assertTrue(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -320,10 +315,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST, result1.getAdjustReason());
         assertFalse(result1.isAdjustReasonNoManualTimeUpdate());
         assertTrue(result1.isAdjustReasonManualTimeUpdate());
         assertTrue(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -374,10 +368,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST, result1.getAdjustReason());
         assertTrue(result1.isAdjustReasonNoManualTimeUpdate());
         assertFalse(result1.isAdjustReasonManualTimeUpdate());
         assertFalse(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -428,10 +421,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_DST, result1.getAdjustReason());
         assertFalse(result1.isAdjustReasonNoManualTimeUpdate());
         assertTrue(result1.isAdjustReasonManualTimeUpdate());
         assertFalse(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -482,10 +474,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_DST, result1.getAdjustReason());
         assertTrue(result1.isAdjustReasonNoManualTimeUpdate());
         assertFalse(result1.isAdjustReasonManualTimeUpdate());
         assertTrue(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -536,10 +527,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_DST, result1.getAdjustReason());
         assertFalse(result1.isAdjustReasonNoManualTimeUpdate());
         assertTrue(result1.isAdjustReasonManualTimeUpdate());
         assertTrue(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -590,10 +580,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_DST, result1.getAdjustReason());
         assertTrue(result1.isAdjustReasonNoManualTimeUpdate());
         assertFalse(result1.isAdjustReasonManualTimeUpdate());
         assertFalse(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -644,10 +633,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_NO_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_DST, result1.getAdjustReason());
         assertFalse(result1.isAdjustReasonNoManualTimeUpdate());
         assertTrue(result1.isAdjustReasonManualTimeUpdate());
         assertFalse(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -698,10 +686,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_DST, result1.getAdjustReason());
         assertTrue(result1.isAdjustReasonNoManualTimeUpdate());
         assertFalse(result1.isAdjustReasonManualTimeUpdate());
         assertTrue(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -752,10 +739,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_DST, result1.getAdjustReason());
         assertFalse(result1.isAdjustReasonNoManualTimeUpdate());
         assertTrue(result1.isAdjustReasonManualTimeUpdate());
         assertTrue(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -806,10 +792,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_DST, result1.getAdjustReason());
         assertTrue(result1.isAdjustReasonNoManualTimeUpdate());
         assertFalse(result1.isAdjustReasonManualTimeUpdate());
         assertFalse(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -860,10 +845,9 @@ public class CurrentTimeTest {
         assertEquals(CurrentTime.FRACTIONS_256_UNIT * 255, result1.getFractions256WithUnit(), 0);
         assertEquals((long) (CurrentTime.FRACTIONS_256_UNIT * 255 * 1000L), result1.getFractions256Millis());
         assertEquals(CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
-                        | CurrentTime.ADJUST_REASON_CHANGE_OF_DST
-                , result1.getAdjustReason());
+                | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_TIME_ZONE
+                | CurrentTime.ADJUST_REASON_CHANGE_OF_DST, result1.getAdjustReason());
         assertFalse(result1.isAdjustReasonNoManualTimeUpdate());
         assertTrue(result1.isAdjustReasonManualTimeUpdate());
         assertFalse(result1.isAdjustReasonNoExternalReferenceTimeUpdate());
@@ -872,6 +856,31 @@ public class CurrentTimeTest {
         assertTrue(result1.isAdjustReasonChangeOfTimeZone());
         assertFalse(result1.isAdjustReasonNoChangeOfDst());
         assertTrue(result1.isAdjustReasonChangeOfDst());
+    }
+
+    @Test
+    public void test_constructor017() {
+        int year = 1;
+        int month = 2;
+        int day = 3;
+        int hours = 4;
+        int minutes = 5;
+        int seconds = 6;
+        int dayOfWeek = 7;
+        int fractions256 = 8;
+        int adjustReason = 9;
+
+        CurrentTime result1 = new CurrentTime(year, month, day, hours, minutes, seconds, dayOfWeek, fractions256, adjustReason);
+        assertEquals(year, result1.getYear());
+        assertEquals(month, result1.getMonth());
+        assertEquals(day, result1.getDay());
+        assertEquals(hours, result1.getHours());
+        assertEquals(minutes, result1.getMinutes());
+        assertEquals(seconds, result1.getSeconds());
+        assertEquals(dayOfWeek, result1.getDayOfWeek());
+        assertEquals(fractions256, result1.getFractions256());
+        assertFalse(result1.isFractions256Supported());
+        assertEquals(adjustReason, result1.getAdjustReason());
     }
 
     @Test

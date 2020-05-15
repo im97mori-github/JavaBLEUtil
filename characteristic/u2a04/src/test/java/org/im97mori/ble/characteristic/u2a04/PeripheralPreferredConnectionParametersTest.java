@@ -32,6 +32,20 @@ public class PeripheralPreferredConnectionParametersTest {
     }
 
     @Test
+    public void test_constructor002() {
+        int minimumConnectionInterval = 1;
+        int maximumConnectionInterval = 2;
+        int slaveLatency = 3;
+        int connectionSupervisionTimeoutMultiplier = 4;
+
+        PeripheralPreferredConnectionParameters result1 = new PeripheralPreferredConnectionParameters(minimumConnectionInterval, maximumConnectionInterval, slaveLatency, connectionSupervisionTimeoutMultiplier);
+        assertEquals(minimumConnectionInterval, result1.getMinimumConnectionInterval());
+        assertEquals(maximumConnectionInterval, result1.getMaximumConnectionInterval());
+        assertEquals(slaveLatency, result1.getSlaveLatency());
+        assertEquals(connectionSupervisionTimeoutMultiplier, result1.getConnectionSupervisionTimeoutMultiplier());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[8];

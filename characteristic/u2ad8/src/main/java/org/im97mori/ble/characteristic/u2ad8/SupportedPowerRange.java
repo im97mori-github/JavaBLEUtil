@@ -40,6 +40,19 @@ public class SupportedPowerRange implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param minimumPower     Minimum Power
+     * @param maximumPower     Maximum Power
+     * @param minimumIncrement Minimum Increment
+     */
+    public SupportedPowerRange(int minimumPower, int maximumPower, int minimumIncrement) {
+        mMinimumPower = minimumPower;
+        mMaximumPower = maximumPower;
+        mMinimumIncrement = minimumIncrement;
+    }
+
+    /**
      * @return Minimum Power
      */
     public int getMinimumPower() {

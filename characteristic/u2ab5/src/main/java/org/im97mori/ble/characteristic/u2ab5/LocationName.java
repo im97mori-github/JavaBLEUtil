@@ -27,6 +27,15 @@ public class LocationName implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param locationName Location Name
+     */
+    public LocationName(@NonNull String locationName) {
+        mLocationName = locationName;
+    }
+
+    /**
      * @return Location Name
      */
     public String getLocationName() {

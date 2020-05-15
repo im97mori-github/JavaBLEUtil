@@ -567,8 +567,61 @@ public class BodyCompositionMeasurement implements ByteArrayInterface {
         mHeightSi = heightSi;
         mHeightImperial = heightImperial;
     }
-    
-    
+
+    /**
+     * Constructor from parameters
+     * 
+     * @param flags                Flags
+     * @param bodyFatPercentage    Body Fat Percentage
+     * @param year                 Year
+     * @param month                Month
+     * @param day                  Day
+     * @param hours                Hours
+     * @param minutes              Minutes
+     * @param seconds              Seconds
+     * @param userId               User ID
+     * @param basalMetabolism      Basal Metabolism
+     * @param musclePercentage     Muscle Percentage
+     * @param muscleMassSi         Muscle Mass - SI(Muscle Mass - Kilograms in xml)
+     * @param muscleMassImperial   Muscle Mass - SI(Muscle Mass - Kilograms in xml)
+     * @param fatFreeMassSi        Fat Free Mass - SI(Fat Free Mass - Kilograms in xml)
+     * @param fatFreeMassImperial  Fat Free Mass - Imperial(Fat Free Mass - Pounds in xml)
+     * @param softLeanMassSi       Soft Lean Mass - SI(Soft Lean Mass - Kilograms in xml)
+     * @param softLeanMassImperial Soft Lean Mass - Imperial(Soft Lean Mass - Pounds in xml)
+     * @param bodyWaterSi          Body Water Mass - SI(Body Water Mass - Kilograms in xml)
+     * @param bodyWaterImperial    Body Water Mass - Imperial(Body Water Mass - Pounds in xml)
+     * @param impedance            Impedance
+     * @param weightSi             Weight - SI(Weight - Kilograms in xml)
+     * @param weightImperial       Weight - Imperial(Weight - Pounds in xml)
+     * @param heightSi             Height - SI(Height - Meters in xml)
+     * @param heightImperial       Height - Imperial(Height - Inches in xml)
+     */
+    public BodyCompositionMeasurement(@NonNull byte[] flags, int bodyFatPercentage, int year, int month, int day, int hours, int minutes, int seconds, int userId, int basalMetabolism, int musclePercentage, int muscleMassSi, int muscleMassImperial, int fatFreeMassSi, int fatFreeMassImperial, int softLeanMassSi, int softLeanMassImperial, int bodyWaterSi, int bodyWaterImperial, int impedance, int weightSi, int weightImperial, int heightSi, int heightImperial) {
+        mFlags = flags;
+        mBodyFatPercentage = bodyFatPercentage;
+        mYear = year;
+        mMonth = month;
+        mDay = day;
+        mHours = hours;
+        mMinutes = minutes;
+        mSeconds = seconds;
+        mUserId = userId;
+        mBasalMetabolism = basalMetabolism;
+        mMusclePercentage = musclePercentage;
+        mMuscleMassSi = muscleMassSi;
+        mMuscleMassImperial = muscleMassImperial;
+        mFatFreeMassSi = fatFreeMassSi;
+        mFatFreeMassImperial = fatFreeMassImperial;
+        mSoftLeanMassSi = softLeanMassSi;
+        mSoftLeanMassImperial = softLeanMassImperial;
+        mBodyWaterMassSi = bodyWaterSi;
+        mBodyWaterMassImperial = bodyWaterImperial;
+        mImpedance = impedance;
+        mWeightSi = weightSi;
+        mWeightImperial = weightImperial;
+        mHeightSi = heightSi;
+        mHeightImperial = heightImperial;
+    }
 
     /**
      * @return Flags
@@ -1146,32 +1199,7 @@ public class BodyCompositionMeasurement implements ByteArrayInterface {
      * check Flags
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #FLAG_MEASUREMENT_UNITS_SI}
-     *               , {@link #FLAG_MEASUREMENT_UNITS_IMPERIAL}
-     *               , {@link #FLAG_TIME_STAMP_PRESENT_FALSE}
-     *               , {@link #FLAG_TIME_STAMP_PRESENT_TRUE}
-     *               , {@link #FLAG_USER_ID_PRESENT_FALSE}
-     *               , {@link #FLAG_USER_ID_PRESENT_TRUE}
-     *               , {@link #FLAG_BASAL_METABOLISM_PRESENT_FALSE}
-     *               , {@link #FLAG_BASAL_METABOLISM_PRESENT_TRUE}
-     *               , {@link #FLAG_MUSCLE_PERCENTAGE_PRESENT_FALSE}
-     *               , {@link #FLAG_MUSCLE_PERCENTAGE_PRESENT_TRUE}
-     *               , {@link #FLAG_MUSCLE_MASS_PRESENT_FALSE}
-     *               , {@link #FLAG_MUSCLE_MASS_PRESENT_TRUE}
-     *               , {@link #FLAG_FAT_FREE_MASS_PRESENT_FALSE}
-     *               , {@link #FLAG_FAT_FREE_MASS_PRESENT_TRUE}
-     *               , {@link #FLAG_SOFT_LEAN_MASS_PRESENT_FALSE}
-     *               , {@link #FLAG_SOFT_LEAN_MASS_PRESENT_TRUE}
-     *               , {@link #FLAG_BODY_WATER_MASS_PRESENT_FALSE}
-     *               , {@link #FLAG_BODY_WATER_MASS_PRESENT_TRUE}
-     *               , {@link #FLAG_IMPEDANCE_PRESENT_FALSE}
-     *               , {@link #FLAG_IMPEDANCE_PRESENT_TRUE}
-     *               , {@link #FLAG_WEIGHT_PRESENT_FALSE}
-     *               , {@link #FLAG_WEIGHT_PRESENT_TRUE}
-     *               , {@link #FLAG_HEIGHT_PRESENT_FALSE}
-     *               , {@link #FLAG_HEIGHT_PRESENT_TRUE}
-     *               , {@link #FLAG_MULTIPLE_PACKET_MEASUREMENT_FALSE}
-     *               , {@link #FLAG_MULTIPLE_PACKET_MEASUREMENT_TRUE}
+     * @param expect one of {@link #FLAG_MEASUREMENT_UNITS_SI} , {@link #FLAG_MEASUREMENT_UNITS_IMPERIAL} , {@link #FLAG_TIME_STAMP_PRESENT_FALSE} , {@link #FLAG_TIME_STAMP_PRESENT_TRUE} , {@link #FLAG_USER_ID_PRESENT_FALSE} , {@link #FLAG_USER_ID_PRESENT_TRUE} , {@link #FLAG_BASAL_METABOLISM_PRESENT_FALSE} , {@link #FLAG_BASAL_METABOLISM_PRESENT_TRUE} , {@link #FLAG_MUSCLE_PERCENTAGE_PRESENT_FALSE} , {@link #FLAG_MUSCLE_PERCENTAGE_PRESENT_TRUE} , {@link #FLAG_MUSCLE_MASS_PRESENT_FALSE} , {@link #FLAG_MUSCLE_MASS_PRESENT_TRUE} , {@link #FLAG_FAT_FREE_MASS_PRESENT_FALSE} , {@link #FLAG_FAT_FREE_MASS_PRESENT_TRUE} , {@link #FLAG_SOFT_LEAN_MASS_PRESENT_FALSE} , {@link #FLAG_SOFT_LEAN_MASS_PRESENT_TRUE} , {@link #FLAG_BODY_WATER_MASS_PRESENT_FALSE} , {@link #FLAG_BODY_WATER_MASS_PRESENT_TRUE} , {@link #FLAG_IMPEDANCE_PRESENT_FALSE} , {@link #FLAG_IMPEDANCE_PRESENT_TRUE} , {@link #FLAG_WEIGHT_PRESENT_FALSE} , {@link #FLAG_WEIGHT_PRESENT_TRUE} , {@link #FLAG_HEIGHT_PRESENT_FALSE} , {@link #FLAG_HEIGHT_PRESENT_TRUE} , {@link #FLAG_MULTIPLE_PACKET_MEASUREMENT_FALSE} , {@link #FLAG_MULTIPLE_PACKET_MEASUREMENT_TRUE}
      * @param flags  current packet's flags
      * @return {@code true}:same as expect, {@code false}:not match
      */

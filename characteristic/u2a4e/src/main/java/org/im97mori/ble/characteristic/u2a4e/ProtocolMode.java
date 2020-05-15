@@ -37,6 +37,15 @@ public class ProtocolMode implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param protocolModeValues Protocol Mode Value
+     */
+    public ProtocolMode(int protocolModeValues) {
+        mProtocolModeValue = protocolModeValues;
+    }
+
+    /**
      * @return Protocol Mode Value
      */
     public int getProtocolModeValue() {

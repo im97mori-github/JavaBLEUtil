@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class HTTPHeadersTest {
 
     //@formatter:off
@@ -65,6 +65,14 @@ public class HTTPHeadersTest {
 
         HTTPHeaders result1 = new HTTPHeaders(data);
         assertEquals("ab", result1.getHttpHeaders());
+    }
+
+    @Test
+    public void test_constructor_00003() {
+        String httpHeaders = "1";
+
+        HTTPHeaders result1 = new HTTPHeaders(httpHeaders);
+        assertEquals(httpHeaders, result1.getHttpHeaders());
     }
 
     @Test

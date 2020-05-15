@@ -34,6 +34,17 @@ public class ServiceChanged implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param startOfAffectedAttributeHandleRange Start of Affected Attribute Handle Range
+     * @param endOfAffectedAttributeHandleRange   End of Affected Attribute Handle Range
+     */
+    public ServiceChanged(int startOfAffectedAttributeHandleRange, int endOfAffectedAttributeHandleRange) {
+        mStartOfAffectedAttributeHandleRange = startOfAffectedAttributeHandleRange;
+        mEndOfAffectedAttributeHandleRange = endOfAffectedAttributeHandleRange;
+    }
+
+    /**
      * @return Start of Affected Attribute Handle Range
      */
     public int getStartOfAffectedAttributeHandleRange() {

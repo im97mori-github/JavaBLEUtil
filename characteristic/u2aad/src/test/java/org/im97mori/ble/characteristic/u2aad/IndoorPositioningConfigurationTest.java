@@ -234,6 +234,14 @@ public class IndoorPositioningConfigurationTest {
     }
 
     @Test
+    public void test_constructor_00008() {
+        int indoorPositioningConfiguration = 1;
+
+        IndoorPositioningConfiguration result1 = new IndoorPositioningConfiguration(indoorPositioningConfiguration);
+        assertEquals(indoorPositioningConfiguration, result1.getIndoorPositioningConfiguration());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

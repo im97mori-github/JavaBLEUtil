@@ -28,6 +28,15 @@ public class Latitude implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param latitude Latitude
+     */
+    public Latitude(int latitude) {
+        mLatitude = latitude;
+    }
+
+    /**
      * @return Latitude
      */
     public int getLatitude() {

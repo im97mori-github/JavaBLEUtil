@@ -28,6 +28,15 @@ public class LocalEastCoordinate implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param localEastCoordinate Local East Coordinate
+     */
+    public LocalEastCoordinate(int localEastCoordinate) {
+        mLocalEastCoordinate = localEastCoordinate;
+    }
+
+    /**
      * @return Local East Coordinate
      */
     public int getLocalEastCoordinate() {

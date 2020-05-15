@@ -27,6 +27,15 @@ public class BatteryLevel implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param level Level
+     */
+    public BatteryLevel(int level) {
+        mLevel = level;
+    }
+
+    /**
      * @return Level
      */
     public int getLevel() {

@@ -222,6 +222,51 @@ public class TreadmillData implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                 Flags
+     * @param instantaneousSpeed    Instantaneous Speed
+     * @param averageSpeed          Average Speed
+     * @param totalDistance         Total Distance
+     * @param inclination           Inclination
+     * @param rampAngleSetting      Ramp Angle Setting
+     * @param positiveElevationGain Positive Elevation Gain
+     * @param negativeElevationGain Negative Elevation Gain
+     * @param instantaneousPace     Instantaneous Pace
+     * @param averagePace           Average Pace
+     * @param totalEnergy           Total Energy
+     * @param energyPerHour         Energy Per Hour
+     * @param energyPerMinute       Energy Per Minute
+     * @param heartRate             Heart Rate
+     * @param metabolicEquivalent   Metabolic Equivalent
+     * @param elapsedTime           Elapsed Time
+     * @param remainingTime         Remaining Time
+     * @param forceOnBelt           Force on Belt
+     * @param powerOutput           Power Output
+     */
+    public TreadmillData(@NonNull byte[] flags, int instantaneousSpeed, int averageSpeed, int totalDistance, int inclination, int rampAngleSetting, int positiveElevationGain, int negativeElevationGain, int instantaneousPace, int averagePace, int totalEnergy, int energyPerHour, int energyPerMinute, int heartRate, int metabolicEquivalent, int elapsedTime, int remainingTime, int forceOnBelt, int powerOutput) {
+        mFlags = flags;
+        mInstantaneousSpeed = instantaneousSpeed;
+        mAverageSpeed = averageSpeed;
+        mTotalDistance = totalDistance;
+        mInclination = inclination;
+        mRampAngleSetting = rampAngleSetting;
+        mPositiveElevationGain = positiveElevationGain;
+        mNegativeElevationGain = negativeElevationGain;
+        mInstantaneousPace = instantaneousPace;
+        mAveragePace = averagePace;
+        mTotalEnergy = totalEnergy;
+        mEnergyPerHour = energyPerHour;
+        mEnergyPerMinute = energyPerMinute;
+        mHeartRate = heartRate;
+        mMetabolicEquivalent = metabolicEquivalent;
+        mElapsedTime = elapsedTime;
+        mRemainingTime = remainingTime;
+        mForceOnBelt = forceOnBelt;
+        mPowerOutput = powerOutput;
+    }
+
+    /**
      * @return Flags
      */
     public byte[] getFlags() {

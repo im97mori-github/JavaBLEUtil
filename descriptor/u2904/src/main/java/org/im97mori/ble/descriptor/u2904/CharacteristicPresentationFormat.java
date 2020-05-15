@@ -192,6 +192,23 @@ public class CharacteristicPresentationFormat implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param format      Format
+     * @param exponent    Exponent
+     * @param unit        Unit
+     * @param namespace   Namespace
+     * @param description Description
+     */
+    public CharacteristicPresentationFormat(int format, int exponent, int unit, int namespace, @NonNull byte[] description) {
+        mFormat = format;
+        mExponent = exponent;
+        mUnit = unit;
+        mNamespace = namespace;
+        mDescription = description;
+    }
+
+    /**
      * @return Format
      */
     public int getFormat() {

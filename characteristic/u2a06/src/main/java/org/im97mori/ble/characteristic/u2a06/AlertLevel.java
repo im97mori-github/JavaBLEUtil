@@ -42,6 +42,15 @@ public class AlertLevel implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param alertLevel Alert Level
+     */
+    public AlertLevel(int alertLevel) {
+        mAlertLevel = alertLevel;
+    }
+
+    /**
      * @return Alert Level
      */
     public int getAlertLevel() {

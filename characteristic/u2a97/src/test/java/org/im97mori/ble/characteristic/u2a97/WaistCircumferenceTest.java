@@ -34,13 +34,20 @@ public class WaistCircumferenceTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int waistCircumference = 1;
+
+        WaistCircumference result1 = new WaistCircumference(waistCircumference);
+        assertEquals(waistCircumference, result1.getWaistCircumference());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[2];
         data[ 0] = 0x01;
         data[ 1] = 0x02;
         //@formatter:on
-
 
         WaistCircumference result1 = new WaistCircumference(data);
         assertArrayEquals(data, result1.getBytes());

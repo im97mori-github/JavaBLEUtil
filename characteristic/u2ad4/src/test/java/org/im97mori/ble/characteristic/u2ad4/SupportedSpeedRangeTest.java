@@ -62,6 +62,18 @@ public class SupportedSpeedRangeTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int minimumSpeed = 1;
+        int maximumSpeed = 2;
+        int minimumIncrement = 3;
+
+        SupportedSpeedRange result1 = new SupportedSpeedRange(minimumSpeed, maximumSpeed, minimumIncrement);
+        assertEquals(minimumSpeed, result1.getMinimumSpeed());
+        assertEquals(maximumSpeed, result1.getMaximumSpeed());
+        assertEquals(minimumIncrement, result1.getMinimumIncrement());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

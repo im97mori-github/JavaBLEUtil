@@ -27,6 +27,15 @@ public class AerobicHeartRateLowerLimit implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param aerobicHeartRateLowerLimit Aerobic Heart Rate Lower Limit
+     */
+    public AerobicHeartRateLowerLimit(int aerobicHeartRateLowerLimit) {
+        mAerobicHeartRateLowerLimit = aerobicHeartRateLowerLimit;
+    }
+
+    /**
      * @return Aerobic Heart Rate Lower Limit
      */
     public int getAerobicHeartRateLowerLimit() {

@@ -41,6 +41,14 @@ public class ReconnectionAddressTest {
     }
 
     @Test
+    public void test_constructor003() {
+        long address = 1;
+
+        ReconnectionAddress result1 = new ReconnectionAddress(address);
+        assertEquals(address, result1.getAddress());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[6];

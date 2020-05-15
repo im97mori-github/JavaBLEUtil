@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class URITest {
 
     //@formatter:off
@@ -65,6 +65,14 @@ public class URITest {
 
         URI result1 = new URI(data);
         assertEquals("ab", result1.getUri());
+    }
+
+    @Test
+    public void test_constructor_00003() {
+        String uri = "1";
+
+        URI result1 = new URI(uri);
+        assertEquals(uri, result1.getUri());
     }
 
     @Test

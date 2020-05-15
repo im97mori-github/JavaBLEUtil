@@ -50,6 +50,14 @@ public class HeatIndexTest {
         HeatIndex result1 = new HeatIndex(data);
         assertEquals(0x01, result1.getHeatIndex());
     }
+    
+    @Test
+    public void test_constructor_00002() {
+        int heatIndex = 1;
+
+        HeatIndex result1 = new HeatIndex(heatIndex);
+        assertEquals(heatIndex, result1.getHeatIndex());
+    }
 
     @Test
     public void test_parcelable_2_00001() {

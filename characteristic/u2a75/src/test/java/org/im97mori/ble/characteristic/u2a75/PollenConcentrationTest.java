@@ -54,6 +54,14 @@ public class PollenConcentrationTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int pollenConcentration = 1;
+
+        PollenConcentration result1 = new PollenConcentration(pollenConcentration);
+        assertEquals(pollenConcentration, result1.getPollenConcentration());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

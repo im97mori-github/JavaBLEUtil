@@ -29,6 +29,14 @@ public class UserIndexTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int userIndex = 1;
+
+        UserIndex result1 = new UserIndex(userIndex);
+        assertEquals(userIndex, result1.getUserIndex());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[1];

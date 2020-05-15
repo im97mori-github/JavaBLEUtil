@@ -61,6 +61,21 @@ public class PeripheralPreferredConnectionParameters implements ByteArrayInterfa
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param minimumConnectionInterval              Minimum Connection Interval
+     * @param maximumConnectionInterval              Maximum Connection Interval
+     * @param slaveLatency                           Slave Latency
+     * @param connectionSupervisionTimeoutMultiplier Connection Supervision Timeout Multiplier
+     */
+    public PeripheralPreferredConnectionParameters(int minimumConnectionInterval, int maximumConnectionInterval, int slaveLatency, int connectionSupervisionTimeoutMultiplier) {
+        mMinimumConnectionInterval = minimumConnectionInterval;
+        mMaximumConnectionInterval = maximumConnectionInterval;
+        mSlaveLatency = slaveLatency;
+        mConnectionSupervisionTimeoutMultiplier = connectionSupervisionTimeoutMultiplier;
+    }
+
+    /**
      * @return Minimum Connection Interval
      */
     public int getMinimumConnectionInterval() {

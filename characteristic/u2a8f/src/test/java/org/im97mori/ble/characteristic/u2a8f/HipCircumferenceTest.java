@@ -34,6 +34,14 @@ public class HipCircumferenceTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int hipCircumference = 1;
+
+        HipCircumference result1 = new HipCircumference(hipCircumference);
+        assertEquals(hipCircumference, result1.getHipCircumference());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[2];

@@ -27,6 +27,15 @@ public class FloorNumber implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param floorNumber Floor Number
+     */
+    public FloorNumber(int floorNumber) {
+        mFloorNumber = floorNumber;
+    }
+
+    /**
      * @return Floor Number
      */
     public int getFloorNumber() {

@@ -162,6 +162,23 @@ public class HeartRateMeasurement implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                           Flags
+     * @param heartRateMeasurementValueUint8  Heart Rate Measurement Value (uint8)
+     * @param heartRateMeasurementValueUint16 Heart Rate Measurement Value (uint16)
+     * @param energyExpended                  Energy Expended
+     * @param rrInterval                      RR-Interval
+     */
+    public HeartRateMeasurement(int flags, int heartRateMeasurementValueUint8, int heartRateMeasurementValueUint16, int energyExpended, @NonNull int[] rrInterval) {
+        mFlags = flags;
+        mHeartRateMeasurementValueUint8 = heartRateMeasurementValueUint8;
+        mHeartRateMeasurementValueUint16 = heartRateMeasurementValueUint16;
+        mEnergyExpended = energyExpended;
+        mRrInterval = rrInterval;
+    }
+
+    /**
      * @return Flags
      */
     public int getFlags() {

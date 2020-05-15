@@ -42,6 +42,15 @@ public class EmailAddress implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param emailAddress Email Address
+     */
+    public EmailAddress(@NonNull String emailAddress) {
+        mEmailAddress = emailAddress;
+    }
+
+    /**
      * @return Email Address
      */
     public String getEmailAddress() {

@@ -28,6 +28,15 @@ public class HeatIndex implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param heatIndex Heat Index
+     */
+    public HeatIndex(int heatIndex) {
+        mHeatIndex = heatIndex;
+    }
+
+    /**
      * @return Heat Index
      */
     public int getHeatIndex() {

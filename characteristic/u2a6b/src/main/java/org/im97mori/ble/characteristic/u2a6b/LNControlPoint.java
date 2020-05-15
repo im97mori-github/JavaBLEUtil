@@ -67,16 +67,14 @@ public class LNControlPoint implements ByteArrayInterface {
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 0: Instantaneous Speed Leave as default
+     * Mask Location and Speed Characteristic Content 0: Instantaneous Speed Leave as default
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_LEAVE_AS_DEFAULT = 0b00000000_00000000;
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 1: Instantaneous Speed Turn off
+     * Mask Location and Speed Characteristic Content 1: Instantaneous Speed Turn off
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_TURN_OFF = 0b00000000_00000001;
@@ -89,16 +87,14 @@ public class LNControlPoint implements ByteArrayInterface {
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 0: Total Distance Leave as default
+     * Mask Location and Speed Characteristic Content 0: Total Distance Leave as default
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_LEAVE_AS_DEFAULT = 0b00000000_00000000;
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 1: Total Distance Turn off
+     * Mask Location and Speed Characteristic Content 1: Total Distance Turn off
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_TURN_OFF = 0b00000000_00000010;
@@ -111,16 +107,14 @@ public class LNControlPoint implements ByteArrayInterface {
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 0: Location Leave as default
+     * Mask Location and Speed Characteristic Content 0: Location Leave as default
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_LEAVE_AS_DEFAULT = 0b00000000_00000000;
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 1: Location Turn off
+     * Mask Location and Speed Characteristic Content 1: Location Turn off
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_TURN_OFF = 0b00000000_00000100;
@@ -133,16 +127,14 @@ public class LNControlPoint implements ByteArrayInterface {
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 0: Elevation Leave as default
+     * Mask Location and Speed Characteristic Content 0: Elevation Leave as default
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_LEAVE_AS_DEFAULT = 0b00000000_00000000;
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 1: Elevation Turn off
+     * Mask Location and Speed Characteristic Content 1: Elevation Turn off
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_TURN_OFF = 0b00000000_00001000;
@@ -155,16 +147,14 @@ public class LNControlPoint implements ByteArrayInterface {
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 0: Heading Leave as default
+     * Mask Location and Speed Characteristic Content 0: Heading Leave as default
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_LEAVE_AS_DEFAULT = 0b00000000_00000000;
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 1: Heading Turn off
+     * Mask Location and Speed Characteristic Content 1: Heading Turn off
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_TURN_OFF = 0b00000000_00010000;
@@ -177,16 +167,14 @@ public class LNControlPoint implements ByteArrayInterface {
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 0: Rolling Time Leave as default
+     * Mask Location and Speed Characteristic Content 0: Rolling Time Leave as default
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_LEAVE_AS_DEFAULT = 0b00000000_00000000;
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 1: Rolling Time Turn off
+     * Mask Location and Speed Characteristic Content 1: Rolling Time Turn off
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_TURN_OFF = 0b00000000_00100000;
@@ -199,64 +187,56 @@ public class LNControlPoint implements ByteArrayInterface {
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 0: UTC Time Leave as default
+     * Mask Location and Speed Characteristic Content 0: UTC Time Leave as default
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_LEAVE_AS_DEFAULT = 0b00000000_00000000;
 
     /**
      * <p>
-     * Mask Location and Speed Characteristic Content
-     * 1: UTC Time Turn off
+     * Mask Location and Speed Characteristic Content 1: UTC Time Turn off
      * </p>
      */
     public static final int PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_TURN_OFF = 0b00000000_01000000;
 
     /**
      * <p>
-     * Navigation Control
-     * 0: Stop Notification of the Navigation characteristic. Stop Navigation
+     * Navigation Control 0: Stop Notification of the Navigation characteristic. Stop Navigation
      * </p>
      */
     public static final int PARAMETER_VALUE_NAVIGATION_CONTROL_00 = 0x00;
 
     /**
      * <p>
-     * Navigation Control
-     * 1: Start Notification of the Navigation characteristic. Start Navigation to the first waypoint on a route
+     * Navigation Control 1: Start Notification of the Navigation characteristic. Start Navigation to the first waypoint on a route
      * </p>
      */
     public static final int PARAMETER_VALUE_NAVIGATION_CONTROL_01 = 0x01;
 
     /**
      * <p>
-     * Navigation Control
-     * 2: Stop Notification of the Navigation characteristic. Pause Navigation keeping the next waypoint on the route in the memory for continuing the navigation later
+     * Navigation Control 2: Stop Notification of the Navigation characteristic. Pause Navigation keeping the next waypoint on the route in the memory for continuing the navigation later
      * </p>
      */
     public static final int PARAMETER_VALUE_NAVIGATION_CONTROL_02 = 0x02;
 
     /**
      * <p>
-     * Navigation Control
-     * 3: Start Notification of the Navigation characteristic. Continue Navigation from the point where navigation was paused to the next waypoint on the route
+     * Navigation Control 3: Start Notification of the Navigation characteristic. Continue Navigation from the point where navigation was paused to the next waypoint on the route
      * </p>
      */
     public static final int PARAMETER_VALUE_NAVIGATION_CONTROL_03 = 0x03;
 
     /**
      * <p>
-     * Navigation Control
-     * 4: Notification of the Navigation characteristic not affected. Skip Waypoint: disregard next waypoint and continue navigation to the waypoint following next waypoint on the route
+     * Navigation Control 4: Notification of the Navigation characteristic not affected. Skip Waypoint: disregard next waypoint and continue navigation to the waypoint following next waypoint on the route
      * </p>
      */
     public static final int PARAMETER_VALUE_NAVIGATION_CONTROL_04 = 0x04;
 
     /**
      * <p>
-     * Navigation Control
-     * 5: Start Notificationof the Navigation characteristic. Select Nearest Waypoint on a Route: measure the distance to all waypoints on the route, and startnavigation to the closest or optimal waypoint on the route (left to the implementation) and from there to waypoints following next waypoint along the route
+     * Navigation Control 5: Start Notificationof the Navigation characteristic. Select Nearest Waypoint on a Route: measure the distance to all waypoints on the route, and startnavigation to the closest or optimal waypoint on the route (left to the implementation) and from there to waypoints following next waypoint along the route
      * </p>
      */
     public static final int PARAMETER_VALUE_NAVIGATION_CONTROL_05 = 0x05;
@@ -383,6 +363,23 @@ public class LNControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param opCodes           Op Codes
+     * @param parameterValue    Parameter Value
+     * @param requestOpCode     Request Op Code
+     * @param responseValue     Response Value
+     * @param responseParameter Response Parameter
+     */
+    public LNControlPoint(int opCodes, @NonNull byte[] parameterValue, int requestOpCode, int responseValue, @NonNull byte[] responseParameter) {
+        mOpCodes = opCodes;
+        mParameterValue = parameterValue;
+        mRequestOpCode = requestOpCode;
+        mResponseValue = responseValue;
+        mResponseParameter = responseParameter;
+    }
+
+    /**
      * @return Op Codes
      */
     public int getOpCodes() {
@@ -473,8 +470,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentInstantaneousSpeedLeaveAsDefault() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_LEAVE_AS_DEFAULT);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_LEAVE_AS_DEFAULT);
     }
 
     /**
@@ -482,8 +478,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentInstantaneousSpeedSpeedTurnOff() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_TURN_OFF);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_TURN_OFF);
     }
 
     /**
@@ -491,8 +486,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentTotalDistanceLeaveAsDefault() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_LEAVE_AS_DEFAULT);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_LEAVE_AS_DEFAULT);
     }
 
     /**
@@ -500,8 +494,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentITotalDistanceSpeedTurnOff() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_TURN_OFF);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_TURN_OFF);
     }
 
     /**
@@ -509,8 +502,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentLocationLeaveAsDefault() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_LEAVE_AS_DEFAULT);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_LEAVE_AS_DEFAULT);
     }
 
     /**
@@ -518,8 +510,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentLocationSpeedSpeedTurnOff() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_TURN_OFF);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_TURN_OFF);
     }
 
     /**
@@ -527,8 +518,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentElevationLeaveAsDefault() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_LEAVE_AS_DEFAULT);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_LEAVE_AS_DEFAULT);
     }
 
     /**
@@ -536,8 +526,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentElevationSpeedTurnOff() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_TURN_OFF);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_TURN_OFF);
     }
 
     /**
@@ -545,8 +534,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentHeadingLeaveAsDefault() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_LEAVE_AS_DEFAULT);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_LEAVE_AS_DEFAULT);
     }
 
     /**
@@ -554,8 +542,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentHeadingSpeedTurnOff() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_TURN_OFF);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_TURN_OFF);
     }
 
     /**
@@ -563,8 +550,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentRollingTimeLeaveAsDefault() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_LEAVE_AS_DEFAULT);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_LEAVE_AS_DEFAULT);
     }
 
     /**
@@ -572,8 +558,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentRollingTimeTurnOff() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_TURN_OFF);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_TURN_OFF);
     }
 
     /**
@@ -581,8 +566,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentUtcTimeLeaveAsDefault() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_LEAVE_AS_DEFAULT);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_LEAVE_AS_DEFAULT);
     }
 
     /**
@@ -590,8 +574,7 @@ public class LNControlPoint implements ByteArrayInterface {
      */
     public boolean isParameterValueMaskLocationAndSpeedCharacteristicContentUtcTimeSpeedTurnOff() {
         return isOpCodesMaskLocationAndSpeedCharacteristicContent(mOpCodes)
-                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_MASK
-                , PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_TURN_OFF);
+                && isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_MASK, PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_TURN_OFF);
     }
 
     /**
@@ -635,7 +618,6 @@ public class LNControlPoint implements ByteArrayInterface {
     public boolean isParameterValueNavigationControll05() {
         return isOpCodesNavigationControl(mOpCodes) && PARAMETER_VALUE_NAVIGATION_CONTROL_05 == BLEUtils.createUInt8(mParameterValue, 0);
     }
-
 
     /**
      * @return Request Op Code
@@ -722,20 +704,7 @@ public class LNControlPoint implements ByteArrayInterface {
      * check Parameter Value for Mask Location and Speed Characteristic Content
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_LEAVE_AS_DEFAULT}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_TURN_OFF}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_LEAVE_AS_DEFAULT}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_TURN_OFF}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_LEAVE_AS_DEFAULT}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_TURN_OFF}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_LEAVE_AS_DEFAULT}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_TURN_OFF}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_LEAVE_AS_DEFAULT}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_TURN_OFF}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_LEAVE_AS_DEFAULT}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_TURN_OFF}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_LEAVE_AS_DEFAULT}
-     *               , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_TURN_OFF}
+     * @param expect one of {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_LEAVE_AS_DEFAULT} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_INSTANCE_SPEED_TURN_OFF} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_LEAVE_AS_DEFAULT} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_TOTAL_DISTANCE_TURN_OFF} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_LEAVE_AS_DEFAULT} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_LOCATION_TURN_OFF} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_LEAVE_AS_DEFAULT} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ELEVATION_TURN_OFF} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_LEAVE_AS_DEFAULT} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_HEADING_TURN_OFF} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_LEAVE_AS_DEFAULT} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_ROLLING_TIME_TURN_OFF} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_LEAVE_AS_DEFAULT} , {@link #PARAMETER_VALUE_MASK_LOCATION_AND_SPEED_CHARACTERISTIC_UTC_TIME_TURN_OFF}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isParameterValueMaskLocationAndSpeedCharacteristicContentMatched(int mask, int expect) {

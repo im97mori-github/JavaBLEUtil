@@ -27,6 +27,15 @@ public class FatBurnHeartRateUpperLimit implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param fatBurnHeartRateUpperLimit Fat Burn Heart Rate Upper Limit
+     */
+    public FatBurnHeartRateUpperLimit(int fatBurnHeartRateUpperLimit) {
+        mFatBurnHeartRateUpperLimit = fatBurnHeartRateUpperLimit;
+    }
+
+    /**
      * @return Fat Burn Heart Rate Upper Limit
      */
     public int getFatBurnHeartRateUpperLimit() {

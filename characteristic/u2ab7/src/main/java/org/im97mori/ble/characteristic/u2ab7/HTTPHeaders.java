@@ -24,6 +24,15 @@ public class HTTPHeaders implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param httpHeaders HTTP Headers
+     */
+    public HTTPHeaders(@NonNull String httpHeaders) {
+        mHttpHeaders = httpHeaders;
+    }
+
+    /**
      * @return HTTP Headers
      */
     public String getHttpHeaders() {

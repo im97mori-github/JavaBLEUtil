@@ -65,6 +65,21 @@ public class TimeTriggerSetting implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param condition          Condition
+     * @param valueNone          Value (None)
+     * @param valueTimerInterval Value (Time Interval)
+     * @param valueCount         Value (Count)
+     */
+    public TimeTriggerSetting(int condition, int valueNone, int valueTimerInterval, int valueCount) {
+        mCondition = condition;
+        mValueNone = valueNone;
+        mValueTimeInterval = valueTimerInterval;
+        mValueCount = valueCount;
+    }
+
+    /**
      * @return Condition
      */
     public int getCondition() {

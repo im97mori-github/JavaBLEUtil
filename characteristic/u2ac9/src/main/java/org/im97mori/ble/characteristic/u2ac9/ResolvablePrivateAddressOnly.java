@@ -32,6 +32,15 @@ public class ResolvablePrivateAddressOnly implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param resolvablePrivateAddress Resolvable Private Address
+     */
+    public ResolvablePrivateAddressOnly(int resolvablePrivateAddress) {
+        mResolvablePrivateAddress = resolvablePrivateAddress;
+    }
+
+    /**
      * @return Resolvable Private Address
      */
     public int getResolvablePrivateAddress() {

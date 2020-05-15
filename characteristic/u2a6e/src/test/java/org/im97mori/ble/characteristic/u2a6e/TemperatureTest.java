@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class TemperatureTest {
 
     //@formatter:off
@@ -51,6 +51,14 @@ public class TemperatureTest {
         Temperature result1 = new Temperature(data);
         assertEquals(0x0201, result1.getTemperature());
         assertEquals(Temperature.TEMPERATURE_RESOLUTION * 0x0201, result1.getTemperatureDegreesCelsius(), 0);
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int temperature = 1;
+
+        Temperature result1 = new Temperature(temperature);
+        assertEquals(temperature, result1.getTemperature());
     }
 
     @Test

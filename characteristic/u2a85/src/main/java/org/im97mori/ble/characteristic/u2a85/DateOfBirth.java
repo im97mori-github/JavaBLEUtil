@@ -40,6 +40,19 @@ public class DateOfBirth implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param year  Year
+     * @param month Month
+     * @param day   Day
+     */
+    public DateOfBirth(int year, int month, int day) {
+        mYear = year;
+        mMonth = month;
+        mDay = day;
+    }
+
+    /**
      * @return Year
      */
     public int getYear() {

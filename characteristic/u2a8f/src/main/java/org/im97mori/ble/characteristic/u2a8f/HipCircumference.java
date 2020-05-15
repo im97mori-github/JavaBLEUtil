@@ -33,6 +33,15 @@ public class HipCircumference implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param hipCircumference Hip Circumference
+     */
+    public HipCircumference(int hipCircumference) {
+        mHipCircumference = hipCircumference;
+    }
+
+    /**
      * @return Hip Circumference
      */
     public int getHipCircumference() {

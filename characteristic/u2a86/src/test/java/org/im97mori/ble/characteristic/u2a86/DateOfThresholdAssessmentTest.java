@@ -217,6 +217,18 @@ public class DateOfThresholdAssessmentTest {
     }
 
     @Test
+    public void test_constructor014() {
+        int year = 1;
+        int month = 2;
+        int day = 3;
+
+        DateOfThresholdAssessment result1 = new DateOfThresholdAssessment(year, month, day);
+        assertEquals(year, result1.getYear());
+        assertEquals(month, result1.getMonth());
+        assertEquals(day, result1.getDay());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[4];

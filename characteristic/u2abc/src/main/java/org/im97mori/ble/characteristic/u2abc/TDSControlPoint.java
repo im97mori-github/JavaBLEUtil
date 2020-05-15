@@ -45,6 +45,19 @@ public class TDSControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param opCode         Op Code
+     * @param organizationId Organization ID
+     * @param parameter      Parameter
+     */
+    public TDSControlPoint(int opCode, int organizationId, @NonNull byte[] parameter) {
+        mOpCode = opCode;
+        mOrganizationId = organizationId;
+        mParameter = parameter;
+    }
+
+    /**
      * @return Op Code
      */
     public int getOpCode() {

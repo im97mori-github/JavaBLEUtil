@@ -24,6 +24,15 @@ public class DeviceName implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param name Name
+     */
+    public DeviceName(@NonNull String name) {
+        mName = name;
+    }
+
+    /**
      * @return Name
      */
     public String getName() {

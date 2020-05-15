@@ -28,6 +28,15 @@ public class TxPowerLevel implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param txPower Tx Power
+     */
+    public TxPowerLevel(int txPower) {
+        mTxPower = txPower;
+    }
+
+    /**
      * @return Tx Power
      */
     public int getTxPower() {

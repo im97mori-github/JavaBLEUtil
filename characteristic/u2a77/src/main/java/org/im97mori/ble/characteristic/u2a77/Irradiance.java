@@ -33,6 +33,15 @@ public class Irradiance implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param irradiance Irradiance
+     */
+    public Irradiance(int irradiance) {
+        mIrradiance = irradiance;
+    }
+
+    /**
      * @return Irradiance
      */
     public int getIrradiance() {

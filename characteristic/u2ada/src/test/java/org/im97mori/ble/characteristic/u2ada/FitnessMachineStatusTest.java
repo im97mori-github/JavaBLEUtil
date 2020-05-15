@@ -876,17 +876,13 @@ public class FitnessMachineStatusTest {
         assertFalse(result1.isOpCodeTargetedCadenceChanged());
         assertFalse(result1.isOpCodeControlPermissionLost());
         assertEquals(0x0201, result1.geIndoorBikeSimulationParametersChangedWindSpeed());
-        assertEquals(FitnessMachineStatus.INDOOR_BIKE_SIMULATION_PARAMETERS_CHANGED_WIND_SPEED_RESOLUTION * 0x0201
-                , result1.geIndoorBikeSimulationParametersChangedWindSpeedMetersPerSecond(), 0);
+        assertEquals(FitnessMachineStatus.INDOOR_BIKE_SIMULATION_PARAMETERS_CHANGED_WIND_SPEED_RESOLUTION * 0x0201, result1.geIndoorBikeSimulationParametersChangedWindSpeedMetersPerSecond(), 0);
         assertEquals(0x0403, result1.geIndoorBikeSimulationParametersChangedGrade());
-        assertEquals(FitnessMachineStatus.INDOOR_BIKE_SIMULATION_PARAMETERS_CHANGED_GRADE_RESOLUTION * 0x0403
-                , result1.geIndoorBikeSimulationParametersChangedGradePercentage(), 0);
+        assertEquals(FitnessMachineStatus.INDOOR_BIKE_SIMULATION_PARAMETERS_CHANGED_GRADE_RESOLUTION * 0x0403, result1.geIndoorBikeSimulationParametersChangedGradePercentage(), 0);
         assertEquals(0x05, result1.geIndoorBikeSimulationParametersChangedCoefficientOfRollingResistance());
-        assertEquals(FitnessMachineStatus.INDOOR_BIKE_SIMULATION_PARAMETERS_CHANGED_COEFFICIENT_OF_ROLLING_RESISTANCE_RESOLUTION * 0x05
-                , result1.geIndoorBikeSimulationParametersChangedCoefficientOfRollingResistanceWithUnit(), 0);
+        assertEquals(FitnessMachineStatus.INDOOR_BIKE_SIMULATION_PARAMETERS_CHANGED_COEFFICIENT_OF_ROLLING_RESISTANCE_RESOLUTION * 0x05, result1.geIndoorBikeSimulationParametersChangedCoefficientOfRollingResistanceWithUnit(), 0);
         assertEquals(0x06, result1.geIndoorBikeSimulationParametersChangedWindResistanceCoefficient());
-        assertEquals(FitnessMachineStatus.INDOOR_BIKE_SIMULATION_PARAMETERS_CHANGED_WIND_RESISTANCE_COEFFICIENT_RESOLUTION * 0x06
-                , result1.geIndoorBikeSimulationParametersChangedWindResistanceCoefficientKilogramPerMeter(), 0);
+        assertEquals(FitnessMachineStatus.INDOOR_BIKE_SIMULATION_PARAMETERS_CHANGED_WIND_RESISTANCE_COEFFICIENT_RESOLUTION * 0x06, result1.geIndoorBikeSimulationParametersChangedWindResistanceCoefficientKilogramPerMeter(), 0);
     }
 
     @Test
@@ -1117,6 +1113,16 @@ public class FitnessMachineStatusTest {
         assertFalse(result1.isOpCodeSpinDownStatus());
         assertFalse(result1.isOpCodeTargetedCadenceChanged());
         assertTrue(result1.isOpCodeControlPermissionLost());
+    }
+
+    @Test
+    public void test_constructor_02102() {
+        int opCode = 1;
+        byte[] parameter = new byte[] { 2 };
+
+        FitnessMachineStatus result1 = new FitnessMachineStatus(opCode, parameter);
+        assertEquals(opCode, result1.getOpCode());
+        assertArrayEquals(parameter, result1.getParameter());
     }
 
     @Test

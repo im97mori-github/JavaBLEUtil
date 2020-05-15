@@ -33,6 +33,17 @@ public class UnreadAlertStatus implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param categoryId  Category ID
+     * @param unreadCount Unread count
+     */
+    public UnreadAlertStatus(int categoryId, int unreadCount) {
+        mCategoryId = categoryId;
+        mUnreadCount = unreadCount;
+    }
+
+    /**
      * @return Category ID
      */
     public int getCategoryId() {

@@ -26,6 +26,14 @@ public class SerialNumberStringTest {
     }
 
     @Test
+    public void test_constructor003() {
+        String serialNumber = "39Z9MY9999";
+
+        SerialNumberString result1 = new SerialNumberString(serialNumber);
+        assertEquals(serialNumber, result1.getSerialNumber());
+    }
+
+    @Test
     public void test_parcelable003() {
         String serialNumber = "39Z9MY9999";
 

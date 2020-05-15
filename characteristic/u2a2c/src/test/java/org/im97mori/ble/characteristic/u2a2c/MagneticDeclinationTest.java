@@ -54,6 +54,14 @@ public class MagneticDeclinationTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int magneticDeclination = 1;
+
+        MagneticDeclination result1 = new MagneticDeclination(magneticDeclination);
+        assertEquals(magneticDeclination, result1.getMagneticDeclination());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

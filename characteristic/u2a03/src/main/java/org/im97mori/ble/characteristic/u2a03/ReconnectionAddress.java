@@ -27,6 +27,15 @@ public class ReconnectionAddress implements ByteArrayInterface {
         mAddress = BLEUtils.createUInt48(values, 0);
     }
 
+    /***
+     * Constructor from parameters
+     * 
+     * @param address Address
+     */
+    public ReconnectionAddress(long address) {
+        mAddress = address;
+    }
+
     /**
      * @return Address
      */

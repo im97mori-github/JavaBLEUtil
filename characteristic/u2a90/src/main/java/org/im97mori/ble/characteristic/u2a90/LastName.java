@@ -42,6 +42,15 @@ public class LastName implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param lastName Last Name
+     */
+    public LastName(@NonNull String lastName) {
+        mLastName = lastName;
+    }
+
+    /**
      * @return Last Name
      */
     public String getLastName() {

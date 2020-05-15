@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
  * Supported Unread Alert Category (Characteristics UUID: 0x2A48)
  */
 public class SupportedUnreadAlertCategory implements ByteArrayInterface {
+
     /**
      * Category ID Bit Mask 0
      */
@@ -40,6 +41,19 @@ public class SupportedUnreadAlertCategory implements ByteArrayInterface {
             mHasCategoryIdBitMask1 = 0;
             mCategoryIdBitMask1 = 0;
         }
+    }
+
+    /**
+     * Constructor from parameters
+     * 
+     * @param categoryIdBitMask0    Category ID Bit Mask 0
+     * @param hasCategoryIdBitMask1 no Category ID Bit Mask 1, 1: has Category ID Bit Mask 1
+     * @param categoryIdBitMask1    Category ID Bit Mask 1
+     */
+    public SupportedUnreadAlertCategory(int categoryIdBitMask0, int hasCategoryIdBitMask1, int categoryIdBitMask1) {
+        mCategoryIdBitMask0 = categoryIdBitMask0;
+        mHasCategoryIdBitMask1 = hasCategoryIdBitMask1;
+        mCategoryIdBitMask1 = categoryIdBitMask1;
     }
 
     /**

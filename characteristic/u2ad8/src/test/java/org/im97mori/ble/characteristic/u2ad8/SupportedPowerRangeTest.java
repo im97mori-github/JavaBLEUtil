@@ -59,6 +59,18 @@ public class SupportedPowerRangeTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int minimumPower = 1;
+        int maximumPower = 2;
+        int minimumIncrement = 3;
+
+        SupportedPowerRange result1 = new SupportedPowerRange(minimumPower, maximumPower, minimumIncrement);
+        assertEquals(minimumPower, result1.getMinimumPower());
+        assertEquals(maximumPower, result1.getMaximumPower());
+        assertEquals(minimumIncrement, result1.getMinimumIncrement());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

@@ -293,6 +293,14 @@ public class SensorLocationTest {
     }
 
     @Test
+    public void test_constructor_018() {
+        int sensorLocation = 1;
+
+        SensorLocation result1 = new SensorLocation(sensorLocation);
+        assertEquals(sensorLocation, result1.getSensorLocation());
+    }
+
+    @Test
     public void test_parcelable_2_001() {
         byte[] data = getData();
 

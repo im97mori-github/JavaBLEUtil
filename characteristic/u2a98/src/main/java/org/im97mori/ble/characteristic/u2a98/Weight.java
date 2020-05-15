@@ -33,6 +33,15 @@ public class Weight implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param weight Weight
+     */
+    public Weight(int weight) {
+        mWeight = weight;
+    }
+
+    /**
      * @return Weight
      */
     public int getWeight() {

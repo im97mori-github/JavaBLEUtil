@@ -33,6 +33,15 @@ public class TrueWindSpeed implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param trueWindSpeed True Wind Speed
+     */
+    public TrueWindSpeed(int trueWindSpeed) {
+        mTrueWindSpeed = trueWindSpeed;
+    }
+
+    /**
      * @return True Wind Speed
      */
     public int getTrueWindSpeed() {

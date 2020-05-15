@@ -10,7 +10,7 @@ import java.util.Arrays;
 import org.im97mori.ble.characteristic.core.SensorLocationUtils;
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class SCControlPointTest {
 
     //@formatter:off
@@ -707,6 +707,24 @@ public class SCControlPointTest {
         assertFalse(result1.isResponseValueOpCodeNotSupported());
         assertFalse(result1.isResponseValueInvalidParameter());
         assertTrue(result1.isResponseValueOperationFailed());
+    }
+
+    @Test
+    public void test_constructor_00706() {
+        int opCode = 1;
+        long cumulativeValue = 2;
+        int sensorLocationValue = 3;
+        int requestOpCode = 4;
+        int responseValue = 5;
+        byte[] responseParameter = new byte[] { 6 };
+
+        SCControlPoint result1 = new SCControlPoint(opCode, cumulativeValue, sensorLocationValue, requestOpCode, responseValue, responseParameter);
+        assertEquals(opCode, result1.getOpCode());
+        assertEquals(cumulativeValue, result1.getCumulativeValue());
+        assertEquals(sensorLocationValue, result1.getSensorLocationValue());
+        assertEquals(requestOpCode, result1.getRequestOpCode());
+        assertEquals(responseValue, result1.getResponseValue());
+        assertArrayEquals(responseParameter, result1.getResponseParameter());
     }
 
     @Test

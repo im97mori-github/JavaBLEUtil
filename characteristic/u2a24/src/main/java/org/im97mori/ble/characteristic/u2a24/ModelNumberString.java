@@ -24,6 +24,15 @@ public class ModelNumberString implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param modelNumber Model Number
+     */
+    public ModelNumberString(@NonNull String modelNumber) {
+        mModelNumber = modelNumber;
+    }
+
+    /**
      * @return Model Number
      */
     public String getModelNumber() {

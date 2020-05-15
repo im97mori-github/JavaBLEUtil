@@ -28,6 +28,15 @@ public class Longitude implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param longitude Longitude
+     */
+    public Longitude(int longitude) {
+        mLongitude = longitude;
+    }
+
+    /**
      * @return Longitude
      */
     public int getLongitude() {

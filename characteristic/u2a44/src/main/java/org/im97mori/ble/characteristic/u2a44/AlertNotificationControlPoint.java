@@ -63,6 +63,17 @@ public class AlertNotificationControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param commandId  Command ID
+     * @param categoryId Category ID
+     */
+    public AlertNotificationControlPoint(int commandId, int categoryId) {
+        mCommandId = commandId;
+        mCategoryId = categoryId;
+    }
+
+    /**
      * @return Command ID
      */
     public int getCommandId() {

@@ -33,6 +33,15 @@ public class Elevation implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param elevation Elevation
+     */
+    public Elevation(int elevation) {
+        mElevation = elevation;
+    }
+
+    /**
      * @return Elevation
      */
     public int getElevation() {

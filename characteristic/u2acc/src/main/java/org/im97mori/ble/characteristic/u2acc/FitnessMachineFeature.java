@@ -557,6 +557,7 @@ public class FitnessMachineFeature implements ByteArrayInterface {
      * 1: Targeted Cadence Configuration Supported True
      */
     public static final int TARGET_SETTING_FEATURES_TARGETED_CADENCE_CONFIGURATION_SUPPORTED_TRUE = 0b00000000_00000001_00000000_00000000;
+
     /**
      * Fitness Machine Features
      */
@@ -575,6 +576,17 @@ public class FitnessMachineFeature implements ByteArrayInterface {
     public FitnessMachineFeature(@NonNull byte[] values) {
         mFitnessMachineFeatures = Arrays.copyOfRange(values, 0, 4);
         mTargetSettingFeatures = Arrays.copyOfRange(values, 4, 8);
+    }
+
+    /**
+     * Constructor from parameters
+     * 
+     * @param fitnessMachineFeatures Fitness Machine Features
+     * @param targetSettingFeatures  Target Setting Features
+     */
+    public FitnessMachineFeature(@NonNull byte[] fitnessMachineFeatures, @NonNull byte[] targetSettingFeatures) {
+        mFitnessMachineFeatures = fitnessMachineFeatures;
+        mTargetSettingFeatures = targetSettingFeatures;
     }
 
     /**

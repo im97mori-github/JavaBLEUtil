@@ -112,6 +112,23 @@ public class RSCMeasurement implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                     Flags
+     * @param instantaneousSpeed        Instantaneous Speed
+     * @param instantaneousCadence      Instantaneous Cadence
+     * @param instantaneousStrideLength Instantaneous Stride Length
+     * @param totalDistance             Total Distance
+     */
+    public RSCMeasurement(int flags, int instantaneousSpeed, int instantaneousCadence, int instantaneousStrideLength, long totalDistance) {
+        mFlags = flags;
+        mInstantaneousSpeed = instantaneousSpeed;
+        mInstantaneousCadence = instantaneousCadence;
+        mInstantaneousStrideLength = instantaneousStrideLength;
+        mTotalDistance = totalDistance;
+    }
+
+    /**
      * @return Flags
      */
     public int getFlags() {
@@ -216,12 +233,7 @@ public class RSCMeasurement implements ByteArrayInterface {
      * check Flags
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #FLAGS_INSTANTANEOUS_STRIDE_LENGTH_PRESENT_FALSE}
-     *               , {@link #FLAGS_INSTANTANEOUS_STRIDE_LENGTH_PRESENT_TRUE}
-     *               , {@link #FLAGS_TOTAL_DISTANCE_PRESENT_FALSE}
-     *               , {@link #FLAGS_TOTAL_DISTANCE_PRESENT_TRUE}
-     *               , {@link #FLAGS_WALKING_OR_RUNNING_STATUS_BITS_WALKING}
-     *               , {@link #FLAGS_WALKING_OR_RUNNING_STATUS_BITS_RUNNING}
+     * @param expect one of {@link #FLAGS_INSTANTANEOUS_STRIDE_LENGTH_PRESENT_FALSE} , {@link #FLAGS_INSTANTANEOUS_STRIDE_LENGTH_PRESENT_TRUE} , {@link #FLAGS_TOTAL_DISTANCE_PRESENT_FALSE} , {@link #FLAGS_TOTAL_DISTANCE_PRESENT_TRUE} , {@link #FLAGS_WALKING_OR_RUNNING_STATUS_BITS_WALKING} , {@link #FLAGS_WALKING_OR_RUNNING_STATUS_BITS_RUNNING}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isFlagsMatched(int mask, int expect) {

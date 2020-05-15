@@ -29,6 +29,16 @@ public class ExternalReportReferenceTest {
     }
 
     @Test
+    public void test_constructor002() {
+        byte[] externalReportReference = new byte[] { 1 };
+        UUID uuid = UUID.randomUUID();
+
+        ExternalReportReference result = new ExternalReportReference(externalReportReference, uuid);
+        assertArrayEquals(externalReportReference, result.getExternalReportReference());
+        assertEquals(uuid, result.getExternalReportReferenceUuid());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] value = new byte[2];

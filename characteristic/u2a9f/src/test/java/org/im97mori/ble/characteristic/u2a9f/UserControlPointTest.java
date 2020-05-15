@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import org.im97mori.ble.characteristic.u2a9f.UserControlPoint;
 import org.junit.Test;
 
 public class UserControlPointTest {
@@ -274,6 +273,23 @@ public class UserControlPointTest {
         assertEquals(UserControlPoint.OP_CODE_RESPONSE_CODE, result1.getOpCode());
         assertEquals(UserControlPoint.OP_CODE_CONSENT, result1.getRequestOpCode());
         assertEquals(UserControlPoint.RESPONSE_VALUE_USER_NOT_AUTHORIZED, result1.getResponseValue());
+    }
+
+    @Test
+    public void test_constructor503() {
+        int opCode = 1;
+        int userIndex = 2;
+        int consentCode = 3;
+        int requestOpCode = 4;
+        int responseValue = 5;
+        int numberOfUsers = 6;
+
+        UserControlPoint result1 = new UserControlPoint(opCode, userIndex, consentCode, requestOpCode, responseValue, numberOfUsers);
+        assertEquals(opCode, result1.getOpCode());
+        assertEquals(userIndex, result1.getUserIndex());
+        assertEquals(requestOpCode, result1.getRequestOpCode());
+        assertEquals(responseValue, result1.getResponseValue());
+        assertEquals(numberOfUsers, result1.getNumberOfUsers());
     }
 
     @Test

@@ -27,6 +27,15 @@ public class UVIndex implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param UVIndex UV Index
+     */
+    public UVIndex(int UVIndex) {
+        mUVIndex = UVIndex;
+    }
+
+    /**
      * @return UV Index
      */
     public int getUVIndex() {

@@ -77,6 +77,15 @@ public class EnvironmentalSensingTriggerSetting implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param conditions Conditions
+     */
+    public EnvironmentalSensingTriggerSetting(int conditions) {
+        mConditions = conditions;
+    }
+
+    /**
      * @return Conditions
      */
     public int getConditions() {

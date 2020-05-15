@@ -33,6 +33,15 @@ public class ApparentWindDirection implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param apparentWindDirection Apparent Wind Direction
+     */
+    public ApparentWindDirection(int apparentWindDirection) {
+        mApparentWindDirection = apparentWindDirection;
+    }
+
+    /**
      * @return Apparent Wind Direction
      */
     public int getApparentWindDirection() {

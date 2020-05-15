@@ -24,6 +24,15 @@ public class FirmwareRevisionString implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param firmwareRevision Firmware Revision
+     */
+    public FirmwareRevisionString(@NonNull String firmwareRevision) {
+        mFirmwareRevision = firmwareRevision;
+    }
+
+    /**
      * @return Firmware Revision
      */
     public String getFirmwareRevision() {

@@ -28,6 +28,15 @@ public class DewPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param dewPoint Dew Point
+     */
+    public DewPoint(int dewPoint) {
+        mDewPoint = dewPoint;
+    }
+
+    /**
      * @return Dew Point
      */
     public int getDewPoint() {

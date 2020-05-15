@@ -156,6 +156,19 @@ public class TrainingStatus implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                Flags
+     * @param trainingStatus       Training Status
+     * @param trainingStatusString Training Status String
+     */
+    public TrainingStatus(int flags, int trainingStatus, @Nullable String trainingStatusString) {
+        mFlags = flags;
+        mTrainingStatus = trainingStatus;
+        mTrainingStatusString = trainingStatusString;
+    }
+
+    /**
      * @return Flags
      */
     public int getFlags() {
@@ -337,10 +350,7 @@ public class TrainingStatus implements ByteArrayInterface {
      * check Flags
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #FLAGS_TRAINING_STATUS_STRING_PRESENT_FALSE}
-     *               , {@link #FLAGS_TRAINING_STATUS_STRING_PRESENT_TRUE}
-     *               , {@link #FLAGS_EXTENDED_STRING_PRESENT_FALSE}
-     *               , {@link #FLAGS_EXTENDED_STRING_PRESENT_TRUE}
+     * @param expect one of {@link #FLAGS_TRAINING_STATUS_STRING_PRESENT_FALSE} , {@link #FLAGS_TRAINING_STATUS_STRING_PRESENT_TRUE} , {@link #FLAGS_EXTENDED_STRING_PRESENT_FALSE} , {@link #FLAGS_EXTENDED_STRING_PRESENT_TRUE}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isFlagsMatched(int mask, int expect) {

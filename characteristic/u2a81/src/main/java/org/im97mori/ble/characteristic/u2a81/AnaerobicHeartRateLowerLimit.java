@@ -27,6 +27,15 @@ public class AnaerobicHeartRateLowerLimit implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param anaerobicHeartRateLowerLimit Anaerobic Heart Rate Lower Limit
+     */
+    public AnaerobicHeartRateLowerLimit(int anaerobicHeartRateLowerLimit) {
+        mAnaerobicHeartRateLowerLimit = anaerobicHeartRateLowerLimit;
+    }
+
+    /**
      * @return Anaerobic Heart Rate Lower Limit
      */
     public int getAnaerobicHeartRateLowerLimit() {

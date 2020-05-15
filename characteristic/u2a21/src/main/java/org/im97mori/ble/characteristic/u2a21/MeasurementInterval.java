@@ -33,6 +33,15 @@ public class MeasurementInterval implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param measurementInterval Measurement Interval
+     */
+    public MeasurementInterval(int measurementInterval) {
+        mMeasurementInterval = measurementInterval;
+    }
+
+    /**
      * @return Measurement Interval
      */
     public int getMeasurementInterval() {

@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class FitnessMachineFeatureTest {
 
     //@formatter:off
@@ -4049,6 +4049,16 @@ public class FitnessMachineFeatureTest {
         assertArrayEquals(Arrays.copyOfRange(data, 4, 8), result1.getTargetSettingFeatures());
         assertFalse(result1.isTargetSettingFeaturesTargetedCadenceConfigurationNotSupported());
         assertTrue(result1.isTargetSettingFeaturesTargetedCadenceConfigurationSupported());
+    }
+
+    @Test
+    public void test_constructor_11603() {
+        byte[] fitnessMachineFeatures = new byte[] { 1 };
+        byte[] targetSettingFeatures = new byte[] { 2 };
+
+        FitnessMachineFeature result1 = new FitnessMachineFeature(fitnessMachineFeatures, targetSettingFeatures);
+        assertArrayEquals(fitnessMachineFeatures, result1.getFitnessMachineFeatures());
+        assertArrayEquals(targetSettingFeatures, result1.getTargetSettingFeatures());
     }
 
     @Test

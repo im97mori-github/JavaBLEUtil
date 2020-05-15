@@ -44,6 +44,17 @@ public class LocalTimeInformation implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param timeZone  Time Zone
+     * @param dstOffset DST Offset
+     */
+    public LocalTimeInformation(int timeZone, int dstOffset) {
+        mTimeZone = timeZone;
+        mDstOffset = dstOffset;
+    }
+
+    /**
      * @return Time Zone
      */
     public int getTimeZone() {

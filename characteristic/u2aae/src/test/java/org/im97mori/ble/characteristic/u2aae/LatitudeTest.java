@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class LatitudeTest {
 
     //@formatter:off
@@ -52,6 +52,14 @@ public class LatitudeTest {
 
         Latitude result1 = new Latitude(data);
         assertEquals(0x04030201, result1.getLatitude());
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int latitude = 1;
+
+        Latitude result1 = new Latitude(latitude);
+        assertEquals(latitude, result1.getLatitude());
     }
 
     @Test

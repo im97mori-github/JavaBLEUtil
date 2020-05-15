@@ -33,6 +33,15 @@ public class ApparentWindSpeed implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param apparentWindSpeed Apparent Wind Speed
+     */
+    public ApparentWindSpeed(int apparentWindSpeed) {
+        mApparentWindSpeed = apparentWindSpeed;
+    }
+
+    /**
      * @return Apparent Wind Speed
      */
     public int getApparentWindSpeed() {

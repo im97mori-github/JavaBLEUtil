@@ -83,6 +83,17 @@ public class BondManagementControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param opCode  Op Code
+     * @param operand Operand
+     */
+    public BondManagementControlPoint(int opCode, @Nullable String operand) {
+        mOpCode = opCode;
+        mOperand = operand;
+    }
+
+    /**
      * @return Op Code
      */
     public int getOpCode() {

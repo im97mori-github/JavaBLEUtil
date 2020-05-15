@@ -44,6 +44,17 @@ public class MagneticFluxDensity2D implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param magneticFluxDensityXAxis Magnetic Flux Density: X-Axis
+     * @param magneticFluxDensityYAxis Magnetic Flux Density: Y-Axis
+     */
+    public MagneticFluxDensity2D(int magneticFluxDensityXAxis, int magneticFluxDensityYAxis) {
+        mMagneticFluxDensityXAxis = magneticFluxDensityXAxis;
+        mMagneticFluxDensityYAxis = magneticFluxDensityYAxis;
+    }
+
+    /**
      * @return Magnetic Flux Density: X-Axis
      */
     public int getMagneticFluxDensityXAxis() {

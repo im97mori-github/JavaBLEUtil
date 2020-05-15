@@ -26,6 +26,14 @@ public class HardwareRevisionStringTest {
     }
 
     @Test
+    public void test_constructor003() {
+        String hardwareRevision = "99.99";
+
+        HardwareRevisionString result1 = new HardwareRevisionString(hardwareRevision);
+        assertEquals(hardwareRevision, result1.getHardwareRevision());
+    }
+
+    @Test
     public void test_parcelable003() {
         String hardwareRevision = "12.34";
 

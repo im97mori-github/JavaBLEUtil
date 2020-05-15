@@ -487,6 +487,23 @@ public class CyclingPowerControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param opCodes           Op Codes
+     * @param parameterValue    Parameter Value
+     * @param requestOpCode     Request Op Code
+     * @param responseValue     Response Value
+     * @param responseParameter Response Parameter
+     */
+    public CyclingPowerControlPoint(int opCodes, @NonNull byte[] parameterValue, int requestOpCode, int responseValue, @NonNull byte[] responseParameter) {
+        mOpCodes = opCodes;
+        mParameterValue = parameterValue;
+        mRequestOpCode = requestOpCode;
+        mResponseValue = responseValue;
+        mResponseParameter = responseParameter;
+    }
+
+    /**
      * @return Op Codes
      */
     public int getOpCodes() {

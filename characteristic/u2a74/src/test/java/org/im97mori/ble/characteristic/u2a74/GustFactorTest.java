@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class GustFactorTest {
 
     //@formatter:off
@@ -50,6 +50,14 @@ public class GustFactorTest {
         GustFactor result1 = new GustFactor(data);
         assertEquals(0x01, result1.getGustFactor());
         assertEquals(GustFactor.GUST_FACTOR_RESOLUTION * 0x01, result1.getGustFactorWithUnit(), 0);
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int gustFactor = 1;
+
+        GustFactor result1 = new GustFactor(gustFactor);
+        assertEquals(gustFactor, result1.getGustFactor());
     }
 
     @Test

@@ -147,7 +147,25 @@ public class SCControlPoint implements ByteArrayInterface {
             mResponseValue = 0;
             mResponseParameter = new byte[0];
         }
+    }
 
+    /**
+     * Constructor from parameters
+     * 
+     * @param opCode              Op Code
+     * @param cumulativeValue     Cumulative Value
+     * @param sensorLocationValue Sensor Location Value
+     * @param requestOpCode       Request Op Code
+     * @param responseValue       Response Value
+     * @param responseParameter   Response Parameter
+     */
+    public SCControlPoint(int opCode, long cumulativeValue, int sensorLocationValue, int requestOpCode, int responseValue, byte[] responseParameter) {
+        mOpCode = opCode;
+        mCumulativeValue = cumulativeValue;
+        mSensorLocationValue = sensorLocationValue;
+        mRequestOpCode = requestOpCode;
+        mResponseValue = responseValue;
+        mResponseParameter = responseParameter;
     }
 
     /**

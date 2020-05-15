@@ -33,6 +33,15 @@ public class Temperature implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param temperature Temperature
+     */
+    public Temperature(int temperature) {
+        mTemperature = temperature;
+    }
+
+    /**
      * @return Temperature
      */
     public int getTemperature() {

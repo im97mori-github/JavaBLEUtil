@@ -36,6 +36,14 @@ public class DatabaseChangeIncrementTest {
     }
 
     @Test
+    public void test_constructor003() {
+        long databaseChangeIncrement = 1;
+
+        DatabaseChangeIncrement result1 = new DatabaseChangeIncrement(databaseChangeIncrement);
+        assertEquals(databaseChangeIncrement, result1.getDatabaseChangeIncrement());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[4];

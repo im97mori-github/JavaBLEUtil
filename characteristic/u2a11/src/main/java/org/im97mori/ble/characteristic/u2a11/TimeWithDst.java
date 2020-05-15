@@ -64,6 +64,27 @@ public class TimeWithDst implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param year      Year
+     * @param month     Month
+     * @param day       Day
+     * @param hours     Hours
+     * @param minutes   Minutes
+     * @param seconds   Seconds
+     * @param dstOffset DST Offset
+     */
+    public TimeWithDst(int year, int month, int day, int hours, int minutes, int seconds, int dstOffset) {
+        mYear = year;
+        mMonth = month;
+        mDay = day;
+        mHours = hours;
+        mMinutes = minutes;
+        mSeconds = seconds;
+        mDstOffset = dstOffset;
+    }
+
+    /**
      * @return Year
      */
     public int getYear() {

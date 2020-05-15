@@ -27,6 +27,15 @@ public class TemperatureType implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param temperatureTextDescription Temperature Text Description
+     */
+    public TemperatureType(int temperatureTextDescription) {
+        mTemperatureTextDescription = temperatureTextDescription;
+    }
+
+    /**
      * @return Temperature Text Description
      */
     public int getTemperatureTextDescription() {

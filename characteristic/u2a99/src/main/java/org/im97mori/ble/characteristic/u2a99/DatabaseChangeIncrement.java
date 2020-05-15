@@ -28,6 +28,15 @@ public class DatabaseChangeIncrement implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param databaseChangeIncrement Database Change Increment
+     */
+    public DatabaseChangeIncrement(long databaseChangeIncrement) {
+        mDatabaseChangeIncrement = databaseChangeIncrement;
+    }
+
+    /**
      * @return Database Change Increment
      */
     public long getDatabaseChangeIncrement() {

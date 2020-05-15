@@ -247,6 +247,55 @@ public class CrossTrainerData implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                 Flags
+     * @param instantaneousSpeed    Instantaneous Speed
+     * @param averageSpeed          Average Speed
+     * @param totalDistance         Total Distance
+     * @param stepPerMinute         Step Per Minute
+     * @param averageStepRate       Average Step Rate
+     * @param strideCount           Stride Count
+     * @param positiveElevationGain Positive Elevation Gain
+     * @param negativeElevationGain Negative Elevation Gain
+     * @param inclination           Inclination
+     * @param rampAngleSetting      Ramp Angle Setting
+     * @param resistanceLevel       Resistance Level
+     * @param instantaneousPower    Instantaneous Power
+     * @param averagePower          Average Power
+     * @param totalEnergy           Total Energy
+     * @param energyPerHour         Energy Per Hour
+     * @param energyPerMinute       Energy Per Minute
+     * @param heartRate             Heart Rate
+     * @param metabolicEquivalent   Metabolic Equivalent
+     * @param elapsedTime           Elapsed Time
+     * @param remainingTime         Remaining Time
+     */
+    public CrossTrainerData(@NonNull byte[] flags, int instantaneousSpeed, int averageSpeed, int totalDistance, int stepPerMinute, int averageStepRate, int strideCount, int positiveElevationGain, int negativeElevationGain, int inclination, int rampAngleSetting, int resistanceLevel, int instantaneousPower, int averagePower, int totalEnergy, int energyPerHour, int energyPerMinute, int heartRate, int metabolicEquivalent, int elapsedTime, int remainingTime) {
+        mFlags = flags;
+        mInstantaneousSpeed = instantaneousSpeed;
+        mAverageSpeed = averageSpeed;
+        mTotalDistance = totalDistance;
+        mStepPerMinute = stepPerMinute;
+        mAverageStepRate = averageStepRate;
+        mStrideCount = strideCount;
+        mPositiveElevationGain = positiveElevationGain;
+        mNegativeElevationGain = negativeElevationGain;
+        mInclination = inclination;
+        mRampAngleSetting = rampAngleSetting;
+        mResistanceLevel = resistanceLevel;
+        mInstantaneousPower = instantaneousPower;
+        mAveragePower = averagePower;
+        mTotalEnergy = totalEnergy;
+        mEnergyPerHour = energyPerHour;
+        mEnergyPerMinute = energyPerMinute;
+        mHeartRate = heartRate;
+        mMetabolicEquivalent = metabolicEquivalent;
+        mElapsedTime = elapsedTime;
+        mRemainingTime = remainingTime;
+    }
+
+    /**
      * @return Flags
      */
     public byte[] getFlags() {
@@ -392,7 +441,7 @@ public class CrossTrainerData implements ByteArrayInterface {
     public int getRemainingTime() {
         return mRemainingTime;
     }
-    
+
     /**
      * {@inheritDoc}
      */

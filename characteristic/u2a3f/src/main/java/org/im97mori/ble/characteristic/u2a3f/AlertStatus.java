@@ -75,6 +75,15 @@ public class AlertStatus implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param alertStatus Alert Status
+     */
+    public AlertStatus(int alertStatus) {
+        mAlertStatus = alertStatus;
+    }
+
+    /**
      * @return Alert Status
      */
     public int getAlertStatus() {
@@ -139,12 +148,7 @@ public class AlertStatus implements ByteArrayInterface {
      * check Alert Status
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #ALERT_STATUS_RINGER_STATE_NOT_ACTIVE}
-     *               , {@link #ALERT_STATUS_RINGER_STATE_ACTIVE}
-     *               , {@link #ALERT_STATUS_VIBRATE_STATE_NOT_ACTIVE}
-     *               , {@link #ALERT_STATUS_VIBRATE_STATE_ACTIVE}
-     *               , {@link #ALERT_STATUS_DISPLAY_ALERT_STATUS_NOT_ACTIVE}
-     *               , {@link #ALERT_STATUS_DISPLAY_ALERT_STATUS_ACTIVE}
+     * @param expect one of {@link #ALERT_STATUS_RINGER_STATE_NOT_ACTIVE} , {@link #ALERT_STATUS_RINGER_STATE_ACTIVE} , {@link #ALERT_STATUS_VIBRATE_STATE_NOT_ACTIVE} , {@link #ALERT_STATUS_VIBRATE_STATE_ACTIVE} , {@link #ALERT_STATUS_DISPLAY_ALERT_STATUS_NOT_ACTIVE} , {@link #ALERT_STATUS_DISPLAY_ALERT_STATUS_ACTIVE}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isAlertStatusMatched(int mask, int expect) {

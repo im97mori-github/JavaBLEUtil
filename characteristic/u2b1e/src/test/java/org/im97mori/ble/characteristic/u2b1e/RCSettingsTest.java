@@ -397,6 +397,18 @@ public class RCSettingsTest {
     }
 
     @Test
+    public void test_constructor_00505() {
+        int length = 1;
+        int settings = 2;
+        int e2eCrc = 3;
+
+        RCSettings result1 = new RCSettings(length, settings, e2eCrc);
+        assertEquals(length, result1.getLength());
+        assertEquals(settings, result1.getSettings());
+        assertEquals(e2eCrc, result1.getE2eCrc());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

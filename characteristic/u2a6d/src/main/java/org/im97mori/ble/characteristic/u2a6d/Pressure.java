@@ -33,6 +33,15 @@ public class Pressure implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param pressure Pressure
+     */
+    public Pressure(long pressure) {
+        mPressure = pressure;
+    }
+
+    /**
      * @return Pressure
      */
     public long getPressure() {

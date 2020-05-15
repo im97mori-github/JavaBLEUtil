@@ -52,6 +52,14 @@ public class RingerControlPointTest {
     }
 
     @Test
+    public void test_constructor004() {
+        int ringerControlPoint = 1;
+
+        RingerControlPoint result1 = new RingerControlPoint(ringerControlPoint);
+        assertEquals(ringerControlPoint, result1.getRingerControlPoint());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[1];

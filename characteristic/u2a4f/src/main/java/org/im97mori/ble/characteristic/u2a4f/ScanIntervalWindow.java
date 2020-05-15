@@ -44,6 +44,17 @@ public class ScanIntervalWindow implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param leScanInterval LE_Scan_Interval
+     * @param leScanWindow   LE_Scan_Window
+     */
+    public ScanIntervalWindow(int leScanInterval, int leScanWindow) {
+        mLeScanInterval = leScanInterval;
+        mLeScanWindow = leScanWindow;
+    }
+
+    /**
      * @return LE_Scan_Interval
      */
     public int getLeScanInterval() {

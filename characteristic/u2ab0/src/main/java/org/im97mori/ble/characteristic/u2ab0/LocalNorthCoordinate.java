@@ -28,6 +28,15 @@ public class LocalNorthCoordinate implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param localNorthCoordinate Local North Coordinate
+     */
+    public LocalNorthCoordinate(int localNorthCoordinate) {
+        mLocalNorthCoordinate = localNorthCoordinate;
+    }
+
+    /**
      * @return Local North Coordinate
      */
     public int getLocalNorthCoordinate() {

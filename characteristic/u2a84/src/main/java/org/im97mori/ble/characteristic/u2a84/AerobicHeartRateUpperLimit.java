@@ -27,6 +27,15 @@ public class AerobicHeartRateUpperLimit implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param aerobicHeartRateUpperLimit Aerobic Heart Rate Upper Limit
+     */
+    public AerobicHeartRateUpperLimit(int aerobicHeartRateUpperLimit) {
+        mAerobicHeartRateUpperLimit = aerobicHeartRateUpperLimit;
+    }
+
+    /**
      * @return Aerobic Heart Rate Upper Limit
      */
     public int getAerobicHeartRateUpperLimit() {

@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class MagneticFluxDensity3DTest {
 
     //@formatter:off
@@ -59,6 +59,18 @@ public class MagneticFluxDensity3DTest {
         assertEquals(MagneticFluxDensity3D.MAGNETIC_FLUX_DENSITY_Y_AXIS_RESOLUTION * 0x0403, result1.getMagneticFluxDensityYAxisTesla(), 0);
         assertEquals(0x0605, result1.getMagneticFluxDensityZAxis());
         assertEquals(MagneticFluxDensity3D.MAGNETIC_FLUX_DENSITY_Z_AXIS_RESOLUTION * 0x0605, result1.getMagneticFluxDensityZAxisTesla(), 0);
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int magneticFluxDensityXAxis = 1;
+        int magneticFluxDensityYAxis = 2;
+        int magneticFluxDensityZAxis = 3;
+
+        MagneticFluxDensity3D result1 = new MagneticFluxDensity3D(magneticFluxDensityXAxis, magneticFluxDensityYAxis, magneticFluxDensityZAxis);
+        assertEquals(magneticFluxDensityXAxis, result1.getMagneticFluxDensityXAxis());
+        assertEquals(magneticFluxDensityYAxis, result1.getMagneticFluxDensityYAxis());
+        assertEquals(magneticFluxDensityZAxis, result1.getMagneticFluxDensityZAxis());
     }
 
     @Test

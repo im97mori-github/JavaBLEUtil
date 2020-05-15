@@ -442,6 +442,28 @@ public class PositionQualityTest {
     }
 
     @Test
+    public void test_constructor019() {
+        byte[] flags = new byte[] { 1 };
+        int numberOfBeaconsInSolution = 2;
+        int numberOfBeaconsInView = 3;
+        int timeToFirstFix = 4;
+        long ehpe = 5;
+        long evpe = 6;
+        int hdop = 7;
+        int vdop = 8;
+
+        PositionQuality result1 = new PositionQuality(flags, numberOfBeaconsInSolution, numberOfBeaconsInView, timeToFirstFix, ehpe, evpe, hdop, vdop);
+        assertArrayEquals(flags, result1.getFlags());
+        assertEquals(numberOfBeaconsInSolution, result1.getNumberOfBeaconsInSolution());
+        assertEquals(numberOfBeaconsInView, result1.getNumberOfBeaconsInView());
+        assertEquals(timeToFirstFix, result1.getTimeToFirstFix());
+        assertEquals(ehpe, result1.getEhpe());
+        assertEquals(evpe, result1.getEvpe());
+        assertEquals(hdop, result1.getHdop());
+        assertEquals(vdop, result1.getVdop());
+    }
+
+    @Test
     public void test_parcelable101() {
         int flags = PositionQuality.FLAGS_NUMBER_OF_BEACONS_IN_SOLUTION_PRESENT_FALSE
                 | PositionQuality.FLAGS_NUMBER_OF_BEACONS_IN_VIEW_PRESENT_FALSE

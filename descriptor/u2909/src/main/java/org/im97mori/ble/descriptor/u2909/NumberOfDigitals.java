@@ -27,6 +27,15 @@ public class NumberOfDigitals implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param noOfDigitals No of Digitals
+     */
+    public NumberOfDigitals(int noOfDigitals) {
+        mNoOfDigitals = noOfDigitals;
+    }
+
+    /**
      * @return No of Digitals
      */
     public int getNoOfDigitals() {

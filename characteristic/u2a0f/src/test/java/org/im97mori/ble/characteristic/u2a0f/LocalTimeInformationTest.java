@@ -56,7 +56,7 @@ public class LocalTimeInformationTest {
         assertEquals(LocalTimeInformation.TIME_ZONE_UNIT * 56, result1.getTimeZoneOffsetMin());
         assertEquals(LocalTimeInformation.TIME_ZONE_UNIT * 56 * 1000L, result1.getTimeZoneOffsetMillis());
         assertEquals(DstOffsetUtils.DST_OFFSET_HALF_AN_HOUR_DAYLIGHT_TIME, result1.getDstOffset());
-     }
+    }
 
     @Test
     public void test_constructor004() {
@@ -88,6 +88,16 @@ public class LocalTimeInformationTest {
         assertEquals(LocalTimeInformation.TIME_ZONE_UNIT * 56, result1.getTimeZoneOffsetMin());
         assertEquals(LocalTimeInformation.TIME_ZONE_UNIT * 56 * 1000L, result1.getTimeZoneOffsetMillis());
         assertEquals(DstOffsetUtils.DST_OFFSET_DOUBLE_DAYLIGHT_TIME, result1.getDstOffset());
+    }
+
+    @Test
+    public void test_constructor006() {
+        int timeZone = 1;
+        int dstOffset = 2;
+
+        LocalTimeInformation result1 = new LocalTimeInformation(timeZone, dstOffset);
+        assertEquals(timeZone, result1.getTimeZone());
+        assertEquals(dstOffset, result1.getDstOffset());
     }
 
     @Test

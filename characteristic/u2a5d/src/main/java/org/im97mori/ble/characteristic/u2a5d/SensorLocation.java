@@ -27,6 +27,15 @@ public class SensorLocation implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param sensorLocation Sensor Location
+     */
+    public SensorLocation(int sensorLocation) {
+        mSensorLocation = sensorLocation;
+    }
+
+    /**
      * @return Sensor Location
      */
     public int getSensorLocation() {

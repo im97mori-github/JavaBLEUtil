@@ -44,6 +44,19 @@ public class SupportedNewAlertCategory implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param categoryIdBitMask0    Category ID Bit Mask 0
+     * @param hasCategoryIdBitMask1 no Category ID Bit Mask 1, 1: has Category ID Bit Mask 1
+     * @param categoryIdBitMask1    Category ID Bit Mask 1
+     */
+    public SupportedNewAlertCategory(int categoryIdBitMask0, int hasCategoryIdBitMask1, int categoryIdBitMask1) {
+        mCategoryIdBitMask0 = categoryIdBitMask0;
+        mHasCategoryIdBitMask1 = hasCategoryIdBitMask1;
+        mCategoryIdBitMask1 = categoryIdBitMask1;
+    }
+
+    /**
      * @return Category ID Bit Mask 0
      */
     public int getCategoryIdBitMask0() {

@@ -3,6 +3,7 @@ package org.im97mori.ble.characteristic.u2a4f;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
+import org.im97mori.ble.BLEUtils;
 import org.junit.Test;
 
 @SuppressWarnings("unused")
@@ -55,6 +56,16 @@ public class ScanIntervalWindowTest {
         assertEquals(ScanIntervalWindow.LE_SCAN_INTERVAL_RESOLUTION * 0x0201, result1.getLeScanIntervalMs(), 0);
         assertEquals(0x0403, result1.getLeScanWindow());
         assertEquals(ScanIntervalWindow.LE_SCAN_WINDOW_RESOLUTION * 0x0403, result1.getLeScanWindowMs(), 0);
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int leScanInterval = 1;
+        int leScanWindow = 2;
+
+        ScanIntervalWindow result1 = new ScanIntervalWindow(leScanInterval, leScanWindow);
+        assertEquals(leScanInterval, result1.getLeScanInterval());
+        assertEquals(leScanWindow, result1.getLeScanWindow());
     }
 
     @Test

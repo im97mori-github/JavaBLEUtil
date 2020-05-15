@@ -27,6 +27,15 @@ public class VO2Max implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param vo2Max VO2 Max
+     */
+    public VO2Max(int vo2Max) {
+        mVo2Max = vo2Max;
+    }
+
+    /**
      * @return VO2 Max
      */
     public int getVo2Max() {

@@ -27,6 +27,15 @@ public class MaximumRecommendedHeartRate implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param maximumRecommendedHeartRate Maximum Recommended Heart Rate
+     */
+    public MaximumRecommendedHeartRate(int maximumRecommendedHeartRate) {
+        mMaximumRecommendedHeartRate = maximumRecommendedHeartRate;
+    }
+
+    /**
      * @return Maximum Recommended Heart Rate
      */
     public int getMaximumRecommendedHeartRate() {

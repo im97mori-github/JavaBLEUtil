@@ -42,6 +42,17 @@ public class ExternalReportReference implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param externalReportReference External Report Reference
+     * @param uuid                    External Report Reference UUID
+     */
+    public ExternalReportReference(@NonNull byte[] externalReportReference, @NonNull UUID uuid) {
+        mExternalReportReference = externalReportReference;
+        mUuid = uuid;
+    }
+
+    /**
      * @return External Report Reference
      */
     @NonNull

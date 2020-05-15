@@ -146,6 +146,16 @@ public class TimeUpdateStateTest {
     }
 
     @Test
+    public void test_constructor107() {
+        int currentState = 1;
+        int result = 2;
+
+        TimeUpdateState result1 = new TimeUpdateState(currentState, result);
+        assertEquals(currentState, result1.getCurrentState());
+        assertEquals(result, result1.getResult());
+    }
+
+    @Test
     public void test_parcelable101() {
         //@formatter:off
         byte[] data = new byte[2];

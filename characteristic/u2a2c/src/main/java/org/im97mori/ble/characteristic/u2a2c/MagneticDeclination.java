@@ -33,6 +33,15 @@ public class MagneticDeclination implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param magneticDeclination Magnetic Declination
+     */
+    public MagneticDeclination(int magneticDeclination) {
+        mMagneticDeclination = magneticDeclination;
+    }
+
+    /**
      * @return Magnetic Declination
      */
     public int getMagneticDeclination() {

@@ -55,6 +55,19 @@ public class SupportedInclinationRange implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param minimumInclination Minimum Inclination
+     * @param maximumInclination Maximum Inclination
+     * @param minimumIncrement   Minimum Increment
+     */
+    public SupportedInclinationRange(int minimumInclination, int maximumInclination, int minimumIncrement) {
+        mMinimumInclination = minimumInclination;
+        mMaximumInclination = maximumInclination;
+        mMinimumIncrement = minimumIncrement;
+    }
+
+    /**
      * @return Minimum Inclination
      */
     public int getMinimumInclination() {

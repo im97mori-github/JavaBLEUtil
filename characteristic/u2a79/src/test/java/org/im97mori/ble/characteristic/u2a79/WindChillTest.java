@@ -52,6 +52,14 @@ public class WindChillTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int windChill = 1;
+
+        WindChill result1 = new WindChill(windChill);
+        assertEquals(windChill, result1.getWindChill());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

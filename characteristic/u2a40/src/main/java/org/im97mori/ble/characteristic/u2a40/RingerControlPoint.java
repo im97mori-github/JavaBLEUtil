@@ -42,6 +42,15 @@ public class RingerControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param ringerControlPoint Ringer Control Point
+     */
+    public RingerControlPoint(int ringerControlPoint) {
+        mRingerControlPoint = ringerControlPoint;
+    }
+
+    /**
      * @return Ringer Control Point
      */
     public int getRingerControlPoint() {

@@ -29,6 +29,14 @@ public class BatteryLevelTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int level = 1;
+
+        BatteryLevel result1 = new BatteryLevel(level);
+        assertEquals(level, result1.getLevel());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[1];

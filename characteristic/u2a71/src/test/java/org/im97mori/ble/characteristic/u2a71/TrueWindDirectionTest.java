@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class TrueWindDirectionTest {
 
     //@formatter:off
@@ -51,6 +51,14 @@ public class TrueWindDirectionTest {
         TrueWindDirection result1 = new TrueWindDirection(data);
         assertEquals(0x0201, result1.getTrueWindDirection());
         assertEquals(TrueWindDirection.TRUE_WIND_DIRECTION_RESOLUTION * 0x0201, result1.getTrueWindDirectionDegrees(), 0);
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int trueWindDirection = 1;
+
+        TrueWindDirection result1 = new TrueWindDirection(trueWindDirection);
+        assertEquals(trueWindDirection, result1.getTrueWindDirection());
     }
 
     @Test

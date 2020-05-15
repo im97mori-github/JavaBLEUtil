@@ -93,6 +93,17 @@ public class SupportedNewAlertCategoryTest {
     }
 
     @Test
+    public void test_constructor103() {
+        int categoryIdBitMask0 = 1;
+        int hasCategoryIdBitMask1 = 2;
+        int categoryIdBitMask1 = 3;
+
+        SupportedNewAlertCategory result1 = new SupportedNewAlertCategory(categoryIdBitMask0, hasCategoryIdBitMask1, categoryIdBitMask1);
+        assertEquals(categoryIdBitMask0, result1.getCategoryIdBitMask0());
+        assertEquals(categoryIdBitMask1, result1.getCategoryIdBitMask1());
+    }
+
+    @Test
     public void test_parcelable101() {
         int flags1 = AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_NOT_SUPPORTED
                 | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_NOT_SUPPORTED

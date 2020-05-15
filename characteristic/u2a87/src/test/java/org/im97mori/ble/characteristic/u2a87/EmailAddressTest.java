@@ -101,6 +101,14 @@ public class EmailAddressTest {
     }
 
     @Test
+    public void test_constructor_00004() {
+        String emailAddress = "a";
+
+        EmailAddress result1 = new EmailAddress(emailAddress);
+        assertEquals(emailAddress, result1.getEmailAddress());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] emailAddress = "github@im97mori.org".getBytes();
 

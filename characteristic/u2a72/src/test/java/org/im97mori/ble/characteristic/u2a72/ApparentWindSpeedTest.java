@@ -54,6 +54,14 @@ public class ApparentWindSpeedTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int apparentWindSpeed = 1;
+
+        ApparentWindSpeed result1 = new ApparentWindSpeed(apparentWindSpeed);
+        assertEquals(apparentWindSpeed, result1.getApparentWindSpeed());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

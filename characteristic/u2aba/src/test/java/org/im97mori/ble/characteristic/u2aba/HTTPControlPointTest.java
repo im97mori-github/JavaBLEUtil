@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class HTTPControlPointTest {
 
     //@formatter:off
@@ -323,6 +323,14 @@ public class HTTPControlPointTest {
         assertFalse(result1.isOpCodeHttpsPutRequest());
         assertFalse(result1.isOpCodeHttpsDeleteRequest());
         assertTrue(result1.isOpCodeHttpRequestCancel());
+    }
+
+    @Test
+    public void test_constructor_00012() {
+        int opCode = 1;
+
+        HTTPControlPoint result1 = new HTTPControlPoint(opCode);
+        assertEquals(opCode, result1.getOpCode());
     }
 
     @Test

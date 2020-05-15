@@ -152,6 +152,19 @@ public class RCSettings implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param length   Length
+     * @param settings Settings
+     * @param e2eCrc   E2E-CRC
+     */
+    public RCSettings(int length, int settings, int e2eCrc) {
+        mLength = length;
+        mSettings = settings;
+        mE2eCrc = e2eCrc;
+    }
+
+    /**
      * @return Length
      */
     public int getLength() {
@@ -290,20 +303,7 @@ public class RCSettings implements ByteArrayInterface {
      * check Settings
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #SETTINGS_LESC_ONLY_FALSE}
-     *               , {@link #SETTINGS_LESC_ONLY_TRUE}
-     *               , {@link #SETTINGS_USE_OOB_PAIRING_FALSE}
-     *               , {@link #SETTINGS_USE_OOB_PAIRING_TRUE}
-     *               , {@link #SETTINGS_READY_FOR_DISCONNECT_FALSE}
-     *               , {@link #SETTINGS_READY_FOR_DISCONNECT_TRUE}
-     *               , {@link #SETTINGS_LIMITED_ACCESS_FALSE}
-     *               , {@link #SETTINGS_LIMITED_ACCESS_TRUE}
-     *               , {@link #SETTINGS_ACCESS_PERMITTED_FALSE}
-     *               , {@link #SETTINGS_ACCESS_PERMITTED_TRUE}
-     *               , {@link #SETTINGS_ADVERTISEMENT_MOD_CONFIGURATION_1}
-     *               , {@link #SETTINGS_ADVERTISEMENT_MOD_CONFIGURATION_2}
-     *               , {@link #SETTINGS_ADVERTISEMENT_MOD_CONFIGURATION_3}
-     *               , {@link #SETTINGS_ADVERTISEMENT_MOD_CONFIGURATION_4}
+     * @param expect one of {@link #SETTINGS_LESC_ONLY_FALSE} , {@link #SETTINGS_LESC_ONLY_TRUE} , {@link #SETTINGS_USE_OOB_PAIRING_FALSE} , {@link #SETTINGS_USE_OOB_PAIRING_TRUE} , {@link #SETTINGS_READY_FOR_DISCONNECT_FALSE} , {@link #SETTINGS_READY_FOR_DISCONNECT_TRUE} , {@link #SETTINGS_LIMITED_ACCESS_FALSE} , {@link #SETTINGS_LIMITED_ACCESS_TRUE} , {@link #SETTINGS_ACCESS_PERMITTED_FALSE} , {@link #SETTINGS_ACCESS_PERMITTED_TRUE} , {@link #SETTINGS_ADVERTISEMENT_MOD_CONFIGURATION_1} , {@link #SETTINGS_ADVERTISEMENT_MOD_CONFIGURATION_2} , {@link #SETTINGS_ADVERTISEMENT_MOD_CONFIGURATION_3} , {@link #SETTINGS_ADVERTISEMENT_MOD_CONFIGURATION_4}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isSettingsMatched(int mask, int expect) {

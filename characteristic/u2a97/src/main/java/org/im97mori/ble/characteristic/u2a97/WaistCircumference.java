@@ -33,6 +33,15 @@ public class WaistCircumference implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param waistCircumference Waist Circumference
+     */
+    public WaistCircumference(int waistCircumference) {
+        mWaistCircumference = waistCircumference;
+    }
+
+    /**
      * @return Waist Circumference
      */
     public int getWaistCircumference() {

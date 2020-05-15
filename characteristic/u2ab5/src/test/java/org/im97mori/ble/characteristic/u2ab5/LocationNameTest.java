@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class LocationNameTest {
 
     //@formatter:off
@@ -65,6 +65,14 @@ public class LocationNameTest {
 
         LocationName result1 = new LocationName(data);
         assertEquals("ab", result1.getLocationName());
+    }
+
+    @Test
+    public void test_constructor_00003() {
+        String locationName = "1";
+
+        LocationName result1 = new LocationName(locationName);
+        assertEquals(locationName, result1.getLocationName());
     }
 
     @Test

@@ -28,6 +28,15 @@ public class WindChill implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param windChill Wind Chill
+     */
+    public WindChill(int windChill) {
+        mWindChill = windChill;
+    }
+
+    /**
      * @return Wind Chill
      */
     public int getWindChill() {

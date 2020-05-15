@@ -37,6 +37,15 @@ public class CentralAddressResolution implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param centralAddressResolutionSupport Central Address Resolution Support
+     */
+    public CentralAddressResolution(int centralAddressResolutionSupport) {
+        mCentralAddressResolutionSupport = centralAddressResolutionSupport;
+    }
+
+    /**
      * @return Central Address Resolution Support
      */
     public int getCentralAddressResolutionSupport() {

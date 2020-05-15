@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class PressureTest {
 
     //@formatter:off
@@ -53,6 +53,14 @@ public class PressureTest {
         Pressure result1 = new Pressure(data);
         assertEquals(0x04030201L, result1.getPressure());
         assertEquals(Pressure.PRESSURE_RESOLUTION * 0x04030201L, result1.getPressurePascals(), 0);
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        long pressure = 1;
+
+        Pressure result1 = new Pressure(pressure);
+        assertEquals(pressure, result1.getPressure());
     }
 
     @Test

@@ -26,6 +26,14 @@ public class LanguageTest {
     }
 
     @Test
+    public void test_constructor003() {
+        String languageCode = "ab";
+
+        Language result1 = new Language(languageCode);
+        assertEquals(languageCode, result1.getLanguage());
+    }
+
+    @Test
     public void test_parcelable003() {
         String languageCode = "ab";
 

@@ -1,6 +1,7 @@
 package org.im97mori.ble.characteristic.u2b1d;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -1597,6 +1598,16 @@ public class RCFeatureTest {
 
         RCFeature result1 = new RCFeature(data);
         assertArrayEquals(Arrays.copyOfRange(data, 2, 7), result1.getRcFeatures());
+    }
+
+    @Test
+    public void test_constructor_01903() {
+        int e2eCrc = 1;
+        byte[] rcFeatures = new byte[] { 2 };
+
+        RCFeature result1 = new RCFeature(e2eCrc, rcFeatures);
+        assertEquals(e2eCrc, result1.getE2eCrc());
+        assertArrayEquals(rcFeatures, result1.getRcFeatures());
     }
 
     @Test

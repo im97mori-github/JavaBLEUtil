@@ -1100,6 +1100,34 @@ public class NavigationTest {
     }
 
     @Test
+    public void test_constructor031() {
+        byte[] flags = new byte[] { 1 };
+        int bearing = 2;
+        int heading = 3;
+        int remainingDistance = 4;
+        int remainingVerticalDistance = 5;
+        int year = 6;
+        int month = 7;
+        int day = 8;
+        int hours = 9;
+        int minutes = 10;
+        int seconds = 11;
+
+        Navigation result1 = new Navigation(flags, bearing, heading, remainingDistance, remainingVerticalDistance, year, month, day, hours, minutes, seconds);
+        assertArrayEquals(flags, result1.getFlags());
+        assertEquals(bearing, result1.getBearing());
+        assertEquals(heading, result1.getHeading());
+        assertEquals(remainingDistance, result1.getRemainingDistance());
+        assertEquals(remainingVerticalDistance, result1.getRemainingVerticalDistance());
+        assertEquals(year, result1.getYear());
+        assertEquals(month, result1.getMonth());
+        assertEquals(day, result1.getDay());
+        assertEquals(hours, result1.getHours());
+        assertEquals(minutes, result1.getMinutes());
+        assertEquals(seconds, result1.getSeconds());
+    }
+
+    @Test
     public void test_parcelable101() {
         int flags = Navigation.FLAGS_REMAINING_DISTANCE_PRESENT_FALSE
                 | Navigation.FLAGS_REMAINING_VERTICAL_DISTANCE_PRESENT_FALSE

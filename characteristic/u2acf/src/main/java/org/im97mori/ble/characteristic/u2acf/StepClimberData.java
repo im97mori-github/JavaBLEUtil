@@ -161,6 +161,39 @@ public class StepClimberData implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                 Flags
+     * @param floors                Floors
+     * @param stepCount             Step Count
+     * @param stepPerMinute         Step Per Minute
+     * @param averageStepRate       Average Step Rate
+     * @param positiveElevationGain Positive Elevation Gain
+     * @param totalEnergy           Total Energy
+     * @param energyPerHour         Energy Per Hour
+     * @param energyPerMinute       Energy Per Minute
+     * @param heartRate             Heart Rate
+     * @param metabolicEquivalent   Metabolic Equivalent
+     * @param elapsedTime           Elapsed Time
+     * @param remainingTime         Remaining Time
+     */
+    public StepClimberData(@NonNull byte[] flags, int floors, int stepCount, int stepPerMinute, int averageStepRate, int positiveElevationGain, int totalEnergy, int energyPerHour, int energyPerMinute, int heartRate, int metabolicEquivalent, int elapsedTime, int remainingTime) {
+        mFlags = flags;
+        mFloors = floors;
+        mStepCount = stepCount;
+        mStepPerMinute = stepPerMinute;
+        mAverageStepRate = averageStepRate;
+        mPositiveElevationGain = positiveElevationGain;
+        mTotalEnergy = totalEnergy;
+        mEnergyPerHour = energyPerHour;
+        mEnergyPerMinute = energyPerMinute;
+        mHeartRate = heartRate;
+        mMetabolicEquivalent = metabolicEquivalent;
+        mElapsedTime = elapsedTime;
+        mRemainingTime = remainingTime;
+    }
+
+    /**
      * @return Flags
      */
     public byte[] getFlags() {

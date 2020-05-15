@@ -55,6 +55,19 @@ public class SupportedResistanceLevelRange implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param minimumResistanceLevel Minimum Inclination
+     * @param maximumResistanceLevel Maximum Resistance Level
+     * @param minimumIncrement       Minimum Increment
+     */
+    public SupportedResistanceLevelRange(int minimumResistanceLevel, int maximumResistanceLevel, int minimumIncrement) {
+        mMinimumResistanceLevel = minimumResistanceLevel;
+        mMaximumResistanceLevel = maximumResistanceLevel;
+        mMinimumIncrement = minimumIncrement;
+    }
+
+    /**
      * @return Minimum Resistance Level
      */
     public int getMinimumResistanceLevel() {

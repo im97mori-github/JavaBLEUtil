@@ -34,6 +34,17 @@ public class SystemId implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param manufacturerIdentifier           Manufacturer Identifier
+     * @param organizationallyUniqueIdentifier Organizationally Unique Identifier
+     */
+    public SystemId(long manufacturerIdentifier, int organizationallyUniqueIdentifier) {
+        mManufacturerIdentifier = manufacturerIdentifier;
+        mOrganizationallyUniqueIdentifier = organizationallyUniqueIdentifier;
+    }
+
+    /**
      * @return Manufacturer Identifier
      */
     public long getManufacturerIdentifier() {

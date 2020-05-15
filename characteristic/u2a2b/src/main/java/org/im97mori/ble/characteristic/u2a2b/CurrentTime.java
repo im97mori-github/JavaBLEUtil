@@ -206,6 +206,31 @@ public class CurrentTime implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param year         Year
+     * @param month        Month
+     * @param day          Day
+     * @param hours        Hours
+     * @param minutes      Minutes
+     * @param seconds      Seconds
+     * @param dayOfWeek    Day of Week
+     * @param fractions256 Fractions256
+     * @param adjustReason Adjust Reason
+     */
+    public CurrentTime(int year, int month, int day, int hours, int minutes, int seconds, int dayOfWeek, int fractions256, int adjustReason) {
+        mYear = year;
+        mMonth = month;
+        mDay = day;
+        mHours = hours;
+        mMinutes = minutes;
+        mSeconds = seconds;
+        mDayOfWeek = dayOfWeek;
+        mFractions256 = fractions256;
+        mAdjustReason = adjustReason;
+    }
+
+    /**
      * @return Year
      * @see org.im97mori.ble.characteristic.core.DateTimeUtils
      */

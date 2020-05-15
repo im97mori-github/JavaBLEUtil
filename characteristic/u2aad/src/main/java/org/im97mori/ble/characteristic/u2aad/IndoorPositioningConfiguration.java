@@ -27,6 +27,15 @@ public class IndoorPositioningConfiguration implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param indoorPositioningConfiguration Indoor Positioning Configuration
+     */
+    public IndoorPositioningConfiguration(int indoorPositioningConfiguration) {
+        mIndoorPositioningConfiguration = indoorPositioningConfiguration;
+    }
+
+    /**
      * @return Indoor Positioning Configuration
      */
     public int getIndoorPositioningConfiguration() {

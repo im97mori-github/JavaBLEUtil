@@ -34,6 +34,14 @@ public class ResolvablePrivateAddressOnlyTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int resolvablePrivateAddress = 1;
+
+        ResolvablePrivateAddressOnly result1 = new ResolvablePrivateAddressOnly(resolvablePrivateAddress);
+        assertEquals(resolvablePrivateAddress, result1.getResolvablePrivateAddress());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[1];

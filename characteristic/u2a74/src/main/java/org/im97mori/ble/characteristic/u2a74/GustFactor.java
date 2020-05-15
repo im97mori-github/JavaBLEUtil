@@ -32,6 +32,15 @@ public class GustFactor implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param gustFactor Gust Factor
+     */
+    public GustFactor(int gustFactor) {
+        mGustFactor = gustFactor;
+    }
+
+    /**
      * @return Gust Factor
      */
     public int getGustFactor() {

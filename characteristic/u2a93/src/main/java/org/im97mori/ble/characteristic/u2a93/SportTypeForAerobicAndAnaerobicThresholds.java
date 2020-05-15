@@ -87,6 +87,15 @@ public class SportTypeForAerobicAndAnaerobicThresholds implements ByteArrayInter
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param sportTypeForAerobicAndAnaerobicThresholds Sport Type for Aerobic and Anaerobic Thresholds
+     */
+    public SportTypeForAerobicAndAnaerobicThresholds(int sportTypeForAerobicAndAnaerobicThresholds) {
+        mSportTypeForAerobicAndAnaerobicThresholds = sportTypeForAerobicAndAnaerobicThresholds;
+    }
+
+    /**
      * @return Sport Type for Aerobic and Anaerobic Thresholds
      */
     public int getSportTypeForAerobicAndAnaerobicThresholds() {

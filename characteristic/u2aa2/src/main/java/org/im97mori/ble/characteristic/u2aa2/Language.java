@@ -27,6 +27,15 @@ public class Language implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param language Language
+     */
+    public Language(@NonNull String language) {
+        mLanguage = language;
+    }
+
+    /**
      * @return Language
      */
     public String getLanguage() {

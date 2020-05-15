@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class LocalEastCoordinateTest {
 
     //@formatter:off
@@ -50,6 +50,14 @@ public class LocalEastCoordinateTest {
 
         LocalEastCoordinate result1 = new LocalEastCoordinate(data);
         assertEquals(0x0201, result1.getLocalEastCoordinate());
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int localEastCoordinate = 1;
+
+        LocalEastCoordinate result1 = new LocalEastCoordinate(localEastCoordinate);
+        assertEquals(localEastCoordinate, result1.getLocalEastCoordinate());
     }
 
     @Test

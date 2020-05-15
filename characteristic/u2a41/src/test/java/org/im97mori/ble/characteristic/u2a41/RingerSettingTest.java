@@ -36,6 +36,14 @@ public class RingerSettingTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int ringerSetting = 1;
+
+        RingerSetting result1 = new RingerSetting(ringerSetting);
+        assertEquals(ringerSetting, result1.getRingerSetting());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[1];

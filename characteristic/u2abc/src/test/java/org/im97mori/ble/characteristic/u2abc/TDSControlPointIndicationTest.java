@@ -325,6 +325,18 @@ public class TDSControlPointIndicationTest {
     }
 
     @Test
+    public void test_constructor_00404() {
+        int requestedOpCode = 1;
+        int resultCode = 2;
+        byte[] responseParameter = new byte[] { 2 };
+
+        TDSControlPointIndication result1 = new TDSControlPointIndication(requestedOpCode, resultCode, responseParameter);
+        assertEquals(requestedOpCode, result1.getRequestedOpCode());
+        assertEquals(resultCode, result1.getResultCode());
+        assertArrayEquals(responseParameter, result1.getResponseParameter());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

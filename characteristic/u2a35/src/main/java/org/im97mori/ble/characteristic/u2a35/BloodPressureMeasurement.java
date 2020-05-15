@@ -161,6 +161,45 @@ public class BloodPressureMeasurement implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags                                                         Flags
+     * @param bloodPressureMeasurementCompoundValueSystolicMmhg             Blood Pressure Measurement Compound Value - Systolic (mmHg)
+     * @param bloodPressureMeasurementCompoundValueDiastolicMmhg            Blood Pressure Measurement Compound Value - Diastolic (mmHg)
+     * @param bloodPressureMeasurementCompoundValueMeanArterialPressureMmhg Blood Pressure Measurement Compound Value - Mean Arterial Pressure (mmHg)
+     * @param bloodPressureMeasurementCompoundValueSystolicKpa              Blood Pressure Measurement Compound Value - Systolic (kPa)
+     * @param bloodPressureMeasurementCompoundValueDiastolicKpa             Blood Pressure Measurement Compound Value - Diastolic (kPa)
+     * @param bloodPressureMeasurementCompoundValueMeanArterialPressureKpa  Blood Pressure Measurement Compound Value - Mean Arterial Pressure (kPa)
+     * @param year                                                          Year
+     * @param month                                                         Month
+     * @param day                                                           Day
+     * @param hours                                                         Hours
+     * @param minutes                                                       Minutes
+     * @param seconds                                                       Seconds
+     * @param pulseRate                                                     Pulse Rate
+     * @param userId                                                        User ID
+     * @param measurementStatus                                             Measurement Status
+     */
+    public BloodPressureMeasurement(int flags, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueSystolicMmhg, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueDiastolicMmhg, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueMeanArterialPressureMmhg, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueSystolicKpa, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueDiastolicKpa, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueMeanArterialPressureKpa, int year, int month, int day, int hours, int minutes, int seconds, IEEE_11073_20601_SFLOAT pulseRate, int userId, byte[] measurementStatus) {
+        mFlags = flags;
+        mBloodPressureMeasurementCompoundValueSystolicMmhg = bloodPressureMeasurementCompoundValueSystolicMmhg;
+        mBloodPressureMeasurementCompoundValueDiastolicMmhg = bloodPressureMeasurementCompoundValueDiastolicMmhg;
+        mBloodPressureMeasurementCompoundValueMeanArterialPressureMmhg = bloodPressureMeasurementCompoundValueMeanArterialPressureMmhg;
+        mBloodPressureMeasurementCompoundValueSystolicKpa = bloodPressureMeasurementCompoundValueSystolicKpa;
+        mBloodPressureMeasurementCompoundValueDiastolicKpa = bloodPressureMeasurementCompoundValueDiastolicKpa;
+        mBloodPressureMeasurementCompoundValueMeanArterialPressureKpa = bloodPressureMeasurementCompoundValueMeanArterialPressureKpa;
+        mYear = year;
+        mMonth = month;
+        mDay = day;
+        mHours = hours;
+        mMinutes = minutes;
+        mSeconds = seconds;
+        mPulseRate = pulseRate;
+        mUserId = userId;
+        mMeasurementStatus = measurementStatus;
+    }
+
+    /**
      * @return Flags
      */
     public int getFlags() {

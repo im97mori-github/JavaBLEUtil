@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class ElevationTest {
 
     //@formatter:off
@@ -52,6 +52,14 @@ public class ElevationTest {
         Elevation result1 = new Elevation(data);
         assertEquals(0x030201, result1.getElevation());
         assertEquals(Elevation.ELEVATION_RESOLUTION * 0x030201, result1.getElevationMeters(), 0);
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int elevation = 1;
+
+        Elevation result1 = new Elevation(elevation);
+        assertEquals(elevation, result1.getElevation());
     }
 
     @Test

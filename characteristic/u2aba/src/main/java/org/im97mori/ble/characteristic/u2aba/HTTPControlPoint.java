@@ -82,6 +82,15 @@ public class HTTPControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param opCode Op Code
+     */
+    public HTTPControlPoint(int opCode) {
+        mOpCode = opCode;
+    }
+
+    /**
      * @return Op Code
      */
     public int getOpCode() {

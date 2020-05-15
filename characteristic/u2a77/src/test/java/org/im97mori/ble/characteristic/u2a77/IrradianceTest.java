@@ -54,6 +54,14 @@ public class IrradianceTest {
     }
 
     @Test
+    public void test_constructor_00002() {
+        int irradiance = 1;
+
+        Irradiance result1 = new Irradiance(irradiance);
+        assertEquals(irradiance, result1.getIrradiance());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

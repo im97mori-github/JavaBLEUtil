@@ -96,13 +96,21 @@ public class AlertStatusTest {
                 | AlertStatus.ALERT_STATUS_DISPLAY_ALERT_STATUS_ACTIVE;
         //@formatter:off
         byte[] data = new byte[1];
-        data[ 0] = (byte) flags;;
+        data[ 0] = (byte) flags;
         //@formatter:on
 
         AlertStatus result1 = new AlertStatus(data);
         assertEquals(flags, result1.getAlertStatus());
         assertFalse(result1.isAlertStatusDisplayAlertStatusNotActive());
         assertTrue(result1.isAlertStatusDisplayAlertStatusActive());
+    }
+
+    @Test
+    public void test_constructor007() {
+        int alertStatus = 1;
+
+        AlertStatus result1 = new AlertStatus(alertStatus);
+        assertEquals(alertStatus, result1.getAlertStatus());
     }
 
     @Test

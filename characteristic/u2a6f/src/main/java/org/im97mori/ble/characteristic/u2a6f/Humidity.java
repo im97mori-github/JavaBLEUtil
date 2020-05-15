@@ -33,6 +33,15 @@ public class Humidity implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param humidity Humidity
+     */
+    public Humidity(int humidity) {
+        mHumidity = humidity;
+    }
+
+    /**
      * @return Humidity
      */
     public int getHumidity() {

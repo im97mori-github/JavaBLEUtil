@@ -1,7 +1,7 @@
 def target = characteristicU2ad0
 def GROUP_ID = groupId
 def ARTIFACT_ID = target[artifactId]
-def VERSION_NAME = target[versionName]
+def VERSION_NAME = target[uploadVersionName]
 
 dependencies {
     api apiCore

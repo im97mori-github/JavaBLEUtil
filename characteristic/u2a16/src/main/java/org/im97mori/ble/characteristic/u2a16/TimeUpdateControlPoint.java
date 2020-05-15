@@ -37,6 +37,15 @@ public class TimeUpdateControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param timeUpdateControlPoint Time Update Control Point
+     */
+    public TimeUpdateControlPoint(int timeUpdateControlPoint) {
+        mTimeUpdateControlPoint = timeUpdateControlPoint;
+    }
+
+    /**
      * @return Time Update Control Point
      */
     public int getTimeUpdateControlPoint() {

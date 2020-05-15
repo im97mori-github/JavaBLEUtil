@@ -34,6 +34,16 @@ public class ThreeZoneHeartRateLimitsTest {
     }
 
     @Test
+    public void test_constructor003() {
+        int threeZoneHeartRateLimitsLightFatBurnModerateAerobicLimit = 1;
+        int threeZoneHeartRateLimitsModerateAerobicHardAnaerobicLimit = 2;
+
+        ThreeZoneHeartRateLimits result1 = new ThreeZoneHeartRateLimits(threeZoneHeartRateLimitsLightFatBurnModerateAerobicLimit, threeZoneHeartRateLimitsModerateAerobicHardAnaerobicLimit);
+        assertEquals(threeZoneHeartRateLimitsLightFatBurnModerateAerobicLimit, result1.getThreeZoneHeartRateLimitsLightFatBurnModerateAerobicLimit());
+        assertEquals(threeZoneHeartRateLimitsModerateAerobicHardAnaerobicLimit, result1.getThreeZoneHeartRateLimitsModerateAerobicHardAnaerobicLimit());
+    }
+
+    @Test
     public void test_parcelable002() {
         //@formatter:off
         byte[] data = new byte[2];

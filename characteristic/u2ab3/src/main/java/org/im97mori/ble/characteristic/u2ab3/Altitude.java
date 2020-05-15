@@ -28,6 +28,15 @@ public class Altitude implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param altitude Altitude
+     */
+    public Altitude(int altitude) {
+        mAltitude = altitude;
+    }
+
+    /**
      * @return Altitude
      */
     public int getAltitude() {

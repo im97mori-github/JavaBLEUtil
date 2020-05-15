@@ -38,6 +38,15 @@ public class PeripheralPrivacyFlag implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flag Flag
+     */
+    public PeripheralPrivacyFlag(int flag) {
+        mFlag = flag;
+    }
+
+    /**
      * @return Flag
      */
     public int getFlag() {

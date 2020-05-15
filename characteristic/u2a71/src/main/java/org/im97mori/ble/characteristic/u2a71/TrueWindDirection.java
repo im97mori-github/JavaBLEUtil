@@ -33,6 +33,15 @@ public class TrueWindDirection implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param trueWindDirection True Wind Direction
+     */
+    public TrueWindDirection(int trueWindDirection) {
+        mTrueWindDirection = trueWindDirection;
+    }
+
+    /**
      * @return True Wind Direction
      */
     public int getTrueWindDirection() {

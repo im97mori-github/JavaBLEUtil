@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class UncertaintyTest {
 
     //@formatter:off
@@ -48,6 +48,14 @@ public class UncertaintyTest {
         byte[] data = getData();
 
         Uncertainty result1 = new Uncertainty(data);
+        assertEquals(0x01, result1.getUncertainty());
+    }
+
+    @Test
+    public void test_constructor_00002() {
+        int uncertainty = 1;
+
+        Uncertainty result1 = new Uncertainty(uncertainty);
         assertEquals(0x01, result1.getUncertainty());
     }
 

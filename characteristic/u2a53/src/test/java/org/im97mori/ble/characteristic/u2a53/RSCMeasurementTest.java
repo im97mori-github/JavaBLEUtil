@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-@SuppressWarnings({"unused"})
+@SuppressWarnings({ "unused" })
 public class RSCMeasurementTest {
 
     //@formatter:off
@@ -188,6 +188,22 @@ public class RSCMeasurementTest {
         assertTrue(result1.isFlagsWalkingOrRunningStatusBitsRunning());
         assertEquals(0x0201, result1.getInstantaneousSpeed());
         assertEquals(0x03, result1.getInstantaneousCadence());
+    }
+
+    @Test
+    public void test_constructor_00203() {
+        int flags = 1;
+        int instantaneousSpeed = 2;
+        int instantaneousCadence = 3;
+        int instantaneousStrideLength = 4;
+        long totalDistance = 5;
+
+        RSCMeasurement result1 = new RSCMeasurement(flags, instantaneousSpeed, instantaneousCadence, instantaneousStrideLength, totalDistance);
+        assertEquals(flags, result1.getFlags());
+        assertEquals(instantaneousSpeed, result1.getInstantaneousSpeed());
+        assertEquals(instantaneousCadence, result1.getInstantaneousCadence());
+        assertEquals(instantaneousStrideLength, result1.getInstantaneousStrideLength());
+        assertEquals(totalDistance, result1.getTotalDistance());
     }
 
     @Test

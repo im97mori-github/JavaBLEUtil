@@ -110,6 +110,21 @@ public class ReferenceTimeInformation implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param timeSource       Time Source
+     * @param accuracy         Accuracy
+     * @param daysSinceUpdate  mDaysSinceUpdate
+     * @param hoursSinceUpdate mHoursSinceUpdate
+     */
+    public ReferenceTimeInformation(int timeSource, int accuracy, int daysSinceUpdate, int hoursSinceUpdate) {
+        mTimeSource = timeSource;
+        mAccuracy = accuracy;
+        mDaysSinceUpdate = daysSinceUpdate;
+        mHoursSinceUpdate = hoursSinceUpdate;
+    }
+
+    /**
      * @return Time Source
      */
     public int getTimeSource() {

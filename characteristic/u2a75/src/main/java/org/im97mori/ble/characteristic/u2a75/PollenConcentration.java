@@ -28,6 +28,15 @@ public class PollenConcentration implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param pollenConcentration Pollen Concentration
+     */
+    public PollenConcentration(int pollenConcentration) {
+        mPollenConcentration = pollenConcentration;
+    }
+
+    /**
      * @return Pollen Concentration
      */
     public int getPollenConcentration() {

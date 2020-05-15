@@ -35,6 +35,17 @@ public class ValidRange implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param lowerInclusiveValue Lower inclusive value
+     * @param upperInclusiveValue Upper inclusive value
+     */
+    public ValidRange(@NonNull byte[] lowerInclusiveValue, @NonNull byte[] upperInclusiveValue) {
+        mLowerInclusiveValue = lowerInclusiveValue;
+        mUpperInclusiveValue = upperInclusiveValue;
+    }
+
+    /**
      * @return Lower inclusive value
      */
     @NonNull
@@ -44,9 +55,7 @@ public class ValidRange implements ByteArrayInterface {
 
     /**
      * <p>
-     * Gust Factor (Characteristic UUID: 0x2A74)
-     * UV Index (Characteristic UUID: 0x2A76)
-     * Barometric Pressure Trend (Characteristic UUID: 0x2AA3)
+     * Gust Factor (Characteristic UUID: 0x2A74) UV Index (Characteristic UUID: 0x2A76) Barometric Pressure Trend (Characteristic UUID: 0x2AA3)
      * </p>
      *
      * @return Lower inclusive value(UINT8)
@@ -57,15 +66,7 @@ public class ValidRange implements ByteArrayInterface {
 
     /**
      * <p>
-     * Analog (Characteristic UUID: 0x2A58)
-     * Apparent Wind Direction (Characteristic UUID: 0x2A73)
-     * Apparent Wind Speed (Characteristic UUID: 0x2A72)
-     * Humidity (Characteristic UUID: 0x2A6F)
-     * Irradiance (Characteristic UUID: 0x2A77)
-     * Rainfall (Characteristic UUID: 0x2A78)
-     * True Wind Direction (Characteristic UUID: 0x2A71)
-     * True Wind Speed (Characteristic UUID: 0x2A70)
-     * Magnetic Declination (Characteristic UUID: 0x2A2C)
+     * Analog (Characteristic UUID: 0x2A58) Apparent Wind Direction (Characteristic UUID: 0x2A73) Apparent Wind Speed (Characteristic UUID: 0x2A72) Humidity (Characteristic UUID: 0x2A6F) Irradiance (Characteristic UUID: 0x2A77) Rainfall (Characteristic UUID: 0x2A78) True Wind Direction (Characteristic UUID: 0x2A71) True Wind Speed (Characteristic UUID: 0x2A70) Magnetic Declination (Characteristic UUID: 0x2A2C)
      * </p>
      *
      * @return Lower inclusive value(UINT16)
@@ -98,9 +99,7 @@ public class ValidRange implements ByteArrayInterface {
 
     /**
      * <p>
-     * Dew Point (Characteristic UUID: 0x2A7B)
-     * Heat Index (Characteristic UUID: 0x2A7A)
-     * Wind Chill (Characteristic UUID: 0x2A79)
+     * Dew Point (Characteristic UUID: 0x2A7B) Heat Index (Characteristic UUID: 0x2A7A) Wind Chill (Characteristic UUID: 0x2A79)
      * </p>
      *
      * @return Lower inclusive value(SINT8)
@@ -111,9 +110,7 @@ public class ValidRange implements ByteArrayInterface {
 
     /**
      * <p>
-     * Temperature (Characteristic UUID: 0x2A6E)
-     * Magnetic Flux Density - 2D (Characteristic UUID: 0x2AA0)
-     * Magnetic Flux Density - 3D (Characteristic UUID: 0x2AA1)
+     * Temperature (Characteristic UUID: 0x2A6E) Magnetic Flux Density - 2D (Characteristic UUID: 0x2AA0) Magnetic Flux Density - 3D (Characteristic UUID: 0x2AA1)
      * </p>
      *
      * @return Lower inclusive value(SINT16)
@@ -143,9 +140,7 @@ public class ValidRange implements ByteArrayInterface {
 
     /**
      * <p>
-     * Gust Factor (Characteristic UUID: 0x2A74)
-     * UV Index (Characteristic UUID: 0x2A76)
-     * Barometric Pressure Trend (Characteristic UUID: 0x2AA3)
+     * Gust Factor (Characteristic UUID: 0x2A74) UV Index (Characteristic UUID: 0x2A76) Barometric Pressure Trend (Characteristic UUID: 0x2AA3)
      * </p>
      *
      * @return Upper inclusive value(UINT8)
@@ -156,15 +151,7 @@ public class ValidRange implements ByteArrayInterface {
 
     /**
      * <p>
-     * Analog (Characteristic UUID: 0x2A58)
-     * Apparent Wind Direction (Characteristic UUID: 0x2A73)
-     * Apparent Wind Speed (Characteristic UUID: 0x2A72)
-     * Humidity (Characteristic UUID: 0x2A6F)
-     * Irradiance (Characteristic UUID: 0x2A77)
-     * Rainfall (Characteristic UUID: 0x2A78)
-     * True Wind Direction (Characteristic UUID: 0x2A71)
-     * True Wind Speed (Characteristic UUID: 0x2A70)
-     * Magnetic Declination (Characteristic UUID: 0x2A2C)
+     * Analog (Characteristic UUID: 0x2A58) Apparent Wind Direction (Characteristic UUID: 0x2A73) Apparent Wind Speed (Characteristic UUID: 0x2A72) Humidity (Characteristic UUID: 0x2A6F) Irradiance (Characteristic UUID: 0x2A77) Rainfall (Characteristic UUID: 0x2A78) True Wind Direction (Characteristic UUID: 0x2A71) True Wind Speed (Characteristic UUID: 0x2A70) Magnetic Declination (Characteristic UUID: 0x2A2C)
      * </p>
      *
      * @return Upper inclusive value(UINT16)
@@ -197,9 +184,7 @@ public class ValidRange implements ByteArrayInterface {
 
     /**
      * <p>
-     * Dew Point (Characteristic UUID: 0x2A7B)
-     * Heat Index (Characteristic UUID: 0x2A7A)
-     * Wind Chill (Characteristic UUID: 0x2A79)
+     * Dew Point (Characteristic UUID: 0x2A7B) Heat Index (Characteristic UUID: 0x2A7A) Wind Chill (Characteristic UUID: 0x2A79)
      * </p>
      *
      * @return Upper inclusive value(SINT8)
@@ -210,9 +195,7 @@ public class ValidRange implements ByteArrayInterface {
 
     /**
      * <p>
-     * Temperature (Characteristic UUID: 0x2A6E)
-     * Magnetic Flux Density - 2D (Characteristic UUID: 0x2AA0)
-     * Magnetic Flux Density - 3D (Characteristic UUID: 0x2AA1)
+     * Temperature (Characteristic UUID: 0x2A6E) Magnetic Flux Density - 2D (Characteristic UUID: 0x2AA0) Magnetic Flux Density - 3D (Characteristic UUID: 0x2AA1)
      * </p>
      *
      * @return Upper inclusive value(SINT16)

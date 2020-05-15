@@ -223,6 +223,39 @@ public class WeightMeasurement implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param flags          Flags
+     * @param weightSi       Weight - SI
+     * @param weightImperial Weight - Imperial
+     * @param year           Year
+     * @param month          Month
+     * @param day            Day
+     * @param hours          Hours
+     * @param minutes        Minutes
+     * @param seconds        Seconds
+     * @param userId         User ID
+     * @param bmi            BMI
+     * @param heightSi       Height - SI
+     * @param heightImperial Height - Imperial
+     */
+    public WeightMeasurement(int flags, int weightSi, int weightImperial, int year, int month, int day, int hours, int minutes, int seconds, int userId, int bmi, int heightSi, int heightImperial) {
+        mFlags = flags;
+        mWeightSi = weightSi;
+        mWeightImperial = weightImperial;
+        mYear = year;
+        mMonth = month;
+        mDay = day;
+        mHours = hours;
+        mMinutes = minutes;
+        mSeconds = seconds;
+        mUserId = userId;
+        mBmi = bmi;
+        mHeightSi = heightSi;
+        mHeightImperial = heightImperial;
+    }
+
+    /**
      * @return Flags
      */
     public int getFlags() {
@@ -453,14 +486,7 @@ public class WeightMeasurement implements ByteArrayInterface {
      * check Flags
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #FLAG_MEASUREMENT_UNITS_SI}
-     *               , {@link #FLAG_MEASUREMENT_UNITS_IMPERIAL}
-     *               , {@link #FLAG_TIME_STAMP_PRESENT_FALSE}
-     *               , {@link #FLAG_TIME_STAMP_PRESENT_TRUE}
-     *               , {@link #FLAG_USER_ID_PRESENT_FALSE}
-     *               , {@link #FLAG_USER_ID_PRESENT_TRUE}
-     *               , {@link #FLAG_BMI_AND_HEIGHT_PRESENT_FALSE}
-     *               , {@link #FLAG_BMI_AND_HEIGHT_PRESENT_TRUE}
+     * @param expect one of {@link #FLAG_MEASUREMENT_UNITS_SI} , {@link #FLAG_MEASUREMENT_UNITS_IMPERIAL} , {@link #FLAG_TIME_STAMP_PRESENT_FALSE} , {@link #FLAG_TIME_STAMP_PRESENT_TRUE} , {@link #FLAG_USER_ID_PRESENT_FALSE} , {@link #FLAG_USER_ID_PRESENT_TRUE} , {@link #FLAG_BMI_AND_HEIGHT_PRESENT_FALSE} , {@link #FLAG_BMI_AND_HEIGHT_PRESENT_TRUE}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isFlagsMatched(int mask, int expect) {

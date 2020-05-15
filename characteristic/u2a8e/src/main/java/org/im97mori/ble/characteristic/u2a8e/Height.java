@@ -33,6 +33,15 @@ public class Height implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param height Height
+     */
+    public Height(int height) {
+        mHeight = height;
+    }
+
+    /**
      * @return Height
      */
     public int getHeight() {

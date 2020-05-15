@@ -32,6 +32,15 @@ public class HeartRateControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param heartRateControlPoint Heart Rate Control Point
+     */
+    public HeartRateControlPoint(int heartRateControlPoint) {
+        mHeartRateControlPoint = heartRateControlPoint;
+    }
+
+    /**
      * @return Heart Rate Control Point
      */
     public int getHeartRateControlPoint() {

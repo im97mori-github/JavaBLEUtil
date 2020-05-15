@@ -500,6 +500,16 @@ public class BondManagementControlPointTest {
     }
 
     @Test
+    public void test_constructor_00803() {
+        int opCode = 1;
+        String operand = "2";
+
+        BondManagementControlPoint result1 = new BondManagementControlPoint(opCode, operand);
+        assertEquals(opCode, result1.getOpCode());
+        assertEquals(operand, result1.getOperand());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

@@ -22,11 +22,11 @@ public class SerialNumberString implements ByteArrayInterface {
     public SerialNumberString(@NonNull byte[] values) {
         mSerialNumber = new String(values);
     }
-    
+
     /**
      * Constructor from parameters
      * 
-     * @param modelNumber Serial Number
+     * @param serialNumber Serial Number
      */
     public SerialNumberString(@NonNull String serialNumber) {
         mSerialNumber = serialNumber;

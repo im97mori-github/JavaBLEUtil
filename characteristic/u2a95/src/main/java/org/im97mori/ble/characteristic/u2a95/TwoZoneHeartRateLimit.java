@@ -29,7 +29,7 @@ public class TwoZoneHeartRateLimit implements ByteArrayInterface {
     /**
      * Constructor from parameters
      * 
-     * @param twoZoneHeartRateLimitFatBurnFitnessLimit
+     * @param twoZoneHeartRateLimitFatBurnFitnessLimit Two zone Heart Rate Limit - Fat burn / Fitness Limit
      */
     public TwoZoneHeartRateLimit(int twoZoneHeartRateLimitFatBurnFitnessLimit) {
         mTwoZoneHeartRateLimitFatBurnFitnessLimit = twoZoneHeartRateLimitFatBurnFitnessLimit;

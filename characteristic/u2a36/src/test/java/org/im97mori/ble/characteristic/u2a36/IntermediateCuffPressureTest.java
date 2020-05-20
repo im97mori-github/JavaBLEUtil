@@ -1092,7 +1092,7 @@ public class IntermediateCuffPressureTest {
         assertEquals(0x0b, result1.getUserId());
         assertArrayEquals(Arrays.copyOfRange(data, 17, 19), result1.getMeasurementStatus());
     }
-    
+
     @Test
     public void test_constructor503() {
         int flags = 1;

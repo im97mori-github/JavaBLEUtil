@@ -56,7 +56,7 @@ public class UncertaintyTest {
         int uncertainty = 1;
 
         Uncertainty result1 = new Uncertainty(uncertainty);
-        assertEquals(0x01, result1.getUncertainty());
+        assertEquals(uncertainty, result1.getUncertainty());
     }
 
     @Test

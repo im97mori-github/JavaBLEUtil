@@ -381,10 +381,11 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     /**
      * Constructor from parameters
      * 
-     * @param parameter
-     * @param requestOpCode
-     * @param resultCode
-     * @param responseParameter
+     * @param opCode            Op Code
+     * @param parameter         Parameter
+     * @param requestOpCode     Request Op Code
+     * @param resultCode        Result Code
+     * @param responseParameter Response Parameter
      */
     public FitnessMachineControlPoint(int opCode, @NonNull byte[] parameter, int requestOpCode, int resultCode, @NonNull byte[] responseParameter) {
         mOpCode = opCode;

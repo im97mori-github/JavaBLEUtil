@@ -29,13 +29,10 @@ public class AerobicHeartRateLowerLimitTest {
 
     @Test
     public void test_constructor003() {
-        //@formatter:off
-        byte[] data = new byte[1];
-        data[ 0] = (byte) 0xff;
-        //@formatter:on
+        int aerobicHeartRateLowerLimit = 1;
 
-        AerobicHeartRateLowerLimit result1 = new AerobicHeartRateLowerLimit(data);
-        assertEquals(0xff, result1.getAerobicHeartRateLowerLimit());
+        AerobicHeartRateLowerLimit result1 = new AerobicHeartRateLowerLimit(aerobicHeartRateLowerLimit);
+        assertEquals(aerobicHeartRateLowerLimit, result1.getAerobicHeartRateLowerLimit());
     }
 
     @Test

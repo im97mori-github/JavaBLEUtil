@@ -125,6 +125,28 @@ public class BloodPressureFeature implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from flags
+     * 
+     * @param isBodyMovementDetectionFeatureSupported {@code true}:{@link #BODY_MOVEMENT_DETECTION_SUPPORT_TRUE}, {@code false}:{@link #BODY_MOVEMENT_DETECTION_SUPPORT_FALSE}
+     * @param isCuffFitDetectionSupported             {@code true}:{@link #CUFF_FIT_DETECTION_SUPPORT_TRUE}, {@code false}:{@link #CUFF_FIT_DETECTION_SUPPORT_FALSE}
+     * @param isIrregularPulseDetectionSupported      {@code true}:{@link #IRREGULAR_PULSE_DETECTION_SUPPORT_TRUE}, {@code false}:{@link #IRREGULAR_PULSE_DETECTION_SUPPORT_FALSE}
+     * @param isPulseRateRangeDetectionSupported      {@code true}:{@link #PULSE_RATE_RANGE_DETECTION_SUPPORT_TRUE}, {@code false}:{@link #PULSE_RATE_RANGE_DETECTION_SUPPORT_FALSE}
+     * @param isMeasurementPositionDetectionSupported {@code true}:{@link #MEASUREMENT_POSITION_DETECTION_SUPPORT_TRUE}, {@code false}:{@link #MEASUREMENT_POSITION_DETECTION_SUPPORT_TRUE}
+     * @param isMultipleBondDetectionSupported        {@code true}:{@link #MULTIPLE_BOND_SUPPORT_TRUE}, {@code false}:{@link #MULTIPLE_BOND_SUPPORT_FALSE}
+     */
+    public BloodPressureFeature(boolean isBodyMovementDetectionFeatureSupported, boolean isCuffFitDetectionSupported, boolean isIrregularPulseDetectionSupported, boolean isPulseRateRangeDetectionSupported, boolean isMeasurementPositionDetectionSupported, boolean isMultipleBondDetectionSupported) {
+        // @formatter:off
+        int flags = (isBodyMovementDetectionFeatureSupported ? BODY_MOVEMENT_DETECTION_SUPPORT_TRUE : BODY_MOVEMENT_DETECTION_SUPPORT_FALSE)
+                | (isCuffFitDetectionSupported ? CUFF_FIT_DETECTION_SUPPORT_TRUE : CUFF_FIT_DETECTION_SUPPORT_FALSE)
+                | (isIrregularPulseDetectionSupported ? IRREGULAR_PULSE_DETECTION_SUPPORT_TRUE : IRREGULAR_PULSE_DETECTION_SUPPORT_FALSE)
+                | (isPulseRateRangeDetectionSupported ? PULSE_RATE_RANGE_DETECTION_SUPPORT_TRUE : PULSE_RATE_RANGE_DETECTION_SUPPORT_FALSE)
+                | (isMeasurementPositionDetectionSupported ? MEASUREMENT_POSITION_DETECTION_SUPPORT_TRUE : MEASUREMENT_POSITION_DETECTION_SUPPORT_FALSE)
+                | (isMultipleBondDetectionSupported ? MULTIPLE_BOND_SUPPORT_TRUE : MULTIPLE_BOND_SUPPORT_FALSE);
+        // @formatter:on
+        mBloodPressureFeature = new byte[] { (byte) flags, (byte) (flags >> 8) };
+    }
+
+    /**
      * @return Blood Pressure Feature
      */
     public byte[] getBloodPressureFeature() {

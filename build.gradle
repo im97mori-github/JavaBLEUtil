@@ -4,8 +4,8 @@ allprojects {
     apply plugin: 'maven-publish'
 
     repositories {
-//        maven { url "https://github.com/im97mori-github/maven/raw/master" }
-        maven { url System.getenv('MAVEN_REPOSITORY_URL') }
+        maven { url "https://github.com/im97mori-github/maven/raw/master" }
+//        maven { url System.getenv('MAVEN_REPOSITORY_URL') }
         google()
         jcenter()
     }
@@ -349,8 +349,8 @@ ext.characteristicU2a33 = [
 
 ext.characteristicU2a35 = [
         artifactId         : 'ble-characteristic-u2a35'
-        , versionName      : '0.2.0'
-        , uploadVersionName: '0.2.0'
+        , versionName      : '0.2.1'
+        , uploadVersionName: '0.2.1'
 ]
 
 ext.characteristicU2a36 = [
@@ -427,8 +427,8 @@ ext.characteristicU2a48 = [
 
 ext.characteristicU2a49 = [
         artifactId         : 'ble-characteristic-u2a49'
-        , versionName      : '0.2.0'
-        , uploadVersionName: '0.2.0'
+        , versionName      : '0.2.1'
+        , uploadVersionName: '0.2.1'
 ]
 
 ext.characteristicU2a4a = [

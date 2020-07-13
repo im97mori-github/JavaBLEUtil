@@ -6,6 +6,7 @@ import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingD
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
@@ -47,6 +48,26 @@ public class IncompleteListOf16BitServiceUUIDs extends AbstractAdvertisingData {
             uuidList.add(new UUID(msb | target, lsb));
         }
         mUuidList = Collections.synchronizedList(Collections.unmodifiableList(uuidList));
+    }
+
+    /**
+     * Constructor for Incomplete List of 16-bit Service Class UUIDs
+     * 
+     * @param uuids UUID array
+     * @see CompleteListOf16BitServiceUUIDs#CompleteListOf16BitServiceUUIDs(List)
+     */
+    public IncompleteListOf16BitServiceUUIDs(@NonNull UUID... uuids) {
+        this(Arrays.asList(uuids));
+    }
+
+    /**
+     * Constructor for Complete List of 16-bit Service Class UUIDs
+     * 
+     * @param uuidList UUID list
+     */
+    public IncompleteListOf16BitServiceUUIDs(@NonNull List<UUID> uuidList) {
+        super(uuidList.size() * 2 + 1);
+        this.mUuidList = Collections.synchronizedList(Collections.unmodifiableList(uuidList));
     }
 
     /**

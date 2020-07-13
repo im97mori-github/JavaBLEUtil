@@ -49,8 +49,8 @@ ext.core = [
 
 ext.advertising = [
         artifactId         : 'ble-advertising'
-        , versionName      : '0.2.0'
-        , uploadVersionName: '0.2.0'
+        , versionName      : '0.2.1'
+        , uploadVersionName: '0.2.1'
 ]
 
 ext.descriptorU2900 = [

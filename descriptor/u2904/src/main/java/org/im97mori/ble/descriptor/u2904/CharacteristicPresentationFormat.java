@@ -3,6 +3,7 @@ package org.im97mori.ble.descriptor.u2904;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Arrays;
+import java.util.UUID;
 
 import org.im97mori.ble.ByteArrayInterface;
 
@@ -184,11 +185,20 @@ public class CharacteristicPresentationFormat implements ByteArrayInterface {
      * @param bluetoothGattDescriptor Characteristics UUID: 0x2904
      */
     public CharacteristicPresentationFormat(@NonNull byte[] values) {
-        mFormat = values[0] & 0xff;
-        mExponent = values[1];
-        mUnit = (values[2] & 0xff) | ((values[3] & 0xff) << 8);
-        mNamespace = values[4] & 0xff;
-        mDescription = Arrays.copyOfRange(values, 5, 7);
+        this(values[0] & 0xff, values[1], (values[2] & 0xff) | ((values[3] & 0xff) << 8), values[4] & 0xff, Arrays.copyOfRange(values, 5, 7));
+    }
+
+    /**
+     * Constructor from parameters
+     * 
+     * @param format      Format
+     * @param exponent    Exponent
+     * @param unit        Unit
+     * @param namespace   Namespace
+     * @param description Description
+     */
+    public CharacteristicPresentationFormat(int format, int exponent, UUID unit, int namespace, @NonNull byte[] description) {
+        this(format, exponent, (int) (0xffff & (unit.getMostSignificantBits() >> 32)), namespace, description);
     }
 
     /**

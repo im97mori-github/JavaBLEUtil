@@ -5,6 +5,9 @@ import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingD
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.util.Arrays;
 import java.util.UUID;
 
 import org.junit.Test;
@@ -349,6 +352,51 @@ public class IncompleteListOf128BitServiceUUIDsTest {
     }
 
     @Test
+    public void test_constructor_00101() {
+        IncompleteListOf128BitServiceUUIDs result1 = new IncompleteListOf128BitServiceUUIDs();
+        assertEquals(1, result1.getLength());
+        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(0, result1.getUuidList().size());
+    }
+
+    @Test
+    public void test_constructor_00102() {
+        UUID uuid1 = UUID.randomUUID();
+
+        IncompleteListOf128BitServiceUUIDs result1 = new IncompleteListOf128BitServiceUUIDs(uuid1);
+        assertEquals(17, result1.getLength());
+        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(1, result1.getUuidList().size());
+        assertEquals(uuid1, result1.getUuidList().get(0));
+    }
+
+    @Test
+    public void test_constructor_00103() {
+        UUID uuid1 = UUID.randomUUID();
+        UUID uuid2 = UUID.randomUUID();
+
+        IncompleteListOf128BitServiceUUIDs result1 = new IncompleteListOf128BitServiceUUIDs(uuid1, uuid2);
+        assertEquals(33, result1.getLength());
+        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(2, result1.getUuidList().size());
+        assertEquals(uuid1, result1.getUuidList().get(0));
+        assertEquals(uuid2, result1.getUuidList().get(1));
+    }
+
+    @Test
+    public void test_constructor_00104() {
+        UUID uuid1 = UUID.randomUUID();
+        UUID uuid2 = UUID.randomUUID();
+
+        IncompleteListOf128BitServiceUUIDs result1 = new IncompleteListOf128BitServiceUUIDs(Arrays.asList(uuid1, uuid2));
+        assertEquals(33, result1.getLength());
+        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(2, result1.getUuidList().size());
+        assertEquals(uuid1, result1.getUuidList().get(0));
+        assertEquals(uuid2, result1.getUuidList().get(1));
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 
@@ -417,6 +465,64 @@ public class IncompleteListOf128BitServiceUUIDsTest {
         byte[] data = getData();
 
         IncompleteListOf128BitServiceUUIDs result1 = new IncompleteListOf128BitServiceUUIDs(data, 0, data[0]);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable_2_00101() {
+        byte[] data = new byte[2];
+        data[0] = 1;
+        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS;
+
+        IncompleteListOf128BitServiceUUIDs result1 = new IncompleteListOf128BitServiceUUIDs();
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable_2_00102() {
+        UUID uuid1 = UUID.randomUUID();
+        byte[] data = new byte[18];
+        ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+        byteBuffer.put((byte) 17);
+        byteBuffer.put((byte) DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS);
+        byteBuffer.putLong(uuid1.getLeastSignificantBits());
+        byteBuffer.putLong(uuid1.getMostSignificantBits());
+
+        IncompleteListOf128BitServiceUUIDs result1 = new IncompleteListOf128BitServiceUUIDs(uuid1);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable_2_00103() {
+        UUID uuid1 = UUID.randomUUID();
+        UUID uuid2 = UUID.randomUUID();
+        byte[] data = new byte[34];
+        ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+        byteBuffer.put((byte) 33);
+        byteBuffer.put((byte) DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS);
+        byteBuffer.putLong(uuid1.getLeastSignificantBits());
+        byteBuffer.putLong(uuid1.getMostSignificantBits());
+        byteBuffer.putLong(uuid2.getLeastSignificantBits());
+        byteBuffer.putLong(uuid2.getMostSignificantBits());
+
+        IncompleteListOf128BitServiceUUIDs result1 = new IncompleteListOf128BitServiceUUIDs(uuid1, uuid2);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable_2_00104() {
+        UUID uuid1 = UUID.randomUUID();
+        UUID uuid2 = UUID.randomUUID();
+        byte[] data = new byte[34];
+        ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+        byteBuffer.put((byte) 33);
+        byteBuffer.put((byte) DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS);
+        byteBuffer.putLong(uuid1.getLeastSignificantBits());
+        byteBuffer.putLong(uuid1.getMostSignificantBits());
+        byteBuffer.putLong(uuid2.getLeastSignificantBits());
+        byteBuffer.putLong(uuid2.getMostSignificantBits());
+
+        IncompleteListOf128BitServiceUUIDs result1 = new IncompleteListOf128BitServiceUUIDs(Arrays.asList(uuid1, uuid2));
         assertArrayEquals(data, result1.getBytes());
     }
 

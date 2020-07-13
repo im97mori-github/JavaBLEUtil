@@ -99,7 +99,6 @@ public class BLEConstants {
         map.put(0x5188, "Location and Navigation Pod");
         APPEARANCE_VALUE_MAP = Collections.synchronizedMap(Collections.unmodifiableMap(map));
 
-
         map = new HashMap<>();
         map.put(0x0, "Unknown");
         map.put(0x64, "Generic Phone");
@@ -2374,6 +2373,140 @@ public class BLEConstants {
     }
 
     /**
+     * https://www.bluetooth.com/specifications/assigned-numbers/units/
+     */
+    public static final Map<UUID, String> UNITS_MAPPING;
+
+    static {
+        Map<UUID, String> map = new HashMap<>();
+        map.put(UnitsUUID.UNITLESS_UNITS, "unitless");
+        map.put(UnitsUUID.LENGTH_METRE_UNITS, "length (metre)");
+        map.put(UnitsUUID.MASS_KILOGRAM_UNITS, "mass (kilogram)");
+        map.put(UnitsUUID.TIME_SECOND_UNITS, "time (second)");
+        map.put(UnitsUUID.ELECTRIC_CURRENT_AMPERE_UNITS, "electric current (ampere)");
+        map.put(UnitsUUID.THERMODYNAMIC_TEMPERATURE_KELVIN_UNITS, "thermodynamic temperature (kelvin)");
+        map.put(UnitsUUID.AMOUNT_OF_SUBSTANCE_MOLE_UNITS, "amount of substance (mole)");
+        map.put(UnitsUUID.LUMINOUS_INTENSITY_CANDELA_UNITS, "luminous intensity (candela)");
+        map.put(UnitsUUID.AREA_SQUARE_METRES_UNITS, "area (square metres)");
+        map.put(UnitsUUID.VOLUME_CUBIC_METRES_UNITS, "volume (cubic metres)");
+        map.put(UnitsUUID.VELOCITY_METRES_PER_SECOND_UNITS, "velocity (metres per second)");
+        map.put(UnitsUUID.ACCELERATION_METRES_PER_SECOND_SQUARED_UNITS, "acceleration (metres per second squared)");
+        map.put(UnitsUUID.WAVENUMBER_RECIPROCAL_METRE_UNITS, "wavenumber (reciprocal metre)");
+        map.put(UnitsUUID.DENSITY_KILOGRAM_PER_CUBIC_METRE_UNITS, "density (kilogram per cubic metre)");
+        map.put(UnitsUUID.SURFACE_DENSITY_KILOGRAM_PER_SQUARE_METRE_UNITS, "surface density (kilogram per square metre)");
+        map.put(UnitsUUID.SPECIFIC_VOLUME_CUBIC_METRE_PER_KILOGRAM_UNITS, "specific volume (cubic metre per kilogram)");
+        map.put(UnitsUUID.CURRENT_DENSITY_AMPERE_PER_SQUARE_METRE_UNITS, "current density (ampere per square metre)");
+        map.put(UnitsUUID.MAGNETIC_FIELD_STRENGTH_AMPERE_PER_METRE_UNITS, "magnetic field strength (ampere per metre)");
+        map.put(UnitsUUID.AMOUNT_CONCENTRATION_MOLE_PER_CUBIC_METRE_UNITS, "amount concentration (mole per cubic metre)");
+        map.put(UnitsUUID.MASS_CONCENTRATION_KILOGRAM_PER_CUBIC_METRE_UNITS, "mass concentration (kilogram per cubic metre)");
+        map.put(UnitsUUID.LUMINANCE_CANDELA_PER_SQUARE_METRE_UNITS, "luminance (candela per square metre)");
+        map.put(UnitsUUID.REFRACTIVE_INDEX_UNITS, "refractive index");
+        map.put(UnitsUUID.RELATIVE_PERMEABILITY_UNITS, "relative permeability");
+        map.put(UnitsUUID.PLANE_ANGLE_RADIAN_UNITS, "plane angle (radian)");
+        map.put(UnitsUUID.SOLID_ANGLE_STERADIAN_UNITS, "solid angle (steradian)");
+        map.put(UnitsUUID.FREQUENCY_HERTZ_UNITS, "frequency (hertz)");
+        map.put(UnitsUUID.FORCE_NEWTON_UNITS, "force (newton)");
+        map.put(UnitsUUID.PRESSURE_PASCAL_UNITS, "pressure (pascal)");
+        map.put(UnitsUUID.ENERGY_JOULE_UNITS, "energy (joule)");
+        map.put(UnitsUUID.POWER_WATT_UNITS, "power (watt)");
+        map.put(UnitsUUID.ELECTRIC_CHARGE_COULOMB_UNITS, "electric charge (coulomb)");
+        map.put(UnitsUUID.ELECTRIC_POTENTIAL_DIFFERENCE_VOLT_UNITS, "electric potential difference (volt)");
+        map.put(UnitsUUID.CAPACITANCE_FARAD_UNITS, "capacitance (farad)");
+        map.put(UnitsUUID.ELECTRIC_RESISTANCE_OHM_UNITS, "electric resistance (ohm)");
+        map.put(UnitsUUID.ELECTRIC_CONDUCTANCE_SIEMENS_UNITS, "electric conductance (siemens)");
+        map.put(UnitsUUID.MAGNETIC_FLUX_WEBER_UNITS, "magnetic flux (weber)");
+        map.put(UnitsUUID.MAGNETIC_FLUX_DENSITY_TESLA_UNITS, "magnetic flux density (tesla)");
+        map.put(UnitsUUID.INDUCTANCE_HENRY_UNITS, "inductance (henry)");
+        map.put(UnitsUUID.THERMODYNAMIC_TEMPERATURE_DEGREE_CELSIUS_UNITS, "Celsius temperature (degree Celsius)");
+        map.put(UnitsUUID.LUMINOUS_FLUX_LUMEN_UNITS, "luminous flux (lumen)");
+        map.put(UnitsUUID.ILLUMINANCE_LUX_UNITS, "illuminance (lux)");
+        map.put(UnitsUUID.ACTIVITY_REFERRED_TO_A_RADIONUCLIDE_BECQUEREL_UNITS, "activity referred to a radionuclide (becquerel)");
+        map.put(UnitsUUID.ABSORBED_DOSE_GRAY_UNITS, "absorbed dose (gray)");
+        map.put(UnitsUUID.DOSE_EQUIVALENT_SIEVERT_UNITS, "dose equivalent (sievert)");
+        map.put(UnitsUUID.CATALYTIC_ACTIVITY_KATAL_UNITS, "catalytic activity (katal)");
+        map.put(UnitsUUID.DYNAMIC_VISCOSITY_PASCAL_SECOND_UNITS, "dynamic viscosity (pascal second)");
+        map.put(UnitsUUID.MOMENT_OF_FORCE_NEWTON_METRE_UNITS, "moment of force (newton metre)");
+        map.put(UnitsUUID.SURFACE_TENSION_NEWTON_PER_METRE_UNITS, "surface tension (newton per metre)");
+        map.put(UnitsUUID.ANGULAR_VELOCITY_RADIAN_PER_SECOND_UNITS, "angular velocity (radian per second)");
+        map.put(UnitsUUID.ANGULAR_ACCELERATION_RADIAN_PER_SECOND_SQUARED_UNITS, "angular acceleration (radian per second squared)");
+        map.put(UnitsUUID.HEAT_FLUX_DENSITY_WATT_PER_SQUARE_METRE_UNITS, "heat flux density (watt per square metre)");
+        map.put(UnitsUUID.HEAT_CAPACITY_JOULE_PER_KELVIN_UNITS, "heat capacity (joule per kelvin)");
+        map.put(UnitsUUID.SPECIFIC_HEAT_CAPACITY_JOULE_PER_KILOGRAM_KELVIN_UNITS, "specific heat capacity (joule per kilogram kelvin)");
+        map.put(UnitsUUID.SPECIFIC_ENERGY_JOULE_PER_KILOGRAM_UNITS, "specific energy (joule per kilogram)");
+        map.put(UnitsUUID.THERMAL_CONDUCTIVITY_WATT_PER_METRE_KELVIN_UNITS, "thermal conductivity (watt per metre kelvin)");
+        map.put(UnitsUUID.ENERGY_DENSITY_JOULE_PER_CUBIC_METRE_UNITS, "energy density (joule per cubic metre)");
+        map.put(UnitsUUID.ELECTRIC_FIELD_STRENGTH_VOLT_PER_METRE_UNITS, "electric field strength (volt per metre)");
+        map.put(UnitsUUID.ELECTRIC_CHARGE_DENSITY_COULOMB_PER_CUBIC_METRE_UNITS, "electric charge density (coulomb per cubic metre)");
+        map.put(UnitsUUID.SURFACE_CHARGE_DENSITY_COULOMB_PER_SQUARE_METRE_UNITS, "surface charge density (coulomb per square metre)");
+        map.put(UnitsUUID.ELECTRIC_FLUX_DENSITY_COULOMB_PER_SQUARE_METRE_UNITS, "electric flux density (coulomb per square metre)");
+        map.put(UnitsUUID.PERMITTIVITY_FARAD_PER_METRE_UNITS, "permittivity (farad per metre)");
+        map.put(UnitsUUID.PERMEABILITY_HENRY_PER_METRE_UNITS, "permeability (henry per metre)");
+        map.put(UnitsUUID.MOLAR_ENERGY_JOULE_PER_MOLE_UNITS, "molar energy (joule per mole)");
+        map.put(UnitsUUID.MOLAR_ENTROPY_JOULE_PER_MOLE_KELVIN_UNITS, "molar entropy (joule per mole kelvin)");
+        map.put(UnitsUUID.EXPOSURE_COULOMB_PER_KILOGRAM_UNITS, "exposure (coulomb per kilogram)");
+        map.put(UnitsUUID.ABSORBED_DOSE_RATE_GRAY_PER_SECOND_UNITS, "absorbed dose rate (gray per second)");
+        map.put(UnitsUUID.RADIANT_INTENSITY_WATT_PER_STERADIAN_UNITS, "radiant intensity (watt per steradian)");
+        map.put(UnitsUUID.RADIANCE_WATT_PER_SQUARE_METRE_STERADIAN_UNITS, "radiance (watt per square metre steradian)");
+        map.put(UnitsUUID.CATALYTIC_ACTIVITY_CONCENTRATION_KATAL_PER_CUBIC_METRE_UNITS, "catalytic activity concentration (katal per cubic metre)");
+        map.put(UnitsUUID.TIME_MINUTE_UNITS, "time (minute)");
+        map.put(UnitsUUID.TIME_HOUR_UNITS, "time (hour)");
+        map.put(UnitsUUID.TIME_DAY_UNITS, "time (day)");
+        map.put(UnitsUUID.PLANE_ANGLE_DEGREE_UNITS, "plane angle (degree)");
+        map.put(UnitsUUID.PLANE_ANGLE_MINUTE_UNITS, "plane angle (minute)");
+        map.put(UnitsUUID.PLANE_ANGLE_SECOND_UNITS, "plane angle (second)");
+        map.put(UnitsUUID.AREA_HECTARE_UNITS, "area (hectare)");
+        map.put(UnitsUUID.VOLUME_LITRE_UNITS, "volume (litre)");
+        map.put(UnitsUUID.MASS_TONNE_UNITS, "mass (tonne)");
+        map.put(UnitsUUID.PRESSURE_BAR_UNITS, "pressure (bar)");
+        map.put(UnitsUUID.PRESSURE_MILLIMETRE_OF_MERCURY_UNITS, "pressure (millimetre of mercury)");
+        map.put(UnitsUUID.LENGTH_ÅNGSTRÖM_UNITS, "length (ångström)");
+        map.put(UnitsUUID.LENGTH_NAUTICAL_MILE_UNITS, "length (nautical mile)");
+        map.put(UnitsUUID.AREA_BARN_UNITS, "area (barn)");
+        map.put(UnitsUUID.VELOCITY_KNOT_UNITS, "velocity (knot)");
+        map.put(UnitsUUID.LOGARITHMIC_RADIO_QUANTITY_NEPER_UNITS, "logarithmic radio quantity (neper)");
+        map.put(UnitsUUID.LOGARITHMIC_RADIO_QUANTITY_BEL_UNITS, "logarithmic radio quantity (bel)");
+        map.put(UnitsUUID.LENGTH_YARD_UNITS, "length (yard)");
+        map.put(UnitsUUID.LENGTH_PARSEC_UNITS, "length (parsec)");
+        map.put(UnitsUUID.LENGTH_INCH_UNITS, "length (inch)");
+        map.put(UnitsUUID.LENGTH_FOOT_UNITS, "length (foot)");
+        map.put(UnitsUUID.LENGTH_MILE_UNITS, "length (mile)");
+        map.put(UnitsUUID.PRESSURE_POUND_FORCE_PER_SQUARE_INCH_UNITS, "pressure (pound-force per square inch)");
+        map.put(UnitsUUID.VELOCITY_KILOMETRE_PER_HOUR_UNITS, "velocity (kilometre per hour)");
+        map.put(UnitsUUID.VELOCITY_MILE_PER_HOUR_UNITS, "velocity (mile per hour)");
+        map.put(UnitsUUID.ANGULAR_VELOCITY_REVOLUTION_PER_MINUTE_UNITS, "angular velocity (revolution per minute)");
+        map.put(UnitsUUID.ENERGY_GRAM_CALORIE_UNITS, "energy (gram calorie)");
+        map.put(UnitsUUID.ENERGY_KILOGRAM_CALORIE_UNITS, "energy (kilogram calorie)");
+        map.put(UnitsUUID.ENERGY_KILOWATT_HOUR_UNITS, "energy (kilowatt hour)");
+        map.put(UnitsUUID.THERMODYNAMIC_TEMPERATURE_DEGREE_FAHRENHEIT_UNITS, "thermodynamic temperature (degree Fahrenheit)");
+        map.put(UnitsUUID.PERCENTAGE_UNITS, "percentage");
+        map.put(UnitsUUID.PER_MILLE_UNITS, "per mille");
+        map.put(UnitsUUID.PERIOD_BEATS_PER_MINUTE_UNITS, "period (beats per minute)");
+        map.put(UnitsUUID.ELECTRIC_CHARGE_AMPERE_HOURS_UNITS, "electric charge (ampere hours)");
+        map.put(UnitsUUID.MASS_DENSITY_MILLIGRAM_PER_DECILITRE_UNITS, "mass density (milligram per decilitre)");
+        map.put(UnitsUUID.MASS_DENSITY_MILLIMOLE_PER_LITRE_UNITS, "mass density (millimole per litre)");
+        map.put(UnitsUUID.TIME_YEAR_UNITS, "time (year)");
+        map.put(UnitsUUID.TIME_MONTH_UNITS, "time (month)");
+        map.put(UnitsUUID.CONCENTRATION_COUNT_PER_CUBIC_METRE_UNITS, "concentration (count per cubic metre)");
+        map.put(UnitsUUID.IRRADIANCE_WATT_PER_SQUARE_METRE_UNITS, "irradiance (watt per square metre)");
+        map.put(UnitsUUID.TRANSFER_RATE_MILLILITER_PER_KILOGRAM_PER_MINUTE_UNITS, "milliliter (per kilogram per minute)");
+        map.put(UnitsUUID.MASS_POUND_UNITS, "mass (pound)");
+        map.put(UnitsUUID.METABOLIC_EQUIVALENT_UNITS, "metabolic equivalent");
+        map.put(UnitsUUID.STEP_PER_MINUTE_UNITS, "step (per minute)");
+        map.put(UnitsUUID.STROKE_PER_MINUTE_UNITS, "stroke (per minute)");
+        map.put(UnitsUUID.VELOCITY_KILOMETER_PER_MINUTE_UNITS, "pace (kilometre per minute)");
+        map.put(UnitsUUID.LUMINOUS_EFFICACY_LUMEN_PER_WATT_UNITS, "luminous efficacy (lumen per watt)");
+        map.put(UnitsUUID.LUMINOUS_ENERGY_LUMEN_HOUR_UNITS, "luminous energy (lumen hour)");
+        map.put(UnitsUUID.LUMINOUS_EXPOSURE_LUX_HOUR_UNITS, "luminous exposure (lux hour)");
+        map.put(UnitsUUID.MASS_FLOW_GRAM_PER_SECOND_UNITS, "mass flow (gram per second)");
+        map.put(UnitsUUID.VOLUME_FLOW_LITRE_PER_SECOND_UNITS, "volume flow (litre per second)");
+        map.put(UnitsUUID.SOUND_PRESSURE_DECIBEL_SPL_UNITS, "sound pressure (decibel)");
+        map.put(UnitsUUID.CONCENTRATION_PARTS_PER_MILLION_UNITS, "concentration (parts per million)");
+        map.put(UnitsUUID.CONCENTRATION_PARTS_PER_BILLION_UNITS, "concentration (parts per billion)");
+
+        UNITS_MAPPING = Collections.synchronizedMap(Collections.unmodifiableMap(map));
+    }
+
+    /**
      * BLE GATT Servies UUID
      */
     public static final class ServiceUUID {
@@ -3523,8 +3656,633 @@ public class BLEConstants {
 
     /**
      * <p>
-     * Core Specification v5.1 Vol 3 Part F 3.4.1.1
-     * Supplement to the Bluetooth Core Specification v8 Part B 1.2
+     * BLE GATT Units UUID
+     * <p>
+     * https://www.bluetooth.com/specifications/assigned-numbers/units/
+     * </p>
+     */
+    public static final class UnitsUUID {
+
+        /**
+         * unitless (Units UUID: 0x2700)
+         */
+        public static final UUID UNITLESS_UNITS = UUID.fromString("00002700-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * length (metre) (Units UUID: 0x2701)
+         */
+        public static final UUID LENGTH_METRE_UNITS = UUID.fromString("00002701-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * mass (kilogram) (Units UUID: 0x2702)
+         */
+        public static final UUID MASS_KILOGRAM_UNITS = UUID.fromString("00002702-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * time (second) (Units UUID: 0x2703)
+         */
+        public static final UUID TIME_SECOND_UNITS = UUID.fromString("00002703-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * electric current (ampere) (Units UUID: 0x2704)
+         */
+        public static final UUID ELECTRIC_CURRENT_AMPERE_UNITS = UUID.fromString("00002704-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * thermodynamic temperature (kelvin) (Units UUID: 0x2705)
+         */
+        public static final UUID THERMODYNAMIC_TEMPERATURE_KELVIN_UNITS = UUID.fromString("00002705-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * amount of substance (mole) (Units UUID: 0x2706)
+         */
+        public static final UUID AMOUNT_OF_SUBSTANCE_MOLE_UNITS = UUID.fromString("00002706-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * luminous intensity (candela) (Units UUID: 0x2707)
+         */
+        public static final UUID LUMINOUS_INTENSITY_CANDELA_UNITS = UUID.fromString("00002707-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * area (square metres) (Units UUID: 0x2710)
+         */
+        public static final UUID AREA_SQUARE_METRES_UNITS = UUID.fromString("00002710-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * volume (cubic metres) (Units UUID: 0x2711)
+         */
+        public static final UUID VOLUME_CUBIC_METRES_UNITS = UUID.fromString("00002711-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * velocity (metres per second) (Units UUID: 0x2712)
+         */
+        public static final UUID VELOCITY_METRES_PER_SECOND_UNITS = UUID.fromString("00002712-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * acceleration (metres per second squared) (Units UUID: 0x2713)
+         */
+        public static final UUID ACCELERATION_METRES_PER_SECOND_SQUARED_UNITS = UUID.fromString("00002713-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * wavenumber (reciprocal metre) (Units UUID: 0x2714)
+         */
+        public static final UUID WAVENUMBER_RECIPROCAL_METRE_UNITS = UUID.fromString("00002714-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * density (kilogram per cubic metre) (Units UUID: 0x2715)
+         */
+        public static final UUID DENSITY_KILOGRAM_PER_CUBIC_METRE_UNITS = UUID.fromString("00002715-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * surface density (kilogram per square metre) (Units UUID: 0x2716)
+         */
+        public static final UUID SURFACE_DENSITY_KILOGRAM_PER_SQUARE_METRE_UNITS = UUID.fromString("00002716-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * specific volume (cubic metre per kilogram) (Units UUID: 0x2717)
+         */
+        public static final UUID SPECIFIC_VOLUME_CUBIC_METRE_PER_KILOGRAM_UNITS = UUID.fromString("00002717-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * current density (ampere per square metre) (Units UUID: 0x2718)
+         */
+        public static final UUID CURRENT_DENSITY_AMPERE_PER_SQUARE_METRE_UNITS = UUID.fromString("00002718-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * magnetic field strength (ampere per metre) (Units UUID: 0x2719)
+         */
+        public static final UUID MAGNETIC_FIELD_STRENGTH_AMPERE_PER_METRE_UNITS = UUID.fromString("00002719-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * amount concentration (mole per cubic metre) (Units UUID: 0x271A)
+         */
+        public static final UUID AMOUNT_CONCENTRATION_MOLE_PER_CUBIC_METRE_UNITS = UUID.fromString("0000271A-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * mass concentration (kilogram per cubic metre) (Units UUID: 0x271B)
+         */
+        public static final UUID MASS_CONCENTRATION_KILOGRAM_PER_CUBIC_METRE_UNITS = UUID.fromString("0000271B-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * luminance (candela per square metre) (Units UUID: 0x271C)
+         */
+        public static final UUID LUMINANCE_CANDELA_PER_SQUARE_METRE_UNITS = UUID.fromString("0000271C-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * refractive index (Units UUID: 0x271D)
+         */
+        public static final UUID REFRACTIVE_INDEX_UNITS = UUID.fromString("0000271D-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * relative permeability (Units UUID: 0x271E)
+         */
+        public static final UUID RELATIVE_PERMEABILITY_UNITS = UUID.fromString("0000271E-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * plane angle (radian) (Units UUID: 0x2720)
+         */
+        public static final UUID PLANE_ANGLE_RADIAN_UNITS = UUID.fromString("00002720-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * solid angle (steradian) (Units UUID: 0x2721)
+         */
+        public static final UUID SOLID_ANGLE_STERADIAN_UNITS = UUID.fromString("00002721-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * frequency (hertz) (Units UUID: 0x2722)
+         */
+        public static final UUID FREQUENCY_HERTZ_UNITS = UUID.fromString("00002722-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * force (newton) (Units UUID: 0x2723)
+         */
+        public static final UUID FORCE_NEWTON_UNITS = UUID.fromString("00002723-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * pressure (pascal) (Units UUID: 0x2724)
+         */
+        public static final UUID PRESSURE_PASCAL_UNITS = UUID.fromString("00002724-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * energy (joule) (Units UUID: 0x2725)
+         */
+        public static final UUID ENERGY_JOULE_UNITS = UUID.fromString("00002725-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * power (watt) (Units UUID: 0x2726)
+         */
+        public static final UUID POWER_WATT_UNITS = UUID.fromString("00002726-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * electric charge (coulomb) (Units UUID: 0x2727)
+         */
+        public static final UUID ELECTRIC_CHARGE_COULOMB_UNITS = UUID.fromString("00002727-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * electric potential difference (volt) (Units UUID: 0x2728)
+         */
+        public static final UUID ELECTRIC_POTENTIAL_DIFFERENCE_VOLT_UNITS = UUID.fromString("00002728-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * capacitance (farad) (Units UUID: 0x2729)
+         */
+        public static final UUID CAPACITANCE_FARAD_UNITS = UUID.fromString("00002729-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * electric resistance (ohm) (Units UUID: 0x272A)
+         */
+        public static final UUID ELECTRIC_RESISTANCE_OHM_UNITS = UUID.fromString("0000272A-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * electric conductance (siemens) (Units UUID: 0x272B)
+         */
+        public static final UUID ELECTRIC_CONDUCTANCE_SIEMENS_UNITS = UUID.fromString("0000272B-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * magnetic flux (weber) (Units UUID: 0x272C)
+         */
+        public static final UUID MAGNETIC_FLUX_WEBER_UNITS = UUID.fromString("0000272C-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * magnetic flux density (tesla) (Units UUID: 0x272D)
+         */
+        public static final UUID MAGNETIC_FLUX_DENSITY_TESLA_UNITS = UUID.fromString("0000272D-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * inductance (henry) (Units UUID: 0x272E)
+         */
+        public static final UUID INDUCTANCE_HENRY_UNITS = UUID.fromString("0000272E-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * Celsius temperature (degree Celsius) (Units UUID: 0x272F)
+         */
+        public static final UUID THERMODYNAMIC_TEMPERATURE_DEGREE_CELSIUS_UNITS = UUID.fromString("0000272F-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * luminous flux (lumen) (Units UUID: 0x2730)
+         */
+        public static final UUID LUMINOUS_FLUX_LUMEN_UNITS = UUID.fromString("00002730-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * illuminance (lux) (Units UUID: 0x2731)
+         */
+        public static final UUID ILLUMINANCE_LUX_UNITS = UUID.fromString("00002731-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * activity referred to a radionuclide (becquerel) (Units UUID: 0x2732)
+         */
+        public static final UUID ACTIVITY_REFERRED_TO_A_RADIONUCLIDE_BECQUEREL_UNITS = UUID.fromString("00002732-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * absorbed dose (gray) (Units UUID: 0x2733)
+         */
+        public static final UUID ABSORBED_DOSE_GRAY_UNITS = UUID.fromString("00002733-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * dose equivalent (sievert) (Units UUID: 0x2734)
+         */
+        public static final UUID DOSE_EQUIVALENT_SIEVERT_UNITS = UUID.fromString("00002734-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * catalytic activity (katal) (Units UUID: 0x2735)
+         */
+        public static final UUID CATALYTIC_ACTIVITY_KATAL_UNITS = UUID.fromString("00002735-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * dynamic viscosity (pascal second) (Units UUID: 0x2740)
+         */
+        public static final UUID DYNAMIC_VISCOSITY_PASCAL_SECOND_UNITS = UUID.fromString("00002740-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * moment of force (newton metre) (Units UUID: 0x2741)
+         */
+        public static final UUID MOMENT_OF_FORCE_NEWTON_METRE_UNITS = UUID.fromString("00002741-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * surface tension (newton per metre) (Units UUID: 0x2742)
+         */
+        public static final UUID SURFACE_TENSION_NEWTON_PER_METRE_UNITS = UUID.fromString("00002742-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * angular velocity (radian per second) (Units UUID: 0x2743)
+         */
+        public static final UUID ANGULAR_VELOCITY_RADIAN_PER_SECOND_UNITS = UUID.fromString("00002743-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * angular acceleration (radian per second squared) (Units UUID: 0x2744)
+         */
+        public static final UUID ANGULAR_ACCELERATION_RADIAN_PER_SECOND_SQUARED_UNITS = UUID.fromString("00002744-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * heat flux density (watt per square metre) (Units UUID: 0x2745)
+         */
+        public static final UUID HEAT_FLUX_DENSITY_WATT_PER_SQUARE_METRE_UNITS = UUID.fromString("00002745-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * heat capacity (joule per kelvin) (Units UUID: 0x2746)
+         */
+        public static final UUID HEAT_CAPACITY_JOULE_PER_KELVIN_UNITS = UUID.fromString("00002746-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * specific heat capacity (joule per kilogram kelvin) (Units UUID: 0x2747)
+         */
+        public static final UUID SPECIFIC_HEAT_CAPACITY_JOULE_PER_KILOGRAM_KELVIN_UNITS = UUID.fromString("00002747-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * specific energy (joule per kilogram) (Units UUID: 0x2748)
+         */
+        public static final UUID SPECIFIC_ENERGY_JOULE_PER_KILOGRAM_UNITS = UUID.fromString("00002748-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * thermal conductivity (watt per metre kelvin) (Units UUID: 0x2749)
+         */
+        public static final UUID THERMAL_CONDUCTIVITY_WATT_PER_METRE_KELVIN_UNITS = UUID.fromString("00002749-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * energy density (joule per cubic metre) (Units UUID: 0x274A)
+         */
+        public static final UUID ENERGY_DENSITY_JOULE_PER_CUBIC_METRE_UNITS = UUID.fromString("0000274A-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * electric field strength (volt per metre) (Units UUID: 0x274B)
+         */
+        public static final UUID ELECTRIC_FIELD_STRENGTH_VOLT_PER_METRE_UNITS = UUID.fromString("0000274B-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * electric charge density (coulomb per cubic metre) (Units UUID: 0x274C)
+         */
+        public static final UUID ELECTRIC_CHARGE_DENSITY_COULOMB_PER_CUBIC_METRE_UNITS = UUID.fromString("0000274C-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * surface charge density (coulomb per square metre) (Units UUID: 0x274D)
+         */
+        public static final UUID SURFACE_CHARGE_DENSITY_COULOMB_PER_SQUARE_METRE_UNITS = UUID.fromString("0000274D-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * electric flux density (coulomb per square metre) (Units UUID: 0x274E)
+         */
+        public static final UUID ELECTRIC_FLUX_DENSITY_COULOMB_PER_SQUARE_METRE_UNITS = UUID.fromString("0000274E-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * permittivity (farad per metre) (Units UUID: 0x274F)
+         */
+        public static final UUID PERMITTIVITY_FARAD_PER_METRE_UNITS = UUID.fromString("0000274F-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * permeability (henry per metre) (Units UUID: 0x2750)
+         */
+        public static final UUID PERMEABILITY_HENRY_PER_METRE_UNITS = UUID.fromString("00002750-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * molar energy (joule per mole) (Units UUID: 0x2751)
+         */
+        public static final UUID MOLAR_ENERGY_JOULE_PER_MOLE_UNITS = UUID.fromString("00002751-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * molar entropy (joule per mole kelvin) (Units UUID: 0x2752)
+         */
+        public static final UUID MOLAR_ENTROPY_JOULE_PER_MOLE_KELVIN_UNITS = UUID.fromString("00002752-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * exposure (coulomb per kilogram) (Units UUID: 0x2753)
+         */
+        public static final UUID EXPOSURE_COULOMB_PER_KILOGRAM_UNITS = UUID.fromString("00002753-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * absorbed dose rate (gray per second) (Units UUID: 0x2754)
+         */
+        public static final UUID ABSORBED_DOSE_RATE_GRAY_PER_SECOND_UNITS = UUID.fromString("00002754-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * radiant intensity (watt per steradian) (Units UUID: 0x2755)
+         */
+        public static final UUID RADIANT_INTENSITY_WATT_PER_STERADIAN_UNITS = UUID.fromString("00002755-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * radiance (watt per square metre steradian) (Units UUID: 0x2756)
+         */
+        public static final UUID RADIANCE_WATT_PER_SQUARE_METRE_STERADIAN_UNITS = UUID.fromString("00002756-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * catalytic activity concentration (katal per cubic metre) (Units UUID: 0x2757)
+         */
+        public static final UUID CATALYTIC_ACTIVITY_CONCENTRATION_KATAL_PER_CUBIC_METRE_UNITS = UUID.fromString("00002757-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * time (minute) (Units UUID: 0x2760)
+         */
+        public static final UUID TIME_MINUTE_UNITS = UUID.fromString("00002760-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * time (hour) (Units UUID: 0x2761)
+         */
+        public static final UUID TIME_HOUR_UNITS = UUID.fromString("00002761-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * time (day) (Units UUID: 0x2762)
+         */
+        public static final UUID TIME_DAY_UNITS = UUID.fromString("00002762-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * plane angle (degree) (Units UUID: 0x2763)
+         */
+        public static final UUID PLANE_ANGLE_DEGREE_UNITS = UUID.fromString("00002763-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * plane angle (minute) (Units UUID: 0x2764)
+         */
+        public static final UUID PLANE_ANGLE_MINUTE_UNITS = UUID.fromString("00002764-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * plane angle (second) (Units UUID: 0x2765)
+         */
+        public static final UUID PLANE_ANGLE_SECOND_UNITS = UUID.fromString("00002765-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * area (hectare) (Units UUID: 0x2766)
+         */
+        public static final UUID AREA_HECTARE_UNITS = UUID.fromString("00002766-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * volume (litre) (Units UUID: 0x2767)
+         */
+        public static final UUID VOLUME_LITRE_UNITS = UUID.fromString("00002767-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * mass (tonne) (Units UUID: 0x2768)
+         */
+        public static final UUID MASS_TONNE_UNITS = UUID.fromString("00002768-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * pressure (bar) (Units UUID: 0x2780)
+         */
+        public static final UUID PRESSURE_BAR_UNITS = UUID.fromString("00002780-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * pressure (millimetre of mercury) (Units UUID: 0x2781)
+         */
+        public static final UUID PRESSURE_MILLIMETRE_OF_MERCURY_UNITS = UUID.fromString("00002781-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * length (ångström) (Units UUID: 0x2782)
+         */
+        public static final UUID LENGTH_ÅNGSTRÖM_UNITS = UUID.fromString("00002782-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * length (nautical mile) (Units UUID: 0x2783)
+         */
+        public static final UUID LENGTH_NAUTICAL_MILE_UNITS = UUID.fromString("00002783-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * area (barn) (Units UUID: 0x2784)
+         */
+        public static final UUID AREA_BARN_UNITS = UUID.fromString("00002784-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * velocity (knot) (Units UUID: 0x2785)
+         */
+        public static final UUID VELOCITY_KNOT_UNITS = UUID.fromString("00002785-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * logarithmic radio quantity (neper) (Units UUID: 0x2786)
+         */
+        public static final UUID LOGARITHMIC_RADIO_QUANTITY_NEPER_UNITS = UUID.fromString("00002786-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * logarithmic radio quantity (bel) (Units UUID: 0x2787)
+         */
+        public static final UUID LOGARITHMIC_RADIO_QUANTITY_BEL_UNITS = UUID.fromString("00002787-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * length (yard) (Units UUID: 0x27A0)
+         */
+        public static final UUID LENGTH_YARD_UNITS = UUID.fromString("000027A0-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * length (parsec) (Units UUID: 0x27A1)
+         */
+        public static final UUID LENGTH_PARSEC_UNITS = UUID.fromString("000027A1-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * length (inch) (Units UUID: 0x27A2)
+         */
+        public static final UUID LENGTH_INCH_UNITS = UUID.fromString("000027A2-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * length (foot) (Units UUID: 0x27A3)
+         */
+        public static final UUID LENGTH_FOOT_UNITS = UUID.fromString("000027A3-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * length (mile) (Units UUID: 0x27A4)
+         */
+        public static final UUID LENGTH_MILE_UNITS = UUID.fromString("000027A4-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * pressure (pound-force per square inch) (Units UUID: 0x27A5)
+         */
+        public static final UUID PRESSURE_POUND_FORCE_PER_SQUARE_INCH_UNITS = UUID.fromString("000027A5-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * velocity (kilometre per hour) (Units UUID: 0x27A6)
+         */
+        public static final UUID VELOCITY_KILOMETRE_PER_HOUR_UNITS = UUID.fromString("000027A6-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * velocity (mile per hour) (Units UUID: 0x27A7)
+         */
+        public static final UUID VELOCITY_MILE_PER_HOUR_UNITS = UUID.fromString("000027A7-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * angular velocity (revolution per minute) (Units UUID: 0x27A8)
+         */
+        public static final UUID ANGULAR_VELOCITY_REVOLUTION_PER_MINUTE_UNITS = UUID.fromString("000027A8-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * energy (gram calorie) (Units UUID: 0x27A9)
+         */
+        public static final UUID ENERGY_GRAM_CALORIE_UNITS = UUID.fromString("000027A9-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * energy (kilogram calorie) (Units UUID: 0x27AA)
+         */
+        public static final UUID ENERGY_KILOGRAM_CALORIE_UNITS = UUID.fromString("000027AA-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * energy (kilowatt hour) (Units UUID: 0x27AB)
+         */
+        public static final UUID ENERGY_KILOWATT_HOUR_UNITS = UUID.fromString("000027AB-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * thermodynamic temperature (degree Fahrenheit) (Units UUID: 0x27AC)
+         */
+        public static final UUID THERMODYNAMIC_TEMPERATURE_DEGREE_FAHRENHEIT_UNITS = UUID.fromString("000027AC-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * percentage (Units UUID: 0x27AD)
+         */
+        public static final UUID PERCENTAGE_UNITS = UUID.fromString("000027AD-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * per mille (Units UUID: 0x27AE)
+         */
+        public static final UUID PER_MILLE_UNITS = UUID.fromString("000027AE-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * period (beats per minute) (Units UUID: 0x27AF)
+         */
+        public static final UUID PERIOD_BEATS_PER_MINUTE_UNITS = UUID.fromString("000027AF-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * electric charge (ampere hours) (Units UUID: 0x27B0)
+         */
+        public static final UUID ELECTRIC_CHARGE_AMPERE_HOURS_UNITS = UUID.fromString("000027B0-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * mass density (milligram per decilitre) (Units UUID: 0x27B1)
+         */
+        public static final UUID MASS_DENSITY_MILLIGRAM_PER_DECILITRE_UNITS = UUID.fromString("000027B1-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * mass density (millimole per litre) (Units UUID: 0x27B2)
+         */
+        public static final UUID MASS_DENSITY_MILLIMOLE_PER_LITRE_UNITS = UUID.fromString("000027B2-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * time (year) (Units UUID: 0x27B3)
+         */
+        public static final UUID TIME_YEAR_UNITS = UUID.fromString("000027B3-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * time (month) (Units UUID: 0x27B4)
+         */
+        public static final UUID TIME_MONTH_UNITS = UUID.fromString("000027B4-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * concentration (count per cubic metre) (Units UUID: 0x27B5)
+         */
+        public static final UUID CONCENTRATION_COUNT_PER_CUBIC_METRE_UNITS = UUID.fromString("000027B5-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * irradiance (watt per square metre) (Units UUID: 0x27B6)
+         */
+        public static final UUID IRRADIANCE_WATT_PER_SQUARE_METRE_UNITS = UUID.fromString("000027B6-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * milliliter (per kilogram per minute) (Units UUID: 0x27B7)
+         */
+        public static final UUID TRANSFER_RATE_MILLILITER_PER_KILOGRAM_PER_MINUTE_UNITS = UUID.fromString("000027B7-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * mass (pound) (Units UUID: 0x27B8)
+         */
+        public static final UUID MASS_POUND_UNITS = UUID.fromString("000027B8-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * metabolic equivalent (Units UUID: 0x27B9)
+         */
+        public static final UUID METABOLIC_EQUIVALENT_UNITS = UUID.fromString("000027B9-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * step (per minute) (Units UUID: 0x27BA)
+         */
+        public static final UUID STEP_PER_MINUTE_UNITS = UUID.fromString("000027BA-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * stroke (per minute) (Units UUID: 0x27BC)
+         */
+        public static final UUID STROKE_PER_MINUTE_UNITS = UUID.fromString("000027BC-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * pace (kilometre per minute) (Units UUID: 0x27BD)
+         */
+        public static final UUID VELOCITY_KILOMETER_PER_MINUTE_UNITS = UUID.fromString("000027BD-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * luminous efficacy (lumen per watt) (Units UUID: 0x27BE)
+         */
+        public static final UUID LUMINOUS_EFFICACY_LUMEN_PER_WATT_UNITS = UUID.fromString("000027BE-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * luminous energy (lumen hour) (Units UUID: 0x27BF)
+         */
+        public static final UUID LUMINOUS_ENERGY_LUMEN_HOUR_UNITS = UUID.fromString("000027BF-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * luminous exposure (lux hour) (Units UUID: 0x27C0)
+         */
+        public static final UUID LUMINOUS_EXPOSURE_LUX_HOUR_UNITS = UUID.fromString("000027C0-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * mass flow (gram per second) (Units UUID: 0x27C1)
+         */
+        public static final UUID MASS_FLOW_GRAM_PER_SECOND_UNITS = UUID.fromString("000027C1-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * volume flow (litre per second) (Units UUID: 0x27C2)
+         */
+        public static final UUID VOLUME_FLOW_LITRE_PER_SECOND_UNITS = UUID.fromString("000027C2-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * sound pressure (decibel) (Units UUID: 0x27C3)
+         */
+        public static final UUID SOUND_PRESSURE_DECIBEL_SPL_UNITS = UUID.fromString("000027C3-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * concentration (parts per million) (Units UUID: 0x27C4)
+         */
+        public static final UUID CONCENTRATION_PARTS_PER_MILLION_UNITS = UUID.fromString("000027C4-0000-1000-8000-00805f9b34fb");
+
+        /**
+         * concentration (parts per billion) (Units UUID: 0x27C5)
+         */
+        public static final UUID CONCENTRATION_PARTS_PER_BILLION_UNITS = UUID.fromString("000027C5-0000-1000-8000-00805f9b34fb");
+
+    }
+
+    /**
+     * <p>
+     * Core Specification v5.1 Vol 3 Part F 3.4.1.1 Supplement to the Bluetooth Core Specification v8 Part B 1.2
      * </p>
      */
     public static final class ErrorCodes {
@@ -3641,36 +4399,24 @@ public class BLEConstants {
         // Application Error
 
         /**
-         * Data field ignored(Current Time Service v1.1.0 1.6)
-         * User Data Access Not Permitted(User Data Service v1.1 1.6)
-         * Control Point value not supported(Heart Rate Service v1.0 1.6)
-         * Out of Range(Health Thermometer Service v1.0 1.6)
-         * Trigger condition value not supported(Automation IO Service v1.0.0 1.6)
-         * Inappropriate Connection Parameters(Cycling Power Service v1.1 1.6)
-         * Procedure Already in Progress(Cycling Speed and Cadence Service v1.1 1.6)
-         * Procedure Already in Progress(Running Speed and Cadence Service v1.1 1.6)
-         * Invalid Value(Indoor Positioning Service v1.0.0 1.6)
-         * Op Code not supported(Bond Management Service v1.0.0 1.7)
-         * Missing CRC(Reconnection Configuration Service v1.0 1.7)
-         * Write Request Rejected(Environmental Sensing Service v1.0.0 1.6)
-         * Write Request Rejected(Object Transfer Service v10 1.10)
+         * <p>
+         * Data field ignored(Current Time Service v1.1.0 1.6) User Data Access Not Permitted(User Data Service v1.1 1.6) Control Point value not supported(Heart Rate Service v1.0 1.6) Out of Range(Health Thermometer Service v1.0 1.6) Trigger condition value not supported(Automation IO Service v1.0.0 1.6) Inappropriate Connection Parameters(Cycling Power Service v1.1 1.6) Procedure Already in Progress(Cycling Speed and Cadence Service v1.1 1.6) Procedure Already in Progress(Running Speed and Cadence Service v1.1 1.6) Invalid Value(Indoor Positioning Service v1.0.0 1.6) Op Code not supported(Bond Management Service v1.0.0 1.7) Missing CRC(Reconnection Configuration Service v1.0 1.7) Write Request Rejected(Environmental Sensing Service v1.0.0 1.6) Write Request Rejected(Object Transfer Service v10 1.10)
+         * </p>
          */
         public static final int APPLICATION_ERROR_80 = 0x80;
 
         /**
-         * Client Characteristic Configuration descriptor improperly configured(Cycling Speed and Cadence Service v1.1 1.6)
-         * Client Characteristic Configuration descriptor improperly configured(Running Speed and Cadence Service v1.1 1.6)
-         * Invalid Request(HTTP Proxy Service v1.0 1.6)
-         * Operation failed(Bond Management Service v1.0.0 1.7)
-         * Invalid CRC(Reconnection Configuration Service v1.0 1.7)
-         * Condition not supported(Environmental Sensing Service  v1.0.0 1.6)
-         * Object Not Selected(Object Transfer Service v10 1.10)
+         * <p>
+         * Client Characteristic Configuration descriptor improperly configured(Cycling Speed and Cadence Service v1.1 1.6) Client Characteristic Configuration descriptor improperly configured(Running Speed and Cadence Service v1.1 1.6) Invalid Request(HTTP Proxy Service v1.0 1.6) Operation failed(Bond Management Service v1.0.0 1.7) Invalid CRC(Reconnection Configuration Service v1.0 1.7) Condition not supported(Environmental Sensing Service v1.0.0 1.6) Object Not Selected(Object Transfer Service v10 1.10)
+         * </p>
          */
         public static final int APPLICATION_ERROR_81 = 0x81;
 
         /**
-         * Network Not Available(HTTP Proxy Service v1.0 1.6)
-         * Concurrency Limit Exceeded(Object Transfer Service v10 1.10)
+         * <
+         * <p>
+         * Network Not Available(HTTP Proxy Service v1.0 1.6) Concurrency Limit Exceeded(Object Transfer Service v10 1.10)
+         * </p>
          */
         public static final int APPLICATION_ERROR_82 = 0x82;
 

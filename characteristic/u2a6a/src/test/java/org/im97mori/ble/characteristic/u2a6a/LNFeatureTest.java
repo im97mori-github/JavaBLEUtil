@@ -1563,6 +1563,1182 @@ public class LNFeatureTest {
     }
 
     @Test
+    public void test_constructor101() {
+        LNFeature result1 = new LNFeature(
+                true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureInstantaneousSpeedNotSupported());
+        assertTrue(result1.isLNFeatureInstantaneousSpeedSupported());
+    }
+    
+    @Test
+    public void test_constructor102() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureInstantaneousSpeedNotSupported());
+        assertFalse(result1.isLNFeatureInstantaneousSpeedSupported());
+    }
+    
+    @Test
+    public void test_constructor103() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureTotalDistanceNotSupported());
+        assertTrue(result1.isLNFeatureTotalDistanceSupported());
+    }
+    
+    @Test
+    public void test_constructor104() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureTotalDistanceNotSupported());
+        assertFalse(result1.isLNFeatureTotalDistanceSupported());
+    }
+    
+    @Test
+    public void test_constructor105() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureLocationNotSupported());
+        assertTrue(result1.isLNFeatureLocationSupported());
+    }
+    
+    @Test
+    public void test_constructor106() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureLocationNotSupported());
+        assertFalse(result1.isLNFeatureLocationSupported());
+    }
+
+    @Test
+    public void test_constructor107() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureElevationNotSupported());
+        assertTrue(result1.isLNFeatureElevationSupported());
+    }
+    
+    @Test
+    public void test_constructor108() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureElevationNotSupported());
+        assertFalse(result1.isLNFeatureElevationSupported());
+    }
+    
+    @Test
+    public void test_constructor109() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureHeadingNotSupported());
+        assertTrue(result1.isLNFeatureHeadingSupported());
+    }
+    
+    @Test
+    public void test_constructor110() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureHeadingNotSupported());
+        assertFalse(result1.isLNFeatureHeadingSupported());
+    }
+    
+    @Test
+    public void test_constructor111() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureRollingTimeNotSupported());
+        assertTrue(result1.isLNFeatureRollingTimeSupported());
+    }
+    
+    @Test
+    public void test_constructor112() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureRollingTimeNotSupported());
+        assertFalse(result1.isLNFeatureRollingTimeSupported());
+    }
+    
+    @Test
+    public void test_constructor113() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureUtcTimeNotSupported());
+        assertTrue(result1.isLNFeatureUtcTimeSupported());
+    }
+    
+    @Test
+    public void test_constructor114() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureUtcTimeNotSupported());
+        assertFalse(result1.isLNFeatureUtcTimeSupported());
+    }
+    
+    @Test
+    public void test_constructor115() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureRemainingDistanceNotSupported());
+        assertTrue(result1.isLNFeatureRemainingDistanceSupported());
+    }
+    
+    @Test
+    public void test_constructor116() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureRemainingDistanceNotSupported());
+        assertFalse(result1.isLNFeatureRemainingDistanceSupported());
+    }
+    
+    @Test
+    public void test_constructor117() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureRemainingVerticalDistanceNotSupported());
+        assertTrue(result1.isLNFeatureRemainingVerticalDistanceSupported());
+    }
+    
+    @Test
+    public void test_constructor118() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureRemainingVerticalDistanceNotSupported());
+        assertFalse(result1.isLNFeatureRemainingVerticalDistanceSupported());
+    }
+    
+    @Test
+    public void test_constructor119() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureEstimatedTimeOfArrivalNotSupported());
+        assertTrue(result1.isLNFeatureEstimatedTimeOfArrivalSupported());
+    }
+    
+    @Test
+    public void test_constructor120() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureEstimatedTimeOfArrivalNotSupported());
+        assertFalse(result1.isLNFeatureEstimatedTimeOfArrivalSupported());
+    }
+    
+    @Test
+    public void test_constructor121() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureNumberOfBeaconsInSolutionNotSupported());
+        assertTrue(result1.isLNFeatureNumberOfBeaconsInSolutionSupported());
+    }
+    
+    @Test
+    public void test_constructor122() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureNumberOfBeaconsInSolutionNotSupported());
+        assertFalse(result1.isLNFeatureNumberOfBeaconsInSolutionSupported());
+    }
+    
+    @Test
+    public void test_constructor123() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureNumberOfBeaconsInViewNotSupported());
+        assertTrue(result1.isLNFeatureNumberOfBeaconsInViewSupported());
+    }
+    
+    @Test
+    public void test_constructor124() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureNumberOfBeaconsInViewNotSupported());
+        assertFalse(result1.isLNFeatureNumberOfBeaconsInViewSupported());
+    }
+    
+    @Test
+    public void test_constructor125() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureTimeToFirstFixNotSupported());
+        assertTrue(result1.isLNFeatureTimeToFirstFixSupported());
+    }
+    
+    @Test
+    public void test_constructor126() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureTimeToFirstFixNotSupported());
+        assertFalse(result1.isLNFeatureTimeToFirstFixSupported());
+    }
+    
+    @Test
+    public void test_constructor127() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureEstimatedHorizontalPositionErrorNotSupported());
+        assertTrue(result1.isLNFeatureEstimatedHorizontalPositionErrorSupported());
+    }
+    
+    @Test
+    public void test_constructor128() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureEstimatedHorizontalPositionErrorNotSupported());
+        assertFalse(result1.isLNFeatureEstimatedHorizontalPositionErrorSupported());
+    }
+    
+    @Test
+    public void test_constructor129() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureEstimatedVerticalPositionErrorNotSupported());
+        assertTrue(result1.isLNFeatureEstimatedVerticalPositionErrorSupported());
+    }
+    
+    @Test
+    public void test_constructor130() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureEstimatedVerticalPositionErrorNotSupported());
+        assertFalse(result1.isLNFeatureEstimatedVerticalPositionErrorSupported());
+    }
+    
+    @Test
+    public void test_constructor131() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureHorizontalDilutionOfPrecisionNotSupported());
+        assertTrue(result1.isLNFeatureHorizontalDilutionOfPrecisionSupported());
+    }
+    
+    @Test
+    public void test_constructor132() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureHorizontalDilutionOfPrecisionNotSupported());
+        assertFalse(result1.isLNFeatureHorizontalDilutionOfPrecisionSupported());
+    }
+    
+    @Test
+    public void test_constructor133() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureVerticalDilutionOfPrecisionNotSupported());
+        assertTrue(result1.isLNFeatureVerticalDilutionOfPrecisionSupported());
+    }
+    
+    @Test
+    public void test_constructor134() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureVerticalDilutionOfPrecisionNotSupported());
+        assertFalse(result1.isLNFeatureVerticalDilutionOfPrecisionSupported());
+    }
+    
+    @Test
+    public void test_constructor135() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureLocationAndSpeedCharacteristicContentMaskingNotSupported());
+        assertTrue(result1.isLNFeatureLocationAndSpeedCharacteristicContentMaskingSupported());
+    }
+    
+    @Test
+    public void test_constructor136() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureLocationAndSpeedCharacteristicContentMaskingNotSupported());
+        assertFalse(result1.isLNFeatureLocationAndSpeedCharacteristicContentMaskingSupported());
+    }
+    
+    @Test
+    public void test_constructor137() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false
+                ,false);
+        assertFalse(result1.isLNFeatureFixRateSettingNotSupported());
+        assertTrue(result1.isLNFeatureFixRateSettingSupported());
+    }
+    
+    @Test
+    public void test_constructor138() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureFixRateSettingNotSupported());
+        assertFalse(result1.isLNFeatureFixRateSettingSupported());
+    }
+    
+    @Test
+    public void test_constructor139() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true
+                ,false);
+        assertFalse(result1.isLNFeatureElevationSettingNotSupported());
+        assertTrue(result1.isLNFeatureElevationSettingSupported());
+    }
+    
+    @Test
+    public void test_constructor140() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeatureElevationSettingNotSupported());
+        assertFalse(result1.isLNFeatureElevationSettingSupported());
+    }
+    
+    @Test
+    public void test_constructor141() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,true);
+        assertFalse(result1.isLNFeaturePositionStatusNotSupported());
+        assertTrue(result1.isLNFeaturePositionStatusSupported());
+    }
+    
+    @Test
+    public void test_constructor142() {
+        LNFeature result1 = new LNFeature(
+                false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false
+                ,false);
+        assertTrue(result1.isLNFeaturePositionStatusNotSupported());
+        assertFalse(result1.isLNFeaturePositionStatusSupported());
+    }
+    
+    @Test
     public void test_parcelable101() {
         int flags = LNFeature.LN_FEATURE_INSTANTANEOUS_SPEED_SUPPORTED_FALSE
                 | LNFeature.LN_FEATURE_TOTAL_DISTANCE_SUPPORTED_FALSE

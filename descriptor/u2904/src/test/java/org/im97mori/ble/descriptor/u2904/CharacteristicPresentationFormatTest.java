@@ -6,6 +6,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
+import java.util.UUID;
 
 import org.junit.Test;
 
@@ -1239,6 +1240,22 @@ public class CharacteristicPresentationFormatTest {
         assertEquals(format, result.getFormat());
         assertEquals(exponent, result.getExponent());
         assertEquals(unit, result.getUnit());
+        assertEquals(namespace, result.getNamespace());
+        assertArrayEquals(description, result.getDescription());
+    }
+    
+    @Test
+    public void test_constructor032() {
+        int format = 0;
+        int exponent = 1;
+        UUID unit = org.im97mori.ble.BLEConstants.UnitsUUID.PERCENTAGE_UNITS;
+        int namespace = 3;
+        byte[] description = new byte[] { 4 };
+
+        CharacteristicPresentationFormat result = new CharacteristicPresentationFormat(format, exponent, unit, namespace, description);
+        assertEquals(format, result.getFormat());
+        assertEquals(exponent, result.getExponent());
+        assertEquals(unit.getMostSignificantBits() >> 32 & 0xffff, result.getUnit());
         assertEquals(namespace, result.getNamespace());
         assertArrayEquals(description, result.getDescription());
     }

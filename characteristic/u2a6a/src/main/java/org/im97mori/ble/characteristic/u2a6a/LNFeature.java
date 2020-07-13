@@ -365,6 +365,122 @@ public class LNFeature implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from flags
+     * 
+     * @param isLNFeatureInstantaneousSpeedSupported                           Instantaneous Speed Supported flag
+     * @param isLNFeatureTotalDistanceSupported                                Total Distance Supported flag
+     * @param isLNFeatureLocationSupported                                     Location not Supported flag
+     * @param isLNFeatureElevationSupported                                    Elevation not Supported flag
+     * @param isLNFeatureHeadingSupported                                      Heading Supported flag
+     * @param isLNFeatureRollingTimeSupported                                  Rolling Time Supported flag
+     * @param isLNFeatureUtcTimeSupported                                      UTC Time Supported flag
+     * @param isLNFeatureRemainingDistanceSupported                            Remaining Distance Supported flag
+     * @param isLNFeatureRemainingVerticalDistanceSupported                    Remaining Vertical Distance Supported flag
+     * @param isLNFeatureEstimatedTimeOfArrivalSupported                       Estimated Time of Arrival Supported flag
+     * @param isLNFeatureNumberOfBeaconsInSolutionSupported                    Number of Beacons in Solution Supported flag
+     * @param isLNFeatureNumberOfBeaconsInViewSupported                        Number of Beacons in View Supported flag
+     * @param isLNFeatureTimeToFirstFixSupported                               Time to First Fix Supported flag
+     * @param isLNFeatureEstimatedHorizontalPositionErrorSupported             Estimated Horizontal Position Error Supported flag
+     * @param isLNFeatureEstimatedVerticalPositionErrorSupported               Estimated Vertical Position Error Supported flag
+     * @param isLNFeatureHorizontalDilutionOfPrecisionSupported                Horizontal Dilution of Precision Supported flag
+     * @param isLNFeatureVerticalDilutionOfPrecisionSupported                  Vertical Dilution of Precision Supported flag
+     * @param isLNFeatureLocationAndSpeedCharacteristicContentMaskingSupported Location and Speed Characteristic Content Masking Supported flag
+     * @param isLNFeatureFixRateSettingSupported                               Fix Rate Setting not Supported flag
+     * @param isLNFeatureElevationSettingSupported                             Elevation Setting Supported flag
+     * @param isLNFeaturePositionStatusSupported                               Position Status Supported flag
+     */
+    public LNFeature(boolean isLNFeatureInstantaneousSpeedSupported
+            , boolean isLNFeatureTotalDistanceSupported
+            , boolean isLNFeatureLocationSupported
+            , boolean isLNFeatureElevationSupported
+            , boolean isLNFeatureHeadingSupported
+            , boolean isLNFeatureRollingTimeSupported
+            , boolean isLNFeatureUtcTimeSupported
+            , boolean isLNFeatureRemainingDistanceSupported
+            , boolean isLNFeatureRemainingVerticalDistanceSupported
+            , boolean isLNFeatureEstimatedTimeOfArrivalSupported
+            , boolean isLNFeatureNumberOfBeaconsInSolutionSupported
+            , boolean isLNFeatureNumberOfBeaconsInViewSupported
+            , boolean isLNFeatureTimeToFirstFixSupported
+            , boolean isLNFeatureEstimatedHorizontalPositionErrorSupported
+            , boolean isLNFeatureEstimatedVerticalPositionErrorSupported
+            , boolean isLNFeatureHorizontalDilutionOfPrecisionSupported
+            , boolean isLNFeatureVerticalDilutionOfPrecisionSupported
+            , boolean isLNFeatureLocationAndSpeedCharacteristicContentMaskingSupported
+            , boolean isLNFeatureFixRateSettingSupported
+            , boolean isLNFeatureElevationSettingSupported
+            , boolean isLNFeaturePositionStatusSupported) {
+
+        mLNFeature = new byte[4];
+
+        if (isLNFeatureInstantaneousSpeedSupported) {
+            mLNFeature[0] |= LN_FEATURE_INSTANTANEOUS_SPEED_SUPPORTED_TRUE;
+        }
+        if (isLNFeatureTotalDistanceSupported) {
+            mLNFeature[0] |= LN_FEATURE_TOTAL_DISTANCE_SUPPORTED_TRUE;
+        }
+        if (isLNFeatureLocationSupported) {
+            mLNFeature[0] |= LN_FEATURE_LOCATION_SUPPORTED_TRUE;
+        }
+        if (isLNFeatureElevationSupported) {
+            mLNFeature[0] |= LN_FEATURE_ELEVATION_SUPPORTED_TRUE;
+        }
+        if (isLNFeatureHeadingSupported) {
+            mLNFeature[0] |= LN_FEATURE_HEADING_SUPPORTED_TRUE;
+        }
+        if (isLNFeatureRollingTimeSupported) {
+            mLNFeature[0] |= LN_FEATURE_ROLLING_TIME_SUPPORTED_TRUE;
+        }
+        if (isLNFeatureUtcTimeSupported) {
+            mLNFeature[0] |= LN_FEATURE_UTC_TIME_SUPPORTED_TRUE;
+        }
+        if (isLNFeatureRemainingDistanceSupported) {
+            mLNFeature[0] |= LN_FEATURE_REMAINING_DISTANCE_SUPPORTED_TRUE;
+        }
+
+        if (isLNFeatureRemainingVerticalDistanceSupported) {
+            mLNFeature[1] |= LN_FEATURE_REMAINING_VERTICAL_DISTANCE_SUPPORTED_TRUE >> 8;
+        }
+        if (isLNFeatureEstimatedTimeOfArrivalSupported) {
+            mLNFeature[1] |= LN_FEATURE_ESTIMATED_TIME_OF_ARRIVAL_SUPPORTED_TRUE >> 8;
+        }
+        if (isLNFeatureNumberOfBeaconsInSolutionSupported) {
+            mLNFeature[1] |= LN_FEATURE_NUMBER_OF_BEACONS_IN_SOLUTION_SUPPORTED_TRUE >> 8;
+        }
+        if (isLNFeatureNumberOfBeaconsInViewSupported) {
+            mLNFeature[1] |= LN_FEATURE_NUMBER_OF_BEACONS_IN_VIEW_SUPPORTED_TRUE >> 8;
+        }
+        if (isLNFeatureTimeToFirstFixSupported) {
+            mLNFeature[1] |= LN_FEATURE_TIME_TO_FIRST_FIX_SUPPORTED_TRUE >> 8;
+        }
+        if (isLNFeatureEstimatedHorizontalPositionErrorSupported) {
+            mLNFeature[1] |= LN_FEATURE_ESTIMATED_HORIZONTAL_POSITION_ERROR_SUPPORTED_TRUE >> 8;
+        }
+        if (isLNFeatureEstimatedVerticalPositionErrorSupported) {
+            mLNFeature[1] |= LN_FEATURE_ESTIMATED_VERTICAL_POSITION_ERROR_SUPPORTED_TRUE >> 8;
+        }
+        if (isLNFeatureHorizontalDilutionOfPrecisionSupported) {
+            mLNFeature[1] |= LN_FEATURE_HORIZONTAL_DILUTION_OF_PRECISION_SUPPORTED_TRUE >> 8;
+        }
+
+        if (isLNFeatureVerticalDilutionOfPrecisionSupported) {
+            mLNFeature[2] |= LN_FEATURE_VERTICAL_DILUTION_OF_PRECISION_SUPPORTED_TRUE >> 16;
+        }
+        if (isLNFeatureLocationAndSpeedCharacteristicContentMaskingSupported) {
+            mLNFeature[2] |= LN_FEATURE_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_MASKING_SUPPORTED_TRUE >> 16;
+        }
+        if (isLNFeatureFixRateSettingSupported) {
+            mLNFeature[2] |= LN_FEATURE_FIX_RATE_SETTING_SUPPORTED_TRUE >> 16;
+        }
+        if (isLNFeatureElevationSettingSupported) {
+            mLNFeature[2] |= LN_FEATURE_ELEVATION_SETTING_SUPPORTED_TRUE >> 16;
+        }
+        if (isLNFeaturePositionStatusSupported) {
+            mLNFeature[2] |= LN_FEATURE_POSITION_STATUS_SUPPORTED_TRUE >> 16;
+        }
+    }
+
+    /**
      * @return LN Feature
      */
     public byte[] getLNFeature() {
@@ -681,48 +797,7 @@ public class LNFeature implements ByteArrayInterface {
      * check Weight Scale Feature
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #LN_FEATURE_INSTANTANEOUS_SPEED_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_INSTANTANEOUS_SPEED_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_TOTAL_DISTANCE_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_TOTAL_DISTANCE_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_LOCATION_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_LOCATION_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_ELEVATION_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_ELEVATION_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_HEADING_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_HEADING_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_ROLLING_TIME_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_ROLLING_TIME_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_UTC_TIME_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_UTC_TIME_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_REMAINING_DISTANCE_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_REMAINING_DISTANCE_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_REMAINING_VERTICAL_DISTANCE_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_REMAINING_VERTICAL_DISTANCE_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_ESTIMATED_TIME_OF_ARRIVAL_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_ESTIMATED_TIME_OF_ARRIVAL_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_NUMBER_OF_BEACONS_IN_SOLUTION_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_NUMBER_OF_BEACONS_IN_SOLUTION_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_NUMBER_OF_BEACONS_IN_VIEW_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_NUMBER_OF_BEACONS_IN_VIEW_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_TIME_TO_FIRST_FIX_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_TIME_TO_FIRST_FIX_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_ESTIMATED_HORIZONTAL_POSITION_ERROR_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_ESTIMATED_HORIZONTAL_POSITION_ERROR_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_ESTIMATED_VERTICAL_POSITION_ERROR_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_ESTIMATED_VERTICAL_POSITION_ERROR_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_HORIZONTAL_DILUTION_OF_PRECISION_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_HORIZONTAL_DILUTION_OF_PRECISION_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_VERTICAL_DILUTION_OF_PRECISION_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_VERTICAL_DILUTION_OF_PRECISION_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_MASKING_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_MASKING_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_FIX_RATE_SETTING_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_FIX_RATE_SETTING_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_ELEVATION_SETTING_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_ELEVATION_SETTING_SUPPORTED_TRUE}
-     *               , {@link #LN_FEATURE_POSITION_STATUS_SUPPORTED_FALSE}
-     *               , {@link #LN_FEATURE_POSITION_STATUS_SUPPORTED_TRUE}
+     * @param expect one of {@link #LN_FEATURE_INSTANTANEOUS_SPEED_SUPPORTED_FALSE} , {@link #LN_FEATURE_INSTANTANEOUS_SPEED_SUPPORTED_TRUE} , {@link #LN_FEATURE_TOTAL_DISTANCE_SUPPORTED_FALSE} , {@link #LN_FEATURE_TOTAL_DISTANCE_SUPPORTED_TRUE} , {@link #LN_FEATURE_LOCATION_SUPPORTED_FALSE} , {@link #LN_FEATURE_LOCATION_SUPPORTED_TRUE} , {@link #LN_FEATURE_ELEVATION_SUPPORTED_FALSE} , {@link #LN_FEATURE_ELEVATION_SUPPORTED_TRUE} , {@link #LN_FEATURE_HEADING_SUPPORTED_FALSE} , {@link #LN_FEATURE_HEADING_SUPPORTED_TRUE} , {@link #LN_FEATURE_ROLLING_TIME_SUPPORTED_FALSE} , {@link #LN_FEATURE_ROLLING_TIME_SUPPORTED_TRUE} , {@link #LN_FEATURE_UTC_TIME_SUPPORTED_FALSE} , {@link #LN_FEATURE_UTC_TIME_SUPPORTED_TRUE} , {@link #LN_FEATURE_REMAINING_DISTANCE_SUPPORTED_FALSE} , {@link #LN_FEATURE_REMAINING_DISTANCE_SUPPORTED_TRUE} , {@link #LN_FEATURE_REMAINING_VERTICAL_DISTANCE_SUPPORTED_FALSE} , {@link #LN_FEATURE_REMAINING_VERTICAL_DISTANCE_SUPPORTED_TRUE} , {@link #LN_FEATURE_ESTIMATED_TIME_OF_ARRIVAL_SUPPORTED_FALSE} , {@link #LN_FEATURE_ESTIMATED_TIME_OF_ARRIVAL_SUPPORTED_TRUE} , {@link #LN_FEATURE_NUMBER_OF_BEACONS_IN_SOLUTION_SUPPORTED_FALSE} , {@link #LN_FEATURE_NUMBER_OF_BEACONS_IN_SOLUTION_SUPPORTED_TRUE} , {@link #LN_FEATURE_NUMBER_OF_BEACONS_IN_VIEW_SUPPORTED_FALSE} , {@link #LN_FEATURE_NUMBER_OF_BEACONS_IN_VIEW_SUPPORTED_TRUE} , {@link #LN_FEATURE_TIME_TO_FIRST_FIX_SUPPORTED_FALSE} , {@link #LN_FEATURE_TIME_TO_FIRST_FIX_SUPPORTED_TRUE} , {@link #LN_FEATURE_ESTIMATED_HORIZONTAL_POSITION_ERROR_SUPPORTED_FALSE} , {@link #LN_FEATURE_ESTIMATED_HORIZONTAL_POSITION_ERROR_SUPPORTED_TRUE} , {@link #LN_FEATURE_ESTIMATED_VERTICAL_POSITION_ERROR_SUPPORTED_FALSE} , {@link #LN_FEATURE_ESTIMATED_VERTICAL_POSITION_ERROR_SUPPORTED_TRUE} , {@link #LN_FEATURE_HORIZONTAL_DILUTION_OF_PRECISION_SUPPORTED_FALSE} , {@link #LN_FEATURE_HORIZONTAL_DILUTION_OF_PRECISION_SUPPORTED_TRUE} , {@link #LN_FEATURE_VERTICAL_DILUTION_OF_PRECISION_SUPPORTED_FALSE} , {@link #LN_FEATURE_VERTICAL_DILUTION_OF_PRECISION_SUPPORTED_TRUE} , {@link #LN_FEATURE_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_MASKING_SUPPORTED_FALSE} , {@link #LN_FEATURE_LOCATION_AND_SPEED_CHARACTERISTIC_CONTENT_MASKING_SUPPORTED_TRUE} , {@link #LN_FEATURE_FIX_RATE_SETTING_SUPPORTED_FALSE} , {@link #LN_FEATURE_FIX_RATE_SETTING_SUPPORTED_TRUE} , {@link #LN_FEATURE_ELEVATION_SETTING_SUPPORTED_FALSE} , {@link #LN_FEATURE_ELEVATION_SETTING_SUPPORTED_TRUE} , {@link #LN_FEATURE_POSITION_STATUS_SUPPORTED_FALSE} , {@link #LN_FEATURE_POSITION_STATUS_SUPPORTED_TRUE}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isFeatureMatched(int mask, int expect) {

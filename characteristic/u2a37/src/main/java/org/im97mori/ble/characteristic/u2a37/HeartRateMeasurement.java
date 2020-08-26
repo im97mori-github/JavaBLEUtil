@@ -202,7 +202,7 @@ public class HeartRateMeasurement implements ByteArrayInterface {
     /**
      * @return {@code true}:Sensor Contact feature is not supported in the current connection, {@code false}:noty Sensor Contact feature is not supported in the current connection
      */
-    public boolean isFlagsSesorContactStatusNotSupported() {
+    public boolean isFlagsSensorContactStatusNotSupported() {
         return isFlagsMatched(FLAGS_SENSOR_CONTACT_STATUS_MASK, FLAGS_SENSOR_CONTACT_STATUS_NOT_SUPPORTED_0)
                 || isFlagsMatched(FLAGS_SENSOR_CONTACT_STATUS_MASK, FLAGS_SENSOR_CONTACT_STATUS_NOT_SUPPORTED_1);
     }
@@ -210,14 +210,14 @@ public class HeartRateMeasurement implements ByteArrayInterface {
     /**
      * @return {@code true}:Sensor Contact feature is supported, but contact is not detected, {@code false}:Sensor Contact feature is supported and contact is detected
      */
-    public boolean isFlagsSeonsorContactStatusSupportedButNotDetected() {
+    public boolean isFlagsSensorContactStatusSupportedButNotDetected() {
         return isFlagsMatched(FLAGS_SENSOR_CONTACT_STATUS_MASK, FLAGS_SENSOR_CONTACT_STATUS_SUPPORTED_BUT_NOT_DETECTED);
     }
 
     /**
      * @return {@code true}:Sensor Contact feature is supported and contact is detected, {@code false}:Sensor Contact feature is supported, but contact is not detected
      */
-    public boolean isFlagsSeonsorContactStatusSupportedAndDetected() {
+    public boolean isFlagsSensorContactStatusSupportedAndDetected() {
         return isFlagsMatched(FLAGS_SENSOR_CONTACT_STATUS_MASK, FLAGS_SENSOR_CONTACT_STATUS_SUPPORTED_AND_DETECTED);
     }
 

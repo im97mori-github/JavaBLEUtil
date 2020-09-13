@@ -157,6 +157,36 @@ public class WeightScaleFeature implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from flags
+     * 
+     * @param isTimeStampSupported                             {@code true}:{@link #WEIGHT_SCALE_FEATURE_TIME_STAMP_SUPPORTED_TRUE}, {@code false}:{@link #WEIGHT_SCALE_FEATURE_TIME_STAMP_SUPPORTED_FALSE}
+     * @param isMultipleUsersSupported                         {@code true}:{@link #WEIGHT_SCALE_FEATURE_MULTIPLE_USERS_SUPPORTED_TRUE}, {@code false}:{@link #WEIGHT_SCALE_FEATURE_MULTIPLE_USERS_SUPPORTED_FALSE}
+     * @param isBmiSupported                                   {@code true}:{@link #WEIGHT_SCALE_FEATURE_BMI_SUPPORTED_TRUE}, {@code false}:{@link #WEIGHT_SCALE_FEATURE_BMI_SUPPORTED_FALSE}
+     * @param weightScaleFeatureWeightMeasurmentResolutionFlag one of {@link #WEIGHT_SCALE_FEATURE_WEIGHT_MEASUREMENT_RESOLUTION_NOT_SPECIFIED}
+     *                                                          {@link #WEIGHT_SCALE_FEATURE_WEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_5KG_OR_1LB}
+     *                                                          {@link #WEIGHT_SCALE_FEATURE_WEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_2KG_OR_0_5LB}
+     *                                                          {@link #WEIGHT_SCALE_FEATURE_WEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_1KG_OR_0_2LB}
+     *                                                          {@link #WEIGHT_SCALE_FEATURE_WEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_05KG_OR_0_1B}
+     *                                                          {@link #WEIGHT_SCALE_FEATURE_WEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_02KG_OR_0_05B}
+     *                                                          {@link #WEIGHT_SCALE_FEATURE_WEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_01KG_OR_0_02B}
+     *                                                          {@link #WEIGHT_SCALE_FEATURE_WEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_005KG_OR_0_01B}
+     * @param weightScaleFeatureHeightMeasurementResolutionFlag one of {@link #WEIGHT_SCALE_FEATURE_HEIGHT_MEASUREMENT_RESOLUTION_NOT_SPECIFIED}
+     *                                                          {@link #WEIGHT_SCALE_FEATURE_HEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_01_METER_OR_1INCH}
+     *                                                          {@link #WEIGHT_SCALE_FEATURE_HEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_005METER_OR_0_5INCH}
+     *                                                          {@link #WEIGHT_SCALE_FEATURE_HEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_001METER_OR_0_1INCH}
+     */
+    public WeightScaleFeature(boolean isTimeStampSupported, boolean isMultipleUsersSupported, boolean isBmiSupported, int weightScaleFeatureWeightMeasurmentResolutionFlag, int weightScaleFeatureHeightMeasurementResolutionFlag) {
+        // @formatter:off
+        int flags = (isTimeStampSupported ? WEIGHT_SCALE_FEATURE_TIME_STAMP_SUPPORTED_TRUE : WEIGHT_SCALE_FEATURE_TIME_STAMP_SUPPORTED_FALSE)
+                | (isMultipleUsersSupported ? WEIGHT_SCALE_FEATURE_MULTIPLE_USERS_SUPPORTED_TRUE : WEIGHT_SCALE_FEATURE_MULTIPLE_USERS_SUPPORTED_FALSE)
+                | (isBmiSupported ? WEIGHT_SCALE_FEATURE_BMI_SUPPORTED_TRUE : WEIGHT_SCALE_FEATURE_BMI_SUPPORTED_FALSE)
+                | weightScaleFeatureWeightMeasurmentResolutionFlag
+                | weightScaleFeatureHeightMeasurementResolutionFlag;
+        // @formatter:on
+        mWeightScaleFeature = new byte[] { (byte) flags, (byte) (flags >> 8), (byte) (flags >> 16), (byte) (flags >> 24) };
+    }
+
+    /**
      * @return Weight Scale Feature
      */
     @NonNull

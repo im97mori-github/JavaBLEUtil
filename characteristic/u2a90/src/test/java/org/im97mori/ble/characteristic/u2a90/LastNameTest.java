@@ -3,7 +3,7 @@ package org.im97mori.ble.characteristic.u2a90;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-import org.im97mori.ble.characteristic.core.RegisteredUser;
+import org.im97mori.ble.characteristic.u2b37.RegisteredUser;
 import org.junit.Test;
 
 public class LastNameTest {

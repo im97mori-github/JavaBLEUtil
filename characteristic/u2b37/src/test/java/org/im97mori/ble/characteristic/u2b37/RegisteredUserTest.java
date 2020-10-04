@@ -1,4 +1,4 @@
-package org.im97mori.ble.characteristic.core;
+package org.im97mori.ble.characteristic.u2b37;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 
+import org.im97mori.ble.characteristic.core.UserIndexUtils;
 import org.junit.Test;
 
 @SuppressWarnings("unused")
@@ -446,6 +447,174 @@ public class RegisteredUserTest {
         assertFalse(result1.isFlagsUserNameTruncated());
         assertEquals(0x01, result1.getRegisteredUserIndex());
         assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getRegisteredUserData());
+    }
+
+    @Test
+    public void test_constructor_00501() {
+        int rollingNumber = 1;
+        int segmentationHeader = RegisteredUser.SEGMENTATION_HEADER_FIRST_SEGMENT_FALSE | RegisteredUser.SEGMENTATION_HEADER_LAST_SEGMENT_FALSE | (rollingNumber << 2);
+        int flag = RegisteredUser.FLAGS_REGISTERED_USER_NAME_PRESENT_FALSE | RegisteredUser.FLAGS_USER_NAME_TRUNCATED_FALSE;
+        int userIndex = 2;
+        byte[] registeredUserData = "a".getBytes();
+
+        RegisteredUser result1 = new RegisteredUser(segmentationHeader, flag, userIndex, registeredUserData);
+
+        assertEquals(segmentationHeader, result1.getSegmentationHeader());
+        assertTrue(result1.isSegmentationHeaderNotFirstSegment());
+        assertFalse(result1.isSegmentationHeaderFirstSegment());
+        assertTrue(result1.isSegmentationHeaderNotLastSegment());
+        assertFalse(result1.isSegmentationHeaderLastSegment());
+        assertEquals(rollingNumber, result1.getSegmentationHeaderRollingSegmentNumber());
+        assertTrue(result1.isFlagsRegisteredUserNameNotPresent());
+        assertFalse(result1.isFlagsRegisteredUserNamePresent());
+        assertTrue(result1.isFlagsUserNameNotTruncated());
+        assertFalse(result1.isFlagsUserNameTruncated());
+        assertEquals(userIndex, result1.getRegisteredUserIndex());
+        assertArrayEquals(registeredUserData, result1.getRegisteredUserData());
+    }
+
+    @Test
+    public void test_constructor_00502() {
+        int rollingNumber = 1;
+        int segmentationHeader = RegisteredUser.SEGMENTATION_HEADER_FIRST_SEGMENT_TRUE | RegisteredUser.SEGMENTATION_HEADER_LAST_SEGMENT_FALSE | (rollingNumber << 2);
+        int flag = RegisteredUser.FLAGS_REGISTERED_USER_NAME_PRESENT_FALSE | RegisteredUser.FLAGS_USER_NAME_TRUNCATED_FALSE;
+        int userIndex = 2;
+        byte[] registeredUserData = "a".getBytes();
+
+        RegisteredUser result1 = new RegisteredUser(segmentationHeader, flag, userIndex, registeredUserData);
+
+        assertEquals(segmentationHeader, result1.getSegmentationHeader());
+        assertFalse(result1.isSegmentationHeaderNotFirstSegment());
+        assertTrue(result1.isSegmentationHeaderFirstSegment());
+        assertTrue(result1.isSegmentationHeaderNotLastSegment());
+        assertFalse(result1.isSegmentationHeaderLastSegment());
+        assertEquals(rollingNumber, result1.getSegmentationHeaderRollingSegmentNumber());
+        assertTrue(result1.isFlagsRegisteredUserNameNotPresent());
+        assertFalse(result1.isFlagsRegisteredUserNamePresent());
+        assertTrue(result1.isFlagsUserNameNotTruncated());
+        assertFalse(result1.isFlagsUserNameTruncated());
+        assertEquals(userIndex, result1.getRegisteredUserIndex());
+        assertArrayEquals(registeredUserData, result1.getRegisteredUserData());
+    }
+
+    @Test
+    public void test_constructor_00503() {
+        int rollingNumber = 1;
+        int segmentationHeader = RegisteredUser.SEGMENTATION_HEADER_FIRST_SEGMENT_FALSE | RegisteredUser.SEGMENTATION_HEADER_LAST_SEGMENT_TRUE | (rollingNumber << 2);
+        int flag = RegisteredUser.FLAGS_REGISTERED_USER_NAME_PRESENT_FALSE | RegisteredUser.FLAGS_USER_NAME_TRUNCATED_FALSE;
+        int userIndex = 2;
+        byte[] registeredUserData = "a".getBytes();
+
+        RegisteredUser result1 = new RegisteredUser(segmentationHeader, flag, userIndex, registeredUserData);
+
+        assertEquals(segmentationHeader, result1.getSegmentationHeader());
+        assertTrue(result1.isSegmentationHeaderNotFirstSegment());
+        assertFalse(result1.isSegmentationHeaderFirstSegment());
+        assertFalse(result1.isSegmentationHeaderNotLastSegment());
+        assertTrue(result1.isSegmentationHeaderLastSegment());
+        assertEquals(rollingNumber, result1.getSegmentationHeaderRollingSegmentNumber());
+        assertTrue(result1.isFlagsRegisteredUserNameNotPresent());
+        assertFalse(result1.isFlagsRegisteredUserNamePresent());
+        assertTrue(result1.isFlagsUserNameNotTruncated());
+        assertFalse(result1.isFlagsUserNameTruncated());
+        assertEquals(userIndex, result1.getRegisteredUserIndex());
+        assertArrayEquals(registeredUserData, result1.getRegisteredUserData());
+    }
+
+    @Test
+    public void test_constructor_00504() {
+        int rollingNumber = 1;
+        int segmentationHeader = RegisteredUser.SEGMENTATION_HEADER_FIRST_SEGMENT_TRUE | RegisteredUser.SEGMENTATION_HEADER_LAST_SEGMENT_TRUE | (rollingNumber << 2);
+        int flag = RegisteredUser.FLAGS_REGISTERED_USER_NAME_PRESENT_FALSE | RegisteredUser.FLAGS_USER_NAME_TRUNCATED_FALSE;
+        int userIndex = 2;
+        byte[] registeredUserData = "a".getBytes();
+
+        RegisteredUser result1 = new RegisteredUser(segmentationHeader, flag, userIndex, registeredUserData);
+
+        assertEquals(segmentationHeader, result1.getSegmentationHeader());
+        assertFalse(result1.isSegmentationHeaderNotFirstSegment());
+        assertTrue(result1.isSegmentationHeaderFirstSegment());
+        assertFalse(result1.isSegmentationHeaderNotLastSegment());
+        assertTrue(result1.isSegmentationHeaderLastSegment());
+        assertEquals(rollingNumber, result1.getSegmentationHeaderRollingSegmentNumber());
+        assertTrue(result1.isFlagsRegisteredUserNameNotPresent());
+        assertFalse(result1.isFlagsRegisteredUserNamePresent());
+        assertTrue(result1.isFlagsUserNameNotTruncated());
+        assertFalse(result1.isFlagsUserNameTruncated());
+        assertEquals(userIndex, result1.getRegisteredUserIndex());
+        assertArrayEquals(registeredUserData, result1.getRegisteredUserData());
+    }
+
+    @Test
+    public void test_constructor_00505() {
+        int rollingNumber = 1;
+        int segmentationHeader = RegisteredUser.SEGMENTATION_HEADER_FIRST_SEGMENT_FALSE | RegisteredUser.SEGMENTATION_HEADER_LAST_SEGMENT_FALSE | (rollingNumber << 2);
+        int flag = RegisteredUser.FLAGS_REGISTERED_USER_NAME_PRESENT_TRUE | RegisteredUser.FLAGS_USER_NAME_TRUNCATED_FALSE;
+        int userIndex = 2;
+        byte[] registeredUserData = "a".getBytes();
+
+        RegisteredUser result1 = new RegisteredUser(segmentationHeader, flag, userIndex, registeredUserData);
+
+        assertEquals(segmentationHeader, result1.getSegmentationHeader());
+        assertTrue(result1.isSegmentationHeaderNotFirstSegment());
+        assertFalse(result1.isSegmentationHeaderFirstSegment());
+        assertTrue(result1.isSegmentationHeaderNotLastSegment());
+        assertFalse(result1.isSegmentationHeaderLastSegment());
+        assertEquals(rollingNumber, result1.getSegmentationHeaderRollingSegmentNumber());
+        assertFalse(result1.isFlagsRegisteredUserNameNotPresent());
+        assertTrue(result1.isFlagsRegisteredUserNamePresent());
+        assertTrue(result1.isFlagsUserNameNotTruncated());
+        assertFalse(result1.isFlagsUserNameTruncated());
+        assertEquals(userIndex, result1.getRegisteredUserIndex());
+        assertArrayEquals(registeredUserData, result1.getRegisteredUserData());
+    }
+
+    @Test
+    public void test_constructor_00506() {
+        int rollingNumber = 1;
+        int segmentationHeader = RegisteredUser.SEGMENTATION_HEADER_FIRST_SEGMENT_FALSE | RegisteredUser.SEGMENTATION_HEADER_LAST_SEGMENT_FALSE | (rollingNumber << 2);
+        int flag = RegisteredUser.FLAGS_REGISTERED_USER_NAME_PRESENT_FALSE | RegisteredUser.FLAGS_USER_NAME_TRUNCATED_TRUE;
+        int userIndex = 2;
+        byte[] registeredUserData = "a".getBytes();
+
+        RegisteredUser result1 = new RegisteredUser(segmentationHeader, flag, userIndex, registeredUserData);
+
+        assertEquals(segmentationHeader, result1.getSegmentationHeader());
+        assertTrue(result1.isSegmentationHeaderNotFirstSegment());
+        assertFalse(result1.isSegmentationHeaderFirstSegment());
+        assertTrue(result1.isSegmentationHeaderNotLastSegment());
+        assertFalse(result1.isSegmentationHeaderLastSegment());
+        assertEquals(rollingNumber, result1.getSegmentationHeaderRollingSegmentNumber());
+        assertTrue(result1.isFlagsRegisteredUserNameNotPresent());
+        assertFalse(result1.isFlagsRegisteredUserNamePresent());
+        assertFalse(result1.isFlagsUserNameNotTruncated());
+        assertTrue(result1.isFlagsUserNameTruncated());
+        assertEquals(userIndex, result1.getRegisteredUserIndex());
+        assertArrayEquals(registeredUserData, result1.getRegisteredUserData());
+    }
+
+    @Test
+    public void test_constructor_00507() {
+        int rollingNumber = 1;
+        int segmentationHeader = RegisteredUser.SEGMENTATION_HEADER_FIRST_SEGMENT_FALSE | RegisteredUser.SEGMENTATION_HEADER_LAST_SEGMENT_FALSE | (rollingNumber << 2);
+        int flag = RegisteredUser.FLAGS_REGISTERED_USER_NAME_PRESENT_TRUE | RegisteredUser.FLAGS_USER_NAME_TRUNCATED_TRUE;
+        int userIndex = 2;
+        byte[] registeredUserData = "a".getBytes();
+
+        RegisteredUser result1 = new RegisteredUser(segmentationHeader, flag, userIndex, registeredUserData);
+
+        assertEquals(segmentationHeader, result1.getSegmentationHeader());
+        assertTrue(result1.isSegmentationHeaderNotFirstSegment());
+        assertFalse(result1.isSegmentationHeaderFirstSegment());
+        assertTrue(result1.isSegmentationHeaderNotLastSegment());
+        assertFalse(result1.isSegmentationHeaderLastSegment());
+        assertEquals(rollingNumber, result1.getSegmentationHeaderRollingSegmentNumber());
+        assertFalse(result1.isFlagsRegisteredUserNameNotPresent());
+        assertTrue(result1.isFlagsRegisteredUserNamePresent());
+        assertFalse(result1.isFlagsUserNameNotTruncated());
+        assertTrue(result1.isFlagsUserNameTruncated());
+        assertEquals(userIndex, result1.getRegisteredUserIndex());
+        assertArrayEquals(registeredUserData, result1.getRegisteredUserData());
     }
 
     @Test

@@ -1,4 +1,4 @@
-package org.im97mori.ble.characteristic.core;
+package org.im97mori.ble.characteristic.u2b37;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -10,7 +10,7 @@ import org.im97mori.ble.ByteArrayInterface;
 import androidx.annotation.NonNull;
 
 /**
- * User data for multiple packet characteristic
+ * User data for multiple packet characteristic (Characteristics UUID: 0x2B37)
  */
 public class RegisteredUser implements ByteArrayInterface {
 
@@ -84,14 +84,14 @@ public class RegisteredUser implements ByteArrayInterface {
     private final int mSegmentationHeader;
 
     /**
-     * Registered User Index
-     */
-    private final int mRegisteredUserIndex;
-
-    /**
      * Flags
      */
     private final int mFlags;
+
+    /**
+     * Registered User Index
+     */
+    private final int mRegisteredUserIndex;
 
     /**
      * Registered User Data
@@ -114,6 +114,21 @@ public class RegisteredUser implements ByteArrayInterface {
             mRegisteredUserIndex = 0;
             mRegisteredUserData = Arrays.copyOfRange(values, 1, values.length);
         }
+    }
+
+    /**
+     * Constructor from parameters
+     * 
+     * @param segmentationHeader  Segmentation Header
+     * @param flags               Flags
+     * @param registeredUserIndex Registered User Index
+     * @param registeredUserData  Registered User Data
+     */
+    public RegisteredUser(int segmentationHeader, int flags, int registeredUserIndex, @NonNull byte[] registeredUserData) {
+        mSegmentationHeader = segmentationHeader;
+        mFlags = flags;
+        mRegisteredUserIndex = registeredUserIndex;
+        mRegisteredUserData = registeredUserData;
     }
 
     /**

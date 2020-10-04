@@ -2859,7 +2859,7 @@ public class BLEConstants {
         /**
          * VO2 Max (Characteristic UUID: 0x2A96)
          */
-        public static final UUID V_O2_MAX_CHARACTERISTIC = UUID.fromString("00002A96-0000-1000-8000-00805f9b34fb");
+        public static final UUID VO2_MAX_CHARACTERISTIC = UUID.fromString("00002A96-0000-1000-8000-00805f9b34fb");
 
         /**
          * Heart Rate Max (Characteristic UUID: 0x2A8D)
@@ -2961,6 +2961,11 @@ public class BLEConstants {
          */
         public static final UUID USER_INDEX_CHARACTERISTIC = UUID.fromString("00002A9A-0000-1000-8000-00805f9b34fb");
 
+        /**
+         * Registered User (Characteristic UUID: 0x2B37)
+         */
+        public static final UUID REGISTERED_USER_CHARACTERISTIC = UUID.fromString("00002B37-0000-1000-8000-00805f9b34fb");
+        
         /**
          * User Control Point (Characteristic UUID: 0x2A9F)
          */

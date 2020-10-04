@@ -170,6 +170,7 @@ dependencies {
     api "${groupId}:${characteristicU2b1e.artifactId}:${characteristicU2b1e.versionName}"
     api "${groupId}:${characteristicU2b1f.artifactId}:${characteristicU2b1f.versionName}"
     api "${groupId}:${characteristicU2b2a.artifactId}:${characteristicU2b2a.versionName}"
+    api "${groupId}:${characteristicU2b37.artifactId}:${characteristicU2b37.versionName}"
 }
 
 publishing {

@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.im97mori.ble.ByteArrayInterface;
-import org.im97mori.ble.characteristic.core.RegisteredUser;
+import org.im97mori.ble.characteristic.u2b37.RegisteredUser;
 
 import androidx.annotation.NonNull;
 

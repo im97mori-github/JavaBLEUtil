@@ -285,6 +285,52 @@ public class BodyCompositionFeature implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from flags
+     * 
+     * @param isTimeStampSupported           {@code true}:{@link #TIME_STAMP_SUPPORTED_TRUE}, {@code false}:{@link #TIME_STAMP_SUPPORTED_FALSE}
+     * @param isMultipleUsersSupported       {@code true}:{@link #MULTIPLE_USERS_SUPPORTED_TRUE}, {@code false}:{@link #MULTIPLE_USERS_SUPPORTED_FALSE}
+     * @param isBasalMetabolismSupported     {@code true}:{@link #BASAL_METABOLISM_SUPPORTED_TRUE}, {@code false}:{@link #BASAL_METABOLISM_SUPPORTED_FALSE}
+     * @param isMusclePercentageSupported    {@code true}:{@link #MUSCLE_PERCENTAGE_SUPPORTED_TRUE}, {@code false}:{@link #MUSCLE_PERCENTAGE_SUPPORTED_FALSE}
+     * @param isMuscleMassSupported          {@code true}:{@link #MUSCLE_MASS_SUPPORTED_TRUE}, {@code false}:{@link #MUSCLE_MASS_SUPPORTED_FALSE}
+     * @param isFatFreeMassSupported         {@code true}:{@link #FAT_FREE_MASS_SUPPORTED_TRUE}, {@code false}:{@link #FAT_FREE_MASS_SUPPORTED_FALSE}
+     * @param isSoftLeanMassSupported        {@code true}:{@link #SOTT_LEAN_MASS_SUPPORTED_TRUE}, {@code false}:{@link #SOTT_LEAN_MASS_SUPPORTED_FALSE}
+     * @param isBodyWaterMassSupported       {@code true}:{@link #BODY_WATER_MASS_SUPPORTED_TRUE}, {@code false}:{@link #BODY_WATER_MASS_SUPPORTED_FALSE}
+     * @param isImpedanceSupported           {@code true}:{@link #IMPEDANCE_SUPPORTED_TRUE}, {@code false}:{@link #IMPEDANCE_SUPPORTED_FALSE}
+     * @param isWeightSupported              {@code true}:{@link #WEIGHT_SUPPORTED_TRUE}, {@code false}:{@link #WEIGHT_SUPPORTED_FALSE}
+     * @param isHeightSupported              {@code true}:{@link #HEIGHT_SUPPORTED_TRUE}, {@code false}:{@link #HEIGHT_SUPPORTED_FALSE}
+     * @param massScaleMeasurementResolution one of {@link #MASS_MEASUREMENT_RESOLUTION_NOT_SPECIFIED}
+     *                                        {@link #MASS_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_5KG_OR_1LB}
+     *                                        {@link #MASS_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_2KG_OR_0_5LB}
+     *                                        {@link #MASS_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_1KG_OR_0_2LB}
+     *                                        {@link #MASS_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_05KG_OR_0_1B}
+     *                                        {@link #MASS_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_02KG_OR_0_05B}
+     *                                        {@link #MASS_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_01KG_OR_0_02B}
+     *                                        {@link #MASS_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_005KG_OR_0_01B}
+     * @param heightMeasurementResolution    one of {@link #HEIGHT_MEASUREMENT_RESOLUTION_NOT_SPECIFIED}
+     *                                        {@link #HEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_01_METER_OR_1INCH}
+     *                                        {@link #HEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_005METER_OR_0_5INCH}
+     *                                        {@link #HEIGHT_MEASUREMENT_RESOLUTION_RESOLUTION_OF_0_001METER_OR_0_1INCH}
+     */
+    public BodyCompositionFeature(boolean isTimeStampSupported, boolean isMultipleUsersSupported, boolean isBasalMetabolismSupported, boolean isMusclePercentageSupported, boolean isMuscleMassSupported, boolean isFatFreeMassSupported, boolean isSoftLeanMassSupported, boolean isBodyWaterMassSupported, boolean isImpedanceSupported, boolean isWeightSupported, boolean isHeightSupported, int massScaleMeasurementResolution, int heightMeasurementResolution) {
+        // @formatter:off
+        int flags = (isTimeStampSupported ? TIME_STAMP_SUPPORTED_TRUE : TIME_STAMP_SUPPORTED_FALSE)
+                | (isMultipleUsersSupported ? MULTIPLE_USERS_SUPPORTED_TRUE : MULTIPLE_USERS_SUPPORTED_FALSE)
+                | (isBasalMetabolismSupported ? BASAL_METABOLISM_SUPPORTED_TRUE : BASAL_METABOLISM_SUPPORTED_FALSE)
+                | (isMusclePercentageSupported ? MUSCLE_PERCENTAGE_SUPPORTED_TRUE : MUSCLE_PERCENTAGE_SUPPORTED_FALSE)
+                | (isMuscleMassSupported ? MUSCLE_MASS_SUPPORTED_TRUE : MUSCLE_MASS_SUPPORTED_FALSE)
+                | (isFatFreeMassSupported ? FAT_FREE_MASS_SUPPORTED_TRUE : FAT_FREE_MASS_SUPPORTED_FALSE)
+                | (isSoftLeanMassSupported ? SOTT_LEAN_MASS_SUPPORTED_TRUE : SOTT_LEAN_MASS_SUPPORTED_FALSE)
+                | (isBodyWaterMassSupported ? BODY_WATER_MASS_SUPPORTED_TRUE : BODY_WATER_MASS_SUPPORTED_FALSE)
+                | (isImpedanceSupported ? IMPEDANCE_SUPPORTED_TRUE : IMPEDANCE_SUPPORTED_FALSE)
+                | (isWeightSupported ? WEIGHT_SUPPORTED_TRUE : WEIGHT_SUPPORTED_FALSE)
+                | (isHeightSupported ? HEIGHT_SUPPORTED_TRUE : HEIGHT_SUPPORTED_FALSE)
+                | massScaleMeasurementResolution
+                | heightMeasurementResolution;
+        // @formatter:on
+        mBodyCompositionFeature = new byte[] { (byte) flags, (byte) (flags >> 8), (byte) (flags >> 16), (byte) (flags >> 24) };
+    }
+
+    /**
      * @return Body Composition Feature
      */
     public byte[] getBodyCompositionFeature() {
@@ -406,7 +452,7 @@ public class BodyCompositionFeature implements ByteArrayInterface {
     /**
      * @return {@code true}:Impedance Supported, {@code false}:Impedance not Supported
      */
-    public boolean isImpedanceMassSupported() {
+    public boolean isImpedanceSupported() {
         return isFeatureMatched(IMPEDANCE_SUPPORTED_MASK, IMPEDANCE_SUPPORTED_TRUE);
     }
 
@@ -420,7 +466,7 @@ public class BodyCompositionFeature implements ByteArrayInterface {
     /**
      * @return {@code true}:Weight Supported, {@code false}:Weight not Supported
      */
-    public boolean isWeightMassSupported() {
+    public boolean isWeightSupported() {
         return isFeatureMatched(WEIGHT_SUPPORTED_MASK, WEIGHT_SUPPORTED_TRUE);
     }
 
@@ -434,7 +480,7 @@ public class BodyCompositionFeature implements ByteArrayInterface {
     /**
      * @return {@code true}:Height Supported, {@code false}:Height not Supported
      */
-    public boolean isHeightMassSupported() {
+    public boolean isHeightSupported() {
         return isFeatureMatched(HEIGHT_SUPPORTED_MASK, HEIGHT_SUPPORTED_TRUE);
     }
 

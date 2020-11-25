@@ -114,6 +114,58 @@ public class CharacteristicExtendedPropertiesTest {
     }
 
     @Test
+    public void test_constructor_00101() {
+        int flag = CharacteristicExtendedProperties.PROPERTIES_RELIABLE_WRITE_DISABLED | CharacteristicExtendedProperties.PROPERTIES_WRITABLE_AUXILIARIES_DISABLED;
+        byte[] data = new byte[] { (byte) flag, (byte) (flag >> 8) };
+
+        CharacteristicExtendedProperties result = new CharacteristicExtendedProperties(false, false);
+        assertArrayEquals(data, result.getProperties());
+        assertTrue(result.isPropertiesReliableWriteDisabled());
+        assertFalse(result.isPropertiesReliableWriteEnabled());
+        assertTrue(result.isPropertiesWritableAuxiliariesDisabled());
+        assertFalse(result.isPropertiesWritableAuxiliariesEnabled());
+    }
+
+    @Test
+    public void test_constructor_00102() {
+        int flag = CharacteristicExtendedProperties.PROPERTIES_RELIABLE_WRITE_ENABLED | CharacteristicExtendedProperties.PROPERTIES_WRITABLE_AUXILIARIES_DISABLED;
+        byte[] data = new byte[] { (byte) flag, (byte) (flag >> 8) };
+
+        CharacteristicExtendedProperties result = new CharacteristicExtendedProperties(true, false);
+        assertArrayEquals(data, result.getProperties());
+        assertFalse(result.isPropertiesReliableWriteDisabled());
+        assertTrue(result.isPropertiesReliableWriteEnabled());
+        assertTrue(result.isPropertiesWritableAuxiliariesDisabled());
+        assertFalse(result.isPropertiesWritableAuxiliariesEnabled());
+    }
+
+    @Test
+    public void test_constructor_00103() {
+        int flag = CharacteristicExtendedProperties.PROPERTIES_RELIABLE_WRITE_DISABLED | CharacteristicExtendedProperties.PROPERTIES_WRITABLE_AUXILIARIES_ENABLED;
+        byte[] data = new byte[] { (byte) flag, (byte) (flag >> 8) };
+
+        CharacteristicExtendedProperties result = new CharacteristicExtendedProperties(false, true);
+        assertArrayEquals(data, result.getProperties());
+        assertTrue(result.isPropertiesReliableWriteDisabled());
+        assertFalse(result.isPropertiesReliableWriteEnabled());
+        assertFalse(result.isPropertiesWritableAuxiliariesDisabled());
+        assertTrue(result.isPropertiesWritableAuxiliariesEnabled());
+    }
+
+    @Test
+    public void test_constructor_00104() {
+        int flag = CharacteristicExtendedProperties.PROPERTIES_RELIABLE_WRITE_ENABLED | CharacteristicExtendedProperties.PROPERTIES_WRITABLE_AUXILIARIES_ENABLED;
+        byte[] data = new byte[] { (byte) flag, (byte) (flag >> 8) };
+
+        CharacteristicExtendedProperties result = new CharacteristicExtendedProperties(true, true);
+        assertArrayEquals(data, result.getProperties());
+        assertFalse(result.isPropertiesReliableWriteDisabled());
+        assertTrue(result.isPropertiesReliableWriteEnabled());
+        assertFalse(result.isPropertiesWritableAuxiliariesDisabled());
+        assertTrue(result.isPropertiesWritableAuxiliariesEnabled());
+    }
+
+    @Test
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 

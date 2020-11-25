@@ -3635,7 +3635,7 @@ public class BLEConstants {
         /**
          * Number of Digitals (Descriptor UUID: 0x2909)
          */
-        public static final UUID NUMBEROF_DIGITALS_DESCRIPTOR = UUID.fromString("00002909-0000-1000-8000-00805f9b34fb");
+        public static final UUID NUMBER_OF_DIGITALS_DESCRIPTOR = UUID.fromString("00002909-0000-1000-8000-00805f9b34fb");
 
         /**
          * Report Reference (Descriptor UUID: 0x2908)

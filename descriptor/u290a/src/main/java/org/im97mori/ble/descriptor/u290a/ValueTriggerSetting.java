@@ -4,6 +4,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Arrays;
 
+import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.ByteArrayInterface;
 
 import androidx.annotation.NonNull;
@@ -69,9 +70,14 @@ public class ValueTriggerSetting implements ByteArrayInterface {
     private final byte[] mValueBitMask;
 
     /**
-     * Value (Analog Interval)
+     * Value (Analog Interval One)
      */
-    private final long mValueAnalogInterval;
+    private final int mValueAnalogOne;
+
+    /**
+     * Value (Analog Interval Two)
+     */
+    private final int mValueAnalogTwo;
 
     /**
      * Constructor from {@link BluetoothGattDescriptor}
@@ -80,24 +86,44 @@ public class ValueTriggerSetting implements ByteArrayInterface {
      */
     public ValueTriggerSetting(@NonNull byte[] values) {
         mCondition = (values[0] & 0xff);
-        mValueAnalog = (values[1] & 0xff) | ((values[2] & 0xff) << 8);
-        mValueBitMask = Arrays.copyOfRange(values, 3, values.length - 4);
-        mValueAnalogInterval = ((values[values.length - 4] & 0xff) | ((values[values.length - 3] & 0xff) << 8) | ((values[values.length - 2] & 0xff) << 16) | ((values[values.length - 1] & 0xff) << 24) & 0xffffffffL);
+        if (isAnalog1() || isAnalog2() || isAnalog3()) {
+            mValueAnalog = BLEUtils.createUInt16(values, 1);
+            mValueBitMask = new byte[0];
+            mValueAnalogOne = 0;
+            mValueAnalogTwo = 0;
+        } else if (isBitMask4()) {
+            mValueAnalog = 0;
+            mValueBitMask = Arrays.copyOfRange(values, 1, values.length);
+            mValueAnalogOne = 0;
+            mValueAnalogTwo = 0;
+        } else if (isAnalogInterval5() || isAnalogInterval6()) {
+            mValueAnalog = 0;
+            mValueBitMask = new byte[0];
+            mValueAnalogOne = BLEUtils.createUInt16(values, 1);
+            mValueAnalogTwo = BLEUtils.createUInt16(values, 3);
+        } else {
+            mValueAnalog = 0;
+            mValueBitMask = new byte[0];
+            mValueAnalogOne = 0;
+            mValueAnalogTwo = 0;
+        }
     }
 
     /**
      * Constructor from parameters
      * 
-     * @param condition           Condition
-     * @param valueAnalog         Value (Analog)
-     * @param valueBitMask        Value (Bit Mask)
-     * @param valueAnalogInterval Value (Analog Interval)
+     * @param condition      Condition
+     * @param valueAnalog    Value (Analog)
+     * @param valueBitMask   Value (Bit Mask)
+     * @param valueAnalogOne Value (Analog Interval One)
+     * @param valueAnalogTwo Value (Analog Interval Two)
      */
-    public ValueTriggerSetting(int condition, int valueAnalog, @NonNull byte[] valueBitMask, long valueAnalogInterval) {
+    public ValueTriggerSetting(int condition, int valueAnalog, @NonNull byte[] valueBitMask, int valueAnalogOne, int valueAnalogTwo) {
         mCondition = condition;
         mValueAnalog = valueAnalog;
         mValueBitMask = valueBitMask;
-        mValueAnalogInterval = valueAnalogInterval;
+        mValueAnalogOne = valueAnalogOne;
+        mValueAnalogTwo = valueAnalogTwo;
     }
 
     /**
@@ -179,10 +205,17 @@ public class ValueTriggerSetting implements ByteArrayInterface {
     }
 
     /**
-     * @return Value (Analog Interval)
+     * @return Value (Analog Interval One)
      */
-    public long getValueAnalogInterval() {
-        return mValueAnalogInterval;
+    public int getValueAnalogOne() {
+        return mValueAnalogOne;
+    }
+
+    /**
+     * @return Value (Analog Interval Two)
+     */
+    public int getValueAnalogTwo() {
+        return mValueAnalogTwo;
     }
 
     /**
@@ -191,13 +224,23 @@ public class ValueTriggerSetting implements ByteArrayInterface {
     @NonNull
     @Override
     public byte[] getBytes() {
+        int length = 0;
         byte[] data = new byte[7 + mValueBitMask.length];
         ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
         byteBuffer.put((byte) mCondition);
-        byteBuffer.putShort((short) mValueAnalog);
-        byteBuffer.put(mValueBitMask);
-        byteBuffer.putInt((int) mValueAnalogInterval);
-        return data;
+        length++;
+        if (isAnalog1() || isAnalog2() || isAnalog3()) {
+            byteBuffer.putShort((short) mValueAnalog);
+            length += 2;
+        } else if (isBitMask4()) {
+            byteBuffer.put(mValueBitMask);
+            length += mValueBitMask.length;
+        } else if (isAnalogInterval5() || isAnalogInterval6()) {
+            byteBuffer.putShort((short) mValueAnalogOne);
+            byteBuffer.putShort((short) mValueAnalogTwo);
+            length += 4;
+        }
+        return Arrays.copyOfRange(data, 0, length);
     }
 
 }

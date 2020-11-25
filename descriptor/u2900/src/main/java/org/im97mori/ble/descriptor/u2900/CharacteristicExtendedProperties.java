@@ -61,6 +61,18 @@ public class CharacteristicExtendedProperties implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param isReliableWriteEnabled       {@code true}:{@link #PROPERTIES_RELIABLE_WRITE_ENABLED}, {@code false}:{@link #PROPERTIES_RELIABLE_WRITE_DISABLED}
+     * @param isWritableAuxiliariesEnabled {@code true}:{@link #PROPERTIES_WRITABLE_AUXILIARIES_ENABLED}, {@code false}:{@link #PROPERTIES_WRITABLE_AUXILIARIES_DISABLED}
+     */
+    public CharacteristicExtendedProperties(boolean isReliableWriteEnabled, boolean isWritableAuxiliariesEnabled) {
+        int properties = isReliableWriteEnabled ? PROPERTIES_RELIABLE_WRITE_ENABLED : PROPERTIES_RELIABLE_WRITE_DISABLED;
+        properties |= isWritableAuxiliariesEnabled ? PROPERTIES_WRITABLE_AUXILIARIES_ENABLED : PROPERTIES_WRITABLE_AUXILIARIES_DISABLED;
+        mProperties = new byte[] { (byte) properties, (byte) (properties >> 8) };
+    }
+
+    /**
      * @return Properties
      */
     @NonNull

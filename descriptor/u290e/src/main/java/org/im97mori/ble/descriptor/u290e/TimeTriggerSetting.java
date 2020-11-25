@@ -2,7 +2,9 @@ package org.im97mori.ble.descriptor.u290e;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.Arrays;
 
+import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.ByteArrayInterface;
 
 import androidx.annotation.NonNull;
@@ -59,9 +61,19 @@ public class TimeTriggerSetting implements ByteArrayInterface {
      */
     public TimeTriggerSetting(@NonNull byte[] values) {
         mCondition = (values[0] & 0xff);
-        mValueNone = (values[1] & 0xff);
-        mValueTimeInterval = (values[2] & 0xff) | ((values[3] & 0xff) << 8) | ((values[4] & 0xff) << 16);
-        mValueCount = (values[5] & 0xff) | ((values[6] & 0xff) << 8);
+        if (isConditionIndicatesOrNotifiedIUnconditionallyAfterASettableTime() || isConditionNotIndicatedOrNotifiedMoreOftenThanASettableTime()) {
+            mValueNone = 0;
+            mValueTimeInterval = BLEUtils.createUInt24(values, 1);
+            mValueCount = 0;
+        } else if (isConditionChangedMoreOfthenThan()) {
+            mValueNone = 0;
+            mValueTimeInterval = 0;
+            mValueCount = BLEUtils.createUInt16(values, 1);
+        } else {
+            mValueNone = (values[1] & 0xff);
+            mValueTimeInterval = 0;
+            mValueCount = 0;
+        }
     }
 
     /**
@@ -141,15 +153,24 @@ public class TimeTriggerSetting implements ByteArrayInterface {
     @NonNull
     @Override
     public byte[] getBytes() {
+        int length = 0;
         byte[] data = new byte[7];
         ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
         byteBuffer.put((byte) mCondition);
-        byteBuffer.put((byte) mValueNone);
-        byteBuffer.put((byte) mValueTimeInterval);
-        byteBuffer.put((byte) (mValueTimeInterval >> 8));
-        byteBuffer.put((byte) (mValueTimeInterval >> 16));
-        byteBuffer.putShort((short) mValueCount);
-        return data;
+        length++;
+        if (isConditionIndicatesOrNotifiedIUnconditionallyAfterASettableTime() || isConditionNotIndicatedOrNotifiedMoreOftenThanASettableTime()) {
+            byteBuffer.put((byte) mValueTimeInterval);
+            byteBuffer.put((byte) (mValueTimeInterval >> 8));
+            byteBuffer.put((byte) (mValueTimeInterval >> 16));
+            length += 3;
+        } else if (isConditionChangedMoreOfthenThan()) {
+            byteBuffer.putShort((short) mValueCount);
+            length += 2;
+        } else {
+            byteBuffer.put((byte) mValueNone);
+            length++;
+        }
+        return Arrays.copyOfRange(data, 0, length);
     }
 
 }

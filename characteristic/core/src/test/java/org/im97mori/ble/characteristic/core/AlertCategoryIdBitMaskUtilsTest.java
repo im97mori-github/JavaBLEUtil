@@ -18,6 +18,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     }
 
     @Test
+    public void test_isCategoryIdBitMask0SimpleAlertNotSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0SimpleAlertNotSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED));
+    }
+
+    @Test
     public void test_isCategoryIdBitMask0SimpleAlertSupported001() {
         assertFalse(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0SimpleAlertSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_NOT_SUPPORTED));
     }
@@ -25,6 +38,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     @Test
     public void test_isCategoryIdBitMask0SimpleAlertSupported002() {
         assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0SimpleAlertSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_SUPPORTED));
+    }
+
+    @Test
+    public void test_isCategoryIdBitMask0SimpleAlertSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0SimpleAlertSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_NOT_SUPPORTED));
     }
 
     @Test
@@ -38,6 +64,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     }
 
     @Test
+    public void test_isCategoryIdBitMask0EmailNotSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0EmailNotSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED));
+    }
+
+    @Test
     public void test_isCategoryIdBitMask0EmailSupported001() {
         assertFalse(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0EmailSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_NOT_SUPPORTED));
     }
@@ -45,6 +84,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     @Test
     public void test_isCategoryIdBitMask0EmailSupported002() {
         assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0EmailSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_SUPPORTED));
+    }
+
+    @Test
+    public void test_isCategoryIdBitMask0EmailSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0EmailSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_NOT_SUPPORTED));
     }
 
     @Test
@@ -58,6 +110,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     }
 
     @Test
+    public void test_isCategoryIdBitMask0NewsNotSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0NewsNotSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED));
+    }
+
+    @Test
     public void test_isCategoryIdBitMask0NewsSupported001() {
         assertFalse(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0NewsSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_NOT_SUPPORTED));
     }
@@ -65,6 +130,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     @Test
     public void test_isCategoryIdBitMask0NewsSupported002() {
         assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0NewsSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_SUPPORTED));
+    }
+
+    @Test
+    public void test_isCategoryIdBitMask0NewsSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0NewsSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_NOT_SUPPORTED));
     }
 
     @Test
@@ -78,6 +156,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     }
 
     @Test
+    public void test_isCategoryIdBitMask0CallNotSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0CallNotSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED));
+    }
+
+    @Test
     public void test_isCategoryIdBitMask0CallSupported001() {
         assertFalse(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0CallSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_NOT_SUPPORTED));
     }
@@ -85,6 +176,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     @Test
     public void test_isCategoryIdBitMask0CallSupported002() {
         assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0CallSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_SUPPORTED));
+    }
+
+    @Test
+    public void test_isCategoryIdBitMask0CallSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0CallSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_NOT_SUPPORTED));
     }
 
     @Test
@@ -98,6 +202,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     }
 
     @Test
+    public void test_isCategoryIdBitMask0MissedCallNotSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0MissedCallNotSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED));
+    }
+
+    @Test
     public void test_isCategoryIdBitMask0MissedCallSupported001() {
         assertFalse(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0MissedCallSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_NOT_SUPPORTED));
     }
@@ -105,6 +222,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     @Test
     public void test_isCategoryIdBitMask0MissedCallSupported002() {
         assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0MissedCallSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_SUPPORTED));
+    }
+
+    @Test
+    public void test_isCategoryIdBitMask0MissedCallSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0MissedCallSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_NOT_SUPPORTED));
     }
 
     @Test
@@ -118,6 +248,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     }
 
     @Test
+    public void test_isCategoryIdBitMask0SmsMmsNotSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0SmsMmsNotSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED));
+    }
+
+    @Test
     public void test_isCategoryIdBitMask0SmsMmsSupported001() {
         assertFalse(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0SmsMmsSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_NOT_SUPPORTED));
     }
@@ -125,6 +268,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     @Test
     public void test_isCategoryIdBitMask0SmsMmsSupported002() {
         assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0SmsMmsSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED));
+    }
+
+    @Test
+    public void test_isCategoryIdBitMask0SmsMmsSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0SmsMmsSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_NOT_SUPPORTED));
     }
 
     @Test
@@ -138,6 +294,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     }
 
     @Test
+    public void test_isCategoryIdBitMask0VoiceMailNotSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0VoiceMailNotSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED));
+    }
+
+    @Test
     public void test_isCategoryIdBitMask0VoiceMailSupported001() {
         assertFalse(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0VoiceMailSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_NOT_SUPPORTED));
     }
@@ -145,6 +314,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     @Test
     public void test_isCategoryIdBitMask0VoiceMailSupported002() {
         assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0VoiceMailSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED));
+    }
+
+    @Test
+    public void test_isCategoryIdBitMask0VoiceMailSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0VoiceMailSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_NOT_SUPPORTED));
     }
 
     @Test
@@ -158,6 +340,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     }
 
     @Test
+    public void test_isCategoryIdBitMask0ScheduleNotSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0ScheduleNotSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_NOT_SUPPORTED));
+    }
+
+    @Test
     public void test_isCategoryIdBitMask0ScheduleSupported001() {
         assertFalse(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0ScheduleSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_NOT_SUPPORTED));
     }
@@ -165,6 +360,19 @@ public class AlertCategoryIdBitMaskUtilsTest {
     @Test
     public void test_isCategoryIdBitMask0ScheduleSupported002() {
         assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0ScheduleSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED));
+    }
+
+    @Test
+    public void test_isCategoryIdBitMask0ScheduleSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask0ScheduleSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SIMPLE_ALERT_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_EMAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_NEWS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_MISSED_CALL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SMS_MMS_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED));
     }
 
     @Test
@@ -178,6 +386,13 @@ public class AlertCategoryIdBitMaskUtilsTest {
     }
 
     @Test
+    public void test_isCategoryIdBitMask1HighPrioritizedAlertNotSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask1HighPrioritizedAlertNotSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_HIGH_PRIORITIZED_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_SUPPORTED));
+    }
+
+    @Test
     public void test_isCategoryIdBitMask1HighPrioritizedAlertSupported001() {
         assertFalse(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask1HighPrioritizedAlertSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_HIGH_PRIORITIZED_NOT_SUPPORTED));
     }
@@ -185,6 +400,13 @@ public class AlertCategoryIdBitMaskUtilsTest {
     @Test
     public void test_isCategoryIdBitMask1HighPrioritizedAlertSupported002() {
         assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask1HighPrioritizedAlertSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_HIGH_PRIORITIZED_SUPPORTED));
+    }
+
+    @Test
+    public void test_isCategoryIdBitMask1HighPrioritizedAlertSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask1HighPrioritizedAlertSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_HIGH_PRIORITIZED_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_NOT_SUPPORTED));
     }
 
     @Test
@@ -198,6 +420,13 @@ public class AlertCategoryIdBitMaskUtilsTest {
     }
 
     @Test
+    public void test_isCategoryIdBitMask1InstantMessageNotSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask1InstantMessageNotSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_HIGH_PRIORITIZED_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_NOT_SUPPORTED));
+    }
+
+    @Test
     public void test_isCategoryIdBitMask1InstantMessageAlertSupported001() {
         assertFalse(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask1InstantMessageAlertSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_NOT_SUPPORTED));
     }
@@ -205,6 +434,13 @@ public class AlertCategoryIdBitMaskUtilsTest {
     @Test
     public void test_isCategoryIdBitMask1InstantMessageAlertSupported002() {
         assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask1InstantMessageAlertSupported(AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_SUPPORTED));
+    }
+
+    @Test
+    public void test_isCategoryIdBitMask1InstantMessageAlertSupported003() {
+        assertTrue(AlertCategoryIdBitMaskUtils.isCategoryIdBitMask1InstantMessageAlertSupported(
+                AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_HIGH_PRIORITIZED_NOT_SUPPORTED
+                        | AlertCategoryIdBitMaskUtils.CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_SUPPORTED));
     }
 
 }

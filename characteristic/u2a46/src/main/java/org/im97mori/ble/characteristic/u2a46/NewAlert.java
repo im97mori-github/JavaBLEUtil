@@ -50,7 +50,7 @@ public class NewAlert implements ByteArrayInterface {
      * @param numberOfNewAlert      Number of New Alert
      * @param textStringInformation Text String Information
      */
-    public NewAlert(int categoryId, int numberOfNewAlert, @NonNull String textStringInformation) {
+    public NewAlert(int categoryId, int numberOfNewAlert, @Nullable String textStringInformation) {
         mCategoryId = categoryId;
         mNumberOfNewAlert = numberOfNewAlert;
         mTextStringInformation = textStringInformation;

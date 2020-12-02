@@ -89,7 +89,7 @@ public class AlertCategoryIdBitMaskUtils {
      * @see #CATEGORY_ID_BIT_MASK_0_SMS_MMS_NOT_SUPPORTED
      * @see #CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED
      */
-    public static final int CATEGORY_ID_BIT_MASK_0_SMS_MMS_MASK = 0b00010000;
+    public static final int CATEGORY_ID_BIT_MASK_0_SMS_MMS_MASK = 0b00100000;
 
     /**
      * 0: SMS/MMS Not Supported
@@ -99,13 +99,13 @@ public class AlertCategoryIdBitMaskUtils {
     /**
      * 1: SMS/MMS Supported
      */
-    public static final int CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED = 0b00010000;
+    public static final int CATEGORY_ID_BIT_MASK_0_SMS_MMS_SUPPORTED = 0b00100000;
 
     /**
      * @see #CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_NOT_SUPPORTED
      * @see #CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED
      */
-    public static final int CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_MASK = 0b00100000;
+    public static final int CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_MASK = 0b01000000;
 
     /**
      * 0: Voice Mail Not Supported
@@ -115,13 +115,13 @@ public class AlertCategoryIdBitMaskUtils {
     /**
      * 1: Voice Mail Supported
      */
-    public static final int CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED = 0b00100000;
+    public static final int CATEGORY_ID_BIT_MASK_0_VOICE_MAIL_SUPPORTED = 0b01000000;
 
     /**
      * @see #CATEGORY_ID_BIT_MASK_0_SCHEDULE_NOT_SUPPORTED
      * @see #CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED
      */
-    public static final int CATEGORY_ID_BIT_MASK_0_SCHEDULE_MASK = 0b01000000;
+    public static final int CATEGORY_ID_BIT_MASK_0_SCHEDULE_MASK = 0b10000000;
 
     /**
      * 0: Schedule Not Supported
@@ -131,7 +131,7 @@ public class AlertCategoryIdBitMaskUtils {
     /**
      * 1: Schedule Supported
      */
-    public static final int CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED = 0b01000000;
+    public static final int CATEGORY_ID_BIT_MASK_0_SCHEDULE_SUPPORTED = 0b10000000;
 
     /**
      * @see #CATEGORY_ID_BIT_MASK_1_HIGH_PRIORITIZED_NOT_SUPPORTED
@@ -153,7 +153,7 @@ public class AlertCategoryIdBitMaskUtils {
      * @see #CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_NOT_SUPPORTED
      * @see #CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_SUPPORTED
      */
-    public static final int CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_MASK = 0b00000001;
+    public static final int CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_MASK = 0b00000010;
 
     /**
      * 0: Instant Message Not Supported
@@ -163,7 +163,7 @@ public class AlertCategoryIdBitMaskUtils {
     /**
      * 1: Instant Message Supported
      */
-    public static final int CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_SUPPORTED = 0b00000001;
+    public static final int CATEGORY_ID_BIT_MASK_1_INSTANT_MESSAGE_SUPPORTED = 0b00000010;
 
     /**
      * @param categoryIdBitMask0 Category ID Bit Mask 0

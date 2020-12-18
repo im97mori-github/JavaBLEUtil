@@ -891,10 +891,12 @@ public class CyclingPowerControlPointTest {
 
     private static final byte[] data_02801;
     static {
-        byte[] data = new byte[3];
+        byte[] data = new byte[5];
         data[ 0] = CyclingPowerControlPoint.OP_CODES_RESPONSE_CODE;
         data[ 1] = CyclingPowerControlPoint.OP_CODES_START_OFFSET_COMPENSATION;
         data[ 2] = CyclingPowerControlPoint.RESPONSE_VALUE_SUCCESS;
+        data[ 3] = 0x01;
+        data[ 4] = 0x02;
         data_02801 = data;
     }
 
@@ -4328,7 +4330,7 @@ public class CyclingPowerControlPointTest {
         assertFalse(result1.isResponseValueOpCodeNotSupported());
         assertFalse(result1.isResponseValueInvalidParameter());
         assertFalse(result1.isResponseValueOperationFailed());
-        assertArrayEquals(Arrays.copyOfRange(data, 3, 3), result1.getResponseParameter());
+        assertArrayEquals(Arrays.copyOfRange(data, 3, 5), result1.getResponseParameter());
     }
 
     @Test

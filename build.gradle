@@ -529,8 +529,8 @@ ext.characteristicU2a5d = [
 
 ext.characteristicU2a63 = [
         artifactId         : 'ble-characteristic-u2a63'
-        , versionName      : '0.2.4'
-        , uploadVersionName: '0.2.4'
+        , versionName      : '0.2.5'
+        , uploadVersionName: '0.2.5'
 ]
 
 ext.characteristicU2a64 = [
@@ -547,8 +547,8 @@ ext.characteristicU2a65 = [
 
 ext.characteristicU2a66 = [
         artifactId         : 'ble-characteristic-u2a66'
-        , versionName      : '0.2.4'
-        , uploadVersionName: '0.2.4'
+        , versionName      : '0.2.5'
+        , uploadVersionName: '0.2.5'
 ]
 
 ext.characteristicU2a67 = [
@@ -1159,13 +1159,13 @@ ext.characteristicU2b37 = [
 
 ext.characteristic = [
         artifactId         : 'ble-characteristic'
-        , versionName      : '0.3.7'
-        , uploadVersionName: '0.3.7'
+        , versionName      : '0.3.8'
+        , uploadVersionName: '0.3.8'
 ]
 
 ext.bleJava = [
         artifactId         : 'ble-java'
-        , versionName      : '0.2.7'
+        , versionName      : '0.2.8'
 ]
 
 ext.apiCore = "${groupId}:${core.artifactId}:${core.versionName}"

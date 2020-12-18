@@ -455,6 +455,12 @@ public class CyclingPowerControlPoint implements ByteArrayInterface {
                 } else {
                     mResponseParameter = new byte[0];
                 }
+            } else if (isOpCodesStartOffsetCompensation(mRequestOpCode)) {
+                if (isResponseValueSuccess()) {
+                    mResponseParameter = Arrays.copyOfRange(values, 3, 5);
+                } else {
+                    mResponseParameter = new byte[0];
+                }
             } else if (isOpCodesRequestSamplingRate(mRequestOpCode)) {
                 if (isResponseValueSuccess()) {
                     mResponseParameter = Arrays.copyOfRange(values, 3, 4);

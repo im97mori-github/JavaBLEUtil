@@ -3215,12 +3215,12 @@ public class BLEConstants {
         /**
          * RSC Measurement (Characteristic UUID: 0x2A53)
          */
-        public static final UUID R_S_C_MEASUREMENT_CHARACTERISTIC = UUID.fromString("00002A53-0000-1000-8000-00805f9b34fb");
+        public static final UUID RSC_MEASUREMENT_CHARACTERISTIC = UUID.fromString("00002A53-0000-1000-8000-00805f9b34fb");
 
         /**
          * RSC Feature (Characteristic UUID: 0x2A54)
          */
-        public static final UUID R_S_C_FEATURE_CHARACTERISTIC = UUID.fromString("00002A54-0000-1000-8000-00805f9b34fb");
+        public static final UUID RSC_FEATURE_CHARACTERISTIC = UUID.fromString("00002A54-0000-1000-8000-00805f9b34fb");
 
         // Fitness Machine (Service UUID: 0x1826)
 
@@ -3449,12 +3449,12 @@ public class BLEConstants {
         /**
          * RC Feature (Characteristic UUID: 0x2B1D)
          */
-        public static final UUID R_C_FEATURE_CHARACTERISTIC = UUID.fromString("00002B1D-0000-1000-8000-00805f9b34fb");
+        public static final UUID RC_FEATURE_CHARACTERISTIC = UUID.fromString("00002B1D-0000-1000-8000-00805f9b34fb");
 
         /**
          * RC Settings (Characteristic UUID: 0x2B1E)
          */
-        public static final UUID R_C_SETTINGS_CHARACTERISTIC = UUID.fromString("00002B1E-0000-1000-8000-00805f9b34fb");
+        public static final UUID RC_SETTINGS_CHARACTERISTIC = UUID.fromString("00002B1E-0000-1000-8000-00805f9b34fb");
 
         /**
          * Reconnection Configuration Control Point (Characteristic UUID: 0x2B1F)

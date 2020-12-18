@@ -445,8 +445,9 @@ public class CyclingPowerMeasurement implements ByteArrayInterface {
      * @param extremeTorqueMagnitudesMinimumTorqueMagnitude Extreme Torque Magnitudes- Minimum Torque Magnitude
      * @param extremeAnglesMaximumAngle                     Extreme Angles - Maximum Angle
      * @param extremeAnglesMinimumAngle                     Extreme Angles - Minimum Angle
-     * @param topDeadSpotAngle                              Top Dead Spot Angle Bottom Dead Spot Angle
-     * @param bottomDeadSpotAngle                           Accumulated Energy
+     * @param topDeadSpotAngle                              Top Dead Spot Angle
+     * @param bottomDeadSpotAngle                           Bottom Dead Spot Angle
+     * @param accumulatedEnergy                             Accumulated Energy
      */
     public CyclingPowerMeasurement(@NonNull byte[] flags, int instantaneousPower, int pedalPowerBalance, int accumulatedTorque, long wheelRevolutionDataCumulativeWheelRevolutions, int wheelRevolutionDataLastWheelEventTime, int crankRevolutionDataCumulativeCrankRevolutions, int crankRevolutionDataLastCrankEventTime, int extremeForceMagnitudesMaximumForceMagnitude, int extremeForceMagnitudesMinimumForceMagnitude, int extremeTorqueMagnitudesMaximumTorqueMagnitude, int extremeTorqueMagnitudesMinimumTorqueMagnitude, int extremeAnglesMaximumAngle, int extremeAnglesMinimumAngle, int topDeadSpotAngle, int bottomDeadSpotAngle, int accumulatedEnergy) {
         mFlags = flags;

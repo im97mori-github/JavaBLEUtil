@@ -208,13 +208,13 @@ public class FitnessMachineStatus implements ByteArrayInterface {
     public FitnessMachineStatus(@NonNull byte[] values) {
         mOpCode = (values[0] & 0xff);
         if (isOpCodeReset()) {
-            mParameter = Arrays.copyOfRange(values, 1, 1);
+            mParameter = new byte[0];
         } else if (isOpCodeFitnessMachineStoppedOrPausedByTheUser()) {
             mParameter = Arrays.copyOfRange(values, 1, 2);
         } else if (isOpCodeFitnessMachineStoppedBySafetyKey()) {
-            mParameter = Arrays.copyOfRange(values, 1, 1);
+            mParameter = new byte[0];
         } else if (isOpCodeFitnessMachineStartedOrResumedByTheUser()) {
-            mParameter = Arrays.copyOfRange(values, 1, 1);
+            mParameter = new byte[0];
         } else if (isOpCodeTargetSpeedChanged()) {
             mParameter = Arrays.copyOfRange(values, 1, 3);
         } else if (isOpCodeTargetInclineChanged()) {
@@ -250,9 +250,9 @@ public class FitnessMachineStatus implements ByteArrayInterface {
         } else if (isOpCodeTargetedCadenceChanged()) {
             mParameter = Arrays.copyOfRange(values, 1, 3);
         } else if (isOpCodeControlPermissionLost()) {
-            mParameter = Arrays.copyOfRange(values, 1, 1);
+            mParameter = new byte[0];
         } else {
-            mParameter = Arrays.copyOfRange(values, 1, 1);
+            mParameter = new byte[0];
         }
     }
 

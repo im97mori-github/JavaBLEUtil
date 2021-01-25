@@ -257,12 +257,12 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     public FitnessMachineControlPoint(@NonNull byte[] values) {
         mOpCode = (values[0] & 0xff);
         if (isOpCodeRequestControl(mOpCode)) {
-            mParameter = Arrays.copyOfRange(values, 1, 1);
+            mParameter = new byte[0];
             mRequestOpCode = 0;
             mResultCode = 0;
             mResponseParameter = new byte[0];
         } else if (isOpCodeReset(mOpCode)) {
-            mParameter = Arrays.copyOfRange(values, 1, 1);
+            mParameter = new byte[0];
             mRequestOpCode = 0;
             mResultCode = 0;
             mResponseParameter = new byte[0];
@@ -292,7 +292,7 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
             mResultCode = 0;
             mResponseParameter = new byte[0];
         } else if (isOpCodeStartOrResume(mOpCode)) {
-            mParameter = Arrays.copyOfRange(values, 1, 1);
+            mParameter = new byte[0];
             mRequestOpCode = 0;
             mResultCode = 0;
             mResponseParameter = new byte[0];

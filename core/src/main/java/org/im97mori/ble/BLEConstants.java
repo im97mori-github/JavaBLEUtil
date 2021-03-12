@@ -2727,9 +2727,9 @@ public class BLEConstants {
         public static final UUID CLIENT_SUPPORTED_FEATURES_CHARACTERISTIC = UUID.fromString("00002B29-0000-1000-8000-00805f9b34fb");
 
         /**
-         * Database Hash (Characteristic UUID: 0x2B29)
+         * Database Hash (Characteristic UUID: 0x2B2A)
          */
-        public static final UUID DATABASE_HASH_CHARACTERISTIC = UUID.fromString("00002B29-0000-1000-8000-00805f9b34fb");
+        public static final UUID DATABASE_HASH_CHARACTERISTIC = UUID.fromString("00002B2A-0000-1000-8000-00805f9b34fb");
 
         // Device Information (Service UUID: 0x180A)
 

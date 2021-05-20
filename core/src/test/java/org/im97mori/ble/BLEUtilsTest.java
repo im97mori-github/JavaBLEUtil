@@ -1101,7 +1101,7 @@ public class BLEUtilsTest {
     }
 
     @Test
-    public void test_createBigInteger001() {
+    public void test_createBigInteger_001() {
         //@formatter:off
         byte[] data = new byte[8];
         data[ 0] = 0x01;
@@ -1129,7 +1129,7 @@ public class BLEUtilsTest {
     }
 
     @Test
-    public void test_createBigInteger002() {
+    public void test_createBigInteger_002() {
         //@formatter:off
         byte[] data = new byte[8];
         data[ 0] = (byte) 0xff;
@@ -1157,7 +1157,7 @@ public class BLEUtilsTest {
     }
 
     @Test
-    public void test_createBigInteger003() {
+    public void test_createBigInteger_003() {
         //@formatter:off
         byte[] data = new byte[9];
         data[ 0] = 0x01;
@@ -1186,7 +1186,7 @@ public class BLEUtilsTest {
     }
 
     @Test
-    public void test_createBigInteger004() {
+    public void test_createBigInteger_004() {
         //@formatter:off
         byte[] data = new byte[4];
         data[ 0] = 0x01;
@@ -1206,7 +1206,7 @@ public class BLEUtilsTest {
     }
 
     @Test
-    public void test_createLittleEndianByteArrayFromBigInteger001() {
+    public void test_createLittleEndianByteArrayFromBigInteger_001() {
         //@formatter:off
         byte[] data = new byte[8];
         data[ 0] = 0x01;
@@ -1234,7 +1234,7 @@ public class BLEUtilsTest {
     }
 
     @Test
-    public void test_createLittleEndianByteArrayFromBigInteger002() {
+    public void test_createLittleEndianByteArrayFromBigInteger_002() {
         //@formatter:off
         byte[] data = new byte[8];
         data[ 0] = (byte) 0xff;
@@ -1262,7 +1262,7 @@ public class BLEUtilsTest {
     }
 
     @Test
-    public void test_createLittleEndianByteArrayFromBigInteger003() {
+    public void test_createLittleEndianByteArrayFromBigInteger_003() {
         //@formatter:off
         byte[] data = new byte[4];
         data[ 0] = 0x01;
@@ -1279,5 +1279,67 @@ public class BLEUtilsTest {
 
         byte[] result1 = BLEUtils.createLittleEndianByteArrayFromBigInteger(new BigInteger(reverse), 4);
         assertArrayEquals(data, result1);
+    }
+
+    @Test
+    public void test_createCrc_001() {
+        //@formatter:off
+        byte[] data = new byte[10];
+        data[ 0] = 0x3e;
+        data[ 1] = 0x01;
+        data[ 2] = 0x02;
+        data[ 3] = 0x03;
+        data[ 4] = 0x04;
+        data[ 5] = 0x05;
+        data[ 6] = 0x06;
+        data[ 7] = 0x07;
+        data[ 8] = 0x08;
+        data[ 9] = 0x09;
+        //@formatter:on
+
+        int result1 = BLEUtils.createCrc(data, 0, data.length);
+        assertEquals(0x2F01, result1);
+    }
+
+    @Test
+    public void test_createCrc_002() {
+        //@formatter:off
+        byte[] data = new byte[11];
+        data[ 0] = 0x3e;
+        data[ 1] = 0x01;
+        data[ 2] = 0x02;
+        data[ 3] = 0x03;
+        data[ 4] = 0x04;
+        data[ 5] = 0x05;
+        data[ 6] = 0x06;
+        data[ 7] = 0x07;
+        data[ 8] = 0x08;
+        data[ 9] = 0x09;
+        data[10] = 0x0a;
+        //@formatter:on
+
+        int result1 = BLEUtils.createCrc(data, 0, data.length - 1);
+        assertEquals(0x2F01, result1);
+    }
+
+    @Test
+    public void test_createCrc_042() {
+        //@formatter:off
+        byte[] data = new byte[11];
+        data[ 0] = 0x0a;
+        data[ 1] = 0x3e;
+        data[ 2] = 0x01;
+        data[ 3] = 0x02;
+        data[ 4] = 0x03;
+        data[ 5] = 0x04;
+        data[ 6] = 0x05;
+        data[ 7] = 0x06;
+        data[ 8] = 0x07;
+        data[ 9] = 0x08;
+        data[10] = 0x09;
+        //@formatter:on
+
+        int result1 = BLEUtils.createCrc(data, 1, data.length - 1);
+        assertEquals(0x2F01, result1);
     }
 }

@@ -32,7 +32,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -61,7 +61,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = (byte) 0xff;
         data[ 1] = (byte) 0xff;
@@ -90,7 +90,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -119,7 +119,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -148,7 +148,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -177,7 +177,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -206,7 +206,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -235,7 +235,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -264,7 +264,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -293,7 +293,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -322,7 +322,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -351,7 +351,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -380,7 +380,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -409,7 +409,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -438,7 +438,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -467,7 +467,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -496,7 +496,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -525,7 +525,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -554,7 +554,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -583,7 +583,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -612,7 +612,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -641,7 +641,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -670,7 +670,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -699,7 +699,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -728,7 +728,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -757,7 +757,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -786,7 +786,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -815,7 +815,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -844,7 +844,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -873,7 +873,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_TRUE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -902,7 +902,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -931,7 +931,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_TRUE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -960,7 +960,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -989,7 +989,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_TRUE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -1018,7 +1018,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -1047,7 +1047,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_TRUE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_TRUE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -1076,7 +1076,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -1105,7 +1105,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_TRUE;
         data[ 0] = 0x01;
         data[ 1] = 0x02;
@@ -1134,7 +1134,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE
                 | (RCFeature.RC_FEATURES_FEATURE_EXTENSION_BIT << 16);
         data[ 0] = 0x01;
@@ -1165,7 +1165,7 @@ public class RCFeatureTest {
                 | RCFeature.RC_FEATURES_ADVERTISEMENT_CONFIGURATION_4_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_UPGRADE_TO_LESC_ONLY_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_NEXT_PAIRING_OOB_SUPPORTED_FALSE
-                | RCFeature.RC_FEATURES_USE_OF_WHILE_LIST_SUPPORTED_FALSE
+                | RCFeature.RC_FEATURES_USE_OF_WHITE_LIST_SUPPORTED_FALSE
                 | RCFeature.RC_FEATURES_LIMITED_ACCESS_SUPPORTED_FALSE
                 | (RCFeature.RC_FEATURES_FEATURE_EXTENSION_BIT << 16)
                 | (RCFeature.RC_FEATURES_FEATURE_EXTENSION_BIT << 24);

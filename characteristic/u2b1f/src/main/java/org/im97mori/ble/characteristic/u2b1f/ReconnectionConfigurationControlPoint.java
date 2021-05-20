@@ -365,6 +365,11 @@ public class ReconnectionConfigurationControlPoint implements ByteArrayInterface
     public static final int FIELD_NO_7_FAILED = 0b10000000;
 
     /**
+     * Parameter not supported
+     */
+    public static final int PARAMETER_NOT_SUPPORTED = 0xFFFF;
+
+    /**
      * Opcode
      */
     private final int mOpcode;
@@ -794,6 +799,13 @@ public class ReconnectionConfigurationControlPoint implements ByteArrayInterface
     }
 
     /**
+     * @return {@code true}:Reconnection timeout not supported, {@code false}:Reconnection timeout supported
+     */
+    public boolean isReconnectionTimeoutNotSupported() {
+        return isOpcodeCommunicationParameterResponse(mOpcode) && PARAMETER_NOT_SUPPORTED == getReconnectionTimeout();
+    }
+
+    /**
      * @return Minimum Connection Interval
      */
     public int getMinimumConnectionInterval() {
@@ -822,6 +834,13 @@ public class ReconnectionConfigurationControlPoint implements ByteArrayInterface
      */
     public boolean isMinimumConnectionIntervalNotBeChanged() {
         return isOpcodeProposeSettings(mOpcode) && PARAMETER_NOT_BE_CHANGED == getMinimumConnectionInterval();
+    }
+
+    /**
+     * @return {@code true}:Minimum Connection Interval not supported, {@code false}:Minimum Connection Interval supported
+     */
+    public boolean isMinimumConnectionIntervalNotSupported() {
+        return isOpcodeCommunicationParameterResponse(mOpcode) && PARAMETER_NOT_SUPPORTED == getMinimumConnectionInterval();
     }
 
     /**
@@ -856,6 +875,13 @@ public class ReconnectionConfigurationControlPoint implements ByteArrayInterface
     }
 
     /**
+     * @return {@code true}:Maximum Connection Interval not supported, {@code false}:Maximum Connection Interval supported
+     */
+    public boolean isMaximumConnectionIntervalNotSupported() {
+        return isOpcodeCommunicationParameterResponse(mOpcode) && PARAMETER_NOT_SUPPORTED == getMaximumConnectionInterval();
+    }
+
+    /**
      * @return Slave Latency
      */
     public int getSlaveLatency() {
@@ -877,6 +903,13 @@ public class ReconnectionConfigurationControlPoint implements ByteArrayInterface
      */
     public boolean isSlaveLatencyNotBeChanged() {
         return isOpcodeProposeSettings(mOpcode) && PARAMETER_NOT_BE_CHANGED == getSlaveLatency();
+    }
+
+    /**
+     * @return {@code true}:Slave Latency not supported, {@code false}:Slave Latency supported
+     */
+    public boolean isSlaveLatencyNotSupported() {
+        return isOpcodeCommunicationParameterResponse(mOpcode) && PARAMETER_NOT_SUPPORTED == getSlaveLatency();
     }
 
     /**
@@ -911,6 +944,13 @@ public class ReconnectionConfigurationControlPoint implements ByteArrayInterface
     }
 
     /**
+     * @return {@code true}:Supervision Timeout not supported, {@code false}:Supervision Timeout supported
+     */
+    public boolean isSupervisionTimeoutMultiplierNotSupported() {
+        return isOpcodeCommunicationParameterResponse(mOpcode) && PARAMETER_NOT_SUPPORTED == getSupervisionTimeoutMultiplier();
+    }
+
+    /**
      * @return Advertisement Interval
      */
     public int getAdvertisementInterval() {
@@ -942,6 +982,13 @@ public class ReconnectionConfigurationControlPoint implements ByteArrayInterface
     }
 
     /**
+     * @return {@code true}:Advertisement Interval not supported, {@code false}:Advertisement Interval supported
+     */
+    public boolean isAdvertisementIntervalNotSupported() {
+        return isOpcodeCommunicationParameterResponse(mOpcode) && PARAMETER_NOT_SUPPORTED == getAdvertisementInterval();
+    }
+
+    /**
      * @return Advertisement Count
      */
     public int getAdvertisementCount() {
@@ -966,6 +1013,13 @@ public class ReconnectionConfigurationControlPoint implements ByteArrayInterface
     }
 
     /**
+     * @return {@code true}:Advertisement Count not supported, {@code false}:Advertisement Count supported
+     */
+    public boolean isAdvertisementCountNotSupported() {
+        return isOpcodeCommunicationParameterResponse(mOpcode) && PARAMETER_NOT_SUPPORTED == getAdvertisementCount();
+    }
+
+    /**
      * @return Advertisement Repetition Time
      */
     public int getAdvertisementRepetitionTime() {
@@ -987,6 +1041,13 @@ public class ReconnectionConfigurationControlPoint implements ByteArrayInterface
      */
     public boolean isAdvertisementRepetitionTimeNotBeChanged() {
         return isOpcodeProposeSettings(mOpcode) && PARAMETER_NOT_BE_CHANGED == getAdvertisementRepetitionTime();
+    }
+
+    /**
+     * @return {@code true}:Advertisement Repetition Time not supported, {@code false}:Advertisement Repetition Time supported
+     */
+    public boolean isAdvertisementRepetitionNotSupported() {
+        return isOpcodeCommunicationParameterResponse(mOpcode) && PARAMETER_NOT_SUPPORTED == getAdvertisementRepetitionTime();
     }
 
     /**

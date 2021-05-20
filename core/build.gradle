@@ -3,6 +3,10 @@ def GROUP_ID = groupId
 def ARTIFACT_ID = target[artifactId]
 def VERSION_NAME = target[uploadVersionName]
 
+dependencies {
+    api "${crcLibrary}"
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {

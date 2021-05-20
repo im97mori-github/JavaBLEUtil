@@ -6,6 +6,8 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Arrays;
 
+import com.github.snksoft.crc.CRC;
+
 import androidx.annotation.NonNull;
 
 /**
@@ -541,6 +543,18 @@ public class BLEUtils {
             data[i] = original[original.length - i - 1];
         }
         return data;
+    }
+
+    /**
+     * Create CRC
+     * 
+     * @param data   original data array
+     * @param offset data offset
+     * @param length data length
+     * @return
+     */
+    public static int createCrc(@NonNull byte[] data, int offset, int length) {
+        return (int) CRC.calculateCRC(BLEConstants.CRC_PARAMETERS, Arrays.copyOfRange(data, offset, offset + length));
     }
 
     /**

@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import com.github.snksoft.crc.CRC.Parameters;
+
 /**
  * BLE Constants
  */
@@ -18,6 +20,11 @@ public class BLEConstants {
      * </p>
      */
     public static final UUID BASE_UUID = UUID.fromString("00000000-0000-1000-8000-00805F9B34FB");
+
+    /**
+     * CRC Parameters
+     */
+    public static final Parameters CRC_PARAMETERS = new Parameters(16, 0x1021, 0x00FFFF, true, true, 0x0);
 
     /**
      * <p>

@@ -9,7 +9,7 @@
 
 rootProject.name = 'JavaBLEUtil'
 
-include 'core'
+include ':core'
 include ':advertising'
 include ':descriptor:u2900'
 include ':descriptor:u2901'

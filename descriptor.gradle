@@ -1,0 +1,81 @@
+ext.descriptorU2900 = [
+        artifactId         : 'ble-descriptor-u2900'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU2901 = [
+        artifactId         : 'ble-descriptor-u2901'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU2902 = [
+        artifactId         : 'ble-descriptor-u2902'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU2903 = [
+        artifactId         : 'ble-descriptor-u2903'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU2904 = [
+        artifactId         : 'ble-descriptor-u2904'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU2905 = [
+        artifactId         : 'ble-descriptor-u2905'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU2906 = [
+        artifactId         : 'ble-descriptor-u2906'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU2907 = [
+        artifactId         : 'ble-descriptor-u2907'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU2908 = [
+        artifactId         : 'ble-descriptor-u2908'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU2909 = [
+        artifactId         : 'ble-descriptor-u2909'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU290a = [
+        artifactId         : 'ble-descriptor-u290a'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU290b = [
+        artifactId         : 'ble-descriptor-u290b'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU290c = [
+        artifactId         : 'ble-descriptor-u290c'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU290d = [
+        artifactId         : 'ble-descriptor-u290d'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+ext.descriptorU290e = [
+        artifactId         : 'ble-descriptor-u290e'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]
+
+ext.descriptor = [
+        artifactId         : 'ble-descriptor'
+        , versionName      : '0.4.0'
+        , uploadVersionName: '0.4.0'
+]

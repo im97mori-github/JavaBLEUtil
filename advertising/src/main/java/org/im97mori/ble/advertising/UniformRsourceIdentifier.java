@@ -1,12 +1,14 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_UNIFORM_RESOURCE_IDENTIFIER;
+import static org.im97mori.ble.constants.DataType.DATA_TYPE_UNIFORM_RESOURCE_IDENTIFIER;
 
 import java.net.URI;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.UUID;
 
-import org.im97mori.ble.BLEConstants;
+import org.im97mori.ble.BLEUtils;
+import org.im97mori.ble.constants.SchemeUUID;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -42,8 +44,9 @@ public class UniformRsourceIdentifier extends AbstractAdvertisingData {
 
         mUriString = new String(data, offset + 2, length - 1);
         int scheme = mUriString.charAt(0) & 0xff;
-        if (BLEConstants.URI_SCHEME_NAME_STRING_MAPPING.containsKey(scheme)) {
-            mUri = URI.create(BLEConstants.URI_SCHEME_NAME_STRING_MAPPING.get(scheme) + mUriString.substring(1));
+        UUID schemeUUID = BLEUtils.convert16to128(scheme);
+        if (SchemeUUID.SCHEME_MAPPING_128.containsKey(schemeUUID)) {
+            mUri = URI.create(SchemeUUID.SCHEME_MAPPING_128.get(schemeUUID) + mUriString.substring(1));
         } else {
             mUri = null;
         }

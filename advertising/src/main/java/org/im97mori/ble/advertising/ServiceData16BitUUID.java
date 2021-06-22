@@ -1,7 +1,7 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.BLEConstants.BASE_UUID;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_SERVICE_DATA_16_BIT_UUID;
+import static org.im97mori.ble.BLEUtils.BASE_UUID;
+import static org.im97mori.ble.constants.DataType.DATA_TYPE_SERVICE_DATA_16_BIT_UUID;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

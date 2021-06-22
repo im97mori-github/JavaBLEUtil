@@ -1,13 +1,13 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.BLEConstants.COMPANY_MAPPING;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_LIST_OF_16_BIT_SERVICE_SOLICITATION_UUIDS;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_MANUFACTURER_SPECIFIC_DATA;
+import static org.im97mori.ble.constants.DataType.DATA_TYPE_MANUFACTURER_SPECIFIC_DATA;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
+import org.im97mori.ble.BLEUtils;
+import org.im97mori.ble.constants.CompanyUUID;
 import org.junit.Test;
 
 @SuppressWarnings("unused")
@@ -203,7 +203,7 @@ public class ManufacturerSpecificDataTest {
         assertEquals(3, result1.getLength());
         assertEquals(DATA_TYPE_MANUFACTURER_SPECIFIC_DATA, result1.getDataType());
         assertEquals(COMPANY_ID, result1.getCompanyIdentifier());
-        assertEquals(COMPANY_MAPPING.get(COMPANY_ID), result1.getCompanyName());
+        assertEquals(CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(COMPANY_ID)), result1.getCompanyName());
         assertEquals(data[0] - 3, result1.getManufacturerSpecificData().length);
         assertArrayEquals(Arrays.copyOfRange(data, 4, data.length), result1.getManufacturerSpecificData());
     }
@@ -216,7 +216,7 @@ public class ManufacturerSpecificDataTest {
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_MANUFACTURER_SPECIFIC_DATA, result1.getDataType());
         assertEquals(COMPANY_ID, result1.getCompanyIdentifier());
-        assertEquals(COMPANY_MAPPING.get(COMPANY_ID), result1.getCompanyName());
+        assertEquals(CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(COMPANY_ID)), result1.getCompanyName());
         assertEquals(data[0] - 3, result1.getManufacturerSpecificData().length);
         assertArrayEquals(Arrays.copyOfRange(data, 4, data.length), result1.getManufacturerSpecificData());
     }
@@ -229,7 +229,7 @@ public class ManufacturerSpecificDataTest {
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_MANUFACTURER_SPECIFIC_DATA, result1.getDataType());
         assertEquals(COMPANY_ID, result1.getCompanyIdentifier());
-        assertEquals(COMPANY_MAPPING.get(COMPANY_ID), result1.getCompanyName());
+        assertEquals(CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(COMPANY_ID)), result1.getCompanyName());
         assertEquals(data[0] - 3, result1.getManufacturerSpecificData().length);
         assertArrayEquals(Arrays.copyOfRange(data, 4, data.length), result1.getManufacturerSpecificData());
     }
@@ -242,7 +242,7 @@ public class ManufacturerSpecificDataTest {
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_MANUFACTURER_SPECIFIC_DATA, result1.getDataType());
         assertEquals(COMPANY_ID, result1.getCompanyIdentifier());
-        assertEquals(COMPANY_MAPPING.get(COMPANY_ID), result1.getCompanyName());
+        assertEquals(CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(COMPANY_ID)), result1.getCompanyName());
         assertEquals(data[0] - 3, result1.getManufacturerSpecificData().length);
         assertArrayEquals(Arrays.copyOfRange(data, 4, data.length), result1.getManufacturerSpecificData());
     }
@@ -255,7 +255,7 @@ public class ManufacturerSpecificDataTest {
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_MANUFACTURER_SPECIFIC_DATA, result1.getDataType());
         assertEquals(COMPANY_ID, result1.getCompanyIdentifier());
-        assertEquals(COMPANY_MAPPING.get(COMPANY_ID), result1.getCompanyName());
+        assertEquals(CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(COMPANY_ID)), result1.getCompanyName());
         assertEquals(data[0] - 3, result1.getManufacturerSpecificData().length);
         assertArrayEquals(Arrays.copyOfRange(data, 4, data.length), result1.getManufacturerSpecificData());
     }
@@ -268,7 +268,7 @@ public class ManufacturerSpecificDataTest {
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_MANUFACTURER_SPECIFIC_DATA, result1.getDataType());
         assertEquals(COMPANY_ID, result1.getCompanyIdentifier());
-        assertEquals(COMPANY_MAPPING.get(COMPANY_ID), result1.getCompanyName());
+        assertEquals(CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(COMPANY_ID)), result1.getCompanyName());
         assertEquals(data[0] - 3, result1.getManufacturerSpecificData().length);
         assertArrayEquals(Arrays.copyOfRange(data, 4, data.length), result1.getManufacturerSpecificData());
     }
@@ -281,7 +281,7 @@ public class ManufacturerSpecificDataTest {
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_MANUFACTURER_SPECIFIC_DATA, result1.getDataType());
         assertEquals(COMPANY_ID, result1.getCompanyIdentifier());
-        assertEquals(COMPANY_MAPPING.get(COMPANY_ID), result1.getCompanyName());
+        assertEquals(CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(COMPANY_ID)), result1.getCompanyName());
         assertEquals(data[0] - 3, result1.getManufacturerSpecificData().length);
         assertArrayEquals(Arrays.copyOfRange(data, 4, data.length), result1.getManufacturerSpecificData());
     }
@@ -294,7 +294,7 @@ public class ManufacturerSpecificDataTest {
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_MANUFACTURER_SPECIFIC_DATA, result1.getDataType());
         assertEquals(COMPANY_ID, result1.getCompanyIdentifier());
-        assertEquals(COMPANY_MAPPING.get(COMPANY_ID), result1.getCompanyName());
+        assertEquals(CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(COMPANY_ID)), result1.getCompanyName());
         assertEquals(data[0] - 3, result1.getManufacturerSpecificData().length);
         assertArrayEquals(Arrays.copyOfRange(data, 4, data.length), result1.getManufacturerSpecificData());
     }
@@ -307,7 +307,7 @@ public class ManufacturerSpecificDataTest {
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_MANUFACTURER_SPECIFIC_DATA, result1.getDataType());
         assertEquals(COMPANY_ID, result1.getCompanyIdentifier());
-        assertEquals(COMPANY_MAPPING.get(COMPANY_ID), result1.getCompanyName());
+        assertEquals(CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(COMPANY_ID)), result1.getCompanyName());
         assertEquals(data[0] - 3, result1.getManufacturerSpecificData().length);
         assertArrayEquals(Arrays.copyOfRange(data, 4, data.length), result1.getManufacturerSpecificData());
     }
@@ -320,7 +320,7 @@ public class ManufacturerSpecificDataTest {
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_MANUFACTURER_SPECIFIC_DATA, result1.getDataType());
         assertEquals(COMPANY_ID, result1.getCompanyIdentifier());
-        assertEquals(COMPANY_MAPPING.get(COMPANY_ID), result1.getCompanyName());
+        assertEquals(CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(COMPANY_ID)), result1.getCompanyName());
         assertEquals(data[0] - 3, result1.getManufacturerSpecificData().length);
         assertArrayEquals(Arrays.copyOfRange(data, 4, data.length), result1.getManufacturerSpecificData());
     }

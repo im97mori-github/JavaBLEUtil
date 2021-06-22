@@ -4,9 +4,8 @@ def ARTIFACT_ID = target[artifactId]
 def VERSION_NAME = target[uploadVersionName]
 
 dependencies {
-    api apiCore
+    api apiCoreUtils
     api "${groupId}:${descriptorU2904.artifactId}:${descriptorU2904.versionName}"
-    api "${groupId}:${descriptorU2909.artifactId}:${descriptorU2909.versionName}"
     testImplementation junit
 }
 

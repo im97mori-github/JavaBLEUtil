@@ -4,8 +4,9 @@ def ARTIFACT_ID = target[artifactId]
 def VERSION_NAME = target[uploadVersionName]
 
 dependencies {
-    api apiCore
+    api apiCoreUtils
     testImplementation junit
+    testImplementation apiCoreConstants
 }
 
 publishing {

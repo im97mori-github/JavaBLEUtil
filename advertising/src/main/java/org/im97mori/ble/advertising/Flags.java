@@ -1,20 +1,13 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_FLAGS;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.FlagsDataType.FLAG_BR_EDR_NOT_SUPPORTED;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.FlagsDataType.FLAG_LE_GENERAL_DISCOVERABLE_MODE;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.FlagsDataType.FLAG_LE_LIMITED_DISCOVERABLE_MODE;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.FlagsDataType.FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_CONTROLLER;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.FlagsDataType.FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_HOST;
+import static org.im97mori.ble.constants.DataType.DATA_TYPE_FLAGS;
 
-import java.util.AbstractMap.SimpleImmutableEntry;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.AbstractMap.SimpleImmutableEntry;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import org.im97mori.ble.advertising.AdvertisingDataConstants.FlagsDataType;
 
 import androidx.annotation.NonNull;
 
@@ -26,6 +19,31 @@ import androidx.annotation.NonNull;
  * </p>
  */
 public class Flags extends AbstractAdvertisingData {
+
+    /**
+     * LE Limited Discoverable Mode
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FLAG_LE_LIMITED_DISCOVERABLE_MODE = new SimpleImmutableEntry<>(0, 0b00000001);
+
+    /**
+     * LE General Discoverable Mode
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FLAG_LE_GENERAL_DISCOVERABLE_MODE = new SimpleImmutableEntry<>(0, 0b00000010);
+
+    /**
+     * BR/EDR Not Supported
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FLAG_BR_EDR_NOT_SUPPORTED = new SimpleImmutableEntry<>(0, 0b00000100);
+
+    /**
+     * Simultaneous LE and BR/EDR to Same Device Capable (Controller)
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_CONTROLLER = new SimpleImmutableEntry<>(0, 0b00001000);
+
+    /**
+     * Simultaneous LE and BR/EDR to Same Device Capable (Host)
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_HOST = new SimpleImmutableEntry<>(0, 0b00010000);
 
     /**
      * Flags list

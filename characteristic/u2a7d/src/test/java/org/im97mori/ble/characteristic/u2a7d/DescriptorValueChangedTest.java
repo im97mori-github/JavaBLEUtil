@@ -1,6 +1,6 @@
 package org.im97mori.ble.characteristic.u2a7d;
 
-import static org.im97mori.ble.BLEConstants.BASE_UUID;
+import static org.im97mori.ble.BLEUtils.BASE_UUID;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

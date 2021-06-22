@@ -4,7 +4,6 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Arrays;
 
-import org.im97mori.ble.BLEConstants;
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.ByteArrayInterface;
 

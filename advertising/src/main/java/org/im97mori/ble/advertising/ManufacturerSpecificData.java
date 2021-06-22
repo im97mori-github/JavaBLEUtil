@@ -1,11 +1,12 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_MANUFACTURER_SPECIFIC_DATA;
+import static org.im97mori.ble.constants.DataType.DATA_TYPE_MANUFACTURER_SPECIFIC_DATA;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-import org.im97mori.ble.BLEConstants;
+import org.im97mori.ble.BLEUtils;
+import org.im97mori.ble.constants.CompanyUUID;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -73,7 +74,7 @@ public class ManufacturerSpecificData extends AbstractAdvertisingData {
      */
     @Nullable
     public String getCompanyName() {
-        return BLEConstants.COMPANY_MAPPING.get(mCompanyIdentifier);
+        return CompanyUUID.COMPANY_MAPPING_128.get(BLEUtils.convert16to128(mCompanyIdentifier));
     }
 
     /**

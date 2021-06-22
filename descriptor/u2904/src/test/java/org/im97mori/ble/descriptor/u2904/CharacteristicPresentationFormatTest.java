@@ -1248,7 +1248,7 @@ public class CharacteristicPresentationFormatTest {
     public void test_constructor032() {
         int format = 0;
         int exponent = 1;
-        UUID unit = org.im97mori.ble.BLEConstants.UnitsUUID.PERCENTAGE_UNITS;
+        UUID unit = org.im97mori.ble.constants.UnitUUID.PERCENTAGE_UNIT;
         int namespace = 3;
         byte[] description = new byte[] { 4 };
 

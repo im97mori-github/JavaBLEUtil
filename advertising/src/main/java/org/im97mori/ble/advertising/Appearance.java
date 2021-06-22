@@ -1,11 +1,13 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_APPEARANCE;
+import static org.im97mori.ble.BLEUtils.BASE_UUID;
+import static org.im97mori.ble.constants.DataType.DATA_TYPE_APPEARANCE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.UUID;
 
-import org.im97mori.ble.BLEConstants;
+import org.im97mori.ble.constants.AppearanceUUID;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -54,19 +56,13 @@ public class Appearance extends AbstractAdvertisingData {
     }
 
     /**
-     * @return Appearance value
+     * @return Appearance sub category
      */
     @Nullable
-    public String getAppearanceValue() {
-        return BLEConstants.APPEARANCE_VALUE_MAP.get(mAppearanceKey);
-    }
-
-    /**
-     * @return Appearance description
-     */
-    @Nullable
-    public String getAppearanceDescription() {
-        return BLEConstants.APPEARANCE_DESCRIPTION_MAP.get(mAppearanceKey);
+    public String getAppearanceSubCategory() {
+        long lsb = BASE_UUID.getLeastSignificantBits();
+        long msb = BASE_UUID.getMostSignificantBits();
+        return AppearanceUUID.APPEARANCE_SUB_CATEGORY_MAPPING_128.get(new UUID(msb | ((long) mAppearanceKey << 32), lsb));
     }
 
     /**

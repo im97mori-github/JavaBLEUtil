@@ -1,10 +1,9 @@
 package org.im97mori.ble.characteristic.core;
 
-import androidx.annotation.NonNull;
-
 import org.im97mori.ble.BLEUtils;
-import org.im97mori.ble.descriptor.u2909.NumberOfDigitals;
 import org.im97mori.ble.descriptor.u2904.CharacteristicPresentationFormat;
+
+import androidx.annotation.NonNull;
 
 /**
  * Utility for org.bluetooth.service.automation_io(0x1815) service
@@ -32,7 +31,7 @@ public class AutomationIoUtils {
     public static final int DIGITAL_OUTPUT_STATE = 3;
 
     /**
-     * @param index field index {@link NumberOfDigitals#getNoOfDigitals()}
+     * @param index field index {@link org.im97mori.ble.descriptor.u2909.NumberOfDigitals#getNoOfDigitals()}
      * @return {@code true}:Inactive, {@code false}:not Inactive
      */
     public static boolean isInactive(@NonNull byte[] data, int index) {
@@ -40,7 +39,7 @@ public class AutomationIoUtils {
     }
 
     /**
-     * @param index field index {@link NumberOfDigitals#getNoOfDigitals()}
+     * @param index field index {@link org.im97mori.ble.descriptor.u2909.NumberOfDigitals#getNoOfDigitals()}
      * @return {@code true}:Active, {@code false}:not Active
      */
     public static boolean isActive(@NonNull byte[] data, int index) {
@@ -48,7 +47,7 @@ public class AutomationIoUtils {
     }
 
     /**
-     * @param index field index {@link NumberOfDigitals#getNoOfDigitals()}
+     * @param index field index {@link org.im97mori.ble.descriptor.u2909.NumberOfDigitals#getNoOfDigitals()}
      * @return {@code true}:Tri-state, {@code false}:not Tri-state
      */
     public static boolean isTriState(@NonNull byte[] data, int index) {
@@ -56,7 +55,7 @@ public class AutomationIoUtils {
     }
 
     /**
-     * @param index field index {@link NumberOfDigitals#getNoOfDigitals()}
+     * @param index field index {@link org.im97mori.ble.descriptor.u2909.NumberOfDigitals#getNoOfDigitals()}
      * @return {@code true}:Output-state, {@code false}:not Output-state
      */
     public static boolean isOutputState(@NonNull byte[] data, int index) {
@@ -67,7 +66,7 @@ public class AutomationIoUtils {
     /**
      * check Digital state
      *
-     * @param index  field index {@link NumberOfDigitals#getNoOfDigitals()}
+     * @param index  field index {@link org.im97mori.ble.descriptor.u2909.NumberOfDigitals#getNoOfDigitals()}
      * @param expect one of {@link #DIGITAL_INACTIVE}
      *               , {@link #DIGITAL_ACTIVE}
      *               , {@link #DIGITAL_TRI_STATE}

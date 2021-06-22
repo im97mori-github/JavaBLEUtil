@@ -1,14 +1,14 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.BLEConstants.APPEARANCE_DESCRIPTION_MAP;
-import static org.im97mori.ble.BLEConstants.APPEARANCE_VALUE_MAP;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_ADVERTISING_INTERVAL;
+import static org.im97mori.ble.BLEUtils.BASE_UUID;
 import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_APPEARANCE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Map;
+import java.util.UUID;
 
+import org.im97mori.ble.constants.AppearanceUUID;
 import org.junit.Test;
 
 @SuppressWarnings("unused")
@@ -17,13 +17,15 @@ public class AppearanceTest {
     //@formatter:off
     private static final byte[] data_00001;
     static {
-        Map.Entry<Integer, String> entry = APPEARANCE_VALUE_MAP.entrySet().iterator().next();
-        int key = entry.getKey();
+        Map.Entry<UUID, String> entry = AppearanceUUID.APPEARANCE_SUB_CATEGORY_MAPPING_128.entrySet().iterator().next();
+        UUID uuid = entry.getKey();
+        long msb = uuid.getMostSignificantBits();
+        msb = msb >> 32;
         byte[] data = new byte[4];
         data[0] = 3;
         data[1] = DATA_TYPE_APPEARANCE;
-        data[2] = (byte) key;
-        data[3] = (byte) (key >> 8);
+        data[2] = (byte) msb;
+        data[3] = (byte) (msb >> 8);
         data_00001 = data;
     }
     //@formatter:on
@@ -61,10 +63,13 @@ public class AppearanceTest {
         Appearance result1 = new Appearance(data, 0, data[0]);
         assertEquals(3, result1.getLength());
         assertEquals(DATA_TYPE_APPEARANCE, result1.getDataType());
-        int key = (data[2] & 0xff) | ((data[3] & 0xff) << 8);
+        long key = (data[2] & 0xff) | ((data[3] & 0xff) << 8);
         assertEquals(key, result1.getAppearanceKey());
-        assertEquals(APPEARANCE_VALUE_MAP.get(key), result1.getAppearanceValue());
-        assertEquals(APPEARANCE_DESCRIPTION_MAP.get(key), result1.getAppearanceDescription());
+        UUID baseuuid = BASE_UUID;
+        long lsb = baseuuid.getLeastSignificantBits();
+        long msb = baseuuid.getMostSignificantBits();
+        key = key << 32;
+        assertEquals(AppearanceUUID.APPEARANCE_SUB_CATEGORY_MAPPING_128.get(new UUID(msb | key, lsb)), result1.getAppearanceSubCategory());
     }
 
     @Test

@@ -1,0 +1,50 @@
+def target = coreConstants
+def GROUP_ID = groupId
+def ARTIFACT_ID = target[artifactId]
+def VERSION_NAME = target[uploadVersionName]
+
+dependencies {
+    api "${crcLibrary}"
+    api "${groupId}:${coreConstantsAppearance.artifactId}:${coreConstantsAppearance.versionName}"
+    api "${groupId}:${coreConstantsCharacteristic.artifactId}:${coreConstantsCharacteristic.versionName}"
+    api "${groupId}:${coreConstantsCompany.artifactId}:${coreConstantsCompany.versionName}"
+    api "${groupId}:${coreConstantsDataType.artifactId}:${coreConstantsDataType.versionName}"
+    api "${groupId}:${coreConstantsDescriptor.artifactId}:${coreConstantsDescriptor.versionName}"
+    api "${groupId}:${coreConstantsErrorCode.artifactId}:${coreConstantsErrorCode.versionName}"
+    api "${groupId}:${coreConstantsScheme.artifactId}:${coreConstantsScheme.versionName}"
+    api "${groupId}:${coreConstantsService.artifactId}:${coreConstantsService.versionName}"
+    api "${groupId}:${coreConstantsUnit.artifactId}:${coreConstantsUnit.versionName}"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId GROUP_ID
+            artifactId ARTIFACT_ID
+            version VERSION_NAME
+            from components.java
+            artifact tasks.sourceJar
+            pom {
+                name = 'BLE Core Utility for Java'
+                url = 'https://github.com/im97mori-github/JavaBLEUtil'
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                        distribution = 'repo'
+                    }
+                }
+                developers {
+                    developer {
+                        email = 'github@im97mori.org'
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            url System.getenv('MAVEN_REPOSITORY_URL')
+        }
+    }
+}

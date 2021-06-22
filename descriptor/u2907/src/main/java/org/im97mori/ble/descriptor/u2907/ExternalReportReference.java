@@ -1,6 +1,6 @@
 package org.im97mori.ble.descriptor.u2907;
 
-import static org.im97mori.ble.BLEConstants.BASE_UUID;
+import static org.im97mori.ble.BLEUtils.BASE_UUID;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

@@ -1,12 +1,12 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.PHYSICAL_CHANNEL_INDICES_MAP;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_CHANNEL_MAP_UPDATE_INDICATION;
+import static org.im97mori.ble.constants.DataType.DATA_TYPE_CHANNEL_MAP_UPDATE_INDICATION;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,6 +21,63 @@ import androidx.annotation.NonNull;
  */
 public class ChannelMapUpdateIndication extends AbstractAdvertisingData {
 
+    /**
+     * <p>
+     * Physical channel indices
+     * <p>
+     * Core Specification v5.2 Vol 6 Part B 1.4
+     * <p>
+     * key:PHY Channel, value:Channel Index
+     * </p>
+     */
+    public static final Map<Integer, Integer> PHYSICAL_CHANNEL_INDICES_MAP;
+
+    static {
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, 37);
+        map.put(1, 0);
+        map.put(2, 1);
+        map.put(3, 2);
+        map.put(4, 3);
+        map.put(5, 4);
+        map.put(6, 5);
+        map.put(7, 6);
+        map.put(8, 7);
+        map.put(9, 8);
+        map.put(10, 9);
+        map.put(11, 10);
+        map.put(12, 38);
+        map.put(13, 11);
+        map.put(14, 12);
+        map.put(15, 13);
+        map.put(16, 14);
+        map.put(17, 15);
+        map.put(18, 16);
+        map.put(19, 17);
+        map.put(20, 18);
+        map.put(21, 19);
+        map.put(22, 20);
+        map.put(23, 21);
+        map.put(24, 22);
+        map.put(25, 23);
+        map.put(26, 24);
+        map.put(27, 25);
+        map.put(28, 26);
+        map.put(29, 27);
+        map.put(30, 28);
+        map.put(31, 29);
+        map.put(32, 30);
+        map.put(33, 31);
+        map.put(34, 32);
+        map.put(35, 33);
+        map.put(36, 34);
+        map.put(37, 35);
+        map.put(38, 36);
+        map.put(39, 39);
+
+        PHYSICAL_CHANNEL_INDICES_MAP = Collections.synchronizedMap(Collections.unmodifiableMap(map));
+    }
+    
     /**
      * ChM list
      */

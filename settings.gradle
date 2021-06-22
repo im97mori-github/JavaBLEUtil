@@ -9,8 +9,22 @@
 
 rootProject.name = 'JavaBLEUtil'
 
+include ':core:constants:appearance'
+include ':core:constants:characteristic'
+include ':core:constants:company'
+include ':core:constants:datatype'
+include ':core:constants:descriptor'
+include ':core:constants:errorcode'
+include ':core:constants:scheme'
+include ':core:constants:service'
+include ':core:constants:unit'
+
+include ':core:constants'
+include ':core:utils'
 include ':core'
+
 include ':advertising'
+
 include ':descriptor:u2900'
 include ':descriptor:u2901'
 include ':descriptor:u2902'

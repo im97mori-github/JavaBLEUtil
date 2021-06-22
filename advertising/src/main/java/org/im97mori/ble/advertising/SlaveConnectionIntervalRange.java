@@ -1,8 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.SLAVE_CONNECTION_INTERVAL_NO_SPECIFIC_VALUE;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.SLAVE_CONNECTION_INTERVAL_RANGE_UNIT_MILLIS;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_SLAVE_CONNECTION_INTERVAL_RANGE;
+import static org.im97mori.ble.constants.DataType.DATA_TYPE_SLAVE_CONNECTION_INTERVAL_RANGE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -19,10 +17,20 @@ import androidx.annotation.NonNull;
 public class SlaveConnectionIntervalRange extends AbstractAdvertisingData {
 
     /**
+     * Core Specification Supplement v9 Part A 1.9.2 Unit of Connection Interval Range(millis)
+     */
+    public static final double SLAVE_CONNECTION_INTERVAL_RANGE_UNIT_MILLIS = 1.25d;
+
+    /**
+     * Core Specification Supplement v9 Part A 1.9.2 no specific minimum / maximum values
+     */
+    public static final int SLAVE_CONNECTION_INTERVAL_NO_SPECIFIC_VALUE = 0xffff;
+
+    /**
      * <p>
      * Minimum connection interval
      * <p>
-     * Core Specification v5.1 Vol 3 Part C 12.3
+     * Core Specification v5.2 Vol 3 Part C 12.3
      * </p>
      */
     private final int mMinimumValue;
@@ -31,7 +39,7 @@ public class SlaveConnectionIntervalRange extends AbstractAdvertisingData {
      * <p>
      * Maximum connection interval
      * <p>
-     * Core Specification v5.1 Vol 3 Part C 12.3
+     * Core Specification v5.2 Vol 3 Part C 12.3
      * </p>
      */
     private final int mMaximumValue;

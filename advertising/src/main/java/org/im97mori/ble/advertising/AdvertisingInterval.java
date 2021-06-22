@@ -1,7 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.ADVERTISING_INTERVAL_UNIT_MILLIS;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_ADVERTISING_INTERVAL;
+import static org.im97mori.ble.constants.DataType.DATA_TYPE_ADVERTISING_INTERVAL;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -16,6 +15,11 @@ import androidx.annotation.NonNull;
  * </p>
  */
 public class AdvertisingInterval extends AbstractAdvertisingData {
+
+    /**
+     * Core Specification Supplement v9 Part A 1.15.2 Unit of Advertising Interval(millis)
+     */
+    public static final double ADVERTISING_INTERVAL_UNIT_MILLIS = 0.625d;
 
     /**
      * Advertising Interval

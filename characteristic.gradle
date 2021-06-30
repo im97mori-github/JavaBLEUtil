@@ -1,845 +1,382 @@
-ext.characteristicCore = [
-        artifactId         : 'ble-characteristic-core'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a00 = [
-        artifactId         : 'ble-characteristic-u2a00'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a01 = [
-        artifactId         : 'ble-characteristic-u2a01'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a02 = [
-        artifactId         : 'ble-characteristic-u2a02'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a03 = [
-        artifactId         : 'ble-characteristic-u2a03'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a04 = [
-        artifactId         : 'ble-characteristic-u2a04'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a05 = [
-        artifactId         : 'ble-characteristic-u2a05'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a06 = [
-        artifactId         : 'ble-characteristic-u2a06'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a07 = [
-        artifactId         : 'ble-characteristic-u2a07'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a0f = [
-        artifactId         : 'ble-characteristic-u2a0f'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a11 = [
-        artifactId         : 'ble-characteristic-u2a11'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a14 = [
-        artifactId         : 'ble-characteristic-u2a14'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a16 = [
-        artifactId         : 'ble-characteristic-u2a16'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a17 = [
-        artifactId         : 'ble-characteristic-u2a17'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a19 = [
-        artifactId         : 'ble-characteristic-u2a19'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a1c = [
-        artifactId         : 'ble-characteristic-u2a1c'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a1d = [
-        artifactId         : 'ble-characteristic-u2a1d'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a1e = [
-        artifactId         : 'ble-characteristic-u2a1e'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a21 = [
-        artifactId         : 'ble-characteristic-u2a21'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a22 = [
-        artifactId         : 'ble-characteristic-u2a22'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a23 = [
-        artifactId         : 'ble-characteristic-u2a23'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a24 = [
-        artifactId         : 'ble-characteristic-u2a24'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a25 = [
-        artifactId         : 'ble-characteristic-u2a25'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a26 = [
-        artifactId         : 'ble-characteristic-u2a26'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a27 = [
-        artifactId         : 'ble-characteristic-u2a27'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a28 = [
-        artifactId         : 'ble-characteristic-u2a28'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a29 = [
-        artifactId         : 'ble-characteristic-u2a29'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a2a = [
-        artifactId         : 'ble-characteristic-u2a2a'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a2b = [
-        artifactId         : 'ble-characteristic-u2a2b'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a2c = [
-        artifactId         : 'ble-characteristic-u2a2c'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a31 = [
-        artifactId         : 'ble-characteristic-u2a31'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a32 = [
-        artifactId         : 'ble-characteristic-u2a32'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a33 = [
-        artifactId         : 'ble-characteristic-u2a33'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a35 = [
-        artifactId         : 'ble-characteristic-u2a35'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a36 = [
-        artifactId         : 'ble-characteristic-u2a36'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a37 = [
-        artifactId         : 'ble-characteristic-u2a37'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a38 = [
-        artifactId         : 'ble-characteristic-u2a38'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a39 = [
-        artifactId         : 'ble-characteristic-u2a39'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a3f = [
-        artifactId         : 'ble-characteristic-u2a3f'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a40 = [
-        artifactId         : 'ble-characteristic-u2a40'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a41 = [
-        artifactId         : 'ble-characteristic-u2a41'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a44 = [
-        artifactId         : 'ble-characteristic-u2a44'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a45 = [
-        artifactId         : 'ble-characteristic-u2a45'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a46 = [
-        artifactId         : 'ble-characteristic-u2a46'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a47 = [
-        artifactId         : 'ble-characteristic-u2a47'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a48 = [
-        artifactId         : 'ble-characteristic-u2a48'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a49 = [
-        artifactId         : 'ble-characteristic-u2a49'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a4a = [
-        artifactId         : 'ble-characteristic-u2a4a'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a4b = [
-        artifactId         : 'ble-characteristic-u2a4b'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a4c = [
-        artifactId         : 'ble-characteristic-u2a4c'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a4d = [
-        artifactId         : 'ble-characteristic-u2a4d'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a4e = [
-        artifactId         : 'ble-characteristic-u2a4e'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a4f = [
-        artifactId         : 'ble-characteristic-u2a4f'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a50 = [
-        artifactId         : 'ble-characteristic-u2a50'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a53 = [
-        artifactId         : 'ble-characteristic-u2a53'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a54 = [
-        artifactId         : 'ble-characteristic-u2a54'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a55 = [
-        artifactId         : 'ble-characteristic-u2a55'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a56 = [
-        artifactId         : 'ble-characteristic-u2a56'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a58 = [
-        artifactId         : 'ble-characteristic-u2a58'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a5a = [
-        artifactId         : 'ble-characteristic-u2a5a'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a5b = [
-        artifactId         : 'ble-characteristic-u2a5b'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a5c = [
-        artifactId         : 'ble-characteristic-u2a5c'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a5d = [
-        artifactId         : 'ble-characteristic-u2a5d'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a63 = [
-        artifactId         : 'ble-characteristic-u2a63'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a64 = [
-        artifactId         : 'ble-characteristic-u2a64'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a65 = [
-        artifactId         : 'ble-characteristic-u2a65'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a66 = [
-        artifactId         : 'ble-characteristic-u2a66'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a67 = [
-        artifactId         : 'ble-characteristic-u2a67'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a68 = [
-        artifactId         : 'ble-characteristic-u2a68'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a69 = [
-        artifactId         : 'ble-characteristic-u2a69'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a6a = [
-        artifactId         : 'ble-characteristic-u2a6a'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a6b = [
-        artifactId         : 'ble-characteristic-u2a6b'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a6c = [
-        artifactId         : 'ble-characteristic-u2a6c'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a6d = [
-        artifactId         : 'ble-characteristic-u2a6d'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a6e = [
-        artifactId         : 'ble-characteristic-u2a6e'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a6f = [
-        artifactId         : 'ble-characteristic-u2a6f'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a70 = [
-        artifactId         : 'ble-characteristic-u2a70'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a71 = [
-        artifactId         : 'ble-characteristic-u2a71'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a72 = [
-        artifactId         : 'ble-characteristic-u2a72'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a73 = [
-        artifactId         : 'ble-characteristic-u2a73'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a74 = [
-        artifactId         : 'ble-characteristic-u2a74'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a75 = [
-        artifactId         : 'ble-characteristic-u2a75'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a76 = [
-        artifactId         : 'ble-characteristic-u2a76'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a77 = [
-        artifactId         : 'ble-characteristic-u2a77'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a78 = [
-        artifactId         : 'ble-characteristic-u2a78'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a79 = [
-        artifactId         : 'ble-characteristic-u2a79'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a7a = [
-        artifactId         : 'ble-characteristic-u2a7a'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a7b = [
-        artifactId         : 'ble-characteristic-u2a7b'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a7d = [
-        artifactId         : 'ble-characteristic-u2a7d'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a7e = [
-        artifactId         : 'ble-characteristic-u2a7e'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a7f = [
-        artifactId         : 'ble-characteristic-u2a7f'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a80 = [
-        artifactId         : 'ble-characteristic-u2a80'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a81 = [
-        artifactId         : 'ble-characteristic-u2a81'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a82 = [
-        artifactId         : 'ble-characteristic-u2a82'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a83 = [
-        artifactId         : 'ble-characteristic-u2a83'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a84 = [
-        artifactId         : 'ble-characteristic-u2a84'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a85 = [
-        artifactId         : 'ble-characteristic-u2a85'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a86 = [
-        artifactId         : 'ble-characteristic-u2a86'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a87 = [
-        artifactId         : 'ble-characteristic-u2a87'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a88 = [
-        artifactId         : 'ble-characteristic-u2a88'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a89 = [
-        artifactId         : 'ble-characteristic-u2a89'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a8a = [
-        artifactId         : 'ble-characteristic-u2a8a'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a8b = [
-        artifactId         : 'ble-characteristic-u2a8b'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a8c = [
-        artifactId         : 'ble-characteristic-u2a8c'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a8d = [
-        artifactId         : 'ble-characteristic-u2a8d'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a8e = [
-        artifactId         : 'ble-characteristic-u2a8e'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a8f = [
-        artifactId         : 'ble-characteristic-u2a8f'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a90 = [
-        artifactId         : 'ble-characteristic-u2a90'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a91 = [
-        artifactId         : 'ble-characteristic-u2a91'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a92 = [
-        artifactId         : 'ble-characteristic-u2a92'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a93 = [
-        artifactId         : 'ble-characteristic-u2a93'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a94 = [
-        artifactId         : 'ble-characteristic-u2a94'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a95 = [
-        artifactId         : 'ble-characteristic-u2a95'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a96 = [
-        artifactId         : 'ble-characteristic-u2a96'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a97 = [
-        artifactId         : 'ble-characteristic-u2a97'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a98 = [
-        artifactId         : 'ble-characteristic-u2a98'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a99 = [
-        artifactId         : 'ble-characteristic-u2a99'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a9a = [
-        artifactId         : 'ble-characteristic-u2a9a'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a9b = [
-        artifactId         : 'ble-characteristic-u2a9b'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a9c = [
-        artifactId         : 'ble-characteristic-u2a9c'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a9d = [
-        artifactId         : 'ble-characteristic-u2a9d'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a9e = [
-        artifactId         : 'ble-characteristic-u2a9e'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2a9f = [
-        artifactId         : 'ble-characteristic-u2a9f'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aa0 = [
-        artifactId         : 'ble-characteristic-u2aa0'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aa1 = [
-        artifactId         : 'ble-characteristic-u2aa1'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aa2 = [
-        artifactId         : 'ble-characteristic-u2aa2'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aa3 = [
-        artifactId         : 'ble-characteristic-u2aa3'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aa4 = [
-        artifactId         : 'ble-characteristic-u2aa4'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aa5 = [
-        artifactId         : 'ble-characteristic-u2aa5'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aa6 = [
-        artifactId         : 'ble-characteristic-u2aa6'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aad = [
-        artifactId         : 'ble-characteristic-u2aad'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aae = [
-        artifactId         : 'ble-characteristic-u2aae'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aaf = [
-        artifactId         : 'ble-characteristic-u2aaf'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ab0 = [
-        artifactId         : 'ble-characteristic-u2ab0'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ab1 = [
-        artifactId         : 'ble-characteristic-u2ab1'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ab2 = [
-        artifactId         : 'ble-characteristic-u2ab2'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ab3 = [
-        artifactId         : 'ble-characteristic-u2ab3'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ab4 = [
-        artifactId         : 'ble-characteristic-u2ab4'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ab5 = [
-        artifactId         : 'ble-characteristic-u2ab5'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ab6 = [
-        artifactId         : 'ble-characteristic-u2ab6'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ab7 = [
-        artifactId         : 'ble-characteristic-u2ab7'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ab8 = [
-        artifactId         : 'ble-characteristic-u2ab8'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ab9 = [
-        artifactId         : 'ble-characteristic-u2ab9'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2aba = [
-        artifactId         : 'ble-characteristic-u2aba'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2abb = [
-        artifactId         : 'ble-characteristic-u2abb'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2abc = [
-        artifactId         : 'ble-characteristic-u2abc'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ac9 = [
-        artifactId         : 'ble-characteristic-u2ac9'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2acc = [
-        artifactId         : 'ble-characteristic-u2acc'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2acd = [
-        artifactId         : 'ble-characteristic-u2acd'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ace = [
-        artifactId         : 'ble-characteristic-u2ace'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2acf = [
-        artifactId         : 'ble-characteristic-u2acf'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ad0 = [
-        artifactId         : 'ble-characteristic-u2ad0'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ad1 = [
-        artifactId         : 'ble-characteristic-u2ad1'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ad2 = [
-        artifactId         : 'ble-characteristic-u2ad2'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ad3 = [
-        artifactId         : 'ble-characteristic-u2ad3'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ad4 = [
-        artifactId         : 'ble-characteristic-u2ad4'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ad5 = [
-        artifactId         : 'ble-characteristic-u2ad5'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ad6 = [
-        artifactId         : 'ble-characteristic-u2ad6'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ad7 = [
-        artifactId         : 'ble-characteristic-u2ad7'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ad8 = [
-        artifactId         : 'ble-characteristic-u2ad8'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ad9 = [
-        artifactId         : 'ble-characteristic-u2ad9'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2ada = [
-        artifactId         : 'ble-characteristic-u2ada'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2b1d = [
-        artifactId         : 'ble-characteristic-u2b1d'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2b1e = [
-        artifactId         : 'ble-characteristic-u2b1e'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2b1f = [
-        artifactId         : 'ble-characteristic-u2b1f'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2b29 = [
-        artifactId         : 'ble-characteristic-u2b29'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2b2a = [
-        artifactId         : 'ble-characteristic-u2b2a'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristicU2b37 = [
-        artifactId         : 'ble-characteristic-u2b37'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-ext.characteristic = [
-        artifactId         : 'ble-characteristic'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
+ext.characteristicCore = 'ble-characteristic-core'
+ext.characteristicU2a00 = 'ble-characteristic-u2a00'
+ext.characteristicU2a01 = 'ble-characteristic-u2a01'
+ext.characteristicU2a02 = 'ble-characteristic-u2a02'
+ext.characteristicU2a03 = 'ble-characteristic-u2a03'
+ext.characteristicU2a04 = 'ble-characteristic-u2a04'
+ext.characteristicU2a05 = 'ble-characteristic-u2a05'
+ext.characteristicU2a06 = 'ble-characteristic-u2a06'
+ext.characteristicU2a07 = 'ble-characteristic-u2a07'
+ext.characteristicU2a08 = 'ble-characteristic-u2a08'
+ext.characteristicU2a09 = 'ble-characteristic-u2a09'
+ext.characteristicU2a0a = 'ble-characteristic-u2a0a'
+ext.characteristicU2a0c = 'ble-characteristic-u2a0c'
+ext.characteristicU2a0d = 'ble-characteristic-u2a0d'
+ext.characteristicU2a0e = 'ble-characteristic-u2a0e'
+ext.characteristicU2a0f = 'ble-characteristic-u2a0f'
+ext.characteristicU2a11 = 'ble-characteristic-u2a11'
+ext.characteristicU2a12 = 'ble-characteristic-u2a12'
+ext.characteristicU2a13 = 'ble-characteristic-u2a13'
+ext.characteristicU2a14 = 'ble-characteristic-u2a14'
+ext.characteristicU2a16 = 'ble-characteristic-u2a16'
+ext.characteristicU2a17 = 'ble-characteristic-u2a17'
+ext.characteristicU2a18 = 'ble-characteristic-u2a18'
+ext.characteristicU2a19 = 'ble-characteristic-u2a19'
+ext.characteristicU2a1c = 'ble-characteristic-u2a1c'
+ext.characteristicU2a1d = 'ble-characteristic-u2a1d'
+ext.characteristicU2a1e = 'ble-characteristic-u2a1e'
+ext.characteristicU2a21 = 'ble-characteristic-u2a21'
+ext.characteristicU2a22 = 'ble-characteristic-u2a22'
+ext.characteristicU2a23 = 'ble-characteristic-u2a23'
+ext.characteristicU2a24 = 'ble-characteristic-u2a24'
+ext.characteristicU2a25 = 'ble-characteristic-u2a25'
+ext.characteristicU2a26 = 'ble-characteristic-u2a26'
+ext.characteristicU2a27 = 'ble-characteristic-u2a27'
+ext.characteristicU2a28 = 'ble-characteristic-u2a28'
+ext.characteristicU2a29 = 'ble-characteristic-u2a29'
+ext.characteristicU2a2a = 'ble-characteristic-u2a2a'
+ext.characteristicU2a2b = 'ble-characteristic-u2a2b'
+ext.characteristicU2a2c = 'ble-characteristic-u2a2c'
+ext.characteristicU2a31 = 'ble-characteristic-u2a31'
+ext.characteristicU2a32 = 'ble-characteristic-u2a32'
+ext.characteristicU2a33 = 'ble-characteristic-u2a33'
+ext.characteristicU2a34 = 'ble-characteristic-u2a34'
+ext.characteristicU2a35 = 'ble-characteristic-u2a35'
+ext.characteristicU2a36 = 'ble-characteristic-u2a36'
+ext.characteristicU2a37 = 'ble-characteristic-u2a37'
+ext.characteristicU2a38 = 'ble-characteristic-u2a38'
+ext.characteristicU2a39 = 'ble-characteristic-u2a39'
+ext.characteristicU2a3f = 'ble-characteristic-u2a3f'
+ext.characteristicU2a40 = 'ble-characteristic-u2a40'
+ext.characteristicU2a41 = 'ble-characteristic-u2a41'
+ext.characteristicU2a42 = 'ble-characteristic-u2a42'
+ext.characteristicU2a43 = 'ble-characteristic-u2a43'
+ext.characteristicU2a44 = 'ble-characteristic-u2a44'
+ext.characteristicU2a45 = 'ble-characteristic-u2a45'
+ext.characteristicU2a46 = 'ble-characteristic-u2a46'
+ext.characteristicU2a47 = 'ble-characteristic-u2a47'
+ext.characteristicU2a48 = 'ble-characteristic-u2a48'
+ext.characteristicU2a49 = 'ble-characteristic-u2a49'
+ext.characteristicU2a4a = 'ble-characteristic-u2a4a'
+ext.characteristicU2a4b = 'ble-characteristic-u2a4b'
+ext.characteristicU2a4c = 'ble-characteristic-u2a4c'
+ext.characteristicU2a4d = 'ble-characteristic-u2a4d'
+ext.characteristicU2a4e = 'ble-characteristic-u2a4e'
+ext.characteristicU2a4f = 'ble-characteristic-u2a4f'
+ext.characteristicU2a50 = 'ble-characteristic-u2a50'
+ext.characteristicU2a51 = 'ble-characteristic-u2a51'
+ext.characteristicU2a52 = 'ble-characteristic-u2a52'
+ext.characteristicU2a53 = 'ble-characteristic-u2a53'
+ext.characteristicU2a54 = 'ble-characteristic-u2a54'
+ext.characteristicU2a55 = 'ble-characteristic-u2a55'
+ext.characteristicU2a56 = 'ble-characteristic-u2a56'
+ext.characteristicU2a58 = 'ble-characteristic-u2a58'
+ext.characteristicU2a5a = 'ble-characteristic-u2a5a'
+ext.characteristicU2a5b = 'ble-characteristic-u2a5b'
+ext.characteristicU2a5c = 'ble-characteristic-u2a5c'
+ext.characteristicU2a5d = 'ble-characteristic-u2a5d'
+ext.characteristicU2a5e = 'ble-characteristic-u2a5e'
+ext.characteristicU2a5f = 'ble-characteristic-u2a5f'
+ext.characteristicU2a60 = 'ble-characteristic-u2a60'
+ext.characteristicU2a63 = 'ble-characteristic-u2a63'
+ext.characteristicU2a64 = 'ble-characteristic-u2a64'
+ext.characteristicU2a65 = 'ble-characteristic-u2a65'
+ext.characteristicU2a66 = 'ble-characteristic-u2a66'
+ext.characteristicU2a67 = 'ble-characteristic-u2a67'
+ext.characteristicU2a68 = 'ble-characteristic-u2a68'
+ext.characteristicU2a69 = 'ble-characteristic-u2a69'
+ext.characteristicU2a6a = 'ble-characteristic-u2a6a'
+ext.characteristicU2a6b = 'ble-characteristic-u2a6b'
+ext.characteristicU2a6c = 'ble-characteristic-u2a6c'
+ext.characteristicU2a6d = 'ble-characteristic-u2a6d'
+ext.characteristicU2a6e = 'ble-characteristic-u2a6e'
+ext.characteristicU2a6f = 'ble-characteristic-u2a6f'
+ext.characteristicU2a70 = 'ble-characteristic-u2a70'
+ext.characteristicU2a71 = 'ble-characteristic-u2a71'
+ext.characteristicU2a72 = 'ble-characteristic-u2a72'
+ext.characteristicU2a73 = 'ble-characteristic-u2a73'
+ext.characteristicU2a74 = 'ble-characteristic-u2a74'
+ext.characteristicU2a75 = 'ble-characteristic-u2a75'
+ext.characteristicU2a76 = 'ble-characteristic-u2a76'
+ext.characteristicU2a77 = 'ble-characteristic-u2a77'
+ext.characteristicU2a78 = 'ble-characteristic-u2a78'
+ext.characteristicU2a79 = 'ble-characteristic-u2a79'
+ext.characteristicU2a7a = 'ble-characteristic-u2a7a'
+ext.characteristicU2a7b = 'ble-characteristic-u2a7b'
+ext.characteristicU2a7d = 'ble-characteristic-u2a7d'
+ext.characteristicU2a7e = 'ble-characteristic-u2a7e'
+ext.characteristicU2a7f = 'ble-characteristic-u2a7f'
+ext.characteristicU2a80 = 'ble-characteristic-u2a80'
+ext.characteristicU2a81 = 'ble-characteristic-u2a81'
+ext.characteristicU2a82 = 'ble-characteristic-u2a82'
+ext.characteristicU2a83 = 'ble-characteristic-u2a83'
+ext.characteristicU2a84 = 'ble-characteristic-u2a84'
+ext.characteristicU2a85 = 'ble-characteristic-u2a85'
+ext.characteristicU2a86 = 'ble-characteristic-u2a86'
+ext.characteristicU2a87 = 'ble-characteristic-u2a87'
+ext.characteristicU2a88 = 'ble-characteristic-u2a88'
+ext.characteristicU2a89 = 'ble-characteristic-u2a89'
+ext.characteristicU2a8a = 'ble-characteristic-u2a8a'
+ext.characteristicU2a8b = 'ble-characteristic-u2a8b'
+ext.characteristicU2a8c = 'ble-characteristic-u2a8c'
+ext.characteristicU2a8d = 'ble-characteristic-u2a8d'
+ext.characteristicU2a8e = 'ble-characteristic-u2a8e'
+ext.characteristicU2a8f = 'ble-characteristic-u2a8f'
+ext.characteristicU2a90 = 'ble-characteristic-u2a90'
+ext.characteristicU2a91 = 'ble-characteristic-u2a91'
+ext.characteristicU2a92 = 'ble-characteristic-u2a92'
+ext.characteristicU2a93 = 'ble-characteristic-u2a93'
+ext.characteristicU2a94 = 'ble-characteristic-u2a94'
+ext.characteristicU2a95 = 'ble-characteristic-u2a95'
+ext.characteristicU2a96 = 'ble-characteristic-u2a96'
+ext.characteristicU2a97 = 'ble-characteristic-u2a97'
+ext.characteristicU2a98 = 'ble-characteristic-u2a98'
+ext.characteristicU2a99 = 'ble-characteristic-u2a99'
+ext.characteristicU2a9a = 'ble-characteristic-u2a9a'
+ext.characteristicU2a9b = 'ble-characteristic-u2a9b'
+ext.characteristicU2a9c = 'ble-characteristic-u2a9c'
+ext.characteristicU2a9d = 'ble-characteristic-u2a9d'
+ext.characteristicU2a9e = 'ble-characteristic-u2a9e'
+ext.characteristicU2a9f = 'ble-characteristic-u2a9f'
+ext.characteristicU2aa0 = 'ble-characteristic-u2aa0'
+ext.characteristicU2aa1 = 'ble-characteristic-u2aa1'
+ext.characteristicU2aa2 = 'ble-characteristic-u2aa2'
+ext.characteristicU2aa3 = 'ble-characteristic-u2aa3'
+ext.characteristicU2aa4 = 'ble-characteristic-u2aa4'
+ext.characteristicU2aa5 = 'ble-characteristic-u2aa5'
+ext.characteristicU2aa6 = 'ble-characteristic-u2aa6'
+ext.characteristicU2aa7 = 'ble-characteristic-u2aa7'
+ext.characteristicU2aa8 = 'ble-characteristic-u2aa8'
+ext.characteristicU2aa9 = 'ble-characteristic-u2aa9'
+ext.characteristicU2aaa = 'ble-characteristic-u2aaa'
+ext.characteristicU2aab = 'ble-characteristic-u2aab'
+ext.characteristicU2aac = 'ble-characteristic-u2aac'
+ext.characteristicU2aad = 'ble-characteristic-u2aad'
+ext.characteristicU2aae = 'ble-characteristic-u2aae'
+ext.characteristicU2aaf = 'ble-characteristic-u2aaf'
+ext.characteristicU2ab0 = 'ble-characteristic-u2ab0'
+ext.characteristicU2ab1 = 'ble-characteristic-u2ab1'
+ext.characteristicU2ab2 = 'ble-characteristic-u2ab2'
+ext.characteristicU2ab3 = 'ble-characteristic-u2ab3'
+ext.characteristicU2ab4 = 'ble-characteristic-u2ab4'
+ext.characteristicU2ab5 = 'ble-characteristic-u2ab5'
+ext.characteristicU2ab6 = 'ble-characteristic-u2ab6'
+ext.characteristicU2ab7 = 'ble-characteristic-u2ab7'
+ext.characteristicU2ab8 = 'ble-characteristic-u2ab8'
+ext.characteristicU2ab9 = 'ble-characteristic-u2ab9'
+ext.characteristicU2aba = 'ble-characteristic-u2aba'
+ext.characteristicU2abb = 'ble-characteristic-u2abb'
+ext.characteristicU2abc = 'ble-characteristic-u2abc'
+ext.characteristicU2abd = 'ble-characteristic-u2abd'
+ext.characteristicU2abe = 'ble-characteristic-u2abe'
+ext.characteristicU2abf = 'ble-characteristic-u2abf'
+ext.characteristicU2ac0 = 'ble-characteristic-u2ac0'
+ext.characteristicU2ac1 = 'ble-characteristic-u2ac1'
+ext.characteristicU2ac2 = 'ble-characteristic-u2ac2'
+ext.characteristicU2ac3 = 'ble-characteristic-u2ac3'
+ext.characteristicU2ac4 = 'ble-characteristic-u2ac4'
+ext.characteristicU2ac5 = 'ble-characteristic-u2ac5'
+ext.characteristicU2ac6 = 'ble-characteristic-u2ac6'
+ext.characteristicU2ac7 = 'ble-characteristic-u2ac7'
+ext.characteristicU2ac8 = 'ble-characteristic-u2ac8'
+ext.characteristicU2ac9 = 'ble-characteristic-u2ac9'
+ext.characteristicU2aca = 'ble-characteristic-u2aca'
+ext.characteristicU2acb = 'ble-characteristic-u2acb'
+ext.characteristicU2acc = 'ble-characteristic-u2acc'
+ext.characteristicU2acd = 'ble-characteristic-u2acd'
+ext.characteristicU2ace = 'ble-characteristic-u2ace'
+ext.characteristicU2acf = 'ble-characteristic-u2acf'
+ext.characteristicU2ad0 = 'ble-characteristic-u2ad0'
+ext.characteristicU2ad1 = 'ble-characteristic-u2ad1'
+ext.characteristicU2ad2 = 'ble-characteristic-u2ad2'
+ext.characteristicU2ad3 = 'ble-characteristic-u2ad3'
+ext.characteristicU2ad4 = 'ble-characteristic-u2ad4'
+ext.characteristicU2ad5 = 'ble-characteristic-u2ad5'
+ext.characteristicU2ad6 = 'ble-characteristic-u2ad6'
+ext.characteristicU2ad7 = 'ble-characteristic-u2ad7'
+ext.characteristicU2ad8 = 'ble-characteristic-u2ad8'
+ext.characteristicU2ad9 = 'ble-characteristic-u2ad9'
+ext.characteristicU2ada = 'ble-characteristic-u2ada'
+ext.characteristicU2adb = 'ble-characteristic-u2adb'
+ext.characteristicU2adc = 'ble-characteristic-u2adc'
+ext.characteristicU2add = 'ble-characteristic-u2add'
+ext.characteristicU2ade = 'ble-characteristic-u2ade'
+ext.characteristicU2ae0 = 'ble-characteristic-u2ae0'
+ext.characteristicU2ae1 = 'ble-characteristic-u2ae1'
+ext.characteristicU2ae2 = 'ble-characteristic-u2ae2'
+ext.characteristicU2ae3 = 'ble-characteristic-u2ae3'
+ext.characteristicU2ae4 = 'ble-characteristic-u2ae4'
+ext.characteristicU2ae5 = 'ble-characteristic-u2ae5'
+ext.characteristicU2ae6 = 'ble-characteristic-u2ae6'
+ext.characteristicU2ae7 = 'ble-characteristic-u2ae7'
+ext.characteristicU2ae8 = 'ble-characteristic-u2ae8'
+ext.characteristicU2ae9 = 'ble-characteristic-u2ae9'
+ext.characteristicU2aea = 'ble-characteristic-u2aea'
+ext.characteristicU2aeb = 'ble-characteristic-u2aeb'
+ext.characteristicU2aec = 'ble-characteristic-u2aec'
+ext.characteristicU2aed = 'ble-characteristic-u2aed'
+ext.characteristicU2aee = 'ble-characteristic-u2aee'
+ext.characteristicU2aef = 'ble-characteristic-u2aef'
+ext.characteristicU2af0 = 'ble-characteristic-u2af0'
+ext.characteristicU2af1 = 'ble-characteristic-u2af1'
+ext.characteristicU2af2 = 'ble-characteristic-u2af2'
+ext.characteristicU2af3 = 'ble-characteristic-u2af3'
+ext.characteristicU2af4 = 'ble-characteristic-u2af4'
+ext.characteristicU2af5 = 'ble-characteristic-u2af5'
+ext.characteristicU2af6 = 'ble-characteristic-u2af6'
+ext.characteristicU2af7 = 'ble-characteristic-u2af7'
+ext.characteristicU2af8 = 'ble-characteristic-u2af8'
+ext.characteristicU2af9 = 'ble-characteristic-u2af9'
+ext.characteristicU2afa = 'ble-characteristic-u2afa'
+ext.characteristicU2afb = 'ble-characteristic-u2afb'
+ext.characteristicU2afc = 'ble-characteristic-u2afc'
+ext.characteristicU2afd = 'ble-characteristic-u2afd'
+ext.characteristicU2afe = 'ble-characteristic-u2afe'
+ext.characteristicU2aff = 'ble-characteristic-u2aff'
+ext.characteristicU2b00 = 'ble-characteristic-u2b00'
+ext.characteristicU2b01 = 'ble-characteristic-u2b01'
+ext.characteristicU2b02 = 'ble-characteristic-u2b02'
+ext.characteristicU2b03 = 'ble-characteristic-u2b03'
+ext.characteristicU2b04 = 'ble-characteristic-u2b04'
+ext.characteristicU2b05 = 'ble-characteristic-u2b05'
+ext.characteristicU2b06 = 'ble-characteristic-u2b06'
+ext.characteristicU2b07 = 'ble-characteristic-u2b07'
+ext.characteristicU2b08 = 'ble-characteristic-u2b08'
+ext.characteristicU2b09 = 'ble-characteristic-u2b09'
+ext.characteristicU2b0a = 'ble-characteristic-u2b0a'
+ext.characteristicU2b0b = 'ble-characteristic-u2b0b'
+ext.characteristicU2b0c = 'ble-characteristic-u2b0c'
+ext.characteristicU2b0d = 'ble-characteristic-u2b0d'
+ext.characteristicU2b0e = 'ble-characteristic-u2b0e'
+ext.characteristicU2b0f = 'ble-characteristic-u2b0f'
+ext.characteristicU2b10 = 'ble-characteristic-u2b10'
+ext.characteristicU2b11 = 'ble-characteristic-u2b11'
+ext.characteristicU2b12 = 'ble-characteristic-u2b12'
+ext.characteristicU2b13 = 'ble-characteristic-u2b13'
+ext.characteristicU2b14 = 'ble-characteristic-u2b14'
+ext.characteristicU2b15 = 'ble-characteristic-u2b15'
+ext.characteristicU2b16 = 'ble-characteristic-u2b16'
+ext.characteristicU2b17 = 'ble-characteristic-u2b17'
+ext.characteristicU2b18 = 'ble-characteristic-u2b18'
+ext.characteristicU2b19 = 'ble-characteristic-u2b19'
+ext.characteristicU2b1a = 'ble-characteristic-u2b1a'
+ext.characteristicU2b1b = 'ble-characteristic-u2b1b'
+ext.characteristicU2b1c = 'ble-characteristic-u2b1c'
+ext.characteristicU2b1d = 'ble-characteristic-u2b1d'
+ext.characteristicU2b1e = 'ble-characteristic-u2b1e'
+ext.characteristicU2b1f = 'ble-characteristic-u2b1f'
+ext.characteristicU2b20 = 'ble-characteristic-u2b20'
+ext.characteristicU2b21 = 'ble-characteristic-u2b21'
+ext.characteristicU2b22 = 'ble-characteristic-u2b22'
+ext.characteristicU2b23 = 'ble-characteristic-u2b23'
+ext.characteristicU2b24 = 'ble-characteristic-u2b24'
+ext.characteristicU2b25 = 'ble-characteristic-u2b25'
+ext.characteristicU2b26 = 'ble-characteristic-u2b26'
+ext.characteristicU2b27 = 'ble-characteristic-u2b27'
+ext.characteristicU2b28 = 'ble-characteristic-u2b28'
+ext.characteristicU2b29 = 'ble-characteristic-u2b29'
+ext.characteristicU2b2a = 'ble-characteristic-u2b2a'
+ext.characteristicU2b2b = 'ble-characteristic-u2b2b'
+ext.characteristicU2b2c = 'ble-characteristic-u2b2c'
+ext.characteristicU2b2d = 'ble-characteristic-u2b2d'
+ext.characteristicU2b2e = 'ble-characteristic-u2b2e'
+ext.characteristicU2b34 = 'ble-characteristic-u2b34'
+ext.characteristicU2b35 = 'ble-characteristic-u2b35'
+ext.characteristicU2b36 = 'ble-characteristic-u2b36'
+ext.characteristicU2b37 = 'ble-characteristic-u2b37'
+ext.characteristicU2b38 = 'ble-characteristic-u2b38'
+ext.characteristicU2b39 = 'ble-characteristic-u2b39'
+ext.characteristicU2b3a = 'ble-characteristic-u2b3a'
+ext.characteristicU2b3b = 'ble-characteristic-u2b3b'
+ext.characteristicU2b3c = 'ble-characteristic-u2b3c'
+ext.characteristicU2b3d = 'ble-characteristic-u2b3d'
+ext.characteristicU2b3e = 'ble-characteristic-u2b3e'
+ext.characteristicU2b3f = 'ble-characteristic-u2b3f'
+ext.characteristicU2b40 = 'ble-characteristic-u2b40'
+ext.characteristicU2b41 = 'ble-characteristic-u2b41'
+ext.characteristicU2b42 = 'ble-characteristic-u2b42'
+ext.characteristicU2b43 = 'ble-characteristic-u2b43'
+ext.characteristicU2b44 = 'ble-characteristic-u2b44'
+ext.characteristicU2b45 = 'ble-characteristic-u2b45'
+ext.characteristicU2b46 = 'ble-characteristic-u2b46'
+ext.characteristicU2b47 = 'ble-characteristic-u2b47'
+ext.characteristicU2b48 = 'ble-characteristic-u2b48'
+ext.characteristicU2b49 = 'ble-characteristic-u2b49'
+ext.characteristicU2b4a = 'ble-characteristic-u2b4a'
+ext.characteristicU2b4b = 'ble-characteristic-u2b4b'
+ext.characteristicU2b4c = 'ble-characteristic-u2b4c'
+ext.characteristicU2b4d = 'ble-characteristic-u2b4d'
+ext.characteristicU2b4e = 'ble-characteristic-u2b4e'
+ext.characteristicU2b4f = 'ble-characteristic-u2b4f'
+ext.characteristicU2b50 = 'ble-characteristic-u2b50'
+ext.characteristicU2b77 = 'ble-characteristic-u2b77'
+ext.characteristicU2b78 = 'ble-characteristic-u2b78'
+ext.characteristicU2b79 = 'ble-characteristic-u2b79'
+ext.characteristicU2b7a = 'ble-characteristic-u2b7a'
+ext.characteristicU2b7b = 'ble-characteristic-u2b7b'
+ext.characteristicU2b7c = 'ble-characteristic-u2b7c'
+ext.characteristicU2b7d = 'ble-characteristic-u2b7d'
+ext.characteristicU2b7e = 'ble-characteristic-u2b7e'
+ext.characteristicU2b7f = 'ble-characteristic-u2b7f'
+ext.characteristicU2b80 = 'ble-characteristic-u2b80'
+ext.characteristicU2b81 = 'ble-characteristic-u2b81'
+ext.characteristicU2b82 = 'ble-characteristic-u2b82'
+ext.characteristicU2b83 = 'ble-characteristic-u2b83'
+ext.characteristicU2b84 = 'ble-characteristic-u2b84'
+ext.characteristicU2b85 = 'ble-characteristic-u2b85'
+ext.characteristicU2b86 = 'ble-characteristic-u2b86'
+ext.characteristicU2b87 = 'ble-characteristic-u2b87'
+ext.characteristicU2b8e = 'ble-characteristic-u2b8e'
+ext.characteristicU2b8f = 'ble-characteristic-u2b8f'
+ext.characteristicU2b90 = 'ble-characteristic-u2b90'
+ext.characteristicU2b91 = 'ble-characteristic-u2b91'
+ext.characteristicU2b92 = 'ble-characteristic-u2b92'
+ext.characteristicU2b93 = 'ble-characteristic-u2b93'
+ext.characteristicU2b94 = 'ble-characteristic-u2b94'
+ext.characteristicU2b95 = 'ble-characteristic-u2b95'
+ext.characteristicU2b96 = 'ble-characteristic-u2b96'
+ext.characteristicU2b97 = 'ble-characteristic-u2b97'
+ext.characteristicU2b98 = 'ble-characteristic-u2b98'
+ext.characteristicU2b99 = 'ble-characteristic-u2b99'
+ext.characteristicU2b9a = 'ble-characteristic-u2b9a'
+ext.characteristicU2b9b = 'ble-characteristic-u2b9b'
+ext.characteristicU2b9c = 'ble-characteristic-u2b9c'
+ext.characteristicU2b9d = 'ble-characteristic-u2b9d'
+ext.characteristicU2b9e = 'ble-characteristic-u2b9e'
+ext.characteristicU2b9f = 'ble-characteristic-u2b9f'
+ext.characteristicU2ba0 = 'ble-characteristic-u2ba0'
+ext.characteristicU2ba1 = 'ble-characteristic-u2ba1'
+ext.characteristicU2ba2 = 'ble-characteristic-u2ba2'
+ext.characteristicU2ba3 = 'ble-characteristic-u2ba3'
+ext.characteristicU2ba4 = 'ble-characteristic-u2ba4'
+ext.characteristicU2ba5 = 'ble-characteristic-u2ba5'
+ext.characteristicU2ba6 = 'ble-characteristic-u2ba6'
+ext.characteristicU2ba7 = 'ble-characteristic-u2ba7'
+ext.characteristicU2ba9 = 'ble-characteristic-u2ba9'
+ext.characteristicU2baa = 'ble-characteristic-u2baa'
+ext.characteristicU2bab = 'ble-characteristic-u2bab'
+ext.characteristicU2bac = 'ble-characteristic-u2bac'
+ext.characteristicU2bad = 'ble-characteristic-u2bad'
+ext.characteristicU2bae = 'ble-characteristic-u2bae'
+ext.characteristicU2baf = 'ble-characteristic-u2baf'
+ext.characteristicU2bb0 = 'ble-characteristic-u2bb0'
+ext.characteristicU2bb1 = 'ble-characteristic-u2bb1'
+ext.characteristicU2bb2 = 'ble-characteristic-u2bb2'
+ext.characteristicU2bb3 = 'ble-characteristic-u2bb3'
+ext.characteristicU2bb4 = 'ble-characteristic-u2bb4'
+ext.characteristicU2bb5 = 'ble-characteristic-u2bb5'
+ext.characteristicU2bb6 = 'ble-characteristic-u2bb6'
+ext.characteristicU2bb7 = 'ble-characteristic-u2bb7'
+ext.characteristicU2bb8 = 'ble-characteristic-u2bb8'
+ext.characteristicU2bb9 = 'ble-characteristic-u2bb9'
+ext.characteristicU2bba = 'ble-characteristic-u2bba'
+ext.characteristicU2bbb = 'ble-characteristic-u2bbb'
+ext.characteristicU2bbc = 'ble-characteristic-u2bbc'
+ext.characteristicU2bbd = 'ble-characteristic-u2bbd'
+ext.characteristicU2bbe = 'ble-characteristic-u2bbe'
+ext.characteristicU2bbf = 'ble-characteristic-u2bbf'
+ext.characteristicU2bc0 = 'ble-characteristic-u2bc0'
+ext.characteristicU2bc1 = 'ble-characteristic-u2bc1'
+ext.characteristicU2bc2 = 'ble-characteristic-u2bc2'
+ext.characteristicU2bc3 = 'ble-characteristic-u2bc3'
+ext.characteristic = 'ble-characteristic'

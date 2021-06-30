@@ -1,13 +1,8 @@
-def target = advertising
-def GROUP_ID = groupId
-def ARTIFACT_ID = target[artifactId]
-def VERSION_NAME = target[uploadVersionName]
-
 dependencies {
-    api "${groupId}:${coreConstantsAppearance.artifactId}:${coreConstantsAppearance.versionName}"
-    api "${groupId}:${coreConstantsCompany.artifactId}:${coreConstantsCompany.versionName}"
-    api "${groupId}:${coreConstantsDataType.artifactId}:${coreConstantsDataType.versionName}"
-    api "${groupId}:${coreConstantsScheme.artifactId}:${coreConstantsScheme.versionName}"
+    api "${myGroupId}:${coreConstantsAppearance}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsCompany}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsDataType}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsScheme}:${loadVersion}"
     api apiCoreUtils
     testImplementation junit
 }
@@ -15,9 +10,9 @@ dependencies {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId GROUP_ID
-            artifactId ARTIFACT_ID
-            version VERSION_NAME
+            groupId myGroupId
+            artifactId advertising
+            version uploadVersion
             from components.java
             artifact tasks.sourceJar
             pom {

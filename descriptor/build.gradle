@@ -1,32 +1,28 @@
-def target = descriptor
-def GROUP_ID = groupId
-def ARTIFACT_ID = target[artifactId]
-def VERSION_NAME = target[uploadVersionName]
-
 dependencies {
-    api "${groupId}:${descriptorU2900.artifactId}:${descriptorU2900.versionName}"
-    api "${groupId}:${descriptorU2901.artifactId}:${descriptorU2901.versionName}"
-    api "${groupId}:${descriptorU2902.artifactId}:${descriptorU2902.versionName}"
-    api "${groupId}:${descriptorU2903.artifactId}:${descriptorU2903.versionName}"
-    api "${groupId}:${descriptorU2904.artifactId}:${descriptorU2904.versionName}"
-    api "${groupId}:${descriptorU2905.artifactId}:${descriptorU2905.versionName}"
-    api "${groupId}:${descriptorU2906.artifactId}:${descriptorU2906.versionName}"
-    api "${groupId}:${descriptorU2907.artifactId}:${descriptorU2907.versionName}"
-    api "${groupId}:${descriptorU2908.artifactId}:${descriptorU2908.versionName}"
-    api "${groupId}:${descriptorU2909.artifactId}:${descriptorU2909.versionName}"
-    api "${groupId}:${descriptorU290a.artifactId}:${descriptorU290a.versionName}"
-    api "${groupId}:${descriptorU290b.artifactId}:${descriptorU290b.versionName}"
-    api "${groupId}:${descriptorU290c.artifactId}:${descriptorU290c.versionName}"
-    api "${groupId}:${descriptorU290d.artifactId}:${descriptorU290d.versionName}"
-    api "${groupId}:${descriptorU290e.artifactId}:${descriptorU290e.versionName}"
+    api "${myGroupId}:${descriptorU2900}:${loadVersion}"
+    api "${myGroupId}:${descriptorU2901}:${loadVersion}"
+    api "${myGroupId}:${descriptorU2902}:${loadVersion}"
+    api "${myGroupId}:${descriptorU2903}:${loadVersion}"
+    api "${myGroupId}:${descriptorU2904}:${loadVersion}"
+    api "${myGroupId}:${descriptorU2905}:${loadVersion}"
+    api "${myGroupId}:${descriptorU2906}:${loadVersion}"
+    api "${myGroupId}:${descriptorU2907}:${loadVersion}"
+    api "${myGroupId}:${descriptorU2908}:${loadVersion}"
+    api "${myGroupId}:${descriptorU2909}:${loadVersion}"
+    api "${myGroupId}:${descriptorU290a}:${loadVersion}"
+    api "${myGroupId}:${descriptorU290b}:${loadVersion}"
+    api "${myGroupId}:${descriptorU290c}:${loadVersion}"
+    api "${myGroupId}:${descriptorU290d}:${loadVersion}"
+    api "${myGroupId}:${descriptorU290e}:${loadVersion}"
+    api "${myGroupId}:${descriptorU290f}:${loadVersion}"
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId GROUP_ID
-            artifactId ARTIFACT_ID
-            version VERSION_NAME
+            groupId myGroupId
+            artifactId descriptor
+            version uploadVersion
             from components.java
             pom {
                 name = 'BLE Core Utility for Java'

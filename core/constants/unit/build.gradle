@@ -1,17 +1,12 @@
-def target = coreConstantsUnit
-def GROUP_ID = groupId
-def ARTIFACT_ID = target[artifactId]
-def VERSION_NAME = target[uploadVersionName]
-
 dependencies {
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId GROUP_ID
-            artifactId ARTIFACT_ID
-            version VERSION_NAME
+            groupId myGroupId
+            artifactId coreConstantsUnit
+            version uploadVersion
             from components.java
             artifact tasks.sourceJar
             pom {

@@ -1,27 +1,22 @@
-def target = coreConstants
-def GROUP_ID = groupId
-def ARTIFACT_ID = target[artifactId]
-def VERSION_NAME = target[uploadVersionName]
-
 dependencies {
     api "${crcLibrary}"
-    api "${groupId}:${coreConstantsAppearance.artifactId}:${coreConstantsAppearance.versionName}"
-    api "${groupId}:${coreConstantsCharacteristic.artifactId}:${coreConstantsCharacteristic.versionName}"
-    api "${groupId}:${coreConstantsCompany.artifactId}:${coreConstantsCompany.versionName}"
-    api "${groupId}:${coreConstantsDataType.artifactId}:${coreConstantsDataType.versionName}"
-    api "${groupId}:${coreConstantsDescriptor.artifactId}:${coreConstantsDescriptor.versionName}"
-    api "${groupId}:${coreConstantsErrorCode.artifactId}:${coreConstantsErrorCode.versionName}"
-    api "${groupId}:${coreConstantsScheme.artifactId}:${coreConstantsScheme.versionName}"
-    api "${groupId}:${coreConstantsService.artifactId}:${coreConstantsService.versionName}"
-    api "${groupId}:${coreConstantsUnit.artifactId}:${coreConstantsUnit.versionName}"
+    api "${myGroupId}:${coreConstantsAppearance}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsCharacteristic}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsCompany}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsDataType}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsDescriptor}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsErrorCode}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsScheme}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsService}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsUnit}:${loadVersion}"
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId GROUP_ID
-            artifactId ARTIFACT_ID
-            version VERSION_NAME
+            groupId myGroupId
+            artifactId coreConstants
+            version uploadVersion
             from components.java
             artifact tasks.sourceJar
             pom {

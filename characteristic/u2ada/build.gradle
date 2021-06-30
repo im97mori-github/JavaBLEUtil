@@ -1,11 +1,6 @@
-def target = characteristicU2ada
-def GROUP_ID = groupId
-def ARTIFACT_ID = target[artifactId]
-def VERSION_NAME = target[uploadVersionName]
-
 dependencies {
     api apiCoreUtils
-    api "${groupId}:${characteristicU2ad9.artifactId}:${characteristicU2ad9.versionName}"
+    api "${myGroupId}:${characteristicU2ad9}:${loadVersion}"
     testImplementation apiCharacteristicCore
     testImplementation junit
 }
@@ -13,9 +8,9 @@ dependencies {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId GROUP_ID
-            artifactId ARTIFACT_ID
-            version VERSION_NAME
+            groupId myGroupId
+            artifactId characteristicU2ada
+            version uploadVersion
             from components.java
             artifact tasks.sourceJar
             pom {

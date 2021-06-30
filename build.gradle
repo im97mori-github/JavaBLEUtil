@@ -31,121 +31,49 @@ subprojects {
     }
 }
 
-ext.groupId = 'org.im97mori'
-def GROUP_ID = groupId
+ext.myGroupId = 'org.im97mori'
+ext.loadVersion = '0.4.1'
+ext.uploadVersion = '0.4.1'
 
-ext.stacklogVersionName = "0.0.2"
+ext.coreConstantsAppearance = 'ble-core-constants-appearance'
+ext.coreConstantsCharacteristic = 'ble-core-constants-characteristic'
+ext.coreConstantsCompany =  'ble-core-constants-company'
+ext.coreConstantsDataType =  'ble-core-constants-datatype'
+ext.coreConstantsDescriptor = 'ble-core-constants-descriptor'
+ext.coreConstantsErrorCode = 'ble-core-constants-errorcode'
+ext.coreConstantsScheme = 'ble-core-constants-scheme'
+ext.coreConstantsService = 'ble-core-constants-service'
+ext.coreConstantsUnit = 'ble-core-constants-unit'
+ext.coreConstants = 'ble-core-constants'
+ext.coreUtils = 'ble-core-utils'
+ext.core = 'ble-core'
 
-ext.artifactId = 'artifactId'
-ext.versionCode = 'versionCode'
-ext.versionName = 'versionName'
-ext.uploadVersionName = 'uploadVersionName'
-
-ext.coreConstantsAppearance = [
-        artifactId         : 'ble-core-constants-appearance'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.coreConstantsCharacteristic = [
-        artifactId         : 'ble-core-constants-characteristic'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.coreConstantsCompany = [
-        artifactId         : 'ble-core-constants-company'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.coreConstantsDataType = [
-        artifactId         : 'ble-core-constants-datatype'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.coreConstantsDescriptor = [
-        artifactId         : 'ble-core-constants-descriptor'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.coreConstantsErrorCode = [
-        artifactId         : 'ble-core-constants-errorcode'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.coreConstantsScheme = [
-        artifactId         : 'ble-core-constants-scheme'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.coreConstantsService = [
-        artifactId         : 'ble-core-constants-service'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.coreConstantsUnit = [
-        artifactId         : 'ble-core-constants-unit'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.coreConstants = [
-        artifactId         : 'ble-core-constants'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.coreUtils = [
-        artifactId         : 'ble-core-utils'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.core = [
-        artifactId         : 'ble-core'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
-
-ext.advertising = [
-        artifactId         : 'ble-advertising'
-        , versionName      : '0.4.0'
-        , uploadVersionName: '0.4.0'
-]
+ext.advertising = 'ble-advertising'
 
 apply from: 'descriptor.gradle'
 apply from: 'characteristic.gradle'
 
-ext.bleJava = [
-        artifactId         : 'ble-java'
-        , versionName      : '0.4.0'
-]
+ext.bleJava = 'ble-java'
 
-ext.apiCoreConstants = "${groupId}:${coreConstants.artifactId}:${coreConstants.versionName}"
-ext.apiCoreUtils = "${groupId}:${coreUtils.artifactId}:${coreUtils.versionName}"
-ext.apiCore = "${groupId}:${core.artifactId}:${core.versionName}"
-ext.apiCharacteristicCore = "${groupId}:${characteristicCore.artifactId}:${characteristicCore.versionName}"
+ext.apiCoreConstants = "${myGroupId}:${coreConstants}:${loadVersion}"
+ext.apiCoreUtils = "${myGroupId}:${coreUtils}:${loadVersion}"
+ext.apiCore = "${myGroupId}:${core}:${loadVersion}"
+ext.apiCharacteristicCore = "${myGroupId}:${characteristicCore}:${loadVersion}"
 ext.crcLibrary = 'com.github.snksoft:crc:1.0.2'
 ext.junit = 'junit:junit:4.13'
 
 dependencies {
-    api "${groupId}:${advertising.artifactId}:${advertising.versionName}"
-    api "${groupId}:${descriptor.artifactId}:${descriptor.versionName}"
-    api "${groupId}:${characteristic.artifactId}:${characteristic.versionName}"
+    api "${myGroupId}:${advertising}:${loadVersion}"
+    api "${myGroupId}:${descriptor}:${loadVersion}"
+    api "${myGroupId}:${characteristic}:${loadVersion}"
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId GROUP_ID
-            artifactId "${bleJava.artifactId}"
-            version "${bleJava.versionName}"
+            groupId myGroupId
+            artifactId bleJava
+            version uploadVersion
             from components.java
             pom {
                 name = 'BLE Core Utility for Java'

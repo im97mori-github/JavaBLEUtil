@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * BLE GATT Service UUID
+ * BLE GATT Scheme UUID
  */
 public class SchemeUUID {
 

@@ -10,7 +10,6 @@ import com.github.snksoft.crc.CRC.Parameters;
 /**
  * BLE Constants
  */
-@Deprecated
 public class BLEConstants {
 
     /**
@@ -113,7 +112,6 @@ public class BLEConstants {
      * <p>
      * Core Specification v5.2 Vol 3 Part F 3.2.9
      */
-    @Deprecated
     public static final int MAXIMUM_MTU = 512;
 
 }

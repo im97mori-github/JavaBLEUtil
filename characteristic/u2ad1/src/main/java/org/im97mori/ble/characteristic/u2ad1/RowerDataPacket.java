@@ -121,7 +121,7 @@ public class RowerDataPacket implements ByteArrayInterface {
         } else {
             mAverageStrokeRate = 0;
         }
-        if (RowerDataUtils.isFlagsTotalDistancePresente(mFlags)) {
+        if (RowerDataUtils.isFlagsTotalDistancePresent(mFlags)) {
             mTotalDistance = BLEUtils.createUInt24(values, index);
             index += 3;
         } else {
@@ -371,7 +371,7 @@ public class RowerDataPacket implements ByteArrayInterface {
             byteBuffer.put((byte) mAverageStrokeRate);
             length++;
         }
-        if (RowerDataUtils.isFlagsTotalDistancePresente(mFlags)) {
+        if (RowerDataUtils.isFlagsTotalDistancePresent(mFlags)) {
             byteBuffer.put((byte) mTotalDistance);
             byteBuffer.put((byte) (mTotalDistance >> 8));
             byteBuffer.put((byte) (mTotalDistance >> 16));

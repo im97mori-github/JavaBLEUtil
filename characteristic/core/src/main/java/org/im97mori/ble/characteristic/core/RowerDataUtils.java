@@ -283,7 +283,7 @@ public class RowerDataUtils {
      * @param flags flags
      * @return {@code true}:Total Distance not Present, {@code false}:Total Distance Present
      */
-    public static boolean isFlagsTotalDistanceNotPresente(@NonNull byte[] flags) {
+    public static boolean isFlagsTotalDistanceNotPresent(@NonNull byte[] flags) {
         return isFlagsMatched(FLAGS_TOTAL_DISTANCE_PRESENT_MASK, FLAGS_TOTAL_DISTANCE_PRESENT_FALSE, flags);
     }
 
@@ -291,7 +291,7 @@ public class RowerDataUtils {
      * @param flags flags
      * @return {@code true}:Total Distance Present, {@code false}:Total Distance not Present
      */
-    public static boolean isFlagsTotalDistancePresente(@NonNull byte[] flags) {
+    public static boolean isFlagsTotalDistancePresent(@NonNull byte[] flags) {
         return isFlagsMatched(FLAGS_TOTAL_DISTANCE_PRESENT_MASK, FLAGS_TOTAL_DISTANCE_PRESENT_TRUE, flags);
     }
 

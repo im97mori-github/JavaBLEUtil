@@ -4,8 +4,8 @@ allprojects {
     apply plugin: 'maven-publish'
 
     repositories {
-        maven { url "https://github.com/im97mori-github/maven/raw/master" }
-//        maven { url System.getenv('MAVEN_REPOSITORY_URL') }
+//        maven { url "https://github.com/im97mori-github/maven/raw/master" }
+        maven { url System.getenv('MAVEN_REPOSITORY_URL') }
         google()
         mavenCentral()
     }
@@ -32,8 +32,8 @@ subprojects {
 }
 
 ext.myGroupId = 'org.im97mori'
-ext.loadVersion = '0.4.2'
-ext.uploadVersion = '0.4.2'
+ext.loadVersion = '0.4.3'
+ext.uploadVersion = '0.4.3'
 
 ext.coreConstantsAppearance = 'ble-core-constants-appearance'
 ext.coreConstantsCharacteristic = 'ble-core-constants-characteristic'

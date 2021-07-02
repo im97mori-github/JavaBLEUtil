@@ -664,8 +664,8 @@ public class RowerDataPacketTest {
 
         RowerDataPacket result1 = new RowerDataPacket(data);
         assertArrayEquals(Arrays.copyOfRange(data, 0, 2), result1.getFlags());
-        assertTrue(RowerDataUtils.isFlagsTotalDistanceNotPresente(result1.getFlags()));
-        assertFalse(RowerDataUtils.isFlagsTotalDistancePresente(result1.getFlags()));
+        assertTrue(RowerDataUtils.isFlagsTotalDistanceNotPresent(result1.getFlags()));
+        assertFalse(RowerDataUtils.isFlagsTotalDistancePresent(result1.getFlags()));
     }
 
     @Test
@@ -674,8 +674,8 @@ public class RowerDataPacketTest {
 
         RowerDataPacket result1 = new RowerDataPacket(data);
         assertArrayEquals(Arrays.copyOfRange(data, 0, 2), result1.getFlags());
-        assertFalse(RowerDataUtils.isFlagsTotalDistanceNotPresente(result1.getFlags()));
-        assertTrue(RowerDataUtils.isFlagsTotalDistancePresente(result1.getFlags()));
+        assertFalse(RowerDataUtils.isFlagsTotalDistanceNotPresent(result1.getFlags()));
+        assertTrue(RowerDataUtils.isFlagsTotalDistancePresent(result1.getFlags()));
         assertEquals(0x030201, result1.getTotalDistance());
     }
 

@@ -676,16 +676,16 @@ public class RowerDataUtilsTest {
     public void test_00201() {
         byte[] data = getData();
 
-        assertTrue(RowerDataUtils.isFlagsTotalDistanceNotPresente(data));
-        assertFalse(RowerDataUtils.isFlagsTotalDistancePresente(data));
+        assertTrue(RowerDataUtils.isFlagsTotalDistanceNotPresent(data));
+        assertFalse(RowerDataUtils.isFlagsTotalDistancePresent(data));
     }
 
     @Test
     public void test_00202() {
         byte[] data = getData();
 
-        assertFalse(RowerDataUtils.isFlagsTotalDistanceNotPresente(data));
-        assertTrue(RowerDataUtils.isFlagsTotalDistancePresente(data));
+        assertFalse(RowerDataUtils.isFlagsTotalDistanceNotPresent(data));
+        assertTrue(RowerDataUtils.isFlagsTotalDistancePresent(data));
     }
 
     @Test

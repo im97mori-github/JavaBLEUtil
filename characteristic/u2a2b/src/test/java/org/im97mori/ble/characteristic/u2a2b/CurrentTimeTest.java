@@ -6,6 +6,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.im97mori.ble.characteristic.core.DateTimeUtils;
+import org.im97mori.ble.characteristic.core.DayOfWeekUtils;
 import org.junit.Test;
 
 public class CurrentTimeTest {
@@ -21,7 +22,7 @@ public class CurrentTimeTest {
         data[ 4] = 0;
         data[ 5] = 0;
         data[ 6] = 0;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_IS_NOT_KNOWN;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_IS_NOT_KNOWN;
         data[ 8] = CurrentTime.FRACTIONS_256_NOT_SUPPORTED;
         data[ 9] = CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
@@ -36,7 +37,7 @@ public class CurrentTimeTest {
         assertEquals(0x00, result1.getHours());
         assertEquals(0x00, result1.getMinutes());
         assertEquals(0x00, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_IS_NOT_KNOWN, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_IS_NOT_KNOWN, result1.getDayOfWeek());
         assertTrue(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -74,7 +75,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_MONDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_MONDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
@@ -89,7 +90,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_MONDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_MONDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertTrue(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -127,7 +128,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_TUESDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_TUESDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
@@ -142,7 +143,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_TUESDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_TUESDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertTrue(result1.isDayOfWeekTuesday());
@@ -180,7 +181,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_WEDNESDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_WEDNESDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
@@ -195,7 +196,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_WEDNESDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_WEDNESDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -233,7 +234,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_THURSDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_THURSDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
@@ -248,7 +249,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_THURSDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_THURSDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -286,7 +287,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_FRIDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_FRIDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
@@ -301,7 +302,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_FRIDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_FRIDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -339,7 +340,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_SATURDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_SATURDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
@@ -354,7 +355,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_SATURDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_SATURDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -392,7 +393,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_SUNDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_SUNDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
@@ -407,7 +408,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -445,7 +446,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_SUNDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_SUNDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
@@ -460,7 +461,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -498,7 +499,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_SUNDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_SUNDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
@@ -513,7 +514,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -551,7 +552,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_SUNDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_SUNDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
@@ -566,7 +567,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -604,7 +605,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_SUNDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_SUNDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
@@ -619,7 +620,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -657,7 +658,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_SUNDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_SUNDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
@@ -672,7 +673,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -710,7 +711,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_SUNDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_SUNDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_NO_EXTERNAL_REFEREMCE_TIME_UPDATE
@@ -725,7 +726,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -763,7 +764,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_SUNDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_SUNDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_NO_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
@@ -778,7 +779,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());
@@ -816,7 +817,7 @@ public class CurrentTimeTest {
         data[ 4] = 23;
         data[ 5] = 59;
         data[ 6] = 59;
-        data[ 7] = CurrentTime.DAY_OF_WEEK_SUNDAY;
+        data[ 7] = DayOfWeekUtils.DAY_OF_WEEK_SUNDAY;
         data[ 8] = (byte) 255;
         data[ 9] = CurrentTime.ADJUST_REASON_MANUAL_TIME_UPDATE
                 | CurrentTime.ADJUST_REASON_EXTERNAL_REFERENCE_TIME_UPDATE
@@ -831,7 +832,7 @@ public class CurrentTimeTest {
         assertEquals(23, result1.getHours());
         assertEquals(59, result1.getMinutes());
         assertEquals(59, result1.getSeconds());
-        assertEquals(CurrentTime.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
+        assertEquals(DayOfWeekUtils.DAY_OF_WEEK_SUNDAY, result1.getDayOfWeek());
         assertFalse(result1.isDayOfWeekNotKnown());
         assertFalse(result1.isDayOfWeekMonday());
         assertFalse(result1.isDayOfWeekTuesday());

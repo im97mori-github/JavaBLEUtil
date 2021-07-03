@@ -5,6 +5,7 @@ import java.nio.ByteOrder;
 
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.ByteArrayInterface;
+import org.im97mori.ble.characteristic.core.DayOfWeekUtils;
 
 import androidx.annotation.NonNull;
 
@@ -12,46 +13,6 @@ import androidx.annotation.NonNull;
  * Current Time (Characteristics UUID: 0x2A2B)
  */
 public class CurrentTime implements ByteArrayInterface {
-
-    /**
-     * 0: Day of week is not known
-     */
-    public static final int DAY_OF_WEEK_IS_NOT_KNOWN = 0;
-
-    /**
-     * 1: Monday
-     */
-    public static final int DAY_OF_WEEK_MONDAY = 1;
-
-    /**
-     * 2: Tuesday
-     */
-    public static final int DAY_OF_WEEK_TUESDAY = 2;
-
-    /**
-     * 3: Wednesday
-     */
-    public static final int DAY_OF_WEEK_WEDNESDAY = 3;
-
-    /**
-     * 4: Thursday
-     */
-    public static final int DAY_OF_WEEK_THURSDAY = 4;
-
-    /**
-     * 5: Friday
-     */
-    public static final int DAY_OF_WEEK_FRIDAY = 5;
-
-    /**
-     * 6: Saturday
-     */
-    public static final int DAY_OF_WEEK_SATURDAY = 6;
-
-    /**
-     * 7: Sunday
-     */
-    public static final int DAY_OF_WEEK_SUNDAY = 7;
 
     /**
      * 0: device does not support the 1/256th of seconds
@@ -287,7 +248,7 @@ public class CurrentTime implements ByteArrayInterface {
      * @see #DAY_OF_WEEK_IS_NOT_KNOWN
      */
     public boolean isDayOfWeekNotKnown() {
-        return DAY_OF_WEEK_IS_NOT_KNOWN == mDayOfWeek;
+        return DayOfWeekUtils.isDayOfWeekNotKnown(mDayOfWeek);
     }
 
     /**
@@ -295,7 +256,7 @@ public class CurrentTime implements ByteArrayInterface {
      * @see #DAY_OF_WEEK_MONDAY
      */
     public boolean isDayOfWeekMonday() {
-        return DAY_OF_WEEK_MONDAY == mDayOfWeek;
+        return DayOfWeekUtils.isDayOfWeekMonday(mDayOfWeek);
     }
 
     /**
@@ -303,7 +264,7 @@ public class CurrentTime implements ByteArrayInterface {
      * @see #DAY_OF_WEEK_TUESDAY
      */
     public boolean isDayOfWeekTuesday() {
-        return DAY_OF_WEEK_TUESDAY == mDayOfWeek;
+        return DayOfWeekUtils.isDayOfWeekTuesday(mDayOfWeek);
     }
 
     /**
@@ -311,7 +272,7 @@ public class CurrentTime implements ByteArrayInterface {
      * @see #DAY_OF_WEEK_WEDNESDAY
      */
     public boolean isDayOfWeekWednesday() {
-        return DAY_OF_WEEK_WEDNESDAY == mDayOfWeek;
+        return DayOfWeekUtils.isDayOfWeekWednesday(mDayOfWeek);
     }
 
     /**
@@ -319,7 +280,7 @@ public class CurrentTime implements ByteArrayInterface {
      * @see #DAY_OF_WEEK_THURSDAY
      */
     public boolean isDayOfWeekThursday() {
-        return DAY_OF_WEEK_THURSDAY == mDayOfWeek;
+        return DayOfWeekUtils.isDayOfWeekThursday(mDayOfWeek);
     }
 
     /**
@@ -327,7 +288,7 @@ public class CurrentTime implements ByteArrayInterface {
      * @see #DAY_OF_WEEK_FRIDAY
      */
     public boolean isDayOfWeekFriday() {
-        return DAY_OF_WEEK_FRIDAY == mDayOfWeek;
+        return DayOfWeekUtils.isDayOfWeekFriday(mDayOfWeek);
     }
 
     /**
@@ -335,7 +296,7 @@ public class CurrentTime implements ByteArrayInterface {
      * @see #DAY_OF_WEEK_SATURDAY
      */
     public boolean isDayOfWeekSaturday() {
-        return DAY_OF_WEEK_SATURDAY == mDayOfWeek;
+        return DayOfWeekUtils.isDayOfWeekSaturday(mDayOfWeek);
     }
 
     /**
@@ -343,7 +304,7 @@ public class CurrentTime implements ByteArrayInterface {
      * @see #DAY_OF_WEEK_SUNDAY
      */
     public boolean isDayOfWeekSunday() {
-        return DAY_OF_WEEK_SUNDAY == mDayOfWeek;
+        return DayOfWeekUtils.isDayOfWeekSunday(mDayOfWeek);
     }
 
     /**

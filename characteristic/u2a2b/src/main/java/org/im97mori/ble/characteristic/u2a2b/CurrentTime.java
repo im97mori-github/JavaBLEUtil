@@ -5,7 +5,6 @@ import java.nio.ByteOrder;
 
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.ByteArrayInterface;
-import org.im97mori.ble.characteristic.core.DayOfWeekUtils;
 
 import androidx.annotation.NonNull;
 
@@ -13,16 +12,6 @@ import androidx.annotation.NonNull;
  * Current Time (Characteristics UUID: 0x2A2B)
  */
 public class CurrentTime implements ByteArrayInterface {
-
-    /**
-     * 0: device does not support the 1/256th of seconds
-     */
-    public static final int FRACTIONS_256_NOT_SUPPORTED = 0;
-
-    /**
-     * 1/256th of a second
-     */
-    public static final double FRACTIONS_256_UNIT = 1 / 256d;
 
     /**
      * @see #ADJUST_REASON_NO_MANUAL_TIME_UPDATE
@@ -244,97 +233,10 @@ public class CurrentTime implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:Day of week is not known, {@code false}:has day of week information
-     * @see #DAY_OF_WEEK_IS_NOT_KNOWN
-     */
-    public boolean isDayOfWeekNotKnown() {
-        return DayOfWeekUtils.isDayOfWeekNotKnown(mDayOfWeek);
-    }
-
-    /**
-     * @return {@code true}:Monday, {@code false}:not Monday
-     * @see #DAY_OF_WEEK_MONDAY
-     */
-    public boolean isDayOfWeekMonday() {
-        return DayOfWeekUtils.isDayOfWeekMonday(mDayOfWeek);
-    }
-
-    /**
-     * @return {@code true}:Tuesday, {@code false}:not Tuesday
-     * @see #DAY_OF_WEEK_TUESDAY
-     */
-    public boolean isDayOfWeekTuesday() {
-        return DayOfWeekUtils.isDayOfWeekTuesday(mDayOfWeek);
-    }
-
-    /**
-     * @return {@code true}:Wednesday, {@code false}:not Wednesday
-     * @see #DAY_OF_WEEK_WEDNESDAY
-     */
-    public boolean isDayOfWeekWednesday() {
-        return DayOfWeekUtils.isDayOfWeekWednesday(mDayOfWeek);
-    }
-
-    /**
-     * @return {@code true}:Thursday, {@code false}:not Thursday
-     * @see #DAY_OF_WEEK_THURSDAY
-     */
-    public boolean isDayOfWeekThursday() {
-        return DayOfWeekUtils.isDayOfWeekThursday(mDayOfWeek);
-    }
-
-    /**
-     * @return {@code true}:Friday, {@code false}:not Friday
-     * @see #DAY_OF_WEEK_FRIDAY
-     */
-    public boolean isDayOfWeekFriday() {
-        return DayOfWeekUtils.isDayOfWeekFriday(mDayOfWeek);
-    }
-
-    /**
-     * @return {@code true}:Saturday, {@code false}:not Saturday
-     * @see #DAY_OF_WEEK_SATURDAY
-     */
-    public boolean isDayOfWeekSaturday() {
-        return DayOfWeekUtils.isDayOfWeekSaturday(mDayOfWeek);
-    }
-
-    /**
-     * @return {@code true}:Sunday, {@code false}:not Sunday
-     * @see #DAY_OF_WEEK_SUNDAY
-     */
-    public boolean isDayOfWeekSunday() {
-        return DayOfWeekUtils.isDayOfWeekSunday(mDayOfWeek);
-    }
-
-    /**
      * @return Fractions256
      */
     public int getFractions256() {
         return mFractions256;
-    }
-
-    /**
-     * @return {@code true}:device does not support the 1/256th of seconds, {@code false}:device supports the 1/256th of seconds
-     * @see #FRACTIONS_256_NOT_SUPPORTED
-     */
-    public boolean isFractions256Supported() {
-        return FRACTIONS_256_NOT_SUPPORTED == mFractions256;
-    }
-
-    /**
-     * @return Fractions256 with Unit
-     * @see #FRACTIONS_256_UNIT
-     */
-    public double getFractions256WithUnit() {
-        return FRACTIONS_256_UNIT * mFractions256;
-    }
-
-    /**
-     * @return Fraction256(millis)
-     */
-    public long getFractions256Millis() {
-        return (long) (getFractions256WithUnit() * 1000L);
     }
 
     /**

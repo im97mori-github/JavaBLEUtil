@@ -1,7 +1,7 @@
 package org.im97mori.ble.characteristic.core;
 
 /**
- * Utility for org.bluetooth.characteristic.date_time(0x2A08) characteristic
+ * Utility for org.bluetooth.characteristic.day_of_week(0x2A09) characteristic
  */
 public class DayOfWeekUtils {
 

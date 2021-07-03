@@ -28,7 +28,7 @@ public class DayOfWeekTest {
         assertFalse(result1.isDayOfWeekSaturday());
         assertFalse(result1.isDayOfWeekSunday());
     }
-    
+
     @Test
     public void test_constructor_00002() {
         //@formatter:off
@@ -47,7 +47,7 @@ public class DayOfWeekTest {
         assertFalse(result1.isDayOfWeekSaturday());
         assertFalse(result1.isDayOfWeekSunday());
     }
-    
+
     @Test
     public void test_constructor_00003() {
         //@formatter:off
@@ -66,7 +66,7 @@ public class DayOfWeekTest {
         assertFalse(result1.isDayOfWeekSaturday());
         assertFalse(result1.isDayOfWeekSunday());
     }
-    
+
     @Test
     public void test_constructor_00004() {
         //@formatter:off
@@ -85,7 +85,7 @@ public class DayOfWeekTest {
         assertFalse(result1.isDayOfWeekSaturday());
         assertFalse(result1.isDayOfWeekSunday());
     }
-    
+
     @Test
     public void test_constructor_00005() {
         //@formatter:off
@@ -104,7 +104,7 @@ public class DayOfWeekTest {
         assertFalse(result1.isDayOfWeekSaturday());
         assertFalse(result1.isDayOfWeekSunday());
     }
-    
+
     @Test
     public void test_constructor_00006() {
         //@formatter:off
@@ -123,7 +123,7 @@ public class DayOfWeekTest {
         assertFalse(result1.isDayOfWeekSaturday());
         assertFalse(result1.isDayOfWeekSunday());
     }
-    
+
     @Test
     public void test_constructor_00007() {
         //@formatter:off
@@ -142,7 +142,7 @@ public class DayOfWeekTest {
         assertTrue(result1.isDayOfWeekSaturday());
         assertFalse(result1.isDayOfWeekSunday());
     }
-    
+
     @Test
     public void test_constructor_00008() {
         //@formatter:off
@@ -160,6 +160,14 @@ public class DayOfWeekTest {
         assertFalse(result1.isDayOfWeekFriday());
         assertFalse(result1.isDayOfWeekSaturday());
         assertTrue(result1.isDayOfWeekSunday());
+    }
+
+    @Test
+    public void test_constructor_00101() {
+        int dayOfWeek = 1;
+
+        DayOfWeek result1 = new DayOfWeek(dayOfWeek);
+        assertEquals(dayOfWeek, result1.getDayOfWeek());
     }
 
     @Test

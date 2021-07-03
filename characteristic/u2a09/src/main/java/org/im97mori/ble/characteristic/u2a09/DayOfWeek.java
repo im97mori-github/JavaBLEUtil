@@ -26,6 +26,15 @@ public class DayOfWeek implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param dayOfWeek   Day of Week
+     */
+    public DayOfWeek(int dayOfWeek) {
+        mDayOfWeek = dayOfWeek;
+    }
+
+    /**
      * @return Day of Week
      * @see org.im97mori.ble.characteristic.core.DayOfWeekUtils
      */

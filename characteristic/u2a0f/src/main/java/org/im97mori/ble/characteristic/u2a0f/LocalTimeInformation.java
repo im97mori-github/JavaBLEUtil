@@ -14,16 +14,6 @@ import androidx.annotation.NonNull;
 public class LocalTimeInformation implements ByteArrayInterface {
 
     /**
-     * 255(0xff): time zone offset is not known
-     */
-    public static final int TIME_ZONE_IS_NOT_KNOWN = -128;
-
-    /**
-     * TimeZone unit(min)
-     */
-    public static final int TIME_ZONE_UNIT = 15;
-
-    /**
      * Time Zone
      */
     private final int mTimeZone;
@@ -59,28 +49,6 @@ public class LocalTimeInformation implements ByteArrayInterface {
      */
     public int getTimeZone() {
         return mTimeZone;
-    }
-
-    /**
-     * @return {@code true}:time zone offset is not known, {@code false}:has time zone offset information
-     * @see #TIME_ZONE_IS_NOT_KNOWN
-     */
-    public boolean isTimeZoneNotKnown() {
-        return TIME_ZONE_IS_NOT_KNOWN == mTimeZone;
-    }
-
-    /**
-     * @return Time Zone offset(mins)
-     */
-    public int getTimeZoneOffsetMin() {
-        return TIME_ZONE_UNIT * mTimeZone;
-    }
-
-    /**
-     * @return Time Zone offset(millis)
-     */
-    public long getTimeZoneOffsetMillis() {
-        return getTimeZoneOffsetMin() * 1000L;
     }
 
     /**

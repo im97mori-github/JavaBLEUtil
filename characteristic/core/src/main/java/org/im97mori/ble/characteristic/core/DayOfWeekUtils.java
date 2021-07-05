@@ -5,7 +5,6 @@ package org.im97mori.ble.characteristic.core;
  */
 public class DayOfWeekUtils {
 
-
     /**
      * 0: Day of week is not known
      */

@@ -5,10 +5,14 @@ import org.im97mori.ble.ByteArrayInterface;
 import androidx.annotation.NonNull;
 
 /**
- * object name (Characteristics UUID: 0x2ABE)
+ * Object Name (Characteristics UUID: 0x2ABE)
  */
-// TODO
 public class ObjectName implements ByteArrayInterface {
+
+    /**
+     * Object Name
+     */
+    private final String mObjectName;
 
     /**
      * Constructor from {@link BluetoothGattCharacteristic}
@@ -16,6 +20,23 @@ public class ObjectName implements ByteArrayInterface {
      * @param bluetoothGattCharacteristic Characteristics UUID: 0x2ABE
      */
     public ObjectName(@NonNull byte[] values) {
+        mObjectName = new String(values);
+    }
+
+    /**
+     * Constructor from parameters
+     * 
+     * @param objectName Object Name
+     */
+    public ObjectName(@NonNull String objectName) {
+        mObjectName = objectName;
+    }
+
+    /**
+     * @return Object Name
+     */
+    public String getObjectName() {
+        return mObjectName;
     }
 
     /**
@@ -24,8 +45,7 @@ public class ObjectName implements ByteArrayInterface {
     @Override
     @NonNull
     public byte[] getBytes() {
-        byte[] data = new byte[0];
-        return data;
+        return mObjectName.getBytes();
     }
 
 }

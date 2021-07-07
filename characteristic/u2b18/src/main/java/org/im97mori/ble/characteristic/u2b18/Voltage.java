@@ -1,5 +1,9 @@
 package org.im97mori.ble.characteristic.u2b18;
 
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
+import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.ByteArrayInterface;
 
 import androidx.annotation.NonNull;
@@ -7,8 +11,12 @@ import androidx.annotation.NonNull;
 /**
  * Voltage (Characteristics UUID: 0x2B18)
  */
-// TODO
 public class Voltage implements ByteArrayInterface {
+
+    /**
+     * Voltage Value
+     */
+    private int mVoltageValue;
 
     /**
      * Constructor from {@link BluetoothGattCharacteristic}
@@ -16,6 +24,23 @@ public class Voltage implements ByteArrayInterface {
      * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B18
      */
     public Voltage(@NonNull byte[] values) {
+        mVoltageValue = BLEUtils.createUInt16(values, 0);
+    }
+
+    /**
+     * Constructor from parameters
+     * 
+     * @param voltageValue Voltage Value
+     */
+    public Voltage(int voltageValue) {
+        mVoltageValue = voltageValue;
+    }
+
+    /**
+     * @return Voltage Value
+     */
+    public int getVoltageValue() {
+        return mVoltageValue;
     }
 
     /**
@@ -24,7 +49,9 @@ public class Voltage implements ByteArrayInterface {
     @Override
     @NonNull
     public byte[] getBytes() {
-        byte[] data = new byte[0];
+        byte[] data = new byte[2];
+        ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+        byteBuffer.putShort((short) mVoltageValue);
         return data;
     }
 

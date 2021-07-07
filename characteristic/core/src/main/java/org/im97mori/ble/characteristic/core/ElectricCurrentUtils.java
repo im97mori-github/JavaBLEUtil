@@ -6,7 +6,7 @@ package org.im97mori.ble.characteristic.core;
 public class ElectricCurrentUtils {
 
     /**
-     * 0xffff: Current value is not known
+     * 0xffff : Current value is not known
      */
     public static final int CURRENT_VALUE_IS_NOT_KNOWN = 0xffff;
 

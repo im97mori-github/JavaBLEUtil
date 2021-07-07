@@ -1,5 +1,9 @@
 package org.im97mori.ble.characteristic.u2ae1;
 
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
+import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.ByteArrayInterface;
 
 import androidx.annotation.NonNull;
@@ -7,8 +11,17 @@ import androidx.annotation.NonNull;
 /**
  * Average Voltage (Characteristics UUID: 0x2AE1)
  */
-// TODO
 public class AverageVoltage implements ByteArrayInterface {
+
+    /**
+     * Voltage Value
+     */
+    private int mVoltageValue;
+
+    /**
+     * Sensing Duration
+     */
+    private final int mSensingDuration;
 
     /**
      * Constructor from {@link BluetoothGattCharacteristic}
@@ -16,6 +29,33 @@ public class AverageVoltage implements ByteArrayInterface {
      * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AE1
      */
     public AverageVoltage(@NonNull byte[] values) {
+        mVoltageValue = BLEUtils.createUInt16(values, 0);
+        mSensingDuration = BLEUtils.createUInt8(values, 2);
+    }
+
+    /**
+     * Constructor from parameters
+     * 
+     * @param voltageValue Voltage Value
+     * @param sensingDuration Sensing Duration
+     */
+    public AverageVoltage(int voltageValue, int sensingDuration) {
+        mVoltageValue = voltageValue;
+        mSensingDuration = sensingDuration;
+    }
+
+    /**
+     * @return Voltage Value
+     */
+    public int getVoltageValue() {
+        return mVoltageValue;
+    }
+
+    /**
+     * @return Sensing Duration
+     */
+    public int getSensingDuration() {
+        return mSensingDuration;
     }
 
     /**
@@ -24,7 +64,10 @@ public class AverageVoltage implements ByteArrayInterface {
     @Override
     @NonNull
     public byte[] getBytes() {
-        byte[] data = new byte[0];
+        byte[] data = new byte[3];
+        ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+        byteBuffer.putShort((short) mVoltageValue);
+        byteBuffer.put((byte) mSensingDuration);
         return data;
     }
 

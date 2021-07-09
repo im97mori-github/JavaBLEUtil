@@ -19,8 +19,8 @@ public class ElectricCurrentUtils {
      * @return {@code true}:Current value is not known, {@code false}:has Current value information
      * @see #CURRENT_VALUE_IS_NOT_KNOWN
      */
-    public static boolean isCurrentValueNotKnown(int timeZone) {
-        return CURRENT_VALUE_IS_NOT_KNOWN == timeZone;
+    public static boolean isCurrentValueNotKnown(int current) {
+        return CURRENT_VALUE_IS_NOT_KNOWN == current;
     }
 
     /**

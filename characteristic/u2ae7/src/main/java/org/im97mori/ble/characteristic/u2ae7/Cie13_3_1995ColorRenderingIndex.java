@@ -14,12 +14,12 @@ import androidx.annotation.NonNull;
 public class Cie13_3_1995ColorRenderingIndex implements ByteArrayInterface {
 
     /**
-     * Count Minimum value
+     * Color Rendering Index Minimum value
      */
     public static final int COLOR_RENDERING_INDEX_VALUE_MINIMUM = -128;
 
     /**
-     * Count Maximum value
+     * Color Rendering Index Maximum value
      */
     public static final int COLOR_RENDERING_INDEX_VALUE_MAXIMUM = 100;
 

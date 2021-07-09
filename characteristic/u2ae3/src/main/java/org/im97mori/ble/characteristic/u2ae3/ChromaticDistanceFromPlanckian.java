@@ -1,5 +1,9 @@
 package org.im97mori.ble.characteristic.u2ae3;
 
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
+import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.ByteArrayInterface;
 
 import androidx.annotation.NonNull;
@@ -7,8 +11,12 @@ import androidx.annotation.NonNull;
 /**
  * Chromatic Distance From Planckian (Characteristics UUID: 0x2AE3)
  */
-// TODO
 public class ChromaticDistanceFromPlanckian implements ByteArrayInterface {
+
+    /**
+     * Distance From Planckian
+     */
+    private final int mDistanceFromPlanckian;
 
     /**
      * Constructor from {@link BluetoothGattCharacteristic}
@@ -16,6 +24,23 @@ public class ChromaticDistanceFromPlanckian implements ByteArrayInterface {
      * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AE3
      */
     public ChromaticDistanceFromPlanckian(@NonNull byte[] values) {
+        mDistanceFromPlanckian = BLEUtils.createSInt16(values, 0);
+    }
+
+    /**
+     * Constructor from parameters
+     * 
+     * @param distanceFromPlanckian Distance From Planckian
+     */
+    public ChromaticDistanceFromPlanckian(int distanceFromPlanckian) {
+        mDistanceFromPlanckian = distanceFromPlanckian;
+    }
+
+    /**
+     * @return Distance From Planckian
+     */
+    public int getDistanceFromPlanckian() {
+        return mDistanceFromPlanckian;
     }
 
     /**
@@ -24,7 +49,9 @@ public class ChromaticDistanceFromPlanckian implements ByteArrayInterface {
     @Override
     @NonNull
     public byte[] getBytes() {
-        byte[] data = new byte[0];
+        byte[] data = new byte[2];
+        ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+        byteBuffer.putShort((short) mDistanceFromPlanckian);
         return data;
     }
 

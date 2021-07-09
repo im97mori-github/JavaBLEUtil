@@ -6,7 +6,7 @@ package org.im97mori.ble.characteristic.core;
 public class VoltageUtils {
 
     /**
-     * 0xFFFF : A raw value of 0xFF represents ‘value is not known’
+     * 0xFFFF : A raw value of 0xFFFF represents ‘value is not known’
      */
     public static final int VOLTAGE_VALUE_IS_NOT_KNOWN = 0xFFFF;
 

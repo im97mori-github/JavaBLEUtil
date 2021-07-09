@@ -17,7 +17,7 @@ public class ChromaticityCoordinateTest {
         //@formatter:on
 
         ChromaticityCoordinate result = new ChromaticityCoordinate(data);
-        assertEquals(BLEUtils.createSInt16(data, 0), result.getChromaticityCoordinate());
+        assertEquals(BLEUtils.createUInt16(data, 0), result.getChromaticityCoordinate());
     }
 
     @Test

@@ -1,10 +1,16 @@
 package org.im97mori.ble;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.UUID;
 
 import com.github.snksoft.crc.CRC;
@@ -337,16 +343,16 @@ public class BLEUtils {
 
     /**
      * <p>
-     * create IEEE-11073 32-bit FLOAT manitissa
+     * create IEEE-11073 32-bit FLOAT mantissa
      * <p>
      * Core Specification v5.2 Vol 3 Part G 3.3.3.5.2 Format Table 3.16 (0x17)
      * </p>
      *
      * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()} or {@link BluetoothGattDescriptor#getValue()}
      * @param offset data offset
-     * @return IEEE-11073 32-bit FLOAT manitissa
+     * @return IEEE-11073 32-bit FLOAT mantissa
      */
-    public static int createFloatManitissa(@NonNull byte[] data, int offset) {
+    public static int createFloatmantissa(@NonNull byte[] data, int offset) {
         return createByteBuffer(data, offset, 3, Integer.SIZE / 8).getInt() << 8 >> 8;
     }
 
@@ -377,7 +383,135 @@ public class BLEUtils {
      * @return IEEE-11073 32-bit FLOAT
      */
     public static double createFloat(@NonNull byte[] data, int offset) {
-        return createFloatManitissa(data, offset) * Math.pow(10, createFloatExponent(data, offset));
+        BigDecimal bd = BigDecimal.valueOf(createFloatmantissa(data, offset) * Math.pow(10, createFloatExponent(data, offset)));
+        bd = bd.round(new MathContext(8, RoundingMode.DOWN));
+        return bd.doubleValue();
+    }
+
+    /**
+     * convert double value to IEEE-11073 32-bit FLOAT
+     * @param value target value
+     * @return IEEE-11073 32-bit FLOAT byte array
+     */
+    // TODO need more test pattern
+    public static byte[] floatToByteArray(double value) {
+        ByteBuffer bb = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN);
+        if (Double.isNaN(value)) {
+            bb.putInt(FLOAT_NAN);
+        } else if (Double.POSITIVE_INFINITY == value) {
+            bb.putInt(FLOAT_POSITIVE_INFINITY);
+        } else if (Double.NEGATIVE_INFINITY == value) {
+            bb.putInt(FLOAT_NEGATIVE_INFINITY);
+        } else {
+            DecimalFormat formatter = (DecimalFormat) NumberFormat.getNumberInstance(Locale.US);
+            formatter.setGroupingUsed(false);
+            formatter.setMaximumFractionDigits(129);
+            formatter.setMinimumFractionDigits(0);
+            formatter.setMaximumIntegerDigits(128);
+            formatter.setMinimumIntegerDigits(1);
+            formatter.setDecimalSeparatorAlwaysShown(false);
+            formatter.setNegativePrefix("");
+
+            String formattedValue = formatter.format(value);
+
+            int length = formattedValue.length();
+            int decimalSeparatorIndex = formattedValue.indexOf('.');
+
+            int exponent10;
+            if (decimalSeparatorIndex == -1) {
+                int firstZeroIndex = formattedValue.indexOf('0');
+                if (firstZeroIndex == -1) {
+                    exponent10 = 0;
+                } else {
+                    exponent10 = length - firstZeroIndex;
+                }
+            } else {
+                exponent10 = decimalSeparatorIndex - length + 1;
+            }
+            if (exponent10 > 127 || exponent10 < -128) {
+                bb.putInt(FLOAT_NRES);
+            } else {
+                double multipiler = Math.pow(10, exponent10);
+                value /= multipiler;
+                value = Math.round(value);
+                int mantissa = (int) value;
+                if (mantissa > 0x7FFFFE) {
+                    bb.putInt(FLOAT_NRES);
+                } else if (mantissa < 0xFF800000) {
+                    bb.putInt(FLOAT_NRES);
+                } else {
+                    bb.put((byte) mantissa);
+                    bb.put((byte) (mantissa >> 8));
+                    bb.put((byte) (mantissa >> 16));
+                    bb.put((byte) exponent10);
+                }
+            }
+        }
+        return bb.array();
+    }
+
+    /**
+     * convert double value to IEEE-11073 16-bit SFLOAT
+     * @param value target value
+     * @return IEEE-11073 16-bit SFLOAT byte array
+     */
+    // TODO need more test pattern
+    public static byte[] sfloatToByteArray(double value) {
+        ByteBuffer bb = ByteBuffer.allocate(2).order(ByteOrder.LITTLE_ENDIAN);
+        if (Double.isNaN(value)) {
+            bb.putShort((short) SFLOAT_NAN);
+        } else if (Double.POSITIVE_INFINITY == value) {
+            bb.putShort((short) SFLOAT_POSITIVE_INFINITY);
+        } else if (Double.NEGATIVE_INFINITY == value) {
+            bb.putShort((short) SFLOAT_NEGATIVE_INFINITY);
+        } else {
+            DecimalFormat formatter = (DecimalFormat) NumberFormat.getNumberInstance(Locale.US);
+            formatter.setGroupingUsed(false);
+            formatter.setMaximumFractionDigits(9);
+            formatter.setMinimumFractionDigits(0);
+            formatter.setMaximumIntegerDigits(8);
+            formatter.setMinimumIntegerDigits(1);
+            formatter.setDecimalSeparatorAlwaysShown(false);
+            formatter.setNegativePrefix("");
+
+            String formattedValue = formatter.format(value);
+
+            int length = formattedValue.length();
+            int decimalSeparatorIndex = formattedValue.indexOf('.');
+
+            int exponent10;
+            if (decimalSeparatorIndex == -1) {
+                int firstZeroIndex = formattedValue.indexOf('0');
+                if (firstZeroIndex == -1) {
+                    exponent10 = 0;
+                } else {
+                    exponent10 = length - firstZeroIndex;
+                }
+            } else {
+                exponent10 = decimalSeparatorIndex - length + 1;
+            }
+            if (exponent10 > 7 || exponent10 < -8) {
+                bb.putShort((short) SFLOAT_NRES);
+            } else {
+                double multipiler = Math.pow(10, exponent10);
+                value /= multipiler;
+                value = Math.round(value);
+                int mantissa = (int) value;
+                if (mantissa > 0x07FE) {
+                    bb.putShort((short) SFLOAT_NRES);
+                } else if (mantissa < 0xFFFFF800) {
+                    bb.putShort((short) SFLOAT_NRES);
+                } else {
+                    bb.put((byte) mantissa);
+                    int combine = (int) exponent10;
+                    combine &= 0xF;
+                    combine <<= 4;
+                    combine |= ((mantissa >> 8) & 0xF);
+                    bb.put((byte) combine);
+                }
+            }
+        }
+        return bb.array();
     }
 
     /**
@@ -432,16 +566,16 @@ public class BLEUtils {
 
     /**
      * <p>
-     * create IEEE-11073 16-bit SFLOAT manitissa
+     * create IEEE-11073 16-bit SFLOAT mantissa
      * <p>
      * Core Specification v5.2 Vol 3 Part G 3.3.3.5.2 Format Table 3.16 (0x16)
      * </p>
      *
      * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()} or {@link BluetoothGattDescriptor#getValue()}
      * @param offset data offset
-     * @return IEEE-11073 16-bit SFLOAT manitissa
+     * @return IEEE-11073 16-bit SFLOAT mantissa
      */
-    public static int createSfloatManitissa(@NonNull byte[] data, int offset) {
+    public static int createSfloatmantissa(@NonNull byte[] data, int offset) {
         return createByteBuffer(data, offset, 2, Integer.SIZE / 8).getInt() << 20 >> 20;
     }
 
@@ -472,7 +606,9 @@ public class BLEUtils {
      * @return IEEE-11073 16-bit SFLOAT
      */
     public static double createSfloat(@NonNull byte[] data, int offset) {
-        return createSfloatManitissa(data, offset) * Math.pow(10, createSfloatExponent(data, offset));
+        BigDecimal bd = BigDecimal.valueOf(createSfloatmantissa(data, offset) * Math.pow(10, createSfloatExponent(data, offset)));
+        bd = bd.round(new MathContext(5, RoundingMode.DOWN));
+        return bd.doubleValue();
     }
 
     /**

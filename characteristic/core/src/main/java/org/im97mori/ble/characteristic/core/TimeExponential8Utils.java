@@ -23,7 +23,7 @@ public class TimeExponential8Utils {
     /**
      * The time duration is given by the value 1.1 ^ (N–64) in seconds
      */
-    public static final double TIME_EXPONENTIAL_8_MANITISSA = 1.1d;
+    public static final double TIME_EXPONENTIAL_8_MANTISSA = 1.1d;
 
     /**
      * The time duration is given by the value 1.1 ^ (N–64) in seconds
@@ -62,7 +62,7 @@ public class TimeExponential8Utils {
      * @return Time Exponential 8(second)
      */
     public static int getTimeExponential8Second(int timeExponential8) {
-        return (int) Math.floor(Math.pow(TIME_EXPONENTIAL_8_MANITISSA, timeExponential8 + TIME_EXPONENTIAL_8_EXPONENT_OFFSET));
+        return (int) Math.floor(Math.pow(TIME_EXPONENTIAL_8_MANTISSA, timeExponential8 + TIME_EXPONENTIAL_8_EXPONENT_OFFSET));
     }
 
 }

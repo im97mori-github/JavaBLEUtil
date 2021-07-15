@@ -119,6 +119,24 @@ public class IntermediateTemperature implements ByteArrayInterface {
      * @param seconds                               Seconds
      * @param temperatureTextDescription            Temperature Text Description
      */
+    public IntermediateTemperature(int flags, double temperatureMeasurementValueCelsius, double temperatureMeasurementValueFahrenheit, int year, int month, int day, int hours, int minutes, int seconds, int temperatureTextDescription) {
+        this(flags, new IEEE_11073_20601_FLOAT(temperatureMeasurementValueCelsius), new IEEE_11073_20601_FLOAT(temperatureMeasurementValueFahrenheit), year, month, day, hours, minutes, seconds, temperatureTextDescription);
+    }
+
+    /**
+     * Constructor from parameters
+     * 
+     * @param flags                                 Flags
+     * @param temperatureMeasurementValueCelsius    Temperature Measurement Value (Celsius)
+     * @param temperatureMeasurementValueFahrenheit Temperature Measurement Value (Fahrenheit)
+     * @param year                                  Year
+     * @param month                                 Month
+     * @param day                                   Day
+     * @param hours                                 Hours
+     * @param minutes                               Minutes
+     * @param seconds                               Seconds
+     * @param temperatureTextDescription            Temperature Text Description
+     */
     public IntermediateTemperature(int flags, IEEE_11073_20601_FLOAT temperatureMeasurementValueCelsius, IEEE_11073_20601_FLOAT temperatureMeasurementValueFahrenheit, int year, int month, int day, int hours, int minutes, int seconds, int temperatureTextDescription) {
         mFlags = flags;
         mTemperatureMeasurementValueCelsius = temperatureMeasurementValueCelsius;

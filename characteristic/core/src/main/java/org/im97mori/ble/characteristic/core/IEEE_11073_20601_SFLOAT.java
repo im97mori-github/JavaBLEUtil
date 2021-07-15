@@ -33,6 +33,16 @@ public class IEEE_11073_20601_SFLOAT {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param value SFLOAT
+     */
+    public IEEE_11073_20601_SFLOAT(double value) {
+        mData = BLEUtils.sfloatToByteArray(value);
+        mSfloat = value;
+    }
+
+    /**
      * @return SFLOAT byte array
      */
     public byte[] getData() {

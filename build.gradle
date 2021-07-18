@@ -4,30 +4,10 @@ allprojects {
     apply plugin: 'maven-publish'
 
     repositories {
-//        maven { url "https://github.com/im97mori-github/maven/raw/master" }
-        maven { url System.getenv('MAVEN_REPOSITORY_URL') }
+        maven { url "https://github.com/im97mori-github/maven/raw/master" }
+//        maven { url System.getenv('MAVEN_REPOSITORY_URL') }
         google()
         mavenCentral()
-    }
-}
-
-subprojects {
-    def defaultEncoding = 'UTF-8'
-    tasks.withType(JavaCompile) {
-        options.encoding = defaultEncoding
-    }
-
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-
-    dependencies {
-        implementation 'androidx.annotation:annotation:1.2.0'
-        testImplementation 'junit:junit:4.13'
-    }
-
-    task sourceJar(type: Jar) {
-        classifier 'sources'
-        from sourceSets.main.allJava
     }
 }
 
@@ -65,12 +45,32 @@ ext.apiCoreUtils = "${myGroupId}:${coreUtils}:${loadVersion}"
 ext.apiCore = "${myGroupId}:${core}:${loadVersion}"
 ext.apiCharacteristicCore = "${myGroupId}:${characteristicCore}:${loadVersion}"
 ext.crcLibrary = 'com.github.snksoft:crc:1.0.2'
-ext.junit = 'junit:junit:4.13'
+ext.junit = 'junit:junit:4.13.2'
 
 dependencies {
     api "${myGroupId}:${advertising}:${loadVersion}"
     api "${myGroupId}:${descriptor}:${loadVersion}"
     api "${myGroupId}:${characteristic}:${loadVersion}"
+}
+
+subprojects {
+    def defaultEncoding = 'UTF-8'
+    tasks.withType(JavaCompile) {
+        options.encoding = defaultEncoding
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    dependencies {
+        implementation 'androidx.annotation:annotation:1.2.0'
+        testImplementation junit
+    }
+
+    task sourceJar(type: Jar) {
+        classifier 'sources'
+        from sourceSets.main.allJava
+    }
 }
 
 publishing {

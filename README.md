@@ -13,5 +13,5 @@ project/build.gradle
 project/module/build.gradle
 
     dependencies {
-        implementation 'org.im97mori:ble-java:0.4.4'
+        implementation 'org.im97mori:ble-java:0.4.5'
     }

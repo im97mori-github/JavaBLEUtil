@@ -74,7 +74,7 @@ public class LuminousEnergy implements ByteArrayInterface {
     /**
      * @return Luminous Energy(lumen hour)
      */
-    public double getLuminousEfficacyLumenHour() {
+    public double getLuminousEnergyLumenHour() {
         double luminousEfficacyLumenHour = mLuminousEnergy * LUMINOUS_ENERGY_VALUE_UNIT;
         if (luminousEfficacyLumenHour < LUMINOUS_ENERGY_VALUE_MINIMUM) {
             luminousEfficacyLumenHour = LUMINOUS_ENERGY_VALUE_MINIMUM;

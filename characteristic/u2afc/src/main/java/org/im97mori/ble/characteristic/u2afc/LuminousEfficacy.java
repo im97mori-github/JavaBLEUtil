@@ -24,12 +24,12 @@ public class LuminousEfficacy implements ByteArrayInterface {
     public static final double LUMINOUS_EFFICACY_VALUE_UNIT = 0.1d;
 
     /**
-     * Illuminance Minimum value
+     * Luminous Efficacy Minimum value
      */
     public static final double LUMINOUS_EFFICACY_VALUE_MINIMUM = 0d;
 
     /**
-     * Illuminance Maximum value
+     * Luminous Efficacy Maximum value
      */
     public static final double LUMINOUS_EFFICACY_VALUE_MAXIMUM = 1800d;
 

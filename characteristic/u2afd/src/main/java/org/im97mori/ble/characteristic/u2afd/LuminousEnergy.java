@@ -24,12 +24,12 @@ public class LuminousEnergy implements ByteArrayInterface {
     public static final double LUMINOUS_ENERGY_VALUE_UNIT = 1000d;
 
     /**
-     * Illuminance Minimum value
+     * Luminous Energy Minimum value
      */
     public static final double LUMINOUS_ENERGY_VALUE_MINIMUM = 0d;
 
     /**
-     * Illuminance Maximum value
+     * Luminous Energy Maximum value
      */
     public static final double LUMINOUS_ENERGY_VALUE_MAXIMUM = 16777214000d;
 

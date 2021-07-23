@@ -35,7 +35,7 @@ public class ChromaticDistanceFromPlanckianUtils {
      * @return {@code true}:Distance From Planckian is not known, {@code false}:has Distance From Planckian information
      * @see #DISTANCE_FROM_PLANCKIAN_VALUE_IS_NOT_KNOWN
      */
-    public static boolean isdistanceFromPlanckianIsNotKnown(int distanceFromPlanckian) {
+    public static boolean isDistanceFromPlanckianIsNotKnown(int distanceFromPlanckian) {
         return DISTANCE_FROM_PLANCKIAN_VALUE_IS_NOT_KNOWN == distanceFromPlanckian;
     }
 
@@ -44,7 +44,7 @@ public class ChromaticDistanceFromPlanckianUtils {
      * @return {@code true}:Distance From Planckian is not known, {@code false}:has Distance From Planckian information
      * @see #DISTANCE_FROM_PLANCKIAN_VALUE_IS_NOT_VALID
      */
-    public static boolean isdistanceFromPlanckianIsNotValid(int distanceFromPlanckian) {
+    public static boolean isDistanceFromPlanckianIsNotValid(int distanceFromPlanckian) {
         return DISTANCE_FROM_PLANCKIAN_VALUE_IS_NOT_VALID == distanceFromPlanckian;
     }
 
@@ -52,7 +52,7 @@ public class ChromaticDistanceFromPlanckianUtils {
      * @param distanceFromPlanckian Distance From Planckian
      * @return Distance From Planckian(volt)
      */
-    public static double getVoltageValueWithUnit(int distanceFromPlanckian) {
+    public static double getDistanceFromPlanckianWithUnit(int distanceFromPlanckian) {
         double distanceFromPlanckianWithUnit = distanceFromPlanckian * DISTANCE_FROM_PLANCKIAN_VALUE_UNIT;
         if (distanceFromPlanckianWithUnit < DISTANCE_FROM_PLANCKIAN_VALUE_MINIMUM) {
             distanceFromPlanckianWithUnit = DISTANCE_FROM_PLANCKIAN_VALUE_MINIMUM;

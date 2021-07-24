@@ -15,8 +15,8 @@ public class RelativeRuntimeInACurrentRangeTest {
         //@formatter:off
         byte[] data = new byte[5];
         data[ 0] = (byte) Percentage8Utils.PERCENTAGE_8_VALUE_IS_NOT_KNOWN;
-        data[ 1] = (byte) (ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN >> 8);
-        data[ 2] = (byte) (ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN >> 16);
+        data[ 1] = (byte) ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN;
+        data[ 2] = (byte) (ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN >> 8);
         data[ 3] = (byte) ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN;
         data[ 4] = (byte) (ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN >> 8);
         //@formatter:on
@@ -131,8 +131,8 @@ public class RelativeRuntimeInACurrentRangeTest {
         //@formatter:off
         byte[] data = new byte[5];
         data[ 0] = (byte) Percentage8Utils.PERCENTAGE_8_VALUE_IS_NOT_KNOWN;
-        data[ 1] = (byte) (ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN >> 8);
-        data[ 2] = (byte) (ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN >> 16);
+        data[ 1] = (byte) ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN;
+        data[ 2] = (byte) (ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN >> 8);
         data[ 3] = (byte) ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN;
         data[ 4] = (byte) (ElectricCurrentUtils.CURRENT_VALUE_IS_NOT_KNOWN >> 8);
         //@formatter:on

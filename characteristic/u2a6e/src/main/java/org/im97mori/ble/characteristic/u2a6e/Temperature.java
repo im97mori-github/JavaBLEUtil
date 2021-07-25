@@ -14,11 +14,6 @@ import androidx.annotation.NonNull;
 public class Temperature implements ByteArrayInterface {
 
     /**
-     * Temperature Unit 0.01 degrees Celsius
-     */
-    public static double TEMPERATURE_RESOLUTION = 0.01d;
-
-    /**
      * Temperature
      */
     private final int mTemperature;
@@ -46,13 +41,6 @@ public class Temperature implements ByteArrayInterface {
      */
     public int getTemperature() {
         return mTemperature;
-    }
-
-    /**
-     * @return Temperature(degrees Celsius)
-     */
-    public double getTemperatureDegreesCelsius() {
-        return TEMPERATURE_RESOLUTION * mTemperature;
     }
 
     /**

@@ -15,8 +15,8 @@ public class RelativeValueInAnIlluminanceRangeTest {
         //@formatter:off
         byte[] data = new byte[5];
         data[ 0] = (byte) Percentage8Utils.PERCENTAGE_8_VALUE_IS_NOT_KNOWN;
-        data[ 1] = (byte) (VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN >> 8);
-        data[ 2] = (byte) (VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN >> 16);
+        data[ 1] = (byte) VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN;
+        data[ 2] = (byte) (VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN >> 8);
         data[ 3] = (byte) VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN;
         data[ 4] = (byte) (VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN >> 8);
         //@formatter:on
@@ -131,8 +131,8 @@ public class RelativeValueInAnIlluminanceRangeTest {
         //@formatter:off
         byte[] data = new byte[5];
         data[ 0] = (byte) Percentage8Utils.PERCENTAGE_8_VALUE_IS_NOT_KNOWN;
-        data[ 1] = (byte) (VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN >> 8);
-        data[ 2] = (byte) (VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN >> 16);
+        data[ 1] = (byte) VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN;
+        data[ 2] = (byte) (VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN >> 8);
         data[ 3] = (byte) VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN;
         data[ 4] = (byte) (VoltageUtils.VOLTAGE_VALUE_IS_NOT_KNOWN >> 8);
         //@formatter:on

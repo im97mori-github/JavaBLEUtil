@@ -11,7 +11,7 @@ public class TemperatureUtils {
     public static final int TEMPERATURE_VALUE_IS_NOT_KNOWN = 0x8000;
 
     /**
-     * Temperature unit 0.01 ampere
+     * Temperature unit 0.01 degrees Celsius
      */
     public static final double TEMPERATURE_RESOLUTION = 0.01d;
 

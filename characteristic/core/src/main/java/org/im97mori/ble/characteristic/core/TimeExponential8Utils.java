@@ -31,6 +31,16 @@ public class TimeExponential8Utils {
     public static final int TIME_EXPONENTIAL_8_EXPONENT_OFFSET = -64;
 
     /**
+     * Time Exponential 8 Minimum value
+     */
+    public static final double TIME_EXPONENTIAL_8_VALUE_MINIMUM = 0.0d;
+
+    /**
+     * Time Exponential 8 Maximum value
+     */
+    public static final double TIME_EXPONENTIAL_8_VALUE_MAXIMUM = 66560641d;
+
+    /**
      * @param timeExponential8 Time Exponential 8
      * @return {@code true}:Time Exponential 8 is 0 seconds, {@code false}:Time Exponential 8 is not 0 seconds
      * @see #TIME_EXPONENTIAL_8_ZERO_SECONDS
@@ -61,8 +71,17 @@ public class TimeExponential8Utils {
      * @param timeExponential8 Time Exponential 8
      * @return Time Exponential 8(second)
      */
-    public static int getTimeExponential8Second(int timeExponential8) {
-        return (int) Math.floor(Math.pow(TIME_EXPONENTIAL_8_MANTISSA, timeExponential8 + TIME_EXPONENTIAL_8_EXPONENT_OFFSET));
+    public static double getTimeExponential8Second(int timeExponential8) {
+        double timeExponential8Second;
+        if (timeExponential8 == 0) {
+            timeExponential8Second = 0;
+        } else {
+            timeExponential8Second = Math.pow(TIME_EXPONENTIAL_8_MANTISSA, timeExponential8 + TIME_EXPONENTIAL_8_EXPONENT_OFFSET);
+            if (timeExponential8Second > TIME_EXPONENTIAL_8_VALUE_MAXIMUM) {
+                timeExponential8Second = TIME_EXPONENTIAL_8_VALUE_MAXIMUM;
+            }
+        }
+        return timeExponential8Second;
     }
 
 }

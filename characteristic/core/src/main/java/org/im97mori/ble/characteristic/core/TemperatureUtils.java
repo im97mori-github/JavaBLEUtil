@@ -11,7 +11,11 @@ public class TemperatureUtils {
     public static final int TEMPERATURE_VALUE_IS_NOT_KNOWN = 0x8000;
 
     /**
+<<<<<<< HEAD
      * Temperature unit 0.01 degrees Celsius
+=======
+     * Temperature unit 0.01 ampere
+>>>>>>> branch 'master' of git@github.com:im97mori-github/JavaBLEUtil.git
      */
     public static final double TEMPERATURE_RESOLUTION = 0.01d;
 

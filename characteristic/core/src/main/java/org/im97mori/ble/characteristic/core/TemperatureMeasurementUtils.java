@@ -1,5 +1,8 @@
 package org.im97mori.ble.characteristic.core;
 
+/**
+ * Utility for Temperature Measurement (0x2A1C) characteristic
+ */
 public class TemperatureMeasurementUtils {
 
     /**

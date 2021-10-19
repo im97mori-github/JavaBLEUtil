@@ -1,5 +1,8 @@
 package org.im97mori.ble.characteristic.core;
 
+/**
+ * Utility for TDS Control Point (0x2ABC) characteristic
+ */
 public class TDSControlPointUtils {
 
     /**

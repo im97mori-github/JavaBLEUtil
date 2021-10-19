@@ -165,6 +165,7 @@ dependencies {
     api "${myGroupId}:${characteristicU2b1e}:${loadVersion}"
     api "${myGroupId}:${characteristicU2b1f}:${loadVersion}"
     api "${myGroupId}:${characteristicU2b2a}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2b34}:${loadVersion}"
     api "${myGroupId}:${characteristicU2b37}:${loadVersion}"
 }
 

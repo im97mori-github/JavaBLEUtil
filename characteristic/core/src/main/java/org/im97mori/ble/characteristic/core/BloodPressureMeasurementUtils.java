@@ -3,7 +3,7 @@ package org.im97mori.ble.characteristic.core;
 import org.im97mori.ble.BLEUtils;
 
 /**
- * Utility for org.bluetooth.service.blood_pressure(0x1810) service
+ * Utility for org.bluetooth.service.blood_pressure(0x1810) characteristic
  */
 public class BloodPressureMeasurementUtils {
 
@@ -175,7 +175,9 @@ public class BloodPressureMeasurementUtils {
 
     /**
      * @param flags Flags
-     * @return {@code true}:Blood pressure for Systolic, Diastolic and MAP in units of mmHg, {@code false}:Blood pressure for Systolic, Diastolic and MAP in units of kPa
+     * @return {@code true}:Blood pressure for Systolic, Diastolic and MAP in units
+     *         of mmHg, {@code false}:Blood pressure for Systolic, Diastolic and MAP
+     *         in units of kPa
      */
     public static boolean isFlagsBloodPressureUnitsMmhg(int flags) {
         return isFlagsMatched(FLAG_BLOOD_PRESSURE_UNITS_MASK, FLAG_BLOOD_PRESSURE_UNITS_MMHG, flags);
@@ -183,7 +185,9 @@ public class BloodPressureMeasurementUtils {
 
     /**
      * @param flags Flags
-     * @return {@code true}:Blood pressure for Systolic, Diastolic and MAP in units of kPa, {@code false}:Blood pressure for Systolic, Diastolic and MAP in units of mmHg
+     * @return {@code true}:Blood pressure for Systolic, Diastolic and MAP in units
+     *         of kPa, {@code false}:Blood pressure for Systolic, Diastolic and MAP
+     *         in units of mmHg
      */
     public static boolean isFlagsBloodPressureUnitsKpa(int flags) {
         return isFlagsMatched(FLAG_BLOOD_PRESSURE_UNITS_MASK, FLAG_BLOOD_PRESSURE_UNITS_KPA, flags);
@@ -239,7 +243,8 @@ public class BloodPressureMeasurementUtils {
 
     /**
      * @param flags Flags
-     * @return {@code true}:Measurement Status not present, {@code false}:Measurement Status present
+     * @return {@code true}:Measurement Status not present,
+     *         {@code false}:Measurement Status present
      */
     public static boolean isFlagsMeasurementStatusNotPresent(int flags) {
         return isFlagsMatched(FLAG_MEASUREMENT_STATUS_MASK, FLAG_MEASUREMENT_STATUS_NOT_PRESENT, flags);
@@ -247,7 +252,8 @@ public class BloodPressureMeasurementUtils {
 
     /**
      * @param flags Flags
-     * @return {@code true}:Measurement Status present, {@code false}:Measurement Status not present
+     * @return {@code true}:Measurement Status present, {@code false}:Measurement
+     *         Status not present
      */
     public static boolean isFlagsMeasurementStatusPresent(int flags) {
         return isFlagsMatched(FLAG_MEASUREMENT_STATUS_MASK, FLAG_MEASUREMENT_STATUS_PRESENT, flags);
@@ -255,18 +261,22 @@ public class BloodPressureMeasurementUtils {
 
     /**
      * @param measurementStatus Measurement Status
-     * @return {@code true}:No body movement, {@code false}:Body movement during measurement
+     * @return {@code true}:No body movement, {@code false}:Body movement during
+     *         measurement
      */
     public static boolean isMeasurementStatusBodyMoveDetectionNoBodyMovement(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_MASK, MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_NO_BODY_MOVEMENT, measurementStatus);
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_MASK,
+                MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_NO_BODY_MOVEMENT, measurementStatus);
     }
 
     /**
      * @param measurementStatus Measurement Status
-     * @return {@code true}:Body movement during measurement, {@code false}:No body movement
+     * @return {@code true}:Body movement during measurement, {@code false}:No body
+     *         movement
      */
     public static boolean isMeasurementStatusBodyMoveDetectionBodyMovementDuringMeasurement(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_MASK, MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_BODY_MOVEMENT_DURING_MEASUREMENT, measurementStatus);
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_MASK,
+                MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_BODY_MOVEMENT_DURING_MEASUREMENT, measurementStatus);
     }
 
     /**
@@ -274,7 +284,8 @@ public class BloodPressureMeasurementUtils {
      * @return {@code true}:Cuff fits properly, {@code false}:Cuff too loose
      */
     public static boolean isMeasurementStatusCuffFitDetectionCuffFitsProperly(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_CUFF_FIT_DETECTION_MASK, MEASUREMENT_STATUS_CUFF_FIT_DETECTION_CUFF_FITS_PROPERLY, measurementStatus);
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_CUFF_FIT_DETECTION_MASK,
+                MEASUREMENT_STATUS_CUFF_FIT_DETECTION_CUFF_FITS_PROPERLY, measurementStatus);
     }
 
     /**
@@ -282,74 +293,103 @@ public class BloodPressureMeasurementUtils {
      * @return {@code true}:Cuff too loose, {@code false}:Cuff fits properly
      */
     public static boolean isMeasurementStatusCuffFitDetectionCuffTooLoose(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_CUFF_FIT_DETECTION_MASK, MEASUREMENT_STATUS_CUFF_FIT_DETECTION_CUFF_TOO_LOOSE, measurementStatus);
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_CUFF_FIT_DETECTION_MASK,
+                MEASUREMENT_STATUS_CUFF_FIT_DETECTION_CUFF_TOO_LOOSE, measurementStatus);
     }
 
     /**
      * @param measurementStatus Measurement Status
-     * @return {@code true}:No irregular pulse detected, {@code false}:Irregular pulse detected
+     * @return {@code true}:No irregular pulse detected, {@code false}:Irregular
+     *         pulse detected
      */
     public static boolean isMeasurementStatusIrregularPulseDetectionNoIrregularPulseDetected(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_MASK, MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_NO_IRREGULAR_PULSE_DETECTED, measurementStatus);
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_MASK,
+                MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_NO_IRREGULAR_PULSE_DETECTED, measurementStatus);
     }
 
     /**
      * @param measurementStatus Measurement Status
-     * @return {@code true}:Irregular pulse detected, {@code false}:No irregular pulse detected
+     * @return {@code true}:Irregular pulse detected, {@code false}:No irregular
+     *         pulse detected
      */
     public static boolean isMeasurementStatusIrregularPulseDetectionIrregularPulseDetected(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_MASK, MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_IRREGULAR_PULSE_DETECTED, measurementStatus);
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_MASK,
+                MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_IRREGULAR_PULSE_DETECTED, measurementStatus);
     }
 
     /**
      * @param measurementStatus Measurement Status
-     * @return {@code true}:Pulse rate is within the range, {@code false}:not Pulse rate is within the range
+     * @return {@code true}:Pulse rate is within the range, {@code false}:not Pulse
+     *         rate is within the range
      */
-    public static boolean isMeasurementStatusPulseRateRangeDetectionPulseRateIsWithinTheRange(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_MASK, MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_IS_WITHIN_THE_RANGE, measurementStatus);
+    public static boolean isMeasurementStatusPulseRateRangeDetectionPulseRateIsWithinTheRange(
+            byte[] measurementStatus) {
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_MASK,
+                MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_IS_WITHIN_THE_RANGE, measurementStatus);
     }
 
     /**
      * @param measurementStatus Measurement Status
-     * @return {@code true}:Pulse rate exceeds upper limit, {@code false}:not Pulse rate exceeds upper limit
+     * @return {@code true}:Pulse rate exceeds upper limit, {@code false}:not Pulse
+     *         rate exceeds upper limit
      */
-    public static boolean isMeasurementStatusPulseRateRangeDetectionPulseRateExceedssUpperLimit(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_MASK, MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_EXCEEDS_UPPER_LIMIT, measurementStatus);
+    public static boolean isMeasurementStatusPulseRateRangeDetectionPulseRateExceedssUpperLimit(
+            byte[] measurementStatus) {
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_MASK,
+                MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_EXCEEDS_UPPER_LIMIT, measurementStatus);
     }
 
     /**
      * @param measurementStatus Measurement Status
-     * @return {@code true}:Pulse rate is less than lower limit, {@code false}:not Pulse rate is less than lower limit
+     * @return {@code true}:Pulse rate is less than lower limit, {@code false}:not
+     *         Pulse rate is less than lower limit
      */
-    public static boolean isMeasurementStatusPulseRateRangeDetectionPulseRateIsLessThanLowerLimit(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_MASK, MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_IS_LESS_THAN_LOWER_LIMIT, measurementStatus);
+    public static boolean isMeasurementStatusPulseRateRangeDetectionPulseRateIsLessThanLowerLimit(
+            byte[] measurementStatus) {
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_MASK,
+                MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_IS_LESS_THAN_LOWER_LIMIT, measurementStatus);
     }
 
     /**
      * @param measurementStatus Measurement Status
-     * @return {@code true}:Proper measurement position, {@code false}:Improper measurement position
+     * @return {@code true}:Proper measurement position, {@code false}:Improper
+     *         measurement position
      */
-    public static boolean isMeasurementStatusMeasurementPositionDetectionProperMeasurementPosition(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_MASK, MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_PROPER_MEASUREMENT_POSITION, measurementStatus);
+    public static boolean isMeasurementStatusMeasurementPositionDetectionProperMeasurementPosition(
+            byte[] measurementStatus) {
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_MASK,
+                MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_PROPER_MEASUREMENT_POSITION, measurementStatus);
     }
 
     /**
      * @param measurementStatus Measurement Status
-     * @return {@code true}:Improper measurement position, {@code false}:Proper measurement position
+     * @return {@code true}:Improper measurement position, {@code false}:Proper
+     *         measurement position
      */
-    public static boolean isMeasurementStatusMeasurementPositionDetectionImproperMeasurementPosition(byte[] measurementStatus) {
-        return isMeasurementStatusMatched(MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_MASK, MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_IMPROPER_MEASUREMENT_POSITION, measurementStatus);
+    public static boolean isMeasurementStatusMeasurementPositionDetectionImproperMeasurementPosition(
+            byte[] measurementStatus) {
+        return isMeasurementStatusMatched(MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_MASK,
+                MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_IMPROPER_MEASUREMENT_POSITION, measurementStatus);
     }
 
     /**
      * check Flags
      *
      * @param mask   bitmask for expect
-     * @param expect one of {@link #FLAG_BLOOD_PRESSURE_UNITS_MMHG} , {@link #FLAG_BLOOD_PRESSURE_UNITS_KPA} , {@link #FLAG_TIME_STAMP_NOT_PRESENT} , {@link #FLAG_TIME_STAMP_PRESENT} , {@link #FLAG_PULSE_RATE_NOT_PRESENT} , {@link #FLAG_PULSE_RATE_PRESENT} , {@link #FLAG_USER_ID_NOT_PRESENT} , {@link #FLAG_USER_ID_PRESENT} , {@link #FLAG_MEASUREMENT_STATUS_NOT_PRESENT} , {@link #FLAG_MEASUREMENT_STATUS_PRESENT}
+     * @param expect one of {@link #FLAG_BLOOD_PRESSURE_UNITS_MMHG} ,
+     *               {@link #FLAG_BLOOD_PRESSURE_UNITS_KPA} ,
+     *               {@link #FLAG_TIME_STAMP_NOT_PRESENT} ,
+     *               {@link #FLAG_TIME_STAMP_PRESENT} ,
+     *               {@link #FLAG_PULSE_RATE_NOT_PRESENT} ,
+     *               {@link #FLAG_PULSE_RATE_PRESENT} ,
+     *               {@link #FLAG_USER_ID_NOT_PRESENT} ,
+     *               {@link #FLAG_USER_ID_PRESENT} ,
+     *               {@link #FLAG_MEASUREMENT_STATUS_NOT_PRESENT} ,
+     *               {@link #FLAG_MEASUREMENT_STATUS_PRESENT}
      * @param flags  Flags
      * @return {@code true}:same as expect, {@code false}:not match
      */
-    private static boolean isFlagsMatched(int mask, int expect, int flags) {
+    protected static boolean isFlagsMatched(int mask, int expect, int flags) {
         return (mask & flags) == expect;
     }
 
@@ -357,7 +397,28 @@ public class BloodPressureMeasurementUtils {
      * check Measurement Status
      *
      * @param mask              bitmask for expect
-     * @param expect            one of {@link #MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_NO_BODY_MOVEMENT} , {@link #MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_BODY_MOVEMENT_DURING_MEASUREMENT} , {@link #MEASUREMENT_STATUS_CUFF_FIT_DETECTION_CUFF_FITS_PROPERLY} , {@link #MEASUREMENT_STATUS_CUFF_FIT_DETECTION_CUFF_TOO_LOOSE} , {@link #MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_NO_IRREGULAR_PULSE_DETECTED} , {@link #MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_IRREGULAR_PULSE_DETECTED} , {@link #MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_IS_WITHIN_THE_RANGE} , {@link #MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_EXCEEDS_UPPER_LIMIT} , {@link #MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_IS_LESS_THAN_LOWER_LIMIT} , {@link #MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_PROPER_MEASUREMENT_POSITION} , {@link #MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_IMPROPER_MEASUREMENT_POSITION}
+     * @param expect            one of
+     *                          {@link #MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_NO_BODY_MOVEMENT}
+     *                          ,
+     *                          {@link #MEASUREMENT_STATUS_BODY_MOVEMENT_DETECTION_BODY_MOVEMENT_DURING_MEASUREMENT}
+     *                          ,
+     *                          {@link #MEASUREMENT_STATUS_CUFF_FIT_DETECTION_CUFF_FITS_PROPERLY}
+     *                          ,
+     *                          {@link #MEASUREMENT_STATUS_CUFF_FIT_DETECTION_CUFF_TOO_LOOSE}
+     *                          ,
+     *                          {@link #MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_NO_IRREGULAR_PULSE_DETECTED}
+     *                          ,
+     *                          {@link #MEASUREMENT_STATUS_IRREGULAR_PULSE_DETECTION_IRREGULAR_PULSE_DETECTED}
+     *                          ,
+     *                          {@link #MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_IS_WITHIN_THE_RANGE}
+     *                          ,
+     *                          {@link #MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_EXCEEDS_UPPER_LIMIT}
+     *                          ,
+     *                          {@link #MEASUREMENT_STATUS_PULSE_RATE_RANGE_DETECTION_PULSE_RATE_IS_LESS_THAN_LOWER_LIMIT}
+     *                          ,
+     *                          {@link #MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_PROPER_MEASUREMENT_POSITION}
+     *                          ,
+     *                          {@link #MEASUREMENT_STATUS_MEASUREMENT_POSITION_DETECTION_IMPROPER_MEASUREMENT_POSITION}
      * @param measurementStatus Measurement Status
      * @return {@code true}:same as expect, {@code false}:not match
      */

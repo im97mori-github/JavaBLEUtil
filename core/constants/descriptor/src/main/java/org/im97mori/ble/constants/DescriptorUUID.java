@@ -7,6 +7,9 @@ import java.util.UUID;
 
 /**
  * BLE GATT Descriptor UUID
+ * <p>
+ * Generic Access Profile
+ * Revision Date: 2021-07-13
  */
 public class DescriptorUUID {
 
@@ -15,22 +18,22 @@ public class DescriptorUUID {
 
         private Map128() {
             super();
-            put(UUID.fromString("00002900-0000-1000-8000-00805f9b34fb"), "Characteristic Extended Properties");
-            put(UUID.fromString("00002901-0000-1000-8000-00805f9b34fb"), "Characteristic User Description");
-            put(UUID.fromString("00002902-0000-1000-8000-00805f9b34fb"), "Client Characteristic Configuration");
-            put(UUID.fromString("00002903-0000-1000-8000-00805f9b34fb"), "Server Characteristic Configuration");
-            put(UUID.fromString("00002904-0000-1000-8000-00805f9b34fb"), "Characteristic Presentation Format");
-            put(UUID.fromString("00002905-0000-1000-8000-00805f9b34fb"), "Characteristic Aggregate Format");
-            put(UUID.fromString("00002906-0000-1000-8000-00805f9b34fb"), "Valid Range");
-            put(UUID.fromString("00002907-0000-1000-8000-00805f9b34fb"), "External Report Reference");
-            put(UUID.fromString("00002908-0000-1000-8000-00805f9b34fb"), "Report Reference");
-            put(UUID.fromString("00002909-0000-1000-8000-00805f9b34fb"), "Number Of Digitals");
-            put(UUID.fromString("0000290a-0000-1000-8000-00805f9b34fb"), "Value Trigger Setting");
-            put(UUID.fromString("0000290b-0000-1000-8000-00805f9b34fb"), "Environmental Sensing Configuration");
-            put(UUID.fromString("0000290c-0000-1000-8000-00805f9b34fb"), "Environmental Sensing Measurement");
-            put(UUID.fromString("0000290d-0000-1000-8000-00805f9b34fb"), "Environmental Sensing Trigger Setting");
-            put(UUID.fromString("0000290e-0000-1000-8000-00805f9b34fb"), "Time Trigger Setting");
-            put(UUID.fromString("0000290f-0000-1000-8000-00805f9b34fb"), "Complete BR-EDR Transport Block Data");
+            put(CHARACTERISTIC_EXTENDED_PROPERTIES_DESCRIPTOR, "Characteristic Extended Properties");
+            put(CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTOR, "Characteristic User Description");
+            put(CLIENT_CHARACTERISTIC_CONFIGURATION_DESCRIPTOR, "Client Characteristic Configuration");
+            put(SERVER_CHARACTERISTIC_CONFIGURATION_DESCRIPTOR, "Server Characteristic Configuration");
+            put(CHARACTERISTIC_PRESENTATION_FORMAT_DESCRIPTOR, "Characteristic Presentation Format");
+            put(CHARACTERISTIC_AGGREGATE_FORMAT_DESCRIPTOR, "Characteristic Aggregate Format");
+            put(VALID_RANGE_DESCRIPTOR, "Valid Range");
+            put(EXTERNAL_REPORT_REFERENCE_DESCRIPTOR, "External Report Reference");
+            put(REPORT_REFERENCE_DESCRIPTOR, "Report Reference");
+            put(NUMBER_OF_DIGITALS_DESCRIPTOR, "Number Of Digitals");
+            put(VALUE_TRIGGER_SETTING_DESCRIPTOR, "Value Trigger Setting");
+            put(ENVIRONMENTAL_SENSING_CONFIGURATION_DESCRIPTOR, "Environmental Sensing Configuration");
+            put(ENVIRONMENTAL_SENSING_MEASUREMENT_DESCRIPTOR, "Environmental Sensing Measurement");
+            put(ENVIRONMENTAL_SENSING_TRIGGER_SETTING_DESCRIPTOR, "Environmental Sensing Trigger Setting");
+            put(TIME_TRIGGER_SETTING_DESCRIPTOR, "Time Trigger Setting");
+            put(COMPLETE_BR_EDR_TRANSPORT_BLOCK_DATA_DESCRIPTOR, "Complete BR-EDR Transport Block Data");
         }
 
     }

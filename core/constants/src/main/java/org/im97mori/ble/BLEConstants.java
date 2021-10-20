@@ -16,7 +16,7 @@ public class BLEConstants {
      * <p>
      * BASE UUID
      * <p>
-     * Core Specification v5.2 Vol 3 Part B 2.5.1
+     * Core Specification v5.3 Vol 3 Part B 2.5.1
      * </p>
      */
     @Deprecated
@@ -110,7 +110,7 @@ public class BLEConstants {
     /**
      * Maximum MTU size
      * <p>
-     * Core Specification v5.2 Vol 3 Part F 3.2.9
+     * Core Specification v5.3 Vol 3 Part F 3.2.9
      */
     public static final int MAXIMUM_MTU = 512;
 

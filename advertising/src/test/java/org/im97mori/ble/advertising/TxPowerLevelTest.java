@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_SLAVE_CONNECTION_INTERVAL_RANGE;
+import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE;
 import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_TX_POWER_LEVEL;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

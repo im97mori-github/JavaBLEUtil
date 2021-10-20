@@ -7,6 +7,9 @@ import java.util.UUID;
 
 /**
  * BLE GATT Scheme UUID
+ * <p>
+ * URI Scheme Name String Mapping
+ * Revision Date: 2021-05-14
  */
 public class SchemeUUID {
 

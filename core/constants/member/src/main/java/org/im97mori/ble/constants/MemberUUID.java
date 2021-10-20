@@ -7,6 +7,9 @@ import java.util.UUID;
 
 /**
  * BLE GATT Member UUID
+ * <p>
+ * Generic Access Profile
+ * Revision Date: 2021-07-13
  */
 public class MemberUUID {
 
@@ -407,6 +410,55 @@ public class MemberUUID {
             put(UUID.fromString("0000fecc-0000-1000-8000-00805f9b34fb"), "Apple, Inc.");
             put(UUID.fromString("0000fecd-0000-1000-8000-00805f9b34fb"), "Apple, Inc.");
             put(UUID.fromString("0000fece-0000-1000-8000-00805f9b34fb"), "Apple, Inc.");
+            put(UUID.fromString("0000fecf-0000-1000-8000-00805f9b34fb"), "Apple, Inc.");
+            put(UUID.fromString("0000fed0-0000-1000-8000-00805f9b34fb"), "Apple, Inc.");
+            put(UUID.fromString("0000fed1-0000-1000-8000-00805f9b34fb"), "Apple, Inc.");
+            put(UUID.fromString("0000fed2-0000-1000-8000-00805f9b34fb"), "Apple, Inc.");
+            put(UUID.fromString("0000fed3-0000-1000-8000-00805f9b34fb"), "Apple, Inc.");
+            put(UUID.fromString("0000fed4-0000-1000-8000-00805f9b34fb"), "Apple, Inc.");
+            put(UUID.fromString("0000fed5-0000-1000-8000-00805f9b34fb"), "Plantronics Inc.");
+            put(UUID.fromString("0000fed6-0000-1000-8000-00805f9b34fb"), "Broadcom");
+            put(UUID.fromString("0000fed7-0000-1000-8000-00805f9b34fb"), "Broadcom");
+            put(UUID.fromString("0000fed8-0000-1000-8000-00805f9b34fb"), "Google");
+            put(UUID.fromString("0000fed9-0000-1000-8000-00805f9b34fb"), "Pebble Technology Corporation");
+            put(UUID.fromString("0000feda-0000-1000-8000-00805f9b34fb"), "ISSC Technologies Corp.");
+            put(UUID.fromString("0000fedb-0000-1000-8000-00805f9b34fb"), "Perka, Inc.");
+            put(UUID.fromString("0000fedc-0000-1000-8000-00805f9b34fb"), "Jawbone");
+            put(UUID.fromString("0000fedd-0000-1000-8000-00805f9b34fb"), "Jawbone");
+            put(UUID.fromString("0000fede-0000-1000-8000-00805f9b34fb"), "Coin, Inc.");
+            put(UUID.fromString("0000fedf-0000-1000-8000-00805f9b34fb"), "Design SHIFT");
+            put(UUID.fromString("0000fee0-0000-1000-8000-00805f9b34fb"), "Anhui Huami Information Technology Co., Ltd.");
+            put(UUID.fromString("0000fee1-0000-1000-8000-00805f9b34fb"), "Anhui Huami Information Technology Co., Ltd.");
+            put(UUID.fromString("0000fee2-0000-1000-8000-00805f9b34fb"), "Anki, Inc.");
+            put(UUID.fromString("0000fee3-0000-1000-8000-00805f9b34fb"), "Anki, Inc.");
+            put(UUID.fromString("0000fee4-0000-1000-8000-00805f9b34fb"), "Nordic Semiconductor ASA");
+            put(UUID.fromString("0000fee5-0000-1000-8000-00805f9b34fb"), "Nordic Semiconductor ASA");
+            put(UUID.fromString("0000fee6-0000-1000-8000-00805f9b34fb"), "Silvair, Inc.");
+            put(UUID.fromString("0000fee7-0000-1000-8000-00805f9b34fb"), "Tencent Holdings Limited.");
+            put(UUID.fromString("0000fee8-0000-1000-8000-00805f9b34fb"), "Quintic Corp.");
+            put(UUID.fromString("0000fee9-0000-1000-8000-00805f9b34fb"), "Quintic Corp.");
+            put(UUID.fromString("0000feea-0000-1000-8000-00805f9b34fb"), "Swirl Networks, Inc.");
+            put(UUID.fromString("0000feeb-0000-1000-8000-00805f9b34fb"), "Swirl Networks, Inc.");
+            put(UUID.fromString("0000feec-0000-1000-8000-00805f9b34fb"), "Tile, Inc.");
+            put(UUID.fromString("0000feed-0000-1000-8000-00805f9b34fb"), "Tile, Inc.");
+            put(UUID.fromString("0000feee-0000-1000-8000-00805f9b34fb"), "Polar Electro Oy");
+            put(UUID.fromString("0000feef-0000-1000-8000-00805f9b34fb"), "Polar Electro Oy");
+            put(UUID.fromString("0000fef0-0000-1000-8000-00805f9b34fb"), "Intel");
+            put(UUID.fromString("0000fef1-0000-1000-8000-00805f9b34fb"), "CSR");
+            put(UUID.fromString("0000fef2-0000-1000-8000-00805f9b34fb"), "CSR");
+            put(UUID.fromString("0000fef3-0000-1000-8000-00805f9b34fb"), "Google");
+            put(UUID.fromString("0000fef4-0000-1000-8000-00805f9b34fb"), "Google");
+            put(UUID.fromString("0000fef5-0000-1000-8000-00805f9b34fb"), "Dialog Semiconductor GmbH");
+            put(UUID.fromString("0000fef6-0000-1000-8000-00805f9b34fb"), "Wicentric, Inc.");
+            put(UUID.fromString("0000fef7-0000-1000-8000-00805f9b34fb"), "Aplix Corporation");
+            put(UUID.fromString("0000fef8-0000-1000-8000-00805f9b34fb"), "Aplix Corporation");
+            put(UUID.fromString("0000fef9-0000-1000-8000-00805f9b34fb"), "PayPal, Inc.");
+            put(UUID.fromString("0000fefa-0000-1000-8000-00805f9b34fb"), "PayPal, Inc.");
+            put(UUID.fromString("0000fefb-0000-1000-8000-00805f9b34fb"), "Telit Wireless Solutions (Formerly Stollmann E+V GmbH)");
+            put(UUID.fromString("0000fefc-0000-1000-8000-00805f9b34fb"), "Gimbal, Inc.");
+            put(UUID.fromString("0000fefd-0000-1000-8000-00805f9b34fb"), "Gimbal, Inc.");
+            put(UUID.fromString("0000fefe-0000-1000-8000-00805f9b34fb"), "GN ReSound A/S");
+            put(UUID.fromString("0000feff-0000-1000-8000-00805f9b34fb"), "GN Netcom");
         }
 
     }

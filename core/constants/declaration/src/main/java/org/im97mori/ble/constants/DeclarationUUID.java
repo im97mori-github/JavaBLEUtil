@@ -7,6 +7,9 @@ import java.util.UUID;
 
 /**
  * BLE GATT Declaration UUID
+ * <p>
+ * Generic Access Profile
+ * Revision Date: 2021-07-13
  */
 public class DeclarationUUID {
 

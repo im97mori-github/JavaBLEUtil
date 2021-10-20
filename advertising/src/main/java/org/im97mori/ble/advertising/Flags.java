@@ -41,9 +41,9 @@ public class Flags extends AbstractAdvertisingData {
     public static final SimpleImmutableEntry<Integer, Integer> FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_CONTROLLER = new SimpleImmutableEntry<>(0, 0b00001000);
 
     /**
-     * Simultaneous LE and BR/EDR to Same Device Capable (Host)
+     * Previously Used
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_HOST = new SimpleImmutableEntry<>(0, 0b00010000);
+    public static final SimpleImmutableEntry<Integer, Integer> FLAG_PREVIOUSLY_USED = new SimpleImmutableEntry<>(0, 0b00010000);
 
     /**
      * Flags list
@@ -124,8 +124,9 @@ public class Flags extends AbstractAdvertisingData {
      *
      * @return {@code true}:Simultaneous LE and BR/EDR to Same Device Capable (Host) bit is 1, {@code false}:bit is 0;
      */
+    @Deprecated
     public boolean isSimultaneousHost() {
-        return check(FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_HOST);
+        return check(FLAG_PREVIOUSLY_USED);
     }
 
     /**

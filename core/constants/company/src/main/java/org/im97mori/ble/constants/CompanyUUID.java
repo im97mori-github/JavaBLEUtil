@@ -7,6 +7,9 @@ import java.util.UUID;
 
 /**
  * BLE GATT Company UUID
+ * <p>
+ * Generic Access Profile
+ * Revision Date: 2021-07-13
  */
 public class CompanyUUID {
 
@@ -116,7 +119,7 @@ public class CompanyUUID {
             put(UUID.fromString("00000062-0000-1000-8000-00805f9b34fb"), "Gibson Guitars");
             put(UUID.fromString("00000063-0000-1000-8000-00805f9b34fb"), "MiCommand Inc.");
             put(UUID.fromString("00000064-0000-1000-8000-00805f9b34fb"), "Band XI International, LLC");
-            put(UUID.fromString("00000065-0000-1000-8000-00805f9b34fb"), "Hewlett-Packard Company");
+            put(UUID.fromString("00000065-0000-1000-8000-00805f9b34fb"), "HP, Inc.");
             put(UUID.fromString("00000066-0000-1000-8000-00805f9b34fb"), "9Solutions Oy");
             put(UUID.fromString("00000067-0000-1000-8000-00805f9b34fb"), "GN Netcom A/S");
             put(UUID.fromString("00000068-0000-1000-8000-00805f9b34fb"), "General Motors");
@@ -727,7 +730,7 @@ public class CompanyUUID {
             put(UUID.fromString("000002c5-0000-1000-8000-00805f9b34fb"), "Lenovo (Singapore) Pte Ltd. ( 联想（新加坡） )");
             put(UUID.fromString("000002c6-0000-1000-8000-00805f9b34fb"), "Ayatan Sensors");
             put(UUID.fromString("000002c7-0000-1000-8000-00805f9b34fb"), "Electronics Tomorrow Limited");
-            put(UUID.fromString("000002c8-0000-1000-8000-00805f9b34fb"), "VASCO Data Security International, Inc.");
+            put(UUID.fromString("000002c8-0000-1000-8000-00805f9b34fb"), "OneSpan ");
             put(UUID.fromString("000002c9-0000-1000-8000-00805f9b34fb"), "PayRange Inc.");
             put(UUID.fromString("000002ca-0000-1000-8000-00805f9b34fb"), "ABOV Semiconductor");
             put(UUID.fromString("000002cb-0000-1000-8000-00805f9b34fb"), "AINA-Wireless Inc.");
@@ -809,7 +812,7 @@ public class CompanyUUID {
             put(UUID.fromString("00000317-0000-1000-8000-00805f9b34fb"), "CHUO Electronics CO., LTD. ");
             put(UUID.fromString("00000318-0000-1000-8000-00805f9b34fb"), "Aspenta International ");
             put(UUID.fromString("00000319-0000-1000-8000-00805f9b34fb"), "Eugster Frismag AG ");
-            put(UUID.fromString("0000031a-0000-1000-8000-00805f9b34fb"), "Amber wireless GmbH ");
+            put(UUID.fromString("0000031a-0000-1000-8000-00805f9b34fb"), "Wurth Elektronik eiSos GmbH & Co. KG ( formerly Amber wireless GmbH) ");
             put(UUID.fromString("0000031b-0000-1000-8000-00805f9b34fb"), "HQ Inc ");
             put(UUID.fromString("0000031c-0000-1000-8000-00805f9b34fb"), "Lab Sensor Solutions ");
             put(UUID.fromString("0000031d-0000-1000-8000-00805f9b34fb"), "Enterlab ApS ");
@@ -1300,7 +1303,7 @@ public class CompanyUUID {
             put(UUID.fromString("00000502-0000-1000-8000-00805f9b34fb"), "Specifi-Kali LLC");
             put(UUID.fromString("00000503-0000-1000-8000-00805f9b34fb"), "Locoroll, Inc");
             put(UUID.fromString("00000504-0000-1000-8000-00805f9b34fb"), "PHYPLUS Inc");
-            put(UUID.fromString("00000505-0000-1000-8000-00805f9b34fb"), "Inplay Technologies LLC");
+            put(UUID.fromString("00000505-0000-1000-8000-00805f9b34fb"), "InPlay Inc.");
             put(UUID.fromString("00000506-0000-1000-8000-00805f9b34fb"), "Hager");
             put(UUID.fromString("00000507-0000-1000-8000-00805f9b34fb"), "Yellowcog");
             put(UUID.fromString("00000508-0000-1000-8000-00805f9b34fb"), "Axes System sp. z o. o.");
@@ -2478,7 +2481,7 @@ public class CompanyUUID {
             put(UUID.fromString("0000099d-0000-1000-8000-00805f9b34fb"), "YKK AP Inc.");
             put(UUID.fromString("0000099e-0000-1000-8000-00805f9b34fb"), "Step One Limited");
             put(UUID.fromString("0000099f-0000-1000-8000-00805f9b34fb"), "Koya Medical, Inc.");
-            put(UUID.fromString("000009a0-0000-1000-8000-00805f9b34fb"), "Pine Trees Health, Inc");
+            put(UUID.fromString("000009a0-0000-1000-8000-00805f9b34fb"), "Proof Diagnostics, Inc.");
             put(UUID.fromString("000009a1-0000-1000-8000-00805f9b34fb"), "VOS Systems, LLC");
             put(UUID.fromString("000009a2-0000-1000-8000-00805f9b34fb"), "ENGAGENOW DATA SCIENCES PRIVATE LIMITED");
             put(UUID.fromString("000009a3-0000-1000-8000-00805f9b34fb"), "ARDUINO SA");
@@ -2643,6 +2646,7 @@ public class CompanyUUID {
             put(UUID.fromString("00000a42-0000-1000-8000-00805f9b34fb"), "Motionalysis, Inc.");
             put(UUID.fromString("00000a43-0000-1000-8000-00805f9b34fb"), "Busch Systems International Inc.");
             put(UUID.fromString("00000a44-0000-1000-8000-00805f9b34fb"), "Novidan, Inc.");
+            put(UUID.fromString("00000a45-0000-1000-8000-00805f9b34fb"), "3SI Security Systems, Inc");
             put(UUID.fromString("00000a46-0000-1000-8000-00805f9b34fb"), "Beijing HC-Infinite Technology Limited");
             put(UUID.fromString("00000a47-0000-1000-8000-00805f9b34fb"), "The Wand Company Ltd");
             put(UUID.fromString("00000a48-0000-1000-8000-00805f9b34fb"), "JRC Mobility Inc.");
@@ -2661,6 +2665,119 @@ public class CompanyUUID {
             put(UUID.fromString("00000a55-0000-1000-8000-00805f9b34fb"), "Inugo Systems Limited");
             put(UUID.fromString("00000a56-0000-1000-8000-00805f9b34fb"), "ambie");
             put(UUID.fromString("00000a57-0000-1000-8000-00805f9b34fb"), "Meizhou Guo Wei Electronics Co., Ltd");
+            put(UUID.fromString("00000a58-0000-1000-8000-00805f9b34fb"), "Indigo Diabetes");
+            put(UUID.fromString("00000a59-0000-1000-8000-00805f9b34fb"), "TourBuilt, LLC");
+            put(UUID.fromString("00000a5a-0000-1000-8000-00805f9b34fb"), "Sontheim Industrie Elektronik GmbH");
+            put(UUID.fromString("00000a5b-0000-1000-8000-00805f9b34fb"), "LEGIC Identsystems AG");
+            put(UUID.fromString("00000a5c-0000-1000-8000-00805f9b34fb"), "Innovative Design Labs Inc.");
+            put(UUID.fromString("00000a5d-0000-1000-8000-00805f9b34fb"), "MG Energy Systems B.V.");
+            put(UUID.fromString("00000a5e-0000-1000-8000-00805f9b34fb"), "LaceClips llc");
+            put(UUID.fromString("00000a5f-0000-1000-8000-00805f9b34fb"), "stryker");
+            put(UUID.fromString("00000a60-0000-1000-8000-00805f9b34fb"), "DATANG SEMICONDUCTOR TECHNOLOGY CO.,LTD");
+            put(UUID.fromString("00000a61-0000-1000-8000-00805f9b34fb"), "Smart Parks B.V.");
+            put(UUID.fromString("00000a62-0000-1000-8000-00805f9b34fb"), "MOKO TECHNOLOGY Ltd");
+            put(UUID.fromString("00000a63-0000-1000-8000-00805f9b34fb"), "Gremsy JSC");
+            put(UUID.fromString("00000a64-0000-1000-8000-00805f9b34fb"), "Geopal system A/S");
+            put(UUID.fromString("00000a65-0000-1000-8000-00805f9b34fb"), "Lytx, INC.");
+            put(UUID.fromString("00000a66-0000-1000-8000-00805f9b34fb"), "JUSTMORPH PTE. LTD.");
+            put(UUID.fromString("00000a67-0000-1000-8000-00805f9b34fb"), "Beijing SuperHexa Century Technology CO. Ltd");
+            put(UUID.fromString("00000a68-0000-1000-8000-00805f9b34fb"), "Focus Ingenieria SRL");
+            put(UUID.fromString("00000a69-0000-1000-8000-00805f9b34fb"), "HAPPIEST BABY, INC.");
+            put(UUID.fromString("00000a6a-0000-1000-8000-00805f9b34fb"), "Scribble Design Inc.");
+            put(UUID.fromString("00000a6b-0000-1000-8000-00805f9b34fb"), "Olympic Ophthalmics, Inc.");
+            put(UUID.fromString("00000a6c-0000-1000-8000-00805f9b34fb"), "Pokkels");
+            put(UUID.fromString("00000a6d-0000-1000-8000-00805f9b34fb"), "KUUKANJYOKIN Co.,Ltd.");
+            put(UUID.fromString("00000a6e-0000-1000-8000-00805f9b34fb"), "Pac Sane Limited");
+            put(UUID.fromString("00000a6f-0000-1000-8000-00805f9b34fb"), "Warner Bros.");
+            put(UUID.fromString("00000a70-0000-1000-8000-00805f9b34fb"), "Ooma");
+            put(UUID.fromString("00000a71-0000-1000-8000-00805f9b34fb"), "Senquip Pty Ltd");
+            put(UUID.fromString("00000a72-0000-1000-8000-00805f9b34fb"), "Jumo GmbH & Co. KG");
+            put(UUID.fromString("00000a73-0000-1000-8000-00805f9b34fb"), "Innohome Oy");
+            put(UUID.fromString("00000a74-0000-1000-8000-00805f9b34fb"), "MICROSON S.A.");
+            put(UUID.fromString("00000a75-0000-1000-8000-00805f9b34fb"), "Delta Cycle Corporation");
+            put(UUID.fromString("00000a76-0000-1000-8000-00805f9b34fb"), "Synaptics Incorporated");
+            put(UUID.fromString("00000a77-0000-1000-8000-00805f9b34fb"), "JMD PACIFIC PTE. LTD.");
+            put(UUID.fromString("00000a78-0000-1000-8000-00805f9b34fb"), "Shenzhen Sunricher Technology Limited");
+            put(UUID.fromString("00000a79-0000-1000-8000-00805f9b34fb"), "Webasto SE");
+            put(UUID.fromString("00000a7a-0000-1000-8000-00805f9b34fb"), "Emlid Limited");
+            put(UUID.fromString("00000a7b-0000-1000-8000-00805f9b34fb"), "UniqAir Oy");
+            put(UUID.fromString("00000a7c-0000-1000-8000-00805f9b34fb"), "WAFERLOCK");
+            put(UUID.fromString("00000a7d-0000-1000-8000-00805f9b34fb"), "Freedman Electronics Pty Ltd");
+            put(UUID.fromString("00000a7e-0000-1000-8000-00805f9b34fb"), "Keba AG");
+            put(UUID.fromString("00000a7f-0000-1000-8000-00805f9b34fb"), "Intuity Medical");
+            put(UUID.fromString("00000a80-0000-1000-8000-00805f9b34fb"), "Cleer Limited");
+            put(UUID.fromString("00000a81-0000-1000-8000-00805f9b34fb"), "Universal Biosensors Pty Ltd");
+            put(UUID.fromString("00000a82-0000-1000-8000-00805f9b34fb"), "Corsair");
+            put(UUID.fromString("00000a83-0000-1000-8000-00805f9b34fb"), "Rivata, Inc.");
+            put(UUID.fromString("00000a84-0000-1000-8000-00805f9b34fb"), "Greennote Inc,");
+            put(UUID.fromString("00000a85-0000-1000-8000-00805f9b34fb"), "Snowball Technology Co., Ltd.");
+            put(UUID.fromString("00000a86-0000-1000-8000-00805f9b34fb"), "ALIZENT International");
+            put(UUID.fromString("00000a87-0000-1000-8000-00805f9b34fb"), "Shanghai Smart System Technology Co., Ltd");
+            put(UUID.fromString("00000a88-0000-1000-8000-00805f9b34fb"), "PSA Peugeot Citroen");
+            put(UUID.fromString("00000a89-0000-1000-8000-00805f9b34fb"), "SES-Imagotag");
+            put(UUID.fromString("00000a8a-0000-1000-8000-00805f9b34fb"), "HAINBUCH SPANNENDE TECHNIK");
+            put(UUID.fromString("00000a8b-0000-1000-8000-00805f9b34fb"), "SANlight GmbH");
+            put(UUID.fromString("00000a8c-0000-1000-8000-00805f9b34fb"), "DelpSys, s.r.o.");
+            put(UUID.fromString("00000a8d-0000-1000-8000-00805f9b34fb"), "JCM TECHNOLOGIES S.A.");
+            put(UUID.fromString("00000a8e-0000-1000-8000-00805f9b34fb"), "Perfect Company");
+            put(UUID.fromString("00000a8f-0000-1000-8000-00805f9b34fb"), "TOTO LTD.");
+            put(UUID.fromString("00000a90-0000-1000-8000-00805f9b34fb"), "Shenzhen Grandsun Electronic Co.,Ltd.");
+            put(UUID.fromString("00000a91-0000-1000-8000-00805f9b34fb"), "Monarch International Inc.");
+            put(UUID.fromString("00000a92-0000-1000-8000-00805f9b34fb"), "Carestream Dental LLC");
+            put(UUID.fromString("00000a93-0000-1000-8000-00805f9b34fb"), "GiPStech S.r.l.");
+            put(UUID.fromString("00000a94-0000-1000-8000-00805f9b34fb"), "OOBIK Inc.");
+            put(UUID.fromString("00000a95-0000-1000-8000-00805f9b34fb"), "Pamex Inc.");
+            put(UUID.fromString("00000a96-0000-1000-8000-00805f9b34fb"), "Lightricity Ltd");
+            put(UUID.fromString("00000a97-0000-1000-8000-00805f9b34fb"), "SensTek");
+            put(UUID.fromString("00000a98-0000-1000-8000-00805f9b34fb"), "Foil, Inc.");
+            put(UUID.fromString("00000a99-0000-1000-8000-00805f9b34fb"), "Shanghai high-flying electronics technology Co.,Ltd");
+            put(UUID.fromString("00000a9a-0000-1000-8000-00805f9b34fb"), "TEMKIN ASSOCIATES, LLC");
+            put(UUID.fromString("00000a9b-0000-1000-8000-00805f9b34fb"), "Eello LLC");
+            put(UUID.fromString("00000a9c-0000-1000-8000-00805f9b34fb"), "Xi'an Fengyu Information Technology Co., Ltd.");
+            put(UUID.fromString("00000a9d-0000-1000-8000-00805f9b34fb"), "Canon Finetech Nisca Inc.");
+            put(UUID.fromString("00000a9e-0000-1000-8000-00805f9b34fb"), "LifePlus, Inc.");
+            put(UUID.fromString("00000a9f-0000-1000-8000-00805f9b34fb"), "ista International GmbH");
+            put(UUID.fromString("00000aa0-0000-1000-8000-00805f9b34fb"), "Loy Tec electronics GmbH");
+            put(UUID.fromString("00000aa1-0000-1000-8000-00805f9b34fb"), "LINCOGN TECHNOLOGY CO. LIMITED");
+            put(UUID.fromString("00000aa2-0000-1000-8000-00805f9b34fb"), "Care Bloom, LLC");
+            put(UUID.fromString("00000aa3-0000-1000-8000-00805f9b34fb"), "DIC Corporation");
+            put(UUID.fromString("00000aa4-0000-1000-8000-00805f9b34fb"), "FAZEPRO LLC");
+            put(UUID.fromString("00000aa5-0000-1000-8000-00805f9b34fb"), "Shenzhen Uascent Technology Co., Ltd");
+            put(UUID.fromString("00000aa6-0000-1000-8000-00805f9b34fb"), "Realityworks, inc.");
+            put(UUID.fromString("00000aa7-0000-1000-8000-00805f9b34fb"), "Urbanista AB");
+            put(UUID.fromString("00000aa8-0000-1000-8000-00805f9b34fb"), "Zencontrol Pty Ltd");
+            put(UUID.fromString("00000aa9-0000-1000-8000-00805f9b34fb"), "Mrinq Technologies LLC");
+            put(UUID.fromString("00000aaa-0000-1000-8000-00805f9b34fb"), "Computime International Ltd");
+            put(UUID.fromString("00000aab-0000-1000-8000-00805f9b34fb"), "Anhui Listenai Co");
+            put(UUID.fromString("00000aac-0000-1000-8000-00805f9b34fb"), "OSM HK Limited");
+            put(UUID.fromString("00000aad-0000-1000-8000-00805f9b34fb"), "Adevo Consulting AB");
+            put(UUID.fromString("00000aae-0000-1000-8000-00805f9b34fb"), "PS Engineering, Inc.");
+            put(UUID.fromString("00000aaf-0000-1000-8000-00805f9b34fb"), "AIAIAI ApS");
+            put(UUID.fromString("00000ab0-0000-1000-8000-00805f9b34fb"), "Visiontronic s.r.o.");
+            put(UUID.fromString("00000ab1-0000-1000-8000-00805f9b34fb"), "InVue Security Products Inc");
+            put(UUID.fromString("00000ab2-0000-1000-8000-00805f9b34fb"), "TouchTronics, Inc.");
+            put(UUID.fromString("00000ab3-0000-1000-8000-00805f9b34fb"), "INNER RANGE PTY. LTD.");
+            put(UUID.fromString("00000ab4-0000-1000-8000-00805f9b34fb"), "Ellenby Technologies, Inc.");
+            put(UUID.fromString("00000ab5-0000-1000-8000-00805f9b34fb"), "Elstat Ltd [ Formerly Elstat Electronics Ltd.]");
+            put(UUID.fromString("00000ab6-0000-1000-8000-00805f9b34fb"), "Xenter, Inc.");
+            put(UUID.fromString("00000ab7-0000-1000-8000-00805f9b34fb"), "LogTag North America Inc.");
+            put(UUID.fromString("00000ab8-0000-1000-8000-00805f9b34fb"), "Sens.ai Incorporated");
+            put(UUID.fromString("00000ab9-0000-1000-8000-00805f9b34fb"), "STL");
+            put(UUID.fromString("00000aba-0000-1000-8000-00805f9b34fb"), "Open Bionics Ltd.");
+            put(UUID.fromString("00000abb-0000-1000-8000-00805f9b34fb"), "R-DAS, s.r.o.");
+            put(UUID.fromString("00000abc-0000-1000-8000-00805f9b34fb"), "KCCS Mobile Engineering Co., Ltd.");
+            put(UUID.fromString("00000abd-0000-1000-8000-00805f9b34fb"), "Inventas AS");
+            put(UUID.fromString("00000abe-0000-1000-8000-00805f9b34fb"), "Robkoo Information & Technologies Co., Ltd.");
+            put(UUID.fromString("00000abf-0000-1000-8000-00805f9b34fb"), "PAUL HARTMANN AG");
+            put(UUID.fromString("00000ac0-0000-1000-8000-00805f9b34fb"), "Omni-ID USA, INC.");
+            put(UUID.fromString("00000ac1-0000-1000-8000-00805f9b34fb"), "Shenzhen Jingxun Technology Co., Ltd.");
+            put(UUID.fromString("00000ac2-0000-1000-8000-00805f9b34fb"), "RealMega Microelectronics technology (Shanghai) Co. Ltd.");
+            put(UUID.fromString("00000ac3-0000-1000-8000-00805f9b34fb"), "Kenzen, Inc.");
+            put(UUID.fromString("00000ac4-0000-1000-8000-00805f9b34fb"), "CODIUM");
+            put(UUID.fromString("00000ac5-0000-1000-8000-00805f9b34fb"), "Flexoptix GmbH");
+            put(UUID.fromString("00000ac6-0000-1000-8000-00805f9b34fb"), "Barnes Group Inc.");
+            put(UUID.fromString("00000ac7-0000-1000-8000-00805f9b34fb"), "Chengdu Aich Technology Co.,Ltd");
+            put(UUID.fromString("00000ac8-0000-1000-8000-00805f9b34fb"), "ise Individuelle Software und Elektronik GmbH");
         }
 
     }

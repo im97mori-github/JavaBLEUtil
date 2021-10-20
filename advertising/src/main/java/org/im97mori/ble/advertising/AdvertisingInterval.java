@@ -17,7 +17,7 @@ import androidx.annotation.NonNull;
 public class AdvertisingInterval extends AbstractAdvertisingData {
 
     /**
-     * Core Specification Supplement v9 Part A 1.15.2 Unit of Advertising Interval(millis)
+     * Core Specification Supplement v10 Part A 1.15.2 Unit of Advertising Interval(millis)
      */
     public static final double ADVERTISING_INTERVAL_UNIT_MILLIS = 0.625d;
 

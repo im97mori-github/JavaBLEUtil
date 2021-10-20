@@ -78,7 +78,7 @@ public class UniformResourceIdentifierTest {
     public void test_constructor_00001() {
         byte[] data = getData();
 
-        UniformRsourceIdentifier result1 = new UniformRsourceIdentifier(data, 0, data[0]);
+        UniformResourceIdentifier result1 = new UniformResourceIdentifier(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_UNIFORM_RESOURCE_IDENTIFIER, result1.getDataType());
         assertEquals(new String(data, 2, data.length - 2), result1.getUriString());
@@ -89,7 +89,7 @@ public class UniformResourceIdentifierTest {
     public void test_constructor_00002() {
         byte[] data = getData();
 
-        UniformRsourceIdentifier result1 = new UniformRsourceIdentifier(data, 0, data[0]);
+        UniformResourceIdentifier result1 = new UniformResourceIdentifier(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
         assertEquals(DATA_TYPE_UNIFORM_RESOURCE_IDENTIFIER, result1.getDataType());
         assertEquals(new String(data, 2, data.length - 2), result1.getUriString());
@@ -100,7 +100,7 @@ public class UniformResourceIdentifierTest {
     public void test_parcelable_2_00001() {
         byte[] data = getData();
 
-        UniformRsourceIdentifier result1 = new UniformRsourceIdentifier(data, 0, data[0]);
+        UniformResourceIdentifier result1 = new UniformResourceIdentifier(data, 0, data[0]);
         assertArrayEquals(data, result1.getBytes());
     }
 
@@ -108,7 +108,7 @@ public class UniformResourceIdentifierTest {
     public void test_parcelable_2_00002() {
         byte[] data = getData();
 
-        UniformRsourceIdentifier result1 = new UniformRsourceIdentifier(data, 0, data[0]);
+        UniformResourceIdentifier result1 = new UniformResourceIdentifier(data, 0, data[0]);
         assertArrayEquals(data, result1.getBytes());
     }
 

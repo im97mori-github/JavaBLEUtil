@@ -15,190 +15,249 @@ import androidx.annotation.NonNull;
  * <p>
  * LE Supported Features
  * <p>
- * Core Specification v5.2 Vol 6 Part B 4.6
+ * Core Specification v5.3 Vol 6 Part B 4.6
  * </p>
  */
 public class LeSupportedFeatures extends AbstractAdvertisingData {
 
-    /**
-     * LE Encryption
-     */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_SUPPORTED_FEATURE_LE_ENCRYPTION = new SimpleImmutableEntry<>(0, 0b00000001);
+	/**
+	 * LE Encryption
+	 */
+	public static final SimpleImmutableEntry<Integer, Integer> FEATURE_SUPPORTED_FEATURE_LE_ENCRYPTION = new SimpleImmutableEntry<>(0, 0b00000001);
 
     /**
      * Connection Parameters Request Procedure
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTION_PARAMETERS_REQUEST_PROCEDURE = new SimpleImmutableEntry<>(0, 0b00000010);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTION_PARAMETERS_REQUEST_PROCEDURE = new SimpleImmutableEntry<>(
+            0, 0b00000010);
 
     /**
      * Extended Reject Indication
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_EXTENDED_REJECT_INDICATION = new SimpleImmutableEntry<>(0, 0b00000100);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_EXTENDED_REJECT_INDICATION = new SimpleImmutableEntry<>(
+            0, 0b00000100);
 
     /**
-     * Slave-initiated Features Exchange
+     * Peripheral-initiated Features Exchange
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_SLAVE_INITIATED_FEATURES_EXCHANGE = new SimpleImmutableEntry<>(0, 0b00001000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_PERIPHERAL_INITIATED_FEATURES_EXCHANGE = new SimpleImmutableEntry<>(
+            0, 0b00001000);
 
     /**
      * LE Ping
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_PING = new SimpleImmutableEntry<>(0, 0b00010000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_PING = new SimpleImmutableEntry<>(0,
+            0b00010000);
 
     /**
      * LE Data Packet Length Extension
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_DATA_PACKET_LENGTH_EXTENSION = new SimpleImmutableEntry<>(0, 0b00100000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_DATA_PACKET_LENGTH_EXTENSION = new SimpleImmutableEntry<>(
+            0, 0b00100000);
 
     /**
      * LL Privacy
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LL_PRIVACY = new SimpleImmutableEntry<>(0, 0b01000000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LL_PRIVACY = new SimpleImmutableEntry<>(0,
+            0b01000000);
 
     /**
      * Extended Scanner Filter Policies
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_EXTENDED_SCANNER_FILTER_POLICIES = new SimpleImmutableEntry<>(0, 0b10000000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_EXTENDED_SCANNER_FILTER_POLICIES = new SimpleImmutableEntry<>(
+            0, 0b10000000);
 
     /**
      * LE 2M PHY
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_2M_PHY = new SimpleImmutableEntry<>(1, 0b00000001);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_2M_PHY = new SimpleImmutableEntry<>(1,
+            0b00000001);
 
     /**
      * Stable Modulation Index - Transmitter
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_STABLE_MODULATION_INDEX_TRANSMITTER = new SimpleImmutableEntry<>(1, 0b00000010);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_STABLE_MODULATION_INDEX_TRANSMITTER = new SimpleImmutableEntry<>(
+            1, 0b00000010);
 
     /**
      * Stable Modulation Index - Receiver
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_STABLE_MODULATION_INDEX_RECEIVER = new SimpleImmutableEntry<>(1, 0b00000100);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_STABLE_MODULATION_INDEX_RECEIVER = new SimpleImmutableEntry<>(
+            1, 0b00000100);
 
     /**
      * LE Coded PHY
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_CODED_PHY = new SimpleImmutableEntry<>(1, 0b00001000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_CODED_PHY = new SimpleImmutableEntry<>(1,
+            0b00001000);
 
     /**
      * LE Extended Advertising
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_EXTENDED_ADVERTISING = new SimpleImmutableEntry<>(1, 0b00010000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_EXTENDED_ADVERTISING = new SimpleImmutableEntry<>(
+            1, 0b00010000);
 
     /**
      * LE Periodic Advertising
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_PERIODIC_ADVERTISING = new SimpleImmutableEntry<>(1, 0b00100000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_PERIODIC_ADVERTISING = new SimpleImmutableEntry<>(
+            1, 0b00100000);
 
     /**
      * Channel Selection Algorithm #2
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CHANNEL_SELCTION_ALGORITHM_2 = new SimpleImmutableEntry<>(1, 0b01000000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CHANNEL_SELCTION_ALGORITHM_2 = new SimpleImmutableEntry<>(
+            1, 0b01000000);
 
     /**
      * LE Power Class 1
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_POWER_CLASS_1 = new SimpleImmutableEntry<>(1, 0b10000000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_POWER_CLASS_1 = new SimpleImmutableEntry<>(1,
+            0b10000000);
 
     /**
      * Minimum Number of Used Channels Procedure
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_MINIMUM_NUMBER_OF_USED_CHANNELS_PROCEDURE = new SimpleImmutableEntry<>(2, 0b00000001);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_MINIMUM_NUMBER_OF_USED_CHANNELS_PROCEDURE = new SimpleImmutableEntry<>(
+            2, 0b00000001);
 
     /**
      * Connection CTE Request
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTION_CTE_REQUEST = new SimpleImmutableEntry<>(2, 0b00000010);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTION_CTE_REQUEST = new SimpleImmutableEntry<>(
+            2, 0b00000010);
 
     /**
      * Connection CTE Response
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTION_CTE_RESPONSE = new SimpleImmutableEntry<>(2, 0b00000100);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTION_CTE_RESPONSE = new SimpleImmutableEntry<>(
+            2, 0b00000100);
 
     /**
      * Connectionless CTE Transmitter
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTIONLESS_CTE_TRANSMITTER = new SimpleImmutableEntry<>(2, 0b00001000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTIONLESS_CTE_TRANSMITTER = new SimpleImmutableEntry<>(
+            2, 0b00001000);
 
     /**
      * Connectionless CTE Receiver
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTIONLESS_CTE_RECEIVER = new SimpleImmutableEntry<>(2, 0b00010000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTIONLESS_CTE_RECEIVER = new SimpleImmutableEntry<>(
+            2, 0b00010000);
 
     /**
      * Antenna Switching During CTE Transmission (AoD)
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ANTENNA_SWITCHING_DURING_CTE_TRANSMISSION_AOD = new SimpleImmutableEntry<>(2, 0b00100000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ANTENNA_SWITCHING_DURING_CTE_TRANSMISSION_AOD = new SimpleImmutableEntry<>(
+            2, 0b00100000);
 
     /**
      * Antenna Switching During CTE Reception (AoA)
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ANTENNA_SWITCHING_DURING_CTE_RECEPTION_AOA = new SimpleImmutableEntry<>(2, 0b01000000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ANTENNA_SWITCHING_DURING_CTE_RECEPTION_AOA = new SimpleImmutableEntry<>(
+            2, 0b01000000);
 
     /**
      * Receiving Constant Tone Extensions
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_RECEIVING_CONSTANT_TONE_EXTENSIONS = new SimpleImmutableEntry<>(2, 0b10000000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_RECEIVING_CONSTANT_TONE_EXTENSIONS = new SimpleImmutableEntry<>(
+            2, 0b10000000);
 
     /**
      * Periodic Advertising Sync Transfer - Sender
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_PERIODIC_ADVERTISING_SYNC_TRANSFER_SENDER = new SimpleImmutableEntry<>(3, 0b00000001);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_PERIODIC_ADVERTISING_SYNC_TRANSFER_SENDER = new SimpleImmutableEntry<>(
+            3, 0b00000001);
 
     /**
      * Periodic Advertising Sync Transfer - Recipient
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_PERIODIC_ADVERTISING_SYNC_TRANSFER_RECIPIENT = new SimpleImmutableEntry<>(3, 0b00000010);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_PERIODIC_ADVERTISING_SYNC_TRANSFER_RECIPIENT = new SimpleImmutableEntry<>(
+            3, 0b00000010);
 
     /**
      * Sleep Clock Accuracy Updates
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_SLEEP_CLOCK_ACCURACY_UPDATES = new SimpleImmutableEntry<>(3, 0b00000100);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_SLEEP_CLOCK_ACCURACY_UPDATES = new SimpleImmutableEntry<>(
+            3, 0b00000100);
 
     /**
      * Remote Public Key Validation
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_REMOTE_PUBLIC_KEY_VALIDATION = new SimpleImmutableEntry<>(3, 0b00001000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_REMOTE_PUBLIC_KEY_VALIDATION = new SimpleImmutableEntry<>(
+            3, 0b00001000);
 
     /**
-     * Connected Isochronous Stream – Master
+     * Connected Isochronous Stream – Central
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTED_ISOCHRONOUS_STREAM_MASTER = new SimpleImmutableEntry<>(3, 0b00010000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTED_ISOCHRONOUS_STREAM_CENTRAL = new SimpleImmutableEntry<>(
+            3, 0b00010000);
 
     /**
-     * Connected Isochronous Stream – Slave
+     * Connected Isochronous Stream – Peripheral
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTED_ISOCHRONOUS_STREAM_SLAVE = new SimpleImmutableEntry<>(3, 0b00100000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTED_ISOCHRONOUS_STREAM_PERIPHERAL = new SimpleImmutableEntry<>(
+            3, 0b00100000);
 
     /**
      * Isochronous Broadcaster
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ISOCHRONOUS_BROADCASTER = new SimpleImmutableEntry<>(3, 0b01000000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ISOCHRONOUS_BROADCASTER = new SimpleImmutableEntry<>(
+            3, 0b01000000);
 
     /**
      * Synchronized Receiver
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ISOCHRONOUS_RECEIVER = new SimpleImmutableEntry<>(3, 0b10000000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ISOCHRONOUS_RECEIVER = new SimpleImmutableEntry<>(
+            3, 0b10000000);
 
     /**
      * Isochronous Channels (Host Sup-port)
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ISOCHRONOUS_CHANNELS = new SimpleImmutableEntry<>(4, 0b00000001);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ISOCHRONOUS_CHANNELS = new SimpleImmutableEntry<>(
+            4, 0b00000001);
 
     /**
      * LE Power Control Request
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_POWER_CONTROL_REQUEST = new SimpleImmutableEntry<>(4, 0b00000010);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_POWER_CONTROL_REQUEST = new SimpleImmutableEntry<>(
+            4, 0b00000010);
 
     /**
      * LE Power Change Indication
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_POWER_CHANGE_INDICATION = new SimpleImmutableEntry<>(4, 0b00000100);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_POWER_CHANGE_INDICATION = new SimpleImmutableEntry<>(
+            4, 0b00000100);
 
     /**
      * LE Path Loss Monitoring
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_PATH_LOSS_MONITORING = new SimpleImmutableEntry<>(4, 0b00001000);
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_PATH_LOSS_MONITORING = new SimpleImmutableEntry<>(
+            4, 0b00001000);
+
+    /**
+     * Periodic Advertising ADI support
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_PERIODIC_ADVERTISING_ADI_SUPPORT = new SimpleImmutableEntry<>(
+            4, 0b00010000);
+
+    /**
+     * Connection Subrating
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTION_SUBRATING = new SimpleImmutableEntry<>(
+            4, 0b00100000);
+
+    /**
+     * Connection Subrating (Host Support)
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CONNECTION_SUBRATING_HOST_SUPPORT = new SimpleImmutableEntry<>(
+            4, 0b01000000);
+
+    /**
+     * Channel Classification
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_CHANNEL_CLASSIFICATION = new SimpleImmutableEntry<>(
+            4, 0b10000000);
 
     /**
      * LE Supported Features list
@@ -250,7 +309,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Connection Parameters Request Procedure
      *
-     * @return {@code true}:Connection Parameters Request Procedure bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Connection Parameters Request Procedure bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isConnectionParametersRequestProcedureSupported() {
         return check(FEATURE_CONNECTION_PARAMETERS_REQUEST_PROCEDURE);
@@ -259,19 +319,21 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Extended Reject Indication
      *
-     * @return {@code true}:Extended Reject Indication bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Extended Reject Indication bit is 1, {@code false}:bit
+     *         is 0;
      */
     public boolean isExtendedRejectIndicationSupported() {
         return check(FEATURE_EXTENDED_REJECT_INDICATION);
     }
 
     /**
-     * check Slave-initiated Features Exchange
+     * check Peripheral-initiated Features Exchange
      *
-     * @return {@code true}:Slave-initiated Features Exchange bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Peripheral-initiated Features Exchange bit is 1,
+     *         {@code false}:bit is 0;
      */
-    public boolean isSlaveInitiatedFeaturesExchangeSupported() {
-        return check(FEATURE_SLAVE_INITIATED_FEATURES_EXCHANGE);
+    public boolean isPeripheralInitiatedFeaturesExchangeSupported() {
+        return check(FEATURE_PERIPHERAL_INITIATED_FEATURES_EXCHANGE);
     }
 
     /**
@@ -286,7 +348,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LE Data Packet Length Extension
      *
-     * @return {@code true}:LE Data Packet Length Extension bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE Data Packet Length Extension bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isLeDataPacketLengthExtensionSupported() {
         return check(FEATURE_LE_DATA_PACKET_LENGTH_EXTENSION);
@@ -304,7 +367,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Extended Scanner Filter Policies
      *
-     * @return {@code true}:Extended Scanner Filter Policies bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Extended Scanner Filter Policies bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isExtendedScannerFilterPoliciesSupported() {
         return check(FEATURE_EXTENDED_SCANNER_FILTER_POLICIES);
@@ -322,7 +386,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Stable Modulation Index - Transmitter
      *
-     * @return {@code true}:Stable Modulation Index - Transmitter bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Stable Modulation Index - Transmitter bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isStableModulationIndexTransmitterSupported() {
         return check(FEATURE_STABLE_MODULATION_INDEX_TRANSMITTER);
@@ -331,7 +396,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Stable Modulation Index - Receiver
      *
-     * @return {@code true}:Stable Modulation Index - Receiver bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Stable Modulation Index - Receiver bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isStableModulationIndexReceiverSupported() {
         return check(FEATURE_STABLE_MODULATION_INDEX_RECEIVER);
@@ -349,7 +415,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LE Extended Advertising
      *
-     * @return {@code true}:LE Extended Advertising bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE Extended Advertising bit is 1, {@code false}:bit is
+     *         0;
      */
     public boolean isLeExtendedAdvertisingSupported() {
         return check(FEATURE_LE_EXTENDED_ADVERTISING);
@@ -358,7 +425,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LE Periodic Advertising
      *
-     * @return {@code true}:LE Periodic Advertising bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE Periodic Advertising bit is 1, {@code false}:bit is
+     *         0;
      */
     public boolean isLePeriodicAdvertisingSupported() {
         return check(FEATURE_LE_PERIODIC_ADVERTISING);
@@ -367,7 +435,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Channel Selection Algorithm #2
      *
-     * @return {@code true}:Channel Selection Algorithm #2 bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Channel Selection Algorithm #2 bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isChannelSelectionAlgorithm2Supported() {
         return check(FEATURE_CHANNEL_SELCTION_ALGORITHM_2);
@@ -385,7 +454,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Minimum Number of Used Channels Procedure
      *
-     * @return {@code true}:Minimum Number of Used Channels Procedure bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Minimum Number of Used Channels Procedure bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isMinimumNumberOfUsedChannelsProcedureSupported() {
         return check(FEATURE_MINIMUM_NUMBER_OF_USED_CHANNELS_PROCEDURE);
@@ -403,7 +473,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Connection CTE Response
      *
-     * @return {@code true}:Connection CTE Response bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Connection CTE Response bit is 1, {@code false}:bit is
+     *         0;
      */
     public boolean isConnectionCteResponseSupported() {
         return check(FEATURE_CONNECTION_CTE_RESPONSE);
@@ -412,7 +483,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Connectionless CTE Transmitter
      *
-     * @return {@code true}:Connectionless CTE Transmitter bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Connectionless CTE Transmitter bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isConnectionlessCteTransmitterSupported() {
         return check(FEATURE_CONNECTIONLESS_CTE_TRANSMITTER);
@@ -421,7 +493,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Connectionless CTE Receiver
      *
-     * @return {@code true}:Connectionless CTE Receiver bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Connectionless CTE Receiver bit is 1, {@code false}:bit
+     *         is 0;
      */
     public boolean isConnectionlessCteReceiverSupported() {
         return check(FEATURE_CONNECTIONLESS_CTE_RECEIVER);
@@ -430,7 +503,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Antenna Switching During CTE Transmission (AoD)
      *
-     * @return {@code true}:Antenna Switching During CTE Transmission (AoD) bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Antenna Switching During CTE Transmission (AoD) bit is
+     *         1, {@code false}:bit is 0;
      */
     public boolean isAntennaSwitchingDuringCteTransmissionAodSupported() {
         return check(FEATURE_ANTENNA_SWITCHING_DURING_CTE_TRANSMISSION_AOD);
@@ -439,7 +513,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Antenna Switching During CTE Reception (AoA)
      *
-     * @return {@code true}:Antenna Switching During CTE Transmission (AoD) bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Antenna Switching During CTE Transmission (AoD) bit is
+     *         1, {@code false}:bit is 0;
      */
     public boolean isAntennaSwitchingDuringCteReceptionAoaSupported() {
         return check(FEATURE_ANTENNA_SWITCHING_DURING_CTE_RECEPTION_AOA);
@@ -448,7 +523,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Receiving Constant Tone Extensions
      *
-     * @return {@code true}:Receiving Constant Tone Extensions bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Receiving Constant Tone Extensions bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isReceivingConstantToneExtensionsSupported() {
         return check(FEATURE_RECEIVING_CONSTANT_TONE_EXTENSIONS);
@@ -457,7 +533,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Periodic Advertising Sync Transfer - Sender
      *
-     * @return {@code true}:Periodic Advertising Sync Transfer - Sender bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Periodic Advertising Sync Transfer - Sender bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isPeriodicAdvertisingSyncTransferSenderSupported() {
         return check(FEATURE_PERIODIC_ADVERTISING_SYNC_TRANSFER_SENDER);
@@ -466,7 +543,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Periodic Advertising Sync Transfer - Recipient
      *
-     * @return {@code true}:Periodic Advertising Sync Transfer - Recipient bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Periodic Advertising Sync Transfer - Recipient bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isPeriodicAdvertisingSyncTransferRecipientSupported() {
         return check(FEATURE_PERIODIC_ADVERTISING_SYNC_TRANSFER_RECIPIENT);
@@ -475,7 +553,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Sleep Clock Accuracy Updates
      *
-     * @return {@code true}:Sleep Clock Accuracy Updates bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Sleep Clock Accuracy Updates bit is 1, {@code false}:bit
+     *         is 0;
      */
     public boolean isSleepClockAccuracyUpdatesSupported() {
         return check(FEATURE_SLEEP_CLOCK_ACCURACY_UPDATES);
@@ -484,34 +563,38 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Remote Public Key Validation
      *
-     * @return {@code true}:Remote Public Key Validation bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Remote Public Key Validation bit is 1, {@code false}:bit
+     *         is 0;
      */
     public boolean isRemotePublicKeyValidationSupported() {
         return check(FEATURE_REMOTE_PUBLIC_KEY_VALIDATION);
     }
 
     /**
-     * check Connected Isochronous Stream – Master
+     * check Connected Isochronous Stream – Central
      *
-     * @return {@code true}:Connected Isochronous Stream – Master bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Connected Isochronous Stream – Central bit is 1,
+     *         {@code false}:bit is 0;
      */
-    public boolean isConnectedIsochronousStreamMasterSupported() {
-        return check(FEATURE_CONNECTED_ISOCHRONOUS_STREAM_MASTER);
+    public boolean isConnectedIsochronousStreamCentralSupported() {
+        return check(FEATURE_CONNECTED_ISOCHRONOUS_STREAM_CENTRAL);
     }
 
     /**
-     * check Connected Isochronous Stream – Slave
+     * check Connected Isochronous Stream – Peripheral
      *
-     * @return {@code true}:Connected Isochronous Stream – Slave bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Connected Isochronous Stream – Peripheral bit is 1,
+     *         {@code false}:bit is 0;
      */
-    public boolean isConnectedIsochronousStreamSlaveSupported() {
-        return check(FEATURE_CONNECTED_ISOCHRONOUS_STREAM_SLAVE);
+    public boolean isConnectedIsochronousStreamPeripheralSupported() {
+        return check(FEATURE_CONNECTED_ISOCHRONOUS_STREAM_PERIPHERAL);
     }
 
     /**
      * check Isochronous Broadcaster
      *
-     * @return {@code true}:Isochronous Broadcaster bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Isochronous Broadcaster bit is 1, {@code false}:bit is
+     *         0;
      */
     public boolean isIsochronousBroadcasterSupported() {
         return check(FEATURE_ISOCHRONOUS_BROADCASTER);
@@ -529,7 +612,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Isochronous Channels (Host Sup-port)
      *
-     * @return {@code true}:Isochronous Channels (Host Sup-port) bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Isochronous Channels (Host Sup-port) bit is 1,
+     *         {@code false}:bit is 0;
      */
     public boolean isIsochronousChannelsSupported() {
         return check(FEATURE_ISOCHRONOUS_CHANNELS);
@@ -538,7 +622,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LE Power Control Request
      *
-     * @return {@code true}:LE Power Control Request bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE Power Control Request bit is 1, {@code false}:bit is
+     *         0;
      */
     public boolean isLePowerControlRequestSupported() {
         return check(FEATURE_LE_POWER_CONTROL_REQUEST);
@@ -547,7 +632,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LE Power Change Indication
      *
-     * @return {@code true}:LE Power Change Indication bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE Power Change Indication bit is 1, {@code false}:bit
+     *         is 0;
      */
     public boolean isLePowerChangeIndicationSupported() {
         return check(FEATURE_LE_POWER_CHANGE_INDICATION);
@@ -556,10 +642,51 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LE Path Loss Monitoring
      *
-     * @return {@code true}:LE Path Loss Monitoring bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE Path Loss Monitoring bit is 1, {@code false}:bit is
+     *         0;
      */
     public boolean isLePathLossMonitoringSupported() {
         return check(FEATURE_LE_PATH_LOSS_MONITORING);
+    }
+    
+    /**
+     * check Periodic Advertising ADI support
+     *
+     * @return {@code true}:Periodic Advertising ADI support bit is 1, {@code false}:bit is
+     *         0;
+     */
+    public boolean isPeriodicAdvertisingAdiSupported() {
+        return check(FEATURE_PERIODIC_ADVERTISING_ADI_SUPPORT);
+    }
+    
+    /**
+     * check Connection Subrating support
+     *
+     * @return {@code true}:Connection Subrating support bit is 1, {@code false}:bit is
+     *         0;
+     */
+    public boolean isConnectionSubratingSupported() {
+        return check(FEATURE_CONNECTION_SUBRATING);
+    }
+    
+    /**
+     * check Connection Subrating (Host Support) support
+     *
+     * @return {@code true}:Connection Subrating (Host Support) support bit is 1, {@code false}:bit is
+     *         0;
+     */
+    public boolean isConnectionSubratingHostSupportSupported() {
+        return check(FEATURE_CONNECTION_SUBRATING_HOST_SUPPORT);
+    }
+    
+    /**
+     * check Channel Classification support
+     *
+     * @return {@code true}:Channel Classification support bit is 1, {@code false}:bit is
+     *         0;
+     */
+    public boolean isChannelClassificationSupported() {
+        return check(FEATURE_CHANNEL_CLASSIFICATION);
     }
 
     /**
@@ -581,7 +708,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check flag
      *
-     * @param target one of {@link AdvertisingDataConstants.LeSupportedFeatures}
+     * @param target one of {@link LeSupportedFeatures}'s constants
      * @return {@code true}:target bit is 1, {@code false}:target bit is 0
      */
     private boolean check(@NonNull SimpleImmutableEntry<Integer, Integer> target) {

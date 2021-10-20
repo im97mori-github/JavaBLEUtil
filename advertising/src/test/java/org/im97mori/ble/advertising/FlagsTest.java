@@ -118,7 +118,6 @@ public class FlagsTest {
         assertFalse(result1.isLeGeneralDiscoverableMode());
         assertFalse(result1.isBrEdrNotSupported());
         assertFalse(result1.isSimultaneousController());
-        assertFalse(result1.isSimultaneousHost());
     }
 
     @Test
@@ -134,7 +133,6 @@ public class FlagsTest {
         assertTrue(result1.isLeGeneralDiscoverableMode());
         assertFalse(result1.isBrEdrNotSupported());
         assertFalse(result1.isSimultaneousController());
-        assertFalse(result1.isSimultaneousHost());
     }
 
     @Test
@@ -150,7 +148,6 @@ public class FlagsTest {
         assertFalse(result1.isLeGeneralDiscoverableMode());
         assertTrue(result1.isBrEdrNotSupported());
         assertFalse(result1.isSimultaneousController());
-        assertFalse(result1.isSimultaneousHost());
     }
 
     @Test
@@ -166,7 +163,6 @@ public class FlagsTest {
         assertFalse(result1.isLeGeneralDiscoverableMode());
         assertFalse(result1.isBrEdrNotSupported());
         assertTrue(result1.isSimultaneousController());
-        assertFalse(result1.isSimultaneousHost());
     }
 
     @Test
@@ -182,7 +178,6 @@ public class FlagsTest {
         assertFalse(result1.isLeGeneralDiscoverableMode());
         assertFalse(result1.isBrEdrNotSupported());
         assertFalse(result1.isSimultaneousController());
-        assertTrue(result1.isSimultaneousHost());
     }
 
     @Test
@@ -198,7 +193,6 @@ public class FlagsTest {
         assertTrue(result1.isLeGeneralDiscoverableMode());
         assertTrue(result1.isBrEdrNotSupported());
         assertTrue(result1.isSimultaneousController());
-        assertTrue(result1.isSimultaneousHost());
     }
 
     @Test
@@ -213,7 +207,6 @@ public class FlagsTest {
         assertFalse(result1.isLeGeneralDiscoverableMode());
         assertFalse(result1.isBrEdrNotSupported());
         assertFalse(result1.isSimultaneousController());
-        assertFalse(result1.isSimultaneousHost());
     }
 
     @Test

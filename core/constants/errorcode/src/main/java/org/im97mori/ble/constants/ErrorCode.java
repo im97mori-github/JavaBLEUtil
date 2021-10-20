@@ -2,8 +2,8 @@ package org.im97mori.ble.constants;
 
 /**
  * <p>
- * Core Specification v5.2 Vol 3 Part F 3.4.1
- * Supplement to the Bluetooth Core Specification v9 Part B 1.2
+ * Core Specification v5.3 Vol 3 Part F 3.4.1
+ * Supplement to the Bluetooth Core Specification v10 Part B 1.2
  * </p>
  */
 public class ErrorCode {
@@ -74,9 +74,10 @@ public class ErrorCode {
     public static final int ATTRIBUTE_NOT_LONG = 0x0b;
 
     /**
-     * The Encryption Key Size used for encrypting this link is insufficient.
+     * The Encryption Key Size used for encrypting this link is too short.
+     * This was previously "Insufficient Encryption Key Size".
      */
-    public static final int INSUFFICIENT_ENCRYPTION_KEY_SIZE = 0x0c;
+    public static final int ENCRYPTION_KEY_SIZE_TOO_SHORT = 0x0c;
 
     /**
      * The attribute value length is invalid for the operation.
@@ -202,36 +203,36 @@ public class ErrorCode {
      */
     public static final int COMMAND_NOT_SUPPORTED = 0xa0;
 
-    // Reserved for Future Use
+    // Common Profile and Service Error Codes
 
-    public static final int RESERVED_FOR_FUTURE_USE_E0 = 0xe0;
-    public static final int RESERVED_FOR_FUTURE_USE_E1 = 0xe1;
-    public static final int RESERVED_FOR_FUTURE_USE_E2 = 0xe2;
-    public static final int RESERVED_FOR_FUTURE_USE_E3 = 0xe3;
-    public static final int RESERVED_FOR_FUTURE_USE_E4 = 0xe4;
-    public static final int RESERVED_FOR_FUTURE_USE_E5 = 0xe5;
-    public static final int RESERVED_FOR_FUTURE_USE_E6 = 0xe6;
-    public static final int RESERVED_FOR_FUTURE_USE_E7 = 0xe7;
-    public static final int RESERVED_FOR_FUTURE_USE_E8 = 0xe8;
-    public static final int RESERVED_FOR_FUTURE_USE_E9 = 0xe9;
-    public static final int RESERVED_FOR_FUTURE_USE_EA = 0xea;
-    public static final int RESERVED_FOR_FUTURE_USE_EB = 0xeb;
-    public static final int RESERVED_FOR_FUTURE_USE_EC = 0xec;
-    public static final int RESERVED_FOR_FUTURE_USE_ED = 0xed;
-    public static final int RESERVED_FOR_FUTURE_USE_EE = 0xee;
-    public static final int RESERVED_FOR_FUTURE_USE_EF = 0xef;
-    public static final int RESERVED_FOR_FUTURE_USE_F0 = 0xf0;
-    public static final int RESERVED_FOR_FUTURE_USE_F1 = 0xf1;
-    public static final int RESERVED_FOR_FUTURE_USE_F2 = 0xf2;
-    public static final int RESERVED_FOR_FUTURE_USE_F3 = 0xf3;
-    public static final int RESERVED_FOR_FUTURE_USE_F4 = 0xf4;
-    public static final int RESERVED_FOR_FUTURE_USE_F5 = 0xf5;
-    public static final int RESERVED_FOR_FUTURE_USE_F6 = 0xf6;
-    public static final int RESERVED_FOR_FUTURE_USE_F7 = 0xf7;
-    public static final int RESERVED_FOR_FUTURE_USE_F8 = 0xf8;
-    public static final int RESERVED_FOR_FUTURE_USE_F9 = 0xf9;
-    public static final int RESERVED_FOR_FUTURE_USE_FA = 0xfa;
-    public static final int RESERVED_FOR_FUTURE_USE_FB = 0xfb;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_E0 = 0xe0;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_E1 = 0xe1;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_E2 = 0xe2;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_E3 = 0xe3;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_E4 = 0xe4;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_E5 = 0xe5;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_E6 = 0xe6;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_E7 = 0xe7;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_E8 = 0xe8;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_E9 = 0xe9;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_EA = 0xea;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_EB = 0xeb;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_EC = 0xec;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_ED = 0xed;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_EE = 0xee;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_EF = 0xef;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_F0 = 0xf0;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_F1 = 0xf1;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_F2 = 0xf2;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_F3 = 0xf3;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_F4 = 0xf4;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_F5 = 0xf5;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_F6 = 0xf6;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_F7 = 0xf7;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_F8 = 0xf8;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_F9 = 0xf9;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_FA = 0xfa;
+    public static final int COMMON_PROFILE_AND_SERVICE_ERROR_CODES_FB = 0xfb;
 
     /**
      * Write Request Rejected

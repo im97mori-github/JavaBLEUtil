@@ -14,7 +14,7 @@ public class AdvertisingDataConstants {
     /**
      * <p>
      * https://www.bluetooth.com/specifications/assigned-numbers/generic-access-profile/
-     * Core Specification Supplement v9 Part A DATA TYPESSPECIFICATION
+     * Core Specification Supplement v10 Part A DATA TYPESSPECIFICATION
      * </p>
      */
     @Deprecated
@@ -25,7 +25,7 @@ public class AdvertisingDataConstants {
      * <p>
      * Flags Constants
      * <p>
-     * Core Specification Supplement v9 Part A 1.3
+     * Core Specification Supplement v10 Part A 1.3
      * <p>
      * {@link SimpleImmutableEntry#getKey()}:offset, {@link SimpleImmutableEntry#getValue()}:bitmask
      * </p>
@@ -61,24 +61,24 @@ public class AdvertisingDataConstants {
          * Simultaneous LE and BR/EDR to Same Device Capable (Host)
          */
         @Deprecated
-        public static final SimpleImmutableEntry<Integer, Integer> FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_HOST = Flags.FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_HOST;
+        public static final SimpleImmutableEntry<Integer, Integer> FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_HOST = Flags.FLAG_PREVIOUSLY_USED;
 
     }
 
     /**
-     * Core Specification Supplement v9 Part A 1.9.2 Unit of Connection Interval Range(millis)
+     * Core Specification Supplement v10 Part A 1.9.2 Unit of Connection Interval Range(millis)
      */
     @Deprecated
-    public static final double SLAVE_CONNECTION_INTERVAL_RANGE_UNIT_MILLIS = SlaveConnectionIntervalRange.SLAVE_CONNECTION_INTERVAL_RANGE_UNIT_MILLIS;
+    public static final double PERIPHERAL_CONNECTION_INTERVAL_RANGE_UNIT_MILLIS = PeripheralConnectionIntervalRange.PERIPHERAL_CONNECTION_INTERVAL_RANGE_UNIT_MILLIS;
 
     /**
-     * Core Specification Supplement v9 Part A 1.9.2 no specific minimum / maximum values
+     * Core Specification Supplement v10 Part A 1.9.2 no specific minimum / maximum values
      */
     @Deprecated
-    public static final int SLAVE_CONNECTION_INTERVAL_NO_SPECIFIC_VALUE = SlaveConnectionIntervalRange.SLAVE_CONNECTION_INTERVAL_NO_SPECIFIC_VALUE;
+    public static final int PERIPHERAL_CONNECTION_INTERVAL_NO_SPECIFIC_VALUE = PeripheralConnectionIntervalRange.PERIPHERAL_CONNECTION_INTERVAL_NO_SPECIFIC_VALUE;
 
     /**
-     * Core Specification Supplement v9 Part A 1.15.2 Unit of Advertising Interval(millis)
+     * Core Specification Supplement v10 Part A 1.15.2 Unit of Advertising Interval(millis)
      */
     @Deprecated
     public static final double ADVERTISING_INTERVAL_UNIT_MILLIS = AdvertisingInterval.ADVERTISING_INTERVAL_UNIT_MILLIS;
@@ -87,8 +87,8 @@ public class AdvertisingDataConstants {
      * <p>
      * LE Supported Features Constants
      * <p>
-     * Core Specification Supplement v9 Part A 1.19
-     * Core Specification v5.2 Vol 6 Part B 4.6
+     * Core Specification Supplement v10 Part A 1.19
+     * Core Specification v5.3 Vol 6 Part B 4.6
      * <p>
      * {@link SimpleImmutableEntry#getKey()}:offset, {@link SimpleImmutableEntry#getValue()}:bitmask
      * </p>
@@ -115,10 +115,10 @@ public class AdvertisingDataConstants {
         public static final SimpleImmutableEntry<Integer, Integer> FEATURE_EXTENDED_REJECT_INDICATION = org.im97mori.ble.advertising.LeSupportedFeatures.FEATURE_EXTENDED_REJECT_INDICATION;
 
         /**
-         * Slave-initiated Features Exchange
+         * Peripheral-initiated Features Exchange
          */
         @Deprecated
-        public static final SimpleImmutableEntry<Integer, Integer> FEATURE_SLAVE_INITIATED_FEATURES_EXCHANGE = org.im97mori.ble.advertising.LeSupportedFeatures.FEATURE_SLAVE_INITIATED_FEATURES_EXCHANGE;
+        public static final SimpleImmutableEntry<Integer, Integer> FEATURE_PERIPHERAL_INITIATED_FEATURES_EXCHANGE = org.im97mori.ble.advertising.LeSupportedFeatures.FEATURE_PERIPHERAL_INITIATED_FEATURES_EXCHANGE;
 
         /**
          * LE Ping
@@ -270,7 +270,7 @@ public class AdvertisingDataConstants {
      * <p>
      * Physical channel indices
      * <p>
-     * Core Specification v5.2 Vol 6 Part B 1.4
+     * Core Specification v5.3 Vol 6 Part B 1.4.1
      * <p>
      * key:PHY Channel, value:Channel Index
      * </p>

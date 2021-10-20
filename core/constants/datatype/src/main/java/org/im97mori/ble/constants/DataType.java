@@ -2,10 +2,13 @@ package org.im97mori.ble.constants;
 
 /**
  * BLE GATT Data Type
+ * <p>
+ * Generic Access Profile
+ * Revision Date: 2021-07-13
  */
 public class DataType {
 
-    // Supplement to theBluetooth Core Specification v9
+    // Supplement to the Bluetooth Core Specification v10
 
     // 1.1 SERVICE UUID
 
@@ -55,6 +58,7 @@ public class DataType {
 
     /**
      * Flags
+     * 
      */
     public static final int DATA_TYPE_FLAGS = 0x01;
 
@@ -75,9 +79,14 @@ public class DataType {
     // 1.6 SECURE SIMPLE PAIRING OUT OF BAND (OOB)
 
     /**
-     * Secure Simple Pairing Out of Band
+     * Class of Device
      */
     public static final int DATA_TYPE_CLASS_OF_DEVICE = 0x0d;
+
+    /**
+     * Simple Pairing Hash C
+     */
+    public static final int DATA_TYPE_SIMPLE_PAIRING_HASH_C = 0x0e;
 
     /**
      * Simple Pairing Hash C-192
@@ -85,7 +94,12 @@ public class DataType {
     public static final int DATA_TYPE_SIMPLE_PAIRING_HASH_C_192 = 0x0e;
 
     /**
-     * Simple Pairing Randomizer C-192
+     * Simple Pairing Randomizer R
+     */
+    public static final int DATA_TYPE_SIMPLE_PAIRING_RANDOMIZER_R = 0x0f;
+
+    /**
+     * Simple Pairing Randomizer R-192
      */
     public static final int DATA_TYPE_SIMPLE_PAIRING_RANDOMIZER_R_192 = 0x0f;
 
@@ -102,7 +116,7 @@ public class DataType {
     /**
      * Simple Pairing Randomizer R-256
      */
-    public static final int DATA_TYPE_SIMPLE_PAIRING_RANDOMIZER_R_256 = 0x1E;
+    public static final int DATA_TYPE_SIMPLE_PAIRING_RANDOMIZER_R_256 = 0x1e;
 
     /**
      * LE Secure Connections Random Value
@@ -123,12 +137,12 @@ public class DataType {
      */
     public static final int DATA_TYPE_SECURITY_MANAGER_TK_VALUE = 0x10;
 
-    // 1.9 SLAVE CONNECTION INTERVAL RANGE
+    // 1.9 PERIPHERAL CONNECTION INTERVAL RANGE(SLAVE CONNECTION INTERVAL RANGE)
 
     /**
-     * Class of Device
+     * Peripheral Connection Interval Range(Slave Connection Interval Range)
      */
-    public static final int DATA_TYPE_SLAVE_CONNECTION_INTERVAL_RANGE = 0x12;
+    public static final int DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE = 0x12;
 
     // 1.10 SERVICE SOLICITATION
 
@@ -148,6 +162,11 @@ public class DataType {
     public static final int DATA_TYPE_LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS = 0x15;
 
     // 1.11 SERVICE DATA
+
+    /**
+     * Service Data
+     */
+    public static final int DATA_TYPE_SERVICE_DATA = 0x16;
 
     /**
      * Service Data - 16-bit UUID
@@ -191,6 +210,11 @@ public class DataType {
      * Advertising Interval
      */
     public static final int DATA_TYPE_ADVERTISING_INTERVAL = 0x1a;
+
+    /**
+     * Advertising Interval - long
+     */
+    public static final int DATA_TYPE_ADVERTISING_INTERVAL_LONG = 0x2f;
 
     // 1.16 LE BLUETOOTH DEVICE ADDRESS
 
@@ -237,7 +261,7 @@ public class DataType {
     // 1.21 BROADCAST_CODE
 
     /**
-     * Broadcast_Code 
+     * Broadcast_Code
      */
     public static final int DATA_TYPE_BROADCAST_CODE = 0x2d;
 
@@ -254,5 +278,43 @@ public class DataType {
      * Transport Discovery Data
      */
     public static final int DATA_TYPE_TRANSPORT_DISCOVERY_DATA = 0x26;
+
+    // Device ID Profile
+
+    /**
+     * Device ID
+     */
+    public static final int DATA_TYPE_DEVICE_ID = 0x10;
+
+    // Mesh Profile
+
+    /**
+     * PB-ADV
+     */
+    public static final int DATA_TYPE_PB_ADV = 0x29;
+
+    /**
+     * Mesh Message
+     */
+    public static final int DATA_TYPE_MESH_MESSAGE = 0x2a;
+
+    /**
+     * Mesh BEACON
+     */
+    public static final int DATA_TYPE_MESH_BEACON = 0x2b;
+
+    // Coordinated Set Identification Profile
+
+    /**
+     * Resolvable Set Identifier
+     */
+    public static final int DATA_TYPE_RESOLVABLE_SET_IDENTIFIER = 0x2e;
+
+    // 3D Synchronization Profile
+
+    /**
+     * 3D Information Data
+     */
+    public static final int DATA_TYPE_3D_INFORMATION_DATA = 0x3d;
 
 }

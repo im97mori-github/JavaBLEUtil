@@ -25,7 +25,7 @@ public class ChannelMapUpdateIndication extends AbstractAdvertisingData {
      * <p>
      * Physical channel indices
      * <p>
-     * Core Specification v5.2 Vol 6 Part B 1.4
+     * Core Specification v5.3 Vol 6 Part B 1.4.1
      * <p>
      * key:PHY Channel, value:Channel Index
      * </p>

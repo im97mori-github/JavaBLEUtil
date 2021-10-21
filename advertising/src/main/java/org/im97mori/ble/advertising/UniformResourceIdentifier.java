@@ -22,6 +22,11 @@ import androidx.annotation.Nullable;
  */
 public class UniformResourceIdentifier extends AbstractAdvertisingData {
 
+	/**
+	 * Scheme
+	 */
+	private final int mScheme;
+	
     /**
      * URI text
      */
@@ -42,11 +47,11 @@ public class UniformResourceIdentifier extends AbstractAdvertisingData {
     public UniformResourceIdentifier(@NonNull byte[] data, int offset, int length) {
         super(length);
 
-        mUriString = new String(data, offset + 2, length - 1);
-        int scheme = mUriString.charAt(0) & 0xff;
-        UUID schemeUUID = BLEUtils.convert16to128(scheme);
+        mUriString = new String(data, offset + 3, length - 2);
+        mScheme = data[offset + 2] & 0xff;
+        UUID schemeUUID = BLEUtils.convert16to128(mScheme);
         if (SchemeUUID.SCHEME_MAPPING_128.containsKey(schemeUUID)) {
-            mUri = URI.create(SchemeUUID.SCHEME_MAPPING_128.get(schemeUUID) + mUriString.substring(1));
+            mUri = URI.create(SchemeUUID.SCHEME_MAPPING_128.get(schemeUUID) + mUriString);
         } else {
             mUri = null;
         }
@@ -86,6 +91,7 @@ public class UniformResourceIdentifier extends AbstractAdvertisingData {
         ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
         byteBuffer.put((byte) getLength());
         byteBuffer.put((byte) getDataType());
+        byteBuffer.put((byte) mScheme);
         byteBuffer.put(mUriString.getBytes());
         return data;
     }

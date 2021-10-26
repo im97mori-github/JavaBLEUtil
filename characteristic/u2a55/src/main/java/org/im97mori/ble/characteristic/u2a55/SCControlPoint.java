@@ -90,9 +90,9 @@ public class SCControlPoint implements ByteArrayInterface {
     private final byte[] mResponseParameter;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A55
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public SCControlPoint(@NonNull byte[] values) {
         mOpCode = (values[0] & 0xff);

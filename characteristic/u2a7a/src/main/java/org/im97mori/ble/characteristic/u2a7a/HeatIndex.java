@@ -19,9 +19,9 @@ public class HeatIndex implements ByteArrayInterface {
     private final int mHeatIndex;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A7A
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public HeatIndex(@NonNull byte[] values) {
         mHeatIndex = BLEUtils.createSInt8(values, 0);

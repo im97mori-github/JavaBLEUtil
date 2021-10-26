@@ -39,9 +39,9 @@ public class LuminousExposure implements ByteArrayInterface {
     private final int mLuminousExposure;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AFE
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public LuminousExposure(@NonNull byte[] values) {
         mLuminousExposure = BLEUtils.createUInt24(values, 0);

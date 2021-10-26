@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_FLAGS;
+import static org.im97mori.ble.constants.DataType.FLAGS_DATA_TYPE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -53,9 +53,9 @@ public class Flags extends AbstractAdvertisingData {
     /**
      * Constructor for Flags
      *
-     * @param data   byte array from {@link ScanRecord#getBytes()}
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset data offset
-     * @param length 1st octed of Advertising Data
+     * @param length 1st octet of Advertising Data
      */
     public Flags(@NonNull byte[] data, int offset, int length) {
         super(length);
@@ -72,7 +72,7 @@ public class Flags extends AbstractAdvertisingData {
      */
     @Override
     public int getDataType() {
-        return DATA_TYPE_FLAGS;
+        return FLAGS_DATA_TYPE;
     }
 
     /**

@@ -33,9 +33,9 @@ public class AlertLevel implements ByteArrayInterface {
     private final int mAlertLevel;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A06
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public AlertLevel(@NonNull byte[] values) {
         mAlertLevel = (values[0] & 0xff);

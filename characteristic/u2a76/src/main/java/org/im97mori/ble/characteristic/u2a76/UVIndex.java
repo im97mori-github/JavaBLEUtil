@@ -18,9 +18,9 @@ public class UVIndex implements ByteArrayInterface {
     private final int mUVIndex;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A76
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public UVIndex(@NonNull byte[] values) {
         mUVIndex = (values[0] & 0xff);

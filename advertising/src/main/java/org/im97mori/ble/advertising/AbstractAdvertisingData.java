@@ -9,7 +9,7 @@ public abstract class AbstractAdvertisingData implements AdvertisingDataInterfac
      * <p>
      * data length
      * <p>
-     * 1st octed of Advertising Data(Extended Inquiry Response Data)
+     * 1st octet of Advertising Data(Extended Inquiry Response Data)
      * </p>
      */
     protected final int mLength;

@@ -24,9 +24,9 @@ public class Humidity implements ByteArrayInterface {
     private final int mHumidity;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A6F
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Humidity(@NonNull byte[] values) {
         mHumidity = BLEUtils.createUInt16(values, 0);

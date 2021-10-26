@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_SHORTENED_LOCAL_NAME;
+import static org.im97mori.ble.constants.DataType.SHORTENED_LOCAL_NAME_DATA_TYPE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -24,9 +24,9 @@ public class ShortenedLocalName extends AbstractAdvertisingData {
     /**
      * Constructor for Shortened Local Name
      *
-     * @param data   byte array from {@link ScanRecord#getBytes()}
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset data offset
-     * @param length 1st octed of Advertising Data
+     * @param length 1st octet of Advertising Data
      */
     public ShortenedLocalName(@NonNull byte[] data, int offset, int length) {
         super(length);
@@ -38,7 +38,7 @@ public class ShortenedLocalName extends AbstractAdvertisingData {
      */
     @Override
     public int getDataType() {
-        return DATA_TYPE_SHORTENED_LOCAL_NAME;
+        return SHORTENED_LOCAL_NAME_DATA_TYPE;
     }
 
     /**

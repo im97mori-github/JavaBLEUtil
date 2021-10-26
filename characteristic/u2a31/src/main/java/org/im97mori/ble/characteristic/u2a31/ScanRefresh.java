@@ -23,9 +23,9 @@ public class ScanRefresh implements ByteArrayInterface {
     private final int mScanRefreshValue;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A31
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public ScanRefresh(@NonNull byte[] values) {
         mScanRefreshValue = (values[0] & 0xff);

@@ -335,9 +335,9 @@ public class CyclingPowerControlPoint implements ByteArrayInterface {
     private final byte[] mResponseParameter;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A66
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public CyclingPowerControlPoint(@NonNull byte[] values) {
         mOpCodes = (values[0] & 0xff);
@@ -875,7 +875,7 @@ public class CyclingPowerControlPoint implements ByteArrayInterface {
 
     /**
      * @return company id or -1(no company id in response parameter)
-     * @see org.im97mori.ble.BLEConstants#COMPANY_MAPPING
+     * @see org.im97mori.ble.constants.CompanyUUID
      */
     public int getCompanyId() {
         int companyId;

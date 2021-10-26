@@ -1,0 +1,115 @@
+package org.im97mori.ble.constants;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+import static org.im97mori.ble.constants.DataType.*;
+
+public class DataTypeTest {
+
+	@Test
+	public void test_map_00001() {
+		assertTrue(DATA_TYPE_MAPPING.containsKey(FLAGS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(FLAGS_DATA_TYPE), "Flags");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE), "Incomplete List of 16-bit Service Class UUIDs");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(COMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(COMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE), "Complete List of 16-bit Service Class UUIDs");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(INCOMPLETE_LIST_OF_32_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(INCOMPLETE_LIST_OF_32_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE), "Incomplete List of 32-bit Service Class UUIDs");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(COMPLETE_LIST_OF_32_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(COMPLETE_LIST_OF_32_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE), "Complete List of 32-bit Service Class UUIDs");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(INCOMPLETE_LIST_OF_128_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(INCOMPLETE_LIST_OF_128_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE), "Incomplete List of 128-bit Service Class UUIDs");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(COMPLETE_LIST_OF_128_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(COMPLETE_LIST_OF_128_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE), "Complete List of 128-bit Service Class UUIDs");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SHORTENED_LOCAL_NAME_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SHORTENED_LOCAL_NAME_DATA_TYPE), "Shortened Local Name");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(COMPLETE_LOCAL_NAME_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(COMPLETE_LOCAL_NAME_DATA_TYPE), "Complete Local Name");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(TX_POWER_LEVEL_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(TX_POWER_LEVEL_DATA_TYPE), "Tx Power Level");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(CLASSOF_DEVICE_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(CLASSOF_DEVICE_DATA_TYPE), "Class of Device");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SIMPLE_PAIRING_HASH_C_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SIMPLE_PAIRING_HASH_C_DATA_TYPE), "Simple Pairing Hash C");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SIMPLE_PAIRING_HASH_C192_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SIMPLE_PAIRING_HASH_C192_DATA_TYPE), "Simple Pairing Hash C-192");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SIMPLE_PAIRING_RANDOMIZER_R_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SIMPLE_PAIRING_RANDOMIZER_R_DATA_TYPE), "Simple Pairing Randomizer R / Simple Pairing Randomizer R-192");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SIMPLE_PAIRING_RANDOMIZER_R192_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SIMPLE_PAIRING_RANDOMIZER_R192_DATA_TYPE), "Simple Pairing Randomizer R / Simple Pairing Randomizer R-192");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(DEVICE_ID_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(DEVICE_ID_DATA_TYPE), "Device ID / Security Manager TK Value");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SECURITY_MANAGER_TK_VALUE_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SECURITY_MANAGER_TK_VALUE_DATA_TYPE), "Device ID / Security Manager TK Value");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SECURITY_MANAGER_OUTOF_BAND_FLAGS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SECURITY_MANAGER_OUTOF_BAND_FLAGS_DATA_TYPE), "Security Manager Out of Band Flags");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE), "Peripheral Connection Interval Range(Slave Connection Interval Range)");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(LIST_OF_16_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(LIST_OF_16_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE), "List of 16-bit Service Solicitation UUIDs");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE), "List of 128-bit Service Solicitation UUIDs");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SERVICE_DATA_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SERVICE_DATA_DATA_TYPE), "Service Data / Service Data - 16-bit UUID");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SERVICE_DATA_16_BIT_UUID_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SERVICE_DATA_16_BIT_UUID_DATA_TYPE), "Service Data / Service Data - 16-bit UUID");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(PUBLIC_TARGET_ADDRESS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(PUBLIC_TARGET_ADDRESS_DATA_TYPE), "Public Target Address");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(RANDOM_TARGET_ADDRESS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(RANDOM_TARGET_ADDRESS_DATA_TYPE), "Random Target Address");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(APPEARANCE_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(APPEARANCE_DATA_TYPE), "Appearance");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(ADVERTISING_INTERVAL_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(ADVERTISING_INTERVAL_DATA_TYPE), "Advertising Interval");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(LE_BLUETOOTH_DEVICE_ADDRESS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(LE_BLUETOOTH_DEVICE_ADDRESS_DATA_TYPE), "LE Bluetooth Device Address");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(LE_ROLE_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(LE_ROLE_DATA_TYPE), "LE Role");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SIMPLE_PAIRING_HASH_C_256_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SIMPLE_PAIRING_HASH_C_256_DATA_TYPE), "Simple Pairing Hash C-256");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SIMPLE_PAIRING_RANDOMIZER_R_256_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SIMPLE_PAIRING_RANDOMIZER_R_256_DATA_TYPE), "Simple Pairing Randomizer R-256");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(LIST_OF_32_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(LIST_OF_32_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE), "List of 32-bit Service Solicitation UUIDs");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SERVICE_DATA_32_BIT_UUID_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SERVICE_DATA_32_BIT_UUID_DATA_TYPE), "Service Data - 32-bit UUID");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SERVICE_DATA_128_BIT_UUID_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(SERVICE_DATA_128_BIT_UUID_DATA_TYPE), "Service Data - 128-bit UUID");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(LE_SECURE_CONNECTIONS_CONFIRMATION_VALUE_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(LE_SECURE_CONNECTIONS_CONFIRMATION_VALUE_DATA_TYPE), "LE Secure Connections Confirmation Value");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(LE_SECURE_CONNECTIONS_RANDOM_VALUE_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(LE_SECURE_CONNECTIONS_RANDOM_VALUE_DATA_TYPE), "LE Secure Connections Random Value");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(URI_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(URI_DATA_TYPE), "URI");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(INDOOR_POSITIONING_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(INDOOR_POSITIONING_DATA_TYPE), "Indoor Positioning");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(TRANSPORT_DISCOVERY_DATA_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(TRANSPORT_DISCOVERY_DATA_DATA_TYPE), "Transport Discovery Data");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(LE_SUPPORTED_FEATURES_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(LE_SUPPORTED_FEATURES_DATA_TYPE), "LE Supported Features");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(CHANNEL_MAP_UPDATE_INDICATION_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(CHANNEL_MAP_UPDATE_INDICATION_DATA_TYPE), "Channel Map Update Indication");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(PB_ADV_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(PB_ADV_DATA_TYPE), "PB-ADV");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(MESH_MESSAGE_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(MESH_MESSAGE_DATA_TYPE), "Mesh Message");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(MESH_BEACON_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(MESH_BEACON_DATA_TYPE), "Mesh Beacon");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(BIG_INFO_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(BIG_INFO_DATA_TYPE), "BIGInfo");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(BROADCAST_CODE_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(BROADCAST_CODE_DATA_TYPE), "Broadcast_Code");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(RESOLVABLE_SET_IDENTIFIER_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(RESOLVABLE_SET_IDENTIFIER_DATA_TYPE), "Resolvable Set Identifier");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(ADVERTISING_INTERVAL_LONG_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(ADVERTISING_INTERVAL_LONG_DATA_TYPE), "Advertising Interval - long");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(THREE_D_INFORMATION_DATA_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(THREE_D_INFORMATION_DATA_DATA_TYPE), "3D Information Data");
+		assertTrue(DATA_TYPE_MAPPING.containsKey(MANUFACTURER_SPECIFIC_DATA_DATA_TYPE));
+		assertEquals(DATA_TYPE_MAPPING.get(MANUFACTURER_SPECIFIC_DATA_DATA_TYPE), "Manufacturer Specific Data");
+	}
+}

@@ -1,7 +1,7 @@
 package org.im97mori.ble.advertising;
 
 import static org.im97mori.ble.BLEUtils.BASE_UUID;
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_SERVICE_DATA_32_BIT_UUID;
+import static org.im97mori.ble.constants.DataType.SERVICE_DATA_32_BIT_UUID_DATA_TYPE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -31,9 +31,9 @@ public class ServiceData32BitUUID extends AbstractAdvertisingData {
     /**
      * Constructor for Service Data - 32-bit UUID
      *
-     * @param data   byte array from {@link ScanRecord#getBytes()}
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset data offset
-     * @param length 1st octed of Advertising Data
+     * @param length 1st octet of Advertising Data
      */
     public ServiceData32BitUUID(@NonNull byte[] data, int offset, int length) {
         super(length);
@@ -57,7 +57,7 @@ public class ServiceData32BitUUID extends AbstractAdvertisingData {
      */
     @Override
     public int getDataType() {
-        return DATA_TYPE_SERVICE_DATA_32_BIT_UUID;
+        return SERVICE_DATA_32_BIT_UUID_DATA_TYPE;
     }
 
     /**

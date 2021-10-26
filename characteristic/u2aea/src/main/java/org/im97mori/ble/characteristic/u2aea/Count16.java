@@ -19,9 +19,9 @@ public class Count16 implements ByteArrayInterface {
     private final int mCount;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AEA
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Count16(@NonNull byte[] values) {
         mCount = BLEUtils.createUInt16(values, 0);

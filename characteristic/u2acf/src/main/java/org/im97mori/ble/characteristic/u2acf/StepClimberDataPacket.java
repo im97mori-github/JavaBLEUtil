@@ -81,9 +81,9 @@ public class StepClimberDataPacket implements ByteArrayInterface {
     private final int mRemainingTime;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2ACF
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public StepClimberDataPacket(@NonNull byte[] values) {
         int index = 2;

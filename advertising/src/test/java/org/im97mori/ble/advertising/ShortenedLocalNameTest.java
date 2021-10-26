@@ -1,11 +1,9 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_COMPLETE_LOCAL_NAME;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_SHORTENED_LOCAL_NAME;
+import static org.im97mori.ble.constants.DataType.SHORTENED_LOCAL_NAME_DATA_TYPE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-import java.nio.charset.StandardCharsets;
 
 import org.junit.Test;
 
@@ -16,10 +14,10 @@ public class ShortenedLocalNameTest {
     private static final byte[] data_00001;
     static {
         String name = "shortened local name";
-        byte[] utf8data = name.getBytes(StandardCharsets.UTF_8);
+        byte[] utf8data = name.getBytes();
         byte[] data = new byte[utf8data.length + 2];
         data[0] = (byte) (utf8data.length + 1);
-        data[1] = DATA_TYPE_SHORTENED_LOCAL_NAME;
+        data[1] = SHORTENED_LOCAL_NAME_DATA_TYPE;
         System.arraycopy(utf8data, 0, data, 2, utf8data.length);
 
         data_00001 = data;
@@ -58,7 +56,7 @@ public class ShortenedLocalNameTest {
 
         ShortenedLocalName result1 = new ShortenedLocalName(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_SHORTENED_LOCAL_NAME, result1.getDataType());
+        assertEquals(SHORTENED_LOCAL_NAME_DATA_TYPE, result1.getDataType());
         assertEquals(new String(data, 2, data.length - 2), result1.getShortenedLocalName());
     }
 

@@ -24,9 +24,9 @@ public class MeasurementInterval implements ByteArrayInterface {
     private final int mMeasurementInterval;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A21
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public MeasurementInterval(@NonNull byte[] values) {
         mMeasurementInterval = BLEUtils.createUInt16(values, 0);

@@ -11,9 +11,9 @@ import androidx.annotation.NonNull;
 public class GeneralActivityInstantaneousData implements ByteArrayInterface {
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B3C
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public GeneralActivityInstantaneousData(@NonNull byte[] values) {
     }

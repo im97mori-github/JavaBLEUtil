@@ -1,14 +1,13 @@
 package org.im97mori.ble.advertising;
 
 import static org.im97mori.ble.advertising.PeripheralConnectionIntervalRange.PERIPHERAL_CONNECTION_INTERVAL_RANGE_UNIT_MILLIS;
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_SHORTENED_LOCAL_NAME;
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE;
+import static org.im97mori.ble.constants.DataType.SHORTENED_LOCAL_NAME_DATA_TYPE;
+import static org.im97mori.ble.constants.DataType.PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.nio.charset.StandardCharsets;
 
 import org.junit.Test;
 
@@ -20,7 +19,7 @@ public class PeripheralConnectionIntervalRangeTest {
     static {
         byte[] data = new byte[6];
         data[0] = 5;
-        data[1] = DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE;
+        data[1] = PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE;
         data[2] = (byte) 0xff;
         data[3] = (byte) 0xff;
         data[4] = (byte) 0xff;
@@ -32,7 +31,7 @@ public class PeripheralConnectionIntervalRangeTest {
     static {
         byte[] data = new byte[6];
         data[0] = 5;
-        data[1] = DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE;
+        data[1] = PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE;
         data[2] = (byte) 0x00;
         data[3] = (byte) 0x00;
         data[4] = (byte) 0x00;
@@ -44,7 +43,7 @@ public class PeripheralConnectionIntervalRangeTest {
     static {
         byte[] data = new byte[6];
         data[0] = 5;
-        data[1] = DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE;
+        data[1] = PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE;
         data[2] = (byte) 0x06;
         data[3] = (byte) 0x00;
         data[4] = (byte) 0x06;
@@ -56,7 +55,7 @@ public class PeripheralConnectionIntervalRangeTest {
     static {
         byte[] data = new byte[6];
         data[0] = 5;
-        data[1] = DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE;
+        data[1] = PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE;
         data[2] = (byte) 0x80;
         data[3] = (byte) 0x0c;
         data[4] = (byte) 0x80;
@@ -97,7 +96,7 @@ public class PeripheralConnectionIntervalRangeTest {
 
         PeripheralConnectionIntervalRange result1 = new PeripheralConnectionIntervalRange(data, 0, data[0]);
         assertEquals(5, result1.getLength());
-        assertEquals(DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE, result1.getDataType());
+        assertEquals(PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE, result1.getDataType());
         assertFalse(result1.hasMinimum());
         assertFalse(result1.hasMaximum());
     }
@@ -108,7 +107,7 @@ public class PeripheralConnectionIntervalRangeTest {
 
         PeripheralConnectionIntervalRange result1 = new PeripheralConnectionIntervalRange(data, 0, data[0]);
         assertEquals(5, result1.getLength());
-        assertEquals(DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE, result1.getDataType());
+        assertEquals(PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE, result1.getDataType());
         assertTrue(result1.hasMinimum());
         assertTrue(result1.hasMaximum());
         assertEquals(0, result1.getMinimumValue());
@@ -123,7 +122,7 @@ public class PeripheralConnectionIntervalRangeTest {
 
         PeripheralConnectionIntervalRange result1 = new PeripheralConnectionIntervalRange(data, 0, data[0]);
         assertEquals(5, result1.getLength());
-        assertEquals(DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE, result1.getDataType());
+        assertEquals(PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE, result1.getDataType());
         assertTrue(result1.hasMinimum());
         assertTrue(result1.hasMaximum());
         assertEquals(0x0006, result1.getMinimumValue());
@@ -138,7 +137,7 @@ public class PeripheralConnectionIntervalRangeTest {
 
         PeripheralConnectionIntervalRange result1 = new PeripheralConnectionIntervalRange(data, 0, data[0]);
         assertEquals(5, result1.getLength());
-        assertEquals(DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE, result1.getDataType());
+        assertEquals(PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE, result1.getDataType());
         assertTrue(result1.hasMinimum());
         assertTrue(result1.hasMaximum());
         assertEquals(0x0c80, result1.getMinimumValue());

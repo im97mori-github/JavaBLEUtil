@@ -12,9 +12,9 @@ import androidx.annotation.NonNull;
 public class IEEE_11073_20601_RegulatoryCertificationDataList implements ByteArrayInterface {
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A2A
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public IEEE_11073_20601_RegulatoryCertificationDataList(@NonNull byte[] values) {
 

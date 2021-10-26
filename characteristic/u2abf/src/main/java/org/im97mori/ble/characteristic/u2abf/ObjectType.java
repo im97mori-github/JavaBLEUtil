@@ -19,9 +19,9 @@ public class ObjectType implements ByteArrayInterface {
     private final byte[] mObjectType;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2ABF
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public ObjectType(@NonNull byte[] values) {
         mObjectType = values;

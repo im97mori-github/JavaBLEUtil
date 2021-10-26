@@ -4,7 +4,6 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-import java.nio.charset.StandardCharsets;
 
 import org.junit.Test;
 
@@ -14,7 +13,7 @@ public class FixedString8Test {
     public void test_constructor_00001() {
         String fixedString = "01234567";
 
-        FixedString8 result1 = new FixedString8(fixedString.getBytes(StandardCharsets.UTF_8));
+        FixedString8 result1 = new FixedString8(fixedString.getBytes());
         assertEquals(fixedString, result1.getFixedString());
     }
 
@@ -22,7 +21,7 @@ public class FixedString8Test {
     public void test_constructor_00002() {
         String fixedString = "01234567 ";
 
-        FixedString8 result1 = new FixedString8(fixedString.getBytes(StandardCharsets.UTF_8));
+        FixedString8 result1 = new FixedString8(fixedString.getBytes());
         assertEquals(fixedString.substring(0, 8), result1.getFixedString());
     }
 
@@ -31,7 +30,7 @@ public class FixedString8Test {
         String fixedString = "0123456";
 
         assertThrows(IndexOutOfBoundsException.class, (
-        ) -> new FixedString8(fixedString.getBytes(StandardCharsets.UTF_8)));
+        ) -> new FixedString8(fixedString.getBytes()));
     }
 
     @Test
@@ -62,16 +61,16 @@ public class FixedString8Test {
     public void test_parcelable_00101() {
         String fixedString = "01234567";
 
-        FixedString8 result1 = new FixedString8(fixedString.getBytes(StandardCharsets.UTF_8));
-        assertArrayEquals(fixedString.getBytes(StandardCharsets.UTF_8), result1.getBytes());
+        FixedString8 result1 = new FixedString8(fixedString.getBytes());
+        assertArrayEquals(fixedString.getBytes(), result1.getBytes());
     }
 
     @Test
     public void test_parcelable_00102() {
         String fixedString = "01234567 ";
 
-        FixedString8 result1 = new FixedString8(fixedString.getBytes(StandardCharsets.UTF_8));
-        assertArrayEquals(fixedString.substring(0, 8).getBytes(StandardCharsets.UTF_8), result1.getBytes());
+        FixedString8 result1 = new FixedString8(fixedString.getBytes());
+        assertArrayEquals(fixedString.substring(0, 8).getBytes(), result1.getBytes());
     }
 
 }

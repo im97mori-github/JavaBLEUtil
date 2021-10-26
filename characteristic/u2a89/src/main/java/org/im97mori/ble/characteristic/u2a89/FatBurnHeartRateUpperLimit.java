@@ -18,9 +18,9 @@ public class FatBurnHeartRateUpperLimit implements ByteArrayInterface {
     private final int mFatBurnHeartRateUpperLimit;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A89
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public FatBurnHeartRateUpperLimit(@NonNull byte[] values) {
         mFatBurnHeartRateUpperLimit = (values[0] & 0xff);

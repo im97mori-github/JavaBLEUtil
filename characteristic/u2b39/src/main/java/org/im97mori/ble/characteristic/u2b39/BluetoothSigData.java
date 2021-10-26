@@ -11,9 +11,9 @@ import androidx.annotation.NonNull;
 public class BluetoothSigData implements ByteArrayInterface {
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B39
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public BluetoothSigData(@NonNull byte[] values) {
     }

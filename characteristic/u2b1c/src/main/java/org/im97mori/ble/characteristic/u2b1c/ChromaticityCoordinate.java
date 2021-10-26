@@ -19,9 +19,9 @@ public class ChromaticityCoordinate implements ByteArrayInterface {
     private final int mChromaticityCoordinate;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B1C
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public ChromaticityCoordinate(@NonNull byte[] values) {
         mChromaticityCoordinate = BLEUtils.createUInt16(values, 0);

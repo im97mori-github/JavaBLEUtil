@@ -78,9 +78,9 @@ public class SportTypeForAerobicAndAnaerobicThresholds implements ByteArrayInter
     private final int mSportTypeForAerobicAndAnaerobicThresholds;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A93
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public SportTypeForAerobicAndAnaerobicThresholds(@NonNull byte[] values) {
         mSportTypeForAerobicAndAnaerobicThresholds = (values[0] & 0xff);

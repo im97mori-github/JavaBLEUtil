@@ -49,9 +49,9 @@ public class DayDateTime implements ByteArrayInterface {
     private final int mDayOfWeek;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A0A
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public DayDateTime(@NonNull byte[] values) {
         mYear = BLEUtils.createUInt16(values, 0);

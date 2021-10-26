@@ -180,9 +180,9 @@ public class CharacteristicPresentationFormat implements ByteArrayInterface {
     private final byte[] mDescription;
 
     /**
-     * Constructor from {@link BluetoothGattDescriptor}
+     * Constructor from byte array
      *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x2904
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
      */
     public CharacteristicPresentationFormat(@NonNull byte[] values) {
         this(values[0] & 0xff, values[1], (values[2] & 0xff) | ((values[3] & 0xff) << 8), values[4] & 0xff, Arrays.copyOfRange(values, 5, 7));

@@ -18,9 +18,9 @@ public class FatBurnHeartRateLowerLimit implements ByteArrayInterface {
     private final int mFatBurnHeartRateLowerLimit;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A88
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public FatBurnHeartRateLowerLimit(@NonNull byte[] values) {
         mFatBurnHeartRateLowerLimit = (values[0] & 0xff);

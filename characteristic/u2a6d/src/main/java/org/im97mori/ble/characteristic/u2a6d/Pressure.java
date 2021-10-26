@@ -24,9 +24,9 @@ public class Pressure implements ByteArrayInterface {
     private final long mPressure;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A6D
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Pressure(@NonNull byte[] values) {
         mPressure = BLEUtils.createUInt32(values, 0);

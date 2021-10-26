@@ -11,9 +11,9 @@ import androidx.annotation.NonNull;
 public class DeviceTime implements ByteArrayInterface {
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B90
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public DeviceTime(@NonNull byte[] values) {
     }

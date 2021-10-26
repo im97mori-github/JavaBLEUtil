@@ -23,7 +23,7 @@ public class LuminousFluxUtils {
     /**
      * @param luminousFlux Luminous Flux
      * @return {@code true}:Luminous Flux value is not known, {@code false}:has Luminous Flux value information
-     * @see #ENERGY_VALUE_IS_NOT_KNOWN
+     * @see #LUMINOUS_FLUX_VALUE_IS_NOT_KNOWN
      */
     public static boolean isLuminousFluxValueIsNotKnown(int luminousFlux) {
         return LUMINOUS_FLUX_VALUE_IS_NOT_KNOWN == luminousFlux;

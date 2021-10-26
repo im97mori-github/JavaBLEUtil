@@ -18,9 +18,9 @@ public class VO2Max implements ByteArrayInterface {
     private final int mVo2Max;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A96
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public VO2Max(@NonNull byte[] values) {
         mVo2Max = (values[0] & 0xff);

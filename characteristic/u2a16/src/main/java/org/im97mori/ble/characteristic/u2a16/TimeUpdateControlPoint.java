@@ -28,9 +28,9 @@ public class TimeUpdateControlPoint implements ByteArrayInterface {
     private final int mTimeUpdateControlPoint;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A16
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TimeUpdateControlPoint(@NonNull byte[] values) {
         mTimeUpdateControlPoint = (values[0] & 0xff);

@@ -1,320 +1,326 @@
 package org.im97mori.ble.constants;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * BLE GATT Data Type
  * <p>
- * Generic Access Profile
+ * Generic Access Profile.pdf
  * Revision Date: 2021-07-13
  */
 public class DataType {
 
-    // Supplement to the Bluetooth Core Specification v10
+    @SuppressWarnings("serial")
+    private static final class DataTypeMap extends HashMap<Integer, String> {
 
-    // 1.1 SERVICE UUID
+        private DataTypeMap() {
+            super();
+            put(0x01, "Flags");
+            put(0x02, "Incomplete List of 16-bit Service Class UUIDs");
+            put(0x03, "Complete List of 16-bit Service Class UUIDs");
+            put(0x04, "Incomplete List of 32-bit Service Class UUIDs");
+            put(0x05, "Complete List of 32-bit Service Class UUIDs");
+            put(0x06, "Incomplete List of 128-bit Service Class UUIDs");
+            put(0x07, "Complete List of 128-bit Service Class UUIDs");
+            put(0x08, "Shortened Local Name");
+            put(0x09, "Complete Local Name");
+            put(0x0a, "Tx Power Level");
+            put(0x0b, "Class of Device");
+            put(0x0c, "Simple Pairing Hash C");
+            put(0x0e, "Simple Pairing Hash C-192");
+            put(0x0f, "Simple Pairing Randomizer R / Simple Pairing Randomizer R-192");
+            put(0x10, "Device ID / Security Manager TK Value");
+            put(0x11, "Security Manager Out of Band Flags");
+            put(0x12, "Peripheral Connection Interval Range(Slave Connection Interval Range)");
+            put(0x14, "List of 16-bit Service Solicitation UUIDs");
+            put(0x15, "List of 128-bit Service Solicitation UUIDs");
+            put(0x16, "Service Data / Service Data - 16-bit UUID");
+            put(0x17, "Public Target Address");
+            put(0x18, "Random Target Address");
+            put(0x19, "Appearance");
+            put(0x1a, "Advertising Interval");
+            put(0x1b, "LE Bluetooth Device Address");
+            put(0x1c, "LE Role");
+            put(0x1d, "Simple Pairing Hash C-256");
+            put(0x1e, "Simple Pairing Randomizer R-256");
+            put(0x1f, "List of 32-bit Service Solicitation UUIDs");
+            put(0x20, "Service Data - 32-bit UUID");
+            put(0x21, "Service Data - 128-bit UUID");
+            put(0x22, "LE Secure Connections Confirmation Value");
+            put(0x23, "LE Secure Connections Random Value");
+            put(0x24, "URI");
+            put(0x25, "Indoor Positioning");
+            put(0x26, "Transport Discovery Data");
+            put(0x27, "LE Supported Features");
+            put(0x28, "Channel Map Update Indication");
+            put(0x29, "PB-ADV");
+            put(0x2a, "Mesh Message");
+            put(0x2b, "Mesh Beacon");
+            put(0x2c, "BIGInfo");
+            put(0x2d, "Broadcast_Code");
+            put(0x2e, "Resolvable Set Identifier");
+            put(0x2f, "Advertising Interval - long");
+            put(0x3d, "3D Information Data");
+            put(0xff, "Manufacturer Specific Data");
+        }
 
-    /**
-     * Incomplete List of 16-bit Service Class UUIDs
-     */
-    public static final int DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS = 0x02;
-
-    /**
-     * Complete List of 16-bit Service Class UUIDs
-     */
-    public static final int DATA_TYPE_COMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS = 0x03;
-
-    /**
-     * Incomplete List of 32-bit Service Class UUIDs
-     */
-    public static final int DATA_TYPE_INCOMPLETE_LIST_OF_32_BIT_SERVICE_UUIDS = 0x04;
-
-    /**
-     * Complete List of 32-bit Service Class UUIDs
-     */
-    public static final int DATA_TYPE_COMPLETE_LIST_OF_32_BIT_SERVICE_UUIDS = 0x05;
-
-    /**
-     * Incomplete List of 128-bit Service Class UUIDs
-     */
-    public static final int DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS = 0x06;
-
-    /**
-     * Complete List of 128-bit Service Class UUIDs
-     */
-    public static final int DATA_TYPE_COMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS = 0x07;
-
-    // 1.2 LOCAL NAME
-
-    /**
-     * Shortened Local Name
-     */
-    public static final int DATA_TYPE_SHORTENED_LOCAL_NAME = 0x08;
-
-    /**
-     * Complete Local Name
-     */
-    public static final int DATA_TYPE_COMPLETE_LOCAL_NAME = 0x09;
-
-    // 1.3 FLAGS
-
-    /**
-     * Flags
-     * 
-     */
-    public static final int DATA_TYPE_FLAGS = 0x01;
-
-    // 1.4 MANUFACTURER SPECIFIC DATA
-
-    /**
-     * Manufacturer Specific Data
-     */
-    public static final int DATA_TYPE_MANUFACTURER_SPECIFIC_DATA = 0xff;
-
-    // 1.5 TX POWER LEVEL
+    }
 
     /**
-     * Tx Power Level
+     * Generic Access Profile.pdf
      */
-    public static final int DATA_TYPE_TX_POWER_LEVEL = 0x0a;
-
-    // 1.6 SECURE SIMPLE PAIRING OUT OF BAND (OOB)
+    public static final Map<Integer, String> DATA_TYPE_MAPPING = Collections.synchronizedMap(Collections.unmodifiableMap(new DataTypeMap()));
+   
+    /**
+     * Flags (Data Type Value: 0x01)
+     */
+    public static final int FLAGS_DATA_TYPE = 0x01;
 
     /**
-     * Class of Device
+     * Incomplete List of 16-bit Service Class UUIDs (Data Type Value: 0x02)
      */
-    public static final int DATA_TYPE_CLASS_OF_DEVICE = 0x0d;
+    public static final int INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE = 0x02;
 
     /**
-     * Simple Pairing Hash C
+     * Complete List of 16-bit Service Class UUIDs (Data Type Value: 0x03)
      */
-    public static final int DATA_TYPE_SIMPLE_PAIRING_HASH_C = 0x0e;
+    public static final int COMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE = 0x03;
 
     /**
-     * Simple Pairing Hash C-192
+     * Incomplete List of 32-bit Service Class UUIDs (Data Type Value: 0x04)
      */
-    public static final int DATA_TYPE_SIMPLE_PAIRING_HASH_C_192 = 0x0e;
+    public static final int INCOMPLETE_LIST_OF_32_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE = 0x04;
 
     /**
-     * Simple Pairing Randomizer R
+     * Complete List of 32-bit Service Class UUIDs (Data Type Value: 0x05)
      */
-    public static final int DATA_TYPE_SIMPLE_PAIRING_RANDOMIZER_R = 0x0f;
+    public static final int COMPLETE_LIST_OF_32_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE = 0x05;
 
     /**
-     * Simple Pairing Randomizer R-192
+     * Incomplete List of 128-bit Service Class UUIDs (Data Type Value: 0x06)
      */
-    public static final int DATA_TYPE_SIMPLE_PAIRING_RANDOMIZER_R_192 = 0x0f;
+    public static final int INCOMPLETE_LIST_OF_128_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE = 0x06;
 
     /**
-     * Simple Pairing Hash C-256
+     * Complete List of 128-bit Service Class UUIDs (Data Type Value: 0x07)
      */
-    public static final int DATA_TYPE_SIMPLE_PAIRING_HASH_C_256 = 0x1d;
+    public static final int COMPLETE_LIST_OF_128_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE = 0x07;
 
     /**
-     * LE Secure Connections Confirmation Value
+     * Shortened Local Name (Data Type Value: 0x08)
      */
-    public static final int DATA_TYPE_LE_SECURE_CONNECTIONS_CONFIRMATION_VALUE = 0x22;
+    public static final int SHORTENED_LOCAL_NAME_DATA_TYPE = 0x08;
 
     /**
-     * Simple Pairing Randomizer R-256
+     * Complete Local Name (Data Type Value: 0x09)
      */
-    public static final int DATA_TYPE_SIMPLE_PAIRING_RANDOMIZER_R_256 = 0x1e;
+    public static final int COMPLETE_LOCAL_NAME_DATA_TYPE = 0x09;
 
     /**
-     * LE Secure Connections Random Value
+     * Tx Power Level (Data Type Value: 0x0a)
      */
-    public static final int DATA_TYPE_LE_SECURE_CONNECTIONS_RANDOM_VALUE = 0x23;
-
-    // 1.7 SECURITY MANAGER OUT OF BAND (OOB)
+    public static final int TX_POWER_LEVEL_DATA_TYPE = 0x0a;
 
     /**
-     * Security Manager Out of Band Flag
+     * Class of Device (Data Type Value: 0x0b)
      */
-    public static final int DATA_TYPE_SECURITY_MANAGER_OUT_OF_BAND_FLAG = 0x11;
-
-    // 1.8 SECURITY MANAGER TK VALUE
+    public static final int CLASSOF_DEVICE_DATA_TYPE = 0x0b;
 
     /**
-     * Security Manager TK Value
+     * Simple Pairing Hash C (Data Type Value: 0x0c)
      */
-    public static final int DATA_TYPE_SECURITY_MANAGER_TK_VALUE = 0x10;
-
-    // 1.9 PERIPHERAL CONNECTION INTERVAL RANGE(SLAVE CONNECTION INTERVAL RANGE)
+    public static final int SIMPLE_PAIRING_HASH_C_DATA_TYPE = 0x0c;
 
     /**
-     * Peripheral Connection Interval Range(Slave Connection Interval Range)
+     * Simple Pairing Hash C-192 (Data Type Value: 0x0e)
      */
-    public static final int DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE = 0x12;
-
-    // 1.10 SERVICE SOLICITATION
+    public static final int SIMPLE_PAIRING_HASH_C192_DATA_TYPE = 0x0e;
 
     /**
-     * List of 16-bit Service Solicitation UUIDs
+     * Simple Pairing Randomizer R (Data Type Value: 0x0f)
      */
-    public static final int DATA_TYPE_LIST_OF_16_BIT_SERVICE_SOLICITATION_UUIDS = 0x14;
+    public static final int SIMPLE_PAIRING_RANDOMIZER_R_DATA_TYPE = 0x0f;
 
     /**
-     * List of 32-bit Service Solicitation UUIDs
+     * Simple Pairing Randomizer R-192 (Data Type Value: 0x0f)
      */
-    public static final int DATA_TYPE_LIST_OF_32_BIT_SERVICE_SOLICITATION_UUIDS = 0x1f;
+    public static final int SIMPLE_PAIRING_RANDOMIZER_R192_DATA_TYPE = 0x0f;
 
     /**
-     * List of 128-bit Service Solicitation UUIDs
+     * Device ID (Data Type Value: 0x10)
      */
-    public static final int DATA_TYPE_LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS = 0x15;
-
-    // 1.11 SERVICE DATA
+    public static final int DEVICE_ID_DATA_TYPE = 0x10;
 
     /**
-     * Service Data
+     * Security Manager TK Value (Data Type Value: 0x10)
      */
-    public static final int DATA_TYPE_SERVICE_DATA = 0x16;
+    public static final int SECURITY_MANAGER_TK_VALUE_DATA_TYPE = 0x10;
 
     /**
-     * Service Data - 16-bit UUID
+     * Security Manager Out of Band Flags (Data Type Value: 0x11)
      */
-    public static final int DATA_TYPE_SERVICE_DATA_16_BIT_UUID = 0x16;
+    public static final int SECURITY_MANAGER_OUTOF_BAND_FLAGS_DATA_TYPE = 0x11;
 
     /**
-     * Service Data - 32-bit UUID
+     * Peripheral Connection Interval Range(Slave Connection Interval Range) (Data Type Value: 0x12)
      */
-    public static final int DATA_TYPE_SERVICE_DATA_32_BIT_UUID = 0x20;
+    public static final int PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE = 0x12;
 
     /**
-     * Service Data - 128-bit UUID
+     * List of 16-bit Service Solicitation UUIDs (Data Type Value: 0x14)
      */
-    public static final int DATA_TYPE_SERVICE_DATA_128_BIT_UUID = 0x21;
-
-    // 1.12 APPEARANCE
+    public static final int LIST_OF_16_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE = 0x14;
 
     /**
-     * Appearance
+     * List of 128-bit Service Solicitation UUIDs (Data Type Value: 0x15)
      */
-    public static final int DATA_TYPE_APPEARANCE = 0x19;
-
-    // 1.13 PUBLIC TARGET ADDRESS
+    public static final int LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE = 0x15;
 
     /**
-     * Public Target Address
+     * Service Data (Data Type Value: 0x16)
      */
-    public static final int DATA_TYPE_PUBLIC_TARGET_ADDRESS = 0x17;
-
-    // 1.14 RANDOM TARGET ADDRESS
+    public static final int SERVICE_DATA_DATA_TYPE = 0x16;
 
     /**
-     * Random Target Address
+     * Service Data - 16-bit UUID (Data Type Value: 0x16)
      */
-    public static final int DATA_TYPE_RANDOM_TARGET_ADDRESS = 0x18;
-
-    // 1.15 ADVERTISING INTERVAL
+    public static final int SERVICE_DATA_16_BIT_UUID_DATA_TYPE = 0x16;
 
     /**
-     * Advertising Interval
+     * Public Target Address (Data Type Value: 0x17)
      */
-    public static final int DATA_TYPE_ADVERTISING_INTERVAL = 0x1a;
+    public static final int PUBLIC_TARGET_ADDRESS_DATA_TYPE = 0x17;
 
     /**
-     * Advertising Interval - long
+     * Random Target Address (Data Type Value: 0x18)
      */
-    public static final int DATA_TYPE_ADVERTISING_INTERVAL_LONG = 0x2f;
-
-    // 1.16 LE BLUETOOTH DEVICE ADDRESS
+    public static final int RANDOM_TARGET_ADDRESS_DATA_TYPE = 0x18;
 
     /**
-     * LE Bluetooth Device Address
+     * Appearance (Data Type Value: 0x19)
      */
-    public static final int DATA_TYPE_LE_BLUETOOTH_DEVICE_ADDRESS = 0x1b;
-
-    // 1.17 LE ROLE
+    public static final int APPEARANCE_DATA_TYPE = 0x19;
 
     /**
-     * LE Role
+     * Advertising Interval (Data Type Value: 0x1a)
      */
-    public static final int DATA_TYPE_LE_ROLE = 0x1c;
-
-    // 1.18 UNIFORM RESOURCE IDENTIFIER (URI)
+    public static final int ADVERTISING_INTERVAL_DATA_TYPE = 0x1a;
 
     /**
-     * URI
+     * LE Bluetooth Device Address (Data Type Value: 0x1b)
      */
-    public static final int DATA_TYPE_UNIFORM_RESOURCE_IDENTIFIER = 0x24;
-
-    // 1.19 LE SUPPORTED FEATURES
+    public static final int LE_BLUETOOTH_DEVICE_ADDRESS_DATA_TYPE = 0x1b;
 
     /**
-     * LE Supported Features
+     * LE Role (Data Type Value: 0x1c)
      */
-    public static final int DATA_TYPE_LE_SUPPORTED_FEATURES = 0x27;
-
-    // 1.20 CHANNEL MAP UPDATE INDICATION
+    public static final int LE_ROLE_DATA_TYPE = 0x1c;
 
     /**
-     * Channel Map Update Indication
+     * Simple Pairing Hash C-256 (Data Type Value: 0x1d)
      */
-    public static final int DATA_TYPE_CHANNEL_MAP_UPDATE_INDICATION = 0x28;
-
-    // 1.21 BIG INFO
+    public static final int SIMPLE_PAIRING_HASH_C_256_DATA_TYPE = 0x1d;
 
     /**
-     * BIGInfo
+     * Simple Pairing Randomizer R-256 (Data Type Value: 0x1e)
      */
-    public static final int DATA_TYPE_BIG_INFO = 0x2c;
-
-    // 1.21 BROADCAST_CODE
+    public static final int SIMPLE_PAIRING_RANDOMIZER_R_256_DATA_TYPE = 0x1e;
 
     /**
-     * Broadcast_Code
+     * List of 32-bit Service Solicitation UUIDs (Data Type Value: 0x1f)
      */
-    public static final int DATA_TYPE_BROADCAST_CODE = 0x2d;
-
-    // Indoor Positioning Service
+    public static final int LIST_OF_32_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE = 0x1f;
 
     /**
-     * Indoor Positioning
+     * Service Data - 32-bit UUID (Data Type Value: 0x20)
      */
-    public static final int DATA_TYPE_INDOOR_POSITIONING = 0x25;
-
-    // Transport Discovery Service
+    public static final int SERVICE_DATA_32_BIT_UUID_DATA_TYPE = 0x20;
 
     /**
-     * Transport Discovery Data
+     * Service Data - 128-bit UUID (Data Type Value: 0x21)
      */
-    public static final int DATA_TYPE_TRANSPORT_DISCOVERY_DATA = 0x26;
-
-    // Device ID Profile
+    public static final int SERVICE_DATA_128_BIT_UUID_DATA_TYPE = 0x21;
 
     /**
-     * Device ID
+     * LE Secure Connections Confirmation Value (Data Type Value: 0x22)
      */
-    public static final int DATA_TYPE_DEVICE_ID = 0x10;
-
-    // Mesh Profile
+    public static final int LE_SECURE_CONNECTIONS_CONFIRMATION_VALUE_DATA_TYPE = 0x22;
 
     /**
-     * PB-ADV
+     * LE Secure Connections Random Value (Data Type Value: 0x23)
      */
-    public static final int DATA_TYPE_PB_ADV = 0x29;
+    public static final int LE_SECURE_CONNECTIONS_RANDOM_VALUE_DATA_TYPE = 0x23;
 
     /**
-     * Mesh Message
+     * URI (Data Type Value: 0x24)
      */
-    public static final int DATA_TYPE_MESH_MESSAGE = 0x2a;
+    public static final int URI_DATA_TYPE = 0x24;
 
     /**
-     * Mesh BEACON
+     * Indoor Positioning (Data Type Value: 0x25)
      */
-    public static final int DATA_TYPE_MESH_BEACON = 0x2b;
-
-    // Coordinated Set Identification Profile
+    public static final int INDOOR_POSITIONING_DATA_TYPE = 0x25;
 
     /**
-     * Resolvable Set Identifier
+     * Transport Discovery Data (Data Type Value: 0x26)
      */
-    public static final int DATA_TYPE_RESOLVABLE_SET_IDENTIFIER = 0x2e;
-
-    // 3D Synchronization Profile
+    public static final int TRANSPORT_DISCOVERY_DATA_DATA_TYPE = 0x26;
 
     /**
-     * 3D Information Data
+     * LE Supported Features (Data Type Value: 0x27)
      */
-    public static final int DATA_TYPE_3D_INFORMATION_DATA = 0x3d;
+    public static final int LE_SUPPORTED_FEATURES_DATA_TYPE = 0x27;
+
+    /**
+     * Channel Map Update Indication (Data Type Value: 0x28)
+     */
+    public static final int CHANNEL_MAP_UPDATE_INDICATION_DATA_TYPE = 0x28;
+
+    /**
+     * PB-ADV (Data Type Value: 0x29)
+     */
+    public static final int PB_ADV_DATA_TYPE = 0x29;
+
+    /**
+     * Mesh Message (Data Type Value: 0x2a)
+     */
+    public static final int MESH_MESSAGE_DATA_TYPE = 0x2a;
+
+    /**
+     * Mesh Beacon (Data Type Value: 0x2b)
+     */
+    public static final int MESH_BEACON_DATA_TYPE = 0x2b;
+
+    /**
+     * BIGInfo (Data Type Value: 0x2c)
+     */
+    public static final int BIG_INFO_DATA_TYPE = 0x2c;
+
+    /**
+     * Broadcast_Code (Data Type Value: 0x2d)
+     */
+    public static final int BROADCAST_CODE_DATA_TYPE = 0x2d;
+
+    /**
+     * Resolvable Set Identifier (Data Type Value: 0x2e)
+     */
+    public static final int RESOLVABLE_SET_IDENTIFIER_DATA_TYPE = 0x2e;
+
+    /**
+     * Advertising Interval - long (Data Type Value: 0x2f)
+     */
+    public static final int ADVERTISING_INTERVAL_LONG_DATA_TYPE = 0x2f;
+
+    /**
+     * 3D Information Data (Data Type Value: 0x3d)
+     */
+    public static final int THREE_D_INFORMATION_DATA_DATA_TYPE = 0x3d;
+
+    /**
+     * Manufacturer Specific Data (Data Type Value: 0xff)
+     */
+    public static final int MANUFACTURER_SPECIFIC_DATA_DATA_TYPE = 0xff;
 
 }

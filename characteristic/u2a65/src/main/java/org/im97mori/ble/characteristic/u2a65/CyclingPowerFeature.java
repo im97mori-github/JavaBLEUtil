@@ -362,9 +362,9 @@ public class CyclingPowerFeature implements ByteArrayInterface {
     private final byte[] mCyclingPowerFeature;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A65
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public CyclingPowerFeature(@NonNull byte[] values) {
         mCyclingPowerFeature = Arrays.copyOfRange(values, 0, 4);

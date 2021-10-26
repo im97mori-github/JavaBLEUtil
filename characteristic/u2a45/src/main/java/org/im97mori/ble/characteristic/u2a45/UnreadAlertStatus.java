@@ -23,9 +23,9 @@ public class UnreadAlertStatus implements ByteArrayInterface {
     private final int mUnreadCount;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A45
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public UnreadAlertStatus(@NonNull byte[] values) {
         mCategoryId = (values[0] & 0xff);

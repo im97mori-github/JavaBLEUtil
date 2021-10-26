@@ -55,9 +55,9 @@ public class TimeTriggerSetting implements ByteArrayInterface {
     private final int mValueCount;
 
     /**
-     * Constructor from {@link BluetoothGattDescriptor}
+     * Constructor from byte array
      *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x290E
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
      */
     public TimeTriggerSetting(@NonNull byte[] values) {
         mCondition = (values[0] & 0xff);

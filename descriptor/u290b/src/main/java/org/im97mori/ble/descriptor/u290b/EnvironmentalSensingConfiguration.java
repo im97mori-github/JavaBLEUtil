@@ -28,9 +28,9 @@ public class EnvironmentalSensingConfiguration implements ByteArrayInterface {
     private final int mTriggerLogicValue;
 
     /**
-     * Constructor from {@link BluetoothGattDescriptor}
+     * Constructor from byte array
      *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x290B
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
      */
     public EnvironmentalSensingConfiguration(@NonNull byte[] values) {
         mTriggerLogicValue = (values[0] & 0xff);

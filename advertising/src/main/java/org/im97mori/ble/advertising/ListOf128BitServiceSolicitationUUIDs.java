@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS;
+import static org.im97mori.ble.constants.DataType.LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -28,9 +28,9 @@ public class ListOf128BitServiceSolicitationUUIDs extends AbstractAdvertisingDat
     /**
      * Constructor for List of 128-bit Service Solicitation UUIDs
      *
-     * @param data   byte array from {@link ScanRecord#getBytes()}
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset data offset
-     * @param length 1st octed of Advertising Data
+     * @param length 1st octet of Advertising Data
      */
     public ListOf128BitServiceSolicitationUUIDs(@NonNull byte[] data, int offset, int length) {
         super(length);
@@ -51,7 +51,7 @@ public class ListOf128BitServiceSolicitationUUIDs extends AbstractAdvertisingDat
      */
     @Override
     public int getDataType() {
-        return DATA_TYPE_LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS;
+        return LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE;
     }
 
     /**

@@ -29,9 +29,9 @@ public class RelativeValueInAnIlluminanceRange implements ByteArrayInterface {
     private final int mMaximumVoltage;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B0A
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public RelativeValueInAnIlluminanceRange(@NonNull byte[] values) {
         mRelativeValue = BLEUtils.createUInt8(values, 0);

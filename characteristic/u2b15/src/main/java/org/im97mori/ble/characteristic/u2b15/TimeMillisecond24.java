@@ -39,9 +39,9 @@ public class TimeMillisecond24 implements ByteArrayInterface {
     private final int mTimeMillisecond24;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B15
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TimeMillisecond24(@NonNull byte[] values) {
         mTimeMillisecond24 = BLEUtils.createUInt24(values, 0);

@@ -250,9 +250,9 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     private final byte[] mResponseParameter;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AD9
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public FitnessMachineControlPoint(@NonNull byte[] values) {
         mOpCode = (values[0] & 0xff);

@@ -230,9 +230,9 @@ public class Navigation implements ByteArrayInterface {
     private final int mSeconds;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A68
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Navigation(@NonNull byte[] values) {
         int index = 0;

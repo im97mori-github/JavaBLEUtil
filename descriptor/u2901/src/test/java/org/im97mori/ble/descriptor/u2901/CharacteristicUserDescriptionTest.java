@@ -3,6 +3,7 @@ package org.im97mori.ble.descriptor.u2901;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
+
 import org.junit.Test;
 
 public class CharacteristicUserDescriptionTest {

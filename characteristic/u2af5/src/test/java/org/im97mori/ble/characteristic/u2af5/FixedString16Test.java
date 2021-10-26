@@ -4,7 +4,6 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-import java.nio.charset.StandardCharsets;
 
 import org.junit.Test;
 
@@ -14,7 +13,7 @@ public class FixedString16Test {
     public void test_constructor_00001() {
         String fixedString = "0123456789abcdef";
 
-        FixedString16 result1 = new FixedString16(fixedString.getBytes(StandardCharsets.UTF_8));
+        FixedString16 result1 = new FixedString16(fixedString.getBytes());
         assertEquals(fixedString, result1.getFixedString());
     }
 
@@ -22,7 +21,7 @@ public class FixedString16Test {
     public void test_constructor_00002() {
         String fixedString = "0123456789abcdef ";
 
-        FixedString16 result1 = new FixedString16(fixedString.getBytes(StandardCharsets.UTF_8));
+        FixedString16 result1 = new FixedString16(fixedString.getBytes());
         assertEquals(fixedString.substring(0, 16), result1.getFixedString());
     }
 
@@ -31,7 +30,7 @@ public class FixedString16Test {
         String fixedString = "0123456789abcde";
 
         assertThrows(IndexOutOfBoundsException.class, (
-        ) -> new FixedString16(fixedString.getBytes(StandardCharsets.UTF_8)));
+        ) -> new FixedString16(fixedString.getBytes()));
     }
 
     @Test
@@ -62,16 +61,16 @@ public class FixedString16Test {
     public void test_parcelable_00101() {
         String fixedString = "0123456789abcdef";
 
-        FixedString16 result1 = new FixedString16(fixedString.getBytes(StandardCharsets.UTF_8));
-        assertArrayEquals(fixedString.getBytes(StandardCharsets.UTF_8), result1.getBytes());
+        FixedString16 result1 = new FixedString16(fixedString.getBytes());
+        assertArrayEquals(fixedString.getBytes(), result1.getBytes());
     }
 
     @Test
     public void test_parcelable_00102() {
         String fixedString = "0123456789abcdef ";
 
-        FixedString16 result1 = new FixedString16(fixedString.getBytes(StandardCharsets.UTF_8));
-        assertArrayEquals(fixedString.substring(0, 16).getBytes(StandardCharsets.UTF_8), result1.getBytes());
+        FixedString16 result1 = new FixedString16(fixedString.getBytes());
+        assertArrayEquals(fixedString.substring(0, 16).getBytes(), result1.getBytes());
     }
 
 }

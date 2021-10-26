@@ -18,9 +18,9 @@ public class NumberOfDigitals implements ByteArrayInterface {
     private final int mNoOfDigitals;
 
     /**
-     * Constructor from {@link BluetoothGattDescriptor}
+     * Constructor from byte array
      *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x2909
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
      */
     public NumberOfDigitals(@NonNull byte[] values) {
         mNoOfDigitals = (values[0] & 0xff);

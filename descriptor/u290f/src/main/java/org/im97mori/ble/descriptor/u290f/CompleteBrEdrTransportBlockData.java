@@ -9,34 +9,35 @@ import androidx.annotation.NonNull;
  */
 public class CompleteBrEdrTransportBlockData implements ByteArrayInterface {
 
-    /**
-     * Transport Data
-     */
-    private final byte[] mTransportData;
+	/**
+	 * Transport Data
+	 */
+	private final byte[] mTransportData;
 
-    /**
-     * Constructor from {@link BluetoothGattDescriptor}
-     *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x0x290F
-     */
-    public CompleteBrEdrTransportBlockData(@NonNull byte[] values) {
-        mTransportData = values;
-    }
+	/**
+	 * Constructor from byte array
+	 *
+	 * @param values byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
+	 */
+	public CompleteBrEdrTransportBlockData(@NonNull byte[] values) {
+		mTransportData = values;
+	}
 
-    /**
-     * @return Transport Data
-     */
-    public byte[] getTransportData() {
-        return mTransportData;
-    }
+	/**
+	 * @return Transport Data
+	 */
+	public byte[] getTransportData() {
+		return mTransportData;
+	}
 
-    /**
-     * {@inheritDoc}
-     */
-    @NonNull
-    @Override
-    public byte[] getBytes() {
-        return mTransportData;
-    }
+	/**
+	 * {@inheritDoc}
+	 */
+	@NonNull
+	@Override
+	public byte[] getBytes() {
+		return mTransportData;
+	}
 
 }

@@ -24,9 +24,9 @@ public class WaistCircumference implements ByteArrayInterface {
     private final int mWaistCircumference;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A97
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public WaistCircumference(@NonNull byte[] values) {
         mWaistCircumference = BLEUtils.createUInt16(values, 0);

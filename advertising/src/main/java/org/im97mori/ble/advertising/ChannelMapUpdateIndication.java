@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_CHANNEL_MAP_UPDATE_INDICATION;
+import static org.im97mori.ble.constants.DataType.CHANNEL_MAP_UPDATE_INDICATION_DATA_TYPE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -101,9 +101,9 @@ public class ChannelMapUpdateIndication extends AbstractAdvertisingData {
     /**
      * Constructor for Channel Map Update Indication
      *
-     * @param data   byte array from {@link ScanRecord#getBytes()}
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset data offset
-     * @param length 1st octed of Advertising Data
+     * @param length 1st octet of Advertising Data
      */
     public ChannelMapUpdateIndication(@NonNull byte[] data, int offset, int length) {
         super(length);
@@ -145,7 +145,7 @@ public class ChannelMapUpdateIndication extends AbstractAdvertisingData {
      */
     @Override
     public int getDataType() {
-        return DATA_TYPE_CHANNEL_MAP_UPDATE_INDICATION;
+        return CHANNEL_MAP_UPDATE_INDICATION_DATA_TYPE;
     }
 
     /**

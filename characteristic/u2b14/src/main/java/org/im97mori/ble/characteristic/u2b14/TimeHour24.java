@@ -34,9 +34,9 @@ public class TimeHour24 implements ByteArrayInterface {
     private final int mTimeHour24;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B14
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TimeHour24(@NonNull byte[] values) {
         mTimeHour24 = BLEUtils.createUInt24(values, 0);
@@ -60,7 +60,7 @@ public class TimeHour24 implements ByteArrayInterface {
 
     /**
      * @return {@code true}:Time Hour 24 value is not known, {@code false}:has Time Hour 24 value information
-     * @see #TIME_SECOND_16_VALUE_IS_NOT_KNOWN
+     * @see #TIME_HOUR_24_VALUE_IS_NOT_KNOWN
      */
     public boolean isTimeHour24ValueIsNotKnown() {
         return TIME_HOUR_24_VALUE_IS_NOT_KNOWN == mTimeHour24;

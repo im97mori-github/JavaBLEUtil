@@ -11,7 +11,6 @@ publishing {
             artifactId characteristicU2a96
             version uploadVersion
             from components.java
-            artifact tasks.sourceJar
             pom {
                 name = 'BLE Core Utility for Java'
                 url = 'https://github.com/im97mori-github/JavaBLEUtil'

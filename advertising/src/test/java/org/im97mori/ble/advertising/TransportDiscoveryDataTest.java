@@ -1,16 +1,15 @@
 package org.im97mori.ble.advertising;
 
-import org.im97mori.ble.TransportDiscoveryServiceUtils;
-import org.junit.Test;
-
-import java.util.Arrays;
-
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+import static org.im97mori.ble.constants.DataType.TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
+import java.util.Arrays;
+
+import org.im97mori.ble.TransportDiscoveryServiceUtils;
+import org.junit.Test;
 
 @SuppressWarnings("unused")
 public class TransportDiscoveryDataTest {
@@ -23,7 +22,7 @@ public class TransportDiscoveryDataTest {
                 | TransportDiscoveryData.TDS_FLSGS_TRANSPORT_STATE_OFF;
         byte[] data = new byte[5];
         data[0] = 4;
-        data[1] = DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+        data[1] = TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
         data[2] = TransportDiscoveryServiceUtils.ORGANIZATION_ID_BLUETOOTH_SIG;
         data[3] = (byte) flag;
         data[4] = 0;
@@ -37,7 +36,7 @@ public class TransportDiscoveryDataTest {
                 | TransportDiscoveryData.TDS_FLSGS_TRANSPORT_STATE_OFF;
         byte[] data = new byte[5];
         data[0] = 4;
-        data[1] = DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+        data[1] = TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
         data[2] = TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLICANCE_NEIGHBOR_AWARENESS_NETWORKING;
         data[3] = (byte) flag;
         data[4] = 0;
@@ -51,7 +50,7 @@ public class TransportDiscoveryDataTest {
                 | TransportDiscoveryData.TDS_FLSGS_TRANSPORT_STATE_OFF;
         byte[] data = new byte[5];
         data[0] = 4;
-        data[1] = DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+        data[1] = TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
         data[2] = TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT;
         data[3] = (byte) flag;
         data[4] = 0;
@@ -65,7 +64,7 @@ public class TransportDiscoveryDataTest {
                 | TransportDiscoveryData.TDS_FLSGS_TRANSPORT_STATE_OFF;
         byte[] data = new byte[5];
         data[0] = 4;
-        data[1] = DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+        data[1] = TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
         data[2] = TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT;
         data[3] = (byte) flag;
         data[4] = 0;
@@ -79,7 +78,7 @@ public class TransportDiscoveryDataTest {
                 | TransportDiscoveryData.TDS_FLSGS_TRANSPORT_STATE_OFF;
         byte[] data = new byte[5];
         data[0] = 4;
-        data[1] = DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+        data[1] = TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
         data[2] = TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT;
         data[3] = (byte) flag;
         data[4] = 0;
@@ -93,7 +92,7 @@ public class TransportDiscoveryDataTest {
                 | TransportDiscoveryData.TDS_FLSGS_TRANSPORT_STATE_ON;
         byte[] data = new byte[5];
         data[0] = 4;
-        data[1] = DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+        data[1] = TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
         data[2] = TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT;
         data[3] = (byte) flag;
         data[4] = 0;
@@ -107,7 +106,7 @@ public class TransportDiscoveryDataTest {
                 | TransportDiscoveryData.TDS_FLSGS_TRANSPORT_STATE_TEMPORARILY_UNAVAILABLE;
         byte[] data = new byte[5];
         data[0] = 4;
-        data[1] = DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+        data[1] = TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
         data[2] = TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT;
         data[3] = (byte) flag;
         data[4] = 0;
@@ -121,7 +120,7 @@ public class TransportDiscoveryDataTest {
                 | TransportDiscoveryData.TDS_FLSGS_TRANSPORT_STATE_TEMPORARILY_UNAVAILABLE;
         byte[] data = new byte[6];
         data[0] = 5;
-        data[1] = DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+        data[1] = TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
         data[2] = TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT;
         data[3] = (byte) flag;
         data[4] = 1;
@@ -139,7 +138,7 @@ public class TransportDiscoveryDataTest {
                 | TransportDiscoveryData.TDS_FLSGS_TRANSPORT_STATE_TEMPORARILY_UNAVAILABLE;
         byte[] data = new byte[11];
         data[0] = 10;
-        data[1] = DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+        data[1] = TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
         data[2] = TransportDiscoveryServiceUtils.ORGANIZATION_ID_BLUETOOTH_SIG;
         data[3] = (byte) flag1;
         data[4] = 1;
@@ -185,7 +184,7 @@ public class TransportDiscoveryDataTest {
 
         TransportDiscoveryData result1 = new TransportDiscoveryData(data, 0, data[0]);
         assertEquals(4, result1.getLength());
-        assertEquals(DATA_TYPE_TRANSPORT_DISCOVERY_DATA, result1.getDataType());
+        assertEquals(TRANSPORT_DISCOVERY_DATA_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getTransportBlockList().size());
         assertEquals(TransportDiscoveryServiceUtils.ORGANIZATION_ID_BLUETOOTH_SIG, result1.getTransportBlockList().get(0).getOrganizationId());
         assertEquals(data[3], result1.getTransportBlockList().get(0).getTdsFlags());
@@ -207,7 +206,7 @@ public class TransportDiscoveryDataTest {
 
         TransportDiscoveryData result1 = new TransportDiscoveryData(data, 0, data[0]);
         assertEquals(4, result1.getLength());
-        assertEquals(DATA_TYPE_TRANSPORT_DISCOVERY_DATA, result1.getDataType());
+        assertEquals(TRANSPORT_DISCOVERY_DATA_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getTransportBlockList().size());
         assertEquals(TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLICANCE_NEIGHBOR_AWARENESS_NETWORKING, result1.getTransportBlockList().get(0).getOrganizationId());
         assertEquals(data[3], result1.getTransportBlockList().get(0).getTdsFlags());
@@ -229,7 +228,7 @@ public class TransportDiscoveryDataTest {
 
         TransportDiscoveryData result1 = new TransportDiscoveryData(data, 0, data[0]);
         assertEquals(4, result1.getLength());
-        assertEquals(DATA_TYPE_TRANSPORT_DISCOVERY_DATA, result1.getDataType());
+        assertEquals(TRANSPORT_DISCOVERY_DATA_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getTransportBlockList().size());
         assertEquals(TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT, result1.getTransportBlockList().get(0).getOrganizationId());
         assertEquals(data[3], result1.getTransportBlockList().get(0).getTdsFlags());
@@ -251,7 +250,7 @@ public class TransportDiscoveryDataTest {
 
         TransportDiscoveryData result1 = new TransportDiscoveryData(data, 0, data[0]);
         assertEquals(4, result1.getLength());
-        assertEquals(DATA_TYPE_TRANSPORT_DISCOVERY_DATA, result1.getDataType());
+        assertEquals(TRANSPORT_DISCOVERY_DATA_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getTransportBlockList().size());
         assertEquals(TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT, result1.getTransportBlockList().get(0).getOrganizationId());
         assertEquals(data[3], result1.getTransportBlockList().get(0).getTdsFlags());
@@ -273,7 +272,7 @@ public class TransportDiscoveryDataTest {
 
         TransportDiscoveryData result1 = new TransportDiscoveryData(data, 0, data[0]);
         assertEquals(4, result1.getLength());
-        assertEquals(DATA_TYPE_TRANSPORT_DISCOVERY_DATA, result1.getDataType());
+        assertEquals(TRANSPORT_DISCOVERY_DATA_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getTransportBlockList().size());
         assertEquals(TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT, result1.getTransportBlockList().get(0).getOrganizationId());
         assertEquals(data[3], result1.getTransportBlockList().get(0).getTdsFlags());
@@ -295,7 +294,7 @@ public class TransportDiscoveryDataTest {
 
         TransportDiscoveryData result1 = new TransportDiscoveryData(data, 0, data[0]);
         assertEquals(4, result1.getLength());
-        assertEquals(DATA_TYPE_TRANSPORT_DISCOVERY_DATA, result1.getDataType());
+        assertEquals(TRANSPORT_DISCOVERY_DATA_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getTransportBlockList().size());
         assertEquals(TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT, result1.getTransportBlockList().get(0).getOrganizationId());
         assertEquals(data[3], result1.getTransportBlockList().get(0).getTdsFlags());
@@ -317,7 +316,7 @@ public class TransportDiscoveryDataTest {
 
         TransportDiscoveryData result1 = new TransportDiscoveryData(data, 0, data[0]);
         assertEquals(4, result1.getLength());
-        assertEquals(DATA_TYPE_TRANSPORT_DISCOVERY_DATA, result1.getDataType());
+        assertEquals(TRANSPORT_DISCOVERY_DATA_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getTransportBlockList().size());
         assertEquals(TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT, result1.getTransportBlockList().get(0).getOrganizationId());
         assertEquals(data[3], result1.getTransportBlockList().get(0).getTdsFlags());
@@ -339,7 +338,7 @@ public class TransportDiscoveryDataTest {
 
         TransportDiscoveryData result1 = new TransportDiscoveryData(data, 0, data[0]);
         assertEquals(5, result1.getLength());
-        assertEquals(DATA_TYPE_TRANSPORT_DISCOVERY_DATA, result1.getDataType());
+        assertEquals(TRANSPORT_DISCOVERY_DATA_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getTransportBlockList().size());
         assertEquals(TransportDiscoveryServiceUtils.ORGANIZATION_ID_WIFI_ALLIANCE_SERVICE_ADVERTISEMENT, result1.getTransportBlockList().get(0).getOrganizationId());
         assertEquals(data[3], result1.getTransportBlockList().get(0).getTdsFlags());
@@ -362,7 +361,7 @@ public class TransportDiscoveryDataTest {
 
         TransportDiscoveryData result1 = new TransportDiscoveryData(data, 0, data[0]);
         assertEquals(10, result1.getLength());
-        assertEquals(DATA_TYPE_TRANSPORT_DISCOVERY_DATA, result1.getDataType());
+        assertEquals(TRANSPORT_DISCOVERY_DATA_DATA_TYPE, result1.getDataType());
         assertEquals(2, result1.getTransportBlockList().size());
         assertEquals(TransportDiscoveryServiceUtils.ORGANIZATION_ID_BLUETOOTH_SIG, result1.getTransportBlockList().get(0).getOrganizationId());
         assertEquals(data[3], result1.getTransportBlockList().get(0).getTdsFlags());

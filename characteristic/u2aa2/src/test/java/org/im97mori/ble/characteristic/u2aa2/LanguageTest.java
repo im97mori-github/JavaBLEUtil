@@ -3,7 +3,6 @@ package org.im97mori.ble.characteristic.u2aa2;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-import java.nio.charset.StandardCharsets;
 
 import org.junit.Test;
 
@@ -13,7 +12,7 @@ public class LanguageTest {
     public void test_constructor001() {
         String languageCode = "ja";
 
-        Language result1 = new Language(languageCode.getBytes(StandardCharsets.UTF_8));
+        Language result1 = new Language(languageCode.getBytes());
         assertEquals(languageCode, result1.getLanguage());
     }
 
@@ -21,7 +20,7 @@ public class LanguageTest {
     public void test_constructor002() {
         String languageCode = "ab";
 
-        Language result1 = new Language(languageCode.getBytes(StandardCharsets.UTF_8));
+        Language result1 = new Language(languageCode.getBytes());
         assertEquals(languageCode, result1.getLanguage());
     }
 
@@ -37,7 +36,7 @@ public class LanguageTest {
     public void test_parcelable003() {
         String languageCode = "ab";
 
-        Language result1 = new Language(languageCode.getBytes(StandardCharsets.UTF_8));
+        Language result1 = new Language(languageCode.getBytes());
         byte[] resultData = result1.getBytes();
         assertArrayEquals(languageCode.getBytes(), resultData);
     }

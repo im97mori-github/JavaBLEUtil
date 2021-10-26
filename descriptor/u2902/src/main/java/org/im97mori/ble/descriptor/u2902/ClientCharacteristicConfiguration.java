@@ -52,9 +52,9 @@ public class ClientCharacteristicConfiguration implements ByteArrayInterface {
     private final byte[] mProperties;
 
     /**
-     * Constructor from {@link BluetoothGattDescriptor}
+     * Constructor from byte array
      *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x2902
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
      */
     public ClientCharacteristicConfiguration(@NonNull byte[] values) {
         mProperties = Arrays.copyOfRange(values, 0, 2);

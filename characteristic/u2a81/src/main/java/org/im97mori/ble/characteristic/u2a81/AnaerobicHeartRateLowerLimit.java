@@ -18,9 +18,9 @@ public class AnaerobicHeartRateLowerLimit implements ByteArrayInterface {
     private final int mAnaerobicHeartRateLowerLimit;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A81
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public AnaerobicHeartRateLowerLimit(@NonNull byte[] values) {
         mAnaerobicHeartRateLowerLimit = (values[0] & 0xff);

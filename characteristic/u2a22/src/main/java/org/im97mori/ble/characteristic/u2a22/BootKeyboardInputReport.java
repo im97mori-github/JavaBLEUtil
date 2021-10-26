@@ -15,9 +15,9 @@ public class BootKeyboardInputReport implements ByteArrayInterface {
     private final byte[] mBootKeyboardInputReportValue;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A22
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public BootKeyboardInputReport(@NonNull byte[] values) {
         mBootKeyboardInputReportValue = values;

@@ -8,8 +8,8 @@ import java.util.UUID;
 /**
  * BLE GATT SDO GATT Service UUID
  * <p>
- * Generic Access Profile
- * Revision Date: 2021-07-13
+ * 16-bit UUID Numbers Document.pdf
+ * Revision Date: 2021-10-01
  */
 public class SdoUUID {
 

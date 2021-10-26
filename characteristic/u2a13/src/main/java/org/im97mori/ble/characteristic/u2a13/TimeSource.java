@@ -54,9 +54,9 @@ public class TimeSource implements ByteArrayInterface {
     private final int mTimeSource;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A13
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TimeSource(@NonNull byte[] values) {
         mTimeSource = BLEUtils.createUInt8(values, 0);

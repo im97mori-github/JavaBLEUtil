@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_BIG_INFO;
+import static org.im97mori.ble.constants.DataType.BIG_INFO_DATA_TYPE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -17,7 +17,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -58,7 +58,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000001;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -99,7 +99,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b01000000;
         data[ 4] = 0b00000000;
@@ -140,7 +140,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = (byte) 0b10000000;
         data[ 4] = 0b00000000;
@@ -181,7 +181,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -222,7 +222,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -263,7 +263,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -304,7 +304,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -345,7 +345,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -386,7 +386,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -427,7 +427,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -468,7 +468,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -509,7 +509,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -550,7 +550,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -591,7 +591,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -632,7 +632,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -673,7 +673,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -714,7 +714,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -755,7 +755,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -796,7 +796,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -837,7 +837,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -878,7 +878,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[59];
         data[ 0] = 58;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -943,7 +943,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[59];
         data[ 0] = 58;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -1008,7 +1008,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -1049,7 +1049,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000000;
         data[ 3] = 0b01000000;
         data[ 4] = 0b00000000;
@@ -1090,7 +1090,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000001;
         data[ 3] = 0b00000000;
         data[ 4] = 0b00000000;
@@ -1131,7 +1131,7 @@ public class BigInfoTest {
     static {
         byte[] data = new byte[35];
         data[ 0] = 34;
-        data[ 1] = DATA_TYPE_BIG_INFO;
+        data[ 1] = BIG_INFO_DATA_TYPE;
         data[ 2] = 0b00000001;
         data[ 3] = 0b01000000;
         data[ 4] = 0b00000000;
@@ -1201,7 +1201,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1232,7 +1232,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1263,7 +1263,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(1, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1294,7 +1294,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(1, result1.getIsoInterval());
@@ -1325,7 +1325,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1356,7 +1356,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1387,7 +1387,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1418,7 +1418,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1449,7 +1449,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1480,7 +1480,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1511,7 +1511,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1542,7 +1542,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1573,7 +1573,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1604,7 +1604,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1635,7 +1635,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1666,7 +1666,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1697,7 +1697,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1728,7 +1728,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1759,7 +1759,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1790,7 +1790,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1821,7 +1821,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(34, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1852,7 +1852,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(58, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());
@@ -1883,7 +1883,7 @@ public class BigInfoTest {
 
         BigInfo result1 = new BigInfo(data, 0, data[0]);
         assertEquals(58, result1.getLength());
-        assertEquals(DATA_TYPE_BIG_INFO, result1.getDataType());
+        assertEquals(BIG_INFO_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getBigOffset());
         assertEquals(0, result1.getBigOffsetUnits());
         assertEquals(0, result1.getIsoInterval());

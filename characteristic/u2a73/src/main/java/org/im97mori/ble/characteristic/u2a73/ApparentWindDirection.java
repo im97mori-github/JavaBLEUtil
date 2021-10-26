@@ -24,9 +24,9 @@ public class ApparentWindDirection implements ByteArrayInterface {
     private final int mApparentWindDirection;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A73
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public ApparentWindDirection(@NonNull byte[] values) {
         mApparentWindDirection = BLEUtils.createUInt16(values, 0);

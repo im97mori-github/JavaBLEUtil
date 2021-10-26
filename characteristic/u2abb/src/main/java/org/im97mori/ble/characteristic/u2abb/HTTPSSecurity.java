@@ -29,9 +29,9 @@ public class HTTPSSecurity implements ByteArrayInterface {
     private final int mHttpsSecurity;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2ABB
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public HTTPSSecurity(@NonNull byte[] values) {
         mHttpsSecurity = BLEUtils.createBoolean(values, 0);

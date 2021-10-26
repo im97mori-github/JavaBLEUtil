@@ -3,7 +3,6 @@ package org.im97mori.ble.characteristic.u2abe;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-import java.nio.charset.StandardCharsets;
 
 import org.junit.Test;
 
@@ -13,7 +12,7 @@ public class ObjectNameTest {
     public void test_constructor_00001() {
         String name = "Rbt-Sensor";
 
-        ObjectName result1 = new ObjectName(name.getBytes(StandardCharsets.UTF_8));
+        ObjectName result1 = new ObjectName(name.getBytes());
         assertEquals(name, result1.getObjectName());
     }
 
@@ -29,7 +28,7 @@ public class ObjectNameTest {
     public void test_parcelable_00002() {
         String name = "Rbt-Sensor";
 
-        ObjectName result1 = new ObjectName(name.getBytes(StandardCharsets.UTF_8));
+        ObjectName result1 = new ObjectName(name.getBytes());
         byte[] resultData = result1.getBytes();
         assertArrayEquals(name.getBytes(), resultData);
     }

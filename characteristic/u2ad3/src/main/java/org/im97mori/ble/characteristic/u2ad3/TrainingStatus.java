@@ -141,9 +141,9 @@ public class TrainingStatus implements ByteArrayInterface {
     private final String mTrainingStatusString;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AD3
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TrainingStatus(@NonNull byte[] values) {
         mFlags = values[0];
@@ -336,7 +336,7 @@ public class TrainingStatus implements ByteArrayInterface {
     @Override
     @NonNull
     public byte[] getBytes() {
-        byte[] data = new byte[2 + (mTrainingStatusString == null ? 0 : mTrainingStatusString.length())];
+        byte[] data = new byte[2 + (mTrainingStatusString == null ? 0 : mTrainingStatusString.getBytes().length)];
         ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
         byteBuffer.put((byte) mFlags);
         byteBuffer.put((byte) mTrainingStatus);

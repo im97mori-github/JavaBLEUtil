@@ -97,9 +97,9 @@ public class IntermediateCuffPressure implements ByteArrayInterface {
     private final byte[] mMeasurementStatus;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A36
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public IntermediateCuffPressure(@NonNull byte[] values) {
         int index = 0;

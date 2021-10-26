@@ -44,9 +44,9 @@ public class MagneticFluxDensity3D implements ByteArrayInterface {
     private final int mMagneticFluxDensityZAxis;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AA1
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public MagneticFluxDensity3D(@NonNull byte[] values) {
         mMagneticFluxDensityXAxis = BLEUtils.createSInt16(values, 0);

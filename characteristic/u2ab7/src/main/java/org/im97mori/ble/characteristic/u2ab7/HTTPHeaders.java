@@ -1,5 +1,6 @@
 package org.im97mori.ble.characteristic.u2ab7;
 
+
 import org.im97mori.ble.ByteArrayInterface;
 
 import androidx.annotation.NonNull;
@@ -15,9 +16,9 @@ public class HTTPHeaders implements ByteArrayInterface {
     private final String mHttpHeaders;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AB7
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public HTTPHeaders(@NonNull byte[] values) {
         mHttpHeaders = new String(values);

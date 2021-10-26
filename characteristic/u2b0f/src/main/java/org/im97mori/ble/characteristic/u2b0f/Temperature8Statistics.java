@@ -39,9 +39,9 @@ public class Temperature8Statistics implements ByteArrayInterface {
     private final int mSensingDuration;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B0F
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Temperature8Statistics(@NonNull byte[] values) {
         mAverage = BLEUtils.createSInt8(values, 0);

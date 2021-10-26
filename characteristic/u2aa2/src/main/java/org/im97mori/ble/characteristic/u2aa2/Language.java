@@ -18,9 +18,9 @@ public class Language implements ByteArrayInterface {
     private final String mLanguage;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AA2
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Language(@NonNull byte[] values) {
         mLanguage = new String(values);

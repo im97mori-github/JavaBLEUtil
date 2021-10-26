@@ -57,9 +57,9 @@ public class EnhancedIntermediateCuffPressure implements ByteArrayInterface {
     private final long mUserFacingTime;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B35
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public EnhancedIntermediateCuffPressure(@NonNull byte[] values) {
         int index = 0;

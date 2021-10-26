@@ -33,9 +33,9 @@ public class Gender implements ByteArrayInterface {
     private final int mGender;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A8C
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Gender(@NonNull byte[] values) {
         mGender = (values[0] & 0xff);

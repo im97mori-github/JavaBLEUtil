@@ -19,9 +19,9 @@ public class TxPowerLevel implements ByteArrayInterface {
     private final int mTxPower;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A07
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TxPowerLevel(@NonNull byte[] values) {
         mTxPower = BLEUtils.createSInt8(values, 0);

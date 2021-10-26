@@ -44,9 +44,9 @@ public class SupportedInclinationRange implements ByteArrayInterface {
     private final int mMinimumIncrement;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AD5
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public SupportedInclinationRange(@NonNull byte[] values) {
         mMinimumInclination = BLEUtils.createSInt16(values, 0);

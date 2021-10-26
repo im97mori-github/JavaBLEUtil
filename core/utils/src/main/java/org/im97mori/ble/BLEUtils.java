@@ -92,8 +92,10 @@ public class BLEUtils {
 	/**
 	 * create boolean (0x01)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 1-bit; 0 = false, 1 = true
 	 */
@@ -104,8 +106,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 2-bit integer (0x02)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 2-bit integer
 	 */
@@ -116,8 +120,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 4-bit integer (0x03)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 4-bit integer
 	 */
@@ -128,8 +134,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 8-bit integer (0x04)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 8-bit integer
 	 */
@@ -140,8 +148,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 12-bit integer (0x05)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 12-bit integer
 	 * 
@@ -154,9 +164,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 12-bit integer (0x05)
 	 *
-	 * @param data        byte array from
-	 *                    {@link BluetoothGattCharacteristic#getValue()} or
-	 *                    {@link BluetoothGattDescriptor#getValue()}
+	 * @param data        byte array from <a href=
+	 *                    "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *                    or <a href=
+	 *                    "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset      data offset
 	 * @param shiftOffset shift offset
 	 * @return unsigned 12-bit integer
@@ -168,8 +179,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 16-bit integer (0x06)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 16-bit integer
 	 */
@@ -180,8 +193,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 24-bit integer (0x07)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 24-bit integer
 	 */
@@ -192,8 +207,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 32-bit integer (0x08)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 32-bit integer
 	 */
@@ -208,8 +225,10 @@ public class BLEUtils {
 	 * Supplement to the Bluetooth Core Specification v10 1.21 BIG INFO
 	 * </p>
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 40-bit integer
 	 */
@@ -220,8 +239,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 48-bit integer (0x09)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 48-bit integer
 	 */
@@ -232,8 +253,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 64-bit integer (0x0A)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 64-bit integer
 	 */
@@ -244,8 +267,10 @@ public class BLEUtils {
 	/**
 	 * create unsigned 128-bit integer (0x0B)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return unsigned 128-bit {@link BigInteger}
 	 */
@@ -256,8 +281,10 @@ public class BLEUtils {
 	/**
 	 * create signed 8-bit integer (0x0C)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return signed 8-bit integer
 	 */
@@ -268,8 +295,10 @@ public class BLEUtils {
 	/**
 	 * create signed 12-bit integer (0x0D)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return signed 12-bit integer
 	 * 
@@ -282,9 +311,10 @@ public class BLEUtils {
 	/**
 	 * create signed 12-bit integer (0x0D)
 	 *
-	 * @param data        byte array from
-	 *                    {@link BluetoothGattCharacteristic#getValue()} or
-	 *                    {@link BluetoothGattDescriptor#getValue()}
+	 * @param data        byte array from <a href=
+	 *                    "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *                    or <a href=
+	 *                    "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset      data offset
 	 * @param shiftOffset shift offset
 	 * @return signed 12-bit integer
@@ -297,8 +327,10 @@ public class BLEUtils {
 	/**
 	 * create signed 16-bit integer (0x0E)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return signed 16-bit integer
 	 */
@@ -309,8 +341,10 @@ public class BLEUtils {
 	/**
 	 * create signed 24-bit integer (0x0F)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return signed 24-bit integer
 	 */
@@ -321,8 +355,10 @@ public class BLEUtils {
 	/**
 	 * create signed 32-bit integer (0x10)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return signed 32-bit integer
 	 */
@@ -333,8 +369,10 @@ public class BLEUtils {
 	/**
 	 * create signed 48-bit integer (0x11)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return signed 48-bit integer
 	 */
@@ -345,8 +383,10 @@ public class BLEUtils {
 	/**
 	 * create signed 64-bit integer (0x12)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return signed 64-bit integer
 	 */
@@ -357,8 +397,10 @@ public class BLEUtils {
 	/**
 	 * create signed 128-bit integer (0x13)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return signed 128-bit {@link BigInteger}
 	 */
@@ -369,8 +411,10 @@ public class BLEUtils {
 	/**
 	 * create IEEE-754 32-bit floating point (0x14)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return IEEE-754 32-bit floating point
 	 */
@@ -381,8 +425,10 @@ public class BLEUtils {
 	/**
 	 * create IEEE-754 64-bit floating point (0x14)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return IEEE-754 64-bit floating point
 	 */
@@ -393,8 +439,10 @@ public class BLEUtils {
 	/**
 	 * create IEEE-11073 32-bit FLOAT mantissa
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return IEEE-11073 32-bit FLOAT mantissa
 	 */
@@ -405,8 +453,10 @@ public class BLEUtils {
 	/**
 	 * create IEEE-11073 32-bit FLOAT exponent
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return IEEE-11073 32-bit SFLOAT exponent
 	 */
@@ -417,8 +467,10 @@ public class BLEUtils {
 	/**
 	 * create IEEE-11073 32-bit FLOAT (0x17)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return IEEE-11073 32-bit FLOAT
 	 */
@@ -558,8 +610,10 @@ public class BLEUtils {
 	}
 
 	/**
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return {@code true}:ISO/IEEE Std. 11073-20601™-2008 FLOAT NaN (Not a
 	 *         Number), {@code false}:not ISO/IEEE Std. 11073-20601™-2008 FLOAT NaN
@@ -571,8 +625,10 @@ public class BLEUtils {
 	}
 
 	/**
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return {@code true}:ISO/IEEE Std. 11073-20601™-2008 FLOAT NRes (Not at this
 	 *         Resolution), {@code false}:not ISO/IEEE Std. 11073-20601™-2008 FLOAT
@@ -584,8 +640,10 @@ public class BLEUtils {
 	}
 
 	/**
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return {@code true}:ISO/IEEE Std. 11073-20601™-2008 FLOAT + INFINITY,
 	 *         {@code false}:not ISO/IEEE Std. 11073-20601™-2008 FLOAT + INFINITY
@@ -596,8 +654,10 @@ public class BLEUtils {
 	}
 
 	/**
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return {@code true}:ISO/IEEE Std. 11073-20601™-2008 FLOAT – INFINITY,
 	 *         {@code false}:not ISO/IEEE Std. 11073-20601™-2008 FLOAT – INFINITY
@@ -608,8 +668,10 @@ public class BLEUtils {
 	}
 
 	/**
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return {@code true}:ISO/IEEE Std. 11073-20601™-2008 FLOAT Reserved for
 	 *         future use, {@code false}:not ISO/IEEE Std. 11073-20601™-2008 FLOAT
@@ -623,8 +685,10 @@ public class BLEUtils {
 	/**
 	 * create IEEE-11073 16-bit SFLOAT mantissa
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return IEEE-11073 16-bit SFLOAT mantissa
 	 */
@@ -635,8 +699,10 @@ public class BLEUtils {
 	/**
 	 * create IEEE-11073 16-bit SFLOAT exponent
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return IEEE-11073 16-bit SFLOAT exponent
 	 */
@@ -647,8 +713,10 @@ public class BLEUtils {
 	/**
 	 * create IEEE-11073 16-bit SFLOAT (0x16)
 	 *
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return IEEE-11073 16-bit SFLOAT
 	 */
@@ -660,8 +728,10 @@ public class BLEUtils {
 	}
 
 	/**
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return {@code true}:ISO/IEEE Std. 11073-20601™-2008 SFLOAT NaN (Not a
 	 *         Number), {@code false}:not ISO/IEEE Std. 11073-20601™-2008 SFLOAT NaN
@@ -673,8 +743,10 @@ public class BLEUtils {
 	}
 
 	/**
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return {@code true}:ISO/IEEE Std. 11073-20601™-2008 SFLOAT NRes (Not at this
 	 *         Resolution), {@code false}:not ISO/IEEE Std. 11073-20601™-2008 SFLOAT
@@ -686,8 +758,10 @@ public class BLEUtils {
 	}
 
 	/**
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return {@code true}:ISO/IEEE Std. 11073-20601™-2008 SFLOAT + INFINITY,
 	 *         {@code false}:not ISO/IEEE Std. 11073-20601™-2008 SFLOAT + INFINITY
@@ -698,8 +772,10 @@ public class BLEUtils {
 	}
 
 	/**
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return {@code true}:ISO/IEEE Std. 11073-20601™-2008 SFLOAT – INFINITY,
 	 *         {@code false}:not ISO/IEEE Std. 11073-20601™-2008 SFLOAT – INFINITY
@@ -710,8 +786,10 @@ public class BLEUtils {
 	}
 
 	/**
-	 * @param data   byte array from {@link BluetoothGattCharacteristic#getValue()}
-	 *               or {@link BluetoothGattDescriptor#getValue()}
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *               or <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
 	 * @param offset data offset
 	 * @return {@code true}:ISO/IEEE Std. 11073-20601™-2008 SFLOAT Reserved for
 	 *         future use, {@code false}:not ISO/IEEE Std. 11073-20601™-2008 SFLOAT
@@ -725,10 +803,14 @@ public class BLEUtils {
 	/**
 	 * Create {@link BigInteger} instance
 	 *
-	 * @param data   {@link BluetoothGattCharacteristic#getValue()}
-	 * @param offset offset for time counter 8bytes data
-	 * @param length second parameter length of
-	 *               {@link BigInteger#BigInteger(int, byte[])}
+	 * @param data     byte array from <a href=
+	 *                 "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 *                 or <a href=
+	 *                 "https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
+	 * @param offset   offset for time counter 8bytes data
+	 * @param length   second parameter length of
+	 *                 {@link BigInteger#BigInteger(int, byte[])}
+	 * @param unsigned {@code true}:unsigned, {@code false}:signed
 	 * @return {@link BigInteger} instance
 	 */
 	public static BigInteger createBigInteger(@NonNull byte[] data, int offset, int length, boolean unsigned) {
@@ -742,9 +824,9 @@ public class BLEUtils {
 			result = new BigInteger(1, reversed);
 		} else {
 			if ((reversed[0] & 0b10000000) == 0) {
-				result = new BigInteger(1, reversed);				
+				result = new BigInteger(1, reversed);
 			} else {
-				result = new BigInteger(-1, reversed);	
+				result = new BigInteger(-1, reversed);
 			}
 		}
 		return result;
@@ -775,7 +857,7 @@ public class BLEUtils {
 	 * @param data   original data array
 	 * @param offset data offset
 	 * @param length data length
-	 * @return
+	 * @return crc
 	 */
 	public static int createCrc(@NonNull byte[] data, int offset, int length) {
 		return (int) CRC.calculateCRC(CRC_PARAMETERS, Arrays.copyOfRange(data, offset, offset + length));

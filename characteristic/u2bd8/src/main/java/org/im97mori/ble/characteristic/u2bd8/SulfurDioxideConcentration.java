@@ -11,9 +11,9 @@ import androidx.annotation.NonNull;
 public class SulfurDioxideConcentration implements ByteArrayInterface {
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2BD8
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public SulfurDioxideConcentration(@NonNull byte[] values) {
     }

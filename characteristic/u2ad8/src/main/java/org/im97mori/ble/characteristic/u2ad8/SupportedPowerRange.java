@@ -29,9 +29,9 @@ public class SupportedPowerRange implements ByteArrayInterface {
     private final int mMinimumIncrement;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AD8
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public SupportedPowerRange(@NonNull byte[] values) {
         mMinimumPower = BLEUtils.createSInt16(values, 0);

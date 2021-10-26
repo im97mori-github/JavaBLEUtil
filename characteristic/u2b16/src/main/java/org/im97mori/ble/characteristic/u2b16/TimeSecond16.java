@@ -19,9 +19,9 @@ public class TimeSecond16 implements ByteArrayInterface {
     private final int mTimeSecond16;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B16
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TimeSecond16(@NonNull byte[] values) {
         mTimeSecond16 = BLEUtils.createUInt16(values, 0);

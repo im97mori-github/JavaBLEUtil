@@ -23,9 +23,9 @@ public class ResolvablePrivateAddressOnly implements ByteArrayInterface {
     private final int mResolvablePrivateAddress;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AC9
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public ResolvablePrivateAddressOnly(@NonNull byte[] values) {
         mResolvablePrivateAddress = (values[0] & 0xff);

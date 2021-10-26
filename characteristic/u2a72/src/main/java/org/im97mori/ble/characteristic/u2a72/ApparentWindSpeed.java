@@ -24,9 +24,9 @@ public class ApparentWindSpeed implements ByteArrayInterface {
     private final int mApparentWindSpeed;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A72
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public ApparentWindSpeed(@NonNull byte[] values) {
         mApparentWindSpeed = BLEUtils.createUInt16(values, 0);

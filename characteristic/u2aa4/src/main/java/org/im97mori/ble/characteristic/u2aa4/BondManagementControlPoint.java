@@ -69,9 +69,9 @@ public class BondManagementControlPoint implements ByteArrayInterface {
     private final String mOperand;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AA4
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public BondManagementControlPoint(@NonNull byte[] values) {
         mOpCode = (values[0] & 0xff);

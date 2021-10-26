@@ -8,8 +8,8 @@ import java.util.UUID;
 /**
  * BLE GATT Declaration UUID
  * <p>
- * Generic Access Profile
- * Revision Date: 2021-07-13
+ * 16-bit UUID Numbers Document.pdf
+ * Revision Date: 2021-10-01
  */
 public class DeclarationUUID {
 
@@ -30,5 +30,25 @@ public class DeclarationUUID {
      * 16-bit UUID Numbers Document.pdf
      */
     public static final Map<UUID, String> DECLARATION_MAPPING_128 = Collections.synchronizedMap(Collections.unmodifiableMap(new Map128()));
+
+    /**
+     * Primary Service (Declaration UUID: 0x2800)
+     */
+    public static final UUID PRIMARY_SERVICE_DECLARATION = UUID.fromString("00002800-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Secondary Service (Declaration UUID: 0x2801)
+     */
+    public static final UUID SECONDARY_SERVICE_DECLARATION = UUID.fromString("00002801-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Include (Declaration UUID: 0x2802)
+     */
+    public static final UUID INCLUDE_DECLARATION = UUID.fromString("00002802-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Characteristic (Declaration UUID: 0x2803)
+     */
+    public static final UUID CHARACTERISTIC_DECLARATION = UUID.fromString("00002803-0000-1000-8000-00805f9b34fb");
 
 }

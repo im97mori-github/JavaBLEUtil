@@ -25,9 +25,9 @@ public class ValidRange implements ByteArrayInterface {
     private final byte[] mUpperInclusiveValue;
 
     /**
-     * Constructor from {@link BluetoothGattDescriptor}
+     * Constructor from byte array
      *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x2906
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
      */
     public ValidRange(@NonNull byte[] values) {
         mLowerInclusiveValue = Arrays.copyOfRange(values, 0, values.length / 2);

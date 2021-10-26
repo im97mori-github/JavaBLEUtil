@@ -18,9 +18,9 @@ public class TemperatureType implements ByteArrayInterface {
     private final int mTemperatureTextDescription;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A1D
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TemperatureType(@NonNull byte[] values) {
         mTemperatureTextDescription = values[0];

@@ -1,16 +1,14 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.BLEUtils.BASE_UUID;
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_APPEARANCE;
+import static org.im97mori.ble.constants.DataType.APPEARANCE_DATA_TYPE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.util.UUID;
 
-import org.im97mori.ble.constants.AppearanceUUID;
+import org.im97mori.ble.BLEUtils;
+import org.im97mori.ble.constants.AppearanceValues;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 /**
  * <p>
@@ -21,62 +19,89 @@ import androidx.annotation.Nullable;
  */
 public class Appearance extends AbstractAdvertisingData {
 
-    /**
-     * Appearance key
-     */
-    private final int mAppearanceKey;
+	/**
+	 * Appearance
+	 */
+	private final int mAppearance;
 
-    /**
-     * Constructor for Appearance
-     *
-     * @param data   byte array from {@link ScanRecord#getBytes()}
-     * @param offset data offset
-     * @param length 1st octed of Advertising Data
-     */
-    public Appearance(@NonNull byte[] data, int offset, int length) {
-        super(length);
+	/**
+	 * Constructor for Appearance
+	 *
+	 * @param data   byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+	 * @param offset data offset
+	 * @param length 1st octet of Advertising Data
+	 */
+	public Appearance(@NonNull byte[] data, int offset, int length) {
+		super(length);
 
-        ByteBuffer bb = ByteBuffer.wrap(data, offset + 2, length - 1).order(ByteOrder.LITTLE_ENDIAN);
-        mAppearanceKey = bb.getShort() & 0xffff;
-    }
+		mAppearance = BLEUtils.createUInt16(data, offset + 2);
+	}
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public int getDataType() {
-        return DATA_TYPE_APPEARANCE;
-    }
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public int getDataType() {
+		return APPEARANCE_DATA_TYPE;
+	}
 
-    /**
-     * @return Appearance key
-     */
-    public int getAppearanceKey() {
-        return mAppearanceKey;
-    }
+	/**
+	 * @return Appearance
+	 */
+	public int getAppearance() {
+		return mAppearance;
+	}
 
-    /**
-     * @return Appearance sub category
-     */
-    @Nullable
-    public String getAppearanceSubCategory() {
-        long lsb = BASE_UUID.getLeastSignificantBits();
-        long msb = BASE_UUID.getMostSignificantBits();
-        return AppearanceUUID.APPEARANCE_SUB_CATEGORY_MAPPING_128.get(new UUID(msb | ((long) mAppearanceKey << 32), lsb));
-    }
+	/**
+	 * @return Appearance Category(bits 15 to 6)
+	 */
+	public int getAppearanceCategory() {
+		return (mAppearance >> 6) & 0b00000011_11111111;
+	}
 
-    /**
-     * {@inheritDoc}
-     */
-    @NonNull
-    @Override
-    public byte[] getBytes() {
-        byte[] data = new byte[1 + getLength()];
-        ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
-        byteBuffer.put((byte) getLength());
-        byteBuffer.put((byte) getDataType());
-        byteBuffer.putShort((short) mAppearanceKey);
-        return data;
-    }
+	/**
+	 * @return Appearance Category
+	 */
+	public int getAppearanceCategoryWithOffset() {
+		return mAppearance & 0b11111111_11000000;
+	}
+
+	/**
+	 * @return Appearance Category Name
+	 * @see AppearanceValues#APPEARANCE_CATEGORY_MAPPING
+	 */
+	public String getAppearanceCategoryName() {
+		return AppearanceValues.APPEARANCE_CATEGORY_MAPPING.get(getAppearanceCategoryWithOffset());
+	}
+
+	/**
+	 * @return Appearance Sub Category(bits 5 to 0)
+	 */
+	public int getAppearanceSubCategory() {
+		return mAppearance & 0b00111111;
+	}
+
+	/**
+	 * @return Appearance Sub Category Name
+	 * @see AppearanceValues#APPEARANCE_SUB_CATEGORY_MAPPING
+	 */
+	public String getAppearanceSubCategoryName() {
+		return AppearanceValues.APPEARANCE_SUB_CATEGORY_MAPPING.get(mAppearance);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@NonNull
+	@Override
+	public byte[] getBytes() {
+		byte[] data = new byte[1 + getLength()];
+		ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+		byteBuffer.put((byte) getLength());
+		byteBuffer.put((byte) getDataType());
+		byteBuffer.putShort((short) mAppearance);
+		return data;
+	}
 
 }

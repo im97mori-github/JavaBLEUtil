@@ -99,9 +99,9 @@ public class RegisteredUser implements ByteArrayInterface {
     private final byte[] mRegisteredUserData;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A87, 0x2A8A, 0x2A90
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>, 0x2A8A, 0x2A90
      */
     public RegisteredUser(@NonNull byte[] values) {
         mSegmentationHeader = BLEUtils.createUInt8(values, 0);

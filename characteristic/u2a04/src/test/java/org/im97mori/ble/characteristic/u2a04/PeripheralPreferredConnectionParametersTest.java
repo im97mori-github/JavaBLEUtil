@@ -26,23 +26,23 @@ public class PeripheralPreferredConnectionParametersTest {
         assertEquals(20, result1.getMinimumConnectionIntervalMillis(), 0);
         assertEquals(0x0020, result1.getMaximumConnectionInterval());
         assertEquals(40, result1.getMaximumConnectionIntervalMillis(), 0);
-        assertEquals(4, result1.getSlaveLatency(), 0);
-        assertEquals(0x0190, result1.getConnectionSupervisionTimeoutMultiplier());
-        assertEquals(4000, result1.getConnectionSupervisionTimeoutMultiplierMillis(), 0);
+        assertEquals(4, result1.getLatency(), 0);
+        assertEquals(0x0190, result1.getTimeout());
+        assertEquals(4000, result1.getTimeoutMillis(), 0);
     }
 
     @Test
     public void test_constructor002() {
         int minimumConnectionInterval = 1;
         int maximumConnectionInterval = 2;
-        int slaveLatency = 3;
-        int connectionSupervisionTimeoutMultiplier = 4;
+        int latency = 3;
+        int timeout = 4;
 
-        PeripheralPreferredConnectionParameters result1 = new PeripheralPreferredConnectionParameters(minimumConnectionInterval, maximumConnectionInterval, slaveLatency, connectionSupervisionTimeoutMultiplier);
+        PeripheralPreferredConnectionParameters result1 = new PeripheralPreferredConnectionParameters(minimumConnectionInterval, maximumConnectionInterval, latency, timeout);
         assertEquals(minimumConnectionInterval, result1.getMinimumConnectionInterval());
         assertEquals(maximumConnectionInterval, result1.getMaximumConnectionInterval());
-        assertEquals(slaveLatency, result1.getSlaveLatency());
-        assertEquals(connectionSupervisionTimeoutMultiplier, result1.getConnectionSupervisionTimeoutMultiplier());
+        assertEquals(latency, result1.getLatency());
+        assertEquals(timeout, result1.getTimeout());
     }
 
     @Test

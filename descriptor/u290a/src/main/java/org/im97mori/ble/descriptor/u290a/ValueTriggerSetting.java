@@ -80,9 +80,9 @@ public class ValueTriggerSetting implements ByteArrayInterface {
     private final int mValueAnalogTwo;
 
     /**
-     * Constructor from {@link BluetoothGattDescriptor}
+     * Constructor from byte array
      *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x290A
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
      */
     public ValueTriggerSetting(@NonNull byte[] values) {
         mCondition = (values[0] & 0xff);

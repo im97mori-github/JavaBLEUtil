@@ -19,9 +19,9 @@ public class LocalNorthCoordinate implements ByteArrayInterface {
     private final int mLocalNorthCoordinate;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AB0
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public LocalNorthCoordinate(@NonNull byte[] values) {
         mLocalNorthCoordinate = BLEUtils.createSInt16(values, 0);

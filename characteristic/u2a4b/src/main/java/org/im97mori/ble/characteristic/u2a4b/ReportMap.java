@@ -15,9 +15,9 @@ public class ReportMap implements ByteArrayInterface {
     private final byte[] mReportMapValue;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A4B
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public ReportMap(@NonNull byte[] values) {
         mReportMapValue = values;

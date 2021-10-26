@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_LE_SUPPORTED_FEATURES;
+import static org.im97mori.ble.constants.DataType.LE_SUPPORTED_FEATURES_DATA_TYPE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -267,9 +267,9 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * Constructor for LE Supported Features
      *
-     * @param data   byte array from {@link ScanRecord#getBytes()}
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset data offset
-     * @param length 1st octed of Advertising Data
+     * @param length 1st octet of Advertising Data
      */
     public LeSupportedFeatures(@NonNull byte[] data, int offset, int length) {
         super(length);
@@ -286,7 +286,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      */
     @Override
     public int getDataType() {
-        return DATA_TYPE_LE_SUPPORTED_FEATURES;
+        return LE_SUPPORTED_FEATURES_DATA_TYPE;
     }
 
     /**

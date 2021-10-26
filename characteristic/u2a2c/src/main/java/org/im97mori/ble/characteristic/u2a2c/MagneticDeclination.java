@@ -24,9 +24,9 @@ public class MagneticDeclination implements ByteArrayInterface {
     private final int mMagneticDeclination;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A2C
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public MagneticDeclination(@NonNull byte[] values) {
         mMagneticDeclination = BLEUtils.createUInt16(values, 0);

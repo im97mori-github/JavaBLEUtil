@@ -356,9 +356,9 @@ public class LNFeature implements ByteArrayInterface {
     private final byte[] mLNFeature;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A6A
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public LNFeature(@NonNull byte[] values) {
         mLNFeature = Arrays.copyOfRange(values, 0, 4);

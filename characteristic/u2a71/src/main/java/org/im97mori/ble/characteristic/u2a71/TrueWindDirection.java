@@ -24,9 +24,9 @@ public class TrueWindDirection implements ByteArrayInterface {
     private final int mTrueWindDirection;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A71
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TrueWindDirection(@NonNull byte[] values) {
         mTrueWindDirection = BLEUtils.createUInt16(values, 0);

@@ -29,9 +29,9 @@ public class RelativeRuntimeInAGenericLevelRange implements ByteArrayInterface {
     private final int mMaximumGenericLevel;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B08
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public RelativeRuntimeInAGenericLevelRange(@NonNull byte[] values) {
         mRelativeValue = BLEUtils.createUInt8(values, 0);

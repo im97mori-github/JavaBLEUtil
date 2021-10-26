@@ -1,7 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_PERIPHERAL_CONNECTION_INTERVAL_RANGE;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_TX_POWER_LEVEL;
+import static org.im97mori.ble.constants.DataType.TX_POWER_LEVEL_DATA_TYPE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -15,7 +14,7 @@ public class TxPowerLevelTest {
     static {
         byte[] data = new byte[3];
         data[0] = 2;
-        data[1] = DATA_TYPE_TX_POWER_LEVEL;
+        data[1] = TX_POWER_LEVEL_DATA_TYPE;
         data[2] = -127;
         data_00001 = data;
     }
@@ -24,7 +23,7 @@ public class TxPowerLevelTest {
     static {
         byte[] data = new byte[3];
         data[0] = 2;
-        data[1] = DATA_TYPE_TX_POWER_LEVEL;
+        data[1] = TX_POWER_LEVEL_DATA_TYPE;
         data[2] = 127;
         data_00002 = data;
     }
@@ -62,7 +61,7 @@ public class TxPowerLevelTest {
 
         TxPowerLevel result1 = new TxPowerLevel(data, 0, data[0]);
         assertEquals(2, result1.getLength());
-        assertEquals(DATA_TYPE_TX_POWER_LEVEL, result1.getDataType());
+        assertEquals(TX_POWER_LEVEL_DATA_TYPE, result1.getDataType());
         assertEquals(-127, result1.getTxPowerLevel());
     }
 
@@ -72,7 +71,7 @@ public class TxPowerLevelTest {
 
         TxPowerLevel result1 = new TxPowerLevel(data, 0, data[0]);
         assertEquals(2, result1.getLength());
-        assertEquals(DATA_TYPE_TX_POWER_LEVEL, result1.getDataType());
+        assertEquals(TX_POWER_LEVEL_DATA_TYPE, result1.getDataType());
         assertEquals(127, result1.getTxPowerLevel());
     }
 

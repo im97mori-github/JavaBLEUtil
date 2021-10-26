@@ -148,9 +148,9 @@ public class WeightScaleFeature implements ByteArrayInterface {
     private final byte[] mWeightScaleFeature;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A9E
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public WeightScaleFeature(@NonNull byte[] values) {
         mWeightScaleFeature = Arrays.copyOfRange(values, 0, 4);

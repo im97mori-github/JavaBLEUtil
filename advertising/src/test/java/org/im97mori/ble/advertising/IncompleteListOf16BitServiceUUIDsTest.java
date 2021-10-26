@@ -1,8 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_COMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS;
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+import static org.im97mori.ble.constants.DataType.INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -21,7 +19,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     static {
         byte[] data = new byte[4];
         data[0] = 3;
-        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+        data[1] = INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
         data[2] = 0;
         data[3] = 0;
         data_00001 = data;
@@ -31,7 +29,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     static {
         byte[] data = new byte[4];
         data[0] = 3;
-        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+        data[1] = INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
         data[2] = 127;
         data[3] = 127;
         data_00002 = data;
@@ -41,7 +39,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     static {
         byte[] data = new byte[4];
         data[0] = 3;
-        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+        data[1] = INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
         data[2] = 0;
         data[3] = 127;
         data_00003 = data;
@@ -51,7 +49,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     static {
         byte[] data = new byte[4];
         data[0] = 3;
-        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+        data[1] = INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
         data[2] = 127;
         data[3] = 0;
         data_00004 = data;
@@ -61,7 +59,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     static {
         byte[] data = new byte[4];
         data[0] = 3;
-        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+        data[1] = INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
         data[2] = (byte) 0b11111111;
         data[3] = (byte) 0b11111111;
         data_00005 = data;
@@ -71,7 +69,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     static {
         byte[] data = new byte[4];
         data[0] = 3;
-        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+        data[1] = INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
         data[2] = 0;
         data[3] = (byte) 0b11111111;
         data_00006 = data;
@@ -81,7 +79,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     static {
         byte[] data = new byte[4];
         data[0] = 3;
-        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+        data[1] = INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
         data[2] = (byte) 0b11111111;
         data[3] = 0;
         data_00007 = data;
@@ -91,7 +89,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     static {
         byte[] data = new byte[2];
         data[0] = 1;
-        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+        data[1] = INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
         data_00008 = data;
     }
 
@@ -99,7 +97,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     static {
         byte[] data = new byte[6];
         data[0] = 5;
-        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+        data[1] = INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
         data[2] = 1;
         data[3] = 2;
         data[4] = 3;
@@ -140,7 +138,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(data, 0, data[0]);
         assertEquals(3, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getUuidList().size());
         assertEquals(UUID.fromString("00000000-0000-1000-8000-00805F9B34FB"), result1.getUuidList().get(0));
     }
@@ -151,7 +149,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(data, 0, data[0]);
         assertEquals(3, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getUuidList().size());
         assertEquals(UUID.fromString("00007f7f-0000-1000-8000-00805F9B34FB"), result1.getUuidList().get(0));
     }
@@ -162,7 +160,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(data, 0, data[0]);
         assertEquals(3, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getUuidList().size());
         assertEquals(UUID.fromString("00007f00-0000-1000-8000-00805F9B34FB"), result1.getUuidList().get(0));
     }
@@ -173,7 +171,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(data, 0, data[0]);
         assertEquals(3, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getUuidList().size());
         assertEquals(UUID.fromString("0000007f-0000-1000-8000-00805F9B34FB"), result1.getUuidList().get(0));
     }
@@ -184,7 +182,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(data, 0, data[0]);
         assertEquals(3, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getUuidList().size());
         assertEquals(UUID.fromString("0000ffff-0000-1000-8000-00805F9B34FB"), result1.getUuidList().get(0));
     }
@@ -195,7 +193,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(data, 0, data[0]);
         assertEquals(3, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getUuidList().size());
         assertEquals(UUID.fromString("0000ff00-0000-1000-8000-00805F9B34FB"), result1.getUuidList().get(0));
     }
@@ -206,7 +204,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(data, 0, data[0]);
         assertEquals(3, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getUuidList().size());
         assertEquals(UUID.fromString("000000ff-0000-1000-8000-00805F9B34FB"), result1.getUuidList().get(0));
     }
@@ -217,7 +215,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(data, 0, data[0]);
         assertEquals(1, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getUuidList().size());
     }
 
@@ -227,7 +225,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(data, 0, data[0]);
         assertEquals(5, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(2, result1.getUuidList().size());
         assertEquals(UUID.fromString("00000201-0000-1000-8000-00805F9B34FB"), result1.getUuidList().get(0));
         assertEquals(UUID.fromString("00000403-0000-1000-8000-00805F9B34FB"), result1.getUuidList().get(1));
@@ -237,7 +235,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     public void test_constructor_00101() {
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs();
         assertEquals(1, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(0, result1.getUuidList().size());
     }
 
@@ -247,7 +245,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(uuid1);
         assertEquals(3, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(1, result1.getUuidList().size());
         assertEquals(uuid1, result1.getUuidList().get(0));
     }
@@ -259,7 +257,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(uuid1, uuid2);
         assertEquals(5, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(2, result1.getUuidList().size());
         assertEquals(uuid1, result1.getUuidList().get(0));
         assertEquals(uuid2, result1.getUuidList().get(1));
@@ -272,7 +270,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(Arrays.asList(uuid1, uuid2));
         assertEquals(5, result1.getLength());
-        assertEquals(DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS, result1.getDataType());
+        assertEquals(INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE, result1.getDataType());
         assertEquals(2, result1.getUuidList().size());
         assertEquals(uuid1, result1.getUuidList().get(0));
         assertEquals(uuid2, result1.getUuidList().get(1));
@@ -354,7 +352,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
     public void test_parcelable_2_00101() {
         byte[] data = new byte[2];
         data[0] = 1;
-        data[1] = DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS;
+        data[1] = INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs();
         assertArrayEquals(data, result1.getBytes());
@@ -366,7 +364,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
         byte[] data = new byte[4];
         ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
         byteBuffer.put((byte) 3);
-        byteBuffer.put((byte) DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS);
+        byteBuffer.put((byte) INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE);
         byteBuffer.putShort((short) ((uuid1.getMostSignificantBits() << 16) >> 48));
 
         IncompleteListOf16BitServiceUUIDs result1 = new IncompleteListOf16BitServiceUUIDs(uuid1);
@@ -380,7 +378,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
         byte[] data = new byte[6];
         ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
         byteBuffer.put((byte) 5);
-        byteBuffer.put((byte) DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS);
+        byteBuffer.put((byte) INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE);
         byteBuffer.putShort((short) ((uuid1.getMostSignificantBits() << 16) >> 48));
         byteBuffer.putShort((short) ((uuid2.getMostSignificantBits() << 16) >> 48));
 
@@ -395,7 +393,7 @@ public class IncompleteListOf16BitServiceUUIDsTest {
         byte[] data = new byte[6];
         ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
         byteBuffer.put((byte) 5);
-        byteBuffer.put((byte) DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_UUIDS);
+        byteBuffer.put((byte) INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE);
         byteBuffer.putShort((short) ((uuid1.getMostSignificantBits() << 16) >> 48));
         byteBuffer.putShort((short) ((uuid2.getMostSignificantBits() << 16) >> 48));
 

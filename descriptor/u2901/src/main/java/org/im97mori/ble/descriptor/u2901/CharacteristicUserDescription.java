@@ -1,5 +1,6 @@
 package org.im97mori.ble.descriptor.u2901;
 
+
 import org.im97mori.ble.ByteArrayInterface;
 
 import androidx.annotation.NonNull;
@@ -15,9 +16,9 @@ public class CharacteristicUserDescription implements ByteArrayInterface {
     private final String mUserDescription;
 
     /**
-     * Constructor from {@link BluetoothGattDescriptor}
+     * Constructor from byte array
      *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x2901
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
      */
     public CharacteristicUserDescription(@NonNull byte[] values) {
         mUserDescription = new String(values);

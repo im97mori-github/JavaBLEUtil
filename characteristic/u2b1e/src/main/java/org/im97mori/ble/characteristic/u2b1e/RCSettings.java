@@ -137,9 +137,9 @@ public class RCSettings implements ByteArrayInterface {
     private final int mE2eCrc;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B1E
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public RCSettings(@NonNull byte[] values) {
         mLength = BLEUtils.createUInt8(values, 0);

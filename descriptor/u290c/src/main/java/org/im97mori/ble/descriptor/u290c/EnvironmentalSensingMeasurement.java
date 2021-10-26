@@ -269,9 +269,9 @@ public class EnvironmentalSensingMeasurement implements ByteArrayInterface {
     private final int mMeasurementUncertainty;
 
     /**
-     * Constructor from {@link BluetoothGattDescriptor}
+     * Constructor from byte array
      *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x290C
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
      */
     public EnvironmentalSensingMeasurement(@NonNull byte[] values) {
         mFlags = Arrays.copyOfRange(values, 0, 2);

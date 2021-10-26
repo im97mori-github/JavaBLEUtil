@@ -18,9 +18,9 @@ public class AerobicThreshold implements ByteArrayInterface {
     private final int mAerobicThreshold;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A7F
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public AerobicThreshold(@NonNull byte[] values) {
         mAerobicThreshold = (values[0] & 0xff);

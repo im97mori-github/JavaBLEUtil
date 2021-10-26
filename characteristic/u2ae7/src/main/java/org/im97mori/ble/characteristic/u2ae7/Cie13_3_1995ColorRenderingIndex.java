@@ -29,9 +29,9 @@ public class Cie13_3_1995ColorRenderingIndex implements ByteArrayInterface {
     private final int mColorRenderingIndex;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AE7
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Cie13_3_1995ColorRenderingIndex(@NonNull byte[] values) {
         mColorRenderingIndex = BLEUtils.createSInt8(values, 0);

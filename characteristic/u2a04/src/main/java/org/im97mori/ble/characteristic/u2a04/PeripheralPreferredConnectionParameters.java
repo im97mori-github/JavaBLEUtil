@@ -13,130 +13,131 @@ import androidx.annotation.NonNull;
  */
 public class PeripheralPreferredConnectionParameters implements ByteArrayInterface {
 
-    /**
-     * Unit: 1.25ms
-     */
-    public static final double MINIMUM_CONNECTION_INTERVAL_UNIT = 1.25d;
+	/**
+	 * Unit: 1.25ms
+	 */
+	public static final double MINIMUM_CONNECTION_INTERVAL_UNIT = 1.25d;
 
-    /**
-     * Unit: 1.25ms
-     */
-    public static final double MAXIMUM_CONNECTION_INTERVAL_UNIT = 1.25d;
+	/**
+	 * Unit: 1.25ms
+	 */
+	public static final double MAXIMUM_CONNECTION_INTERVAL_UNIT = 1.25d;
 
-    /**
-     * Unit: 10ms
-     */
-    public static final double CONNECTION_SUPERVISION_TIMEOUT_MULTIPLIER_UNIT = 10d;
+	/**
+	 * Unit: 10ms
+	 */
+	public static final double TIMEOUT_UNIT = 10d;
 
-    /**
-     * Minimum Connection Interval
-     */
-    private final int mMinimumConnectionInterval;
+	/**
+	 * Minimum Connection Interval
+	 */
+	private final int mMinimumConnectionInterval;
 
-    /**
-     * Maximum Connection Interval
-     */
-    private final int mMaximumConnectionInterval;
+	/**
+	 * Maximum Connection Interval
+	 */
+	private final int mMaximumConnectionInterval;
 
-    /**
-     * Slave Latency
-     */
-    private final int mSlaveLatency;
+	/**
+	 * Latency
+	 */
+	private final int mLatency;
 
-    /**
-     * Connection Supervision Timeout Multiplier
-     */
-    private final int mConnectionSupervisionTimeoutMultiplier;
+	/**
+	 * Timeout
+	 */
+	private final int mTimeout;
 
-    /**
-     * Constructor from {@link BluetoothGattCharacteristic}
-     *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A04
-     */
-    public PeripheralPreferredConnectionParameters(@NonNull byte[] values) {
-        mMinimumConnectionInterval = BLEUtils.createUInt16(values, 0);
-        mMaximumConnectionInterval = BLEUtils.createUInt16(values, 2);
-        mSlaveLatency = BLEUtils.createUInt16(values, 4);
-        mConnectionSupervisionTimeoutMultiplier = BLEUtils.createUInt16(values, 6);
-    }
+	/**
+	 * Constructor from byte array
+	 *
+	 * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 */
+	public PeripheralPreferredConnectionParameters(@NonNull byte[] values) {
+		mMinimumConnectionInterval = BLEUtils.createUInt16(values, 0);
+		mMaximumConnectionInterval = BLEUtils.createUInt16(values, 2);
+		mLatency = BLEUtils.createUInt16(values, 4);
+		mTimeout = BLEUtils.createUInt16(values, 6);
+	}
 
-    /**
-     * Constructor from parameters
-     * 
-     * @param minimumConnectionInterval              Minimum Connection Interval
-     * @param maximumConnectionInterval              Maximum Connection Interval
-     * @param slaveLatency                           Slave Latency
-     * @param connectionSupervisionTimeoutMultiplier Connection Supervision Timeout Multiplier
-     */
-    public PeripheralPreferredConnectionParameters(int minimumConnectionInterval, int maximumConnectionInterval, int slaveLatency, int connectionSupervisionTimeoutMultiplier) {
-        mMinimumConnectionInterval = minimumConnectionInterval;
-        mMaximumConnectionInterval = maximumConnectionInterval;
-        mSlaveLatency = slaveLatency;
-        mConnectionSupervisionTimeoutMultiplier = connectionSupervisionTimeoutMultiplier;
-    }
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param minimumConnectionInterval Minimum Connection Interval
+	 * @param maximumConnectionInterval Maximum Connection Interval
+	 * @param latency                   Latency
+	 * @param timeout                   Timeout
+	 */
+	public PeripheralPreferredConnectionParameters(int minimumConnectionInterval, int maximumConnectionInterval,
+			int latency, int timeout) {
+		mMinimumConnectionInterval = minimumConnectionInterval;
+		mMaximumConnectionInterval = maximumConnectionInterval;
+		mLatency = latency;
+		mTimeout = timeout;
+	}
 
-    /**
-     * @return Minimum Connection Interval
-     */
-    public int getMinimumConnectionInterval() {
-        return mMinimumConnectionInterval;
-    }
+	/**
+	 * @return Minimum Connection Interval
+	 */
+	public int getMinimumConnectionInterval() {
+		return mMinimumConnectionInterval;
+	}
 
-    /**
-     * @return Minimum connection interval(millis)
-     */
-    public double getMinimumConnectionIntervalMillis() {
-        return mMinimumConnectionInterval * MINIMUM_CONNECTION_INTERVAL_UNIT;
-    }
+	/**
+	 * @return Minimum connection interval(millis)
+	 */
+	public double getMinimumConnectionIntervalMillis() {
+		return mMinimumConnectionInterval * MINIMUM_CONNECTION_INTERVAL_UNIT;
+	}
 
-    /**
-     * @return Maximum Connection Interval
-     */
-    public int getMaximumConnectionInterval() {
-        return mMaximumConnectionInterval;
-    }
+	/**
+	 * @return Maximum Connection Interval
+	 */
+	public int getMaximumConnectionInterval() {
+		return mMaximumConnectionInterval;
+	}
 
-    /**
-     * @return Maximum connection interval(millis)
-     */
-    public double getMaximumConnectionIntervalMillis() {
-        return mMaximumConnectionInterval * MAXIMUM_CONNECTION_INTERVAL_UNIT;
-    }
+	/**
+	 * @return Maximum connection interval(millis)
+	 */
+	public double getMaximumConnectionIntervalMillis() {
+		return mMaximumConnectionInterval * MAXIMUM_CONNECTION_INTERVAL_UNIT;
+	}
 
-    /**
-     * @return Slave Latency
-     */
-    public int getSlaveLatency() {
-        return mSlaveLatency;
-    }
+	/**
+	 * @return Latency
+	 */
+	public int getLatency() {
+		return mLatency;
+	}
 
-    /**
-     * @return Connection Supervision Timeout Multiplier
-     */
-    public int getConnectionSupervisionTimeoutMultiplier() {
-        return mConnectionSupervisionTimeoutMultiplier;
-    }
+	/**
+	 * @return Timeout
+	 */
+	public int getTimeout() {
+		return mTimeout;
+	}
 
-    /**
-     * @return Connection Supervision Timeout Multiplier(millis)
-     */
-    public double getConnectionSupervisionTimeoutMultiplierMillis() {
-        return mConnectionSupervisionTimeoutMultiplier * CONNECTION_SUPERVISION_TIMEOUT_MULTIPLIER_UNIT;
-    }
+	/**
+	 * @return Timeout(millis)
+	 */
+	public double getTimeoutMillis() {
+		return mTimeout * TIMEOUT_UNIT;
+	}
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @NonNull
-    public byte[] getBytes() {
-        byte[] data = new byte[8];
-        ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
-        byteBuffer.putShort((short) mMinimumConnectionInterval);
-        byteBuffer.putShort((short) mMaximumConnectionInterval);
-        byteBuffer.putShort((short) mSlaveLatency);
-        byteBuffer.putShort((short) mConnectionSupervisionTimeoutMultiplier);
-        return data;
-    }
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@NonNull
+	public byte[] getBytes() {
+		byte[] data = new byte[8];
+		ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+		byteBuffer.putShort((short) mMinimumConnectionInterval);
+		byteBuffer.putShort((short) mMaximumConnectionInterval);
+		byteBuffer.putShort((short) mLatency);
+		byteBuffer.putShort((short) mTimeout);
+		return data;
+	}
 
 }

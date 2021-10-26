@@ -33,9 +33,9 @@ public class RingerControlPoint implements ByteArrayInterface {
     private final int mRingerControlPoint;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A40
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public RingerControlPoint(@NonNull byte[] values) {
         mRingerControlPoint = (values[0] & 0xff);

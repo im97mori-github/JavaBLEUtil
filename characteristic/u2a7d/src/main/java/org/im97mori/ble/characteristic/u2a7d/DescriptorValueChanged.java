@@ -108,9 +108,9 @@ public class DescriptorValueChanged implements ByteArrayInterface {
     private final byte[] mCharacteristicUUID;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A7D
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public DescriptorValueChanged(@NonNull byte[] values) {
         mFlags = BLEUtils.createSInt16(values, 0);

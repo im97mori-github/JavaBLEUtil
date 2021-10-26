@@ -8,8 +8,8 @@ import java.util.UUID;
 /**
  * BLE GATT Company UUID
  * <p>
- * Generic Access Profile
- * Revision Date: 2021-07-13
+ * https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/
+ * 2021-10-19
  */
 public class CompanyUUID {
 
@@ -2783,7 +2783,7 @@ public class CompanyUUID {
     }
 
     /**
-     * 16-bit UUID Numbers Document.pdf
+     * https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/
      */
     public static final Map<UUID, String> COMPANY_MAPPING_128 = Collections.synchronizedMap(Collections.unmodifiableMap(new Map128()));
 

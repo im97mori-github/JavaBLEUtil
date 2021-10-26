@@ -29,9 +29,9 @@ public class DateOfBirth implements ByteArrayInterface {
     private final int mDay;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A85
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public DateOfBirth(@NonNull byte[] values) {
         mYear = BLEUtils.createUInt16(values, 0);

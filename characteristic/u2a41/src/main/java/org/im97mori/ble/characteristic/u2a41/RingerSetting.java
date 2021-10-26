@@ -28,9 +28,9 @@ public class RingerSetting implements ByteArrayInterface {
     private final int mRingerSetting;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A41
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public RingerSetting(@NonNull byte[] values) {
         mRingerSetting = values[0];

@@ -28,9 +28,9 @@ public class HIDControlPoint implements ByteArrayInterface {
     private final int mHidControlPointCommand;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A4C
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public HIDControlPoint(@NonNull byte[] values) {
         mHidControlPointCommand = (values[0] & 0xff);

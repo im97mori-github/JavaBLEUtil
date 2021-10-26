@@ -24,9 +24,9 @@ public class Coefficient implements ByteArrayInterface {
     private final boolean mIsNres;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AE8
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Coefficient(@NonNull byte[] values) {
         if (BLEUtils.isFloatNan(values, 0)) {

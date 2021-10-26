@@ -28,9 +28,9 @@ public class SupportedUnreadAlertCategory implements ByteArrayInterface {
     private final int mCategoryIdBitMask1;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A48
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public SupportedUnreadAlertCategory(@NonNull byte[] values) {
         mCategoryIdBitMask0 = (values[0] & 0xff);

@@ -1,6 +1,5 @@
 package org.im97mori.ble.characteristic.u2af6;
 
-import java.nio.charset.StandardCharsets;
 
 import org.im97mori.ble.ByteArrayInterface;
 
@@ -17,9 +16,9 @@ public class FixedString24 implements ByteArrayInterface {
     private final String mFixedString;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AF6
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public FixedString24(@NonNull byte[] values) {
         mFixedString = new String(values, 0, 24);
@@ -31,7 +30,7 @@ public class FixedString24 implements ByteArrayInterface {
      * @param fixedString Fixed String
      */
     public FixedString24(@NonNull String fixedString) {
-        mFixedString = new String(fixedString.getBytes(StandardCharsets.UTF_8), 0, 24);
+        mFixedString = new String(fixedString.getBytes(), 0, 24);
     }
 
     /**

@@ -39,9 +39,9 @@ public class LuminousEnergy implements ByteArrayInterface {
     private final int mLuminousEnergy;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AFD
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public LuminousEnergy(@NonNull byte[] values) {
         mLuminousEnergy = BLEUtils.createUInt24(values, 0);

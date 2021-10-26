@@ -24,9 +24,9 @@ public class TemperatureRange implements ByteArrayInterface {
     private final int mMaximumTemperature;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B10
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TemperatureRange(@NonNull byte[] values) {
         mMinimumTemperature = BLEUtils.createSInt16(values, 0);

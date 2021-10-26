@@ -5,45 +5,48 @@ package org.im97mori.ble.characteristic.core;
  */
 public class TemperatureUtils {
 
-    /**
-     * 0x8000 : Temperature value is not known
-     */
-    public static final int TEMPERATURE_VALUE_IS_NOT_KNOWN = 0x8000;
+	/**
+	 * 0x8000 : Temperature value is not known
+	 */
+	public static final int TEMPERATURE_VALUE_IS_NOT_KNOWN = 0x8000;
 
-    /**
-     * Temperature unit 0.01 degrees Celsius
-     */
-    public static final double TEMPERATURE_RESOLUTION = 0.01d;
+	/**
+	 * Temperature unit 0.01 degrees Celsius
+	 */
+	public static final double TEMPERATURE_RESOLUTION = 0.01d;
 
-    /**
-     * Temperature Minimum value
-     */
-    public static final double TEMPERATURE_VALUE_MINIMUM =  -273.15d;
+	/**
+	 * Temperature Minimum value
+	 */
+	public static final double TEMPERATURE_VALUE_MINIMUM = -273.15d;
 
-    /**
-     * Temperature Maximum value
-     */
-    public static final double TEMPERATURE_VALUE_MAXIMUM = 327.67d;
+	/**
+	 * Temperature Maximum value
+	 */
+	public static final double TEMPERATURE_VALUE_MAXIMUM = 327.67d;
 
-    /**
-     * @return {@code true}:Temperature value is not known, {@code false}:has Temperature value information
-     * @see #TEMPERATURE_VALUE_IS_NOT_KNOWN
-     */
-    public static boolean isTemperatureValueNotKnown(int temperature) {
-        return TEMPERATURE_VALUE_IS_NOT_KNOWN == temperature;
-    }
+	/**
+	 * @param temperature Temperature value
+	 * @return {@code true}:Temperature value is not known, {@code false}:has
+	 *         Temperature value information
+	 * @see #TEMPERATURE_VALUE_IS_NOT_KNOWN
+	 */
+	public static boolean isTemperatureValueNotKnown(int temperature) {
+		return TEMPERATURE_VALUE_IS_NOT_KNOWN == temperature;
+	}
 
-    /**
-     * @return Temperature(celsius)
-     */
-    public static double getTemperatureCelsius(int temperature) {
-        double temperatureCelsius = TEMPERATURE_RESOLUTION * temperature;
-        if (temperatureCelsius < TEMPERATURE_VALUE_MINIMUM) {
-            temperatureCelsius = TEMPERATURE_VALUE_MINIMUM;
-        } else if (temperatureCelsius > TEMPERATURE_VALUE_MAXIMUM) {
-            temperatureCelsius = TEMPERATURE_VALUE_MAXIMUM;
-        }
-        return temperatureCelsius;
-    }
+	/**
+	 * @param temperature Temperature value
+	 * @return Temperature(celsius)
+	 */
+	public static double getTemperatureCelsius(int temperature) {
+		double temperatureCelsius = TEMPERATURE_RESOLUTION * temperature;
+		if (temperatureCelsius < TEMPERATURE_VALUE_MINIMUM) {
+			temperatureCelsius = TEMPERATURE_VALUE_MINIMUM;
+		} else if (temperatureCelsius > TEMPERATURE_VALUE_MAXIMUM) {
+			temperatureCelsius = TEMPERATURE_VALUE_MAXIMUM;
+		}
+		return temperatureCelsius;
+	}
 
 }

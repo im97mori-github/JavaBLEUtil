@@ -1,11 +1,11 @@
 package org.im97mori.ble.advertising;
 
-import org.im97mori.ble.IndoorPositioningUtils;
-import org.junit.Test;
-
-import static org.im97mori.ble.advertising.AdvertisingDataConstants.AdvertisingDataTypes.DATA_TYPE_INDOOR_POSITIONING;
+import static org.im97mori.ble.constants.DataType.INDOOR_POSITIONING_DATA_TYPE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+
+import org.im97mori.ble.IndoorPositioningUtils;
+import org.junit.Test;
 
 @SuppressWarnings({ "unused" })
 public class IndoorPositioningTest {
@@ -15,7 +15,7 @@ public class IndoorPositioningTest {
     static {
         byte[] data = new byte[2];
         data[ 0] = 1;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data_00001 = data;
     }
 
@@ -30,7 +30,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[3];
         data[ 0] = 2;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data_00002 = data;
     }
@@ -46,7 +46,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[11];
         data[ 0] = 10;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = 0x01;
         data[ 4] = 0x02;
@@ -70,7 +70,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[7];
         data[ 0] = 6;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = 0x01;
         data[ 4] = 0x02;
@@ -90,7 +90,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[4];
         data[ 0] = 3;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = 0x01;
         data_00201 = data;
@@ -107,7 +107,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[5];
         data[ 0] = 4;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = 0x01;
         data[ 4] = 0x02;
@@ -125,7 +125,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[4];
         data[ 0] = 3;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = 0x01;
         data_00401 = data;
@@ -142,7 +142,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[4];
         data[ 0] = 3;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = IndoorPositioningUtils.UNCERTAINTY_PRECISION_IDEAL;
         data_00501 = data;
@@ -159,7 +159,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[4];
         data[ 0] = 3;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = IndoorPositioningUtils.UNCERTAINTY_PRECISION_EXCELLENT;
         data_00502 = data;
@@ -176,7 +176,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[4];
         data[ 0] = 3;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = IndoorPositioningUtils.UNCERTAINTY_PRECISION_GOOD;
         data_00503 = data;
@@ -193,7 +193,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[4];
         data[ 0] = 3;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = IndoorPositioningUtils.UNCERTAINTY_PRECISION_MODERATE;
         data_00504 = data;
@@ -210,7 +210,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[4];
         data[ 0] = 3;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = IndoorPositioningUtils.UNCERTAINTY_PRECISION_FAIR;
         data_00505 = data;
@@ -227,7 +227,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[4];
         data[ 0] = 3;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = IndoorPositioningUtils.UNCERTAINTY_PRECISION_POOR;
         data_00506 = data;
@@ -244,7 +244,7 @@ public class IndoorPositioningTest {
                 | IndoorPositioningUtils.INDOOR_POSITIONING_CONFIGURATION_LOCATION_NAME_AVAILABLE_IN_THE_GATT_DATABASE_LOCATION_NAME_IS_NOT_PRESENT;
         byte[] data = new byte[4];
         data[ 0] = 3;
-        data[ 1] = DATA_TYPE_INDOOR_POSITIONING;
+        data[ 1] = INDOOR_POSITIONING_DATA_TYPE;
         data[ 2] = (byte) flag;
         data[ 3] = IndoorPositioningUtils.UNCERTAINTY_PRECISION_USELESS;
         data_00507 = data;
@@ -284,7 +284,7 @@ public class IndoorPositioningTest {
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
         assertEquals(0, result1.getIndoorPositioningConfiguration());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
     }
 
     @Test
@@ -293,7 +293,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
     }
 
@@ -303,7 +303,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(0x04030201, result1.getGlobalCoorinatesLatitude());
         assertEquals(0x08070605, result1.getGlobalCoorinatesLongitude());
@@ -315,7 +315,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(0x0201, result1.getLocalCoordinatesNorth());
         assertEquals(0x0403, result1.getLocalCoordinatesEast());
@@ -327,7 +327,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(0x01, result1.getTxPower());
     }
@@ -338,7 +338,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(0x0201, result1.getAltitude());
     }
@@ -349,7 +349,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(0x01, result1.getFloorNumber());
     }
@@ -360,7 +360,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(IndoorPositioningUtils.UNCERTAINTY_PRECISION_IDEAL, result1.getUncertainty());
     }
@@ -371,7 +371,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(IndoorPositioningUtils.UNCERTAINTY_PRECISION_EXCELLENT, result1.getUncertainty());
     }
@@ -382,7 +382,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(IndoorPositioningUtils.UNCERTAINTY_PRECISION_GOOD, result1.getUncertainty());
     }
@@ -393,7 +393,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(IndoorPositioningUtils.UNCERTAINTY_PRECISION_MODERATE, result1.getUncertainty());
     }
@@ -404,7 +404,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(IndoorPositioningUtils.UNCERTAINTY_PRECISION_FAIR, result1.getUncertainty());
     }
@@ -415,7 +415,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(IndoorPositioningUtils.UNCERTAINTY_PRECISION_POOR, result1.getUncertainty());
     }
@@ -426,7 +426,7 @@ public class IndoorPositioningTest {
 
         IndoorPositioning result1 = new IndoorPositioning(data, 0, data[0]);
         assertEquals(data[0], result1.getLength());
-        assertEquals(DATA_TYPE_INDOOR_POSITIONING, result1.getDataType());
+        assertEquals(INDOOR_POSITIONING_DATA_TYPE, result1.getDataType());
         assertEquals(data[2], result1.getIndoorPositioningConfiguration());
         assertEquals(IndoorPositioningUtils.UNCERTAINTY_PRECISION_USELESS, result1.getUncertainty());
     }

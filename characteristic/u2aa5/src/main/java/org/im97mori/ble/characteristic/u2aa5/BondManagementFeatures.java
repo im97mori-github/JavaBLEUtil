@@ -340,9 +340,9 @@ public class BondManagementFeatures implements ByteArrayInterface {
     private final byte[] mBondManagementFeatures;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AA5
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public BondManagementFeatures(@NonNull byte[] values) {
         mBondManagementFeatures = Arrays.copyOfRange(values, 0, 3);
@@ -676,7 +676,7 @@ public class BondManagementFeatures implements ByteArrayInterface {
     }
 
     /**
-     * @return operand for {@link BondManagementControlPoint}
+     * @return operand for {@link org.im97mori.ble.characteristic.u2aa4.BondManagementControlPoint}
      */
     public String createOperand() {
         StringBuilder sb = new StringBuilder();

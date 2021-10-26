@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+import static org.im97mori.ble.constants.DataType.TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -245,9 +245,9 @@ public class TransportDiscoveryData extends AbstractAdvertisingData {
     /**
      * Constructor for Advertising Interval
      *
-     * @param data   byte array from {@link ScanRecord#getBytes()}
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset data offset
-     * @param length 1st octed of Advertising Data
+     * @param length 1st octet of Advertising Data
      */
     public TransportDiscoveryData(@NonNull byte[] data
             , int offset
@@ -271,7 +271,7 @@ public class TransportDiscoveryData extends AbstractAdvertisingData {
      */
     @Override
     public int getDataType() {
-        return DATA_TYPE_TRANSPORT_DISCOVERY_DATA;
+        return TRANSPORT_DISCOVERY_DATA_DATA_TYPE;
     }
 
     /**

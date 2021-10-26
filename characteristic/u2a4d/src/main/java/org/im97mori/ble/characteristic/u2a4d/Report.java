@@ -15,9 +15,9 @@ public class Report implements ByteArrayInterface {
     private final byte[] mReportValue;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A4D
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Report(@NonNull byte[] values) {
         mReportValue = values;

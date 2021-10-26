@@ -19,9 +19,9 @@ public class Percentage8 implements ByteArrayInterface {
     private final int mPercentage8;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B04
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Percentage8(@NonNull byte[] values) {
         mPercentage8 = BLEUtils.createUInt8(values, 0);

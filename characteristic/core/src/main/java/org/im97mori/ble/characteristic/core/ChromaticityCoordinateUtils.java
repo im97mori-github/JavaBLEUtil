@@ -21,7 +21,7 @@ public class ChromaticityCoordinateUtils {
     public static final double CHROMATICITY_COORDINATE_VALUE_MAXIMUM = 1.0d;
 
     /**
-     * @param ChromaticityCoordinate Chromaticity Coordinate
+     * @param chromaticityCoordinate Chromaticity Coordinate
      * @return Chromaticity Coordinate with Unit
      */
     public static double getChromaticityCoordinateWithUnit(int chromaticityCoordinate) {

@@ -12,8 +12,8 @@ allprojects {
 }
 
 ext.myGroupId = 'org.im97mori'
-ext.loadVersion = '0.5.1'
-ext.uploadVersion = '0.5.1'
+ext.loadVersion = '0.6.0'
+ext.uploadVersion = '0.6.0'
 
 ext.coreConstantsAppearance = 'ble-core-constants-appearance'
 ext.coreConstantsCharacteristic = 'ble-core-constants-characteristic'
@@ -55,8 +55,13 @@ dependencies {
 
 subprojects {
     def defaultEncoding = 'UTF-8'
-    tasks.withType(JavaCompile) {
-        options.encoding = defaultEncoding
+    
+    javadoc.options.encoding = defaultEncoding
+    compileJava.options.encoding = defaultEncoding
+    compileTestJava.options.encoding = defaultEncoding
+    
+    tasks.withType(Test) {
+       systemProperty "file.encoding", defaultEncoding
     }
 
     sourceCompatibility = 1.8
@@ -66,11 +71,11 @@ subprojects {
         implementation 'androidx.annotation:annotation:1.2.0'
         testImplementation junit
     }
-
-    task sourceJar(type: Jar) {
-        classifier 'sources'
-        from sourceSets.main.allJava
-    }
+    
+   	java {
+   		withJavadocJar()
+   		withSourcesJar()
+   	}
 }
 
 publishing {

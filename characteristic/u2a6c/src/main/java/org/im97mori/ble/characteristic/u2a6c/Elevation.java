@@ -24,9 +24,9 @@ public class Elevation implements ByteArrayInterface {
     private final int mElevation;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A6C
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Elevation(@NonNull byte[] values) {
         mElevation = BLEUtils.createSInt24(values, 0);

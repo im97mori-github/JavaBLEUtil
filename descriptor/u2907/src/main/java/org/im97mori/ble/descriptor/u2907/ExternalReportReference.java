@@ -27,9 +27,9 @@ public class ExternalReportReference implements ByteArrayInterface {
     private final UUID mUuid;
 
     /**
-     * Constructor from {@link BluetoothGattDescriptor}
+     * Constructor from byte array
      *
-     * @param bluetoothGattDescriptor Characteristics UUID: 0x2907
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattDescriptor#getValue()">BluetoothGattDescriptor#getValue()</a>
      */
     public ExternalReportReference(@NonNull byte[] values) {
         mExternalReportReference = Arrays.copyOfRange(values, 0, 2);

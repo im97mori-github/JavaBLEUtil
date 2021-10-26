@@ -29,9 +29,9 @@ public class PerceivedLightness implements ByteArrayInterface {
     private final int mPerceivedLightness;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B03
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public PerceivedLightness(@NonNull byte[] values) {
         mPerceivedLightness = BLEUtils.createUInt16(values, 0);

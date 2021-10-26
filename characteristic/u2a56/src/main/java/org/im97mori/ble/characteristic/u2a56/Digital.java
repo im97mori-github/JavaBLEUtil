@@ -18,9 +18,9 @@ public class Digital implements ByteArrayInterface {
     private final byte[] mDigital;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A56
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public Digital(@NonNull byte[] values) {
         mDigital = values;

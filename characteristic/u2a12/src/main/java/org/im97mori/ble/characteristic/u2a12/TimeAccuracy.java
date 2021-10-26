@@ -34,9 +34,9 @@ public class TimeAccuracy implements ByteArrayInterface {
     private final int mAccuracy;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A12
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public TimeAccuracy(@NonNull byte[] values) {
         mAccuracy = BLEUtils.createUInt8(values, 0);
@@ -75,7 +75,7 @@ public class TimeAccuracy implements ByteArrayInterface {
     }
 
     /**
-     * @returnAccuracy(millis)
+     * @return Accuracy(millis)
      */
     public int getAccuracyMillis() {
         return mAccuracy * ACCURACY_UNIT;

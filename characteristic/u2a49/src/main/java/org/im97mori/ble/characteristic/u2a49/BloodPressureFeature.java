@@ -116,9 +116,9 @@ public class BloodPressureFeature implements ByteArrayInterface {
     private final byte[] mBloodPressureFeature;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A49
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public BloodPressureFeature(@NonNull byte[] values) {
         mBloodPressureFeature = Arrays.copyOfRange(values, 0, 2);

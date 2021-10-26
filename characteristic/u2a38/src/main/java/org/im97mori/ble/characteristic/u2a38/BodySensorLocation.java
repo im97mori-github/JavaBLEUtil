@@ -53,9 +53,9 @@ public class BodySensorLocation implements ByteArrayInterface {
     private final int mBodySensorLocation;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2A38
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public BodySensorLocation(@NonNull byte[] values) {
         mBodySensorLocation = values[0];

@@ -323,9 +323,9 @@ public class RCFeature implements ByteArrayInterface {
     private final byte[] mRcFeatures;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2B1D
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public RCFeature(@NonNull byte[] values) {
         mE2eCrc = BLEUtils.createUInt16(values, 0);

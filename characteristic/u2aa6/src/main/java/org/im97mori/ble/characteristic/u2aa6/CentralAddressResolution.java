@@ -28,9 +28,9 @@ public class CentralAddressResolution implements ByteArrayInterface {
     private final int mCentralAddressResolutionSupport;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AA6
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public CentralAddressResolution(@NonNull byte[] values) {
         mCentralAddressResolutionSupport = (values[0] & 0xff);

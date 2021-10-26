@@ -24,9 +24,9 @@ public class DateUtc implements ByteArrayInterface {
     private final int mDate;
 
     /**
-     * Constructor from {@link BluetoothGattCharacteristic}
+     * Constructor from byte array
      *
-     * @param bluetoothGattCharacteristic Characteristics UUID: 0x2AED
+     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public DateUtc(@NonNull byte[] values) {
         mDate = BLEUtils.createUInt24(values, 0);

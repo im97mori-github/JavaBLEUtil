@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_PUBLIC_TARGET_ADDRESS;
+import static org.im97mori.ble.constants.DataType.PUBLIC_TARGET_ADDRESS_DATA_TYPE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -27,9 +27,9 @@ public class PublicTargetAddress extends AbstractAdvertisingData {
     /**
      * Constructor for Public Target Address
      *
-     * @param data   byte array from {@link ScanRecord#getBytes()}
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset data offset
-     * @param length 1st octed of Advertising Data
+     * @param length 1st octet of Advertising Data
      */
     public PublicTargetAddress(@NonNull byte[] data, int offset, int length) {
         super(length);
@@ -49,7 +49,7 @@ public class PublicTargetAddress extends AbstractAdvertisingData {
      */
     @Override
     public int getDataType() {
-        return DATA_TYPE_PUBLIC_TARGET_ADDRESS;
+        return PUBLIC_TARGET_ADDRESS_DATA_TYPE;
     }
 
     /**

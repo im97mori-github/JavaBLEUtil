@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS;
+import static org.im97mori.ble.constants.DataType.INCOMPLETE_LIST_OF_128_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -29,9 +29,9 @@ public class IncompleteListOf128BitServiceUUIDs extends AbstractAdvertisingData 
     /**
      * Constructor for Incomplete List of 128-bit Service Class UUIDs
      *
-     * @param data   byte array from {@link ScanRecord#getBytes()}
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset data offset
-     * @param length 1st octed of Advertising Data
+     * @param length 1st octet of Advertising Data
      */
     public IncompleteListOf128BitServiceUUIDs(@NonNull byte[] data, int offset, int length) {
         super(length);
@@ -72,7 +72,7 @@ public class IncompleteListOf128BitServiceUUIDs extends AbstractAdvertisingData 
      */
     @Override
     public int getDataType() {
-        return DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_UUIDS;
+        return INCOMPLETE_LIST_OF_128_BIT_SERVICE_CLASS_UUIDS_DATA_TYPE;
     }
 
     /**

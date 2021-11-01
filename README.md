@@ -1,6 +1,8 @@
 # BLE Data Class for Java
 data classes for ble advertising/characteristic/descriptor
 
+see [https://github.com/im97mori-github/JavaBLEUtil/wiki](https://github.com/im97mori-github/JavaBLEUtil/wiki)
+
 ## Download
 project/build.gradle
 

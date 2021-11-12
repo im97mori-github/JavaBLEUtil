@@ -64,6 +64,15 @@ public class IndoorPositioning extends AbstractAdvertisingData {
      */
     private final int mUncertainty;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #IndoorPositioning(byte[], int, int)
+	 */
+	public IndoorPositioning(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Indoor Positioning
      *
@@ -128,6 +137,87 @@ public class IndoorPositioning extends AbstractAdvertisingData {
             mUncertainty = 0;
         }
     }
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param indoorPositioningConfiguration Indoor Positioning Configuration
+	 * @param globalCoorinatesLatitude       Global Coordinates (Latitude)
+	 * @param globalCoorinatesLongitude      Global Coordinates (Longitude)
+	 * @param localCoordinatesNorth          Local Coordinates (North)
+	 * @param localCoordinatesEast           Local Coordinates (East)
+	 * @param txPower                        Tx Power
+	 * @param floorNumber                    Floor Number
+	 * @param altitude                       Altitude
+	 * @param uncertainty                    Uncertainty
+	 */
+	public IndoorPositioning(int indoorPositioningConfiguration
+			, int globalCoorinatesLatitude
+			, int globalCoorinatesLongitude
+			, int localCoordinatesNorth
+			, int localCoordinatesEast
+			, int txPower
+			, int floorNumber
+			, int altitude
+			, int uncertainty) {
+		super(calculateLength(indoorPositioningConfiguration));
+
+		mIndoorPositioningConfiguration = indoorPositioningConfiguration;
+		mGlobalCoorinatesLatitude = globalCoorinatesLatitude;
+		mGlobalCoorinatesLongitude = globalCoorinatesLongitude;
+		mLocalCoordinatesNorth = localCoordinatesNorth;
+		mLocalCoordinatesEast = localCoordinatesEast;
+		mTxPower = txPower;
+		mFloorNumber = floorNumber;
+		mAltitude = altitude;
+		mUncertainty = uncertainty;
+	}
+	
+	/**
+	 * Calculate data length
+	 * 
+	 * @param indoorPositioningConfiguration Indoor Positioning Configuration
+	 * @return data length
+	 */
+	private static int calculateLength(int indoorPositioningConfiguration) {
+		int length = 1;
+		if (indoorPositioningConfiguration != 0) {
+			length++;
+			if (IndoorPositioningUtils
+					.isIndoorPositioningConfigurationPresenceOfCoordinatesInAdvertisingPacketsCoordinatesArePresent(
+							indoorPositioningConfiguration)) {
+				if (IndoorPositioningUtils
+						.isIndoorPositioningConfigurationCoordinateSystemUsedInAdvertisingPacketsWgs84CoordinateSystem(
+								indoorPositioningConfiguration)) {
+					length += 8;
+				} else {
+					length += 4;
+				}
+			}
+
+			if (IndoorPositioningUtils
+					.isIndoorPositioningConfigurationPresenceOfTxPowerFieldInAdvertisingPacketsTxPowerIsPresent(
+							indoorPositioningConfiguration)) {
+				length++;
+			}
+			if (IndoorPositioningUtils
+					.isIndoorPositioningConfigurationPresenceOfFloorNumberInAdvertisingPacketsFloorNumberIsPresent(
+							indoorPositioningConfiguration)) {
+				length++;
+			}
+			if (IndoorPositioningUtils
+					.isIndoorPositioningConfigurationPresenceOfAltitudeFieldInAdvertisingPacketsAltitudeIsPresent(
+							indoorPositioningConfiguration)) {
+				length += 2;
+			}
+			if (IndoorPositioningUtils
+					.isIndoorPositioningConfigurationPresenceOfUncertaintyInAdvertisingPacketsUncertaintyIsPresent(
+							indoorPositioningConfiguration)) {
+				length++;
+			}
+		}
+		return length;
+	}
 
     /**
      * {@inheritDoc}

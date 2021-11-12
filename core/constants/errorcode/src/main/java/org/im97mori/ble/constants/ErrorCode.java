@@ -2,8 +2,8 @@ package org.im97mori.ble.constants;
 
 /**
  * <p>
- * Core Specification v5.3 Vol 3 Part F 3.4.1 Supplement to the Bluetooth Core
- * Specification v10 Part B 1.2
+ * Core Specification v5.3 Vol 3 Part F 3.4.1 Revision Date: 2021-07-13
+ * Supplement to the Bluetooth Core Specification v10 Part B 1.2
  * </p>
  */
 public class ErrorCode {

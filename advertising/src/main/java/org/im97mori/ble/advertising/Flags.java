@@ -50,6 +50,15 @@ public class Flags extends AbstractAdvertisingData {
      */
     private final List<Integer> mFlagsList;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #Flags(byte[], int, int)
+	 */
+	public Flags(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Flags
      *
@@ -66,6 +75,17 @@ public class Flags extends AbstractAdvertisingData {
         }
         mFlagsList = Collections.synchronizedList(Collections.unmodifiableList(flagsList));
     }
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param flagsList Flags list
+	 */
+	public Flags(@NonNull List<Integer> flagsList) {
+		super(flagsList.size() + 1);
+
+		mFlagsList = Collections.synchronizedList(Collections.unmodifiableList(flagsList));
+	}
 
     /**
      * {@inheritDoc}

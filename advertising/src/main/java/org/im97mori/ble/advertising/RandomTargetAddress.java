@@ -24,6 +24,15 @@ public class RandomTargetAddress extends AbstractAdvertisingData {
      */
     private final List<byte[]> mAddressList;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #RandomTargetAddress(byte[], int, int)
+	 */
+	public RandomTargetAddress(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Random Target Address
      *
@@ -43,6 +52,17 @@ public class RandomTargetAddress extends AbstractAdvertisingData {
         }
         mAddressList = Collections.synchronizedList(Collections.unmodifiableList(addressList));
     }
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param addressList Random Target Address list
+	 */
+	public RandomTargetAddress(@NonNull List<byte[]> addressList) {
+		super(addressList.size() * 6 + 1);
+
+		mAddressList = Collections.synchronizedList(Collections.unmodifiableList(addressList));
+	}
 
     /**
      * {@inheritDoc}

@@ -6,6 +6,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 
 @SuppressWarnings("unused")
@@ -102,7 +105,7 @@ public class FlagsTest {
 	}
 
 	@Test
-	public void test_constructor_00001() {
+	public void test_constructor_1_00001() {
 		byte[] data = getData();
 
 		Flags result1 = new Flags(data, 0, data[0]);
@@ -117,7 +120,7 @@ public class FlagsTest {
 	}
 
 	@Test
-	public void test_constructor_00002() {
+	public void test_constructor_1_00002() {
 		byte[] data = getData();
 
 		Flags result1 = new Flags(data, 0, data[0]);
@@ -132,7 +135,7 @@ public class FlagsTest {
 	}
 
 	@Test
-	public void test_constructor_00003() {
+	public void test_constructor_1_00003() {
 		byte[] data = getData();
 
 		Flags result1 = new Flags(data, 0, data[0]);
@@ -147,7 +150,7 @@ public class FlagsTest {
 	}
 
 	@Test
-	public void test_constructor_00004() {
+	public void test_constructor_1_00004() {
 		byte[] data = getData();
 
 		Flags result1 = new Flags(data, 0, data[0]);
@@ -162,7 +165,7 @@ public class FlagsTest {
 	}
 
 	@Test
-	public void test_constructor_00005() {
+	public void test_constructor_1_00005() {
 		byte[] data = getData();
 
 		Flags result1 = new Flags(data, 0, data[0]);
@@ -177,7 +180,7 @@ public class FlagsTest {
 	}
 
 	@Test
-	public void test_constructor_00006() {
+	public void test_constructor_1_00006() {
 		byte[] data = getData();
 
 		Flags result1 = new Flags(data, 0, data[0]);
@@ -192,10 +195,246 @@ public class FlagsTest {
 	}
 
 	@Test
-	public void test_constructor_00007() {
+	public void test_constructor_1_00007() {
 		byte[] data = getData();
 
 		Flags result1 = new Flags(data, 0, data[0]);
+		assertEquals(1, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(0, result1.getFlagsList().size());
+		assertFalse(result1.isLeLimitedDiscoverableMode());
+		assertFalse(result1.isLeGeneralDiscoverableMode());
+		assertFalse(result1.isBrEdrNotSupported());
+		assertFalse(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_2_00001() {
+		byte[] data = getData();
+
+		Flags result1 = new Flags(data, 0);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b00000001, result1.getFlagsList().get(0).intValue());
+		assertTrue(result1.isLeLimitedDiscoverableMode());
+		assertFalse(result1.isLeGeneralDiscoverableMode());
+		assertFalse(result1.isBrEdrNotSupported());
+		assertFalse(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_2_00002() {
+		byte[] data = getData();
+
+		Flags result1 = new Flags(data, 0);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b00000010, result1.getFlagsList().get(0).intValue());
+		assertFalse(result1.isLeLimitedDiscoverableMode());
+		assertTrue(result1.isLeGeneralDiscoverableMode());
+		assertFalse(result1.isBrEdrNotSupported());
+		assertFalse(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_2_00003() {
+		byte[] data = getData();
+
+		Flags result1 = new Flags(data, 0);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b00000100, result1.getFlagsList().get(0).intValue());
+		assertFalse(result1.isLeLimitedDiscoverableMode());
+		assertFalse(result1.isLeGeneralDiscoverableMode());
+		assertTrue(result1.isBrEdrNotSupported());
+		assertFalse(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_2_00004() {
+		byte[] data = getData();
+
+		Flags result1 = new Flags(data, 0);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b00001000, result1.getFlagsList().get(0).intValue());
+		assertFalse(result1.isLeLimitedDiscoverableMode());
+		assertFalse(result1.isLeGeneralDiscoverableMode());
+		assertFalse(result1.isBrEdrNotSupported());
+		assertTrue(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_2_00005() {
+		byte[] data = getData();
+
+		Flags result1 = new Flags(data, 0);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b00010000, result1.getFlagsList().get(0).intValue());
+		assertFalse(result1.isLeLimitedDiscoverableMode());
+		assertFalse(result1.isLeGeneralDiscoverableMode());
+		assertFalse(result1.isBrEdrNotSupported());
+		assertFalse(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_2_00006() {
+		byte[] data = getData();
+
+		Flags result1 = new Flags(data, 0);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b11111111, result1.getFlagsList().get(0).intValue());
+		assertTrue(result1.isLeLimitedDiscoverableMode());
+		assertTrue(result1.isLeGeneralDiscoverableMode());
+		assertTrue(result1.isBrEdrNotSupported());
+		assertTrue(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_2_00007() {
+		byte[] data = getData();
+
+		Flags result1 = new Flags(data, 0);
+		assertEquals(1, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(0, result1.getFlagsList().size());
+		assertFalse(result1.isLeLimitedDiscoverableMode());
+		assertFalse(result1.isLeGeneralDiscoverableMode());
+		assertFalse(result1.isBrEdrNotSupported());
+		assertFalse(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_3_00001() {
+		byte[] data = getData();
+
+        List<Integer> flagsList = new ArrayList<>();
+        for (int i = 2; i < data[0] + 1; i++) {
+            flagsList.add(data[i] & 0xff);
+        }
+		Flags result1 = new Flags(flagsList);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b00000001, result1.getFlagsList().get(0).intValue());
+		assertTrue(result1.isLeLimitedDiscoverableMode());
+		assertFalse(result1.isLeGeneralDiscoverableMode());
+		assertFalse(result1.isBrEdrNotSupported());
+		assertFalse(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_3_00002() {
+		byte[] data = getData();
+
+        List<Integer> flagsList = new ArrayList<>();
+        for (int i = 2; i < data[0] + 1; i++) {
+            flagsList.add(data[i] & 0xff);
+        }
+		Flags result1 = new Flags(flagsList);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b00000010, result1.getFlagsList().get(0).intValue());
+		assertFalse(result1.isLeLimitedDiscoverableMode());
+		assertTrue(result1.isLeGeneralDiscoverableMode());
+		assertFalse(result1.isBrEdrNotSupported());
+		assertFalse(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_3_00003() {
+		byte[] data = getData();
+
+        List<Integer> flagsList = new ArrayList<>();
+        for (int i = 2; i < data[0] + 1; i++) {
+            flagsList.add(data[i] & 0xff);
+        }
+		Flags result1 = new Flags(flagsList);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b00000100, result1.getFlagsList().get(0).intValue());
+		assertFalse(result1.isLeLimitedDiscoverableMode());
+		assertFalse(result1.isLeGeneralDiscoverableMode());
+		assertTrue(result1.isBrEdrNotSupported());
+		assertFalse(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_3_00004() {
+		byte[] data = getData();
+
+        List<Integer> flagsList = new ArrayList<>();
+        for (int i = 2; i < data[0] + 1; i++) {
+            flagsList.add(data[i] & 0xff);
+        }
+		Flags result1 = new Flags(flagsList);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b00001000, result1.getFlagsList().get(0).intValue());
+		assertFalse(result1.isLeLimitedDiscoverableMode());
+		assertFalse(result1.isLeGeneralDiscoverableMode());
+		assertFalse(result1.isBrEdrNotSupported());
+		assertTrue(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_3_00005() {
+		byte[] data = getData();
+
+        List<Integer> flagsList = new ArrayList<>();
+        for (int i = 2; i < data[0] + 1; i++) {
+            flagsList.add(data[i] & 0xff);
+        }
+		Flags result1 = new Flags(flagsList);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b00010000, result1.getFlagsList().get(0).intValue());
+		assertFalse(result1.isLeLimitedDiscoverableMode());
+		assertFalse(result1.isLeGeneralDiscoverableMode());
+		assertFalse(result1.isBrEdrNotSupported());
+		assertFalse(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_3_00006() {
+		byte[] data = getData();
+
+        List<Integer> flagsList = new ArrayList<>();
+        for (int i = 2; i < data[0] + 1; i++) {
+            flagsList.add(data[i] & 0xff);
+        }
+		Flags result1 = new Flags(flagsList);
+		assertEquals(2, result1.getLength());
+		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
+		assertEquals(1, result1.getFlagsList().size());
+		assertEquals(0b11111111, result1.getFlagsList().get(0).intValue());
+		assertTrue(result1.isLeLimitedDiscoverableMode());
+		assertTrue(result1.isLeGeneralDiscoverableMode());
+		assertTrue(result1.isBrEdrNotSupported());
+		assertTrue(result1.isSimultaneousController());
+	}
+
+	@Test
+	public void test_constructor_3_00007() {
+		byte[] data = getData();
+
+        List<Integer> flagsList = new ArrayList<>();
+        for (int i = 2; i < data[0] + 1; i++) {
+            flagsList.add(data[i] & 0xff);
+        }
+		Flags result1 = new Flags(flagsList);
 		assertEquals(1, result1.getLength());
 		assertEquals(FLAGS_DATA_TYPE, result1.getDataType());
 		assertEquals(0, result1.getFlagsList().size());

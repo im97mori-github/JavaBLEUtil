@@ -264,6 +264,15 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      */
     private final List<Integer> mLeSupportedFeaturesList;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #LeSupportedFeatures(byte[], int, int)
+	 */
+	public LeSupportedFeatures(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for LE Supported Features
      *
@@ -280,6 +289,17 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
         }
         mLeSupportedFeaturesList = Collections.synchronizedList(Collections.unmodifiableList(leSupportedFeaturesList));
     }
+    
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param leSupportedFeaturesList LE Supported Features list
+	 */
+	public LeSupportedFeatures(@NonNull List<Integer> leSupportedFeaturesList) {
+		super(leSupportedFeaturesList.size() + 1);
+
+		mLeSupportedFeaturesList = Collections.synchronizedList(Collections.unmodifiableList(leSupportedFeaturesList));
+	}
 
     /**
      * {@inheritDoc}

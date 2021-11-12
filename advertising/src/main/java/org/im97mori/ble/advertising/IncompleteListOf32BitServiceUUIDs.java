@@ -27,6 +27,15 @@ public class IncompleteListOf32BitServiceUUIDs extends AbstractAdvertisingData {
      */
     private final List<UUID> mUuidList;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #IncompleteListOf32BitServiceUUIDs(byte[], int, int)
+	 */
+	public IncompleteListOf32BitServiceUUIDs(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Incomplete List of 32-bit Service Class UUIDs
      *
@@ -56,7 +65,7 @@ public class IncompleteListOf32BitServiceUUIDs extends AbstractAdvertisingData {
      * Constructor for Incomplete List of 32-bit Service Class UUIDs
      * 
      * @param uuids UUID array
-     * @see CompleteListOf32BitServiceUUIDs#CompleteListOf32BitServiceUUIDs(List)
+     * @see IncompleteListOf32BitServiceUUIDs#IncompleteListOf32BitServiceUUIDs(List)
      */
     public IncompleteListOf32BitServiceUUIDs(@NonNull UUID... uuids) {
         this(Arrays.asList(uuids));

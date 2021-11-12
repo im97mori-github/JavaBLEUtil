@@ -22,6 +22,15 @@ public class CompleteLocalName extends AbstractAdvertisingData {
 	private final String mCompleteLocalName;
 
 	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #CompleteLocalName(byte[], int, int)
+	 */
+	public CompleteLocalName(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
+	/**
 	 * Constructor for Complete Local Name
 	 *
 	 * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
@@ -31,6 +40,17 @@ public class CompleteLocalName extends AbstractAdvertisingData {
 	public CompleteLocalName(@NonNull byte[] data, int offset, int length) {
 		super(length);
 		mCompleteLocalName = new String(data, offset + 2, length - 1);
+	}
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param completeLocalName Complete Local Name
+	 */
+	public CompleteLocalName(@NonNull String completeLocalName) {
+		super(completeLocalName.getBytes().length + 1);
+
+		mCompleteLocalName = completeLocalName;
 	}
 
 	/**

@@ -6,6 +6,7 @@ import static org.im97mori.ble.constants.DataType.LIST_OF_16_BIT_SERVICE_SOLICIT
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
@@ -26,8 +27,17 @@ public class ListOf16BitServiceSolicitationUUIDs extends AbstractAdvertisingData
      */
     private final List<UUID> mUuidList;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #ListOf16BitServiceSolicitationUUIDs(byte[], int, int)
+	 */
+	public ListOf16BitServiceSolicitationUUIDs(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
-     * Constructor for Complete List of 16-bit Service Class UUIDs
+     * Constructor for List of 16-bit Service Solicitation UUIDs
      *
      * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset data offset
@@ -48,6 +58,27 @@ public class ListOf16BitServiceSolicitationUUIDs extends AbstractAdvertisingData
         }
         mUuidList = Collections.synchronizedList(Collections.unmodifiableList(uuidList));
     }
+
+    /**
+     * Constructor for List of 16-bit Service Solicitation UUIDs
+     * 
+     * @param uuids UUID array
+     * @see ListOf16BitServiceSolicitationUUIDs#ListOf16BitServiceSolicitationUUIDs(List)
+     */
+    public ListOf16BitServiceSolicitationUUIDs(@NonNull UUID... uuids) {
+        this(Arrays.asList(uuids));
+    }
+
+	/**
+	 * Constructor for List of 128-bit Service Solicitation UUIDs
+	 * 
+	 * @param uuidList UUID list
+	 */
+	public ListOf16BitServiceSolicitationUUIDs(@NonNull List<UUID> uuidList) {
+		super(uuidList.size() * 2 + 1);
+
+        mUuidList = Collections.synchronizedList(Collections.unmodifiableList(uuidList));
+	}
 
     /**
      * {@inheritDoc}

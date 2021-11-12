@@ -21,6 +21,15 @@ public class TxPowerLevel extends AbstractAdvertisingData {
      */
     private final byte mTxPowerLevel;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #TxPowerLevel(byte[], int, int)
+	 */
+	public TxPowerLevel(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Tx Power Level
      *
@@ -33,6 +42,17 @@ public class TxPowerLevel extends AbstractAdvertisingData {
 
         mTxPowerLevel = data[offset + 2];
     }
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param txPowerLevel Tx Power Level
+	 */
+	public TxPowerLevel(byte txPowerLevel) {
+		super(2);
+
+		mTxPowerLevel = txPowerLevel;
+	}
 
     /**
      * {@inheritDoc}

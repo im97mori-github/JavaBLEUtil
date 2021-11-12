@@ -5,6 +5,8 @@ import static org.im97mori.ble.constants.DataType.ADVERTISING_INTERVAL_DATA_TYPE
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
+import org.im97mori.ble.BLEUtils;
+
 import androidx.annotation.NonNull;
 
 /**
@@ -26,6 +28,15 @@ public class AdvertisingInterval extends AbstractAdvertisingData {
      */
     private final int mAdvertisingInterval;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #AdvertisingInterval(byte[], int, int)
+	 */
+	public AdvertisingInterval(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+    
     /**
      * Constructor for Advertising Interval
      *
@@ -36,9 +47,19 @@ public class AdvertisingInterval extends AbstractAdvertisingData {
     public AdvertisingInterval(@NonNull byte[] data, int offset, int length) {
         super(length);
 
-        ByteBuffer bb = ByteBuffer.wrap(data, offset + 2, length - 1).order(ByteOrder.LITTLE_ENDIAN);
-        mAdvertisingInterval = bb.getShort() & 0xffff;
+        mAdvertisingInterval = BLEUtils.createUInt16(data, 2);
     }
+    
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param advertisingInterval Advertising Interval
+	 */
+	public AdvertisingInterval(int advertisingInterval) {
+		super(3);
+
+		mAdvertisingInterval = advertisingInterval;
+	}
 
     /**
      * {@inheritDoc}

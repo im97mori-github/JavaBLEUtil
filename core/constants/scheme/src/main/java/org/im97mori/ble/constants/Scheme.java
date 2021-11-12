@@ -7,7 +7,8 @@ import java.util.Map;
 /**
  * BLE GATT Scheme UUID
  * <p>
- * URI Scheme Name String Mapping.pdf Revision Date: 2021-05-14
+ * URI Scheme Name String Mapping.pdf
+ * Revision Date: 2021-05-14
  */
 public class Scheme {
 

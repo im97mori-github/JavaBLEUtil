@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.im97mori.ble.BLEUtils;
+
 import androidx.annotation.NonNull;
 
 /**
@@ -98,6 +100,15 @@ public class ChannelMapUpdateIndication extends AbstractAdvertisingData {
      */
     private final int mInstant;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #ChannelMapUpdateIndication(byte[], int, int)
+	 */
+	public ChannelMapUpdateIndication(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Channel Map Update Indication
      *
@@ -135,10 +146,41 @@ public class ChannelMapUpdateIndication extends AbstractAdvertisingData {
         mUnusedChannelList = Collections.synchronizedList(Collections.unmodifiableList(channelList));
         mUnusedChannelListRfCenterFrequencyList = Collections.synchronizedList(Collections.unmodifiableList(frequencyList));
 
-        int instant = data[offset + 7] & 0xff;
-        instant |= (data[offset + 8] & 0xff) << 8;
-        mInstant = instant;
+        mInstant = BLEUtils.createUInt16(data, 7);
     }
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param chmList	ChM list
+	 * @param instant	Instant
+	 */
+	public ChannelMapUpdateIndication(@NonNull List<Integer> chmList, int instant) {
+		super(8);
+
+		mChmList = Collections.synchronizedList(Collections.unmodifiableList(chmList));
+		mInstant = instant;
+
+		// create index
+		List<Integer> channelList = new ArrayList<>();
+		List<Integer> frequencyList = new ArrayList<>();
+		int phyChannel, channelIndex, listIndex, bitmask;
+		for (Map.Entry<Integer, Integer> entry : PHYSICAL_CHANNEL_INDICES_MAP.entrySet()) {
+			phyChannel = entry.getKey();
+			channelIndex = entry.getValue();
+			listIndex = channelIndex / 8;
+			bitmask = 1 << (channelIndex % 8);
+			if ((mChmList.get(listIndex) & bitmask) == 0) {
+				channelList.add(phyChannel);
+				frequencyList.add(2400 + (phyChannel + 1) * 2);
+			}
+		}
+		Collections.sort(channelList);
+		Collections.sort(frequencyList);
+		mUnusedChannelList = Collections.synchronizedList(Collections.unmodifiableList(channelList));
+		mUnusedChannelListRfCenterFrequencyList = Collections
+				.synchronizedList(Collections.unmodifiableList(frequencyList));
+	}
 
     /**
      * {@inheritDoc}

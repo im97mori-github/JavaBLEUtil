@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import org.im97mori.ble.constants.AppearanceValues;
+
 import com.github.snksoft.crc.CRC.Parameters;
 
 /**
@@ -28,12 +30,11 @@ public class BLEConstants {
 	@Deprecated
 	public static final Parameters CRC_PARAMETERS = new Parameters(16, 0x1021, 0x00FFFF, true, true, 0x0);
 
-//	/**
-//	 * use
-//	 * {@link org.im97mori.ble.constants.AppearanceValue#APPEARANCE_SUB_CATEGORY_MAPPING}
-//	 */
-//	@Deprecated
-//	public static final Map<Integer, String> APPEARANCE_VALUE_MAP = AppearanceValue.;
+	/**
+	 * use {@link org.im97mori.ble.constants.AppearanceValues#APPEARANCE_SUB_CATEGORY_MAPPING}
+	 */
+	@Deprecated
+	public static final Map<Integer, String> APPEARANCE_VALUE_MAP = AppearanceValues.APPEARANCE_SUB_CATEGORY_MAPPING;
 
 	/**
 	 * use {@link org.im97mori.ble.constants.Scheme#SCHEME_MAPPING}

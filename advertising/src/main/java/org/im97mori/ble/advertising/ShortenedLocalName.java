@@ -21,6 +21,15 @@ public class ShortenedLocalName extends AbstractAdvertisingData {
      */
     private final String mShortenedLocalName;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #ShortenedLocalName(byte[], int, int)
+	 */
+	public ShortenedLocalName(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Shortened Local Name
      *
@@ -32,6 +41,17 @@ public class ShortenedLocalName extends AbstractAdvertisingData {
         super(length);
         mShortenedLocalName = new String(data, offset + 2, length - 1);
     }
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param shortenedLocalName Shortened Local Name
+	 */
+	public ShortenedLocalName(@NonNull String shortenedLocalName) {
+		super(shortenedLocalName.getBytes().length + 1);
+
+		mShortenedLocalName = shortenedLocalName;
+	}
 
     /**
      * {@inheritDoc}

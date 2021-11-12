@@ -28,6 +28,15 @@ public class ServiceData16BitUUID extends AbstractAdvertisingData {
      */
     private final byte[] mAdditionalServiceData;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #ServiceData16BitUUID(byte[], int, int)
+	 */
+	public ServiceData16BitUUID(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Service Data - 16-bit UUID
      *
@@ -50,6 +59,19 @@ public class ServiceData16BitUUID extends AbstractAdvertisingData {
             System.arraycopy(data, offset + 4, mAdditionalServiceData, 0, length - 3);
         }
     }
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param uuid                  UUID
+	 * @param additionalServiceData byte array of Additional service data
+	 */
+	public ServiceData16BitUUID(@NonNull UUID uuid, @NonNull byte[] additionalServiceData) {
+		super(additionalServiceData.length + 3);
+
+		mUuid = uuid;
+		mAdditionalServiceData = additionalServiceData;
+	}
 
     /**
      * {@inheritDoc}

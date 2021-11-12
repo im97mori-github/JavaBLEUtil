@@ -36,6 +36,15 @@ public class UniformResourceIdentifier extends AbstractAdvertisingData {
 	private final URI mUri;
 
 	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #UniformResourceIdentifier(byte[], int, int)
+	 */
+	public UniformResourceIdentifier(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
+	/**
 	 * Constructor for URI
 	 *
 	 * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
@@ -49,6 +58,24 @@ public class UniformResourceIdentifier extends AbstractAdvertisingData {
 
 		mScheme = allString.charAt(0);
 		mUriString = allString.substring(1);
+		if (Scheme.SCHEME_MAPPING.containsKey(mScheme)) {
+			mUri = URI.create(Scheme.SCHEME_MAPPING.get(mScheme) + mUriString);
+		} else {
+			mUri = null;
+		}
+	}
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param scheme    Scheme
+	 * @param uriString URI text
+	 */
+	public UniformResourceIdentifier(char scheme, @NonNull String uriString) {
+		super(Character.toString(scheme).getBytes().length + uriString.getBytes().length + 1);
+
+		mScheme = scheme;
+		mUriString = uriString;
 		if (Scheme.SCHEME_MAPPING.containsKey(mScheme)) {
 			mUri = URI.create(Scheme.SCHEME_MAPPING.get(mScheme) + mUriString);
 		} else {

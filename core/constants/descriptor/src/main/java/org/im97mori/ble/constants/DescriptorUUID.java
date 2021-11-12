@@ -8,7 +8,8 @@ import java.util.UUID;
 /**
  * BLE GATT Descriptor UUID
  * <p>
- * 16-bit UUID Numbers Document.pdf Revision Date: 2021-10-01
+ * 16-bit UUID Numbers Document.pdf
+ * Revision Date: 2021-10-01
  */
 public class DescriptorUUID {
 

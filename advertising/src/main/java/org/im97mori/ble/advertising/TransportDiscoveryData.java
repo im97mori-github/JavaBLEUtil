@@ -242,6 +242,15 @@ public class TransportDiscoveryData extends AbstractAdvertisingData {
      */
     private final List<TransportBlock> mTransportBlockList;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #TransportDiscoveryData(byte[], int, int)
+	 */
+	public TransportDiscoveryData(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Advertising Interval
      *
@@ -265,6 +274,31 @@ public class TransportDiscoveryData extends AbstractAdvertisingData {
         } while (index < length);
         mTransportBlockList = Collections.unmodifiableList(Collections.synchronizedList(transportBlockList));
     }
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param transportBlockList Transport Block List
+	 */
+	public TransportDiscoveryData(@NonNull List<TransportBlock> transportBlockList) {
+		super(calculateLength(transportBlockList));
+		
+		mTransportBlockList = Collections.unmodifiableList(Collections.synchronizedList(transportBlockList));
+	}
+
+	/**
+	 * Calculate data length
+	 * 
+	 * @param transportBlockList
+	 * @return data length
+	 */
+	private static int calculateLength(@NonNull List<TransportBlock> transportBlockList) {
+		int length = transportBlockList.size() * 3 + 1;
+		for (TransportBlock transportBlock : transportBlockList) {
+			length += transportBlock.getTransportData().length;
+		}
+		return length;
+	}
 
     /**
      * {@inheritDoc}

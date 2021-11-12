@@ -29,6 +29,16 @@ public class AdvertisingIntervalLong extends AbstractAdvertisingData {
      */
     private final long mAdvertisingIntervalLong;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #AdvertisingIntervalLong(byte[], int, int)
+	 */
+	public AdvertisingIntervalLong(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+    
+	
     /**
      * Constructor for Advertising Interval - long
      *
@@ -45,6 +55,18 @@ public class AdvertisingIntervalLong extends AbstractAdvertisingData {
             mAdvertisingIntervalLong = BLEUtils.createUInt24(data, offset + 2);
         }
     }
+    
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param isUInt32 {@code true}:4 octets, {@code false}:3 octets
+	 * @param advertisingIntervalLong Advertising Interval - long
+	 */
+	public AdvertisingIntervalLong(boolean isUInt32, long advertisingIntervalLong) {
+		super(isUInt32 ? 5 : 4);
+
+		mAdvertisingIntervalLong = advertisingIntervalLong;
+	}
 
     /**
      * {@inheritDoc}

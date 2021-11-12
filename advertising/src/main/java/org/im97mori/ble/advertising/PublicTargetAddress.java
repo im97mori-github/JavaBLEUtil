@@ -24,6 +24,15 @@ public class PublicTargetAddress extends AbstractAdvertisingData {
      */
     private final List<byte[]> mAddressList;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #PublicTargetAddress(byte[], int, int)
+	 */
+	public PublicTargetAddress(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Public Target Address
      *
@@ -43,6 +52,17 @@ public class PublicTargetAddress extends AbstractAdvertisingData {
         }
         mAddressList = Collections.synchronizedList(Collections.unmodifiableList(addressList));
     }
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param addressList Public Target Address list
+	 */
+	public PublicTargetAddress(@NonNull List<byte[]> addressList) {
+		super(addressList.size() * 6 + 1);
+
+		mAddressList = Collections.synchronizedList(Collections.unmodifiableList(addressList));
+	}
 
     /**
      * {@inheritDoc}

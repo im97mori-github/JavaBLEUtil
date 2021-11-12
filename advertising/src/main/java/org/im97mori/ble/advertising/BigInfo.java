@@ -9,6 +9,7 @@ import java.util.Arrays;
 import org.im97mori.ble.BLEUtils;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * <p>
@@ -164,6 +165,15 @@ public class BigInfo extends AbstractAdvertisingData {
      */
     private final byte[] mGskd;
 
+	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #BigInfo(byte[], int, int)
+	 */
+	public BigInfo(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+	
     /**
      * Constructor for BIGInfo
      *
@@ -209,6 +219,80 @@ public class BigInfo extends AbstractAdvertisingData {
             mGskd = null;
         }
     }
+    
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param bigOffset         BIG_Offset
+	 * @param bigOffsetUnits    BIG_Offset_Units
+	 * @param isoInterval       ISO_Interval
+	 * @param numBis            Num_BIS
+	 * @param nse               NSE
+	 * @param bn                Bn
+	 * @param subInterval       Sub_Interval
+	 * @param pto               PTO
+	 * @param bisSpacing        BIS_Spacing
+	 * @param irc               IRC
+	 * @param maxPdu            Max_PDU
+	 * @param rfu               RFU
+	 * @param seedAccessAddress SeedAccessAddress
+	 * @param sduInterval       SDU_Interval
+	 * @param maxSdu            Max_SDU
+	 * @param baseCrcInit       BaseCRCInit
+	 * @param chm               ChM
+	 * @param phy               PHY
+	 * @param bisPayloadCount   bisPayloadCount
+	 * @param framing           Framing
+	 * @param giv               GIV
+	 * @param gskd              GSKD
+	 */
+	public BigInfo(int bigOffset
+			, int bigOffsetUnits
+			, int isoInterval
+			, int numBis
+			, int nse
+			, int bn
+			, int subInterval
+			, int pto
+			, int bisSpacing
+			, int irc
+			, int maxPdu
+			, int rfu
+			, long seedAccessAddress
+			, int sduInterval
+			, int maxSdu
+			, int baseCrcInit
+			, long chm
+			, int phy
+			, long bisPayloadCount
+			, int framing
+			, @Nullable byte[] giv
+			, @Nullable byte[] gskd) {
+		super(giv == null ? 34 : 58);
+
+		mBigOffset = bigOffset;
+		mBigOffsetUnits = bigOffsetUnits;
+		mIsoInterval = isoInterval;
+		mNumBis = numBis;
+		mNse = nse;
+		mBn = bn;
+		mSubInterval = subInterval;
+		mPto = pto;
+		mBisSpacing = bisSpacing;
+		mIrc = irc;
+		mMaxPdu = maxPdu;
+		mRfu = rfu;
+		mSeedAccessAddress = seedAccessAddress;
+		mSduInterval = sduInterval;
+		mMaxSdu = maxSdu;
+		mBaseCrcInit = baseCrcInit;
+		mChm = chm;
+		mPhy = phy;
+		mBisPayloadCount = bisPayloadCount;
+		mFraming = framing;
+		mGiv = giv;
+		mGskd = gskd;
+	}
 
     /**
      * {@inheritDoc}
@@ -330,14 +414,14 @@ public class BigInfo extends AbstractAdvertisingData {
     }
 
     /**
-     * @return mMaxSdu
+     * @return Max_SDU
      */
     public int getMaxSdu() {
         return mMaxSdu;
     }
 
     /**
-     * @return mBaseCrcInit
+     * @return BaseCRCInit
      */
     public int getBaseCrcInit() {
         return mBaseCrcInit;
@@ -379,7 +463,7 @@ public class BigInfo extends AbstractAdvertisingData {
     }
 
     /**
-     * @return mGskd
+     * @return GSKD
      */
     public byte[] getGskd() {
         return mGskd;
@@ -442,10 +526,8 @@ public class BigInfo extends AbstractAdvertisingData {
         value = (byte) (mBisPayloadCount >>> 32);
         value |= (byte) (mFraming << 7);
         byteBuffer.put((byte) value);
-        if (mGiv != null) {
+        if (getLength() == 58) {
             byteBuffer.put(mGiv);
-        }
-        if (mGskd != null) {
             byteBuffer.put(mGskd);
         }
         return data;

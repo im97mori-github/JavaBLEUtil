@@ -25,6 +25,15 @@ public class Appearance extends AbstractAdvertisingData {
 	private final int mAppearance;
 
 	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #Appearance(byte[], int, int)
+	 */
+	public Appearance(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
+	/**
 	 * Constructor for Appearance
 	 *
 	 * @param data   byte array from <a href=
@@ -36,6 +45,17 @@ public class Appearance extends AbstractAdvertisingData {
 		super(length);
 
 		mAppearance = BLEUtils.createUInt16(data, offset + 2);
+	}
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param appearance Appearance
+	 */
+	public Appearance(int appearance) {
+		super(3);
+
+		mAppearance = appearance;
 	}
 
 	/**

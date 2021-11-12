@@ -35,6 +35,15 @@ public class ManufacturerSpecificData extends AbstractAdvertisingData {
 	private final byte[] mManufacturerSpecificData;
 
 	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #ManufacturerSpecificData(byte[], int, int)
+	 */
+	public ManufacturerSpecificData(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
+	/**
 	 * Constructor for Manufacturer Specific Data
 	 *
 	 * @param data   byte array from <a href=
@@ -53,6 +62,19 @@ public class ManufacturerSpecificData extends AbstractAdvertisingData {
 		if (mManufacturerSpecificData.length > 0) {
 			System.arraycopy(data, offset + 4, mManufacturerSpecificData, 0, mManufacturerSpecificData.length);
 		}
+	}
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param companyIdentifier        Company Identifier Code
+	 * @param manufacturerSpecificData byte array of Manufacturer Specific Data
+	 */
+	public ManufacturerSpecificData(int companyIdentifier, @NonNull byte[] manufacturerSpecificData) {
+		super(3 + manufacturerSpecificData.length);
+
+		mCompanyIdentifier = companyIdentifier;
+		mManufacturerSpecificData = manufacturerSpecificData;
 	}
 
 	/**

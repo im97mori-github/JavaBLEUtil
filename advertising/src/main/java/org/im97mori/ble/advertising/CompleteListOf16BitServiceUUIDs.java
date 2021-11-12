@@ -27,6 +27,15 @@ public class CompleteListOf16BitServiceUUIDs extends AbstractAdvertisingData {
      */
     private final List<UUID> mUuidList;
 
+	/**
+	 * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+	 * @param offset data offset
+	 * @see #CompleteListOf16BitServiceUUIDs(byte[], int, int)
+	 */
+	public CompleteListOf16BitServiceUUIDs(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
     /**
      * Constructor for Complete List of 16-bit Service Class UUIDs
      *

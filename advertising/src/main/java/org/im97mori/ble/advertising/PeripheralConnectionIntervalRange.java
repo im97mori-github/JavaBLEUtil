@@ -49,6 +49,15 @@ public class PeripheralConnectionIntervalRange extends AbstractAdvertisingData {
 	private final int mMaximumValue;
 
 	/**
+     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset data offset
+	 * @see #PeripheralConnectionIntervalRange(byte[], int, int)
+	 */
+	public PeripheralConnectionIntervalRange(@NonNull byte[] data, int offset) {
+		this(data, offset, data[offset]);
+	}
+
+	/**
 	 * Constructor for Peripheral Connection Interval Range
 	 *
 	 * @param data   byte array from <a href=
@@ -61,6 +70,19 @@ public class PeripheralConnectionIntervalRange extends AbstractAdvertisingData {
 
 		mMinimumValue = BLEUtils.createUInt16(data, offset + 2);
 		mMaximumValue = BLEUtils.createUInt16(data, offset + 4);
+	}
+
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param minimumValue Minimum connection interval
+	 * @param maximumValue Maximum connection interval
+	 */
+	public PeripheralConnectionIntervalRange(int minimumValue, int maximumValue) {
+		super(5);
+
+		mMinimumValue = minimumValue;
+		mMaximumValue = maximumValue;
 	}
 
 	/**

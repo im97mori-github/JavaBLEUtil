@@ -25,7 +25,7 @@ public class EmailAddress implements ByteArrayInterface {
      *
      * @param registeredUsers first to last Registered User Data array
      */
-    public EmailAddress(@NonNull RegisteredUser[] registeredUsers) {
+    public EmailAddress(@NonNull RegisteredUser... registeredUsers) {
         List<byte[]> dataList = new LinkedList<>();
         int length = 0;
         for (RegisteredUser registeredUser : registeredUsers) {

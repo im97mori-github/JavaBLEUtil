@@ -100,7 +100,7 @@ public class IndoorBikeData implements ByteArrayInterface {
      *
      * @param indoorBikeDataPackets 1 or more Indoor Bike Data packet array
      */
-    public IndoorBikeData(@NonNull IndoorBikeDataPacket[] indoorBikeDataPackets) {
+    public IndoorBikeData(@NonNull IndoorBikeDataPacket... indoorBikeDataPackets) {
         byte[] flags = new byte[2];
         int instantaneousSpeed = 0;
         int averageSpeed = 0;

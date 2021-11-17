@@ -25,7 +25,7 @@ public class FirstName implements ByteArrayInterface {
      *
      * @param registeredUsers first to last Registered User Data array
      */
-    public FirstName(@NonNull RegisteredUser[] registeredUsers) {
+    public FirstName(@NonNull RegisteredUser... registeredUsers) {
         List<byte[]> dataList = new LinkedList<>();
         int length = 0;
         for (RegisteredUser registeredUser : registeredUsers) {

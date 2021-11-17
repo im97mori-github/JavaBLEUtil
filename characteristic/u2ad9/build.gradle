@@ -1,6 +1,7 @@
 dependencies {
     api apiCoreUtils
-    api apiCharacteristicCore
+    testImplementation apiCharacteristicCore
+    testImplementation apiTestUtil
     testImplementation junit
 }
 

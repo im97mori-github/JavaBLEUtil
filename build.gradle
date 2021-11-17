@@ -12,8 +12,8 @@ allprojects {
 }
 
 ext.myGroupId = 'org.im97mori'
-ext.loadVersion = '0.6.1'
-ext.uploadVersion = '0.6.1'
+ext.loadVersion = '0.6.2'
+ext.uploadVersion = '0.6.2'
 
 ext.coreConstantsAppearance = 'ble-core-constants-appearance'
 ext.coreConstantsCharacteristic = 'ble-core-constants-characteristic'
@@ -34,6 +34,8 @@ ext.coreUtils = 'ble-core-utils'
 ext.core = 'ble-core'
 
 ext.advertising = 'ble-advertising'
+ext.testUtil = 'ble-test'
+
 
 apply from: 'descriptor.gradle'
 apply from: 'characteristic.gradle'
@@ -44,6 +46,7 @@ ext.apiCoreConstants = "${myGroupId}:${coreConstants}:${loadVersion}"
 ext.apiCoreUtils = "${myGroupId}:${coreUtils}:${loadVersion}"
 ext.apiCore = "${myGroupId}:${core}:${loadVersion}"
 ext.apiCharacteristicCore = "${myGroupId}:${characteristicCore}:${loadVersion}"
+ext.apiTestUtil = "${myGroupId}:${testUtil}:${loadVersion}"
 ext.crcLibrary = 'com.github.snksoft:crc:1.0.2'
 ext.junit = 'junit:junit:4.13.2'
 

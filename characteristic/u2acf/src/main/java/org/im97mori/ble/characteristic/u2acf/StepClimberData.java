@@ -85,7 +85,7 @@ public class StepClimberData implements ByteArrayInterface {
      *
      * @param stepClimberDataPackets 1 or more Step Climber Data packet array
      */
-    public StepClimberData(@NonNull StepClimberDataPacket[] stepClimberDataPackets) {
+    public StepClimberData(@NonNull StepClimberDataPacket... stepClimberDataPackets) {
         byte[] flags = new byte[2];
         int floors = 0;
         int stepCount = 0;

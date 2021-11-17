@@ -85,7 +85,7 @@ public class StairClimberData implements ByteArrayInterface {
      *
      * @param stairClimberDataPackets 1 or more Stair Climber Data packet array
      */
-    public StairClimberData(@NonNull StairClimberDataPacket[] stairClimberDataPackets) {
+    public StairClimberData(@NonNull StairClimberDataPacket... stairClimberDataPackets) {
         byte[] flags = new byte[2];
         int floors = 0;
         int stepPerMinute = 0;

@@ -125,7 +125,7 @@ public class CrossTrainerData implements ByteArrayInterface {
      *
      * @param crossTrainerDataPackets 1 or more Cross Trainer Data packet array
      */
-    public CrossTrainerData(@NonNull CrossTrainerDataPacket[] crossTrainerDataPackets) {
+    public CrossTrainerData(@NonNull CrossTrainerDataPacket... crossTrainerDataPackets) {
         byte[] flags = new byte[3];
         int instantaneousSpeed = 0;
         int averageSpeed = 0;

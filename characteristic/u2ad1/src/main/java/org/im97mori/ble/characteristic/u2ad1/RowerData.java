@@ -105,7 +105,7 @@ public class RowerData implements ByteArrayInterface {
      *
      * @param rowerDataPackets 1 or more Rower Data packet array
      */
-    public RowerData(@NonNull RowerDataPacket[] rowerDataPackets) {
+    public RowerData(@NonNull RowerDataPacket... rowerDataPackets) {
         byte[] flags = new byte[2];
         int strokeRate = 0;
         int strokeCount = 0;

@@ -1,5 +1,6 @@
 dependencies {
     api apiCoreUtils
+    testImplementation apiTestUtil
     testImplementation junit
     testImplementation "${myGroupId}:${coreConstantsUnit}:${loadVersion}"
 }

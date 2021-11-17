@@ -6,9 +6,11 @@ javadoc {
 	classpath = configurations.javadocClasspath
 }
 
+
 dependencies {
     api apiCoreUtils
     testImplementation apiCharacteristicCore
+    testImplementation apiTestUtil
     testImplementation junit
     javadocClasspath "${myGroupId}:${coreConstantsCompany}:${loadVersion}"
 }

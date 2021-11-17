@@ -432,7 +432,7 @@ public class BodyCompositionMeasurement implements ByteArrayInterface {
      *
      * @param bodyCompositionMeasurementPackets 1 or 2 Body Composition Measurement packet array
      */
-    public BodyCompositionMeasurement(@NonNull BodyCompositionMeasurementPacket[] bodyCompositionMeasurementPackets) {
+    public BodyCompositionMeasurement(@NonNull BodyCompositionMeasurementPacket... bodyCompositionMeasurementPackets) {
         byte[] flags = new byte[2];
         int bodyFatPercentage = 0;
         int year = 0;

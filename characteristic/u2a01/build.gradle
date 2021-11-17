@@ -2,6 +2,7 @@ dependencies {
 	api "${myGroupId}:${coreConstantsAppearance}:${loadVersion}"
     api apiCoreUtils
     testImplementation apiCharacteristicCore
+    testImplementation apiTestUtil
     testImplementation junit
 }
 

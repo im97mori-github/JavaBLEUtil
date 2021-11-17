@@ -115,7 +115,7 @@ public class TreadmillData implements ByteArrayInterface {
      *
      * @param treadmillDataPackets 1 or more Treadmill Data packet array
      */
-    public TreadmillData(@NonNull TreadmillDataPacket[] treadmillDataPackets) {
+    public TreadmillData(@NonNull TreadmillDataPacket... treadmillDataPackets) {
         byte[] flags = new byte[2];
         int instantaneousSpeed = 0;
         int averageSpeed = 0;

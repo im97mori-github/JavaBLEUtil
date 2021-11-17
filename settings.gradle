@@ -452,3 +452,5 @@ include ':characteristic:u2bd7'
 include ':characteristic:u2bd8'
 include ':characteristic:u2bd9'
 include ':characteristic'
+
+include ':test'

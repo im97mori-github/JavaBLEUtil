@@ -4,6 +4,7 @@ dependencies {
     api "${myGroupId}:${coreConstantsDataType}:${loadVersion}"
     api "${myGroupId}:${coreConstantsScheme}:${loadVersion}"
     api apiCoreUtils
+    testImplementation apiTestUtil
     testImplementation junit
 }
 

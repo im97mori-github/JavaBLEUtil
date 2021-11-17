@@ -111,6 +111,54 @@ public class BloodPressureFeature implements ByteArrayInterface {
     public static final int MULTIPLE_BOND_SUPPORT_TRUE = 0b00000000_00100000;
 
     /**
+     * @see #E2E_CRC_SUPPORT_FALSE
+     * @see #E2E_CRC_SUPPORT_TRUE
+     */
+    public static final int E2E_CRC_SUPPORT_MASK = 0b00000000_01000000;
+
+    /**
+     * 0: E2E-CRC not supported
+     */
+    public static final int E2E_CRC_SUPPORT_FALSE = 0b00000000_00000000;
+
+    /**
+     * 1: E2E-CRC supported
+     */
+    public static final int E2E_CRC_SUPPORT_TRUE = 0b00000000_01000000;
+
+    /**
+     * @see #USER_DATA_SERVICE_SUPPORT_FALSE
+     * @see #USER_DATA_SERVICE_SUPPORT_TRUE
+     */
+    public static final int USER_DATA_SERVICE_SUPPORT_MASK = 0b00000000_10000000;
+
+    /**
+     * 0: User Data Service not supported
+     */
+    public static final int USER_DATA_SERVICE_SUPPORT_FALSE = 0b00000000_00000000;
+
+    /**
+     * 1: User Data Service supported
+     */
+    public static final int USER_DATA_SERVICE_SUPPORT_TRUE = 0b00000000_10000000;
+
+    /**
+     * @see #USER_FACING_TIME_SUPPORT_FALSE
+     * @see #USER_FACING_TIME_SUPPORT_TRUE
+     */
+    public static final int USER_FACING_TIME_SUPPORT_MASK = 0b00000001_00000000;
+
+    /**
+     * 0: User Facing Time not supported
+     */
+    public static final int USER_FACING_TIME_SUPPORT_FALSE = 0b00000000_00000000;
+
+    /**
+     * 1: User Facing Time supported
+     */
+    public static final int USER_FACING_TIME_SUPPORT_TRUE = 0b00000001_00000000;
+
+    /**
      * Blood Pressure Feature
      */
     private final byte[] mBloodPressureFeature;
@@ -124,24 +172,47 @@ public class BloodPressureFeature implements ByteArrayInterface {
         mBloodPressureFeature = Arrays.copyOfRange(values, 0, 2);
     }
 
-    /**
-     * Constructor from flags
-     * 
-     * @param isBodyMovementDetectionFeatureSupported {@code true}:{@link #BODY_MOVEMENT_DETECTION_SUPPORT_TRUE}, {@code false}:{@link #BODY_MOVEMENT_DETECTION_SUPPORT_FALSE}
-     * @param isCuffFitDetectionSupported             {@code true}:{@link #CUFF_FIT_DETECTION_SUPPORT_TRUE}, {@code false}:{@link #CUFF_FIT_DETECTION_SUPPORT_FALSE}
-     * @param isIrregularPulseDetectionSupported      {@code true}:{@link #IRREGULAR_PULSE_DETECTION_SUPPORT_TRUE}, {@code false}:{@link #IRREGULAR_PULSE_DETECTION_SUPPORT_FALSE}
-     * @param isPulseRateRangeDetectionSupported      {@code true}:{@link #PULSE_RATE_RANGE_DETECTION_SUPPORT_TRUE}, {@code false}:{@link #PULSE_RATE_RANGE_DETECTION_SUPPORT_FALSE}
-     * @param isMeasurementPositionDetectionSupported {@code true}:{@link #MEASUREMENT_POSITION_DETECTION_SUPPORT_TRUE}, {@code false}:{@link #MEASUREMENT_POSITION_DETECTION_SUPPORT_TRUE}
-     * @param isMultipleBondDetectionSupported        {@code true}:{@link #MULTIPLE_BOND_SUPPORT_TRUE}, {@code false}:{@link #MULTIPLE_BOND_SUPPORT_FALSE}
-     */
-    public BloodPressureFeature(boolean isBodyMovementDetectionFeatureSupported, boolean isCuffFitDetectionSupported, boolean isIrregularPulseDetectionSupported, boolean isPulseRateRangeDetectionSupported, boolean isMeasurementPositionDetectionSupported, boolean isMultipleBondDetectionSupported) {
+	/**
+	 * Constructor from flags
+	 * 
+	 * @param isBodyMovementDetectionFeatureSupported {@code true}:{@link #BODY_MOVEMENT_DETECTION_SUPPORT_TRUE},
+	 *                                                {@code false}:{@link #BODY_MOVEMENT_DETECTION_SUPPORT_FALSE}
+	 * @param isCuffFitDetectionSupported             {@code true}:{@link #CUFF_FIT_DETECTION_SUPPORT_TRUE},
+	 *                                                {@code false}:{@link #CUFF_FIT_DETECTION_SUPPORT_FALSE}
+	 * @param isIrregularPulseDetectionSupported      {@code true}:{@link #IRREGULAR_PULSE_DETECTION_SUPPORT_TRUE},
+	 *                                                {@code false}:{@link #IRREGULAR_PULSE_DETECTION_SUPPORT_FALSE}
+	 * @param isPulseRateRangeDetectionSupported      {@code true}:{@link #PULSE_RATE_RANGE_DETECTION_SUPPORT_TRUE},
+	 *                                                {@code false}:{@link #PULSE_RATE_RANGE_DETECTION_SUPPORT_FALSE}
+	 * @param isMeasurementPositionDetectionSupported {@code true}:{@link #MEASUREMENT_POSITION_DETECTION_SUPPORT_TRUE},
+	 *                                                {@code false}:{@link #MEASUREMENT_POSITION_DETECTION_SUPPORT_TRUE}
+	 * @param isMultipleBondSupported                 {@code true}:{@link #MULTIPLE_BOND_SUPPORT_TRUE},
+	 *                                                {@code false}:{@link #MULTIPLE_BOND_SUPPORT_FALSE}
+	 * @param isE2eCrcSupported                       {@code true}:{@link #E2E_CRC_SUPPORT_TRUE},
+	 *                                                {@code false}:{@link #E2E_CRC_SUPPORT_FALSE}
+	 * @param isUserDataServiceSupported              {@code true}:{@link #USER_DATA_SERVICE_SUPPORT_TRUE},
+	 *                                                {@code false}:{@link #USER_DATA_SERVICE_SUPPORT_FALSE}
+	 * @param isUserFacingTimeSupported               {@code true}:{@link #USER_FACING_TIME_SUPPORT_TRUE},
+	 *                                                {@code false}:{@link #USER_FACING_TIME_SUPPORT_FALSE}
+	 */
+    public BloodPressureFeature(boolean isBodyMovementDetectionFeatureSupported
+    		, boolean isCuffFitDetectionSupported
+    		, boolean isIrregularPulseDetectionSupported
+    		, boolean isPulseRateRangeDetectionSupported
+    		, boolean isMeasurementPositionDetectionSupported
+    		, boolean isMultipleBondSupported
+    		, boolean isE2eCrcSupported
+    		, boolean isUserDataServiceSupported
+    		, boolean isUserFacingTimeSupported) {
         // @formatter:off
         int flags = (isBodyMovementDetectionFeatureSupported ? BODY_MOVEMENT_DETECTION_SUPPORT_TRUE : BODY_MOVEMENT_DETECTION_SUPPORT_FALSE)
                 | (isCuffFitDetectionSupported ? CUFF_FIT_DETECTION_SUPPORT_TRUE : CUFF_FIT_DETECTION_SUPPORT_FALSE)
                 | (isIrregularPulseDetectionSupported ? IRREGULAR_PULSE_DETECTION_SUPPORT_TRUE : IRREGULAR_PULSE_DETECTION_SUPPORT_FALSE)
                 | (isPulseRateRangeDetectionSupported ? PULSE_RATE_RANGE_DETECTION_SUPPORT_TRUE : PULSE_RATE_RANGE_DETECTION_SUPPORT_FALSE)
                 | (isMeasurementPositionDetectionSupported ? MEASUREMENT_POSITION_DETECTION_SUPPORT_TRUE : MEASUREMENT_POSITION_DETECTION_SUPPORT_FALSE)
-                | (isMultipleBondDetectionSupported ? MULTIPLE_BOND_SUPPORT_TRUE : MULTIPLE_BOND_SUPPORT_FALSE);
+                | (isMultipleBondSupported ? MULTIPLE_BOND_SUPPORT_TRUE : MULTIPLE_BOND_SUPPORT_FALSE)
+        		| (isE2eCrcSupported ? E2E_CRC_SUPPORT_TRUE : E2E_CRC_SUPPORT_FALSE)
+				| (isUserDataServiceSupported ? USER_DATA_SERVICE_SUPPORT_TRUE : USER_DATA_SERVICE_SUPPORT_FALSE)
+				| (isUserFacingTimeSupported ? USER_FACING_TIME_SUPPORT_TRUE : USER_FACING_TIME_SUPPORT_FALSE);
         // @formatter:on
         mBloodPressureFeature = new byte[] { (byte) flags, (byte) (flags >> 8) };
     }
@@ -226,17 +297,58 @@ public class BloodPressureFeature implements ByteArrayInterface {
     /**
      * @return {@code true}:Multiple Bonds not supported, {@code false}:Multiple Bonds supported
      */
-    public boolean isMultipleBondDetectionNotSupported() {
+    public boolean isMultipleBondNotSupported() {
         return isFeatureMatched(MULTIPLE_BOND_SUPPORT_MASK, MULTIPLE_BOND_SUPPORT_FALSE);
     }
 
     /**
      * @return {@code true}:Multiple Bonds supported, {@code false}:Multiple Bonds not supported
      */
-    public boolean isMultipleBondDetectionSupported() {
+    public boolean isMultipleBondSupported() {
         return isFeatureMatched(MULTIPLE_BOND_SUPPORT_MASK, MULTIPLE_BOND_SUPPORT_TRUE);
     }
 
+    /**
+     * @return {@code true}:E2E-CRC not supported, {@code false}:E2E-CRC supported
+     */
+    public boolean isE2eCrcNotSupported() {
+        return isFeatureMatched(E2E_CRC_SUPPORT_MASK, E2E_CRC_SUPPORT_FALSE);
+    }
+
+    /**
+     * @return {@code true}:E2E-CRC supported, {@code false}:E2E-CRC not supported
+     */
+    public boolean isE2eCrcSupported() {
+        return isFeatureMatched(E2E_CRC_SUPPORT_MASK, E2E_CRC_SUPPORT_TRUE);
+    }
+
+    /**
+     * @return {@code true}:User Data Service not supported, {@code false}:User Data Service supported
+     */
+    public boolean isUserDataServiceNotSupported() {
+        return isFeatureMatched(USER_DATA_SERVICE_SUPPORT_MASK, USER_DATA_SERVICE_SUPPORT_FALSE);
+    }
+
+    /**
+     * @return {@code true}:User Data Service supported, {@code false}:User Data Service not supported
+     */
+    public boolean isUserDataServiceSupported() {
+        return isFeatureMatched(USER_DATA_SERVICE_SUPPORT_MASK, USER_DATA_SERVICE_SUPPORT_TRUE);
+    }
+
+    /**
+     * @return {@code true}:User Facing Time not supported, {@code false}:User Facing Time supported
+     */
+    public boolean isUserFacingTimeNotSupported() {
+        return isFeatureMatched(USER_FACING_TIME_SUPPORT_MASK, USER_FACING_TIME_SUPPORT_FALSE);
+    }
+
+    /**
+     * @return {@code true}:User Facing Time supported, {@code false}:User Facing Time not supported
+     */
+    public boolean isUserFacingTimeSupported() {
+        return isFeatureMatched(USER_FACING_TIME_SUPPORT_MASK, USER_FACING_TIME_SUPPORT_TRUE);
+    }
     /**
      * {@inheritDoc}
      */
@@ -265,6 +377,12 @@ public class BloodPressureFeature implements ByteArrayInterface {
      *               , {@link #MEASUREMENT_POSITION_DETECTION_SUPPORT_TRUE}
      *               , {@link #MULTIPLE_BOND_SUPPORT_FALSE}
      *               , {@link #MULTIPLE_BOND_SUPPORT_TRUE}
+     *               , {@link #E2E_CRC_SUPPORT_FALSE}
+     *               , {@link #E2E_CRC_SUPPORT_TRUE}
+     *               , {@link #USER_DATA_SERVICE_SUPPORT_FALSE}
+     *               , {@link #USER_DATA_SERVICE_SUPPORT_TRUE}
+     *               , {@link #USER_FACING_TIME_SUPPORT_FALSE}
+     *               , {@link #USER_FACING_TIME_SUPPORT_TRUE}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isFeatureMatched(int mask, int expect) {

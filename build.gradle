@@ -12,8 +12,8 @@ allprojects {
 }
 
 ext.myGroupId = 'org.im97mori'
-ext.loadVersion = '0.6.2'
-ext.uploadVersion = '0.6.2'
+ext.loadVersion = '0.8.0'
+ext.uploadVersion = '0.8.0'
 
 ext.coreConstantsAppearance = 'ble-core-constants-appearance'
 ext.coreConstantsCharacteristic = 'ble-core-constants-characteristic'

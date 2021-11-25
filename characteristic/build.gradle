@@ -52,6 +52,7 @@ dependencies {
     api "${myGroupId}:${characteristicU2a4e}:${loadVersion}"
     api "${myGroupId}:${characteristicU2a4f}:${loadVersion}"
     api "${myGroupId}:${characteristicU2a50}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2a52}:${loadVersion}"
     api "${myGroupId}:${characteristicU2a53}:${loadVersion}"
     api "${myGroupId}:${characteristicU2a54}:${loadVersion}"
     api "${myGroupId}:${characteristicU2a55}:${loadVersion}"

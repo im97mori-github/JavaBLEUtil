@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Carbon Monoxide Concentration (Characteristics UUID: 0x2BD0)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.32
 public class CarbonMonoxideConcentration implements ByteArrayInterface {
 
     /**

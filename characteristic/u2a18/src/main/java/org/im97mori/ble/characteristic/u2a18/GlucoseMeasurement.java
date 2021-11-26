@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Glucose Measurement (Characteristics UUID: 0x2A18)
  */
-// TODO
+// TODO GATT Specification Supplement v5 3.99
 public class GlucoseMeasurement implements ByteArrayInterface {
 
     /**

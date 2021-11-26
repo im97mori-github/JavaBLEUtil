@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * CGM Specific Ops Control Point (Characteristics UUID: 0x2AAC)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.37
 public class CgmSpecificOpsControlPoint implements ByteArrayInterface {
 
     /**

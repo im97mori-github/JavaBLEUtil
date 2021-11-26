@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Content Control ID (Characteristics UUID: 0x2BBA)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.47
 public class ContentControlId implements ByteArrayInterface {
 
     /**

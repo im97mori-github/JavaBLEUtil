@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Nitrogen Dioxide Concentration (Characteristics UUID: 0x2BD2)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.148
 public class NitrogenDioxideConcentration implements ByteArrayInterface {
 
     /**

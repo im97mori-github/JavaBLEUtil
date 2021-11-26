@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * CGM Status (Characteristics UUID: 0x2AA9)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.38
 public class CgmStatus implements ByteArrayInterface {
 
     /**

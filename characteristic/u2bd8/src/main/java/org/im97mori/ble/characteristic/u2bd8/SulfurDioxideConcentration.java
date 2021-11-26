@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Sulfur Dioxide Concentration (Characteristics UUID: 0x2BD8)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.194
 public class SulfurDioxideConcentration implements ByteArrayInterface {
 
     /**

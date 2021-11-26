@@ -4,7 +4,7 @@ import org.im97mori.ble.ByteArrayInterface;
 
 import androidx.annotation.NonNull;
 
-// TODO
+// TODO GATT Specification Supplement v5 3.115
 
 /**
  * IEEE 11073-20601 Regulatory Certification Data List (Characteristics UUID: 0x2A2A)

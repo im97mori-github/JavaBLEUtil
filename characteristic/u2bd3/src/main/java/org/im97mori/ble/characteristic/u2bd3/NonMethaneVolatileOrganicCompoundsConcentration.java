@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Non-Methane Volatile Organic Compounds Concentration (Characteristics UUID: 0x2BD3)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.149
 public class NonMethaneVolatileOrganicCompoundsConcentration implements ByteArrayInterface {
 
     /**

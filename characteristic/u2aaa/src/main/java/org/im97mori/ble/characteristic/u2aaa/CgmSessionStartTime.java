@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * CGM Session Start Time (Characteristics UUID: 0x2AAA)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.36
 public class CgmSessionStartTime implements ByteArrayInterface {
 
     /**

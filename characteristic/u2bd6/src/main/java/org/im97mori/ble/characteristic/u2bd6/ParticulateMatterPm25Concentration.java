@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Particulate Matter - PM2.5 Concentration (Characteristics UUID: 0x2BD6)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.158
 public class ParticulateMatterPm25Concentration implements ByteArrayInterface {
 
     /**

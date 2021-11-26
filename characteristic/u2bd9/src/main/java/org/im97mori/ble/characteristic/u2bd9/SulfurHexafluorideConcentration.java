@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Sulfur Hexafluoride Concentration (Characteristics UUID: 0x2BD9)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.195
 public class SulfurHexafluorideConcentration implements ByteArrayInterface {
 
     /**

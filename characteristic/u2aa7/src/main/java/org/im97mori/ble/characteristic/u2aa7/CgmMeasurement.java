@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * CGM Measurement (Characteristics UUID: 0x2AA7)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.34
 public class CgmMeasurement implements ByteArrayInterface {
 
     /**

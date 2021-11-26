@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * CGM Feature (Characteristics UUID: 0x2AA8)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.33
 public class CgmFeature implements ByteArrayInterface {
 
     /**

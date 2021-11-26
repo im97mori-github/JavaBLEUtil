@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Methane Concentration (Characteristics UUID: 0x2BD1)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.143
 public class MethaneConcentration implements ByteArrayInterface {
 
     /**

@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Ozone Concentration (Characteristics UUID: 0x2BD4)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.156
 public class OzoneConcentration implements ByteArrayInterface {
 
     /**

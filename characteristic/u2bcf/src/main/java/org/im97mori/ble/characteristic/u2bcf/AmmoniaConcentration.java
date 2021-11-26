@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Ammonia Concentration (Characteristics UUID: 0x2BCF)
  */
-// TODO
+//TODO GATT Specification Supplement v5 3.11
 public class AmmoniaConcentration implements ByteArrayInterface {
 
     /**

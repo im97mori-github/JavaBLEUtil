@@ -1,8 +1,18 @@
+configurations {
+    javadocClasspath.extendsFrom api
+}
+
+javadoc {
+	classpath = configurations.javadocClasspath
+}
+
 dependencies {
     api apiCoreUtils
     testImplementation apiCharacteristicCore
     testImplementation apiTestUtil
     testImplementation junit
+    testImplementation "${myGroupId}:${coreConstantsUnit}:${loadVersion}"
+    javadocClasspath "${myGroupId}:${coreConstantsUnit}:${loadVersion}"
 }
 
 publishing {

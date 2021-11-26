@@ -5,12 +5,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
 @SuppressWarnings({ "unused" })
-public class RSCMeasurementTest {
+public class RSCMeasurementTest extends TestBase {
 
-    //@formatter:off
+	//@formatter:off
     private static final byte[] data_00001;
     static {
         byte[] data = new byte[4];
@@ -90,168 +91,158 @@ public class RSCMeasurementTest {
     }
     //@formatter:on
 
-    private byte[] getData() {
-        int index = -1;
-        byte[] data = null;
+	@Test
+	public void test_constructor_00001() {
+		byte[] data = getData();
 
-        StackTraceElement[] stackTraceElementArray = Thread.currentThread().getStackTrace();
-        for (int i = 0; i < stackTraceElementArray.length; i++) {
-            StackTraceElement stackTraceElement = stackTraceElementArray[i];
-            if ("getData".equals(stackTraceElement.getMethodName())) {
-                index = i + 1;
-                break;
-            }
-        }
-        if (index >= 0 && index < stackTraceElementArray.length) {
-            StackTraceElement stackTraceElement = stackTraceElementArray[index];
-            String[] splitted = stackTraceElement.getMethodName().split("_");
-            try {
-                data = (byte[]) this.getClass().getDeclaredField("data_" + splitted[splitted.length - 1]).get(null);
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        }
-        return data;
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertEquals(data[0], result1.getFlags());
+		assertTrue(result1.isFlagsInstantaneousStrideLengthNotPresent());
+		assertFalse(result1.isFlagsInstantaneousStrideLengthPresent());
+		assertEquals(0x0201, result1.getInstantaneousSpeed());
+		assertEquals(0x0201 * RSCMeasurement.INSTANTANEOUS_SPEED_RESOLUTION,
+				result1.getInstantaneousSpeedMeterPerSecond(), 0);
+		assertEquals(0x03, result1.getInstantaneousCadence());
+	}
 
-    @Test
-    public void test_constructor_00001() {
-        byte[] data = getData();
+	@Test
+	public void test_constructor_00002() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertEquals(data[0], result1.getFlags());
-        assertTrue(result1.isFlagsInstantaneousStrideLengthNotPresent());
-        assertFalse(result1.isFlagsInstantaneousStrideLengthPresent());
-        assertEquals(0x0201, result1.getInstantaneousSpeed());
-        assertEquals(0x03, result1.getInstantaneousCadence());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertEquals(data[0], result1.getFlags());
+		assertFalse(result1.isFlagsInstantaneousStrideLengthNotPresent());
+		assertTrue(result1.isFlagsInstantaneousStrideLengthPresent());
+		assertEquals(0x0201, result1.getInstantaneousSpeed());
+		assertEquals(0x0201 * RSCMeasurement.INSTANTANEOUS_SPEED_RESOLUTION,
+				result1.getInstantaneousSpeedMeterPerSecond(), 0);
+		assertEquals(0x03, result1.getInstantaneousCadence());
+		assertEquals(0x0504, result1.getInstantaneousStrideLength());
+		assertEquals(0x0504 * RSCMeasurement.INSTANTANEOUS_STRIDE_RESOLUTION,
+				result1.getInstantaneousStrideLengthMeter(), 0);
+	}
 
-    @Test
-    public void test_constructor_00002() {
-        byte[] data = getData();
+	@Test
+	public void test_constructor_00101() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertEquals(data[0], result1.getFlags());
-        assertFalse(result1.isFlagsInstantaneousStrideLengthNotPresent());
-        assertTrue(result1.isFlagsInstantaneousStrideLengthPresent());
-        assertEquals(0x0201, result1.getInstantaneousSpeed());
-        assertEquals(0x03, result1.getInstantaneousCadence());
-        assertEquals(0x0504, result1.getInstantaneousStrideLength());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertEquals(data[0], result1.getFlags());
+		assertTrue(result1.isFlagsTotalDistanceNotPresent());
+		assertFalse(result1.isFlagsTotalDistancePresent());
+		assertEquals(0x0201, result1.getInstantaneousSpeed());
+		assertEquals(0x0201 * RSCMeasurement.INSTANTANEOUS_SPEED_RESOLUTION,
+				result1.getInstantaneousSpeedMeterPerSecond(), 0);
+		assertEquals(0x03, result1.getInstantaneousCadence());
+	}
 
-    @Test
-    public void test_constructor_00101() {
-        byte[] data = getData();
+	@Test
+	public void test_constructor_00102() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertEquals(data[0], result1.getFlags());
-        assertTrue(result1.isFlagsTotalDistanceNotPresent());
-        assertFalse(result1.isFlagsTotalDistancePresent());
-        assertEquals(0x0201, result1.getInstantaneousSpeed());
-        assertEquals(0x03, result1.getInstantaneousCadence());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertEquals(data[0], result1.getFlags());
+		assertFalse(result1.isFlagsTotalDistanceNotPresent());
+		assertTrue(result1.isFlagsTotalDistancePresent());
+		assertEquals(0x0201, result1.getInstantaneousSpeed());
+		assertEquals(0x0201 * RSCMeasurement.INSTANTANEOUS_SPEED_RESOLUTION,
+				result1.getInstantaneousSpeedMeterPerSecond(), 0);
+		assertEquals(0x03, result1.getInstantaneousCadence());
+		assertEquals(0x07060504L, result1.getTotalDistance());
+		assertEquals(0x07060504L * RSCMeasurement.TOTAL_DISTANCE_RESOLUTION, result1.getTotalDistanceMeter(), 0);
+	}
 
-    @Test
-    public void test_constructor_00102() {
-        byte[] data = getData();
+	@Test
+	public void test_constructor_00201() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertEquals(data[0], result1.getFlags());
-        assertFalse(result1.isFlagsTotalDistanceNotPresent());
-        assertTrue(result1.isFlagsTotalDistancePresent());
-        assertEquals(0x0201, result1.getInstantaneousSpeed());
-        assertEquals(0x03, result1.getInstantaneousCadence());
-        assertEquals(0x07060504L, result1.getTotalDistance());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertEquals(data[0], result1.getFlags());
+		assertTrue(result1.isFlagsWalkingOrRunningStatusBitsWalking());
+		assertFalse(result1.isFlagsWalkingOrRunningStatusBitsRunning());
+		assertEquals(0x0201, result1.getInstantaneousSpeed());
+		assertEquals(0x0201 * RSCMeasurement.INSTANTANEOUS_SPEED_RESOLUTION,
+				result1.getInstantaneousSpeedMeterPerSecond(), 0);
+		assertEquals(0x03, result1.getInstantaneousCadence());
+	}
 
-    @Test
-    public void test_constructor_00201() {
-        byte[] data = getData();
+	@Test
+	public void test_constructor_00202() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertEquals(data[0], result1.getFlags());
-        assertTrue(result1.isFlagsWalkingOrRunningStatusBitsWalking());
-        assertFalse(result1.isFlagsWalkingOrRunningStatusBitsRunning());
-        assertEquals(0x0201, result1.getInstantaneousSpeed());
-        assertEquals(0x03, result1.getInstantaneousCadence());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertEquals(data[0], result1.getFlags());
+		assertFalse(result1.isFlagsWalkingOrRunningStatusBitsWalking());
+		assertTrue(result1.isFlagsWalkingOrRunningStatusBitsRunning());
+		assertEquals(0x0201, result1.getInstantaneousSpeed());
+		assertEquals(0x0201 * RSCMeasurement.INSTANTANEOUS_SPEED_RESOLUTION,
+				result1.getInstantaneousSpeedMeterPerSecond(), 0);
+		assertEquals(0x03, result1.getInstantaneousCadence());
+	}
 
-    @Test
-    public void test_constructor_00202() {
-        byte[] data = getData();
+	@Test
+	public void test_constructor_00203() {
+		int flags = 1;
+		int instantaneousSpeed = 2;
+		int instantaneousCadence = 3;
+		int instantaneousStrideLength = 4;
+		long totalDistance = 5;
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertEquals(data[0], result1.getFlags());
-        assertFalse(result1.isFlagsWalkingOrRunningStatusBitsWalking());
-        assertTrue(result1.isFlagsWalkingOrRunningStatusBitsRunning());
-        assertEquals(0x0201, result1.getInstantaneousSpeed());
-        assertEquals(0x03, result1.getInstantaneousCadence());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(flags, instantaneousSpeed, instantaneousCadence,
+				instantaneousStrideLength, totalDistance);
+		assertEquals(flags, result1.getFlags());
+		assertEquals(instantaneousSpeed, result1.getInstantaneousSpeed());
+		assertEquals(instantaneousCadence, result1.getInstantaneousCadence());
+		assertEquals(instantaneousStrideLength, result1.getInstantaneousStrideLength());
+		assertEquals(totalDistance, result1.getTotalDistance());
+	}
 
-    @Test
-    public void test_constructor_00203() {
-        int flags = 1;
-        int instantaneousSpeed = 2;
-        int instantaneousCadence = 3;
-        int instantaneousStrideLength = 4;
-        long totalDistance = 5;
+	@Test
+	public void test_parcelable_2_00001() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(flags, instantaneousSpeed, instantaneousCadence, instantaneousStrideLength, totalDistance);
-        assertEquals(flags, result1.getFlags());
-        assertEquals(instantaneousSpeed, result1.getInstantaneousSpeed());
-        assertEquals(instantaneousCadence, result1.getInstantaneousCadence());
-        assertEquals(instantaneousStrideLength, result1.getInstantaneousStrideLength());
-        assertEquals(totalDistance, result1.getTotalDistance());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertArrayEquals(data, result1.getBytes());
+	}
 
-    @Test
-    public void test_parcelable_2_00001() {
-        byte[] data = getData();
+	@Test
+	public void test_parcelable_2_00002() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertArrayEquals(data, result1.getBytes());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertArrayEquals(data, result1.getBytes());
+	}
 
-    @Test
-    public void test_parcelable_2_00002() {
-        byte[] data = getData();
+	@Test
+	public void test_parcelable_2_00101() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertArrayEquals(data, result1.getBytes());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertArrayEquals(data, result1.getBytes());
+	}
 
-    @Test
-    public void test_parcelable_2_00101() {
-        byte[] data = getData();
+	@Test
+	public void test_parcelable_2_00102() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertArrayEquals(data, result1.getBytes());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertArrayEquals(data, result1.getBytes());
+	}
 
-    @Test
-    public void test_parcelable_2_00102() {
-        byte[] data = getData();
+	@Test
+	public void test_parcelable_2_00201() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertArrayEquals(data, result1.getBytes());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertArrayEquals(data, result1.getBytes());
+	}
 
-    @Test
-    public void test_parcelable_2_00201() {
-        byte[] data = getData();
+	@Test
+	public void test_parcelable_2_00202() {
+		byte[] data = getData();
 
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertArrayEquals(data, result1.getBytes());
-    }
-
-    @Test
-    public void test_parcelable_2_00202() {
-        byte[] data = getData();
-
-        RSCMeasurement result1 = new RSCMeasurement(data);
-        assertArrayEquals(data, result1.getBytes());
-    }
+		RSCMeasurement result1 = new RSCMeasurement(data);
+		assertArrayEquals(data, result1.getBytes());
+	}
 
 }

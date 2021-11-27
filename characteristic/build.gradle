@@ -180,6 +180,18 @@ dependencies {
     api "${myGroupId}:${characteristicU2b4e}:${loadVersion}"
     api "${myGroupId}:${characteristicU2b4f}:${loadVersion}"
     api "${myGroupId}:${characteristicU2b50}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bba}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bcf}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bd0}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bd1}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bd2}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bd3}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bd4}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bd5}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bd6}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bd7}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bd8}:${loadVersion}"
+    api "${myGroupId}:${characteristicU2bd9}:${loadVersion}"
 }
 
 publishing {

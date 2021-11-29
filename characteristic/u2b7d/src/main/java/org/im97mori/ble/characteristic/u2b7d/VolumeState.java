@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Volume State (Characteristics UUID: 0x2B7D)
  */
-// TODO
+// TODO Volume Control Service
 public class VolumeState implements ByteArrayInterface {
 
     /**

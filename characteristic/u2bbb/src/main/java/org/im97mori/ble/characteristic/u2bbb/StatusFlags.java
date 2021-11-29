@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Status Flags (Characteristics UUID: 0x2BBB)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class StatusFlags implements ByteArrayInterface {
 
     /**

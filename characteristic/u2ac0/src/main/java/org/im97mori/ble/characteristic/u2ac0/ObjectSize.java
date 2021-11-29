@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * object size (Characteristics UUID: 0x2AC0)
  */
-// TODO
+// TODO Object Transfer Service
 public class ObjectSize implements ByteArrayInterface {
 
     /**

@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * PLX Features (Characteristics UUID: 0x2A60)
  */
-// TODO
+// TODO Pulse Oximeter Service
 public class PlxFeatures implements ByteArrayInterface {
 
     /**

@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Mesh Provisioning Data In (Characteristics UUID: 0x2ADB)
  */
-// TODO
+// TODO Mesh Profile
 public class MeshProvisioningDataIn implements ByteArrayInterface {
 
     /**

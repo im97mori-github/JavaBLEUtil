@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Playing Orders Supported (Characteristics UUID: 0x2BA2)
  */
-// TODO
+// TODO Media Control Service
 public class PlayingOrdersSupported implements ByteArrayInterface {
 
     /**

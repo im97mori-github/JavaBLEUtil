@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Volume Offset Control Point (Characteristics UUID: 0x2B82)
  */
-// TODO
+// TODO Volume Offset Control Service
 public class VolumeOffsetControlPoint implements ByteArrayInterface {
 
     /**

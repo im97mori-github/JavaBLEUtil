@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Current Track Object ID (Characteristics UUID: 0x2B9D)
  */
-// TODO
+// TODO Media Control Service
 public class CurrentTrackObjectId implements ByteArrayInterface {
 
     /**

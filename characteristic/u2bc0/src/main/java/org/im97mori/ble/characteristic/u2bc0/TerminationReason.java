@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Termination Reason (Characteristics UUID: 0x2BC0)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class TerminationReason implements ByteArrayInterface {
 
     /**

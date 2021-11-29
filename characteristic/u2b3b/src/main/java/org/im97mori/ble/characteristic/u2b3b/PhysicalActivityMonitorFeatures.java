@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Physical Activity Monitor Features (Characteristics UUID: 0x2B3B)
  */
-// TODO
+// TODO Physical Activity Monitor Service
 public class PhysicalActivityMonitorFeatures implements ByteArrayInterface {
 
     /**

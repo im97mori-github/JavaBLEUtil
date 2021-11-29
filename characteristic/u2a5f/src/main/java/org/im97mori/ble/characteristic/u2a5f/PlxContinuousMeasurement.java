@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * PLX Continuous Measurement (Characteristics UUID: 0x2A5F)
  */
-// TODO
+// TODO Pulse Oximeter Service
 public class PlxContinuousMeasurement implements ByteArrayInterface {
 
     /**

@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Mesh Proxy Data In (Characteristics UUID: 0x2ADD)
  */
-// TODO
+// TODO Mesh Profile
 public class MeshProxyDataIn implements ByteArrayInterface {
 
     /**

@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * BSS Control Point (Characteristics UUID: 0x2B2B)
  */
-// TODO
+// TODO Binary Sensor Service 
 public class BssControlPoint implements ByteArrayInterface {
 
     /**

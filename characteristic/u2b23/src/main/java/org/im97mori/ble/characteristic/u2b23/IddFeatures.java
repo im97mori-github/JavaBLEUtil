@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * IDD Features (Characteristics UUID: 0x2B23)
  */
-// TODO
+// TODO Insulin Delivery
 public class IddFeatures implements ByteArrayInterface {
 
     /**

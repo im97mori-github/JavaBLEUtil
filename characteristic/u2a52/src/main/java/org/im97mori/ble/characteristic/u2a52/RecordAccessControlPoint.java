@@ -436,19 +436,6 @@ public class RecordAccessControlPoint implements ByteArrayInterface {
 	}
 
 	/**
-	 * @return Operand without key
-	 */
-	public byte[] getOperandParameter() {
-		byte[] operandParameter;
-		if (isKey01() || isKey02() || isKey04() || isKey05() || isKey07() || isKey08()) {
-			operandParameter = Arrays.copyOfRange(mOperand, 1, mOperand.length);
-		} else {
-			operandParameter = new byte[0];
-		}
-		return operandParameter;
-	}
-
-	/**
 	 * @return key
 	 */
 	public int getKey() {
@@ -485,8 +472,6 @@ public class RecordAccessControlPoint implements ByteArrayInterface {
 			} else {
 				key = KEY_00;
 			}
-		} else if (isOpCodeNumberOfStoredRecordsResponse(mOpCode)) {
-			key = BLEUtils.createUInt8(mOperand, 0);
 		} else if (isOpCodeCombinedReport(mOpCode)) {
 			if (isOperatorLessThanOrEqualTo()) {
 				key = BLEUtils.createUInt8(mOperand, 0);
@@ -497,8 +482,6 @@ public class RecordAccessControlPoint implements ByteArrayInterface {
 			} else {
 				key = KEY_00;
 			}
-		} else if (isOpCodeCombinedReportResponse(mOpCode)) {
-			key = BLEUtils.createUInt8(mOperand, 0);
 		} else {
 			key = KEY_00;
 		}

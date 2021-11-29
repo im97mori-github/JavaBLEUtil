@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * object changed (Characteristics UUID: 0x2AC8)
  */
-// TODO
+// TODO Object Transfer Service
 public class ObjectChanged implements ByteArrayInterface {
 
     /**

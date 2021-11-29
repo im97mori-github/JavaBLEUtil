@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Offset State (Characteristics UUID: 0x2B80)
  */
-// TODO
+// TODO Volume Offset Control Service Volume Offset State?
 public class OffsetState implements ByteArrayInterface {
 
     /**

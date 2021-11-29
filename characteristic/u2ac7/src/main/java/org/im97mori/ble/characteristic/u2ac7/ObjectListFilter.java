@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * object list filter (Characteristics UUID: 0x2AC7)
  */
-// TODO
+// TODO Object Transfer Service
 public class ObjectListFilter implements ByteArrayInterface {
 
     /**

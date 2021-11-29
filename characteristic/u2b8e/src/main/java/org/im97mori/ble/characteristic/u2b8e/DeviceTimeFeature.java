@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Device Time Feature (Characteristics UUID: 0x2B8E)
  */
-// TODO
+// TODO Device Time Service
 public class DeviceTimeFeature implements ByteArrayInterface {
 
     /**

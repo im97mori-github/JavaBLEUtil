@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Audio Input State (Characteristics UUID: 0x2B77)
  */
-// TODO
+// TODO Audio Input Control Service
 public class AudioInputState implements ByteArrayInterface {
 
     /**

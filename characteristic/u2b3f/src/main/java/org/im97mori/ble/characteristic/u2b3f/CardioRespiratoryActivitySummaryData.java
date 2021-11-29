@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * CardioRespiratory Activity Summary Data (Characteristics UUID: 0x2B3F)
  */
-// TODO
+// TODO Physical Activity Monitor Service
 public class CardioRespiratoryActivitySummaryData implements ByteArrayInterface {
 
     /**

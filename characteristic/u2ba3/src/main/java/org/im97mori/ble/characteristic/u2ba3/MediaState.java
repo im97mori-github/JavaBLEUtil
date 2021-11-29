@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Media State (Characteristics UUID: 0x2BA3)
  */
-// TODO
+// TODO Media Control Service
 public class MediaState implements ByteArrayInterface {
 
     /**

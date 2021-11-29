@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Step Counter Activity Summary Data (Characteristics UUID: 0x2B40)
  */
-// TODO
+// TODO Physical Activity Monitor Service
 public class StepCounterActivitySummaryData implements ByteArrayInterface {
 
     /**

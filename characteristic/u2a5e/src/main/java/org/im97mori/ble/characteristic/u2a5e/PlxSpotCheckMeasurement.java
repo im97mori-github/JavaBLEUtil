@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * PLX Spot-Check Measurement (Characteristics UUID: 0x2A5E)
  */
-// TODO
+// TODO Pulse Oximeter Service
 public class PlxSpotCheckMeasurement implements ByteArrayInterface {
 
     /**

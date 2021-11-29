@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Bearer Technology (Characteristics UUID: 0x2BB5)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class BearerTechnology implements ByteArrayInterface {
 
     /**

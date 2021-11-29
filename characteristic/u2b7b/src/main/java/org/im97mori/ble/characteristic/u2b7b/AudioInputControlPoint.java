@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Audio Input Control Point (Characteristics UUID: 0x2B7B)
  */
-// TODO
+// TODO Audio Input Control Service
 public class AudioInputControlPoint implements ByteArrayInterface {
 
     /**

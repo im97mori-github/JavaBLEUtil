@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Parent Group Object ID (Characteristics UUID: 0x2B9F)
  */
-// TODO
+// TODO Media Control Service
 public class ParentGroupObjectId implements ByteArrayInterface {
 
     /**

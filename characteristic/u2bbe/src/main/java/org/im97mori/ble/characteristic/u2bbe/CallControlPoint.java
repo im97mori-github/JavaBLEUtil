@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Call Control Point (Characteristics UUID: 0x2BBE)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class CallControlPoint implements ByteArrayInterface {
 
     /**

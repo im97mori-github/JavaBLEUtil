@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Current Session (Characteristics UUID: 0x2B44)
  */
-// TODO
+// TODO Physical Activity Monitor Service Physical Activity Current Session?
 public class CurrentSession implements ByteArrayInterface {
 
     /**

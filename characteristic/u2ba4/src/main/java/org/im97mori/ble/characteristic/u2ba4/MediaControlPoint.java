@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Media Control Point (Characteristics UUID: 0x2BA4)
  */
-// TODO
+// TODO Media Control Service
 public class MediaControlPoint implements ByteArrayInterface {
 
     /**

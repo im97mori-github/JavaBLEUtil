@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Seeking Speed (Characteristics UUID: 0x2B9B)
  */
-// TODO
+// TODO Media Control Service
 public class SeekingSpeed implements ByteArrayInterface {
 
     /**

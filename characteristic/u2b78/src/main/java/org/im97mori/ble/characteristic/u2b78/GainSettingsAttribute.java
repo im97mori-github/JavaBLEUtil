@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Gain Settings Attribute (Characteristics UUID: 0x2B78)
  */
-// TODO
+// TODO Audio Input Control Service Gain Setting Properties? 
 public class GainSettingsAttribute implements ByteArrayInterface {
 
     /**

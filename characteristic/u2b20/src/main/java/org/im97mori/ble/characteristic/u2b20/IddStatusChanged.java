@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * IDD Status Changed (Characteristics UUID: 0x2B20)
  */
-// TODO
+// TODO Insulin Delivery
 public class IddStatusChanged implements ByteArrayInterface {
 
     /**

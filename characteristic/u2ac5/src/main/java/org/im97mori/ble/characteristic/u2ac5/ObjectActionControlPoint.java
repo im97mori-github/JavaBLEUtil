@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * object actioncontrol point (Characteristics UUID: 0x2AC5)
  */
-// TODO
+// TODO Object Transfer Service
 public class ObjectActionControlPoint implements ByteArrayInterface {
 
     /**

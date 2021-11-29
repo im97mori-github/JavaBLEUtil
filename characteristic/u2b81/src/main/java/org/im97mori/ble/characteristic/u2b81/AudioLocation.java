@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Audio Location (Characteristics UUID: 0x2B81)
  */
-// TODO
+// TODO Volume Offset Control Service
 public class AudioLocation implements ByteArrayInterface {
 
     /**

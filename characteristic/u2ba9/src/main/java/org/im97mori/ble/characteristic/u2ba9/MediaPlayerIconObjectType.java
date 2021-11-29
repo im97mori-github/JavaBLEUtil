@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Media Player Icon Object Type (Characteristics UUID: 0x2BA9)
  */
-// TODO
+// TODO Media Control Service
 public class MediaPlayerIconObjectType implements ByteArrayInterface {
 
     /**

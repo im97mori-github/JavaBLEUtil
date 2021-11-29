@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * object properties (Characteristics UUID: 0x2AC4)
  */
-// TODO
+// TODO Object Transfer Service
 public class ObjectProperties implements ByteArrayInterface {
 
     /**

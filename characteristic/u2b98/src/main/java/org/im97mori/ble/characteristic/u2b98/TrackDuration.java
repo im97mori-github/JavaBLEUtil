@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Track Duration (Characteristics UUID: 0x2B98)
  */
-// TODO
+// TODO Media Control Service
 public class TrackDuration implements ByteArrayInterface {
 
     /**

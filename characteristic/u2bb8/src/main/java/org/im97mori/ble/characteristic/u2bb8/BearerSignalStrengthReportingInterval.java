@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Bearer Signal Strength Reporting Interval (Characteristics UUID: 0x2BB8)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class BearerSignalStrengthReportingInterval implements ByteArrayInterface {
 
     /**

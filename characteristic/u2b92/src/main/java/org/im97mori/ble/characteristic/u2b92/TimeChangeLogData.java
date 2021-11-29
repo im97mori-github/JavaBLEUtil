@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Time Change Log Data (Characteristics UUID: 0x2B92)
  */
-// TODO
+// TODO Device Time Service
 public class TimeChangeLogData implements ByteArrayInterface {
 
     /**

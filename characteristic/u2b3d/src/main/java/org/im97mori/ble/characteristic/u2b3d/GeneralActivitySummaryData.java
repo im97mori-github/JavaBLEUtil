@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * General Activity Summary Data (Characteristics UUID: 0x2B3D)
  */
-// TODO
+// TODO Physical Activity Monitor Service
 public class GeneralActivitySummaryData implements ByteArrayInterface {
 
     /**

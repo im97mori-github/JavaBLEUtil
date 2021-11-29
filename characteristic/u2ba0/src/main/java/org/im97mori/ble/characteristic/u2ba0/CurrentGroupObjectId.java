@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Current Group Object ID (Characteristics UUID: 0x2BA0)
  */
-// TODO
+// TODO Media Control Service
 public class CurrentGroupObjectId implements ByteArrayInterface {
 
     /**

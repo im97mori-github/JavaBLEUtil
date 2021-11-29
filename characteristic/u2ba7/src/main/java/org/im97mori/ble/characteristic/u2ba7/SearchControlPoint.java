@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Search Control Point (Characteristics UUID: 0x2BA7)
  */
-// TODO
+// TODO Media Control Service
 public class SearchControlPoint implements ByteArrayInterface {
 
     /**

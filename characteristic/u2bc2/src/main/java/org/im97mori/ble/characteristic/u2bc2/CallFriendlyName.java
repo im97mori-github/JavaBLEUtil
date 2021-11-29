@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Call Friendly Name (Characteristics UUID: 0x2BC2)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class CallFriendlyName implements ByteArrayInterface {
 
     /**

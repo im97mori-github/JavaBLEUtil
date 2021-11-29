@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Playing Order (Characteristics UUID: 0x2BA1)
  */
-// TODO
+// TODO Media Control Service
 public class PlayingOrder implements ByteArrayInterface {
 
     /**

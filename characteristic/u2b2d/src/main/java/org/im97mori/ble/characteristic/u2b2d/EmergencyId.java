@@ -1,5 +1,7 @@
 package org.im97mori.ble.characteristic.u2b2d;
 
+import java.util.Arrays;
+
 import org.im97mori.ble.ByteArrayInterface;
 
 import androidx.annotation.NonNull;
@@ -7,25 +9,37 @@ import androidx.annotation.NonNull;
 /**
  * Emergency ID (Characteristics UUID: 0x2B2D)
  */
-// TODO
 public class EmergencyId implements ByteArrayInterface {
 
-    /**
-     * Constructor from byte array
-     *
-     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
-     */
-    public EmergencyId(@NonNull byte[] values) {
-    }
+	/**
+	 * Emergency ID
+	 */
+	private final byte[] mEmergencyId;
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @NonNull
-    public byte[] getBytes() {
-        byte[] data = new byte[0];
-        return data;
-    }
+	/**
+	 * Constructor from byte array
+	 *
+	 * @param values byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 */
+	public EmergencyId(@NonNull byte[] values) {
+		mEmergencyId = Arrays.copyOfRange(values, 0, 6);
+	}
+
+	/**
+	 * @return Emergency ID
+	 */
+	public byte[] getEmergencyId() {
+		return mEmergencyId;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@NonNull
+	public byte[] getBytes() {
+		return mEmergencyId;
+	}
 
 }

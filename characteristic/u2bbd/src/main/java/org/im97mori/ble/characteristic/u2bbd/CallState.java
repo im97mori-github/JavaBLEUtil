@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Call State (Characteristics UUID: 0x2BBD)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class CallState implements ByteArrayInterface {
 
     /**

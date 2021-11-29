@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Bearer List Current Calls (Characteristics UUID: 0x2BB9)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class BearerListCurrentCalls implements ByteArrayInterface {
 
     /**

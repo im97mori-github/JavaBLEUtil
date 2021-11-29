@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * object list control point (Characteristics UUID: 0x2AC6)
  */
-// TODO
+// TODO Object Transfer Service
 public class ObjectListControlPoint implements ByteArrayInterface {
 
     /**

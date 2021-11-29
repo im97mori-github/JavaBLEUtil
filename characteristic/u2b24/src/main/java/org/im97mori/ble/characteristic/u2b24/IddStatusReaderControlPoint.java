@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * IDD Status Reader Control Point (Characteristics UUID: 0x2B24)
  */
-// TODO
+// TODO Insulin Delivery
 public class IddStatusReaderControlPoint implements ByteArrayInterface {
 
     /**

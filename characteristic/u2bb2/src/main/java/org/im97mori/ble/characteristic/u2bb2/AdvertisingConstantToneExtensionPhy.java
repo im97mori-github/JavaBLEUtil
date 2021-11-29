@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Advertising Constant Tone Extension PHY (Characteristics UUID: 0x2BB2)
  */
-// TODO
+// TODO Constant Tone Extension Service
 public class AdvertisingConstantToneExtensionPhy implements ByteArrayInterface {
 
     /**

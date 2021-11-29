@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Volume Flags (Characteristics UUID: 0x2B7F)
  */
-// TODO
+// TODO Volume Control Service
 public class VolumeFlags implements ByteArrayInterface {
 
     /**

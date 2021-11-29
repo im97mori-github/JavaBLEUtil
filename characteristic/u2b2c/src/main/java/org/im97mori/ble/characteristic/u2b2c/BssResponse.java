@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * BSS Response (Characteristics UUID: 0x2B2C)
  */
-// TODO
+// TODO Binary Sensor Service 
 public class BssResponse implements ByteArrayInterface {
 
     /**

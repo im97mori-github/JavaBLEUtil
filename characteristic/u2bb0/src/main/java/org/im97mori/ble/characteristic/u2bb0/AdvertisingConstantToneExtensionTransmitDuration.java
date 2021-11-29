@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Advertising Constant Tone Extension Transmit Duration (Characteristics UUID: 0x2BB0)
  */
-// TODO
+// TODO Constant Tone Extension Service
 public class AdvertisingConstantToneExtensionTransmitDuration implements ByteArrayInterface {
 
     /**

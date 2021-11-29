@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Sleep Activity Instantaneous Data (Characteristics UUID: 0x2B41)
  */
-// TODO
+// TODO Physical Activity Monitor Service
 public class SleepActivityInstantaneousData implements ByteArrayInterface {
 
     /**

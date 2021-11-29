@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Audio Output Description (Characteristics UUID: 0x2B83)
  */
-// TODO
+// TODO Volume Offset Control Service
 public class AudioOutputDescription implements ByteArrayInterface {
 
     /**

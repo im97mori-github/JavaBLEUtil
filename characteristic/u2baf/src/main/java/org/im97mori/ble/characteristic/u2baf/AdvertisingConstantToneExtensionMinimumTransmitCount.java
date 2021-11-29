@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Advertising Constant Tone Extension Minimum Transmit Count (Characteristics UUID: 0x2BAF)
  */
-// TODO
+// TODO Constant Tone Extension Service
 public class AdvertisingConstantToneExtensionMinimumTransmitCount implements ByteArrayInterface {
 
     /**

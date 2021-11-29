@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Media Player Name (Characteristics UUID: 0x2B93)
  */
-// TODO
+// TODO Media Control Service
 public class MediaPlayerName implements ByteArrayInterface {
 
     /**

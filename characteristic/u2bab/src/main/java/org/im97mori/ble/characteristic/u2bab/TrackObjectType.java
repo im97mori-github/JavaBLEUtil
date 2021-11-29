@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Track Object Type  (Characteristics UUID: 0x2BAB)
  */
-// TODO
+// TODO Media Control Service
 public class TrackObjectType implements ByteArrayInterface {
 
     /**

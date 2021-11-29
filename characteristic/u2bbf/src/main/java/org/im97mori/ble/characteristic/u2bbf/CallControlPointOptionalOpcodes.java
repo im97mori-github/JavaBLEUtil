@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Call Control Point Optional Opcodes (Characteristics UUID: 0x2BBF)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class CallControlPointOptionalOpcodes implements ByteArrayInterface {
 
     /**

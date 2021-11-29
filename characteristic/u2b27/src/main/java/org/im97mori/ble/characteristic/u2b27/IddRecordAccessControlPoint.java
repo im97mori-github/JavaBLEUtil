@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * IDD Record Access Control Point (Characteristics UUID: 0x2B27)
  */
-// TODO
+// TODO Insulin Delivery
 public class IddRecordAccessControlPoint implements ByteArrayInterface {
 
     /**

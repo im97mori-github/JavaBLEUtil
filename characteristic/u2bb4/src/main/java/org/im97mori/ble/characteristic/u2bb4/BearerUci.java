@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Bearer UCI (Characteristics UUID: 0x2BB4)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class BearerUci implements ByteArrayInterface {
 
     /**

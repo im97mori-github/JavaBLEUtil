@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Incoming Call Target Bearer URI (Characteristics UUID: 0x2BBC)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class IncomingCallTargetBearerUri implements ByteArrayInterface {
 
     /**

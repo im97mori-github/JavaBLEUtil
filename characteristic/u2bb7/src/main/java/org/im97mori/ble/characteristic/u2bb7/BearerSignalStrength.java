@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Bearer Signal Strength (Characteristics UUID: 0x2BB7)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class BearerSignalStrength implements ByteArrayInterface {
 
     /**

@@ -469,22 +469,11 @@ public class RecordAccessControlPointTest extends TestBase {
 
     private static final byte[] data_00401;
     static {
-        byte[] data = new byte[4];
+        byte[] data = new byte[3];
         data[ 0] = RecordAccessControlPoint.OP_CODE_NUMBER_OF_STORED_RECORDS_RESPONSE;
         data[ 1] = RecordAccessControlPoint.OPERATOR_NULL;
-        data[ 2] = RecordAccessControlPoint.KEY_05;
-        data[ 3] = 0x01;
+        data[ 2] = 0x01;
         data_00401 = data;
-    }
-
-    private static final byte[] data_00402;
-    static {
-        byte[] data = new byte[4];
-        data[ 0] = RecordAccessControlPoint.OP_CODE_NUMBER_OF_STORED_RECORDS_RESPONSE;
-        data[ 1] = RecordAccessControlPoint.OPERATOR_NULL;
-        data[ 2] = RecordAccessControlPoint.KEY_08;
-        data[ 3] = 0x01;
-        data_00402 = data;
     }
 
     private static final byte[] data_00501;
@@ -997,22 +986,11 @@ public class RecordAccessControlPointTest extends TestBase {
 
     private static final byte[] data_00701;
     static {
-        byte[] data = new byte[4];
+        byte[] data = new byte[3];
         data[ 0] = RecordAccessControlPoint.OP_CODE_COMBINED_REPORT_RESPONSE;
         data[ 1] = RecordAccessControlPoint.OPERATOR_NULL;
-        data[ 2] = RecordAccessControlPoint.KEY_05;
-        data[ 3] = 0x01;
+        data[ 2] = 0x01;
         data_00701 = data;
-    }
-
-    private static final byte[] data_00702;
-    static {
-        byte[] data = new byte[4];
-        data[ 0] = RecordAccessControlPoint.OP_CODE_COMBINED_REPORT_RESPONSE;
-        data[ 1] = RecordAccessControlPoint.OPERATOR_NULL;
-        data[ 2] = RecordAccessControlPoint.KEY_08;
-        data[ 3] = 0x01;
-        data_00702 = data;
     }
     //@formatter:on
 
@@ -1039,7 +1017,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1086,7 +1063,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -1133,7 +1109,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1180,7 +1155,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1227,7 +1201,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1274,7 +1247,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -1321,7 +1293,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1368,7 +1339,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1415,7 +1385,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1462,7 +1431,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -1509,7 +1477,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1556,7 +1523,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1603,7 +1569,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1650,7 +1615,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertTrue(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1697,7 +1661,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertTrue(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1744,7 +1707,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1791,7 +1753,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -1838,7 +1799,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1885,7 +1845,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1932,7 +1891,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -1979,7 +1937,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -2026,7 +1983,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2073,7 +2029,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2120,7 +2075,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2167,7 +2121,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -2214,7 +2167,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2261,7 +2213,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2308,7 +2259,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2355,7 +2305,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertTrue(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2402,7 +2351,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertTrue(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2449,7 +2397,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_03, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2496,7 +2443,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2543,7 +2489,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -2590,7 +2535,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2637,7 +2581,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2684,7 +2627,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2731,7 +2673,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -2778,7 +2719,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2825,7 +2765,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2872,7 +2811,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -2919,7 +2857,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -2966,7 +2903,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3013,7 +2949,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3060,7 +2995,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3107,7 +3041,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertTrue(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3154,7 +3087,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertTrue(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3201,56 +3133,8 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
-		assertEquals(RecordAccessControlPoint.KEY_05, result1.getKey());
-		assertFalse(result1.isKey00());
-		assertFalse(result1.isKey01());
-		assertFalse(result1.isKey02());
-		assertFalse(result1.isKey03());
-		assertFalse(result1.isKey04());
-		assertTrue(result1.isKey05());
-		assertFalse(result1.isKey06());
-		assertFalse(result1.isKey07());
-		assertFalse(result1.isKey08());
-		assertEquals(0, result1.getRequestOpCode());
-		assertEquals(0, result1.getResponseCode());
-		assertFalse(result1.isResponseCodeSuccess());
-		assertFalse(result1.isResponseCodeOpCodeNotSupported());
-		assertFalse(result1.isResponseCodeInvalidOperator());
-		assertFalse(result1.isResponseCodeOperatorNotSupported());
-		assertFalse(result1.isResponseCodeInvalidOperand());
-		assertFalse(result1.isResponseCodeNoRecordsFound());
-		assertFalse(result1.isResponseCodeAbortUnsuccessful());
-		assertFalse(result1.isResponseCodeProcedureNotCompleted());
-		assertFalse(result1.isResponseCodeOperandNotSupported());
-	}
-
-	@Test
-	public void test_constructor_00402() {
-		byte[] data = getData();
-
-		RecordAccessControlPoint result1 = new RecordAccessControlPoint(data);
-		assertEquals(RecordAccessControlPoint.OP_CODE_NUMBER_OF_STORED_RECORDS_RESPONSE, result1.getOpCode());
-		assertFalse(result1.isOpCodeReportStoredRecords(result1.getOpCode()));
-		assertFalse(result1.isOpCodeDeleteStoredRecords(result1.getOpCode()));
-		assertFalse(result1.isOpCodeAbortOperation(result1.getOpCode()));
-		assertFalse(result1.isOpCodeReportNumberOfStoredRecords(result1.getOpCode()));
-		assertTrue(result1.isOpCodeNumberOfStoredRecordsResponse(result1.getOpCode()));
-		assertFalse(result1.isOpCodeResponseCode(result1.getOpCode()));
-		assertFalse(result1.isOpCodeCombinedReport(result1.getOpCode()));
-		assertFalse(result1.isOpCodeCombinedReportResponse(result1.getOpCode()));
-		assertEquals(RecordAccessControlPoint.OPERATOR_NULL, result1.getOperator());
-		assertTrue(result1.isOperatorNull());
-		assertFalse(result1.isOperatorAllRecords());
-		assertFalse(result1.isOperatorLessThanOrEqualTo());
-		assertFalse(result1.isOperatorGreaterThanOrEqualTo());
-		assertFalse(result1.isOperatorWithinRangeOf());
-		assertFalse(result1.isOperatorFirstRecord());
-		assertFalse(result1.isOperatorLastRecord());
-		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
-		assertEquals(RecordAccessControlPoint.KEY_08, result1.getKey());
-		assertFalse(result1.isKey00());
+		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
+		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
 		assertFalse(result1.isKey02());
 		assertFalse(result1.isKey03());
@@ -3258,7 +3142,7 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isKey05());
 		assertFalse(result1.isKey06());
 		assertFalse(result1.isKey07());
-		assertTrue(result1.isKey08());
+		assertFalse(result1.isKey08());
 		assertEquals(0, result1.getRequestOpCode());
 		assertEquals(0, result1.getResponseCode());
 		assertFalse(result1.isResponseCodeSuccess());
@@ -3295,7 +3179,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3342,7 +3225,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3389,7 +3271,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3436,7 +3317,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3483,7 +3363,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3530,7 +3409,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3577,7 +3455,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3624,7 +3501,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3671,7 +3547,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3718,7 +3593,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3765,7 +3639,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3812,7 +3685,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3859,7 +3731,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3906,7 +3777,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -3953,7 +3823,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4000,7 +3869,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4047,7 +3915,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4094,7 +3961,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4141,7 +4007,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4188,7 +4053,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4235,7 +4099,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4282,7 +4145,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4329,7 +4191,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4376,7 +4237,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4423,7 +4283,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4470,7 +4329,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4517,7 +4375,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4564,7 +4421,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4611,7 +4467,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4658,7 +4513,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4705,7 +4559,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4752,7 +4605,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4799,7 +4651,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4846,7 +4697,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4893,7 +4743,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4940,7 +4789,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -4987,7 +4835,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5034,7 +4881,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -5081,7 +4927,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5128,7 +4973,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5175,7 +5019,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5222,7 +5065,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -5269,7 +5111,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5316,7 +5157,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5363,7 +5203,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5410,7 +5249,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_01, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertTrue(result1.isKey01());
@@ -5457,7 +5295,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_02, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5504,7 +5341,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_04, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5551,7 +5387,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_07, result1.getKey());
 		assertFalse(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5598,7 +5433,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertTrue(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5645,7 +5479,6 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertTrue(result1.isOperatorLastRecord());
 		assertArrayEquals(new byte[0], result1.getOperand());
-		assertArrayEquals(new byte[0], result1.getOperandParameter());
 		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
 		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
@@ -5692,56 +5525,8 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isOperatorFirstRecord());
 		assertFalse(result1.isOperatorLastRecord());
 		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
-		assertEquals(RecordAccessControlPoint.KEY_05, result1.getKey());
-		assertFalse(result1.isKey00());
-		assertFalse(result1.isKey01());
-		assertFalse(result1.isKey02());
-		assertFalse(result1.isKey03());
-		assertFalse(result1.isKey04());
-		assertTrue(result1.isKey05());
-		assertFalse(result1.isKey06());
-		assertFalse(result1.isKey07());
-		assertFalse(result1.isKey08());
-		assertEquals(0, result1.getRequestOpCode());
-		assertEquals(0, result1.getResponseCode());
-		assertFalse(result1.isResponseCodeSuccess());
-		assertFalse(result1.isResponseCodeOpCodeNotSupported());
-		assertFalse(result1.isResponseCodeInvalidOperator());
-		assertFalse(result1.isResponseCodeOperatorNotSupported());
-		assertFalse(result1.isResponseCodeInvalidOperand());
-		assertFalse(result1.isResponseCodeNoRecordsFound());
-		assertFalse(result1.isResponseCodeAbortUnsuccessful());
-		assertFalse(result1.isResponseCodeProcedureNotCompleted());
-		assertFalse(result1.isResponseCodeOperandNotSupported());
-	}
-
-	@Test
-	public void test_constructor_00702() {
-		byte[] data = getData();
-
-		RecordAccessControlPoint result1 = new RecordAccessControlPoint(data);
-		assertEquals(RecordAccessControlPoint.OP_CODE_COMBINED_REPORT_RESPONSE, result1.getOpCode());
-		assertFalse(result1.isOpCodeReportStoredRecords(result1.getOpCode()));
-		assertFalse(result1.isOpCodeDeleteStoredRecords(result1.getOpCode()));
-		assertFalse(result1.isOpCodeAbortOperation(result1.getOpCode()));
-		assertFalse(result1.isOpCodeReportNumberOfStoredRecords(result1.getOpCode()));
-		assertFalse(result1.isOpCodeNumberOfStoredRecordsResponse(result1.getOpCode()));
-		assertFalse(result1.isOpCodeResponseCode(result1.getOpCode()));
-		assertFalse(result1.isOpCodeCombinedReport(result1.getOpCode()));
-		assertTrue(result1.isOpCodeCombinedReportResponse(result1.getOpCode()));
-		assertEquals(RecordAccessControlPoint.OPERATOR_NULL, result1.getOperator());
-		assertTrue(result1.isOperatorNull());
-		assertFalse(result1.isOperatorAllRecords());
-		assertFalse(result1.isOperatorLessThanOrEqualTo());
-		assertFalse(result1.isOperatorGreaterThanOrEqualTo());
-		assertFalse(result1.isOperatorWithinRangeOf());
-		assertFalse(result1.isOperatorFirstRecord());
-		assertFalse(result1.isOperatorLastRecord());
-		assertArrayEquals(Arrays.copyOfRange(data, 2, data.length), result1.getOperand());
-		assertArrayEquals(Arrays.copyOfRange(data, 3, data.length), result1.getOperandParameter());
-		assertEquals(RecordAccessControlPoint.KEY_08, result1.getKey());
-		assertFalse(result1.isKey00());
+		assertEquals(RecordAccessControlPoint.KEY_00, result1.getKey());
+		assertTrue(result1.isKey00());
 		assertFalse(result1.isKey01());
 		assertFalse(result1.isKey02());
 		assertFalse(result1.isKey03());
@@ -5749,7 +5534,7 @@ public class RecordAccessControlPointTest extends TestBase {
 		assertFalse(result1.isKey05());
 		assertFalse(result1.isKey06());
 		assertFalse(result1.isKey07());
-		assertTrue(result1.isKey08());
+		assertFalse(result1.isKey08());
 		assertEquals(0, result1.getRequestOpCode());
 		assertEquals(0, result1.getResponseCode());
 		assertFalse(result1.isResponseCodeSuccess());
@@ -6145,14 +5930,6 @@ public class RecordAccessControlPointTest extends TestBase {
 
 	@Test
 	public void test_parcelable_2_00401() {
-		byte[] data = getData();
-
-		RecordAccessControlPoint result1 = new RecordAccessControlPoint(data);
-		assertArrayEquals(data, result1.getBytes());
-	}
-
-	@Test
-	public void test_parcelable_2_00402() {
 		byte[] data = getData();
 
 		RecordAccessControlPoint result1 = new RecordAccessControlPoint(data);
@@ -6569,14 +6346,6 @@ public class RecordAccessControlPointTest extends TestBase {
 
 	@Test
 	public void test_parcelable_2_00701() {
-		byte[] data = getData();
-
-		RecordAccessControlPoint result1 = new RecordAccessControlPoint(data);
-		assertArrayEquals(data, result1.getBytes());
-	}
-
-	@Test
-	public void test_parcelable_2_00702() {
 		byte[] data = getData();
 
 		RecordAccessControlPoint result1 = new RecordAccessControlPoint(data);

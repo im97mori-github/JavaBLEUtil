@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * OTS Feature (Characteristics UUID: 0x2ABD)
  */
-// TODO
+// TODO Object Transfer Service
 public class OtsFeature implements ByteArrayInterface {
 
     /**

@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Constant Tone Extension Enable (Characteristics UUID: 0x2BAD)
  */
-// TODO
+// TODO Constant Tone Extension Service
 public class ConstantToneExtensionEnable implements ByteArrayInterface {
 
     /**

@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Bearer URI Schemes Supported List (Characteristics UUID: 0x2BB6)
  */
-// TODO
+// TODO Telephone Bearer Service
 public class BearerUriSchemesSupportedList implements ByteArrayInterface {
 
     /**

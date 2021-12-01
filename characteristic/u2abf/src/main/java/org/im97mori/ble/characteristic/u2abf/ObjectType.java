@@ -41,7 +41,7 @@ public class ObjectType implements ByteArrayInterface {
     /**
      * Constructor from parameters
      * 
-     * @param uuid      16bit uuid
+     * @param uuid      128bit uuid
      */
     public ObjectType(@NonNull UUID uuid) {
         mObjectType = new byte[16];
@@ -68,6 +68,7 @@ public class ObjectType implements ByteArrayInterface {
     /**
      * @return Object Type
      */
+    @NonNull
     public byte[] getObjectType() {
         return mObjectType;
     }

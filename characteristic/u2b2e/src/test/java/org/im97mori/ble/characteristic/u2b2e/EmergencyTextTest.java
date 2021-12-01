@@ -56,6 +56,30 @@ public class EmergencyTextTest extends TestBase {
 	}
 
 	@Test
+	public void test_constructor_00101() {
+		String emergencyText = "0";
+
+		EmergencyText result1 = new EmergencyText(emergencyText);
+		assertEquals(emergencyText, result1.getEmergencyText());
+	}
+
+	@Test
+	public void test_constructor_00102() {
+		String emergencyText = "01234567890123456789";
+
+		EmergencyText result1 = new EmergencyText(emergencyText);
+		assertEquals(emergencyText, result1.getEmergencyText());
+	}
+
+	@Test
+	public void test_constructor_00103() {
+		String emergencyText = "012345678901234567890";
+
+		EmergencyText result1 = new EmergencyText(emergencyText);
+		assertEquals("01234567890123456789", result1.getEmergencyText());
+	}
+
+	@Test
 	public void test_parcelable_2_00001() {
 		byte[] data = getData();
 
@@ -76,7 +100,7 @@ public class EmergencyTextTest extends TestBase {
 		byte[] data = getData();
 
 		EmergencyText result1 = new EmergencyText(data);
-		assertArrayEquals(Arrays.copyOfRange(data, 0, 20), result1.getBytes());
+		assertArrayEquals(Arrays.copyOfRange(data, 0, EmergencyText.MAX_OCTETS), result1.getBytes());
 	}
 
 }

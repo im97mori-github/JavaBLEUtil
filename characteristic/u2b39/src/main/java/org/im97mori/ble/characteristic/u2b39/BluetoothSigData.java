@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Bluetooth SIG Data (Characteristics UUID: 0x2B39)
  */
-// TODO
+// TODO Transport Discovery Service
 public class BluetoothSigData implements ByteArrayInterface {
 
     /**

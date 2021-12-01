@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * BR-EDR Handover Data (Characteristics UUID: 0x2B38)
  */
-// TODO
+// TODO Transport Discovery Service
 public class BrEdrHandoverData implements ByteArrayInterface {
 
     /**

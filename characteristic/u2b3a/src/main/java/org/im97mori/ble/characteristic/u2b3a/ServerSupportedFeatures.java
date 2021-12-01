@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 /**
  * Server Supported Features (Characteristics UUID: 0x2B3A)
  */
-// TODO
+// TODO BLUETOOTH CORE SPECIFICATION Version 5.3 | Vol 3, Part G 7.4
 public class ServerSupportedFeatures implements ByteArrayInterface {
 
     /**

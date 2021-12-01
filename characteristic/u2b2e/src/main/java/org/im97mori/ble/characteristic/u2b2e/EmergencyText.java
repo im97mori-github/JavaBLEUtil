@@ -12,6 +12,11 @@ import androidx.annotation.NonNull;
 public class EmergencyText implements ByteArrayInterface {
 
 	/**
+	 * Max Octets
+	 */
+	public static final int MAX_OCTETS = 20;
+	
+	/**
 	 * Emergency Text
 	 */
 	private final String mEmergencyText;
@@ -23,18 +28,18 @@ public class EmergencyText implements ByteArrayInterface {
 	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
 	 */
 	public EmergencyText(@NonNull byte[] values) {
-		int length = values.length > 20 ? 20 : values.length;
+		int length = values.length > MAX_OCTETS ? MAX_OCTETS : values.length;
 		mEmergencyText = new String(Arrays.copyOfRange(values, 0, length));
 	}
 
 	/**
 	 * Constructor from parameters
 	 * 
-	 * @param emergencyText Sulfur Emergency Text
+	 * @param emergencyText Emergency Text
 	 */
 	public EmergencyText(@NonNull String emergencyText) {
 		byte[] values = emergencyText.getBytes();
-		int length = values.length > 20 ? 20 : values.length;
+		int length = values.length > MAX_OCTETS ? MAX_OCTETS : values.length;
 		mEmergencyText = new String(Arrays.copyOfRange(values, 0, length));
 	}
 

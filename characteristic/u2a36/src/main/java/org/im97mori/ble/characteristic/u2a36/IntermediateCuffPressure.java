@@ -16,344 +16,350 @@ import androidx.annotation.NonNull;
  */
 public class IntermediateCuffPressure implements ByteArrayInterface {
 
-    /**
-     * Flags
-     */
-    private final int mFlags;
+	/**
+	 * Flags
+	 */
+	private final int mFlags;
 
-    /**
-     * Blood Pressure Measurement Compound Value - Systolic (mmHg)
-     */
-    private final IEEE_11073_20601_SFLOAT mBloodPressureMeasurementCompoundValueSystolicMmhg;
+	/**
+	 * Intermediate Cuff Pressure Compound Value - Current Cuff Pressure (mmHg)
+	 */
+	private final IEEE_11073_20601_SFLOAT mIntermediateCuffPressureCompoundValueCurrentCuffPressureMmhg;
 
-    /**
-     * Blood Pressure Measurement Compound Value - Diastolic (mmHg)
-     */
-    private final IEEE_11073_20601_SFLOAT mBloodPressureMeasurementCompoundValueDiastolicMmhg;
+	/**
+	 * Intermediate Cuff Pressure Compound Value - Current Cuff Pressure (kPa)
+	 */
+	private final IEEE_11073_20601_SFLOAT mIntermediateCuffPressureCompoundValueCurrentCuffPressureKpa;
 
-    /**
-     * Blood Pressure Measurement Compound Value - Mean Arterial Pressure (mmHg)
-     */
-    private final IEEE_11073_20601_SFLOAT mBloodPressureMeasurementCompoundValueMeanArterialPressureMmhg;
+	/**
+	 * Intermediate Cuff Pressure Compound Value - Diastolic (unused)
+	 */
+	private final IEEE_11073_20601_SFLOAT mIntermediateCuffPressureCompoundValueDiastolicUnused;
 
-    /**
-     * Blood Pressure Measurement Compound Value - Systolic (kPa)
-     */
-    private final IEEE_11073_20601_SFLOAT mBloodPressureMeasurementCompoundValueSystolicKpa;
+	/**
+	 * Intermediate Cuff Pressure Compound Value - Mean Arterial Pressure (unused)
+	 */
+	private final IEEE_11073_20601_SFLOAT mIntermediateCuffPressureCompoundValueMeanArterialPressureUnused;
 
-    /**
-     * Blood Pressure Measurement Compound Value - Diastolic (kPa)
-     */
-    private final IEEE_11073_20601_SFLOAT mBloodPressureMeasurementCompoundValueDiastolicKpa;
+	/**
+	 * Year
+	 */
+	private final int mYear;
 
-    /**
-     * Blood Pressure Measurement Compound Value - Mean Arterial Pressure (kPa)
-     */
-    private final IEEE_11073_20601_SFLOAT mBloodPressureMeasurementCompoundValueMeanArterialPressureKpa;
+	/**
+	 * Month
+	 */
+	private final int mMonth;
 
-    /**
-     * Year
-     */
-    private final int mYear;
+	/**
+	 * Day
+	 */
+	private final int mDay;
 
-    /**
-     * Month
-     */
-    private final int mMonth;
+	/**
+	 * Hours
+	 */
+	private final int mHours;
 
-    /**
-     * Day
-     */
-    private final int mDay;
+	/**
+	 * Minutes
+	 */
+	private final int mMinutes;
 
-    /**
-     * Hours
-     */
-    private final int mHours;
+	/**
+	 * Seconds
+	 */
+	private final int mSeconds;
 
-    /**
-     * Minutes
-     */
-    private final int mMinutes;
+	/**
+	 * Pulse Rate
+	 */
+	private final IEEE_11073_20601_SFLOAT mPulseRate;
 
-    /**
-     * Seconds
-     */
-    private final int mSeconds;
+	/**
+	 * User ID
+	 */
+	private final int mUserId;
 
-    /**
-     * Pulse Rate
-     */
-    private final IEEE_11073_20601_SFLOAT mPulseRate;
+	/**
+	 * Measurement Status
+	 */
+	private final byte[] mMeasurementStatus;
 
-    /**
-     * User ID
-     */
-    private final int mUserId;
+	/**
+	 * Constructor from byte array
+	 *
+	 * @param values byte array from <a href=
+	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+	 */
+	public IntermediateCuffPressure(@NonNull byte[] values) {
+		int index = 0;
+		mFlags = values[index++];
+		if (BloodPressureMeasurementUtils.isFlagsBloodPressureUnitsMmhg(mFlags)) {
+			mIntermediateCuffPressureCompoundValueCurrentCuffPressureMmhg = new IEEE_11073_20601_SFLOAT(values, index);
+			mIntermediateCuffPressureCompoundValueCurrentCuffPressureKpa = new IEEE_11073_20601_SFLOAT(new byte[2], 0);
+		} else {
+			mIntermediateCuffPressureCompoundValueCurrentCuffPressureMmhg = new IEEE_11073_20601_SFLOAT(new byte[2], 0);
+			mIntermediateCuffPressureCompoundValueCurrentCuffPressureKpa = new IEEE_11073_20601_SFLOAT(values, index);
+		}
+		index += 2;
+		mIntermediateCuffPressureCompoundValueDiastolicUnused = new IEEE_11073_20601_SFLOAT(values, index);
+		index += 2;
+		mIntermediateCuffPressureCompoundValueMeanArterialPressureUnused = new IEEE_11073_20601_SFLOAT(values, index);
+		index += 2;
+		if (BloodPressureMeasurementUtils.isFlagsTimeStampPresent(mFlags)) {
+			mYear = BLEUtils.createUInt16(values, index);
+			index += 2;
+			mMonth = (values[index++] & 0xff);
+			mDay = (values[index++] & 0xff);
+			mHours = (values[index++] & 0xff);
+			mMinutes = (values[index++] & 0xff);
+			mSeconds = (values[index++] & 0xff);
+		} else {
+			mYear = 0;
+			mMonth = 0;
+			mDay = 0;
+			mHours = 0;
+			mMinutes = 0;
+			mSeconds = 0;
+		}
+		if (BloodPressureMeasurementUtils.isFlagsPulseRatePresent(mFlags)) {
+			mPulseRate = new IEEE_11073_20601_SFLOAT(values, index);
+			index += 2;
+		} else {
+			mPulseRate = new IEEE_11073_20601_SFLOAT(new byte[2], 0);
+		}
+		if (BloodPressureMeasurementUtils.isFlagsUserIdPresent(mFlags)) {
+			mUserId = (values[index++] & 0xff);
+		} else {
+			mUserId = 0;
+		}
+		if (BloodPressureMeasurementUtils.isFlagsMeasurementStatusPresent(mFlags)) {
+			mMeasurementStatus = Arrays.copyOfRange(values, index, index + 2);
+		} else {
+			mMeasurementStatus = new byte[0];
+		}
+	}
 
-    /**
-     * Measurement Status
-     */
-    private final byte[] mMeasurementStatus;
+	/**
+	 * Constructor from parameters
+	 * 
+	 * @param flags                                                           Flags
+	 * @param intermediateCuffPressureCompoundValueCurrentCuffPressureMmhg    Intermediate
+	 *                                                                        Cuff
+	 *                                                                        Pressure
+	 *                                                                        Compound
+	 *                                                                        Value
+	 *                                                                        -
+	 *                                                                        Current
+	 *                                                                        Cuff
+	 *                                                                        Pressure
+	 *                                                                        (mmHg)
+	 * @param intermediateCuffPressureCompoundValueCurrentCuffPressureKpa     Intermediate
+	 *                                                                        Cuff
+	 *                                                                        Pressure
+	 *                                                                        Compound
+	 *                                                                        Value
+	 *                                                                        -
+	 *                                                                        Current
+	 *                                                                        Cuff
+	 *                                                                        Pressure
+	 *                                                                        (kPa)
+	 * @param intermediateCuffPressureCompoundValueDiastolicUnused            Intermediate
+	 *                                                                        Cuff
+	 *                                                                        Pressure
+	 *                                                                        Compound
+	 *                                                                        Value
+	 *                                                                        -
+	 *                                                                        Diastolic
+	 *                                                                        (unused)
+	 * @param intermediateCuffPressureCompoundValueMeanArterialPressureUnused Intermediate
+	 *                                                                        Cuff
+	 *                                                                        Pressure
+	 *                                                                        Compound
+	 *                                                                        Value
+	 *                                                                        - Mean
+	 *                                                                        Arterial
+	 *                                                                        Pressure
+	 *                                                                        (unused)
+	 * @param year                                                            Year
+	 * @param month                                                           Month
+	 * @param day                                                             Day
+	 * @param hours                                                           Hours
+	 * @param minutes                                                         Minutes
+	 * @param seconds                                                         Seconds
+	 * @param pulseRate                                                       Pulse
+	 *                                                                        Rate
+	 * @param userId                                                          User
+	 *                                                                        ID
+	 * @param measurementStatus                                               Measurement
+	 *                                                                        Status
+	 */
+	public IntermediateCuffPressure(int flags,
+			@NonNull IEEE_11073_20601_SFLOAT intermediateCuffPressureCompoundValueCurrentCuffPressureMmhg,
+			@NonNull IEEE_11073_20601_SFLOAT intermediateCuffPressureCompoundValueCurrentCuffPressureKpa,
+			@NonNull IEEE_11073_20601_SFLOAT intermediateCuffPressureCompoundValueDiastolicUnused,
+			@NonNull IEEE_11073_20601_SFLOAT intermediateCuffPressureCompoundValueMeanArterialPressureUnused, int year,
+			int month, int day, int hours, int minutes, int seconds, IEEE_11073_20601_SFLOAT pulseRate, int userId,
+			byte[] measurementStatus) {
+		mFlags = flags;
+		mIntermediateCuffPressureCompoundValueCurrentCuffPressureMmhg = intermediateCuffPressureCompoundValueCurrentCuffPressureMmhg;
+		mIntermediateCuffPressureCompoundValueCurrentCuffPressureKpa = intermediateCuffPressureCompoundValueCurrentCuffPressureKpa;
+		mIntermediateCuffPressureCompoundValueDiastolicUnused = intermediateCuffPressureCompoundValueDiastolicUnused;
+		mIntermediateCuffPressureCompoundValueMeanArterialPressureUnused = intermediateCuffPressureCompoundValueMeanArterialPressureUnused;
+		mYear = year;
+		mMonth = month;
+		mDay = day;
+		mHours = hours;
+		mMinutes = minutes;
+		mSeconds = seconds;
+		mPulseRate = pulseRate;
+		mUserId = userId;
+		mMeasurementStatus = measurementStatus;
+	}
 
-    /**
-     * Constructor from byte array
-     *
-     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
-     */
-    public IntermediateCuffPressure(@NonNull byte[] values) {
-        int index = 0;
-        mFlags = values[index++];
-        if (BloodPressureMeasurementUtils.isFlagsBloodPressureUnitsMmhg(mFlags)) {
-            mBloodPressureMeasurementCompoundValueSystolicMmhg = new IEEE_11073_20601_SFLOAT(values, index);
-            index += 2;
-            mBloodPressureMeasurementCompoundValueDiastolicMmhg = new IEEE_11073_20601_SFLOAT(values, index);
-            index += 2;
-            mBloodPressureMeasurementCompoundValueMeanArterialPressureMmhg = new IEEE_11073_20601_SFLOAT(values, index);
+	/**
+	 * @return Flags
+	 */
+	public int getFlags() {
+		return mFlags;
+	}
 
-            mBloodPressureMeasurementCompoundValueSystolicKpa = new IEEE_11073_20601_SFLOAT(new byte[2], 0);
-            mBloodPressureMeasurementCompoundValueDiastolicKpa = new IEEE_11073_20601_SFLOAT(new byte[2], 0);
-            mBloodPressureMeasurementCompoundValueMeanArterialPressureKpa = new IEEE_11073_20601_SFLOAT(new byte[2], 0);
-        } else {
-            mBloodPressureMeasurementCompoundValueSystolicMmhg = new IEEE_11073_20601_SFLOAT(new byte[2], 0);
-            mBloodPressureMeasurementCompoundValueDiastolicMmhg = new IEEE_11073_20601_SFLOAT(new byte[2], 0);
-            mBloodPressureMeasurementCompoundValueMeanArterialPressureMmhg = new IEEE_11073_20601_SFLOAT(new byte[2], 0);
+	/**
+	 * @return Intermediate Cuff Pressure Compound Value - Current Cuff Pressure
+	 *         (mmHg)
+	 */
+	public IEEE_11073_20601_SFLOAT getIntermediateCuffPressureCompoundValueCurrentCuffPressureMmhg() {
+		return mIntermediateCuffPressureCompoundValueCurrentCuffPressureMmhg;
+	}
 
-            mBloodPressureMeasurementCompoundValueSystolicKpa = new IEEE_11073_20601_SFLOAT(values, index);
-            index += 2;
-            mBloodPressureMeasurementCompoundValueDiastolicKpa = new IEEE_11073_20601_SFLOAT(values, index);
-            index += 2;
-            mBloodPressureMeasurementCompoundValueMeanArterialPressureKpa = new IEEE_11073_20601_SFLOAT(values, index);
-        }
-        index += 2;
-        if (BloodPressureMeasurementUtils.isFlagsTimeStampPresent(mFlags)) {
-            mYear = BLEUtils.createUInt16(values, index);
-            index += 2;
-            mMonth = (values[index++] & 0xff);
-            mDay = (values[index++] & 0xff);
-            mHours = (values[index++] & 0xff);
-            mMinutes = (values[index++] & 0xff);
-            mSeconds = (values[index++] & 0xff);
-        } else {
-            mYear = 0;
-            mMonth = 0;
-            mDay = 0;
-            mHours = 0;
-            mMinutes = 0;
-            mSeconds = 0;
-        }
-        if (BloodPressureMeasurementUtils.isFlagsPulseRatePresent(mFlags)) {
-            mPulseRate = new IEEE_11073_20601_SFLOAT(values, index);
-            index += 2;
-        } else {
-            mPulseRate = new IEEE_11073_20601_SFLOAT(new byte[2], 0);
-        }
-        if (BloodPressureMeasurementUtils.isFlagsUserIdPresent(mFlags)) {
-            mUserId = (values[index++] & 0xff);
-        } else {
-            mUserId = 0;
-        }
-        if (BloodPressureMeasurementUtils.isFlagsMeasurementStatusPresent(mFlags)) {
-            mMeasurementStatus = Arrays.copyOfRange(values, index, index + 2);
-        } else {
-            mMeasurementStatus = new byte[0];
-        }
-    }
+	/**
+	 * @return Intermediate Cuff Pressure Compound Value - Current Cuff Pressure
+	 *         (kPa)
+	 */
+	public IEEE_11073_20601_SFLOAT getIntermediateCuffPressureCompoundValueCurrentCuffPressureKpa() {
+		return mIntermediateCuffPressureCompoundValueCurrentCuffPressureKpa;
+	}
 
-    /**
-     * Constructor from parameters
-     * 
-     * @param flags                                                         Flags
-     * @param bloodPressureMeasurementCompoundValueSystolicMmhg             Blood Pressure Measurement Compound Value - Systolic (mmHg)
-     * @param bloodPressureMeasurementCompoundValueDiastolicMmhg            Blood Pressure Measurement Compound Value - Diastolic (mmHg)
-     * @param bloodPressureMeasurementCompoundValueMeanArterialPressureMmhg Blood Pressure Measurement Compound Value - Mean Arterial Pressure (mmHg)
-     * @param bloodPressureMeasurementCompoundValueSystolicKpa              Blood Pressure Measurement Compound Value - Systolic (kPa)
-     * @param bloodPressureMeasurementCompoundValueDiastolicKpa             Blood Pressure Measurement Compound Value - Diastolic (kPa)
-     * @param bloodPressureMeasurementCompoundValueMeanArterialPressureKpa  Blood Pressure Measurement Compound Value - Mean Arterial Pressure (kPa)
-     * @param year                                                          Year
-     * @param month                                                         Month
-     * @param day                                                           Day
-     * @param hours                                                         Hours
-     * @param minutes                                                       Minutes
-     * @param seconds                                                       Seconds
-     * @param pulseRate                                                     Pulse Rate
-     * @param userId                                                        User ID
-     * @param measurementStatus                                             Measurement Status
-     */
-    public IntermediateCuffPressure(int flags, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueSystolicMmhg, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueDiastolicMmhg, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueMeanArterialPressureMmhg, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueSystolicKpa, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueDiastolicKpa, @NonNull IEEE_11073_20601_SFLOAT bloodPressureMeasurementCompoundValueMeanArterialPressureKpa, int year, int month, int day, int hours, int minutes, int seconds, IEEE_11073_20601_SFLOAT pulseRate, int userId, byte[] measurementStatus) {
-        mFlags = flags;
-        mBloodPressureMeasurementCompoundValueSystolicMmhg = bloodPressureMeasurementCompoundValueSystolicMmhg;
-        mBloodPressureMeasurementCompoundValueDiastolicMmhg = bloodPressureMeasurementCompoundValueDiastolicMmhg;
-        mBloodPressureMeasurementCompoundValueMeanArterialPressureMmhg = bloodPressureMeasurementCompoundValueMeanArterialPressureMmhg;
-        mBloodPressureMeasurementCompoundValueSystolicKpa = bloodPressureMeasurementCompoundValueSystolicKpa;
-        mBloodPressureMeasurementCompoundValueDiastolicKpa = bloodPressureMeasurementCompoundValueDiastolicKpa;
-        mBloodPressureMeasurementCompoundValueMeanArterialPressureKpa = bloodPressureMeasurementCompoundValueMeanArterialPressureKpa;
-        mYear = year;
-        mMonth = month;
-        mDay = day;
-        mHours = hours;
-        mMinutes = minutes;
-        mSeconds = seconds;
-        mPulseRate = pulseRate;
-        mUserId = userId;
-        mMeasurementStatus = measurementStatus;
-    }
+	/**
+	 * @return Intermediate Cuff Pressure Compound Value - Diastolic (unused)
+	 */
+	public IEEE_11073_20601_SFLOAT getIntermediateCuffPressureCompoundValueDiastolicUnused() {
+		return mIntermediateCuffPressureCompoundValueDiastolicUnused;
+	}
 
-    /**
-     * @return Flags
-     */
-    public int getFlags() {
-        return mFlags;
-    }
+	/**
+	 * @return Intermediate Cuff Pressure Compound Value - Mean Arterial Pressure
+	 *         (unused)
+	 */
+	public IEEE_11073_20601_SFLOAT getIntermediateCuffPressureCompoundValueMeanArterialPressureUnused() {
+		return mIntermediateCuffPressureCompoundValueMeanArterialPressureUnused;
+	}
 
-    /**
-     * @return Blood Pressure Measurement Compound Value - Systolic (mmHg)
-     */
-    public IEEE_11073_20601_SFLOAT getBloodPressureMeasurementCompoundValueSystolicMmhg() {
-        return mBloodPressureMeasurementCompoundValueSystolicMmhg;
-    }
+	/**
+	 * @return Year
+	 */
+	public int getYear() {
+		return mYear;
+	}
 
-    /**
-     * @return Blood Pressure Measurement Compound Value - Diastolic (mmHg)
-     */
-    public IEEE_11073_20601_SFLOAT getBloodPressureMeasurementCompoundValueDiastolicMmhg() {
-        return mBloodPressureMeasurementCompoundValueDiastolicMmhg;
-    }
+	/**
+	 * @return Month
+	 */
+	public int getMonth() {
+		return mMonth;
+	}
 
-    /**
-     * @return Blood Pressure Measurement Compound Value - Mean Arterial Pressure (mmHg)
-     */
-    public IEEE_11073_20601_SFLOAT getBloodPressureMeasurementCompoundValueMeanArterialPressureMmhg() {
-        return mBloodPressureMeasurementCompoundValueMeanArterialPressureMmhg;
-    }
+	/**
+	 * @return Day
+	 */
+	public int getDay() {
+		return mDay;
+	}
 
-    /**
-     * @return Blood Pressure Measurement Compound Value - Systolic (kPa)
-     */
-    public IEEE_11073_20601_SFLOAT getBloodPressureMeasurementCompoundValueSystolicKpa() {
-        return mBloodPressureMeasurementCompoundValueSystolicKpa;
-    }
+	/**
+	 * @return Hours
+	 */
+	public int getHours() {
+		return mHours;
+	}
 
-    /**
-     * @return Blood Pressure Measurement Compound Value - Diastolic (kPa)
-     */
-    public IEEE_11073_20601_SFLOAT getBloodPressureMeasurementCompoundValueDiastolicKpa() {
-        return mBloodPressureMeasurementCompoundValueDiastolicKpa;
-    }
+	/**
+	 * @return Minutes
+	 */
+	public int getMinutes() {
+		return mMinutes;
+	}
 
-    /**
-     * @return Blood Pressure Measurement Compound Value - Mean Arterial Pressure (kPa)
-     */
-    public IEEE_11073_20601_SFLOAT getBloodPressureMeasurementCompoundValueMeanArterialPressureKpa() {
-        return mBloodPressureMeasurementCompoundValueMeanArterialPressureKpa;
-    }
+	/**
+	 * @return Seconds
+	 */
+	public int getSeconds() {
+		return mSeconds;
+	}
 
-    /**
-     * @return Year
-     */
-    public int getYear() {
-        return mYear;
-    }
+	/**
+	 * @return Pulse Rate
+	 */
+	public IEEE_11073_20601_SFLOAT getPulseRate() {
+		return mPulseRate;
+	}
 
-    /**
-     * @return Month
-     */
-    public int getMonth() {
-        return mMonth;
-    }
+	/**
+	 * @return User ID
+	 */
+	public int getUserId() {
+		return mUserId;
+	}
 
-    /**
-     * @return Day
-     */
-    public int getDay() {
-        return mDay;
-    }
+	/**
+	 * @return Measurement Status
+	 */
+	public byte[] getMeasurementStatus() {
+		return mMeasurementStatus;
+	}
 
-    /**
-     * @return Hours
-     */
-    public int getHours() {
-        return mHours;
-    }
-
-    /**
-     * @return Minutes
-     */
-    public int getMinutes() {
-        return mMinutes;
-    }
-
-    /**
-     * @return Seconds
-     */
-    public int getSeconds() {
-        return mSeconds;
-    }
-
-    /**
-     * @return Pulse Rate
-     */
-    public IEEE_11073_20601_SFLOAT getPulseRate() {
-        return mPulseRate;
-    }
-
-    /**
-     * @return User ID
-     */
-    public int getUserId() {
-        return mUserId;
-    }
-
-    /**
-     * @return Measurement Status
-     */
-    public byte[] getMeasurementStatus() {
-        return mMeasurementStatus;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @NonNull
-    public byte[] getBytes() {
-        int length = 0;
-        byte[] data = new byte[19];
-        ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
-        byteBuffer.put((byte) mFlags);
-        length++;
-        if (BloodPressureMeasurementUtils.isFlagsBloodPressureUnitsMmhg(mFlags)) {
-            byteBuffer.put(mBloodPressureMeasurementCompoundValueSystolicMmhg.getData());
-            byteBuffer.put(mBloodPressureMeasurementCompoundValueDiastolicMmhg.getData());
-            byteBuffer.put(mBloodPressureMeasurementCompoundValueMeanArterialPressureMmhg.getData());
-        } else {
-            byteBuffer.put(mBloodPressureMeasurementCompoundValueSystolicKpa.getData());
-            byteBuffer.put(mBloodPressureMeasurementCompoundValueDiastolicKpa.getData());
-            byteBuffer.put(mBloodPressureMeasurementCompoundValueMeanArterialPressureKpa.getData());
-        }
-        length += 6;
-        if (BloodPressureMeasurementUtils.isFlagsTimeStampPresent(mFlags)) {
-            byteBuffer.putShort((short) mYear);
-            byteBuffer.put((byte) mMonth);
-            byteBuffer.put((byte) mDay);
-            byteBuffer.put((byte) mHours);
-            byteBuffer.put((byte) mMinutes);
-            byteBuffer.put((byte) mSeconds);
-            length += 7;
-        }
-        if (BloodPressureMeasurementUtils.isFlagsPulseRatePresent(mFlags)) {
-            byteBuffer.put(mPulseRate.getData());
-            length += 2;
-        }
-        if (BloodPressureMeasurementUtils.isFlagsUserIdPresent(mFlags)) {
-            byteBuffer.put((byte) mUserId);
-            length++;
-        }
-        if (BloodPressureMeasurementUtils.isFlagsMeasurementStatusPresent(mFlags)) {
-            byteBuffer.put(mMeasurementStatus);
-            length += 2;
-        }
-        return Arrays.copyOfRange(data, 0, length);
-    }
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@NonNull
+	public byte[] getBytes() {
+		int length = 0;
+		byte[] data = new byte[19];
+		ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+		byteBuffer.put((byte) mFlags);
+		length++;
+		if (BloodPressureMeasurementUtils.isFlagsBloodPressureUnitsMmhg(mFlags)) {
+			byteBuffer.put(mIntermediateCuffPressureCompoundValueCurrentCuffPressureMmhg.getData());
+		} else {
+			byteBuffer.put(mIntermediateCuffPressureCompoundValueCurrentCuffPressureKpa.getData());
+		}
+		byteBuffer.put(mIntermediateCuffPressureCompoundValueDiastolicUnused.getData());
+		byteBuffer.put(mIntermediateCuffPressureCompoundValueMeanArterialPressureUnused.getData());
+		length += 6;
+		if (BloodPressureMeasurementUtils.isFlagsTimeStampPresent(mFlags)) {
+			byteBuffer.putShort((short) mYear);
+			byteBuffer.put((byte) mMonth);
+			byteBuffer.put((byte) mDay);
+			byteBuffer.put((byte) mHours);
+			byteBuffer.put((byte) mMinutes);
+			byteBuffer.put((byte) mSeconds);
+			length += 7;
+		}
+		if (BloodPressureMeasurementUtils.isFlagsPulseRatePresent(mFlags)) {
+			byteBuffer.put(mPulseRate.getData());
+			length += 2;
+		}
+		if (BloodPressureMeasurementUtils.isFlagsUserIdPresent(mFlags)) {
+			byteBuffer.put((byte) mUserId);
+			length++;
+		}
+		if (BloodPressureMeasurementUtils.isFlagsMeasurementStatusPresent(mFlags)) {
+			byteBuffer.put(mMeasurementStatus);
+			length += 2;
+		}
+		return Arrays.copyOfRange(data, 0, length);
+	}
 
 }

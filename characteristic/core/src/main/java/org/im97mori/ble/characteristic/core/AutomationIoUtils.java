@@ -87,9 +87,10 @@ public class AutomationIoUtils {
 	}
 
 	/**
-	 * @param data   byte array data
-	 * @param format {@link CharacteristicPresentationFormat} from this
-	 *               characteristic
+	 * @param data         byte array data
+	 * @param format       {@link CharacteristicPresentationFormat} from this
+	 *                     characteristic
+	 * @param analogOffset data offset
 	 * @return Analog with format
 	 */
 	public static double getAnalogWithFormat(@NonNull byte[] data, @NonNull CharacteristicPresentationFormat format,

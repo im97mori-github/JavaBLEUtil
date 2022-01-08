@@ -1,5 +1,6 @@
 package org.im97mori.ble.characteristic.core;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -203,5 +204,11 @@ public class BloodPressureMeasurementUtilsTest {
 
         assertFalse(BloodPressureMeasurementUtils.isMeasurementStatusMeasurementPositionDetectionProperMeasurementPosition(data));
         assertTrue(BloodPressureMeasurementUtils.isMeasurementStatusMeasurementPositionDetectionImproperMeasurementPosition(data));
+    }
+
+    @Test
+    public void test_getPascal001() {
+    	double kpa = 1;
+        assertEquals(kpa * BloodPressureMeasurementUtils.PASCAL_RESOLUTION, BloodPressureMeasurementUtils.getPascal(new IEEE_11073_20601_SFLOAT(kpa)), 0);
     }
 }

@@ -14,7 +14,7 @@ project/build.gradle
 
 project/module/build.gradle
 
-    def version = '0.8.4' 
+    def version = '0.8.5' 
     dependencies {
         
 	     // All package
@@ -26,7 +26,7 @@ project/module/build.gradle
         // Constants defination classes
         
 	     // All constants package
-        implementation 'org.im97mori:ble-java:${version}'
+        implementation 'org.im97mori:ble-core-constants:${version}'
         
         // Appearance UUID defination
         // (Appearance Values Revision Date: 2021­04­20)

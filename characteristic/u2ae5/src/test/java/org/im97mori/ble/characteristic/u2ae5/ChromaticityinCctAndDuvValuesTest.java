@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 import org.im97mori.ble.BLEUtils;
 import org.junit.Test;
 
-public class ChromaticityinCctAndDuvValuesTest {
+public class ChromaticityInCctAndDuvValuesTest {
 
     @Test
     public void test_constructor_00001() {
@@ -18,7 +18,7 @@ public class ChromaticityinCctAndDuvValuesTest {
         data[ 3] = 0x04;
         //@formatter:on
 
-        ChromaticityinCctAndDuvValues result = new ChromaticityinCctAndDuvValues(data);
+        ChromaticityInCctAndDuvValues result = new ChromaticityInCctAndDuvValues(data);
         assertEquals(BLEUtils.createSInt16(data, 0), result.getCorrelatedColorTemperature());
         assertEquals(BLEUtils.createUInt16(data, 2), result.getChromaticityDistanceFromPlanckian());
     }
@@ -28,7 +28,7 @@ public class ChromaticityinCctAndDuvValuesTest {
         int correlatedColorTemperature = 1;
         int chromaticityDistanceFromPlanckian = 2;
 
-        ChromaticityinCctAndDuvValues result = new ChromaticityinCctAndDuvValues(correlatedColorTemperature, chromaticityDistanceFromPlanckian);
+        ChromaticityInCctAndDuvValues result = new ChromaticityInCctAndDuvValues(correlatedColorTemperature, chromaticityDistanceFromPlanckian);
         assertEquals(correlatedColorTemperature, result.getCorrelatedColorTemperature());
         assertEquals(chromaticityDistanceFromPlanckian, result.getChromaticityDistanceFromPlanckian());
     }
@@ -43,7 +43,7 @@ public class ChromaticityinCctAndDuvValuesTest {
         data[ 3] = 0x04;
         //@formatter:on
 
-        ChromaticityinCctAndDuvValues result1 = new ChromaticityinCctAndDuvValues(data);
+        ChromaticityInCctAndDuvValues result1 = new ChromaticityInCctAndDuvValues(data);
         assertArrayEquals(data, result1.getBytes());
     }
 

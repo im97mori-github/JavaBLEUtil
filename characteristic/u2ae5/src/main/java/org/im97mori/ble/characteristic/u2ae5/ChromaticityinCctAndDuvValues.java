@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 /**
  * Chromaticity in CCT And Duv Values (Characteristics UUID: 0x2AE5)
  */
-public class ChromaticityinCctAndDuvValues implements ByteArrayInterface {
+public class ChromaticityInCctAndDuvValues implements ByteArrayInterface {
 
     /**
      * Correlated Color Temperature
@@ -28,7 +28,7 @@ public class ChromaticityinCctAndDuvValues implements ByteArrayInterface {
      *
      * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
-    public ChromaticityinCctAndDuvValues(@NonNull byte[] values) {
+    public ChromaticityInCctAndDuvValues(@NonNull byte[] values) {
         mCorrelatedColorTemperature = BLEUtils.createUInt16(values, 0);
         mChromaticityDistanceFromPlanckian = BLEUtils.createSInt16(values, 2);
     }
@@ -39,7 +39,7 @@ public class ChromaticityinCctAndDuvValues implements ByteArrayInterface {
      * @param correlatedColorTemperature Correlated Color Temperature
      * @param chromaticityDistanceFromPlanckian Chromaticity Distance from Planckian
      */
-    public ChromaticityinCctAndDuvValues(int correlatedColorTemperature, int chromaticityDistanceFromPlanckian) {
+    public ChromaticityInCctAndDuvValues(int correlatedColorTemperature, int chromaticityDistanceFromPlanckian) {
         mCorrelatedColorTemperature = correlatedColorTemperature;
         mChromaticityDistanceFromPlanckian = chromaticityDistanceFromPlanckian;
     }

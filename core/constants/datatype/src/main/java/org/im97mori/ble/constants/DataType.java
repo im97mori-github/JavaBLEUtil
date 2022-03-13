@@ -12,7 +12,6 @@ import java.util.Map;
  */
 public class DataType {
 
-    @SuppressWarnings("serial")
     private static final class DataTypeMap extends HashMap<Integer, String> {
 
         private DataTypeMap() {

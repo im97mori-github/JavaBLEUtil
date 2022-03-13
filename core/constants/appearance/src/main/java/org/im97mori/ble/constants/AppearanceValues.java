@@ -12,7 +12,6 @@ import java.util.Map;
  */
 public class AppearanceValues {
 
-    @SuppressWarnings("serial")
     private static final class CategoryMap128 extends HashMap<Integer, String> {
 
         private CategoryMap128() {
@@ -71,7 +70,6 @@ public class AppearanceValues {
 		}
     }
 
-    @SuppressWarnings("serial")
     private static final class SubCategoryMap128 extends HashMap<Integer, String> {
 
         private SubCategoryMap128() {

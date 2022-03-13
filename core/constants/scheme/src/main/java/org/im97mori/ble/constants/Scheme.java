@@ -12,7 +12,6 @@ import java.util.Map;
  */
 public class Scheme {
 
-	@SuppressWarnings("serial")
 	private static final class SchemeMap extends HashMap<Character, String> {
 
 		private SchemeMap() {

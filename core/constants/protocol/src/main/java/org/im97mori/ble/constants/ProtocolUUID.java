@@ -13,7 +13,6 @@ import java.util.UUID;
  */
 public class ProtocolUUID {
 
-    @SuppressWarnings("serial")
     private static final class Map128 extends HashMap<UUID, String> {
 
         private Map128() {

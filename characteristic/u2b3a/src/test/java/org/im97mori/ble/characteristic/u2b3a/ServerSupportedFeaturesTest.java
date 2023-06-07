@@ -14,6 +14,7 @@ import org.junit.Test;
 public class ServerSupportedFeaturesTest extends TestBase {
 
     //@formatter:off
+    @SuppressWarnings("unused")
     private static final byte[] data_00001;
     static {
         byte[] data = new byte[1];
@@ -21,6 +22,7 @@ public class ServerSupportedFeaturesTest extends TestBase {
         data_00001 = data;
     }
 
+    @SuppressWarnings("unused")
     private static final byte[] data_00002;
     static {
         byte[] data = new byte[1];

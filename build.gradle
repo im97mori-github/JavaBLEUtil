@@ -11,8 +11,8 @@ allprojects {
 }
 
 ext.myGroupId = 'org.im97mori'
-ext.loadVersion = '0.8.6'
-ext.uploadVersion = '0.8.6'
+ext.loadVersion = '0.8.7'
+ext.uploadVersion = '0.8.7'
 
 ext.coreConstantsAppearance = 'ble-core-constants-appearance'
 ext.coreConstantsCharacteristic = 'ble-core-constants-characteristic'
@@ -71,7 +71,7 @@ subprojects {
     targetCompatibility = 1.8
 
     dependencies {
-        implementation 'androidx.annotation:annotation:1.3.0'
+        implementation 'androidx.annotation:annotation:1.6.0'
         testImplementation junit
     }
     

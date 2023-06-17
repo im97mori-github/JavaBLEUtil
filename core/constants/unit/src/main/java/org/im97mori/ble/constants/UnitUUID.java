@@ -8,8 +8,8 @@ import java.util.UUID;
 /**
  * BLE GATT Unit UUID
  * <p>
- * 16-bit UUID Numbers Document.pdf
- * Revision Date: 2021-10-01
+ * https://bitbucket.org/bluetooth-SIG/public/src/main/
+ * commit 6557f28af8b95de6b09d6e0d96cf51651fba32ff
  */
 public class UnitUUID {
 
@@ -17,6 +17,7 @@ public class UnitUUID {
 
         private Map128() {
             super();
+            //@formatter:off
             put(UUID.fromString("00002700-0000-1000-8000-00805f9b34fb"), "unitless");
             put(UUID.fromString("00002701-0000-1000-8000-00805f9b34fb"), "length (metre)");
             put(UUID.fromString("00002702-0000-1000-8000-00805f9b34fb"), "mass (kilogram)");
@@ -138,8 +139,12 @@ public class UnitUUID {
             put(UUID.fromString("000027c1-0000-1000-8000-00805f9b34fb"), "mass flow (gram per second)");
             put(UUID.fromString("000027c2-0000-1000-8000-00805f9b34fb"), "volume flow (litre per second)");
             put(UUID.fromString("000027c3-0000-1000-8000-00805f9b34fb"), "sound pressure (decibel)");
-            put(UUID.fromString("000027c4-0000-1000-8000-00805f9b34fb"), "concentration (parts per million)");
-            put(UUID.fromString("000027c5-0000-1000-8000-00805f9b34fb"), "concentration (parts per billion)");
+            put(UUID.fromString("000027c4-0000-1000-8000-00805f9b34fb"), "parts per million");
+            put(UUID.fromString("000027c5-0000-1000-8000-00805f9b34fb"), "parts per billion");
+            put(UUID.fromString("000027c6-0000-1000-8000-00805f9b34fb"), "mass density rate ((milligram per decilitre) per minute)");
+            put(UUID.fromString("000027c7-0000-1000-8000-00805f9b34fb"), "Electrical Apparent Energy (kilovolt ampere hour)");
+            put(UUID.fromString("000027c8-0000-1000-8000-00805f9b34fb"), "Electrical Apparent Power (volt ampere)");
+            //@formatter:on
         }
     }
 
@@ -551,7 +556,7 @@ public class UnitUUID {
     /**
      * length (ångström) (Unit UUID: 0x2782)
      */
-    public static final UUID LENGTH_åNGSTRöM_UNIT = UUID.fromString("00002782-0000-1000-8000-00805f9b34fb");
+    public static final UUID LENGTH_ÅNGSTRöM_UNIT = UUID.fromString("00002782-0000-1000-8000-00805f9b34fb");
 
     /**
      * length (nautical mile) (Unit UUID: 0x2783)
@@ -754,13 +759,28 @@ public class UnitUUID {
     public static final UUID SOUND_PRESSURE_DECIBEL_SPL_UNIT = UUID.fromString("000027c3-0000-1000-8000-00805f9b34fb");
 
     /**
-     * concentration (parts per million) (Unit UUID: 0x27c4)
+     * parts per million (Unit UUID: 0x27c4)
      */
-    public static final UUID CONCENTRATION_PARTS_PER_MILLION_UNIT = UUID.fromString("000027c4-0000-1000-8000-00805f9b34fb");
+    public static final UUID PPM_UNIT = UUID.fromString("000027c4-0000-1000-8000-00805f9b34fb");
 
     /**
-     * concentration (parts per billion) (Unit UUID: 0x27c5)
+     * parts per billion (Unit UUID: 0x27c5)
      */
-    public static final UUID CONCENTRATION_PARTS_PER_BILLION_UNIT = UUID.fromString("000027c5-0000-1000-8000-00805f9b34fb");
+    public static final UUID PPB_UNIT = UUID.fromString("000027c5-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * mass density rate ((milligram per decilitre) per minute) (Unit UUID: 0x27c6)
+     */
+    public static final UUID MASS_DENSITY_RATE_MILLIGRAM_PER_DECILITRE_PER_MINUTE_UNIT = UUID.fromString("000027c6-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Electrical Apparent Energy (kilovolt ampere hour) (Unit UUID: 0x27c7)
+     */
+    public static final UUID ENERGY_KILOVOLT_AMPERE_HOUR_UNIT = UUID.fromString("000027c7-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Electrical Apparent Power (volt ampere) (Unit UUID: 0x27c8)
+     */
+    public static final UUID POWER_VOLT_AMPERE_UNIT = UUID.fromString("000027c8-0000-1000-8000-00805f9b34fb");
 
 }

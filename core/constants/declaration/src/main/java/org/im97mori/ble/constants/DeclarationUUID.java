@@ -8,8 +8,8 @@ import java.util.UUID;
 /**
  * BLE GATT Declaration UUID
  * <p>
- * 16-bit UUID Numbers Document.pdf
- * Revision Date: 2021-10-01
+ * https://bitbucket.org/bluetooth-SIG/public/src/main/
+ * commit 6557f28af8b95de6b09d6e0d96cf51651fba32ff
  */
 public class DeclarationUUID {
 

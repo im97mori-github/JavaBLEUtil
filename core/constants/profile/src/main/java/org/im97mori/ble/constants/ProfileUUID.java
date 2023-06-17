@@ -36,7 +36,7 @@ public class ProfileUUID {
             put(UUID.fromString("0000110f-0000-1000-8000-00805f9b34fb"), "A/V_RemoteControlController");
             put(UUID.fromString("00001110-0000-1000-8000-00805f9b34fb"), "Intercom");
             put(UUID.fromString("00001111-0000-1000-8000-00805f9b34fb"), "Fax");
-            put(UUID.fromString("00001112-0000-1000-8000-00805f9b34fb"), "Headset - Audio Gateway ");
+            put(UUID.fromString("00001112-0000-1000-8000-00805f9b34fb"), "Headset - Audio Gateway");
             put(UUID.fromString("00001113-0000-1000-8000-00805f9b34fb"), "WAP");
             put(UUID.fromString("00001114-0000-1000-8000-00805f9b34fb"), "WAP_CLIENT");
             put(UUID.fromString("00001115-0000-1000-8000-00805f9b34fb"), "PANU");
@@ -72,8 +72,8 @@ public class ProfileUUID {
             put(UUID.fromString("00001137-0000-1000-8000-00805f9b34fb"), "3D Display");
             put(UUID.fromString("00001138-0000-1000-8000-00805f9b34fb"), "3D Glasses");
             put(UUID.fromString("00001139-0000-1000-8000-00805f9b34fb"), "3D Synchronization");
-            put(UUID.fromString("0000113a-0000-1000-8000-00805f9b34fb"), "MPS Profile UUID");
-            put(UUID.fromString("0000113b-0000-1000-8000-00805f9b34fb"), "MPS SC UUID");
+            put(UUID.fromString("0000113a-0000-1000-8000-00805f9b34fb"), "MPS Profile");
+            put(UUID.fromString("0000113b-0000-1000-8000-00805f9b34fb"), "MPS SC");
             put(UUID.fromString("0000113c-0000-1000-8000-00805f9b34fb"), "CTN Access Service");
             put(UUID.fromString("0000113d-0000-1000-8000-00805f9b34fb"), "CTN Notification Service");
             put(UUID.fromString("0000113e-0000-1000-8000-00805f9b34fb"), "CTN Profile");
@@ -100,6 +100,7 @@ public class ProfileUUID {
     /**
      * 16-bit UUID Numbers Document.pdf
      */
-    public static final Map<UUID, String> PROFILE_MAPPING_128 = Collections.synchronizedMap(Collections.unmodifiableMap(new Map128()));
+    public static final Map<UUID, String> PROFILE_MAPPING_128 = Collections
+            .synchronizedMap(Collections.unmodifiableMap(new Map128()));
 
 }

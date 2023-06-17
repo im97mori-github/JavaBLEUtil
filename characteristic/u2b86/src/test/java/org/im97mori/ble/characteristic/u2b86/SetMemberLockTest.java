@@ -13,20 +13,20 @@ import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
 @SuppressWarnings({ "unused" })
-public class LockCharacteristicTest extends TestBase {
+public class SetMemberLockTest extends TestBase {
 
 	//@formatter:off
     private static final byte[] data_00001;
     static {
         byte[] data = new byte[1];
-        data[ 0] = LockCharacteristic.UNLOCKED;
+        data[ 0] = SetMemberLock.UNLOCKED;
         data_00001 = data;
     }
 
     private static final byte[] data_00002;
     static {
         byte[] data = new byte[1];
-        data[ 0] = LockCharacteristic.LOCKED;
+        data[ 0] = SetMemberLock.LOCKED;
         data_00002 = data;
     }
     //@formatter:on
@@ -35,7 +35,7 @@ public class LockCharacteristicTest extends TestBase {
 	public void test_constructor_00001() {
 		byte[] data = getData();
 
-		LockCharacteristic result1 = new LockCharacteristic(data);
+		SetMemberLock result1 = new SetMemberLock(data);
 		assertEquals(BLEUtils.createUInt8(data, 0), result1.getSetMemberLock());
 		assertTrue(result1.isSetMemberLockUnlocked());
 		assertFalse(result1.isSetMemberLockLocked());
@@ -45,7 +45,7 @@ public class LockCharacteristicTest extends TestBase {
 	public void test_constructor_00002() {
 		byte[] data = getData();
 
-		LockCharacteristic result1 = new LockCharacteristic(data);
+		SetMemberLock result1 = new SetMemberLock(data);
 		assertEquals(BLEUtils.createUInt8(data, 0), result1.getSetMemberLock());
 		assertFalse(result1.isSetMemberLockUnlocked());
 		assertTrue(result1.isSetMemberLockLocked());
@@ -53,9 +53,9 @@ public class LockCharacteristicTest extends TestBase {
 
 	@Test
 	public void test_constructor_00101() {
-		int setMemberLock = LockCharacteristic.UNLOCKED;
+		int setMemberLock = SetMemberLock.UNLOCKED;
 
-		LockCharacteristic result1 = new LockCharacteristic(setMemberLock);
+		SetMemberLock result1 = new SetMemberLock(setMemberLock);
 		assertEquals(setMemberLock, result1.getSetMemberLock());
 		assertTrue(result1.isSetMemberLockUnlocked());
 		assertFalse(result1.isSetMemberLockLocked());
@@ -63,9 +63,9 @@ public class LockCharacteristicTest extends TestBase {
 
 	@Test
 	public void test_constructor_00102() {
-		int setMemberLock = LockCharacteristic.LOCKED;
+		int setMemberLock = SetMemberLock.LOCKED;
 
-		LockCharacteristic result1 = new LockCharacteristic(setMemberLock);
+		SetMemberLock result1 = new SetMemberLock(setMemberLock);
 		assertEquals(setMemberLock, result1.getSetMemberLock());
 		assertFalse(result1.isSetMemberLockUnlocked());
 		assertTrue(result1.isSetMemberLockLocked());
@@ -75,7 +75,7 @@ public class LockCharacteristicTest extends TestBase {
 	public void test_parcelable_2_00001() {
 		byte[] data = getData();
 
-		LockCharacteristic result1 = new LockCharacteristic(data);
+		SetMemberLock result1 = new SetMemberLock(data);
 		assertArrayEquals(data, result1.getBytes());
 	}
 
@@ -83,7 +83,7 @@ public class LockCharacteristicTest extends TestBase {
 	public void test_parcelable_2_00002() {
 		byte[] data = getData();
 
-		LockCharacteristic result1 = new LockCharacteristic(data);
+		SetMemberLock result1 = new SetMemberLock(data);
 		assertArrayEquals(data, result1.getBytes());
 	}
 

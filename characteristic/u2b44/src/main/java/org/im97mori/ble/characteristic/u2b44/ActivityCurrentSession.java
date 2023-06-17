@@ -1,21 +1,21 @@
-package org.im97mori.ble.characteristic.u2b80;
+package org.im97mori.ble.characteristic.u2b44;
 
 import org.im97mori.ble.ByteArrayInterface;
 
 import androidx.annotation.NonNull;
 
 /**
- * Offset State (Characteristics UUID: 0x2B80)
+ * Activity Current Session (Characteristics UUID: 0x2B44)
  */
-// TODO Volume Offset Control Service Volume Offset State?
-public class OffsetState implements ByteArrayInterface {
+// TODO Physical Activity Monitor Service
+public class ActivityCurrentSession implements ByteArrayInterface {
 
     /**
      * Constructor from byte array
      *
      * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
-    public OffsetState(@NonNull byte[] values) {
+    public ActivityCurrentSession(@NonNull byte[] values) {
     }
 
     /**

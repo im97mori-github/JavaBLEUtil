@@ -2,9 +2,11 @@ package org.im97mori.ble.constants;
 
 /**
  * <p>
- * Core Specification v5.3 Vol 3 Part F 3.4.1 Revision Date: 2021-07-13
- * Supplement to the Bluetooth Core Specification v10 Part B 1.2
- * </p>
+ * Core Specification v5.4 Vol 3 Part F 3.4.1 Revision Date: 2023-01-31
+ * Supplement to the Bluetooth Core Specification v11 Part B 1.2
+ * <p>
+ * https://bitbucket.org/bluetooth-SIG/public/src/main/
+ * commit 6557f28af8b95de6b09d6e0d96cf51651fba32ff
  */
 public class ErrorCode {
 

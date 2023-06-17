@@ -8,8 +8,8 @@ import java.util.UUID;
 /**
  * BLE GATT Characteristic UUID
  * <p>
- * 16-bit UUID Numbers Document.pdf
- * Revision Date: 2021-10-01
+ * https://bitbucket.org/bluetooth-SIG/public/src/main/
+ * commit 6557f28af8b95de6b09d6e0d96cf51651fba32ff
  */
 public class CharacteristicUUID {
 
@@ -17,6 +17,7 @@ public class CharacteristicUUID {
 
         private Map128() {
             super();
+            //@formatter:off
             put(UUID.fromString("00002a00-0000-1000-8000-00805f9b34fb"), "Device Name");
             put(UUID.fromString("00002a01-0000-1000-8000-00805f9b34fb"), "Appearance");
             put(UUID.fromString("00002a02-0000-1000-8000-00805f9b34fb"), "Peripheral Privacy Flag");
@@ -87,8 +88,6 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002a53-0000-1000-8000-00805f9b34fb"), "RSC Measurement");
             put(UUID.fromString("00002a54-0000-1000-8000-00805f9b34fb"), "RSC Feature");
             put(UUID.fromString("00002a55-0000-1000-8000-00805f9b34fb"), "SC Control Point");
-            put(UUID.fromString("00002a56-0000-1000-8000-00805f9b34fb"), "Digital");
-            put(UUID.fromString("00002a58-0000-1000-8000-00805f9b34fb"), "Analog");
             put(UUID.fromString("00002a5a-0000-1000-8000-00805f9b34fb"), "Aggregate");
             put(UUID.fromString("00002a5b-0000-1000-8000-00805f9b34fb"), "CSC Measurement");
             put(UUID.fromString("00002a5c-0000-1000-8000-00805f9b34fb"), "CSC Feature");
@@ -186,20 +185,18 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002abb-0000-1000-8000-00805f9b34fb"), "HTTPS Security");
             put(UUID.fromString("00002abc-0000-1000-8000-00805f9b34fb"), "TDS Control Point");
             put(UUID.fromString("00002abd-0000-1000-8000-00805f9b34fb"), "OTS Feature");
-            put(UUID.fromString("00002abe-0000-1000-8000-00805f9b34fb"), "object name");
-            put(UUID.fromString("00002abf-0000-1000-8000-00805f9b34fb"), "object type");
-            put(UUID.fromString("00002ac0-0000-1000-8000-00805f9b34fb"), "object size");
-            put(UUID.fromString("00002ac1-0000-1000-8000-00805f9b34fb"), "object first created");
-            put(UUID.fromString("00002ac2-0000-1000-8000-00805f9b34fb"), "object last modified");
-            put(UUID.fromString("00002ac3-0000-1000-8000-00805f9b34fb"), "object ID");
-            put(UUID.fromString("00002ac4-0000-1000-8000-00805f9b34fb"), "object properties");
-            put(UUID.fromString("00002ac5-0000-1000-8000-00805f9b34fb"), "object actioncontrol point");
-            put(UUID.fromString("00002ac6-0000-1000-8000-00805f9b34fb"), "object list control point");
-            put(UUID.fromString("00002ac7-0000-1000-8000-00805f9b34fb"), "object list filter");
-            put(UUID.fromString("00002ac8-0000-1000-8000-00805f9b34fb"), "object changed");
+            put(UUID.fromString("00002abe-0000-1000-8000-00805f9b34fb"), "Object Name");
+            put(UUID.fromString("00002abf-0000-1000-8000-00805f9b34fb"), "Object Type");
+            put(UUID.fromString("00002ac0-0000-1000-8000-00805f9b34fb"), "Object Size");
+            put(UUID.fromString("00002ac1-0000-1000-8000-00805f9b34fb"), "Object First-Created");
+            put(UUID.fromString("00002ac2-0000-1000-8000-00805f9b34fb"), "Object Last-Modified");
+            put(UUID.fromString("00002ac3-0000-1000-8000-00805f9b34fb"), "Object ID");
+            put(UUID.fromString("00002ac4-0000-1000-8000-00805f9b34fb"), "Object Properties");
+            put(UUID.fromString("00002ac5-0000-1000-8000-00805f9b34fb"), "Object Action Control Point");
+            put(UUID.fromString("00002ac6-0000-1000-8000-00805f9b34fb"), "Object List Control Point");
+            put(UUID.fromString("00002ac7-0000-1000-8000-00805f9b34fb"), "Object List Filter");
+            put(UUID.fromString("00002ac8-0000-1000-8000-00805f9b34fb"), "Object Changed");
             put(UUID.fromString("00002ac9-0000-1000-8000-00805f9b34fb"), "Resolvable Private Address Only");
-            put(UUID.fromString("00002aca-0000-1000-8000-00805f9b34fb"), "Unspecified");
-            put(UUID.fromString("00002acb-0000-1000-8000-00805f9b34fb"), "Directory Listing");
             put(UUID.fromString("00002acc-0000-1000-8000-00805f9b34fb"), "Fitness Machine Feature");
             put(UUID.fromString("00002acd-0000-1000-8000-00805f9b34fb"), "Treadmill Data");
             put(UUID.fromString("00002ace-0000-1000-8000-00805f9b34fb"), "Cross Trainer Data");
@@ -222,9 +219,9 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002ae0-0000-1000-8000-00805f9b34fb"), "Average Current");
             put(UUID.fromString("00002ae1-0000-1000-8000-00805f9b34fb"), "Average Voltage");
             put(UUID.fromString("00002ae2-0000-1000-8000-00805f9b34fb"), "Boolean");
-            put(UUID.fromString("00002ae3-0000-1000-8000-00805f9b34fb"), "Chromatic Distance From Planckian");
+            put(UUID.fromString("00002ae3-0000-1000-8000-00805f9b34fb"), "Chromatic Distance from Planckian");
             put(UUID.fromString("00002ae4-0000-1000-8000-00805f9b34fb"), "Chromaticity Coordinates");
-            put(UUID.fromString("00002ae5-0000-1000-8000-00805f9b34fb"), "Chromaticity in CCT And Duv Values");
+            put(UUID.fromString("00002ae5-0000-1000-8000-00805f9b34fb"), "Chromaticity in CCT and Duv Values");
             put(UUID.fromString("00002ae6-0000-1000-8000-00805f9b34fb"), "Chromaticity Tolerance");
             put(UUID.fromString("00002ae7-0000-1000-8000-00805f9b34fb"), "CIE 13.3-1995 Color Rendering Index");
             put(UUID.fromString("00002ae8-0000-1000-8000-00805f9b34fb"), "Coefficient");
@@ -238,7 +235,7 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002af0-0000-1000-8000-00805f9b34fb"), "Electric Current Specification");
             put(UUID.fromString("00002af1-0000-1000-8000-00805f9b34fb"), "Electric Current Statistics");
             put(UUID.fromString("00002af2-0000-1000-8000-00805f9b34fb"), "Energy");
-            put(UUID.fromString("00002af3-0000-1000-8000-00805f9b34fb"), "Energy In A Period Of Day");
+            put(UUID.fromString("00002af3-0000-1000-8000-00805f9b34fb"), "Energy in a Period of Day");
             put(UUID.fromString("00002af4-0000-1000-8000-00805f9b34fb"), "Event Statistics");
             put(UUID.fromString("00002af5-0000-1000-8000-00805f9b34fb"), "Fixed String 16");
             put(UUID.fromString("00002af6-0000-1000-8000-00805f9b34fb"), "Fixed String 24");
@@ -258,14 +255,14 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002b04-0000-1000-8000-00805f9b34fb"), "Percentage 8");
             put(UUID.fromString("00002b05-0000-1000-8000-00805f9b34fb"), "Power");
             put(UUID.fromString("00002b06-0000-1000-8000-00805f9b34fb"), "Power Specification");
-            put(UUID.fromString("00002b07-0000-1000-8000-00805f9b34fb"), "Relative Runtime In A Current Range");
-            put(UUID.fromString("00002b08-0000-1000-8000-00805f9b34fb"), "Relative Runtime In A Generic Level Range");
-            put(UUID.fromString("00002b09-0000-1000-8000-00805f9b34fb"), "Relative Value In A Voltage Range");
-            put(UUID.fromString("00002b0a-0000-1000-8000-00805f9b34fb"), "Relative Value In An Illuminance Range");
-            put(UUID.fromString("00002b0b-0000-1000-8000-00805f9b34fb"), "Relative Value In A Period Of Day");
-            put(UUID.fromString("00002b0c-0000-1000-8000-00805f9b34fb"), "Relative Value In A Temperature Range");
+            put(UUID.fromString("00002b07-0000-1000-8000-00805f9b34fb"), "Relative Runtime in a Current Range");
+            put(UUID.fromString("00002b08-0000-1000-8000-00805f9b34fb"), "Relative Runtime in a Generic Level Range");
+            put(UUID.fromString("00002b09-0000-1000-8000-00805f9b34fb"), "Relative Value in a Voltage Range");
+            put(UUID.fromString("00002b0a-0000-1000-8000-00805f9b34fb"), "Relative Value in an Illuminance Range");
+            put(UUID.fromString("00002b0b-0000-1000-8000-00805f9b34fb"), "Relative Value in a Period of Day");
+            put(UUID.fromString("00002b0c-0000-1000-8000-00805f9b34fb"), "Relative Value in a Temperature Range");
             put(UUID.fromString("00002b0d-0000-1000-8000-00805f9b34fb"), "Temperature 8");
-            put(UUID.fromString("00002b0e-0000-1000-8000-00805f9b34fb"), "Temperature 8 In A Period Of Day");
+            put(UUID.fromString("00002b0e-0000-1000-8000-00805f9b34fb"), "Temperature 8 in a Period of Day");
             put(UUID.fromString("00002b0f-0000-1000-8000-00805f9b34fb"), "Temperature 8 Statistics");
             put(UUID.fromString("00002b10-0000-1000-8000-00805f9b34fb"), "Temperature Range");
             put(UUID.fromString("00002b11-0000-1000-8000-00805f9b34fb"), "Temperature Statistics");
@@ -298,6 +295,11 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002b2c-0000-1000-8000-00805f9b34fb"), "BSS Response");
             put(UUID.fromString("00002b2d-0000-1000-8000-00805f9b34fb"), "Emergency ID");
             put(UUID.fromString("00002b2e-0000-1000-8000-00805f9b34fb"), "Emergency Text");
+            put(UUID.fromString("00002b2f-0000-1000-8000-00805f9b34fb"), "ACS Status");
+            put(UUID.fromString("00002b30-0000-1000-8000-00805f9b34fb"), "ACS Data In");
+            put(UUID.fromString("00002b31-0000-1000-8000-00805f9b34fb"), "ACS Data Out Notify");
+            put(UUID.fromString("00002b32-0000-1000-8000-00805f9b34fb"), "ACS Data Out Indicate");
+            put(UUID.fromString("00002b33-0000-1000-8000-00805f9b34fb"), "ACS Control Point");
             put(UUID.fromString("00002b34-0000-1000-8000-00805f9b34fb"), "Enhanced Blood Pressure Measurement");
             put(UUID.fromString("00002b35-0000-1000-8000-00805f9b34fb"), "Enhanced Intermediate Cuff Pressure");
             put(UUID.fromString("00002b36-0000-1000-8000-00805f9b34fb"), "Blood Pressure Record");
@@ -314,8 +316,8 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002b41-0000-1000-8000-00805f9b34fb"), "Sleep Activity Instantaneous Data");
             put(UUID.fromString("00002b42-0000-1000-8000-00805f9b34fb"), "Sleep Activity Summary Data");
             put(UUID.fromString("00002b43-0000-1000-8000-00805f9b34fb"), "Physical Activity Monitor Control Point");
-            put(UUID.fromString("00002b44-0000-1000-8000-00805f9b34fb"), "Current Session");
-            put(UUID.fromString("00002b45-0000-1000-8000-00805f9b34fb"), "Session");
+            put(UUID.fromString("00002b44-0000-1000-8000-00805f9b34fb"), "Activity Current Session");
+            put(UUID.fromString("00002b45-0000-1000-8000-00805f9b34fb"), "Physical Activity Session Descriptor");
             put(UUID.fromString("00002b46-0000-1000-8000-00805f9b34fb"), "Preferred Units");
             put(UUID.fromString("00002b47-0000-1000-8000-00805f9b34fb"), "High Resolution Height");
             put(UUID.fromString("00002b48-0000-1000-8000-00805f9b34fb"), "Middle Name");
@@ -327,6 +329,7 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002b4e-0000-1000-8000-00805f9b34fb"), "Activity Goal");
             put(UUID.fromString("00002b4f-0000-1000-8000-00805f9b34fb"), "Sedentary Interval Notification");
             put(UUID.fromString("00002b50-0000-1000-8000-00805f9b34fb"), "Caloric Intake");
+            put(UUID.fromString("00002b51-0000-1000-8000-00805f9b34fb"), "TMAP Role");
             put(UUID.fromString("00002b77-0000-1000-8000-00805f9b34fb"), "Audio Input State");
             put(UUID.fromString("00002b78-0000-1000-8000-00805f9b34fb"), "Gain Settings Attribute");
             put(UUID.fromString("00002b79-0000-1000-8000-00805f9b34fb"), "Audio Input Type");
@@ -336,14 +339,19 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002b7d-0000-1000-8000-00805f9b34fb"), "Volume State");
             put(UUID.fromString("00002b7e-0000-1000-8000-00805f9b34fb"), "Volume Control Point");
             put(UUID.fromString("00002b7f-0000-1000-8000-00805f9b34fb"), "Volume Flags");
-            put(UUID.fromString("00002b80-0000-1000-8000-00805f9b34fb"), "Offset State");
+            put(UUID.fromString("00002b80-0000-1000-8000-00805f9b34fb"), "Volume Offset State");
             put(UUID.fromString("00002b81-0000-1000-8000-00805f9b34fb"), "Audio Location");
             put(UUID.fromString("00002b82-0000-1000-8000-00805f9b34fb"), "Volume Offset Control Point");
             put(UUID.fromString("00002b83-0000-1000-8000-00805f9b34fb"), "Audio Output Description");
-            put(UUID.fromString("00002b84-0000-1000-8000-00805f9b34fb"), "Set Identity Resolving Key Characteristic");
-            put(UUID.fromString("00002b85-0000-1000-8000-00805f9b34fb"), "Size Characteristic");
-            put(UUID.fromString("00002b86-0000-1000-8000-00805f9b34fb"), "Lock Characteristic");
-            put(UUID.fromString("00002b87-0000-1000-8000-00805f9b34fb"), "Rank Characteristic");
+            put(UUID.fromString("00002b84-0000-1000-8000-00805f9b34fb"), "Set Identity Resolving Key");
+            put(UUID.fromString("00002b85-0000-1000-8000-00805f9b34fb"), "Coordinated Set Size");
+            put(UUID.fromString("00002b86-0000-1000-8000-00805f9b34fb"), "Set Member Lock");
+            put(UUID.fromString("00002b87-0000-1000-8000-00805f9b34fb"), "Set Member Rank");
+            put(UUID.fromString("00002b88-0000-1000-8000-00805f9b34fb"), "Encrypted Data Key Material");
+            put(UUID.fromString("00002b89-0000-1000-8000-00805f9b34fb"), "Apparent Energy 32");
+            put(UUID.fromString("00002b8a-0000-1000-8000-00805f9b34fb"), "Apparent Power");
+            put(UUID.fromString("00002b8c-0000-1000-8000-00805f9b34fb"), "CO2 Concentration");
+            put(UUID.fromString("00002b8d-0000-1000-8000-00805f9b34fb"), "Cosine of the Angle");
             put(UUID.fromString("00002b8e-0000-1000-8000-00805f9b34fb"), "Device Time Feature");
             put(UUID.fromString("00002b8f-0000-1000-8000-00805f9b34fb"), "Device Time Parameters");
             put(UUID.fromString("00002b90-0000-1000-8000-00805f9b34fb"), "Device Time");
@@ -370,6 +378,7 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002ba5-0000-1000-8000-00805f9b34fb"), "Media Control Point Opcodes Supported");
             put(UUID.fromString("00002ba6-0000-1000-8000-00805f9b34fb"), "Search Results Object ID");
             put(UUID.fromString("00002ba7-0000-1000-8000-00805f9b34fb"), "Search Control Point");
+            put(UUID.fromString("00002ba8-0000-1000-8000-00805f9b34fb"), "Energy 32");
             put(UUID.fromString("00002ba9-0000-1000-8000-00805f9b34fb"), "Media Player Icon Object Type");
             put(UUID.fromString("00002baa-0000-1000-8000-00805f9b34fb"), "Track Segments Object Type");
             put(UUID.fromString("00002bab-0000-1000-8000-00805f9b34fb"), "Track Object Type");
@@ -419,6 +428,43 @@ public class CharacteristicUUID {
             put(UUID.fromString("00002bd7-0000-1000-8000-00805f9b34fb"), "Particulate Matter - PM10 Concentration");
             put(UUID.fromString("00002bd8-0000-1000-8000-00805f9b34fb"), "Sulfur Dioxide Concentration");
             put(UUID.fromString("00002bd9-0000-1000-8000-00805f9b34fb"), "Sulfur Hexafluoride Concentration");
+            put(UUID.fromString("00002bda-0000-1000-8000-00805f9b34fb"), "Hearing Aid Features");
+            put(UUID.fromString("00002bdb-0000-1000-8000-00805f9b34fb"), "Hearing Aid Preset Control Point");
+            put(UUID.fromString("00002bdc-0000-1000-8000-00805f9b34fb"), "Active Preset Index");
+            put(UUID.fromString("00002bde-0000-1000-8000-00805f9b34fb"), "Fixed String 64");
+            put(UUID.fromString("00002bdf-0000-1000-8000-00805f9b34fb"), "High Temperature");
+            put(UUID.fromString("00002be0-0000-1000-8000-00805f9b34fb"), "High Voltage");
+            put(UUID.fromString("00002be1-0000-1000-8000-00805f9b34fb"), "Light Distribution");
+            put(UUID.fromString("00002be2-0000-1000-8000-00805f9b34fb"), "Light Output");
+            put(UUID.fromString("00002be3-0000-1000-8000-00805f9b34fb"), "Light Source Type");
+            put(UUID.fromString("00002be4-0000-1000-8000-00805f9b34fb"), "Noise");
+            put(UUID.fromString("00002be5-0000-1000-8000-00805f9b34fb"), "Relative Runtime in a Correlated Color Temperature Range");
+            put(UUID.fromString("00002be6-0000-1000-8000-00805f9b34fb"), "Time Second 32");
+            put(UUID.fromString("00002be7-0000-1000-8000-00805f9b34fb"), "VOC Concentration");
+            put(UUID.fromString("00002be8-0000-1000-8000-00805f9b34fb"), "Voltage Frequency");
+            put(UUID.fromString("00002be9-0000-1000-8000-00805f9b34fb"), "Battery Critical Status");
+            put(UUID.fromString("00002bea-0000-1000-8000-00805f9b34fb"), "Battery Health Status");
+            put(UUID.fromString("00002beb-0000-1000-8000-00805f9b34fb"), "Battery Health Information");
+            put(UUID.fromString("00002bec-0000-1000-8000-00805f9b34fb"), "Battery Information");
+            put(UUID.fromString("00002bed-0000-1000-8000-00805f9b34fb"), "Battery Level Status");
+            put(UUID.fromString("00002bee-0000-1000-8000-00805f9b34fb"), "Battery Time Status");
+            put(UUID.fromString("00002bef-0000-1000-8000-00805f9b34fb"), "Estimated Service Date");
+            put(UUID.fromString("00002bf0-0000-1000-8000-00805f9b34fb"), "Battery Energy Status");
+            put(UUID.fromString("00002bf5-0000-1000-8000-00805f9b34fb"), "LE GATT Security Levels");
+            put(UUID.fromString("00002bf6-0000-1000-8000-00805f9b34fb"), "ESL Address");
+            put(UUID.fromString("00002bf7-0000-1000-8000-00805f9b34fb"), "AP Sync Key Material");
+            put(UUID.fromString("00002bf8-0000-1000-8000-00805f9b34fb"), "ESL Response Key Material");
+            put(UUID.fromString("00002bf9-0000-1000-8000-00805f9b34fb"), "ESL Current Absolute Time");
+            put(UUID.fromString("00002bfa-0000-1000-8000-00805f9b34fb"), "ESL Display Information");
+            put(UUID.fromString("00002bfb-0000-1000-8000-00805f9b34fb"), "ESL Image Information");
+            put(UUID.fromString("00002bfc-0000-1000-8000-00805f9b34fb"), "ESL Sensor Information");
+            put(UUID.fromString("00002bfd-0000-1000-8000-00805f9b34fb"), "ESL LED Information");
+            put(UUID.fromString("00002bfe-0000-1000-8000-00805f9b34fb"), "ESL Control Point");
+            put(UUID.fromString("00002a56-0000-1000-8000-00805f9b34fb"), "Digital");
+            put(UUID.fromString("00002a58-0000-1000-8000-00805f9b34fb"), "Analog");
+            put(UUID.fromString("00002aca-0000-1000-8000-00805f9b34fb"), "Unspecified");
+            put(UUID.fromString("00002acb-0000-1000-8000-00805f9b34fb"), "Directory Listing");
+            //@formatter:on
         }
 
     }
@@ -777,16 +823,6 @@ public class CharacteristicUUID {
      * SC Control Point (Characteristic UUID: 0x2a55)
      */
     public static final UUID SC_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002a55-0000-1000-8000-00805f9b34fb");
-
-    /**
-     * Digital (Characteristic UUID: 0x2a56)
-     */
-    public static final UUID DIGITAL_CHARACTERISTIC = UUID.fromString("00002a56-0000-1000-8000-00805f9b34fb");
-
-    /**
-     * Analog (Characteristic UUID: 0x2a58)
-     */
-    public static final UUID ANALOG_CHARACTERISTIC = UUID.fromString("00002a58-0000-1000-8000-00805f9b34fb");
 
     /**
      * Aggregate (Characteristic UUID: 0x2a5a)
@@ -1274,57 +1310,57 @@ public class CharacteristicUUID {
     public static final UUID OTS_FEATURE_CHARACTERISTIC = UUID.fromString("00002abd-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object name (Characteristic UUID: 0x2abe)
+     * Object Name (Characteristic UUID: 0x2abe)
      */
     public static final UUID OBJECT_NAME_CHARACTERISTIC = UUID.fromString("00002abe-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object type (Characteristic UUID: 0x2abf)
+     * Object Type (Characteristic UUID: 0x2abf)
      */
     public static final UUID OBJECT_TYPE_CHARACTERISTIC = UUID.fromString("00002abf-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object size (Characteristic UUID: 0x2ac0)
+     * Object Size (Characteristic UUID: 0x2ac0)
      */
     public static final UUID OBJECT_SIZE_CHARACTERISTIC = UUID.fromString("00002ac0-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object first created (Characteristic UUID: 0x2ac1)
+     * Object First-Created (Characteristic UUID: 0x2ac1)
      */
     public static final UUID OBJECT_FIRST_CREATED_CHARACTERISTIC = UUID.fromString("00002ac1-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object last modified (Characteristic UUID: 0x2ac2)
+     * Object Last-Modified (Characteristic UUID: 0x2ac2)
      */
     public static final UUID OBJECT_LAST_MODIFIED_CHARACTERISTIC = UUID.fromString("00002ac2-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object ID (Characteristic UUID: 0x2ac3)
+     * Object ID (Characteristic UUID: 0x2ac3)
      */
     public static final UUID OBJECT_ID_CHARACTERISTIC = UUID.fromString("00002ac3-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object properties (Characteristic UUID: 0x2ac4)
+     * Object Properties (Characteristic UUID: 0x2ac4)
      */
     public static final UUID OBJECT_PROPERTIES_CHARACTERISTIC = UUID.fromString("00002ac4-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object actioncontrol point (Characteristic UUID: 0x2ac5)
+     * Object Action Control Point (Characteristic UUID: 0x2ac5)
      */
     public static final UUID OBJECT_ACTION_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002ac5-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object list control point (Characteristic UUID: 0x2ac6)
+     * Object List Control Point (Characteristic UUID: 0x2ac6)
      */
     public static final UUID OBJECT_LIST_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002ac6-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object list filter (Characteristic UUID: 0x2ac7)
+     * Object List Filter (Characteristic UUID: 0x2ac7)
      */
     public static final UUID OBJECT_LIST_FILTER_CHARACTERISTIC = UUID.fromString("00002ac7-0000-1000-8000-00805f9b34fb");
 
     /**
-     * object changed (Characteristic UUID: 0x2ac8)
+     * Object Changed (Characteristic UUID: 0x2ac8)
      */
     public static final UUID OBJECT_CHANGED_CHARACTERISTIC = UUID.fromString("00002ac8-0000-1000-8000-00805f9b34fb");
 
@@ -1332,16 +1368,6 @@ public class CharacteristicUUID {
      * Resolvable Private Address Only (Characteristic UUID: 0x2ac9)
      */
     public static final UUID RESOLVABLE_PRIVATE_ADDRESS_ONLY_CHARACTERISTIC = UUID.fromString("00002ac9-0000-1000-8000-00805f9b34fb");
-
-    /**
-     * Unspecified (Characteristic UUID: 0x2aca)
-     */
-    public static final UUID UNSPECIFIED_CHARACTERISTIC = UUID.fromString("00002aca-0000-1000-8000-00805f9b34fb");
-
-    /**
-     * Directory Listing (Characteristic UUID: 0x2acb)
-     */
-    public static final UUID DIRECTORY_LISTING_CHARACTERISTIC = UUID.fromString("00002acb-0000-1000-8000-00805f9b34fb");
 
     /**
      * Fitness Machine Feature (Characteristic UUID: 0x2acc)
@@ -1454,7 +1480,7 @@ public class CharacteristicUUID {
     public static final UUID BOOLEAN_CHARACTERISTIC = UUID.fromString("00002ae2-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Chromatic Distance From Planckian (Characteristic UUID: 0x2ae3)
+     * Chromatic Distance from Planckian (Characteristic UUID: 0x2ae3)
      */
     public static final UUID CHROMATIC_DISTANCE_FROM_PLANCKIAN_CHARACTERISTIC = UUID.fromString("00002ae3-0000-1000-8000-00805f9b34fb");
 
@@ -1464,9 +1490,9 @@ public class CharacteristicUUID {
     public static final UUID CHROMATICITY_COORDINATES_CHARACTERISTIC = UUID.fromString("00002ae4-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Chromaticity in CCT And Duv Values (Characteristic UUID: 0x2ae5)
+     * Chromaticity in CCT and Duv Values (Characteristic UUID: 0x2ae5)
      */
-    public static final UUID CHROMATICITYIN_CCT_AND_DUV_VALUES_CHARACTERISTIC = UUID.fromString("00002ae5-0000-1000-8000-00805f9b34fb");
+    public static final UUID CHROMATICITY_IN_CCT_AND_DUV_VALUES_CHARACTERISTIC = UUID.fromString("00002ae5-0000-1000-8000-00805f9b34fb");
 
     /**
      * Chromaticity Tolerance (Characteristic UUID: 0x2ae6)
@@ -1476,7 +1502,7 @@ public class CharacteristicUUID {
     /**
      * CIE 13.3-1995 Color Rendering Index (Characteristic UUID: 0x2ae7)
      */
-    public static final UUID CIE13_3_1995_COLOR_RENDERING_INDEX_CHARACTERISTIC = UUID.fromString("00002ae7-0000-1000-8000-00805f9b34fb");
+    public static final UUID CIE_13_3_1995_COLOR_RENDERING_INDEX_CHARACTERISTIC = UUID.fromString("00002ae7-0000-1000-8000-00805f9b34fb");
 
     /**
      * Coefficient (Characteristic UUID: 0x2ae8)
@@ -1534,7 +1560,7 @@ public class CharacteristicUUID {
     public static final UUID ENERGY_CHARACTERISTIC = UUID.fromString("00002af2-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Energy In A Period Of Day (Characteristic UUID: 0x2af3)
+     * Energy in a Period of Day (Characteristic UUID: 0x2af3)
      */
     public static final UUID ENERGY_IN_A_PERIOD_OF_DAY_CHARACTERISTIC = UUID.fromString("00002af3-0000-1000-8000-00805f9b34fb");
 
@@ -1634,32 +1660,32 @@ public class CharacteristicUUID {
     public static final UUID POWER_SPECIFICATION_CHARACTERISTIC = UUID.fromString("00002b06-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Relative Runtime In A Current Range (Characteristic UUID: 0x2b07)
+     * Relative Runtime in a Current Range (Characteristic UUID: 0x2b07)
      */
     public static final UUID RELATIVE_RUNTIME_IN_A_CURRENT_RANGE_CHARACTERISTIC = UUID.fromString("00002b07-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Relative Runtime In A Generic Level Range (Characteristic UUID: 0x2b08)
+     * Relative Runtime in a Generic Level Range (Characteristic UUID: 0x2b08)
      */
     public static final UUID RELATIVE_RUNTIME_IN_A_GENERIC_LEVEL_RANGE_CHARACTERISTIC = UUID.fromString("00002b08-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Relative Value In A Voltage Range (Characteristic UUID: 0x2b09)
+     * Relative Value in a Voltage Range (Characteristic UUID: 0x2b09)
      */
     public static final UUID RELATIVE_VALUE_IN_A_VOLTAGE_RANGE_CHARACTERISTIC = UUID.fromString("00002b09-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Relative Value In An Illuminance Range (Characteristic UUID: 0x2b0a)
+     * Relative Value in an Illuminance Range (Characteristic UUID: 0x2b0a)
      */
     public static final UUID RELATIVE_VALUE_IN_AN_ILLUMINANCE_RANGE_CHARACTERISTIC = UUID.fromString("00002b0a-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Relative Value In A Period Of Day (Characteristic UUID: 0x2b0b)
+     * Relative Value in a Period of Day (Characteristic UUID: 0x2b0b)
      */
     public static final UUID RELATIVE_VALUE_IN_A_PERIOD_OF_DAY_CHARACTERISTIC = UUID.fromString("00002b0b-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Relative Value In A Temperature Range (Characteristic UUID: 0x2b0c)
+     * Relative Value in a Temperature Range (Characteristic UUID: 0x2b0c)
      */
     public static final UUID RELATIVE_VALUE_IN_A_TEMPERATURE_RANGE_CHARACTERISTIC = UUID.fromString("00002b0c-0000-1000-8000-00805f9b34fb");
 
@@ -1669,7 +1695,7 @@ public class CharacteristicUUID {
     public static final UUID TEMPERATURE_8_CHARACTERISTIC = UUID.fromString("00002b0d-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Temperature 8 In A Period Of Day (Characteristic UUID: 0x2b0e)
+     * Temperature 8 in a Period of Day (Characteristic UUID: 0x2b0e)
      */
     public static final UUID TEMPERATURE_8_IN_A_PERIOD_OF_DAY_CHARACTERISTIC = UUID.fromString("00002b0e-0000-1000-8000-00805f9b34fb");
 
@@ -1834,6 +1860,31 @@ public class CharacteristicUUID {
     public static final UUID EMERGENCY_TEXT_CHARACTERISTIC = UUID.fromString("00002b2e-0000-1000-8000-00805f9b34fb");
 
     /**
+     * ACS Status (Characteristic UUID: 0x2b2f)
+     */
+    public static final UUID ACS_STATUS_CHARACTERISTIC = UUID.fromString("00002b2f-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ACS Data In (Characteristic UUID: 0x2b30)
+     */
+    public static final UUID ACS_DATA_IN_CHARACTERISTIC = UUID.fromString("00002b30-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ACS Data Out Notify (Characteristic UUID: 0x2b31)
+     */
+    public static final UUID A_C_S_DATA_OUT_NOTIFY_CHARACTERISTIC = UUID.fromString("00002b31-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ACS Data Out Indicate (Characteristic UUID: 0x2b32)
+     */
+    public static final UUID ACS_DATA_OUT_INDICATE_CHARACTERISTIC = UUID.fromString("00002b32-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ACS Control Point (Characteristic UUID: 0x2b33)
+     */
+    public static final UUID ACS_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002b33-0000-1000-8000-00805f9b34fb");
+
+    /**
      * Enhanced Blood Pressure Measurement (Characteristic UUID: 0x2b34)
      */
     public static final UUID ENHANCED_BLOOD_PRESSURE_MEASUREMENT_CHARACTERISTIC = UUID.fromString("00002b34-0000-1000-8000-00805f9b34fb");
@@ -1914,14 +1965,14 @@ public class CharacteristicUUID {
     public static final UUID PHYSICAL_ACTIVITY_MONITOR_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002b43-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Current Session (Characteristic UUID: 0x2b44)
+     * Activity Current Session (Characteristic UUID: 0x2b44)
      */
-    public static final UUID CURRENT_SESSION_CHARACTERISTIC = UUID.fromString("00002b44-0000-1000-8000-00805f9b34fb");
+    public static final UUID ACTIVITY_CURRENT_SESSION_CHARACTERISTIC = UUID.fromString("00002b44-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Session (Characteristic UUID: 0x2b45)
+     * Physical Activity Session Descriptor (Characteristic UUID: 0x2b45)
      */
-    public static final UUID SESSION_CHARACTERISTIC = UUID.fromString("00002b45-0000-1000-8000-00805f9b34fb");
+    public static final UUID PHYSICAL_ACTIVITY_SESSION_DESCRIPTOR_CHARACTERISTIC = UUID.fromString("00002b45-0000-1000-8000-00805f9b34fb");
 
     /**
      * Preferred Units (Characteristic UUID: 0x2b46)
@@ -1979,6 +2030,11 @@ public class CharacteristicUUID {
     public static final UUID CALORIC_INTAKE_CHARACTERISTIC = UUID.fromString("00002b50-0000-1000-8000-00805f9b34fb");
 
     /**
+     * TMAP Role (Characteristic UUID: 0x2b51)
+     */
+    public static final UUID TMAP_ROLE_CHARACTERISTIC = UUID.fromString("00002b51-0000-1000-8000-00805f9b34fb");
+
+    /**
      * Audio Input State (Characteristic UUID: 0x2b77)
      */
     public static final UUID AUDIO_INPUT_STATE_CHARACTERISTIC = UUID.fromString("00002b77-0000-1000-8000-00805f9b34fb");
@@ -2024,9 +2080,9 @@ public class CharacteristicUUID {
     public static final UUID VOLUME_FLAGS_CHARACTERISTIC = UUID.fromString("00002b7f-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Offset State (Characteristic UUID: 0x2b80)
+     * Volume Offset State (Characteristic UUID: 0x2b80)
      */
-    public static final UUID OFFSET_STATE_CHARACTERISTIC = UUID.fromString("00002b80-0000-1000-8000-00805f9b34fb");
+    public static final UUID VOLUME_OFFSET_STATE_CHARACTERISTIC = UUID.fromString("00002b80-0000-1000-8000-00805f9b34fb");
 
     /**
      * Audio Location (Characteristic UUID: 0x2b81)
@@ -2044,24 +2100,49 @@ public class CharacteristicUUID {
     public static final UUID AUDIO_OUTPUT_DESCRIPTION_CHARACTERISTIC = UUID.fromString("00002b83-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Set Identity Resolving Key Characteristic (Characteristic UUID: 0x2b84)
+     * Set Identity Resolving Key (Characteristic UUID: 0x2b84)
      */
     public static final UUID SET_IDENTITY_RESOLVING_KEY_CHARACTERISTIC = UUID.fromString("00002b84-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Size Characteristic (Characteristic UUID: 0x2b85)
+     * Coordinated Set Size (Characteristic UUID: 0x2b85)
      */
-    public static final UUID SIZE_CHARACTERISTIC = UUID.fromString("00002b85-0000-1000-8000-00805f9b34fb");
+    public static final UUID COORDINATED_SET_SIZE_CHARACTERISTIC = UUID.fromString("00002b85-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Lock Characteristic (Characteristic UUID: 0x2b86)
+     * Set Member Lock (Characteristic UUID: 0x2b86)
      */
-    public static final UUID LOCK_CHARACTERISTIC = UUID.fromString("00002b86-0000-1000-8000-00805f9b34fb");
+    public static final UUID SET_MEMBER_LOCK_CHARACTERISTIC = UUID.fromString("00002b86-0000-1000-8000-00805f9b34fb");
 
     /**
-     * Rank Characteristic (Characteristic UUID: 0x2b87)
+     * Set Member Rank (Characteristic UUID: 0x2b87)
      */
-    public static final UUID RANK_CHARACTERISTIC = UUID.fromString("00002b87-0000-1000-8000-00805f9b34fb");
+    public static final UUID SET_MEMBER_RANK_CHARACTERISTIC = UUID.fromString("00002b87-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Encrypted Data Key Material (Characteristic UUID: 0x2b88)
+     */
+    public static final UUID ENCRYPTED_DATA_KEY_MATERIAL_CHARACTERISTIC = UUID.fromString("00002b88-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Apparent Energy 32 (Characteristic UUID: 0x2b89)
+     */
+    public static final UUID APPARENT_ENERGY_32_CHARACTERISTIC = UUID.fromString("00002b89-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Apparent Power (Characteristic UUID: 0x2b8a)
+     */
+    public static final UUID APPARENT_POWER_CHARACTERISTIC = UUID.fromString("00002b8a-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * CO2 Concentration (Characteristic UUID: 0x2b8c)
+     */
+    public static final UUID CO2_CONCENTRATION_CHARACTERISTIC = UUID.fromString("00002b8c-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Cosine of the Angle (Characteristic UUID: 0x2b8d)
+     */
+    public static final UUID COSINE_OF_THE_ANGLE_CHARACTERISTIC = UUID.fromString("00002b8d-0000-1000-8000-00805f9b34fb");
 
     /**
      * Device Time Feature (Characteristic UUID: 0x2b8e)
@@ -2192,6 +2273,11 @@ public class CharacteristicUUID {
      * Search Control Point (Characteristic UUID: 0x2ba7)
      */
     public static final UUID SEARCH_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002ba7-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Energy 32 (Characteristic UUID: 0x2ba8)
+     */
+    public static final UUID ENERGY_32_CHARACTERISTIC = UUID.fromString("00002ba8-0000-1000-8000-00805f9b34fb");
 
     /**
      * Media Player Icon Object Type (Characteristic UUID: 0x2ba9)
@@ -2437,5 +2523,185 @@ public class CharacteristicUUID {
      * Sulfur Hexafluoride Concentration (Characteristic UUID: 0x2bd9)
      */
     public static final UUID SULFUR_HEXAFLUORIDE_CONCENTRATION_CHARACTERISTIC = UUID.fromString("00002bd9-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Hearing Aid Features (Characteristic UUID: 0x2bda)
+     */
+    public static final UUID HEARING_AID_FEATURES_CHARACTERISTIC = UUID.fromString("00002bda-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Hearing Aid Preset Control Point (Characteristic UUID: 0x2bdb)
+     */
+    public static final UUID HEARING_AID_PRESET_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002bdb-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Active Preset Index (Characteristic UUID: 0x2bdc)
+     */
+    public static final UUID ACTIVE_PRESET_INDEX_CHARACTERISTIC = UUID.fromString("00002bdc-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Fixed String 64 (Characteristic UUID: 0x2bde)
+     */
+    public static final UUID FIXED_STRING_64_CHARACTERISTIC = UUID.fromString("00002bde-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * High Temperature (Characteristic UUID: 0x2bdf)
+     */
+    public static final UUID HIGH_TEMPERATURE_CHARACTERISTIC = UUID.fromString("00002bdf-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * High Voltage (Characteristic UUID: 0x2be0)
+     */
+    public static final UUID HIGH_VOLTAGE_CHARACTERISTIC = UUID.fromString("00002be0-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Light Distribution (Characteristic UUID: 0x2be1)
+     */
+    public static final UUID LIGHT_DISTRIBUTION_CHARACTERISTIC = UUID.fromString("00002be1-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Light Output (Characteristic UUID: 0x2be2)
+     */
+    public static final UUID LIGHT_OUTPUT_CHARACTERISTIC = UUID.fromString("00002be2-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Light Source Type (Characteristic UUID: 0x2be3)
+     */
+    public static final UUID LIGHT_SOURCE_TYPE_CHARACTERISTIC = UUID.fromString("00002be3-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Noise (Characteristic UUID: 0x2be4)
+     */
+    public static final UUID NOISE_CHARACTERISTIC = UUID.fromString("00002be4-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Relative Runtime in a Correlated Color Temperature Range (Characteristic UUID: 0x2be5)
+     */
+    public static final UUID RELATIVE_RUNTIME_IN_A_CORRELATED_COLOR_TEMPERATURE_RANGE_CHARACTERISTIC = UUID.fromString("00002be5-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Time Second 32 (Characteristic UUID: 0x2be6)
+     */
+    public static final UUID TIME_SECOND_32_CHARACTERISTIC = UUID.fromString("00002be6-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * VOC Concentration (Characteristic UUID: 0x2be7)
+     */
+    public static final UUID VOC_CONCENTRATION_CHARACTERISTIC = UUID.fromString("00002be7-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Voltage Frequency (Characteristic UUID: 0x2be8)
+     */
+    public static final UUID VOLTAGE_FREQUENCY_CHARACTERISTIC = UUID.fromString("00002be8-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Battery Critical Status (Characteristic UUID: 0x2be9)
+     */
+    public static final UUID BATTERY_CRITICAL_STATUS_CHARACTERISTIC = UUID.fromString("00002be9-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Battery Health Status (Characteristic UUID: 0x2bea)
+     */
+    public static final UUID BATTERY_HEALTH_STATUS_CHARACTERISTIC = UUID.fromString("00002bea-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Battery Health Information (Characteristic UUID: 0x2beb)
+     */
+    public static final UUID BATTERY_HEALTH_INFORMATION_CHARACTERISTIC = UUID.fromString("00002beb-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Battery Information (Characteristic UUID: 0x2bec)
+     */
+    public static final UUID BATTERY_INFORMATION_CHARACTERISTIC = UUID.fromString("00002bec-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Battery Level Status (Characteristic UUID: 0x2bed)
+     */
+    public static final UUID BATTERY_LEVEL_STATUS_CHARACTERISTIC = UUID.fromString("00002bed-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Battery Time Status (Characteristic UUID: 0x2bee)
+     */
+    public static final UUID BATTERY_TIME_STATUS_CHARACTERISTIC = UUID.fromString("00002bee-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Estimated Service Date (Characteristic UUID: 0x2bef)
+     */
+    public static final UUID ESTIMATED_SERVICE_DATE_CHARACTERISTIC = UUID.fromString("00002bef-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Battery Energy Status (Characteristic UUID: 0x2bf0)
+     */
+    public static final UUID BATTERY_ENERGY_STATUS_CHARACTERISTIC = UUID.fromString("00002bf0-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * LE GATT Security Levels (Characteristic UUID: 0x2bf5)
+     */
+    public static final UUID LE_GATT_SECURITY_LEVELS_CHARACTERISTIC = UUID.fromString("00002bf5-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ESL Address (Characteristic UUID: 0x2bf6)
+     */
+    public static final UUID ESL_ADDRESS_CHARACTERISTIC = UUID.fromString("00002bf6-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * AP Sync Key Material (Characteristic UUID: 0x2bf7)
+     */
+    public static final UUID AP_SYNC_KEY_MATERIAL_CHARACTERISTIC = UUID.fromString("00002bf7-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ESL Response Key Material (Characteristic UUID: 0x2bf8)
+     */
+    public static final UUID ESL_RESPONSE_KEY_MATERIAL_CHARACTERISTIC = UUID.fromString("00002bf8-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ESL Current Absolute Time (Characteristic UUID: 0x2bf9)
+     */
+    public static final UUID E_S_L_CURRENT_ABSOLUTE_TIME_CHARACTERISTIC = UUID.fromString("00002bf9-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ESL Display Information (Characteristic UUID: 0x2bfa)
+     */
+    public static final UUID ESL_DISPLAY_INFORMATION_CHARACTERISTIC = UUID.fromString("00002bfa-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ESL Image Information (Characteristic UUID: 0x2bfb)
+     */
+    public static final UUID ESL_IMAGE_INFORMATION_CHARACTERISTIC = UUID.fromString("00002bfb-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ESL Sensor Information (Characteristic UUID: 0x2bfc)
+     */
+    public static final UUID ESL_SENSOR_INFORMATION_CHARACTERISTIC = UUID.fromString("00002bfc-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ESL LED Information (Characteristic UUID: 0x2bfd)
+     */
+    public static final UUID ESL_LED_INFORMATION_CHARACTERISTIC = UUID.fromString("00002bfd-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * ESL Control Point (Characteristic UUID: 0x2bfe)
+     */
+    public static final UUID E_S_L_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002bfe-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Digital (Characteristic UUID: 0x2a56)
+     */
+    public static final UUID DIGITAL_CHARACTERISTIC = UUID.fromString("00002a56-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Analog (Characteristic UUID: 0x2a58)
+     */
+    public static final UUID ANALOG_CHARACTERISTIC = UUID.fromString("00002a58-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Unspecified (Characteristic UUID: 0x2aca)
+     */
+    public static final UUID UNSPECIFIED_CHARACTERISTIC = UUID.fromString("00002aca-0000-1000-8000-00805f9b34fb");
+
+    /**
+     * Directory Listing (Characteristic UUID: 0x2acb)
+     */
+    public static final UUID DIRECTORY_LISTING_CHARACTERISTIC = UUID.fromString("00002acb-0000-1000-8000-00805f9b34fb");
 
 }

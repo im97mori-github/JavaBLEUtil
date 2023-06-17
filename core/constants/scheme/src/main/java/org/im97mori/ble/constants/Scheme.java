@@ -7,8 +7,8 @@ import java.util.Map;
 /**
  * BLE GATT Scheme UUID
  * <p>
- * URI Scheme Name String Mapping.pdf
- * Revision Date: 2021-05-14
+ * https://bitbucket.org/bluetooth-SIG/public/src/main/
+ * commit 6557f28af8b95de6b09d6e0d96cf51651fba32ff
  */
 public class Scheme {
 
@@ -16,6 +16,7 @@ public class Scheme {
 
 		private SchemeMap() {
 			super();
+			put(Character.valueOf((char) 0x0001), "empty scheme name");
 			put(Character.valueOf((char) 0x0002), "aaa:");
 			put(Character.valueOf((char) 0x0003), "aaas:");
 			put(Character.valueOf((char) 0x0004), "about:");
@@ -209,6 +210,11 @@ public class Scheme {
 	 */
 	public static final Map<Character, String> SCHEME_MAPPING = Collections
 			.synchronizedMap(Collections.unmodifiableMap(new SchemeMap()));
+
+	/**
+	 * empty scheme name (Scheme Code Point: 0x0001)
+	 */
+	public static final Character EMPTY_SCHEME_NAME_SCHEME = Character.valueOf((char) 0x0001);
 
 	/**
 	 * aaa: (Scheme Code Point: 0x0002)

@@ -1,6 +1,6 @@
 {
   "java.configuration.updateBuildConfiguration": "disabled",
-  // "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms2G -Xlog:disable",
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms2G -Xlog:disable",
   "terminal.integrated.profiles.windows": {
     "Command Prompt": {
       "path": "C:\\WINDOWS\\System32\\cmd.exe",
@@ -14,5 +14,6 @@
       "icon": "terminal-powershell"
     }
   },
-  "terminal.integrated.defaultProfile.windows": "Command Prompt"
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "java.format.settings.url": "eclipse-formatter.xml"
 }

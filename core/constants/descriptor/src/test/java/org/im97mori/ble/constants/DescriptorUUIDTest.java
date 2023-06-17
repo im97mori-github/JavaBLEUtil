@@ -1,22 +1,6 @@
 package org.im97mori.ble.constants;
 
-import static org.im97mori.ble.constants.DescriptorUUID.CHARACTERISTIC_AGGREGATE_FORMAT_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.CHARACTERISTIC_EXTENDED_PROPERTIES_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.CHARACTERISTIC_PRESENTATION_FORMAT_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.CLIENT_CHARACTERISTIC_CONFIGURATION_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.COMPLETE_BR_EDR_TRANSPORT_BLOCK_DATA_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.DESCRIPTOR_MAPPING_128;
-import static org.im97mori.ble.constants.DescriptorUUID.ENVIRONMENTAL_SENSING_CONFIGURATION_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.ENVIRONMENTAL_SENSING_MEASUREMENT_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.ENVIRONMENTAL_SENSING_TRIGGER_SETTING_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.EXTERNAL_REPORT_REFERENCE_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.NUMBER_OF_DIGITALS_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.REPORT_REFERENCE_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.SERVER_CHARACTERISTIC_CONFIGURATION_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.TIME_TRIGGER_SETTING_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.VALID_RANGE_DESCRIPTOR;
-import static org.im97mori.ble.constants.DescriptorUUID.VALUE_TRIGGER_SETTING_DESCRIPTOR;
+import static org.im97mori.ble.constants.DescriptorUUID.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -27,37 +11,46 @@ public class DescriptorUUIDTest {
 	@Test
 	public void test_map_00001() {
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(CHARACTERISTIC_EXTENDED_PROPERTIES_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(CHARACTERISTIC_EXTENDED_PROPERTIES_DESCRIPTOR), "Characteristic Extended Properties");
+		assertEquals("Characteristic Extended Properties",
+				DESCRIPTOR_MAPPING_128.get(CHARACTERISTIC_EXTENDED_PROPERTIES_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTOR), "Characteristic User Description");
+		assertEquals("Characteristic User Description",
+				DESCRIPTOR_MAPPING_128.get(CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(CLIENT_CHARACTERISTIC_CONFIGURATION_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(CLIENT_CHARACTERISTIC_CONFIGURATION_DESCRIPTOR), "Client Characteristic Configuration");
+		assertEquals("Client Characteristic Configuration",
+				DESCRIPTOR_MAPPING_128.get(CLIENT_CHARACTERISTIC_CONFIGURATION_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(SERVER_CHARACTERISTIC_CONFIGURATION_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(SERVER_CHARACTERISTIC_CONFIGURATION_DESCRIPTOR), "Server Characteristic Configuration");
+		assertEquals("Server Characteristic Configuration",
+				DESCRIPTOR_MAPPING_128.get(SERVER_CHARACTERISTIC_CONFIGURATION_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(CHARACTERISTIC_PRESENTATION_FORMAT_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(CHARACTERISTIC_PRESENTATION_FORMAT_DESCRIPTOR), "Characteristic Presentation Format");
+		assertEquals("Characteristic Presentation Format",
+				DESCRIPTOR_MAPPING_128.get(CHARACTERISTIC_PRESENTATION_FORMAT_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(CHARACTERISTIC_AGGREGATE_FORMAT_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(CHARACTERISTIC_AGGREGATE_FORMAT_DESCRIPTOR), "Characteristic Aggregate Format");
+		assertEquals("Characteristic Aggregate Format",
+				DESCRIPTOR_MAPPING_128.get(CHARACTERISTIC_AGGREGATE_FORMAT_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(VALID_RANGE_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(VALID_RANGE_DESCRIPTOR), "Valid Range");
+		assertEquals("Valid Range", DESCRIPTOR_MAPPING_128.get(VALID_RANGE_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(EXTERNAL_REPORT_REFERENCE_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(EXTERNAL_REPORT_REFERENCE_DESCRIPTOR), "External Report Reference");
+		assertEquals("External Report Reference", DESCRIPTOR_MAPPING_128.get(EXTERNAL_REPORT_REFERENCE_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(REPORT_REFERENCE_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(REPORT_REFERENCE_DESCRIPTOR), "Report Reference");
+		assertEquals("Report Reference", DESCRIPTOR_MAPPING_128.get(REPORT_REFERENCE_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(NUMBER_OF_DIGITALS_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(NUMBER_OF_DIGITALS_DESCRIPTOR), "Number Of Digitals");
+		assertEquals("Number of Digitals", DESCRIPTOR_MAPPING_128.get(NUMBER_OF_DIGITALS_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(VALUE_TRIGGER_SETTING_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(VALUE_TRIGGER_SETTING_DESCRIPTOR), "Value Trigger Setting");
+		assertEquals("Value Trigger Setting", DESCRIPTOR_MAPPING_128.get(VALUE_TRIGGER_SETTING_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(ENVIRONMENTAL_SENSING_CONFIGURATION_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(ENVIRONMENTAL_SENSING_CONFIGURATION_DESCRIPTOR), "Environmental Sensing Configuration");
+		assertEquals("Environmental Sensing Configuration",
+				DESCRIPTOR_MAPPING_128.get(ENVIRONMENTAL_SENSING_CONFIGURATION_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(ENVIRONMENTAL_SENSING_MEASUREMENT_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(ENVIRONMENTAL_SENSING_MEASUREMENT_DESCRIPTOR), "Environmental Sensing Measurement");
+		assertEquals("Environmental Sensing Measurement",
+				DESCRIPTOR_MAPPING_128.get(ENVIRONMENTAL_SENSING_MEASUREMENT_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(ENVIRONMENTAL_SENSING_TRIGGER_SETTING_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(ENVIRONMENTAL_SENSING_TRIGGER_SETTING_DESCRIPTOR), "Environmental Sensing Trigger Setting");
+		assertEquals("Environmental Sensing Trigger Setting",
+				DESCRIPTOR_MAPPING_128.get(ENVIRONMENTAL_SENSING_TRIGGER_SETTING_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(TIME_TRIGGER_SETTING_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(TIME_TRIGGER_SETTING_DESCRIPTOR), "Time Trigger Setting");
+		assertEquals("Time Trigger Setting", DESCRIPTOR_MAPPING_128.get(TIME_TRIGGER_SETTING_DESCRIPTOR));
 		assertTrue(DESCRIPTOR_MAPPING_128.containsKey(COMPLETE_BR_EDR_TRANSPORT_BLOCK_DATA_DESCRIPTOR));
-		assertEquals(DESCRIPTOR_MAPPING_128.get(COMPLETE_BR_EDR_TRANSPORT_BLOCK_DATA_DESCRIPTOR), "Complete BR-EDR Transport Block Data");
-
+		assertEquals("Complete BR-EDR Transport Block Data",
+				DESCRIPTOR_MAPPING_128.get(COMPLETE_BR_EDR_TRANSPORT_BLOCK_DATA_DESCRIPTOR));
 	}
 }

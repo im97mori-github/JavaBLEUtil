@@ -423,7 +423,7 @@ public class BLEUtils {
 	}
 
 	/**
-	 * create IEEE-754 64-bit floating point (0x14)
+	 * create IEEE-754 64-bit floating point (0x15)
 	 *
 	 * @param data   byte array from <a href=
 	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>

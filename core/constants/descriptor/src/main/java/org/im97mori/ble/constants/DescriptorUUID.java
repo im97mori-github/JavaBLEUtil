@@ -8,8 +8,8 @@ import java.util.UUID;
 /**
  * BLE GATT Descriptor UUID
  * <p>
- * 16-bit UUID Numbers Document.pdf
- * Revision Date: 2021-10-01
+ * https://bitbucket.org/bluetooth-SIG/public/src/main/
+ * commit 6557f28af8b95de6b09d6e0d96cf51651fba32ff
  */
 public class DescriptorUUID {
 
@@ -26,7 +26,7 @@ public class DescriptorUUID {
 			put(UUID.fromString("00002906-0000-1000-8000-00805f9b34fb"), "Valid Range");
 			put(UUID.fromString("00002907-0000-1000-8000-00805f9b34fb"), "External Report Reference");
 			put(UUID.fromString("00002908-0000-1000-8000-00805f9b34fb"), "Report Reference");
-			put(UUID.fromString("00002909-0000-1000-8000-00805f9b34fb"), "Number Of Digitals");
+			put(UUID.fromString("00002909-0000-1000-8000-00805f9b34fb"), "Number of Digitals");
 			put(UUID.fromString("0000290a-0000-1000-8000-00805f9b34fb"), "Value Trigger Setting");
 			put(UUID.fromString("0000290b-0000-1000-8000-00805f9b34fb"), "Environmental Sensing Configuration");
 			put(UUID.fromString("0000290c-0000-1000-8000-00805f9b34fb"), "Environmental Sensing Measurement");
@@ -96,7 +96,7 @@ public class DescriptorUUID {
 	public static final UUID REPORT_REFERENCE_DESCRIPTOR = UUID.fromString("00002908-0000-1000-8000-00805f9b34fb");
 
 	/**
-	 * Number Of Digitals (Descriptor UUID: 0x2909)
+	 * Number of Digitals (Descriptor UUID: 0x2909)
 	 */
 	public static final UUID NUMBER_OF_DIGITALS_DESCRIPTOR = UUID.fromString("00002909-0000-1000-8000-00805f9b34fb");
 

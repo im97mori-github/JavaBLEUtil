@@ -9,9 +9,9 @@ import org.im97mori.ble.ByteArrayInterface;
 import androidx.annotation.NonNull;
 
 /**
- * Lock Characteristic (Characteristics UUID: 0x2B86)
+ * Set Member Lock (Characteristics UUID: 0x2B86)
  */
-public class LockCharacteristic implements ByteArrayInterface {
+public class SetMemberLock implements ByteArrayInterface {
 
 	/**
 	 * Unlocked
@@ -34,7 +34,7 @@ public class LockCharacteristic implements ByteArrayInterface {
 	 * @param values byte array from <a href=
 	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
 	 */
-	public LockCharacteristic(@NonNull byte[] values) {
+	public SetMemberLock(@NonNull byte[] values) {
 		mSetMemberLock = BLEUtils.createUInt8(values, 0);
 	}
 
@@ -43,7 +43,7 @@ public class LockCharacteristic implements ByteArrayInterface {
 	 * 
 	 * @param setMemberLock Set Member Lock
 	 */
-	public LockCharacteristic(int setMemberLock) {
+	public SetMemberLock(int setMemberLock) {
 		mSetMemberLock = setMemberLock;
 	}
 

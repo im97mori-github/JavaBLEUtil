@@ -4,21 +4,21 @@ allprojects {
 
     repositories {
         maven { url "https://github.com/im97mori-github/maven/raw/master" }
- //       maven { url System.getenv('MAVEN_REPOSITORY_URL') }
+        // maven { url System.getenv('MAVEN_REPOSITORY_URL') }
         google()
         mavenCentral()
     }
 }
 
 ext.myGroupId = 'org.im97mori'
-ext.loadVersion = '0.8.7'
-ext.uploadVersion = '0.8.7'
+ext.loadVersion = '0.8.8'
+ext.uploadVersion = '0.8.8'
 
 ext.coreConstantsAppearance = 'ble-core-constants-appearance'
 ext.coreConstantsCharacteristic = 'ble-core-constants-characteristic'
 ext.coreConstantsCompany = 'ble-core-constants-company'
-ext.coreConstantsDataType =  'ble-core-constants-datatype'
-ext.coreConstantsDeclaration =  'ble-core-constants-declaration'
+ext.coreConstantsDataType = 'ble-core-constants-datatype'
+ext.coreConstantsDeclaration = 'ble-core-constants-declaration'
 ext.coreConstantsDescriptor = 'ble-core-constants-descriptor'
 ext.coreConstantsErrorCode = 'ble-core-constants-errorcode'
 ext.coreConstantsMember = 'ble-core-constants-member'

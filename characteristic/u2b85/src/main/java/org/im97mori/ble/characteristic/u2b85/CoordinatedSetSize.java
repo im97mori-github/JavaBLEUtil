@@ -1,4 +1,4 @@
-package org.im97mori.ble.characteristic.u2b87;
+package org.im97mori.ble.characteristic.u2b85;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -9,14 +9,14 @@ import org.im97mori.ble.ByteArrayInterface;
 import androidx.annotation.NonNull;
 
 /**
- * Rank Characteristic (Characteristics UUID: 0x2B87)
+ * Coordinated Set Size (Characteristics UUID: 0x2B85)
  */
-public class RankCharacteristic implements ByteArrayInterface {
+public class CoordinatedSetSize implements ByteArrayInterface {
 
 	/**
-	 * Set Member Rank
+	 * Coordinated Set Size
 	 */
-	private final int mSetMemberRank;
+	private final int mCoordinatedSetSize;
 
 	/**
 	 * Constructor from byte array
@@ -24,24 +24,24 @@ public class RankCharacteristic implements ByteArrayInterface {
 	 * @param values byte array from <a href=
 	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
 	 */
-	public RankCharacteristic(@NonNull byte[] values) {
-		mSetMemberRank = BLEUtils.createUInt8(values, 0);
+	public CoordinatedSetSize(@NonNull byte[] values) {
+		mCoordinatedSetSize = BLEUtils.createUInt8(values, 0);
 	}
 
 	/**
 	 * Constructor from parameters
 	 * 
-	 * @param setMemberRank Set Member Rank
+	 * @param coordinatedSetSize Coordinated Set Size
 	 */
-	public RankCharacteristic(int setMemberRank) {
-		mSetMemberRank = setMemberRank;
+	public CoordinatedSetSize(int coordinatedSetSize) {
+		mCoordinatedSetSize = coordinatedSetSize;
 	}
 
 	/**
-	 * @return Set Member Rank
+	 * @return Coordinated Set Size
 	 */
-	public int getSetMemberRank() {
-		return mSetMemberRank;
+	public int getCoordinatedSetSize() {
+		return mCoordinatedSetSize;
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class RankCharacteristic implements ByteArrayInterface {
 	public byte[] getBytes() {
 		byte[] data = new byte[1];
 		ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
-		byteBuffer.put((byte) mSetMemberRank);
+		byteBuffer.put((byte) mCoordinatedSetSize);
 		return data;
 	}
 

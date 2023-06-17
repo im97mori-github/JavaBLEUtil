@@ -7,8 +7,8 @@ import java.util.Map;
 /**
  * BLE GATT Characteristic UUID
  * <p>
- * Appearance Values.pdf
- * Revision Date: 2021­04­20
+ * https://bitbucket.org/bluetooth-SIG/public/src/main/
+ * commit 6557f28af8b95de6b09d6e0d96cf51651fba32ff
  */
 public class AppearanceValues {
 
@@ -23,7 +23,7 @@ public class AppearanceValues {
             put(0x0100, "Clock");
             put(0x0140, "Display");
             put(0x0180, "Remote Control");
-            put(0x01c0, "Eye­glasses");
+            put(0x01c0, "Eye-glasses");
             put(0x0200, "Tag");
             put(0x0240, "Keyring");
             put(0x0280, "Media Player");
@@ -59,15 +59,15 @@ public class AppearanceValues {
             put(0x0a00, "Display Equipment");
             put(0x0a40, "Hearing aid");
             put(0x0a80, "Gaming");
-            put(0x0ac0, "Signage");
             put(0x0c40, "Pulse Oximeter");
             put(0x0c80, "Weight Scale");
             put(0x0cc0, "Personal Mobility Device");
             put(0x0d00, "Continuous Glucose Monitor");
             put(0x0d40, "Insulin Pump");
             put(0x0d80, "Medication Delivery");
+            put(0x0dc0, "Spirometer");
             put(0x1440, "Outdoor Sports Activity");
-		}
+        }
     }
 
     private static final class SubCategoryMap128 extends HashMap<Integer, String> {
@@ -78,10 +78,10 @@ public class AppearanceValues {
             put(0x0040, "Generic Phone");
             put(0x0080, "Generic Computer");
             put(0x0081, "Desktop Workstation");
-            put(0x0082, "Server­class Computer");
+            put(0x0082, "Server-class Computer");
             put(0x0083, "Laptop");
             put(0x0084, "Handheld PC/PDA (clamshell)");
-            put(0x0085, "Palm­size PC/PDA");
+            put(0x0085, "Palm-size PC/PDA");
             put(0x0086, "Wearable computer (watch size)");
             put(0x0087, "Tablet");
             put(0x0088, "Docking Station");
@@ -98,7 +98,7 @@ public class AppearanceValues {
             put(0x0100, "Generic Clock");
             put(0x0140, "Generic Display");
             put(0x0180, "Generic Remote Control");
-            put(0x01c0, "Generic Eye­glasses");
+            put(0x01c0, "Generic Eye-glasses");
             put(0x0200, "Generic Tag");
             put(0x0240, "Generic Keyring");
             put(0x0280, "Generic Media Player");
@@ -119,11 +119,13 @@ public class AppearanceValues {
             put(0x03c6, "Card Reader");
             put(0x03c7, "Digital Pen");
             put(0x03c8, "Barcode Scanner");
+            put(0x03c9, "Touchpad");
+            put(0x03ca, "Presentation Remote");
             put(0x0400, "Generic Glucose Meter");
             put(0x0440, "Generic Running Walking Sensor");
-            put(0x0441, "In­Shoe Running Walking Sensor");
-            put(0x0442, "On­Shoe Running Walking Sensor");
-            put(0x0443, "On­Hip Running Walking Sensor");
+            put(0x0441, "In-Shoe Running Walking Sensor");
+            put(0x0442, "On-Shoe Running Walking Sensor");
+            put(0x0443, "On-Hip Running Walking Sensor");
             put(0x0480, "Generic Cycling");
             put(0x0481, "Cycling Computer");
             put(0x0482, "Speed Sensor");
@@ -132,7 +134,7 @@ public class AppearanceValues {
             put(0x0485, "Speed and Cadence Sensor");
             put(0x04c0, "Generic Control Device");
             put(0x04c1, "Switch");
-            put(0x04c2, "Multi­switch");
+            put(0x04c2, "Multi-switch");
             put(0x04c3, "Button");
             put(0x04c4, "Slider");
             put(0x04c5, "Rotary Switch");
@@ -165,10 +167,10 @@ public class AppearanceValues {
             put(0x054f, "Fire Sensor");
             put(0x0550, "Wind Sensor");
             put(0x0551, "Proximity Sensor");
-            put(0x0552, "Multi­Sensor");
-            put(0x0553, "Flush mounted sensor");
-            put(0x0554, "Ceiling mounted sensor");
-            put(0x0555, "Wall mounted sensor");
+            put(0x0552, "Multi-Sensor");
+            put(0x0553, "Flush Mounted Sensor");
+            put(0x0554, "Ceiling Mounted Sensor");
+            put(0x0555, "Wall Mounted Sensor");
             put(0x0556, "Multisensor");
             put(0x0557, "Energy Meter");
             put(0x0558, "Flame Detector");
@@ -181,24 +183,24 @@ public class AppearanceValues {
             put(0x0585, "Desk Light");
             put(0x0586, "Troffer Light");
             put(0x0587, "Pendant Light");
-            put(0x0588, "In­ground Light");
+            put(0x0588, "In-ground Light");
             put(0x0589, "Flood Light");
             put(0x058a, "Underwater Light");
             put(0x058b, "Bollard with Light");
             put(0x058c, "Pathway Light");
             put(0x058d, "Garden Light");
-            put(0x058e, "Pole­top Light");
+            put(0x058e, "Pole-top Light");
             put(0x058f, "Spotlight");
             put(0x0590, "Linear Light");
             put(0x0591, "Street Light");
             put(0x0592, "Shelves Light");
             put(0x0593, "Bay Light");
             put(0x0594, "Emergency Exit Light");
-            put(0x0595, "Light controller");
-            put(0x0596, "Light driver");
+            put(0x0595, "Light Controller");
+            put(0x0596, "Light Driver");
             put(0x0597, "Bulb");
-            put(0x0598, "Low­bay Light");
-            put(0x0599, "High­bay Light");
+            put(0x0598, "Low-bay Light");
+            put(0x0599, "High-bay Light");
             put(0x05c0, "Generic Fan");
             put(0x05c1, "Ceiling Fan");
             put(0x05c2, "Axial Fan");
@@ -209,15 +211,15 @@ public class AppearanceValues {
             put(0x0600, "Generic HVAC");
             put(0x0601, "Thermostat");
             put(0x0602, "Humidifier");
-            put(0x0603, "De­humidifier");
+            put(0x0603, "De-humidifier");
             put(0x0604, "Heater");
             put(0x0605, "Radiator");
             put(0x0606, "Boiler");
-            put(0x0607, "Heat pump");
-            put(0x0608, "Infrared heater");
-            put(0x0609, "Radiant panel heater");
-            put(0x060a, "Fan heater");
-            put(0x060b, "Air curtain");
+            put(0x0607, "Heat Pump");
+            put(0x0608, "Infrared Heater");
+            put(0x0609, "Radiant Panel Heater");
+            put(0x060a, "Fan Heater");
+            put(0x060b, "Air Curtain");
             put(0x0640, "Generic Air Conditioning");
             put(0x0680, "Generic Humidifier");
             put(0x06c0, "Generic Heating");
@@ -260,7 +262,9 @@ public class AppearanceValues {
             put(0x07c3, "HID Lamp");
             put(0x07c4, "Fluorescent Lamp");
             put(0x07c5, "LED Array");
-            put(0x07c6, "Multi­Color LED Array");
+            put(0x07c6, "Multi-Color LED Array");
+            put(0x07c7, "Low voltage halogen");
+            put(0x07c8, "Organic light emitting diode (OLED)");
             put(0x0800, "Generic Window Covering");
             put(0x0801, "Window Shades");
             put(0x0802, "Window Blinds");
@@ -287,11 +291,11 @@ public class AppearanceValues {
             put(0x08c0, "Generic Motorized Vehicle");
             put(0x08c1, "Car");
             put(0x08c2, "Large Goods Vehicle");
-            put(0x08c3, "2­Wheeled Vehicle");
+            put(0x08c3, "2-Wheeled Vehicle");
             put(0x08c4, "Motorbike");
             put(0x08c5, "Scooter");
             put(0x08c6, "Moped");
-            put(0x08c7, "3­Wheeled Vehicle");
+            put(0x08c7, "3-Wheeled Vehicle");
             put(0x08c8, "Light Vehicle");
             put(0x08c9, "Quad Bike");
             put(0x08ca, "Minibus");
@@ -336,21 +340,18 @@ public class AppearanceValues {
             put(0x09c7, "DVD Player");
             put(0x09c8, "Bluray Player");
             put(0x09c9, "Optical Disc Player");
-            put(0x09ca, "Set­Top Box");
+            put(0x09ca, "Set-Top Box");
             put(0x0a00, "Generic Display Equipment");
             put(0x0a01, "Television");
             put(0x0a02, "Monitor");
             put(0x0a03, "Projector");
             put(0x0a40, "Generic Hearing aid");
-            put(0x0a41, "In­ear hearing aid");
-            put(0x0a42, "Behind­ear hearing aid");
+            put(0x0a41, "In-ear hearing aid");
+            put(0x0a42, "Behind-ear hearing aid");
             put(0x0a43, "Cochlear Implant");
             put(0x0a80, "Generic Gaming");
             put(0x0a81, "Home Video Game Console");
             put(0x0a82, "Portable handheld console");
-            put(0x0ac0, "Generic Signage");
-            put(0x0ac1, "Digital Signage");
-            put(0x0ac2, "Electronic Label");
             put(0x0c40, "Generic Pulse Oximeter");
             put(0x0c41, "Fingertip Pulse Oximeter");
             put(0x0c42, "Wrist Worn Pulse Oximeter");
@@ -364,6 +365,8 @@ public class AppearanceValues {
             put(0x0d44, "Insulin Pump, patch pump");
             put(0x0d48, "Insulin Pen");
             put(0x0d80, "Generic Medication Delivery");
+            put(0x0dc0, "Generic Spirometer");
+            put(0x0dc1, "Handheld Spirometer");
             put(0x1440, "Generic Outdoor Sports Activity");
             put(0x1441, "Location Display");
             put(0x1442, "Location and Navigation Display");
@@ -375,12 +378,14 @@ public class AppearanceValues {
     /**
      * Appearance Values.pdf
      */
-    public static final Map<Integer, String> APPEARANCE_CATEGORY_MAPPING = Collections.synchronizedMap(Collections.unmodifiableMap(new CategoryMap128()));
+    public static final Map<Integer, String> APPEARANCE_CATEGORY_MAPPING = Collections
+            .synchronizedMap(Collections.unmodifiableMap(new CategoryMap128()));
 
     /**
      * Appearance Values.pdf
      */
-    public static final Map<Integer, String> APPEARANCE_SUB_CATEGORY_MAPPING = Collections.synchronizedMap(Collections.unmodifiableMap(new SubCategoryMap128()));
+    public static final Map<Integer, String> APPEARANCE_SUB_CATEGORY_MAPPING = Collections
+            .synchronizedMap(Collections.unmodifiableMap(new SubCategoryMap128()));
 
     /**
      * Unknown
@@ -432,7 +437,7 @@ public class AppearanceValues {
     public static final int REMOTE_CONTROL_APPEARANCE_CATEGORY = 0x0180;
 
     /**
-     * Eye­glasses
+     * Eye-glasses
      * (Appearance Category : 0x01c0)
      * (Appearance Category(bits 15 to 6) : 0x007)
      */
@@ -684,13 +689,6 @@ public class AppearanceValues {
     public static final int GAMING_APPEARANCE_CATEGORY = 0x0a80;
 
     /**
-     * Signage
-     * (Appearance Category : 0x0ac0)
-     * (Appearance Category(bits 15 to 6) : 0x02b)
-     */
-    public static final int SIGNAGE_APPEARANCE_CATEGORY = 0x0ac0;
-
-    /**
      * Pulse Oximeter
      * (Appearance Category : 0x0c40)
      * (Appearance Category(bits 15 to 6) : 0x031)
@@ -733,6 +731,13 @@ public class AppearanceValues {
     public static final int MEDICATION_DELIVERY_APPEARANCE_CATEGORY = 0x0d80;
 
     /**
+     * Spirometer
+     * (Appearance Category : 0x0dc0)
+     * (Appearance Category(bits 15 to 6) : 0x037)
+     */
+    public static final int SPIROMETER_APPEARANCE_CATEGORY = 0x0dc0;
+
+    /**
      * Outdoor Sports Activity
      * (Appearance Category : 0x1440)
      * (Appearance Category(bits 15 to 6) : 0x051)
@@ -768,7 +773,7 @@ public class AppearanceValues {
     public static final int DESKTOP_WORKSTATION_APPEARANCE_SUB_CATEGORY = 0x0081;
 
     /**
-     * Server­class Computer
+     * Server-class Computer
      * (Appearance Sub-Category : 0x0082)
      * (Appearance Sub-Category(bits 5 to 0) : 0x02)
      */
@@ -789,7 +794,7 @@ public class AppearanceValues {
     public static final int HANDHELD_PC_PDA_CLAMSHELL_APPEARANCE_SUB_CATEGORY = 0x0084;
 
     /**
-     * Palm­size PC/PDA
+     * Palm-size PC/PDA
      * (Appearance Sub-Category : 0x0085)
      * (Appearance Sub-Category(bits 5 to 0) : 0x05)
      */
@@ -800,7 +805,7 @@ public class AppearanceValues {
      * (Appearance Sub-Category : 0x0086)
      * (Appearance Sub-Category(bits 5 to 0) : 0x06)
      */
-    public static final int WEARABLE_COMPUTER_WATCH_SIZE_APPEARANCE_SUB_CATEGORY = 0x0086;
+    public static final int WEARABLECOMPUTER_WATCH_SIZE_APPEARANCE_SUB_CATEGORY = 0x0086;
 
     /**
      * Tablet
@@ -856,7 +861,7 @@ public class AppearanceValues {
      * (Appearance Sub-Category : 0x008e)
      * (Appearance Sub-Category(bits 5 to 0) : 0x0e)
      */
-    public static final int MINI_PC_APPEARANCE_SUB_CATEGORY = 0x008e;
+    public static final int MINI_P_C_APPEARANCE_SUB_CATEGORY = 0x008e;
 
     /**
      * Stick PC
@@ -908,7 +913,7 @@ public class AppearanceValues {
     public static final int GENERIC_REMOTE_CONTROL_APPEARANCE_SUB_CATEGORY = 0x0180;
 
     /**
-     * Generic Eye­glasses
+     * Generic Eye-glasses
      * (Appearance Sub-Category : 0x01c0)
      * (Appearance Sub-Category(bits 5 to 0) : 0x00)
      */
@@ -1055,6 +1060,20 @@ public class AppearanceValues {
     public static final int BARCODE_SCANNER_APPEARANCE_SUB_CATEGORY = 0x03c8;
 
     /**
+     * Touchpad
+     * (Appearance Sub-Category : 0x03c9)
+     * (Appearance Sub-Category(bits 5 to 0) : 0x09)
+     */
+    public static final int TOUCHPAD_APPEARANCE_SUB_CATEGORY = 0x03c9;
+
+    /**
+     * Presentation Remote
+     * (Appearance Sub-Category : 0x03ca)
+     * (Appearance Sub-Category(bits 5 to 0) : 0x0a)
+     */
+    public static final int PRESENTATION_REMOTE_APPEARANCE_SUB_CATEGORY = 0x03ca;
+
+    /**
      * Generic Glucose Meter
      * (Appearance Sub-Category : 0x0400)
      * (Appearance Sub-Category(bits 5 to 0) : 0x00)
@@ -1069,21 +1088,21 @@ public class AppearanceValues {
     public static final int GENERIC_RUNNING_WALKING_SENSOR_APPEARANCE_SUB_CATEGORY = 0x0440;
 
     /**
-     * In­Shoe Running Walking Sensor
+     * In-Shoe Running Walking Sensor
      * (Appearance Sub-Category : 0x0441)
      * (Appearance Sub-Category(bits 5 to 0) : 0x01)
      */
     public static final int IN_SHOE_RUNNING_WALKING_SENSOR_APPEARANCE_SUB_CATEGORY = 0x0441;
 
     /**
-     * On­Shoe Running Walking Sensor
+     * On-Shoe Running Walking Sensor
      * (Appearance Sub-Category : 0x0442)
      * (Appearance Sub-Category(bits 5 to 0) : 0x02)
      */
     public static final int ON_SHOE_RUNNING_WALKING_SENSOR_APPEARANCE_SUB_CATEGORY = 0x0442;
 
     /**
-     * On­Hip Running Walking Sensor
+     * On-Hip Running Walking Sensor
      * (Appearance Sub-Category : 0x0443)
      * (Appearance Sub-Category(bits 5 to 0) : 0x03)
      */
@@ -1146,7 +1165,7 @@ public class AppearanceValues {
     public static final int SWITCH_APPEARANCE_SUB_CATEGORY = 0x04c1;
 
     /**
-     * Multi­switch
+     * Multi-switch
      * (Appearance Sub-Category : 0x04c2)
      * (Appearance Sub-Category(bits 5 to 0) : 0x02)
      */
@@ -1377,32 +1396,32 @@ public class AppearanceValues {
     public static final int PROXIMITY_SENSOR_APPEARANCE_SUB_CATEGORY = 0x0551;
 
     /**
-     * Multi­Sensor
+     * Multi-Sensor
      * (Appearance Sub-Category : 0x0552)
      * (Appearance Sub-Category(bits 5 to 0) : 0x12)
      */
     public static final int MULTI_SENSOR_APPEARANCE_SUB_CATEGORY = 0x0552;
 
     /**
-     * Flush mounted sensor
+     * Flush Mounted Sensor
      * (Appearance Sub-Category : 0x0553)
      * (Appearance Sub-Category(bits 5 to 0) : 0x13)
      */
-    public static final int FLUSH_MOUNTEDSENSOR_APPEARANCE_SUB_CATEGORY = 0x0553;
+    public static final int FLUSH_MOUNTED_SENSOR_APPEARANCE_SUB_CATEGORY = 0x0553;
 
     /**
-     * Ceiling mounted sensor
+     * Ceiling Mounted Sensor
      * (Appearance Sub-Category : 0x0554)
      * (Appearance Sub-Category(bits 5 to 0) : 0x14)
      */
-    public static final int CEILING_MOUNTEDSENSOR_APPEARANCE_SUB_CATEGORY = 0x0554;
+    public static final int CEILING_MOUNTED_SENSOR_APPEARANCE_SUB_CATEGORY = 0x0554;
 
     /**
-     * Wall mounted sensor
+     * Wall Mounted Sensor
      * (Appearance Sub-Category : 0x0555)
      * (Appearance Sub-Category(bits 5 to 0) : 0x15)
      */
-    public static final int WALL_MOUNTEDSENSOR_APPEARANCE_SUB_CATEGORY = 0x0555;
+    public static final int WALL_MOUNTED_SENSOR_APPEARANCE_SUB_CATEGORY = 0x0555;
 
     /**
      * Multisensor
@@ -1489,7 +1508,7 @@ public class AppearanceValues {
     public static final int PENDANT_LIGHT_APPEARANCE_SUB_CATEGORY = 0x0587;
 
     /**
-     * In­ground Light
+     * In-ground Light
      * (Appearance Sub-Category : 0x0588)
      * (Appearance Sub-Category(bits 5 to 0) : 0x08)
      */
@@ -1531,7 +1550,7 @@ public class AppearanceValues {
     public static final int GARDEN_LIGHT_APPEARANCE_SUB_CATEGORY = 0x058d;
 
     /**
-     * Pole­top Light
+     * Pole-top Light
      * (Appearance Sub-Category : 0x058e)
      * (Appearance Sub-Category(bits 5 to 0) : 0x0e)
      */
@@ -1580,14 +1599,14 @@ public class AppearanceValues {
     public static final int EMERGENCY_EXIT_LIGHT_APPEARANCE_SUB_CATEGORY = 0x0594;
 
     /**
-     * Light controller
+     * Light Controller
      * (Appearance Sub-Category : 0x0595)
      * (Appearance Sub-Category(bits 5 to 0) : 0x15)
      */
     public static final int LIGHT_CONTROLLER_APPEARANCE_SUB_CATEGORY = 0x0595;
 
     /**
-     * Light driver
+     * Light Driver
      * (Appearance Sub-Category : 0x0596)
      * (Appearance Sub-Category(bits 5 to 0) : 0x16)
      */
@@ -1601,14 +1620,14 @@ public class AppearanceValues {
     public static final int BULB_APPEARANCE_SUB_CATEGORY = 0x0597;
 
     /**
-     * Low­bay Light
+     * Low-bay Light
      * (Appearance Sub-Category : 0x0598)
      * (Appearance Sub-Category(bits 5 to 0) : 0x18)
      */
     public static final int LOW_BAY_LIGHT_APPEARANCE_SUB_CATEGORY = 0x0598;
 
     /**
-     * High­bay Light
+     * High-bay Light
      * (Appearance Sub-Category : 0x0599)
      * (Appearance Sub-Category(bits 5 to 0) : 0x19)
      */
@@ -1685,7 +1704,7 @@ public class AppearanceValues {
     public static final int HUMIDIFIER_APPEARANCE_SUB_CATEGORY = 0x0602;
 
     /**
-     * De­humidifier
+     * De-humidifier
      * (Appearance Sub-Category : 0x0603)
      * (Appearance Sub-Category(bits 5 to 0) : 0x03)
      */
@@ -1703,49 +1722,49 @@ public class AppearanceValues {
      * (Appearance Sub-Category : 0x0605)
      * (Appearance Sub-Category(bits 5 to 0) : 0x05)
      */
-    public static final int RADIATOR0605_APPEARANCE_SUB_CATEGORY = 0x0605;
+    public static final int RADIATOR_0605_APPEARANCE_SUB_CATEGORY = 0x0605;
 
     /**
      * Boiler
      * (Appearance Sub-Category : 0x0606)
      * (Appearance Sub-Category(bits 5 to 0) : 0x06)
      */
-    public static final int BOILER0606_APPEARANCE_SUB_CATEGORY = 0x0606;
+    public static final int BOILER_0606_APPEARANCE_SUB_CATEGORY = 0x0606;
 
     /**
-     * Heat pump
+     * Heat Pump
      * (Appearance Sub-Category : 0x0607)
      * (Appearance Sub-Category(bits 5 to 0) : 0x07)
      */
-    public static final int HEAT_PUMP0607_APPEARANCE_SUB_CATEGORY = 0x0607;
+    public static final int HEAT_PUMP_0607_APPEARANCE_SUB_CATEGORY = 0x0607;
 
     /**
-     * Infrared heater
+     * Infrared Heater
      * (Appearance Sub-Category : 0x0608)
      * (Appearance Sub-Category(bits 5 to 0) : 0x08)
      */
-    public static final int INFRARED_HEATER0608_APPEARANCE_SUB_CATEGORY = 0x0608;
+    public static final int INFRARED_HEATER_0608_APPEARANCE_SUB_CATEGORY = 0x0608;
 
     /**
-     * Radiant panel heater
+     * Radiant Panel Heater
      * (Appearance Sub-Category : 0x0609)
      * (Appearance Sub-Category(bits 5 to 0) : 0x09)
      */
-    public static final int RADIANT_PANEL_HEATER0609_APPEARANCE_SUB_CATEGORY = 0x0609;
+    public static final int RADIANT_PANEL_HEATER_0609_APPEARANCE_SUB_CATEGORY = 0x0609;
 
     /**
-     * Fan heater
+     * Fan Heater
      * (Appearance Sub-Category : 0x060a)
      * (Appearance Sub-Category(bits 5 to 0) : 0x0a)
      */
-    public static final int FAN_HEATER060_A_APPEARANCE_SUB_CATEGORY = 0x060a;
+    public static final int FAN_HEATER_060A_APPEARANCE_SUB_CATEGORY = 0x060a;
 
     /**
-     * Air curtain
+     * Air Curtain
      * (Appearance Sub-Category : 0x060b)
      * (Appearance Sub-Category(bits 5 to 0) : 0x0b)
      */
-    public static final int AIR_CURTAIN060_B_APPEARANCE_SUB_CATEGORY = 0x060b;
+    public static final int AIR_CURTAIN_060B_APPEARANCE_SUB_CATEGORY = 0x060b;
 
     /**
      * Generic Air Conditioning
@@ -1773,49 +1792,49 @@ public class AppearanceValues {
      * (Appearance Sub-Category : 0x06c1)
      * (Appearance Sub-Category(bits 5 to 0) : 0x01)
      */
-    public static final int RADIATOR_APPEARANCE_SUB_CATEGORY = 0x06c1;
+    public static final int RADIATOR_06C1_APPEARANCE_SUB_CATEGORY = 0x06c1;
 
     /**
      * Boiler
      * (Appearance Sub-Category : 0x06c2)
      * (Appearance Sub-Category(bits 5 to 0) : 0x02)
      */
-    public static final int BOILER_APPEARANCE_SUB_CATEGORY = 0x06c2;
+    public static final int BOILER_06C2_APPEARANCE_SUB_CATEGORY = 0x06c2;
 
     /**
      * Heat Pump
      * (Appearance Sub-Category : 0x06c3)
      * (Appearance Sub-Category(bits 5 to 0) : 0x03)
      */
-    public static final int HEAT_PUMP_APPEARANCE_SUB_CATEGORY = 0x06c3;
+    public static final int HEAT_PUMP_06C3_APPEARANCE_SUB_CATEGORY = 0x06c3;
 
     /**
      * Infrared Heater
      * (Appearance Sub-Category : 0x06c4)
      * (Appearance Sub-Category(bits 5 to 0) : 0x04)
      */
-    public static final int INFRARED_HEATER_APPEARANCE_SUB_CATEGORY = 0x06c4;
+    public static final int INFRARED_HEATER_06C4_APPEARANCE_SUB_CATEGORY = 0x06c4;
 
     /**
      * Radiant Panel Heater
      * (Appearance Sub-Category : 0x06c5)
      * (Appearance Sub-Category(bits 5 to 0) : 0x05)
      */
-    public static final int RADIANT_PANEL_HEATER_APPEARANCE_SUB_CATEGORY = 0x06c5;
+    public static final int RADIANT_PANEL_HEATER_06C5_APPEARANCE_SUB_CATEGORY = 0x06c5;
 
     /**
      * Fan Heater
      * (Appearance Sub-Category : 0x06c6)
      * (Appearance Sub-Category(bits 5 to 0) : 0x06)
      */
-    public static final int FAN_HEATER_APPEARANCE_SUB_CATEGORY = 0x06c6;
+    public static final int FAN_HEATER_06C6_APPEARANCE_SUB_CATEGORY = 0x06c6;
 
     /**
      * Air Curtain
      * (Appearance Sub-Category : 0x06c7)
      * (Appearance Sub-Category(bits 5 to 0) : 0x07)
      */
-    public static final int AIR_CURTAIN_APPEARANCE_SUB_CATEGORY = 0x06c7;
+    public static final int AIR_CURTAIN_06C7_APPEARANCE_SUB_CATEGORY = 0x06c7;
 
     /**
      * Generic Access Control
@@ -2042,11 +2061,25 @@ public class AppearanceValues {
     public static final int LED_ARRAY_APPEARANCE_SUB_CATEGORY = 0x07c5;
 
     /**
-     * Multi­Color LED Array
+     * Multi-Color LED Array
      * (Appearance Sub-Category : 0x07c6)
      * (Appearance Sub-Category(bits 5 to 0) : 0x06)
      */
     public static final int MULTI_COLOR_LED_ARRAY_APPEARANCE_SUB_CATEGORY = 0x07c6;
+
+    /**
+     * Low voltage halogen
+     * (Appearance Sub-Category : 0x07c7)
+     * (Appearance Sub-Category(bits 5 to 0) : 0x07)
+     */
+    public static final int LOW_VOLTAGE_HALOGEN_APPEARANCE_SUB_CATEGORY = 0x07c7;
+
+    /**
+     * Organic light emitting diode (OLED)
+     * (Appearance Sub-Category : 0x07c8)
+     * (Appearance Sub-Category(bits 5 to 0) : 0x08)
+     */
+    public static final int ORGANIC_LIGHT_EMITTING_DIODE_OLED_APPEARANCE_SUB_CATEGORY = 0x07c8;
 
     /**
      * Generic Window Covering
@@ -2231,7 +2264,7 @@ public class AppearanceValues {
     public static final int LARGE_GOODS_VEHICLE_APPEARANCE_SUB_CATEGORY = 0x08c2;
 
     /**
-     * 2­Wheeled Vehicle
+     * 2-Wheeled Vehicle
      * (Appearance Sub-Category : 0x08c3)
      * (Appearance Sub-Category(bits 5 to 0) : 0x03)
      */
@@ -2259,7 +2292,7 @@ public class AppearanceValues {
     public static final int MOPED_APPEARANCE_SUB_CATEGORY = 0x08c6;
 
     /**
-     * 3­Wheeled Vehicle
+     * 3-Wheeled Vehicle
      * (Appearance Sub-Category : 0x08c7)
      * (Appearance Sub-Category(bits 5 to 0) : 0x07)
      */
@@ -2574,7 +2607,7 @@ public class AppearanceValues {
     public static final int OPTICAL_DISC_PLAYER_APPEARANCE_SUB_CATEGORY = 0x09c9;
 
     /**
-     * Set­Top Box
+     * Set-Top Box
      * (Appearance Sub-Category : 0x09ca)
      * (Appearance Sub-Category(bits 5 to 0) : 0x0a)
      */
@@ -2613,17 +2646,17 @@ public class AppearanceValues {
      * (Appearance Sub-Category : 0x0a40)
      * (Appearance Sub-Category(bits 5 to 0) : 0x00)
      */
-    public static final int GENERIC_HEARING_AID_APPEARANCE_SUB_CATEGORY = 0x0a40;
+    public static final int GENERIC_HEARINGAID_APPEARANCE_SUB_CATEGORY = 0x0a40;
 
     /**
-     * In­ear hearing aid
+     * In-ear hearing aid
      * (Appearance Sub-Category : 0x0a41)
      * (Appearance Sub-Category(bits 5 to 0) : 0x01)
      */
     public static final int IN_EAR_HEARING_AID_APPEARANCE_SUB_CATEGORY = 0x0a41;
 
     /**
-     * Behind­ear hearing aid
+     * Behind-ear hearing aid
      * (Appearance Sub-Category : 0x0a42)
      * (Appearance Sub-Category(bits 5 to 0) : 0x02)
      */
@@ -2656,27 +2689,6 @@ public class AppearanceValues {
      * (Appearance Sub-Category(bits 5 to 0) : 0x02)
      */
     public static final int PORTABLE_HANDHELD_CONSOLE_APPEARANCE_SUB_CATEGORY = 0x0a82;
-
-    /**
-     * Generic Signage
-     * (Appearance Sub-Category : 0x0ac0)
-     * (Appearance Sub-Category(bits 5 to 0) : 0x00)
-     */
-    public static final int GENERIC_SIGNAGE_APPEARANCE_SUB_CATEGORY = 0x0ac0;
-
-    /**
-     * Digital Signage
-     * (Appearance Sub-Category : 0x0ac1)
-     * (Appearance Sub-Category(bits 5 to 0) : 0x01)
-     */
-    public static final int DIGITAL_SIGNAGE_APPEARANCE_SUB_CATEGORY = 0x0ac1;
-
-    /**
-     * Electronic Label
-     * (Appearance Sub-Category : 0x0ac2)
-     * (Appearance Sub-Category(bits 5 to 0) : 0x02)
-     */
-    public static final int ELECTRONIC_LABEL_APPEARANCE_SUB_CATEGORY = 0x0ac2;
 
     /**
      * Generic Pulse Oximeter
@@ -2746,14 +2758,14 @@ public class AppearanceValues {
      * (Appearance Sub-Category : 0x0d41)
      * (Appearance Sub-Category(bits 5 to 0) : 0x01)
      */
-    public static final int INSULIN_PUMPDURABLEPUMP_APPEARANCE_SUB_CATEGORY = 0x0d41;
+    public static final int INSULIN_PUMP_DURABLE_PUMP_APPEARANCE_SUB_CATEGORY = 0x0d41;
 
     /**
      * Insulin Pump, patch pump
      * (Appearance Sub-Category : 0x0d44)
      * (Appearance Sub-Category(bits 5 to 0) : 0x04)
      */
-    public static final int INSULIN_PUMPPATCHPUMP_APPEARANCE_SUB_CATEGORY = 0x0d44;
+    public static final int INSULIN_PUMP_PATCH_PUMP_APPEARANCE_SUB_CATEGORY = 0x0d44;
 
     /**
      * Insulin Pen
@@ -2768,6 +2780,20 @@ public class AppearanceValues {
      * (Appearance Sub-Category(bits 5 to 0) : 0x00)
      */
     public static final int GENERIC_MEDICATION_DELIVERY_APPEARANCE_SUB_CATEGORY = 0x0d80;
+
+    /**
+     * Generic Spirometer
+     * (Appearance Sub-Category : 0x0dc0)
+     * (Appearance Sub-Category(bits 5 to 0) : 0x00)
+     */
+    public static final int GENERIC_SPIROMETER_APPEARANCE_SUB_CATEGORY = 0x0dc0;
+
+    /**
+     * Handheld Spirometer
+     * (Appearance Sub-Category : 0x0dc1)
+     * (Appearance Sub-Category(bits 5 to 0) : 0x01)
+     */
+    public static final int HANDHELD_SPIROMETER_APPEARANCE_SUB_CATEGORY = 0x0dc1;
 
     /**
      * Generic Outdoor Sports Activity

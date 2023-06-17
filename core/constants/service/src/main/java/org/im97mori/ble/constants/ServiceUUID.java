@@ -8,8 +8,8 @@ import java.util.UUID;
 /**
  * BLE GATT Service UUID
  * <p>
- * 16-bit UUID Numbers Document.pdf
- * Revision Date: 2021-10-01
+ * https://bitbucket.org/bluetooth-SIG/public/src/main/
+ * commit 6557f28af8b95de6b09d6e0d96cf51651fba32ff
  */
 public class ServiceUUID {
 
@@ -24,7 +24,7 @@ public class ServiceUUID {
 			put(UUID.fromString("00001804-0000-1000-8000-00805f9b34fb"), "Tx Power");
 			put(UUID.fromString("00001805-0000-1000-8000-00805f9b34fb"), "Current Time");
 			put(UUID.fromString("00001806-0000-1000-8000-00805f9b34fb"), "Reference Time Update");
-			put(UUID.fromString("00001807-0000-1000-8000-00805f9b34fb"), "Next Dst Change");
+			put(UUID.fromString("00001807-0000-1000-8000-00805f9b34fb"), "Next DST Change");
 			put(UUID.fromString("00001808-0000-1000-8000-00805f9b34fb"), "Glucose");
 			put(UUID.fromString("00001809-0000-1000-8000-00805f9b34fb"), "Health Thermometer");
 			put(UUID.fromString("0000180a-0000-1000-8000-00805f9b34fb"), "Device Information");
@@ -36,7 +36,7 @@ public class ServiceUUID {
 			put(UUID.fromString("00001812-0000-1000-8000-00805f9b34fb"), "Human Interface Device");
 			put(UUID.fromString("00001813-0000-1000-8000-00805f9b34fb"), "Scan Parameters");
 			put(UUID.fromString("00001814-0000-1000-8000-00805f9b34fb"), "Running Speed and Cadence");
-			put(UUID.fromString("00001815-0000-1000-8000-00805f9b34fb"), "Automation Io");
+			put(UUID.fromString("00001815-0000-1000-8000-00805f9b34fb"), "Automation IO");
 			put(UUID.fromString("00001816-0000-1000-8000-00805f9b34fb"), "Cycling Speed and Cadence");
 			put(UUID.fromString("00001818-0000-1000-8000-00805f9b34fb"), "Cycling Power");
 			put(UUID.fromString("00001819-0000-1000-8000-00805f9b34fb"), "Location and Navigation");
@@ -49,7 +49,7 @@ public class ServiceUUID {
 			put(UUID.fromString("00001820-0000-1000-8000-00805f9b34fb"), "Internet Protocol Support");
 			put(UUID.fromString("00001821-0000-1000-8000-00805f9b34fb"), "Indoor Positioning");
 			put(UUID.fromString("00001822-0000-1000-8000-00805f9b34fb"), "Pulse Oximeter");
-			put(UUID.fromString("00001823-0000-1000-8000-00805f9b34fb"), "Http Proxy");
+			put(UUID.fromString("00001823-0000-1000-8000-00805f9b34fb"), "HTTP Proxy");
 			put(UUID.fromString("00001824-0000-1000-8000-00805f9b34fb"), "Transport Discovery");
 			put(UUID.fromString("00001825-0000-1000-8000-00805f9b34fb"), "Object Transfer");
 			put(UUID.fromString("00001826-0000-1000-8000-00805f9b34fb"), "Fitness Machine");
@@ -59,6 +59,7 @@ public class ServiceUUID {
 			put(UUID.fromString("0000183a-0000-1000-8000-00805f9b34fb"), "Insulin Delivery");
 			put(UUID.fromString("0000183b-0000-1000-8000-00805f9b34fb"), "Binary Sensor");
 			put(UUID.fromString("0000183c-0000-1000-8000-00805f9b34fb"), "Emergency Configuration");
+			put(UUID.fromString("0000183d-0000-1000-8000-00805f9b34fb"), "Authorization Control");
 			put(UUID.fromString("0000183e-0000-1000-8000-00805f9b34fb"), "Physical Activity Monitor");
 			put(UUID.fromString("00001843-0000-1000-8000-00805f9b34fb"), "Audio Input Control");
 			put(UUID.fromString("00001844-0000-1000-8000-00805f9b34fb"), "Volume Control");
@@ -71,11 +72,16 @@ public class ServiceUUID {
 			put(UUID.fromString("0000184b-0000-1000-8000-00805f9b34fb"), "Telephone Bearer");
 			put(UUID.fromString("0000184c-0000-1000-8000-00805f9b34fb"), "Generic Telephone Bearer");
 			put(UUID.fromString("0000184d-0000-1000-8000-00805f9b34fb"), "Microphone Control");
-			put(UUID.fromString("0000184e-0000-1000-8000-00805f9b34fb"), "Audio Stream Control Service");
-			put(UUID.fromString("0000184f-0000-1000-8000-00805f9b34fb"), "Broadcast Audio Scan Service");
-			put(UUID.fromString("00001850-0000-1000-8000-00805f9b34fb"), "Published Audio Capabilities Service");
-			put(UUID.fromString("00001851-0000-1000-8000-00805f9b34fb"), "Basic Audio Announcement Service");
-			put(UUID.fromString("00001852-0000-1000-8000-00805f9b34fb"), "Broadcast Audio Announcement Service");
+			put(UUID.fromString("0000184e-0000-1000-8000-00805f9b34fb"), "Audio Stream Control");
+			put(UUID.fromString("0000184f-0000-1000-8000-00805f9b34fb"), "Broadcast Audio Scan");
+			put(UUID.fromString("00001850-0000-1000-8000-00805f9b34fb"), "Published Audio Capabilities");
+			put(UUID.fromString("00001851-0000-1000-8000-00805f9b34fb"), "Basic Audio Announcement");
+			put(UUID.fromString("00001852-0000-1000-8000-00805f9b34fb"), "Broadcast Audio Announcement");
+			put(UUID.fromString("00001853-0000-1000-8000-00805f9b34fb"), "Common Audio");
+			put(UUID.fromString("00001854-0000-1000-8000-00805f9b34fb"), "Hearing Access");
+			put(UUID.fromString("00001855-0000-1000-8000-00805f9b34fb"), "Telephony and Media Audio");
+			put(UUID.fromString("00001856-0000-1000-8000-00805f9b34fb"), "Public Broadcast Announcement");
+			put(UUID.fromString("00001857-0000-1000-8000-00805f9b34fb"), "Electronic Shelf Label");
 		}
 
 	}
@@ -122,7 +128,7 @@ public class ServiceUUID {
 	public static final UUID REFERENCE_TIME_UPDATE_SERVICE = UUID.fromString("00001806-0000-1000-8000-00805f9b34fb");
 
 	/**
-	 * Next Dst Change (Service UUID: 0x1807)
+	 * Next DST Change (Service UUID: 0x1807)
 	 */
 	public static final UUID NEXT_DST_CHANGE_SERVICE = UUID.fromString("00001807-0000-1000-8000-00805f9b34fb");
 
@@ -183,7 +189,7 @@ public class ServiceUUID {
 			.fromString("00001814-0000-1000-8000-00805f9b34fb");
 
 	/**
-	 * Automation Io (Service UUID: 0x1815)
+	 * Automation IO (Service UUID: 0x1815)
 	 */
 	public static final UUID AUTOMATION_IO_SERVICE = UUID.fromString("00001815-0000-1000-8000-00805f9b34fb");
 
@@ -251,7 +257,7 @@ public class ServiceUUID {
 	public static final UUID PULSE_OXIMETER_SERVICE = UUID.fromString("00001822-0000-1000-8000-00805f9b34fb");
 
 	/**
-	 * Http Proxy (Service UUID: 0x1823)
+	 * HTTP Proxy (Service UUID: 0x1823)
 	 */
 	public static final UUID HTTP_PROXY_SERVICE = UUID.fromString("00001823-0000-1000-8000-00805f9b34fb");
 
@@ -300,6 +306,11 @@ public class ServiceUUID {
 	 * Emergency Configuration (Service UUID: 0x183c)
 	 */
 	public static final UUID EMERGENCY_CONFIGURATION_SERVICE = UUID.fromString("0000183c-0000-1000-8000-00805f9b34fb");
+
+	/**
+	 * Authorization Control (Service UUID: 0x183d)
+	 */
+	public static final UUID AUTHORIZATION_CONTROL_SERVICE = UUID.fromString("0000183d-0000-1000-8000-00805f9b34fb");
 
 	/**
 	 * Physical Activity Monitor (Service UUID: 0x183e)
@@ -364,30 +375,57 @@ public class ServiceUUID {
 	public static final UUID MICROPHONE_CONTROL_SERVICE = UUID.fromString("0000184d-0000-1000-8000-00805f9b34fb");
 
 	/**
-	 * Audio Stream Control Service (Service UUID: 0x184e)
+	 * Audio Stream Control (Service UUID: 0x184e)
 	 */
 	public static final UUID AUDIO_STREAM_CONTROL_SERVICE = UUID.fromString("0000184e-0000-1000-8000-00805f9b34fb");
 
 	/**
-	 * Broadcast Audio Scan Service (Service UUID: 0x184f)
+	 * Broadcast Audio Scan (Service UUID: 0x184f)
 	 */
 	public static final UUID BROADCAST_AUDIO_SCAN_SERVICE = UUID.fromString("0000184f-0000-1000-8000-00805f9b34fb");
 
 	/**
-	 * Published Audio Capabilities Service (Service UUID: 0x1850)
+	 * Published Audio Capabilities (Service UUID: 0x1850)
 	 */
 	public static final UUID PUBLISHED_AUDIO_CAPABILITIES_SERVICE = UUID
 			.fromString("00001850-0000-1000-8000-00805f9b34fb");
 
 	/**
-	 * Basic Audio Announcement Service (Service UUID: 0x1851)
+	 * Basic Audio Announcement (Service UUID: 0x1851)
 	 */
 	public static final UUID BASIC_AUDIO_ANNOUNCEMENT_SERVICE = UUID.fromString("00001851-0000-1000-8000-00805f9b34fb");
 
 	/**
-	 * Broadcast Audio Announcement Service (Service UUID: 0x1852)
+	 * Broadcast Audio Announcement (Service UUID: 0x1852)
 	 */
 	public static final UUID BROADCAST_AUDIO_ANNOUNCEMENT_SERVICE = UUID
 			.fromString("00001852-0000-1000-8000-00805f9b34fb");
+
+	/**
+	 * Common Audio (Service UUID: 0x1853)
+	 */
+	public static final UUID COMMON_AUDIO_SERVICE = UUID.fromString("00001853-0000-1000-8000-00805f9b34fb");
+
+	/**
+	 * Hearing Access (Service UUID: 0x1854)
+	 */
+	public static final UUID HEARING_ACCESS_SERVICE = UUID.fromString("00001854-0000-1000-8000-00805f9b34fb");
+
+	/**
+	 * Telephony and Media Audio (Service UUID: 0x1855)
+	 */
+	public static final UUID TELEPHONY_AND_MEDIA_AUDIO_SERVICE = UUID
+			.fromString("00001855-0000-1000-8000-00805f9b34fb");
+
+	/**
+	 * Public Broadcast Announcement (Service UUID: 0x1856)
+	 */
+	public static final UUID PUBLIC_BROADCAST_ANNOUNCEMENT_SERVICE = UUID
+			.fromString("00001856-0000-1000-8000-00805f9b34fb");
+
+	/**
+	 * Electronic Shelf Label (Service UUID: 0x1857)
+	 */
+	public static final UUID ELECTRONIC_SHELF_LABEL_SERVICE = UUID.fromString("00001857-0000-1000-8000-00805f9b34fb");
 
 }

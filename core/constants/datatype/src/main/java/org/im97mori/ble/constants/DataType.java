@@ -7,8 +7,8 @@ import java.util.Map;
 /**
  * BLE GATT Data Type
  * <p>
- * Generic Access Profile.pdf
- * Revision Date: 2021-07-13
+ * https://bitbucket.org/bluetooth-SIG/public/src/main/
+ * commit 6557f28af8b95de6b09d6e0d96cf51651fba32ff
  */
 public class DataType {
 
@@ -26,16 +26,15 @@ public class DataType {
             put(0x08, "Shortened Local Name");
             put(0x09, "Complete Local Name");
             put(0x0a, "Tx Power Level");
-            put(0x0b, "Class of Device");
-            put(0x0c, "Simple Pairing Hash C");
+            put(0x0d, "Class of Device");
             put(0x0e, "Simple Pairing Hash C-192");
-            put(0x0f, "Simple Pairing Randomizer R / Simple Pairing Randomizer R-192");
+            put(0x0f, "Simple Pairing Randomizer R-192");
             put(0x10, "Device ID / Security Manager TK Value");
             put(0x11, "Security Manager Out of Band Flags");
-            put(0x12, "Peripheral Connection Interval Range(Slave Connection Interval Range)");
+            put(0x12, "Peripheral Connection Interval Range");
             put(0x14, "List of 16-bit Service Solicitation UUIDs");
             put(0x15, "List of 128-bit Service Solicitation UUIDs");
-            put(0x16, "Service Data / Service Data - 16-bit UUID");
+            put(0x16, "Service Data - 16-bit UUID");
             put(0x17, "Public Target Address");
             put(0x18, "Random Target Address");
             put(0x19, "Appearance");
@@ -61,6 +60,10 @@ public class DataType {
             put(0x2d, "Broadcast_Code");
             put(0x2e, "Resolvable Set Identifier");
             put(0x2f, "Advertising Interval - long");
+            put(0x30, "Broadcast_Name");
+            put(0x31, "Encrypted Advertising Data");
+            put(0x32, "Periodic Advertising Response Timing Information");
+            put(0x34, "Electronic Shelf Label");
             put(0x3d, "3D Information Data");
             put(0xff, "Manufacturer Specific Data");
         }
@@ -70,8 +73,9 @@ public class DataType {
     /**
      * Generic Access Profile.pdf
      */
-    public static final Map<Integer, String> DATA_TYPE_MAPPING = Collections.synchronizedMap(Collections.unmodifiableMap(new DataTypeMap()));
-   
+    public static final Map<Integer, String> DATA_TYPE_MAPPING = Collections
+            .synchronizedMap(Collections.unmodifiableMap(new DataTypeMap()));
+
     /**
      * Flags (Data Type Value: 0x01)
      */
@@ -123,24 +127,14 @@ public class DataType {
     public static final int TX_POWER_LEVEL_DATA_TYPE = 0x0a;
 
     /**
-     * Class of Device (Data Type Value: 0x0b)
+     * Class of Device (Data Type Value: 0x0d)
      */
-    public static final int CLASSOF_DEVICE_DATA_TYPE = 0x0b;
-
-    /**
-     * Simple Pairing Hash C (Data Type Value: 0x0c)
-     */
-    public static final int SIMPLE_PAIRING_HASH_C_DATA_TYPE = 0x0c;
+    public static final int CLASSOF_DEVICE_DATA_TYPE = 0x0d;
 
     /**
      * Simple Pairing Hash C-192 (Data Type Value: 0x0e)
      */
     public static final int SIMPLE_PAIRING_HASH_C192_DATA_TYPE = 0x0e;
-
-    /**
-     * Simple Pairing Randomizer R (Data Type Value: 0x0f)
-     */
-    public static final int SIMPLE_PAIRING_RANDOMIZER_R_DATA_TYPE = 0x0f;
 
     /**
      * Simple Pairing Randomizer R-192 (Data Type Value: 0x0f)
@@ -163,7 +157,7 @@ public class DataType {
     public static final int SECURITY_MANAGER_OUTOF_BAND_FLAGS_DATA_TYPE = 0x11;
 
     /**
-     * Peripheral Connection Interval Range(Slave Connection Interval Range) (Data Type Value: 0x12)
+     * Peripheral Connection Interval Range (Data Type Value: 0x12)
      */
     public static final int PERIPHERAL_CONNECTION_INTERVAL_RANGE_DATA_TYPE = 0x12;
 
@@ -176,11 +170,6 @@ public class DataType {
      * List of 128-bit Service Solicitation UUIDs (Data Type Value: 0x15)
      */
     public static final int LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE = 0x15;
-
-    /**
-     * Service Data (Data Type Value: 0x16)
-     */
-    public static final int SERVICE_DATA_DATA_TYPE = 0x16;
 
     /**
      * Service Data - 16-bit UUID (Data Type Value: 0x16)
@@ -311,6 +300,26 @@ public class DataType {
      * Advertising Interval - long (Data Type Value: 0x2f)
      */
     public static final int ADVERTISING_INTERVAL_LONG_DATA_TYPE = 0x2f;
+
+    /**
+     * Broadcast_Name (Data Type Value: 0x30)
+     */
+    public static final int BROADCAST_NAME_DATA_TYPE = 0x30;
+
+    /**
+     * Encrypted Advertising Data (Data Type Value: 0x31)
+     */
+    public static final int ENCRYPTED_ADVERTISING_DATA_DATA_TYPE = 0x31;
+
+    /**
+     * Periodic Advertising Response Timing Information (Data Type Value: 0x32)
+     */
+    public static final int PERIODIC_ADVERTISING_RESPONSE_TIMING_INFORMATION_DATA_TYPE = 0x32;
+
+    /**
+     * Electronic Shelf Label (Data Type Value: 0x34)
+     */
+    public static final int ELECTRONIC_SHELF_LABEL_DATA_TYPE = 0x34;
 
     /**
      * 3D Information Data (Data Type Value: 0x3d)

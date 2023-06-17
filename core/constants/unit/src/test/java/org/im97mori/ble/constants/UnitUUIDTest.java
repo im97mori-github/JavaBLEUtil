@@ -11,251 +11,292 @@ public class UnitUUIDTest {
 	@Test
 	public void test_map_00001() {
 		assertTrue(UNIT_MAPPING_128.containsKey(UNITLESS_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(UNITLESS_UNIT), "unitless");
+		assertEquals("unitless", UNIT_MAPPING_128.get(UNITLESS_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LENGTH_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LENGTH_METRE_UNIT), "length (metre)");
+		assertEquals("length (metre)", UNIT_MAPPING_128.get(LENGTH_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MASS_KILOGRAM_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MASS_KILOGRAM_UNIT), "mass (kilogram)");
+		assertEquals("mass (kilogram)", UNIT_MAPPING_128.get(MASS_KILOGRAM_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(TIME_SECOND_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(TIME_SECOND_UNIT), "time (second)");
+		assertEquals("time (second)", UNIT_MAPPING_128.get(TIME_SECOND_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ELECTRIC_CURRENT_AMPERE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ELECTRIC_CURRENT_AMPERE_UNIT), "electric current (ampere)");
+		assertEquals("electric current (ampere)", UNIT_MAPPING_128.get(ELECTRIC_CURRENT_AMPERE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(THERMODYNAMIC_TEMPERATURE_KELVIN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(THERMODYNAMIC_TEMPERATURE_KELVIN_UNIT), "thermodynamic temperature (kelvin)");
+		assertEquals("thermodynamic temperature (kelvin)", UNIT_MAPPING_128.get(THERMODYNAMIC_TEMPERATURE_KELVIN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(AMOUNT_OF_SUBSTANCE_MOLE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(AMOUNT_OF_SUBSTANCE_MOLE_UNIT), "amount of substance (mole)");
+		assertEquals("amount of substance (mole)", UNIT_MAPPING_128.get(AMOUNT_OF_SUBSTANCE_MOLE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LUMINOUS_INTENSITY_CANDELA_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LUMINOUS_INTENSITY_CANDELA_UNIT), "luminous intensity (candela)");
+		assertEquals("luminous intensity (candela)", UNIT_MAPPING_128.get(LUMINOUS_INTENSITY_CANDELA_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(AREA_SQUARE_METRES_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(AREA_SQUARE_METRES_UNIT), "area (square metres)");
+		assertEquals("area (square metres)", UNIT_MAPPING_128.get(AREA_SQUARE_METRES_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(VOLUME_CUBIC_METRES_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(VOLUME_CUBIC_METRES_UNIT), "volume (cubic metres)");
+		assertEquals("volume (cubic metres)", UNIT_MAPPING_128.get(VOLUME_CUBIC_METRES_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(VELOCITY_METRES_PER_SECOND_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(VELOCITY_METRES_PER_SECOND_UNIT), "velocity (metres per second)");
+		assertEquals("velocity (metres per second)", UNIT_MAPPING_128.get(VELOCITY_METRES_PER_SECOND_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ACCELERATION_METRES_PER_SECOND_SQUARED_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ACCELERATION_METRES_PER_SECOND_SQUARED_UNIT), "acceleration (metres per second squared)");
+		assertEquals("acceleration (metres per second squared)",
+				UNIT_MAPPING_128.get(ACCELERATION_METRES_PER_SECOND_SQUARED_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(WAVENUMBER_RECIPROCAL_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(WAVENUMBER_RECIPROCAL_METRE_UNIT), "wavenumber (reciprocal metre)");
+		assertEquals("wavenumber (reciprocal metre)", UNIT_MAPPING_128.get(WAVENUMBER_RECIPROCAL_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(DENSITY_KILOGRAM_PER_CUBIC_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(DENSITY_KILOGRAM_PER_CUBIC_METRE_UNIT), "density (kilogram per cubic metre)");
+		assertEquals("density (kilogram per cubic metre)", UNIT_MAPPING_128.get(DENSITY_KILOGRAM_PER_CUBIC_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(SURFACE_DENSITY_KILOGRAM_PER_SQUARE_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(SURFACE_DENSITY_KILOGRAM_PER_SQUARE_METRE_UNIT), "surface density (kilogram per square metre)");
+		assertEquals("surface density (kilogram per square metre)",
+				UNIT_MAPPING_128.get(SURFACE_DENSITY_KILOGRAM_PER_SQUARE_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(SPECIFIC_VOLUME_CUBIC_METRE_PER_KILOGRAM_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(SPECIFIC_VOLUME_CUBIC_METRE_PER_KILOGRAM_UNIT), "specific volume (cubic metre per kilogram)");
+		assertEquals("specific volume (cubic metre per kilogram)",
+				UNIT_MAPPING_128.get(SPECIFIC_VOLUME_CUBIC_METRE_PER_KILOGRAM_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(CURRENT_DENSITY_AMPERE_PER_SQUARE_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(CURRENT_DENSITY_AMPERE_PER_SQUARE_METRE_UNIT), "current density (ampere per square metre)");
+		assertEquals("current density (ampere per square metre)",
+				UNIT_MAPPING_128.get(CURRENT_DENSITY_AMPERE_PER_SQUARE_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MAGNETIC_FIELD_STRENGTH_AMPERE_PER_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MAGNETIC_FIELD_STRENGTH_AMPERE_PER_METRE_UNIT), "magnetic field strength (ampere per metre)");
+		assertEquals("magnetic field strength (ampere per metre)",
+				UNIT_MAPPING_128.get(MAGNETIC_FIELD_STRENGTH_AMPERE_PER_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(AMOUNT_CONCENTRATION_MOLE_PER_CUBIC_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(AMOUNT_CONCENTRATION_MOLE_PER_CUBIC_METRE_UNIT), "amount concentration (mole per cubic metre)");
+		assertEquals("amount concentration (mole per cubic metre)",
+				UNIT_MAPPING_128.get(AMOUNT_CONCENTRATION_MOLE_PER_CUBIC_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MASS_CONCENTRATION_KILOGRAM_PER_CUBIC_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MASS_CONCENTRATION_KILOGRAM_PER_CUBIC_METRE_UNIT), "mass concentration (kilogram per cubic metre)");
+		assertEquals("mass concentration (kilogram per cubic metre)",
+				UNIT_MAPPING_128.get(MASS_CONCENTRATION_KILOGRAM_PER_CUBIC_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LUMINANCE_CANDELA_PER_SQUARE_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LUMINANCE_CANDELA_PER_SQUARE_METRE_UNIT), "luminance (candela per square metre)");
+		assertEquals("luminance (candela per square metre)",
+				UNIT_MAPPING_128.get(LUMINANCE_CANDELA_PER_SQUARE_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(REFRACTIVE_INDEX_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(REFRACTIVE_INDEX_UNIT), "refractive index");
+		assertEquals("refractive index", UNIT_MAPPING_128.get(REFRACTIVE_INDEX_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(RELATIVE_PERMEABILITY_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(RELATIVE_PERMEABILITY_UNIT), "relative permeability");
+		assertEquals("relative permeability", UNIT_MAPPING_128.get(RELATIVE_PERMEABILITY_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PLANE_ANGLE_RADIAN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PLANE_ANGLE_RADIAN_UNIT), "plane angle (radian)");
+		assertEquals("plane angle (radian)", UNIT_MAPPING_128.get(PLANE_ANGLE_RADIAN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(SOLID_ANGLE_STERADIAN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(SOLID_ANGLE_STERADIAN_UNIT), "solid angle (steradian)");
+		assertEquals("solid angle (steradian)", UNIT_MAPPING_128.get(SOLID_ANGLE_STERADIAN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(FREQUENCY_HERTZ_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(FREQUENCY_HERTZ_UNIT), "frequency (hertz)");
+		assertEquals("frequency (hertz)", UNIT_MAPPING_128.get(FREQUENCY_HERTZ_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(FORCE_NEWTON_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(FORCE_NEWTON_UNIT), "force (newton)");
+		assertEquals("force (newton)", UNIT_MAPPING_128.get(FORCE_NEWTON_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PRESSURE_PASCAL_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PRESSURE_PASCAL_UNIT), "pressure (pascal)");
+		assertEquals("pressure (pascal)", UNIT_MAPPING_128.get(PRESSURE_PASCAL_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ENERGY_JOULE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ENERGY_JOULE_UNIT), "energy (joule)");
+		assertEquals("energy (joule)", UNIT_MAPPING_128.get(ENERGY_JOULE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(POWER_WATT_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(POWER_WATT_UNIT), "power (watt)");
+		assertEquals("power (watt)", UNIT_MAPPING_128.get(POWER_WATT_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ELECTRIC_CHARGE_COULOMB_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ELECTRIC_CHARGE_COULOMB_UNIT), "electric charge (coulomb)");
+		assertEquals("electric charge (coulomb)", UNIT_MAPPING_128.get(ELECTRIC_CHARGE_COULOMB_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ELECTRIC_POTENTIAL_DIFFERENCE_VOLT_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ELECTRIC_POTENTIAL_DIFFERENCE_VOLT_UNIT), "electric potential difference (volt)");
+		assertEquals("electric potential difference (volt)",
+				UNIT_MAPPING_128.get(ELECTRIC_POTENTIAL_DIFFERENCE_VOLT_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(CAPACITANCE_FARAD_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(CAPACITANCE_FARAD_UNIT), "capacitance (farad)");
+		assertEquals("capacitance (farad)", UNIT_MAPPING_128.get(CAPACITANCE_FARAD_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ELECTRIC_RESISTANCE_OHM_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ELECTRIC_RESISTANCE_OHM_UNIT), "electric resistance (ohm)");
+		assertEquals("electric resistance (ohm)", UNIT_MAPPING_128.get(ELECTRIC_RESISTANCE_OHM_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ELECTRIC_CONDUCTANCE_SIEMENS_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ELECTRIC_CONDUCTANCE_SIEMENS_UNIT), "electric conductance (siemens)");
+		assertEquals("electric conductance (siemens)", UNIT_MAPPING_128.get(ELECTRIC_CONDUCTANCE_SIEMENS_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MAGNETIC_FLUX_WEBER_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MAGNETIC_FLUX_WEBER_UNIT), "magnetic flux (weber)");
+		assertEquals("magnetic flux (weber)", UNIT_MAPPING_128.get(MAGNETIC_FLUX_WEBER_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MAGNETIC_FLUX_DENSITY_TESLA_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MAGNETIC_FLUX_DENSITY_TESLA_UNIT), "magnetic flux density (tesla)");
+		assertEquals("magnetic flux density (tesla)", UNIT_MAPPING_128.get(MAGNETIC_FLUX_DENSITY_TESLA_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(INDUCTANCE_HENRY_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(INDUCTANCE_HENRY_UNIT), "inductance (henry)");
+		assertEquals("inductance (henry)", UNIT_MAPPING_128.get(INDUCTANCE_HENRY_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(THERMODYNAMIC_TEMPERATURE_DEGREE_CELSIUS_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(THERMODYNAMIC_TEMPERATURE_DEGREE_CELSIUS_UNIT), "Celsius temperature (degree Celsius)");
+		assertEquals("Celsius temperature (degree Celsius)",
+				UNIT_MAPPING_128.get(THERMODYNAMIC_TEMPERATURE_DEGREE_CELSIUS_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LUMINOUS_FLUX_LUMEN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LUMINOUS_FLUX_LUMEN_UNIT), "luminous flux (lumen)");
+		assertEquals("luminous flux (lumen)", UNIT_MAPPING_128.get(LUMINOUS_FLUX_LUMEN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ILLUMINANCE_LUX_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ILLUMINANCE_LUX_UNIT), "illuminance (lux)");
+		assertEquals("illuminance (lux)", UNIT_MAPPING_128.get(ILLUMINANCE_LUX_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ACTIVITY_REFERRED_TO_A_RADIONUCLIDE_BECQUEREL_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ACTIVITY_REFERRED_TO_A_RADIONUCLIDE_BECQUEREL_UNIT), "activity referred to a radionuclide (becquerel)");
+		assertEquals("activity referred to a radionuclide (becquerel)",
+				UNIT_MAPPING_128.get(ACTIVITY_REFERRED_TO_A_RADIONUCLIDE_BECQUEREL_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ABSORBED_DOSE_GRAY_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ABSORBED_DOSE_GRAY_UNIT), "absorbed dose (gray)");
+		assertEquals("absorbed dose (gray)", UNIT_MAPPING_128.get(ABSORBED_DOSE_GRAY_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(DOSE_EQUIVALENT_SIEVERT_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(DOSE_EQUIVALENT_SIEVERT_UNIT), "dose equivalent (sievert)");
+		assertEquals("dose equivalent (sievert)", UNIT_MAPPING_128.get(DOSE_EQUIVALENT_SIEVERT_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(CATALYTIC_ACTIVITY_KATAL_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(CATALYTIC_ACTIVITY_KATAL_UNIT), "catalytic activity (katal)");
+		assertEquals("catalytic activity (katal)", UNIT_MAPPING_128.get(CATALYTIC_ACTIVITY_KATAL_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(DYNAMIC_VISCOSITY_PASCAL_SECOND_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(DYNAMIC_VISCOSITY_PASCAL_SECOND_UNIT), "dynamic viscosity (pascal second)");
+		assertEquals("dynamic viscosity (pascal second)", UNIT_MAPPING_128.get(DYNAMIC_VISCOSITY_PASCAL_SECOND_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MOMENT_OF_FORCE_NEWTON_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MOMENT_OF_FORCE_NEWTON_METRE_UNIT), "moment of force (newton metre)");
+		assertEquals("moment of force (newton metre)", UNIT_MAPPING_128.get(MOMENT_OF_FORCE_NEWTON_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(SURFACE_TENSION_NEWTON_PER_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(SURFACE_TENSION_NEWTON_PER_METRE_UNIT), "surface tension (newton per metre)");
+		assertEquals("surface tension (newton per metre)", UNIT_MAPPING_128.get(SURFACE_TENSION_NEWTON_PER_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ANGULAR_VELOCITY_RADIAN_PER_SECOND_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ANGULAR_VELOCITY_RADIAN_PER_SECOND_UNIT), "angular velocity (radian per second)");
+		assertEquals("angular velocity (radian per second)",
+				UNIT_MAPPING_128.get(ANGULAR_VELOCITY_RADIAN_PER_SECOND_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ANGULAR_ACCELERATION_RADIAN_PER_SECOND_SQUARED_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ANGULAR_ACCELERATION_RADIAN_PER_SECOND_SQUARED_UNIT), "angular acceleration (radian per second squared)");
+		assertEquals("angular acceleration (radian per second squared)",
+				UNIT_MAPPING_128.get(ANGULAR_ACCELERATION_RADIAN_PER_SECOND_SQUARED_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(HEAT_FLUX_DENSITY_WATT_PER_SQUARE_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(HEAT_FLUX_DENSITY_WATT_PER_SQUARE_METRE_UNIT), "heat flux density (watt per square metre)");
+		assertEquals("heat flux density (watt per square metre)",
+				UNIT_MAPPING_128.get(HEAT_FLUX_DENSITY_WATT_PER_SQUARE_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(HEAT_CAPACITY_JOULE_PER_KELVIN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(HEAT_CAPACITY_JOULE_PER_KELVIN_UNIT), "heat capacity (joule per kelvin)");
+		assertEquals("heat capacity (joule per kelvin)", UNIT_MAPPING_128.get(HEAT_CAPACITY_JOULE_PER_KELVIN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(SPECIFIC_HEAT_CAPACITY_JOULE_PER_KILOGRAM_KELVIN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(SPECIFIC_HEAT_CAPACITY_JOULE_PER_KILOGRAM_KELVIN_UNIT), "specific heat capacity (joule per kilogram kelvin)");
+		assertEquals("specific heat capacity (joule per kilogram kelvin)",
+				UNIT_MAPPING_128.get(SPECIFIC_HEAT_CAPACITY_JOULE_PER_KILOGRAM_KELVIN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(SPECIFIC_ENERGY_JOULE_PER_KILOGRAM_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(SPECIFIC_ENERGY_JOULE_PER_KILOGRAM_UNIT), "specific energy (joule per kilogram)");
+		assertEquals("specific energy (joule per kilogram)",
+				UNIT_MAPPING_128.get(SPECIFIC_ENERGY_JOULE_PER_KILOGRAM_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(THERMAL_CONDUCTIVITY_WATT_PER_METRE_KELVIN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(THERMAL_CONDUCTIVITY_WATT_PER_METRE_KELVIN_UNIT), "thermal conductivity (watt per metre kelvin)");
+		assertEquals("thermal conductivity (watt per metre kelvin)",
+				UNIT_MAPPING_128.get(THERMAL_CONDUCTIVITY_WATT_PER_METRE_KELVIN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ENERGY_DENSITY_JOULE_PER_CUBIC_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ENERGY_DENSITY_JOULE_PER_CUBIC_METRE_UNIT), "energy density (joule per cubic metre)");
+		assertEquals("energy density (joule per cubic metre)",
+				UNIT_MAPPING_128.get(ENERGY_DENSITY_JOULE_PER_CUBIC_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ELECTRIC_FIELD_STRENGTH_VOLT_PER_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ELECTRIC_FIELD_STRENGTH_VOLT_PER_METRE_UNIT), "electric field strength (volt per metre)");
+		assertEquals("electric field strength (volt per metre)",
+				UNIT_MAPPING_128.get(ELECTRIC_FIELD_STRENGTH_VOLT_PER_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ELECTRIC_CHARGE_DENSITY_COULOMB_PER_CUBIC_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ELECTRIC_CHARGE_DENSITY_COULOMB_PER_CUBIC_METRE_UNIT), "electric charge density (coulomb per cubic metre)");
+		assertEquals("electric charge density (coulomb per cubic metre)",
+				UNIT_MAPPING_128.get(ELECTRIC_CHARGE_DENSITY_COULOMB_PER_CUBIC_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(SURFACE_CHARGE_DENSITY_COULOMB_PER_SQUARE_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(SURFACE_CHARGE_DENSITY_COULOMB_PER_SQUARE_METRE_UNIT), "surface charge density (coulomb per square metre)");
+		assertEquals("surface charge density (coulomb per square metre)",
+				UNIT_MAPPING_128.get(SURFACE_CHARGE_DENSITY_COULOMB_PER_SQUARE_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ELECTRIC_FLUX_DENSITY_COULOMB_PER_SQUARE_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ELECTRIC_FLUX_DENSITY_COULOMB_PER_SQUARE_METRE_UNIT), "electric flux density (coulomb per square metre)");
+		assertEquals("electric flux density (coulomb per square metre)",
+				UNIT_MAPPING_128.get(ELECTRIC_FLUX_DENSITY_COULOMB_PER_SQUARE_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PERMITTIVITY_FARAD_PER_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PERMITTIVITY_FARAD_PER_METRE_UNIT), "permittivity (farad per metre)");
+		assertEquals("permittivity (farad per metre)", UNIT_MAPPING_128.get(PERMITTIVITY_FARAD_PER_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PERMEABILITY_HENRY_PER_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PERMEABILITY_HENRY_PER_METRE_UNIT), "permeability (henry per metre)");
+		assertEquals("permeability (henry per metre)", UNIT_MAPPING_128.get(PERMEABILITY_HENRY_PER_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MOLAR_ENERGY_JOULE_PER_MOLE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MOLAR_ENERGY_JOULE_PER_MOLE_UNIT), "molar energy (joule per mole)");
+		assertEquals("molar energy (joule per mole)", UNIT_MAPPING_128.get(MOLAR_ENERGY_JOULE_PER_MOLE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MOLAR_ENTROPY_JOULE_PER_MOLE_KELVIN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MOLAR_ENTROPY_JOULE_PER_MOLE_KELVIN_UNIT), "molar entropy (joule per mole kelvin)");
+		assertEquals("molar entropy (joule per mole kelvin)",
+				UNIT_MAPPING_128.get(MOLAR_ENTROPY_JOULE_PER_MOLE_KELVIN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(EXPOSURE_COULOMB_PER_KILOGRAM_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(EXPOSURE_COULOMB_PER_KILOGRAM_UNIT), "exposure (coulomb per kilogram)");
+		assertEquals("exposure (coulomb per kilogram)", UNIT_MAPPING_128.get(EXPOSURE_COULOMB_PER_KILOGRAM_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ABSORBED_DOSE_RATE_GRAY_PER_SECOND_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ABSORBED_DOSE_RATE_GRAY_PER_SECOND_UNIT), "absorbed dose rate (gray per second)");
+		assertEquals("absorbed dose rate (gray per second)",
+				UNIT_MAPPING_128.get(ABSORBED_DOSE_RATE_GRAY_PER_SECOND_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(RADIANT_INTENSITY_WATT_PER_STERADIAN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(RADIANT_INTENSITY_WATT_PER_STERADIAN_UNIT), "radiant intensity (watt per steradian)");
+		assertEquals("radiant intensity (watt per steradian)",
+				UNIT_MAPPING_128.get(RADIANT_INTENSITY_WATT_PER_STERADIAN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(RADIANCE_WATT_PER_SQUARE_METRE_STERADIAN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(RADIANCE_WATT_PER_SQUARE_METRE_STERADIAN_UNIT), "radiance (watt per square metre steradian)");
+		assertEquals("radiance (watt per square metre steradian)",
+				UNIT_MAPPING_128.get(RADIANCE_WATT_PER_SQUARE_METRE_STERADIAN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(CATALYTIC_ACTIVITY_CONCENTRATION_KATAL_PER_CUBIC_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(CATALYTIC_ACTIVITY_CONCENTRATION_KATAL_PER_CUBIC_METRE_UNIT), "catalytic activity concentration (katal per cubic metre)");
+		assertEquals("catalytic activity concentration (katal per cubic metre)",
+				UNIT_MAPPING_128.get(CATALYTIC_ACTIVITY_CONCENTRATION_KATAL_PER_CUBIC_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(TIME_MINUTE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(TIME_MINUTE_UNIT), "time (minute)");
+		assertEquals("time (minute)", UNIT_MAPPING_128.get(TIME_MINUTE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(TIME_HOUR_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(TIME_HOUR_UNIT), "time (hour)");
+		assertEquals("time (hour)", UNIT_MAPPING_128.get(TIME_HOUR_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(TIME_DAY_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(TIME_DAY_UNIT), "time (day)");
+		assertEquals("time (day)", UNIT_MAPPING_128.get(TIME_DAY_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PLANE_ANGLE_DEGREE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PLANE_ANGLE_DEGREE_UNIT), "plane angle (degree)");
+		assertEquals("plane angle (degree)", UNIT_MAPPING_128.get(PLANE_ANGLE_DEGREE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PLANE_ANGLE_MINUTE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PLANE_ANGLE_MINUTE_UNIT), "plane angle (minute)");
+		assertEquals("plane angle (minute)", UNIT_MAPPING_128.get(PLANE_ANGLE_MINUTE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PLANE_ANGLE_SECOND_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PLANE_ANGLE_SECOND_UNIT), "plane angle (second)");
+		assertEquals("plane angle (second)", UNIT_MAPPING_128.get(PLANE_ANGLE_SECOND_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(AREA_HECTARE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(AREA_HECTARE_UNIT), "area (hectare)");
+		assertEquals("area (hectare)", UNIT_MAPPING_128.get(AREA_HECTARE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(VOLUME_LITRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(VOLUME_LITRE_UNIT), "volume (litre)");
+		assertEquals("volume (litre)", UNIT_MAPPING_128.get(VOLUME_LITRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MASS_TONNE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MASS_TONNE_UNIT), "mass (tonne)");
+		assertEquals("mass (tonne)", UNIT_MAPPING_128.get(MASS_TONNE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PRESSURE_BAR_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PRESSURE_BAR_UNIT), "pressure (bar)");
+		assertEquals("pressure (bar)", UNIT_MAPPING_128.get(PRESSURE_BAR_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PRESSURE_MILLIMETRE_OF_MERCURY_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PRESSURE_MILLIMETRE_OF_MERCURY_UNIT), "pressure (millimetre of mercury)");
-		assertTrue(UNIT_MAPPING_128.containsKey(LENGTH_åNGSTRöM_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LENGTH_åNGSTRöM_UNIT), "length (ångström)");
+		assertEquals("pressure (millimetre of mercury)", UNIT_MAPPING_128.get(PRESSURE_MILLIMETRE_OF_MERCURY_UNIT));
+		assertTrue(UNIT_MAPPING_128.containsKey(LENGTH_ÅNGSTRöM_UNIT));
+		assertEquals("length (ångström)", UNIT_MAPPING_128.get(LENGTH_ÅNGSTRöM_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LENGTH_NAUTICAL_MILE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LENGTH_NAUTICAL_MILE_UNIT), "length (nautical mile)");
+		assertEquals("length (nautical mile)", UNIT_MAPPING_128.get(LENGTH_NAUTICAL_MILE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(AREA_BARN_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(AREA_BARN_UNIT), "area (barn)");
+		assertEquals("area (barn)", UNIT_MAPPING_128.get(AREA_BARN_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(VELOCITY_KNOT_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(VELOCITY_KNOT_UNIT), "velocity (knot)");
+		assertEquals("velocity (knot)", UNIT_MAPPING_128.get(VELOCITY_KNOT_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LOGARITHMIC_RADIO_QUANTITY_NEPER_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LOGARITHMIC_RADIO_QUANTITY_NEPER_UNIT), "logarithmic radio quantity (neper)");
+		assertEquals("logarithmic radio quantity (neper)", UNIT_MAPPING_128.get(LOGARITHMIC_RADIO_QUANTITY_NEPER_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LOGARITHMIC_RADIO_QUANTITY_BEL_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LOGARITHMIC_RADIO_QUANTITY_BEL_UNIT), "logarithmic radio quantity (bel)");
+		assertEquals("logarithmic radio quantity (bel)", UNIT_MAPPING_128.get(LOGARITHMIC_RADIO_QUANTITY_BEL_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LENGTH_YARD_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LENGTH_YARD_UNIT), "length (yard)");
+		assertEquals("length (yard)", UNIT_MAPPING_128.get(LENGTH_YARD_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LENGTH_PARSEC_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LENGTH_PARSEC_UNIT), "length (parsec)");
+		assertEquals("length (parsec)", UNIT_MAPPING_128.get(LENGTH_PARSEC_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LENGTH_INCH_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LENGTH_INCH_UNIT), "length (inch)");
+		assertEquals("length (inch)", UNIT_MAPPING_128.get(LENGTH_INCH_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LENGTH_FOOT_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LENGTH_FOOT_UNIT), "length (foot)");
+		assertEquals("length (foot)", UNIT_MAPPING_128.get(LENGTH_FOOT_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LENGTH_MILE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LENGTH_MILE_UNIT), "length (mile)");
+		assertEquals("length (mile)", UNIT_MAPPING_128.get(LENGTH_MILE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PRESSURE_POUND_FORCE_PER_SQUARE_INCH_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PRESSURE_POUND_FORCE_PER_SQUARE_INCH_UNIT), "pressure (pound-force per square inch)");
+		assertEquals("pressure (pound-force per square inch)",
+				UNIT_MAPPING_128.get(PRESSURE_POUND_FORCE_PER_SQUARE_INCH_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(VELOCITY_KILOMETRE_PER_HOUR_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(VELOCITY_KILOMETRE_PER_HOUR_UNIT), "velocity (kilometre per hour)");
+		assertEquals("velocity (kilometre per hour)", UNIT_MAPPING_128.get(VELOCITY_KILOMETRE_PER_HOUR_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(VELOCITY_MILE_PER_HOUR_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(VELOCITY_MILE_PER_HOUR_UNIT), "velocity (mile per hour)");
+		assertEquals("velocity (mile per hour)", UNIT_MAPPING_128.get(VELOCITY_MILE_PER_HOUR_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ANGULAR_VELOCITY_REVOLUTION_PER_MINUTE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ANGULAR_VELOCITY_REVOLUTION_PER_MINUTE_UNIT), "angular velocity (revolution per minute)");
+		assertEquals("angular velocity (revolution per minute)",
+				UNIT_MAPPING_128.get(ANGULAR_VELOCITY_REVOLUTION_PER_MINUTE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ENERGY_GRAM_CALORIE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ENERGY_GRAM_CALORIE_UNIT), "energy (gram calorie)");
+		assertEquals("energy (gram calorie)", UNIT_MAPPING_128.get(ENERGY_GRAM_CALORIE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ENERGY_KILOGRAM_CALORIE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ENERGY_KILOGRAM_CALORIE_UNIT), "energy (kilogram calorie)");
+		assertEquals("energy (kilogram calorie)", UNIT_MAPPING_128.get(ENERGY_KILOGRAM_CALORIE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ENERGY_KILOWATT_HOUR_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ENERGY_KILOWATT_HOUR_UNIT), "energy (kilowatt hour)");
+		assertEquals("energy (kilowatt hour)", UNIT_MAPPING_128.get(ENERGY_KILOWATT_HOUR_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(THERMODYNAMIC_TEMPERATURE_DEGREE_FAHRENHEIT_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(THERMODYNAMIC_TEMPERATURE_DEGREE_FAHRENHEIT_UNIT), "thermodynamic temperature (degree Fahrenheit)");
+		assertEquals("thermodynamic temperature (degree Fahrenheit)",
+				UNIT_MAPPING_128.get(THERMODYNAMIC_TEMPERATURE_DEGREE_FAHRENHEIT_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PERCENTAGE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PERCENTAGE_UNIT), "percentage");
+		assertEquals("percentage", UNIT_MAPPING_128.get(PERCENTAGE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PER_MILLE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PER_MILLE_UNIT), "per mille");
+		assertEquals("per mille", UNIT_MAPPING_128.get(PER_MILLE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(PERIOD_BEATS_PER_MINUTE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(PERIOD_BEATS_PER_MINUTE_UNIT), "period (beats per minute)");
+		assertEquals("period (beats per minute)", UNIT_MAPPING_128.get(PERIOD_BEATS_PER_MINUTE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(ELECTRIC_CHARGE_AMPERE_HOURS_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(ELECTRIC_CHARGE_AMPERE_HOURS_UNIT), "electric charge (ampere hours)");
+		assertEquals("electric charge (ampere hours)", UNIT_MAPPING_128.get(ELECTRIC_CHARGE_AMPERE_HOURS_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MASS_DENSITY_MILLIGRAM_PER_DECILITRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MASS_DENSITY_MILLIGRAM_PER_DECILITRE_UNIT), "mass density (milligram per decilitre)");
+		assertEquals("mass density (milligram per decilitre)",
+				UNIT_MAPPING_128.get(MASS_DENSITY_MILLIGRAM_PER_DECILITRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MASS_DENSITY_MILLIMOLE_PER_LITRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MASS_DENSITY_MILLIMOLE_PER_LITRE_UNIT), "mass density (millimole per litre)");
+		assertEquals("mass density (millimole per litre)", UNIT_MAPPING_128.get(MASS_DENSITY_MILLIMOLE_PER_LITRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(TIME_YEAR_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(TIME_YEAR_UNIT), "time (year)");
+		assertEquals("time (year)", UNIT_MAPPING_128.get(TIME_YEAR_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(TIME_MONTH_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(TIME_MONTH_UNIT), "time (month)");
+		assertEquals("time (month)", UNIT_MAPPING_128.get(TIME_MONTH_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(CONCENTRATION_COUNT_PER_CUBIC_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(CONCENTRATION_COUNT_PER_CUBIC_METRE_UNIT), "concentration (count per cubic metre)");
+		assertEquals("concentration (count per cubic metre)",
+				UNIT_MAPPING_128.get(CONCENTRATION_COUNT_PER_CUBIC_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(IRRADIANCE_WATT_PER_SQUARE_METRE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(IRRADIANCE_WATT_PER_SQUARE_METRE_UNIT), "irradiance (watt per square metre)");
+		assertEquals("irradiance (watt per square metre)", UNIT_MAPPING_128.get(IRRADIANCE_WATT_PER_SQUARE_METRE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(TRANSFER_RATE_MILLILITER_PER_KILOGRAM_PER_MINUTE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(TRANSFER_RATE_MILLILITER_PER_KILOGRAM_PER_MINUTE_UNIT), "milliliter (per kilogram per minute)");
+		assertEquals("milliliter (per kilogram per minute)",
+				UNIT_MAPPING_128.get(TRANSFER_RATE_MILLILITER_PER_KILOGRAM_PER_MINUTE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MASS_POUND_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MASS_POUND_UNIT), "mass (pound)");
+		assertEquals("mass (pound)", UNIT_MAPPING_128.get(MASS_POUND_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(METABOLIC_EQUIVALENT_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(METABOLIC_EQUIVALENT_UNIT), "metabolic equivalent");
+		assertEquals("metabolic equivalent", UNIT_MAPPING_128.get(METABOLIC_EQUIVALENT_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(STEP_PER_MINUTE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(STEP_PER_MINUTE_UNIT), "step (per minute)");
+		assertEquals("step (per minute)", UNIT_MAPPING_128.get(STEP_PER_MINUTE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(STROKE_PER_MINUTE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(STROKE_PER_MINUTE_UNIT), "stroke (per minute)");
+		assertEquals("stroke (per minute)", UNIT_MAPPING_128.get(STROKE_PER_MINUTE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(VELOCITY_KILOMETER_PER_MINUTE_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(VELOCITY_KILOMETER_PER_MINUTE_UNIT), "pace (kilometre per minute)");
+		assertEquals("pace (kilometre per minute)", UNIT_MAPPING_128.get(VELOCITY_KILOMETER_PER_MINUTE_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LUMINOUS_EFFICACY_LUMEN_PER_WATT_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LUMINOUS_EFFICACY_LUMEN_PER_WATT_UNIT), "luminous efficacy (lumen per watt)");
+		assertEquals("luminous efficacy (lumen per watt)", UNIT_MAPPING_128.get(LUMINOUS_EFFICACY_LUMEN_PER_WATT_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LUMINOUS_ENERGY_LUMEN_HOUR_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LUMINOUS_ENERGY_LUMEN_HOUR_UNIT), "luminous energy (lumen hour)");
+		assertEquals("luminous energy (lumen hour)", UNIT_MAPPING_128.get(LUMINOUS_ENERGY_LUMEN_HOUR_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(LUMINOUS_EXPOSURE_LUX_HOUR_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(LUMINOUS_EXPOSURE_LUX_HOUR_UNIT), "luminous exposure (lux hour)");
+		assertEquals("luminous exposure (lux hour)", UNIT_MAPPING_128.get(LUMINOUS_EXPOSURE_LUX_HOUR_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(MASS_FLOW_GRAM_PER_SECOND_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(MASS_FLOW_GRAM_PER_SECOND_UNIT), "mass flow (gram per second)");
+		assertEquals("mass flow (gram per second)", UNIT_MAPPING_128.get(MASS_FLOW_GRAM_PER_SECOND_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(VOLUME_FLOW_LITRE_PER_SECOND_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(VOLUME_FLOW_LITRE_PER_SECOND_UNIT), "volume flow (litre per second)");
+		assertEquals("volume flow (litre per second)", UNIT_MAPPING_128.get(VOLUME_FLOW_LITRE_PER_SECOND_UNIT));
 		assertTrue(UNIT_MAPPING_128.containsKey(SOUND_PRESSURE_DECIBEL_SPL_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(SOUND_PRESSURE_DECIBEL_SPL_UNIT), "sound pressure (decibel)");
-		assertTrue(UNIT_MAPPING_128.containsKey(CONCENTRATION_PARTS_PER_MILLION_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(CONCENTRATION_PARTS_PER_MILLION_UNIT), "concentration (parts per million)");
-		assertTrue(UNIT_MAPPING_128.containsKey(CONCENTRATION_PARTS_PER_BILLION_UNIT));
-		assertEquals(UNIT_MAPPING_128.get(CONCENTRATION_PARTS_PER_BILLION_UNIT), "concentration (parts per billion)");
+		assertEquals("sound pressure (decibel)", UNIT_MAPPING_128.get(SOUND_PRESSURE_DECIBEL_SPL_UNIT));
+		assertTrue(UNIT_MAPPING_128.containsKey(PPM_UNIT));
+		assertEquals("parts per million", UNIT_MAPPING_128.get(PPM_UNIT));
+		assertTrue(UNIT_MAPPING_128.containsKey(PPB_UNIT));
+		assertEquals("parts per billion", UNIT_MAPPING_128.get(PPB_UNIT));
+		assertTrue(UNIT_MAPPING_128.containsKey(MASS_DENSITY_RATE_MILLIGRAM_PER_DECILITRE_PER_MINUTE_UNIT));
+		assertEquals("mass density rate ((milligram per decilitre) per minute)",
+				UNIT_MAPPING_128.get(MASS_DENSITY_RATE_MILLIGRAM_PER_DECILITRE_PER_MINUTE_UNIT));
+		assertTrue(UNIT_MAPPING_128.containsKey(ENERGY_KILOVOLT_AMPERE_HOUR_UNIT));
+		assertEquals("Electrical Apparent Energy (kilovolt ampere hour)",
+				UNIT_MAPPING_128.get(ENERGY_KILOVOLT_AMPERE_HOUR_UNIT));
+		assertTrue(UNIT_MAPPING_128.containsKey(POWER_VOLT_AMPERE_UNIT));
+		assertEquals("Electrical Apparent Power (volt ampere)", UNIT_MAPPING_128.get(POWER_VOLT_AMPERE_UNIT));
 	}
-	
+
 }

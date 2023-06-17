@@ -13,7 +13,7 @@ import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
 @SuppressWarnings({ "unused" })
-public class RankCharacteristicTest extends TestBase {
+public class SetMemberRankTest extends TestBase {
 
 	//@formatter:off
     private static final byte[] data_00001;
@@ -28,7 +28,7 @@ public class RankCharacteristicTest extends TestBase {
 	public void test_constructor_00001() {
 		byte[] data = getData();
 
-		RankCharacteristic result1 = new RankCharacteristic(data);
+		SetMemberRank result1 = new SetMemberRank(data);
 		assertEquals(BLEUtils.createUInt8(data, 0), result1.getSetMemberRank());
 	}
 
@@ -36,7 +36,7 @@ public class RankCharacteristicTest extends TestBase {
 	public void test_constructor_00101() {
 		int setMemberLock = 1;
 
-		RankCharacteristic result1 = new RankCharacteristic(setMemberLock);
+		SetMemberRank result1 = new SetMemberRank(setMemberLock);
 		assertEquals(setMemberLock, result1.getSetMemberRank());
 	}
 
@@ -44,7 +44,7 @@ public class RankCharacteristicTest extends TestBase {
 	public void test_parcelable_2_00001() {
 		byte[] data = getData();
 
-		RankCharacteristic result1 = new RankCharacteristic(data);
+		SetMemberRank result1 = new SetMemberRank(data);
 		assertArrayEquals(data, result1.getBytes());
 	}
 

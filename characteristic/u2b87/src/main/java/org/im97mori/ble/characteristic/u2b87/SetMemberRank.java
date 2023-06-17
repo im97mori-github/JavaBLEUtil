@@ -1,4 +1,4 @@
-package org.im97mori.ble.characteristic.u2b85;
+package org.im97mori.ble.characteristic.u2b87;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -9,14 +9,14 @@ import org.im97mori.ble.ByteArrayInterface;
 import androidx.annotation.NonNull;
 
 /**
- * Size Characteristic (Characteristics UUID: 0x2B85)
+ * Set Member Rank (Characteristics UUID: 0x2B87)
  */
-public class SizeCharacteristic implements ByteArrayInterface {
+public class SetMemberRank implements ByteArrayInterface {
 
 	/**
-	 * Coordinated Set Size
+	 * Set Member Rank
 	 */
-	private final int mCoordinatedSetSize;
+	private final int mSetMemberRank;
 
 	/**
 	 * Constructor from byte array
@@ -24,24 +24,24 @@ public class SizeCharacteristic implements ByteArrayInterface {
 	 * @param values byte array from <a href=
 	 *               "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
 	 */
-	public SizeCharacteristic(@NonNull byte[] values) {
-		mCoordinatedSetSize = BLEUtils.createUInt8(values, 0);
+	public SetMemberRank(@NonNull byte[] values) {
+		mSetMemberRank = BLEUtils.createUInt8(values, 0);
 	}
 
 	/**
 	 * Constructor from parameters
 	 * 
-	 * @param coordinatedSetSize Coordinated Set Size
+	 * @param setMemberRank Set Member Rank
 	 */
-	public SizeCharacteristic(int coordinatedSetSize) {
-		mCoordinatedSetSize = coordinatedSetSize;
+	public SetMemberRank(int setMemberRank) {
+		mSetMemberRank = setMemberRank;
 	}
 
 	/**
-	 * @return Coordinated Set Size
+	 * @return Set Member Rank
 	 */
-	public int getCoordinatedSetSize() {
-		return mCoordinatedSetSize;
+	public int getSetMemberRank() {
+		return mSetMemberRank;
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class SizeCharacteristic implements ByteArrayInterface {
 	public byte[] getBytes() {
 		byte[] data = new byte[1];
 		ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
-		byteBuffer.put((byte) mCoordinatedSetSize);
+		byteBuffer.put((byte) mSetMemberRank);
 		return data;
 	}
 

@@ -2655,9 +2655,9 @@ public class CharacteristicUUID {
     public static final UUID ESL_RESPONSE_KEY_MATERIAL_CHARACTERISTIC = UUID.fromString("00002bf8-0000-1000-8000-00805f9b34fb");
 
     /**
-     * ESL Current Absolute Time (Characteristic UUID: 0x2bf9)
+     * ESL Control Point (Characteristic UUID: 0x2bfe)
      */
-    public static final UUID E_S_L_CURRENT_ABSOLUTE_TIME_CHARACTERISTIC = UUID.fromString("00002bf9-0000-1000-8000-00805f9b34fb");
+    public static final UUID ESL_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002bfe-0000-1000-8000-00805f9b34fb");
 
     /**
      * ESL Display Information (Characteristic UUID: 0x2bfa)

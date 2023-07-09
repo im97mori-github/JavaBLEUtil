@@ -2507,7 +2507,7 @@ public class CharacteristicUUID {
     /**
      * Particulate Matter - PM2.5 Concentration (Characteristic UUID: 0x2bd6)
      */
-    public static final UUID PARTICULATE_MATTER_PM25_CONCENTRATION_CHARACTERISTIC = UUID.fromString("00002bd6-0000-1000-8000-00805f9b34fb");
+    public static final UUID PARTICULATE_MATTER_PM2_5_CONCENTRATION_CHARACTERISTIC = UUID.fromString("00002bd6-0000-1000-8000-00805f9b34fb");
 
     /**
      * Particulate Matter - PM10 Concentration (Characteristic UUID: 0x2bd7)
@@ -2655,9 +2655,9 @@ public class CharacteristicUUID {
     public static final UUID ESL_RESPONSE_KEY_MATERIAL_CHARACTERISTIC = UUID.fromString("00002bf8-0000-1000-8000-00805f9b34fb");
 
     /**
-     * ESL Control Point (Characteristic UUID: 0x2bfe)
+     * ESL Current Absolute Time (Characteristic UUID: 0x2bf9)
      */
-    public static final UUID ESL_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002bfe-0000-1000-8000-00805f9b34fb");
+    public static final UUID ESL_CURRENT_ABSOLUTE_TIME_CHARACTERISTIC = UUID.fromString("00002bf9-0000-1000-8000-00805f9b34fb");
 
     /**
      * ESL Display Information (Characteristic UUID: 0x2bfa)
@@ -2682,7 +2682,7 @@ public class CharacteristicUUID {
     /**
      * ESL Control Point (Characteristic UUID: 0x2bfe)
      */
-    public static final UUID E_S_L_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002bfe-0000-1000-8000-00805f9b34fb");
+    public static final UUID ESL_CONTROL_POINT_CHARACTERISTIC = UUID.fromString("00002bfe-0000-1000-8000-00805f9b34fb");
 
     /**
      * Digital (Characteristic UUID: 0x2a56)

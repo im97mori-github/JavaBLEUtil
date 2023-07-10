@@ -13,7 +13,7 @@ publishing {
             version uploadVersion
             from components.java
             pom {
-                name = 'BLE Core Utility for Java'
+                name = 'BLE Utility for Java(ble-characteristic-u2a7a)'
                 url = 'https://github.com/im97mori-github/JavaBLEUtil'
                 licenses {
                     license {

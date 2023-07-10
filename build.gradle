@@ -3,8 +3,8 @@ allprojects {
     apply plugin: 'maven-publish'
 
     repositories {
-        // maven { url "https://github.com/im97mori-github/maven/raw/master" }
-        maven { url System.getenv('MAVEN_REPOSITORY_URL') }
+        maven { url "https://github.com/im97mori-github/maven/raw/master" }
+        // maven { url System.getenv('MAVEN_REPOSITORY_URL') }
         google()
         mavenCentral()
     }
@@ -89,7 +89,7 @@ publishing {
             version uploadVersion
             from components.java
             pom {
-                name = 'BLE Core Utility for Java'
+                name = 'BLE Utility for Java(ble-java)'
                 url = 'https://github.com/im97mori-github/JavaBLEUtil'
                 licenses {
                     license {

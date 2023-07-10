@@ -3,16 +3,16 @@ allprojects {
     apply plugin: 'maven-publish'
 
     repositories {
-        maven { url "https://github.com/im97mori-github/maven/raw/master" }
-        // maven { url System.getenv('MAVEN_REPOSITORY_URL') }
+        // maven { url "https://github.com/im97mori-github/maven/raw/master" }
+        maven { url System.getenv('MAVEN_REPOSITORY_URL') }
         google()
         mavenCentral()
     }
 }
 
 ext.myGroupId = 'org.im97mori'
-ext.loadVersion = '0.8.10'
-ext.uploadVersion = '0.8.10'
+ext.loadVersion = '0.8.11'
+ext.uploadVersion = '0.8.11'
 
 ext.coreConstantsAppearance = 'ble-core-constants-appearance'
 ext.coreConstantsCharacteristic = 'ble-core-constants-characteristic'

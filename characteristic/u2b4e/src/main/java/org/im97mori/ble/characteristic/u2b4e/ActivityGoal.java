@@ -174,7 +174,9 @@ public class ActivityGoal implements ByteArrayInterface {
     /**
      * Constructor from byte array
      *
-     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+     * @param values
+     *            byte array from <a href=
+     *            "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public ActivityGoal(@NonNull byte[] values) {
         mPresenceFlags = values[0];
@@ -224,6 +226,38 @@ public class ActivityGoal implements ByteArrayInterface {
     }
 
     /**
+     * Constructor from parameters
+     * 
+     * @param presenceFlags
+     *            Presence Flags
+     * @param totalEnergyExpenditure
+     *            Total Energy Expenditure
+     * @param normalWalkingSteps
+     *            Normal Walking Steps
+     * @param intensitySteps
+     *            Intensity Steps
+     * @param floorSteps
+     *            Floor Steps
+     * @param distance
+     *            Distance
+     * @param durationOfNormalWalking
+     *            Duration of Normal Walking
+     * @param durationOfIntensityWalking
+     *            Duration of Intensity Walking
+     */
+    public ActivityGoal(int presenceFlags, int totalEnergyExpenditure, int normalWalkingSteps, int intensitySteps,
+            int floorSteps, int distance, int durationOfNormalWalking, int durationOfIntensityWalking) {
+        mPresenceFlags = presenceFlags;
+        mTotalEnergyExpenditure = totalEnergyExpenditure;
+        mNormalWalkingSteps = normalWalkingSteps;
+        mIntensitySteps = intensitySteps;
+        mFloorSteps = floorSteps;
+        mDistance = distance;
+        mDurationOfNormalWalking = durationOfNormalWalking;
+        mDurationOfIntensityWalking = durationOfIntensityWalking;
+    }
+
+    /**
      * @return Presence Flags
      */
     public int getPresenceFlags() {
@@ -231,63 +265,78 @@ public class ActivityGoal implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:Total Energy Expenditure not present, {@code false}:Total Energy Expenditure present
+     * @return {@code true}:Total Energy Expenditure not present,
+     *         {@code false}:Total Energy Expenditure present
      */
     public boolean isTotalEnergyExpenditureNotPresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_MASK, PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_FALSE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_MASK,
+                PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_FALSE);
     }
 
     /**
-     * @return {@code true}:Total Energy Expenditure present, {@code false}:Total Energy Expenditure not present
+     * @return {@code true}:Total Energy Expenditure present, {@code false}:Total
+     *         Energy Expenditure not present
      */
     public boolean isTotalEnergyExpenditurePresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_MASK, PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_TRUE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_MASK,
+                PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_TRUE);
     }
 
     /**
-     * @return {@code true}:Normal Walking Steps not present, {@code false}:Normal Walking Steps present
+     * @return {@code true}:Normal Walking Steps not present, {@code false}:Normal
+     *         Walking Steps present
      */
     public boolean isNormalWalkingStepsNotPresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_MASK, PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_FALSE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_MASK,
+                PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_FALSE);
     }
 
     /**
-     * @return {@code true}:Normal Walking Steps present, {@code false}Normal Walking Steps not present
+     * @return {@code true}:Normal Walking Steps present, {@code false}Normal
+     *         Walking Steps not present
      */
     public boolean isNormalWalkingStepsPresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_MASK, PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_TRUE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_MASK,
+                PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_TRUE);
     }
 
     /**
-     * @return {@code true}:Intensity Steps not present, {@code false}:Intensity Steps resent
+     * @return {@code true}:Intensity Steps not present, {@code false}:Intensity
+     *         Steps resent
      */
     public boolean isIntensityStepsNotPresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_MASK, PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_FALSE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_MASK,
+                PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_FALSE);
     }
 
     /**
-     * @return {@code true}:Intensity Steps present, {@code false}:Intensity Steps not present
+     * @return {@code true}:Intensity Steps present, {@code false}:Intensity Steps
+     *         not present
      */
     public boolean isIntensityStepsPresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_MASK, PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_TRUE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_MASK,
+                PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_TRUE);
     }
 
     /**
-     * @return {@code true}:Floor Steps not present, {@code false}:Floor Steps present
+     * @return {@code true}:Floor Steps not present, {@code false}:Floor Steps
+     *         present
      */
     public boolean isFloorStepsNotPresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_FLOOR_STEPS_PRESENT_MASK, PRESENCE_FLAGS_FLOOR_STEPS_PRESENT_FALSE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_FLOOR_STEPS_PRESENT_MASK,
+                PRESENCE_FLAGS_FLOOR_STEPS_PRESENT_FALSE);
     }
 
     /**
-     * @return {@code true}:Floor Steps present, {@code false}:Floor Steps not present
+     * @return {@code true}:Floor Steps present, {@code false}:Floor Steps not
+     *         present
      */
     public boolean isFloorStepsPresent() {
         return isPresenceFlagsMatched(PRESENCE_FLAGS_FLOOR_STEPS_PRESENT_MASK, PRESENCE_FLAGS_FLOOR_STEPS_PRESENT_TRUE);
     }
 
     /**
-     * @return {@code true}:Distance not present, {@code false}:Distance  present
+     * @return {@code true}:Distance not present, {@code false}:Distance present
      */
     public boolean isDistanceNotPresent() {
         return isPresenceFlagsMatched(PRESENCE_FLAGS_DISTANCE_PRESENT_MASK, PRESENCE_FLAGS_DISTANCE_PRESENT_FALSE);
@@ -301,31 +350,39 @@ public class ActivityGoal implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:Duration of Normal Walking not present, {@code false}:Duration of Normal Walking present
+     * @return {@code true}:Duration of Normal Walking not present,
+     *         {@code false}:Duration of Normal Walking present
      */
     public boolean isDurationOfNormalWalkingNotPresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_MASK, PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_FALSE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_MASK,
+                PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_FALSE);
     }
 
     /**
-     * @return {@code true}:Duration of Normal Walking present, {@code false}:Duration of Normal Walking not present
+     * @return {@code true}:Duration of Normal Walking present,
+     *         {@code false}:Duration of Normal Walking not present
      */
     public boolean isDurationOfNormalWalkingPresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_MASK, PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_TRUE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_MASK,
+                PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_TRUE);
     }
 
     /**
-     * @return {@code true}:Duration of Intensity Walking not present, {@code false}:Duration of Intensity Walking present
+     * @return {@code true}:Duration of Intensity Walking not present,
+     *         {@code false}:Duration of Intensity Walking present
      */
     public boolean isDurationOfIntensityWalkingNotPresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_MASK, PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_FALSE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_MASK,
+                PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_FALSE);
     }
 
     /**
-     * @return {@code true}:Duration of Intensity Walking present, {@code false}:Duration of Intensity Walking not present
+     * @return {@code true}:Duration of Intensity Walking present,
+     *         {@code false}:Duration of Intensity Walking not present
      */
     public boolean isDurationOfIntensityWalkingPresent() {
-        return isPresenceFlagsMatched(PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_MASK, PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_TRUE);
+        return isPresenceFlagsMatched(PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_MASK,
+                PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_TRUE);
     }
 
     /**
@@ -440,21 +497,26 @@ public class ActivityGoal implements ByteArrayInterface {
     /**
      * check Presence Flags
      *
-     * @param mask   bitmask for expect
-     * @param expect one of {@link #PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_FALSE}
-     *               , {@link #PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_TRUE}
-     *               , {@link #PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_FALSE}
-     *               , {@link #PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_TRUE}
-     *               , {@link #PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_FALSE}
-     *               , {@link #PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_TRUE}
-     *               , {@link #PRESENCE_FLAGS_FLOOR_STEPS_PRESENT_FALSE}
-     *               , {@link #PRESENCE_FLAGS_FLOOR_STEPS_PRESENT_TRUE}
-     *               , {@link #PRESENCE_FLAGS_DISTANCE_PRESENT_FALSE}
-     *               , {@link #PRESENCE_FLAGS_DISTANCE_PRESENT_TRUE}
-     *               , {@link #PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_FALSE}
-     *               , {@link #PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_TRUE}
-     *               , {@link #PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_FALSE}
-     *               , {@link #PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_TRUE}
+     * @param mask
+     *            bitmask for expect
+     * @param expect
+     *            one of
+     *            {@link #PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_FALSE}
+     *            , {@link #PRESENCE_FLAGS_TOTAL_ENERGY_EXPENDITURE_PRESENT_TRUE}
+     *            , {@link #PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_FALSE}
+     *            , {@link #PRESENCE_FLAGS_NORMAL_WALKING_STEPS_PRESENT_TRUE}
+     *            , {@link #PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_FALSE}
+     *            , {@link #PRESENCE_FLAGS_INTENSITY_STEPS_PRESENT_TRUE}
+     *            , {@link #PRESENCE_FLAGS_FLOOR_STEPS_PRESENT_FALSE}
+     *            , {@link #PRESENCE_FLAGS_FLOOR_STEPS_PRESENT_TRUE}
+     *            , {@link #PRESENCE_FLAGS_DISTANCE_PRESENT_FALSE}
+     *            , {@link #PRESENCE_FLAGS_DISTANCE_PRESENT_TRUE}
+     *            , {@link #PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_FALSE}
+     *            , {@link #PRESENCE_FLAGS_DURATION_OF_NORMAL_WALKING_PRESENT_TRUE}
+     *            ,
+     *            {@link #PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_FALSE}
+     *            ,
+     *            {@link #PRESENCE_FLAGS_DURATION_OF_INTENSITY_WALKING_PRESENT_TRUE}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isPresenceFlagsMatched(int mask, int expect) {

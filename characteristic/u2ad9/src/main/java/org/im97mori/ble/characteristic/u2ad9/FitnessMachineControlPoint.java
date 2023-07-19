@@ -252,7 +252,9 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     /**
      * Constructor from byte array
      *
-     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+     * @param values
+     *            byte array from <a href=
+     *            "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public FitnessMachineControlPoint(@NonNull byte[] values) {
         mOpCode = (values[0] & 0xff);
@@ -381,13 +383,19 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     /**
      * Constructor from parameters
      * 
-     * @param opCode            Op Code
-     * @param parameter         Parameter
-     * @param requestOpCode     Request Op Code
-     * @param resultCode        Result Code
-     * @param responseParameter Response Parameter
+     * @param opCode
+     *            Op Code
+     * @param parameter
+     *            Parameter
+     * @param requestOpCode
+     *            Request Op Code
+     * @param resultCode
+     *            Result Code
+     * @param responseParameter
+     *            Response Parameter
      */
-    public FitnessMachineControlPoint(int opCode, @NonNull byte[] parameter, int requestOpCode, int resultCode, @NonNull byte[] responseParameter) {
+    public FitnessMachineControlPoint(int opCode, @NonNull byte[] parameter, int requestOpCode, int resultCode,
+            @NonNull byte[] responseParameter) {
         mOpCode = opCode;
         mParameter = parameter;
         mRequestOpCode = requestOpCode;
@@ -403,6 +411,8 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * @param opCode
+     *            Op Code
      * @return {@code true}:Request Control, {@code false}:not Request Control
      */
     public boolean isOpCodeRequestControl(int opCode) {
@@ -410,6 +420,8 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * @param opCode
+     *            Op Code
      * @return {@code true}:Reset, {@code false}:not Reset
      */
     public boolean isOpCodeReset(int opCode) {
@@ -417,6 +429,8 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * @param opCode
+     *            Op Code
      * @return {@code true}:Set Target Speed, {@code false}:not Set Target Speed
      */
     public boolean isOpCodeSetTargetSpeed(int opCode) {
@@ -424,20 +438,28 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:Set Target Inclination, {@code false}:not Set Target Inclination
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Target Inclination, {@code false}:not Set Target
+     *         Inclination
      */
     public boolean isOpCodeSetTargetInclination(int opCode) {
         return OP_CODE_SET_TARGET_INCLINATION == opCode;
     }
 
     /**
-     * @return {@code true}:Set Target Resistance Level, {@code false}:not Set Target Resistance Level
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Target Resistance Level, {@code false}:not Set
+     *         Target Resistance Level
      */
     public boolean isOpCodeSetTargetResistanceLevel(int opCode) {
         return OP_CODE_SET_TARGET_RESISTANCE_LEVEL == opCode;
     }
 
     /**
+     * @param opCode
+     *            Op Code
      * @return {@code true}:Set Target Power, {@code false}:not Set Target Power
      */
     public boolean isOpCodeSetTargetPower(int opCode) {
@@ -445,13 +467,18 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:Set Target Heart Rate, {@code false}:not Set Target Heart Rate
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Target Heart Rate, {@code false}:not Set Target
+     *         Heart Rate
      */
     public boolean isOpCodeSetTargetHeartRate(int opCode) {
         return OP_CODE_SET_TARGET_HEART_RATE == opCode;
     }
 
     /**
+     * @param opCode
+     *            Op Code
      * @return {@code true}:Start or Resume, {@code false}:not Start or Resume
      */
     public boolean isOpCodeStartOrResume(int opCode) {
@@ -459,6 +486,8 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     }
 
     /**
+     * @param opCode
+     *            Op Code
      * @return {@code true}:Stop or Pause, {@code false}:not Stop or Pause
      */
     public boolean isOpCodeStopOrPause(int opCode) {
@@ -466,76 +495,108 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:Set Targeted Expended Energy, {@code false}:not Set Targeted Expended Energy
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Targeted Expended Energy, {@code false}:not Set
+     *         Targeted Expended Energy
      */
     public boolean isOpCodeSetTargetedExpendedEnergy(int opCode) {
         return OP_CODE_SET_TARGETED_EXPENDED_ENERGY == opCode;
     }
 
     /**
-     * @return {@code true}:Set Targeted Number of Steps, {@code false}:not Set Targeted Number of Steps
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Targeted Number of Steps, {@code false}:not Set
+     *         Targeted Number of Steps
      */
     public boolean isOpCodeSetTargetedNumberOfSteps(int opCode) {
         return OP_CODE_SET_TARGETED_NUMBER_OF_STEPS == opCode;
     }
 
     /**
-     * @return {@code true}:Set Targeted Number of Strides, {@code false}:not Set Targeted Number of Strides
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Targeted Number of Strides, {@code false}:not Set
+     *         Targeted Number of Strides
      */
     public boolean isOpCodeSetTargetedNumberOfStrides(int opCode) {
         return OP_CODE_SET_TARGETED_NUMBER_OF_STRIDES == opCode;
     }
 
     /**
-     * @return {@code true}:Set Targeted Distance, {@code false}:not Set Targeted Distance
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Targeted Distance, {@code false}:not Set Targeted
+     *         Distance
      */
     public boolean isOpCodeSetTargetedDistance(int opCode) {
         return OP_CODE_SET_TARGETED_DISTANCE == opCode;
     }
 
     /**
-     * @return {@code true}:Set Targeted Training Time, {@code false}:not Set Targeted Training Time
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Targeted Training Time, {@code false}:not Set
+     *         Targeted Training Time
      */
     public boolean isOpCodeSetTargetedTrainingTime(int opCode) {
         return OP_CODE_SET_TARGETED_TRAINING_TIME == opCode;
     }
 
     /**
-     * @return {@code true}:Set Targeted Time in Two Heart Rate Zones, {@code false}:not Set Targeted Time in Two Heart Rate Zones
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Targeted Time in Two Heart Rate Zones,
+     *         {@code false}:not Set Targeted Time in Two Heart Rate Zones
      */
     public boolean isOpCodeSetTargetedTimeInTwoHeartRateZones(int opCode) {
         return OP_CODE_SET_TARGETED_TIME_IN_TWO_HEART_RATE_ZONES == opCode;
     }
 
     /**
-     * @return {@code true}:Set Targeted Time in Three Heart Rate Zones, {@code false}:not Set Targeted Time in Three Heart Rate Zones
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Targeted Time in Three Heart Rate Zones,
+     *         {@code false}:not Set Targeted Time in Three Heart Rate Zones
      */
     public boolean isOpCodeSetTargetedTimeInThreeHeartRateZones(int opCode) {
         return OP_CODE_SET_TARGETED_TIME_IN_THREE_HEART_RATE_ZONES == opCode;
     }
 
     /**
-     * @return {@code true}:Set Targeted Time in Five Heart Rate Zones, {@code false}:not Set Targeted Time in Five Heart Rate Zones
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Targeted Time in Five Heart Rate Zones,
+     *         {@code false}:not Set Targeted Time in Five Heart Rate Zones
      */
     public boolean isOpCodeSetTargetedTimeInFiveHeartRateZones(int opCode) {
         return OP_CODE_SET_TARGETED_TIME_IN_FIVE_HEART_RATE_ZONES == opCode;
     }
 
     /**
-     * @return {@code true}:Set Indoor Bike Simulation Parameters, {@code false}:not Set Indoor Bike Simulation Parameters
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Indoor Bike Simulation Parameters, {@code false}:not
+     *         Set Indoor Bike Simulation Parameters
      */
     public boolean isOpCodeSetIndoorBikeSimulationParameters(int opCode) {
         return OP_CODE_SET_INDOOR_BIKE_SIMULATION_PARAMETERES == opCode;
     }
 
     /**
-     * @return {@code true}:Set Wheel Circumference, {@code false}:not Set Wheel Circumference
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Wheel Circumference, {@code false}:not Set Wheel
+     *         Circumference
      */
     public boolean isOpCodeSetWheelCircumference(int opCode) {
         return OP_CODE_SET_WHEEL_CICUMFERENCE == opCode;
     }
 
     /**
+     * @param opCode
+     *            Op Code
      * @return {@code true}:Spin Down Control, {@code false}:not Spin Down Control
      */
     public boolean isOpCodeSpinDownControl(int opCode) {
@@ -543,13 +604,18 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:Set Targeted Cadence, {@code false}:not Set Targeted Cadence
+     * @param opCode
+     *            Op Code
+     * @return {@code true}:Set Targeted Cadence, {@code false}:not Set Targeted
+     *         Cadence
      */
     public boolean isOpCodeSetTargetedCadence(int opCode) {
         return OP_CODE_SET_TARGETED_CADENCE == opCode;
     }
 
     /**
+     * @param opCode
+     *            Op Code
      * @return {@code true}:Response Code, {@code false}:not Response Code
      */
     public boolean isOpCodeResponseCode(int opCode) {
@@ -981,7 +1047,8 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:Op Code not supported, {@code false}:not Op Code not supported
+     * @return {@code true}:Op Code not supported, {@code false}:not Op Code not
+     *         supported
      */
     public boolean isResultCodeOpCodeNotSupported() {
         return RESULT_CODE_OP_CODE_NOT_SUPPORTED == mResultCode;
@@ -1002,7 +1069,8 @@ public class FitnessMachineControlPoint implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:Control Not Permitted, {@code false}:not Control Not Permitted
+     * @return {@code true}:Control Not Permitted, {@code false}:not Control Not
+     *         Permitted
      */
     public boolean isResultCodeControlNotPermitted() {
         return RESULT_CODE_CONTROL_NOT_PERMITTED == mResultCode;

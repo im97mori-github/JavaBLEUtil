@@ -3,7 +3,6 @@ dependencies {
     api apiCoreUtils
     testImplementation apiCharacteristicCore
     testImplementation apiTestUtil
-    testImplementation junit
 }
 
 publishing {

@@ -5,7 +5,6 @@ dependencies {
     api "${myGroupId}:${coreConstantsScheme}:${loadVersion}"
     api apiCoreUtils
     testImplementation apiTestUtil
-    testImplementation junit
 }
 
 publishing {

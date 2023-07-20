@@ -3,7 +3,6 @@ dependencies {
     api "${myGroupId}:${characteristicU2ad9}:${loadVersion}"
     testImplementation apiCharacteristicCore
     testImplementation apiTestUtil
-    testImplementation junit
 }
 
 publishing {

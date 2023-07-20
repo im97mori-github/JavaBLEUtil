@@ -9,7 +9,6 @@ javadoc {
 dependencies {
     api apiCoreUtils
     api "${myGroupId}:${descriptorU2904}:${loadVersion}"
-    testImplementation junit
     javadocClasspath "${myGroupId}:${descriptorU2909}:${loadVersion}"
 }
 

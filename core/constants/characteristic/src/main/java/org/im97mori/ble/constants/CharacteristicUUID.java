@@ -1872,7 +1872,7 @@ public class CharacteristicUUID {
     /**
      * ACS Data Out Notify (Characteristic UUID: 0x2b31)
      */
-    public static final UUID A_C_S_DATA_OUT_NOTIFY_CHARACTERISTIC = UUID.fromString("00002b31-0000-1000-8000-00805f9b34fb");
+    public static final UUID ACS_DATA_OUT_NOTIFY_CHARACTERISTIC = UUID.fromString("00002b31-0000-1000-8000-00805f9b34fb");
 
     /**
      * ACS Data Out Indicate (Characteristic UUID: 0x2b32)

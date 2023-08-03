@@ -27,12 +27,12 @@ public class IndoorPositioning extends AbstractAdvertisingData {
     /**
      * Global Coordinates (Latitude)
      */
-    private final int mGlobalCoorinatesLatitude;
+    private final int mGlobalCoordinatesLatitude;
 
     /**
      * Global Coordinates (Longitude)
      */
-    private final int mGlobalCoorinatesLongitude;
+    private final int mGlobalCoordinatesLongitude;
 
     /**
      * Local Coordinates (North)
@@ -91,23 +91,23 @@ public class IndoorPositioning extends AbstractAdvertisingData {
 
         if (IndoorPositioningUtils.isIndoorPositioningConfigurationPresenceOfCoordinatesInAdvertisingPacketsCoordinatesArePresent(mIndoorPositioningConfiguration)) {
             if (IndoorPositioningUtils.isIndoorPositioningConfigurationCoordinateSystemUsedInAdvertisingPacketsWgs84CoordinateSystem(mIndoorPositioningConfiguration)) {
-                mGlobalCoorinatesLatitude = BLEUtils.createSInt32(data, index);
+                mGlobalCoordinatesLatitude = BLEUtils.createSInt32(data, index);
                 index += 4;
-                mGlobalCoorinatesLongitude = BLEUtils.createSInt32(data, index);
+                mGlobalCoordinatesLongitude = BLEUtils.createSInt32(data, index);
                 index += 4;
                 mLocalCoordinatesNorth = 0;
                 mLocalCoordinatesEast = 0;
             } else {
-                mGlobalCoorinatesLatitude = 0;
-                mGlobalCoorinatesLongitude = 0;
+                mGlobalCoordinatesLatitude = 0;
+                mGlobalCoordinatesLongitude = 0;
                 mLocalCoordinatesNorth = BLEUtils.createSInt16(data, index);
                 index += 2;
                 mLocalCoordinatesEast = BLEUtils.createSInt16(data, index);
                 index += 2;
             }
         } else {
-            mGlobalCoorinatesLatitude = 0;
-            mGlobalCoorinatesLongitude = 0;
+            mGlobalCoordinatesLatitude = 0;
+            mGlobalCoordinatesLongitude = 0;
             mLocalCoordinatesNorth = 0;
             mLocalCoordinatesEast = 0;
         }
@@ -142,8 +142,8 @@ public class IndoorPositioning extends AbstractAdvertisingData {
 	 * Constructor from parameters
 	 * 
 	 * @param indoorPositioningConfiguration Indoor Positioning Configuration
-	 * @param globalCoorinatesLatitude       Global Coordinates (Latitude)
-	 * @param globalCoorinatesLongitude      Global Coordinates (Longitude)
+	 * @param globalCoordinatesLatitude       Global Coordinates (Latitude)
+	 * @param globalCoordinatesLongitude      Global Coordinates (Longitude)
 	 * @param localCoordinatesNorth          Local Coordinates (North)
 	 * @param localCoordinatesEast           Local Coordinates (East)
 	 * @param txPower                        Tx Power
@@ -152,8 +152,8 @@ public class IndoorPositioning extends AbstractAdvertisingData {
 	 * @param uncertainty                    Uncertainty
 	 */
 	public IndoorPositioning(int indoorPositioningConfiguration
-			, int globalCoorinatesLatitude
-			, int globalCoorinatesLongitude
+			, int globalCoordinatesLatitude
+			, int globalCoordinatesLongitude
 			, int localCoordinatesNorth
 			, int localCoordinatesEast
 			, int txPower
@@ -163,8 +163,8 @@ public class IndoorPositioning extends AbstractAdvertisingData {
 		super(calculateLength(indoorPositioningConfiguration));
 
 		mIndoorPositioningConfiguration = indoorPositioningConfiguration;
-		mGlobalCoorinatesLatitude = globalCoorinatesLatitude;
-		mGlobalCoorinatesLongitude = globalCoorinatesLongitude;
+		mGlobalCoordinatesLatitude = globalCoordinatesLatitude;
+		mGlobalCoordinatesLongitude = globalCoordinatesLongitude;
 		mLocalCoordinatesNorth = localCoordinatesNorth;
 		mLocalCoordinatesEast = localCoordinatesEast;
 		mTxPower = txPower;
@@ -237,15 +237,15 @@ public class IndoorPositioning extends AbstractAdvertisingData {
     /**
      * @return Global Coordinates (Latitude)
      */
-    public int getGlobalCoorinatesLatitude() {
-        return mGlobalCoorinatesLatitude;
+    public int getGlobalCoordinatesLatitude() {
+        return mGlobalCoordinatesLatitude;
     }
 
     /**
      * @return Global Coordinates (Longitude)
      */
-    public int getGlobalCoorinatesLongitude() {
-        return mGlobalCoorinatesLongitude;
+    public int getGlobalCoordinatesLongitude() {
+        return mGlobalCoordinatesLongitude;
     }
 
     /**
@@ -304,8 +304,8 @@ public class IndoorPositioning extends AbstractAdvertisingData {
             byteBuffer.put((byte) mIndoorPositioningConfiguration);
             if (IndoorPositioningUtils.isIndoorPositioningConfigurationPresenceOfCoordinatesInAdvertisingPacketsCoordinatesArePresent(mIndoorPositioningConfiguration)) {
                 if (IndoorPositioningUtils.isIndoorPositioningConfigurationCoordinateSystemUsedInAdvertisingPacketsWgs84CoordinateSystem(mIndoorPositioningConfiguration)) {
-                    byteBuffer.putInt(mGlobalCoorinatesLatitude);
-                    byteBuffer.putInt(mGlobalCoorinatesLongitude);
+                    byteBuffer.putInt(mGlobalCoordinatesLatitude);
+                    byteBuffer.putInt(mGlobalCoordinatesLongitude);
                 } else {
                     byteBuffer.putShort((short) mLocalCoordinatesNorth);
                     byteBuffer.putShort((short) mLocalCoordinatesEast);

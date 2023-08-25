@@ -11,9 +11,10 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 
 import org.im97mori.ble.BLEUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class CoefficientTest {
+public class CoefficientTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

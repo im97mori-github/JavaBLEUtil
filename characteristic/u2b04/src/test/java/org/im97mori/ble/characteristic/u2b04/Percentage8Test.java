@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.characteristic.core.Percentage8Utils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class Percentage8Test {
+public class Percentage8Test extends TestBase {
 
     @Test
     public void test_constructor_00001() {

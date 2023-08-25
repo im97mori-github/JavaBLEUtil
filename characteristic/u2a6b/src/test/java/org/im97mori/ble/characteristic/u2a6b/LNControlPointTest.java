@@ -7,9 +7,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class LNControlPointTest {
+public class LNControlPointTest extends TestBase {
 
     @Test
     public void test_constructor001() {

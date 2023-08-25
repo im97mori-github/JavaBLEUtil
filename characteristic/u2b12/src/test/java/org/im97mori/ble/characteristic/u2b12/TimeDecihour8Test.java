@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.characteristic.core.EnergyUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class TimeDecihour8Test {
+public class TimeDecihour8Test extends TestBase {
 
     @Test
     public void test_constructor_00001() {

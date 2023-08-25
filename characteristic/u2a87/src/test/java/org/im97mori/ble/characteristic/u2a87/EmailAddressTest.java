@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 
 import org.im97mori.ble.characteristic.u2b37.RegisteredUser;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class EmailAddressTest {
+public class EmailAddressTest extends TestBase {
 
 	@Test
 	public void test_constructor_00001() {

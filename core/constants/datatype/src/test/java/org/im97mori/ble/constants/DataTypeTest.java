@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import static org.im97mori.ble.constants.DataType.*;
 
-public class DataTypeTest {
+public class DataTypeTest extends TestBase {
 
 	@Test
 	public void test_map_00001() {

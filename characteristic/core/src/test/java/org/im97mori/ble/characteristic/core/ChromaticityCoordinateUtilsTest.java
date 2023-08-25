@@ -2,9 +2,10 @@ package org.im97mori.ble.characteristic.core;
 
 import static org.junit.Assert.assertEquals;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class ChromaticityCoordinateUtilsTest {
+public class ChromaticityCoordinateUtilsTest extends TestBase {
 
     @Test
     public void test_getVoltageValueVolt_00001() {

@@ -8,9 +8,10 @@ import static org.junit.Assert.assertTrue;
 import java.util.Arrays;
 
 import org.im97mori.ble.characteristic.core.DateTimeUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class BodyCompositionMeasurementPacketConstructorTest {
+public class BodyCompositionMeasurementPacketConstructorTest extends TestBase {
 
     @Test
     public void test_constructor0001() {

@@ -7,9 +7,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class ValueTriggerSettingTest {
+public class ValueTriggerSettingTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

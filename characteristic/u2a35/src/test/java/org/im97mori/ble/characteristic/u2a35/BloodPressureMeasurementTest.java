@@ -9,9 +9,10 @@ import org.im97mori.ble.characteristic.core.BloodPressureMeasurementUtils;
 import org.im97mori.ble.characteristic.core.DateTimeUtils;
 import org.im97mori.ble.characteristic.core.IEEE_11073_20601_SFLOAT;
 import org.im97mori.ble.characteristic.core.UserIndexUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class BloodPressureMeasurementTest {
+public class BloodPressureMeasurementTest extends TestBase {
 
 	@Test
 	public void test_constructor001() {

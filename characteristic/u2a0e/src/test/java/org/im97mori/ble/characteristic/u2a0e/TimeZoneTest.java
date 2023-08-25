@@ -4,9 +4,10 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import org.im97mori.ble.characteristic.core.TimeZoneUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class TimeZoneTest {
+public class TimeZoneTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

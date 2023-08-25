@@ -6,9 +6,10 @@ import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 
 import org.im97mori.ble.BLEUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class BloodPressureRecordTest {
+public class BloodPressureRecordTest extends TestBase {
 
 	@Test
 	public void test_constructor_1_00001() {

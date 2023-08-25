@@ -2,9 +2,10 @@ package org.im97mori.ble.descriptor.u290f;
 
 import static org.junit.Assert.assertArrayEquals;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class CompleteBrEdrTransportBlockDataTest {
+public class CompleteBrEdrTransportBlockDataTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

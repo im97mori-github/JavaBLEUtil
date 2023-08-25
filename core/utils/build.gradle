@@ -1,5 +1,6 @@
 dependencies {
     api "${crcLibrary}"
+    testImplementation apiTestUtil
 }
 
 publishing {

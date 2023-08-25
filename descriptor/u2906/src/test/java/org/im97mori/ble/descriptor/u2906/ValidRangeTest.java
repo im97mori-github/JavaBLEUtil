@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class ValidRangeTest {
+public class ValidRangeTest extends TestBase {
 
     @Test
     public void test_constructor001() {

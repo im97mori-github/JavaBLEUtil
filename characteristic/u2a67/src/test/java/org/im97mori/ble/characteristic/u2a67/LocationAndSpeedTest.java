@@ -8,9 +8,10 @@ import static org.junit.Assert.assertTrue;
 import java.util.Arrays;
 
 import org.im97mori.ble.characteristic.core.DateTimeUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class LocationAndSpeedTest {
+public class LocationAndSpeedTest extends TestBase {
 
     @Test
     public void test_constructor001() {

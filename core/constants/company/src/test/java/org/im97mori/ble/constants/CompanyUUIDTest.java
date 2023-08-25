@@ -8,7 +8,7 @@ import java.util.UUID;
 
 import org.junit.Test;
 
-public class CompanyUUIDTest {
+public class CompanyUUIDTest extends TestBase {
 
     @Test
     public void test_map_00001() {

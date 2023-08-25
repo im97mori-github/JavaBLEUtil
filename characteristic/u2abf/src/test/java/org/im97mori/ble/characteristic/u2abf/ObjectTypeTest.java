@@ -7,9 +7,10 @@ import java.nio.ByteOrder;
 import java.util.UUID;
 
 import org.im97mori.ble.BLEUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class ObjectTypeTest {
+public class ObjectTypeTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

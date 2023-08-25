@@ -4,9 +4,10 @@ import static org.im97mori.ble.constants.UnitUUID.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class UnitUUIDTest {
+public class UnitUUIDTest extends TestBase {
 
 	@Test
 	public void test_map_00001() {

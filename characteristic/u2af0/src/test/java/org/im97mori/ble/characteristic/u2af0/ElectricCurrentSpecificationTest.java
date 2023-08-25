@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.characteristic.core.ElectricCurrentUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class ElectricCurrentSpecificationTest {
+public class ElectricCurrentSpecificationTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.characteristic.core.PowerUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class PowerTest {
+public class PowerTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

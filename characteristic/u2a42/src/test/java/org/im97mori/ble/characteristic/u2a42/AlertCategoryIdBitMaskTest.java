@@ -3,9 +3,10 @@ package org.im97mori.ble.characteristic.u2a42;
 import static org.junit.Assert.assertArrayEquals;
 
 import org.im97mori.ble.characteristic.core.AlertCategoryIdBitMaskUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class AlertCategoryIdBitMaskTest {
+public class AlertCategoryIdBitMaskTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

@@ -4,9 +4,10 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import org.im97mori.ble.characteristic.core.DateTimeUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class DateOfBirthTest {
+public class DateOfBirthTest extends TestBase {
 
     @Test
     public void test_constructor001() {

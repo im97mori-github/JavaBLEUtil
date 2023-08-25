@@ -1,5 +1,6 @@
 package org.im97mori.ble.characteristic.u2a9c;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -7,7 +8,7 @@ import java.util.Arrays;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-public class BodyCompositionMeasurementConstructorTest {
+public class BodyCompositionMeasurementConstructorTest extends TestBase {
 
     @Test
     public void test_constructor001() {

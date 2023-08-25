@@ -4,9 +4,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class IlluminanceUtilsTest {
+public class IlluminanceUtilsTest extends TestBase {
 
     @Test
     public void test_isIlluminanceValueIsNotKnown_00001() {

@@ -2,9 +2,10 @@ package org.im97mori.ble.characteristic.u2a7e;
 
 import static org.junit.Assert.assertEquals;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class AerobicHeartRateLowerLimitTest {
+public class AerobicHeartRateLowerLimitTest extends TestBase {
 
     @Test
     public void test_constructor001() {

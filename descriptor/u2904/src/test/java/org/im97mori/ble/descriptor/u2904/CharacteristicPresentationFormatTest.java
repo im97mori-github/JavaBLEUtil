@@ -8,9 +8,10 @@ import static org.junit.Assert.assertTrue;
 import java.util.Arrays;
 import java.util.UUID;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class CharacteristicPresentationFormatTest {
+public class CharacteristicPresentationFormatTest extends TestBase {
 
     @Test
     public void test_constructor001() {

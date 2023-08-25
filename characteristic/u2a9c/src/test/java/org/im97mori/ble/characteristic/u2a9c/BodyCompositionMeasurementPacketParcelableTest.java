@@ -5,9 +5,10 @@ import static org.junit.Assert.assertArrayEquals;
 import java.util.Arrays;
 
 import org.im97mori.ble.characteristic.core.DateTimeUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class BodyCompositionMeasurementPacketParcelableTest {
+public class BodyCompositionMeasurementPacketParcelableTest extends TestBase {
 
     @Test
     public void test_parcelable101() {

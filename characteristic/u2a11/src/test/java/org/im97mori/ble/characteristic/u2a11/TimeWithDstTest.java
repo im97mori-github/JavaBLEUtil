@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.im97mori.ble.characteristic.core.DateTimeUtils;
 import org.im97mori.ble.characteristic.core.DstOffsetUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class TimeWithDstTest {
+public class TimeWithDstTest extends TestBase {
 
     @Test
     public void test_constructor001() {

@@ -10,9 +10,10 @@ import org.im97mori.ble.characteristic.core.DateTimeUtils;
 import org.im97mori.ble.characteristic.core.IEEE_11073_20601_FLOAT;
 import org.im97mori.ble.characteristic.core.TemperatureMeasurementUtils;
 import org.im97mori.ble.characteristic.core.TemperatureTypeUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class IntermediateTemperatureTest {
+public class IntermediateTemperatureTest extends TestBase {
 
     @Test
     public void test_constructor001() {

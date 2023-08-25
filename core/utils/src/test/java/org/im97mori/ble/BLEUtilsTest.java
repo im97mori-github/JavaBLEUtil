@@ -11,9 +11,10 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.UUID;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class BLEUtilsTest {
+public class BLEUtilsTest extends TestBase {
 
 	@Test
 	public void test_createBoolean_001() {

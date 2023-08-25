@@ -6,9 +6,10 @@ import static org.junit.Assert.assertEquals;
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.characteristic.core.Temperature8Utils;
 import org.im97mori.ble.characteristic.core.TimeExponential8Utils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class Temperature8StatisticsTest {
+public class Temperature8StatisticsTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

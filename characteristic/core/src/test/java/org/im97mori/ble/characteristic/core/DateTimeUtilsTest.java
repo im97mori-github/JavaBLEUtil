@@ -1,11 +1,12 @@
 package org.im97mori.ble.characteristic.core;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class DateTimeUtilsTest {
+public class DateTimeUtilsTest extends TestBase {
 
     @Test
     public void test_isYearNotKnown001() {

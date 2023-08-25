@@ -4,10 +4,10 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class FixedString8Test {
+public class FixedString8Test extends TestBase {
 
     @Test
     public void test_constructor_00001() {

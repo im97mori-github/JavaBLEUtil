@@ -4,9 +4,10 @@ import static org.im97mori.ble.constants.AppearanceValues.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class AppearanceValuesTest {
+public class AppearanceValuesTest extends TestBase {
 
 	@Test
 	public void test_map_00001() {

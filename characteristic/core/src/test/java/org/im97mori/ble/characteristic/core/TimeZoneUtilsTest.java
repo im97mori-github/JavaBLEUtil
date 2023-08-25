@@ -6,7 +6,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class TimeZoneUtilsTest {
+import org.im97mori.ble.test.TestBase;
+
+public class TimeZoneUtilsTest extends TestBase {
 
     @Test
     public void test_isTimeZoneNotKnown_00001() {

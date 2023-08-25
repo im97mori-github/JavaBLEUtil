@@ -6,9 +6,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.UUID;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class SdoUUIDTest {
+public class SdoUUIDTest extends TestBase {
 
     @Test
     public void test_map_00001() {

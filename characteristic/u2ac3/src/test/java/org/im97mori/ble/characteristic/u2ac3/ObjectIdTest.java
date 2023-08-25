@@ -6,9 +6,10 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.im97mori.ble.BLEUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class ObjectIdTest {
+public class ObjectIdTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

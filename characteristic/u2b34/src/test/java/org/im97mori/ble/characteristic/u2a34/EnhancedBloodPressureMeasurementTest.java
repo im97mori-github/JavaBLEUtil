@@ -10,9 +10,10 @@ import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.characteristic.core.EnhancedBloodPressureMeasurementUtils;
 import org.im97mori.ble.characteristic.core.IEEE_11073_20601_SFLOAT;
 import org.im97mori.ble.characteristic.u2b34.EnhancedBloodPressureMeasurement;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class EnhancedBloodPressureMeasurementTest {
+public class EnhancedBloodPressureMeasurementTest extends TestBase {
 
 	@Test
 	public void test_constructor_00001() {

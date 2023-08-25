@@ -10,7 +10,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class DeclarationUUIDTest {
+public class DeclarationUUIDTest extends TestBase {
 
 	@Test
 	public void test_map_00001() {

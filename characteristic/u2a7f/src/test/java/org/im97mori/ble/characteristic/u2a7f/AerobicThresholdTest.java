@@ -3,9 +3,10 @@ package org.im97mori.ble.characteristic.u2a7f;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class AerobicThresholdTest {
+public class AerobicThresholdTest extends TestBase {
 
     @Test
     public void test_constructor001() {

@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.characteristic.core.LuminousFluxUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class LuminousFluxRangeTest {
+public class LuminousFluxRangeTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

@@ -3,9 +3,10 @@ package org.im97mori.ble.descriptor.u2909;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class NumberOfDigitalsTest {
+public class NumberOfDigitalsTest extends TestBase {
 
     @Test
     public void test_constructor001() {

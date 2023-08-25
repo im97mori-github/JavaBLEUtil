@@ -6,9 +6,10 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.UUID;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class ExternalReportReferenceTest {
+public class ExternalReportReferenceTest extends TestBase {
 
     @Test
     public void test_constructor001() {

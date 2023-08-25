@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.im97mori.ble.characteristic.core.DateTimeUtils;
 import org.im97mori.ble.characteristic.core.DayOfWeekUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class ExactTime256Test {
+public class ExactTime256Test extends TestBase {
 
     @Test
     public void test_constructor_00001() {

@@ -4,9 +4,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class TimeExponential8UtilsTest {
+public class TimeExponential8UtilsTest extends TestBase {
 
     @Test
     public void test_isTimeExponential8ZeroSeconds_00001() {

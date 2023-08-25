@@ -1,12 +1,13 @@
 package org.im97mori.ble;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class IndoorPositioningUtilsTest {
+public class IndoorPositioningUtilsTest extends TestBase {
 
     @Test
     public void test_isIndoorPositioningConfigurationPresenceOfCoordinatesInAdvertisingPacketsCoordinatesAreNotPresent_001() {

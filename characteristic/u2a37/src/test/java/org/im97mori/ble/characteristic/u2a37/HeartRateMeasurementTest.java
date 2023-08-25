@@ -8,9 +8,10 @@ import static org.junit.Assert.assertTrue;
 import java.util.Arrays;
 
 import org.im97mori.ble.BLEUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class HeartRateMeasurementTest {
+public class HeartRateMeasurementTest extends TestBase {
 
     @Test
     public void test_constructor001() {

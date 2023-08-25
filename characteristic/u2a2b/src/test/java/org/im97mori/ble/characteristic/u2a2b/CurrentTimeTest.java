@@ -8,9 +8,10 @@ import static org.junit.Assert.assertTrue;
 import org.im97mori.ble.characteristic.core.DateTimeUtils;
 import org.im97mori.ble.characteristic.core.DayOfWeekUtils;
 import org.im97mori.ble.characteristic.core.ExactTime256Utils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class CurrentTimeTest {
+public class CurrentTimeTest extends TestBase {
 
     @Test
     public void test_constructor001() {

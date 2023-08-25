@@ -2,9 +2,10 @@ package org.im97mori.ble.characteristic.u2a58;
 
 import static org.junit.Assert.assertArrayEquals;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class AnalogTest {
+public class AnalogTest extends TestBase {
 
     @Test
     public void test_constructor001() {

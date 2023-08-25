@@ -6,9 +6,10 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.im97mori.ble.characteristic.core.AlertCategoryIdUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class AlertNotificationControlPointTest {
+public class AlertNotificationControlPointTest extends TestBase {
 
     @Test
     public void test_constructor001() {

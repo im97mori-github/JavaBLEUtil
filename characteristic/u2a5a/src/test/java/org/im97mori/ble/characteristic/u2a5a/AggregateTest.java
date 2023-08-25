@@ -5,9 +5,10 @@ import static org.junit.Assert.assertArrayEquals;
 import java.util.Arrays;
 
 import org.im97mori.ble.characteristic.core.AutomationIoUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class AggregateTest {
+public class AggregateTest extends TestBase {
 
     @Test
     public void test_constructor001() {

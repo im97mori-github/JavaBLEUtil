@@ -3,9 +3,10 @@ package org.im97mori.ble.characteristic.u2a56;
 import static org.junit.Assert.assertArrayEquals;
 
 import org.im97mori.ble.characteristic.core.AutomationIoUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class DigitalTest {
+public class DigitalTest extends TestBase {
 
     @Test
     public void test_constructor001() {

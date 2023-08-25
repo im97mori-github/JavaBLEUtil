@@ -3,10 +3,10 @@ package org.im97mori.ble.descriptor.u2901;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class CharacteristicUserDescriptionTest {
+public class CharacteristicUserDescriptionTest extends TestBase {
 
     @Test
     public void test_constructor001() {

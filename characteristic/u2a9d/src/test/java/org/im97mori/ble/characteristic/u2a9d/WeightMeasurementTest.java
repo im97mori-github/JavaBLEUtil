@@ -7,9 +7,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.im97mori.ble.characteristic.core.DateTimeUtils;
 import org.im97mori.ble.characteristic.core.UserIndexUtils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class WeightMeasurementTest {
+public class WeightMeasurementTest extends TestBase {
 
     @Test
     public void test_constructor001() {

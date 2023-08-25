@@ -9,9 +9,10 @@ import java.util.Arrays;
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.characteristic.core.EnhancedBloodPressureMeasurementUtils;
 import org.im97mori.ble.characteristic.core.IEEE_11073_20601_SFLOAT;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class EnhancedIntermediateCuffPressureTest {
+public class EnhancedIntermediateCuffPressureTest extends TestBase {
 
     @Test
     public void test_constructor_00001() {

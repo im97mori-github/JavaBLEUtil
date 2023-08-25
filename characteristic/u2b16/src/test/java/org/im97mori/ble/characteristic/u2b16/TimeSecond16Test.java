@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.characteristic.core.TimeSecond16Utils;
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
-public class TimeSecond16Test {
+public class TimeSecond16Test extends TestBase {
 
     @Test
     public void test_constructor_00001() {

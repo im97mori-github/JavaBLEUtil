@@ -45,24 +45,19 @@ public class ObjectType implements ByteArrayInterface {
      */
     public ObjectType(@NonNull UUID uuid) {
         mObjectType = new byte[16];
-        long lsb = uuid.getLeastSignificantBits();
+
+        ByteBuffer byteBuffer = ByteBuffer.wrap(mObjectType, 0, 16).order(ByteOrder.LITTLE_ENDIAN);
+
         long msb = uuid.getMostSignificantBits();
-        mObjectType[0] = (byte) lsb;
-        mObjectType[1] = (byte) (lsb >> 8);
-        mObjectType[2] = (byte) (lsb >> 16);
-        mObjectType[3] = (byte) (lsb >> 24);
-        mObjectType[4] = (byte) (lsb >> 32);
-        mObjectType[5] = (byte) (lsb >> 40);
-        mObjectType[6] = (byte) (lsb >> 48);
-        mObjectType[7] = (byte) (lsb >> 56);
-        mObjectType[8] = (byte) msb;
-        mObjectType[9] = (byte) (msb >> 8);
-        mObjectType[10] = (byte) (msb >> 16);
-        mObjectType[11] = (byte) (msb >> 24);
-        mObjectType[12] = (byte) (msb >> 32);
-        mObjectType[13] = (byte) (msb >> 40);
-        mObjectType[14] = (byte) (msb >> 48);
-        mObjectType[15] = (byte) (msb >> 56);
+        byteBuffer.putInt((int) (msb >> 32));
+        byteBuffer.putShort((short) (msb >> 16));
+        byteBuffer.putShort((short) msb);
+
+        long lsb = uuid.getLeastSignificantBits();
+        byteBuffer.put((byte) (lsb >> 56));
+        byteBuffer.put((byte) (lsb >> 48));
+        byteBuffer.putInt((int) lsb);
+        byteBuffer.putShort((short) (lsb >> 32));
     }
 
     /**

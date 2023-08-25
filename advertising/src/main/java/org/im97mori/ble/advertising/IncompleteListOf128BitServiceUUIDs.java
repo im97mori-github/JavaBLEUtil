@@ -26,21 +26,28 @@ public class IncompleteListOf128BitServiceUUIDs extends AbstractAdvertisingData 
      */
     private final List<UUID> mUuidList;
 
-	/**
-     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
-     * @param offset data offset
-	 * @see #IncompleteListOf128BitServiceUUIDs(byte[], int, int)
-	 */
-	public IncompleteListOf128BitServiceUUIDs(@NonNull byte[] data, int offset) {
-		this(data, offset, data[offset]);
-	}
+    /**
+     * @param data
+     *            byte array from <a href=
+     *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset
+     *            data offset
+     * @see #IncompleteListOf128BitServiceUUIDs(byte[], int, int)
+     */
+    public IncompleteListOf128BitServiceUUIDs(@NonNull byte[] data, int offset) {
+        this(data, offset, data[offset]);
+    }
 
     /**
      * Constructor for Incomplete List of 128-bit Service Class UUIDs
      *
-     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
-     * @param offset data offset
-     * @param length 1st octet of Advertising Data
+     * @param data
+     *            byte array from <a href=
+     *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset
+     *            data offset
+     * @param length
+     *            1st octet of Advertising Data
      */
     public IncompleteListOf128BitServiceUUIDs(@NonNull byte[] data, int offset, int length) {
         super(length);
@@ -49,8 +56,19 @@ public class IncompleteListOf128BitServiceUUIDs extends AbstractAdvertisingData 
         List<UUID> uuidList = new ArrayList<>();
         for (int i = offset + 2; i < offset + length + 1; i += 16) {
             bb = ByteBuffer.wrap(data, i, 16).order(ByteOrder.LITTLE_ENDIAN);
-            long lsb = bb.getLong();
-            long msb = bb.getLong();
+
+            long msb = 0;
+            long lsb = 0;
+
+            msb |= ((long) bb.getInt()) << 32;
+            msb |= ((long) bb.getShort()) << 16;
+            msb |= (long) bb.getShort();
+
+            lsb |= ((long) bb.get()) << 56;
+            lsb |= ((long) bb.get()) << 48;
+            lsb |= ((long) bb.getShort());
+            lsb |= ((long) bb.getInt()) << 16;
+
             uuidList.add(new UUID(msb, lsb));
         }
         mUuidList = Collections.synchronizedList(Collections.unmodifiableList(uuidList));
@@ -59,7 +77,8 @@ public class IncompleteListOf128BitServiceUUIDs extends AbstractAdvertisingData 
     /**
      * Constructor for Incomplete List of 128-bit Service Class UUIDs
      * 
-     * @param uuids UUID array
+     * @param uuids
+     *            UUID array
      * @see CompleteListOf128BitServiceUUIDs#CompleteListOf128BitServiceUUIDs(List)
      */
     public IncompleteListOf128BitServiceUUIDs(@NonNull UUID... uuids) {
@@ -69,7 +88,8 @@ public class IncompleteListOf128BitServiceUUIDs extends AbstractAdvertisingData 
     /**
      * Constructor for Incomplete List of 128-bit Service Class UUIDs
      * 
-     * @param uuidList UUID list
+     * @param uuidList
+     *            UUID list
      */
     public IncompleteListOf128BitServiceUUIDs(@NonNull List<UUID> uuidList) {
         super(uuidList.size() * 16 + 1);
@@ -103,8 +123,16 @@ public class IncompleteListOf128BitServiceUUIDs extends AbstractAdvertisingData 
         byteBuffer.put((byte) getLength());
         byteBuffer.put((byte) getDataType());
         for (UUID uuid : mUuidList) {
-            byteBuffer.putLong(uuid.getLeastSignificantBits());
-            byteBuffer.putLong(uuid.getMostSignificantBits());
+            long msb = uuid.getMostSignificantBits();
+            byteBuffer.putInt((int) (msb >> 32));
+            byteBuffer.putShort((short) (msb >> 16));
+            byteBuffer.putShort((short) msb);
+
+            long lsb = uuid.getLeastSignificantBits();
+            byteBuffer.put((byte) (lsb >> 56));
+            byteBuffer.put((byte) (lsb >> 48));
+            byteBuffer.putInt((int) lsb);
+            byteBuffer.putShort((short) (lsb >> 32));
         }
         return data;
     }

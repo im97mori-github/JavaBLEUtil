@@ -1,6 +1,6 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.*;
+import static org.im97mori.ble.constants.DataType.LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -70,10 +70,10 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
         byte[] data = new byte[18];
         data[0] = 17;
         data[1] = LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE;
-        data[2] = 0;
-        data[3] = 0;
-        data[4] = 0;
-        data[5] = 0;
+        data[2] = 0x01;
+        data[3] = 0x02;
+        data[4] = 0x03;
+        data[5] = 0x04;
         data[6] = 0;
         data[7] = 0;
         data[8] = 0;
@@ -85,7 +85,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
         data[14] = 0;
         data[15] = 0;
         data[16] = 0;
-        data[17] = 127;
+        data[17] = 0;
         data_00003 = data;
     }
 
@@ -94,12 +94,12 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
         byte[] data = new byte[18];
         data[0] = 17;
         data[1] = LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE;
-        data[2] = 127;
+        data[2] = 0;
         data[3] = 0;
         data[4] = 0;
         data[5] = 0;
-        data[6] = 0;
-        data[7] = 0;
+        data[6] = 0x01;
+        data[7] = 0x02;
         data[8] = 0;
         data[9] = 0;
         data[10] = 0;
@@ -118,22 +118,22 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
         byte[] data = new byte[18];
         data[0] = 17;
         data[1] = LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE;
-        data[2] = (byte) 0b11111111;
-        data[3] = (byte) 0b11111111;
-        data[4] = (byte) 0b11111111;
-        data[5] = (byte) 0b11111111;
-        data[6] = (byte) 0b11111111;
-        data[7] = (byte) 0b11111111;
-        data[8] = (byte) 0b11111111;
-        data[9] = (byte) 0b11111111;
-        data[10] = (byte) 0b11111111;
-        data[11] = (byte) 0b11111111;
-        data[12] = (byte) 0b11111111;
-        data[13] = (byte) 0b11111111;
-        data[14] = (byte) 0b11111111;
-        data[15] = (byte) 0b11111111;
-        data[16] = (byte) 0b11111111;
-        data[17] = (byte) 0b11111111;
+        data[2] = 0;
+        data[3] = 0;
+        data[4] = 0;
+        data[5] = 0;
+        data[6] = 0;
+        data[7] = 0;
+        data[8] = 0x01;
+        data[9] = 0x02;
+        data[10] = 0;
+        data[11] = 0;
+        data[12] = 0;
+        data[13] = 0;
+        data[14] = 0;
+        data[15] = 0;
+        data[16] = 0;
+        data[17] = 0;
         data_00005 = data;
     }
 
@@ -150,14 +150,14 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
         data[7] = 0;
         data[8] = 0;
         data[9] = 0;
-        data[10] = 0;
+        data[10] = 0x01;
         data[11] = 0;
         data[12] = 0;
         data[13] = 0;
         data[14] = 0;
         data[15] = 0;
         data[16] = 0;
-        data[17] = (byte) 0b11111111;
+        data[17] = 0;
         data_00006 = data;
     }
 
@@ -166,7 +166,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
         byte[] data = new byte[18];
         data[0] = 17;
         data[1] = LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE;
-        data[2] = (byte) 0b11111111;
+        data[2] = 0;
         data[3] = 0;
         data[4] = 0;
         data[5] = 0;
@@ -175,7 +175,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
         data[8] = 0;
         data[9] = 0;
         data[10] = 0;
-        data[11] = 0;
+        data[11] = 0x01;
         data[12] = 0;
         data[13] = 0;
         data[14] = 0;
@@ -187,13 +187,37 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 
     private static final byte[] data_00008;
     static {
-        byte[] data = new byte[2];
-        data[0] = 1;
+		byte[] data = new byte[18];
+        data[0] = 17;
         data[1] = LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE;
+        data[2] = 0;
+        data[3] = 0;
+        data[4] = 0;
+        data[5] = 0;
+        data[6] = 0;
+        data[7] = 0;
+        data[8] = 0;
+        data[9] = 0;
+        data[10] = 0;
+        data[11] = 0;
+        data[12] = 0x01;
+        data[13] = 0x02;
+        data[14] = 0x03;
+        data[15] = 0x04;
+        data[16] = 0x05;
+        data[17] = 0x06;
         data_00008 = data;
     }
 
     private static final byte[] data_00009;
+    static {
+		byte[] data = new byte[2];
+        data[0] = 1;
+        data[1] = LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE;
+        data_00009 = data;
+    }
+
+	private static final byte[] data_00010;
     static {
         byte[] data = new byte[34];
         data[0] = 33;
@@ -230,7 +254,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
         data[31] = 0x1e;
         data[32] = 0x1f;
         data[33] = 0x20;
-        data_00009 = data;
+        data_00010 = data;
     }
     //@formatter:on
 
@@ -287,7 +311,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0, data[0]);
 		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("7f000000-0000-0000-0000-000000000000"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("04030201-0000-0000-0000-000000000000"), result1.getUuidList().get(0));
 	}
 
 	@Test
@@ -297,7 +321,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0, data[0]);
 		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("00000000-0000-0000-0000-00000000007f"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("00000000-0201-0000-0000-000000000000"), result1.getUuidList().get(0));
 	}
 
 	@Test
@@ -307,7 +331,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0, data[0]);
 		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("ffffffff-ffff-ffff-ffff-ffffffffffff"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("00000000-0000-0201-0000-000000000000"), result1.getUuidList().get(0));
 	}
 
 	@Test
@@ -317,7 +341,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0, data[0]);
 		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("ff000000-0000-0000-0000-000000000000"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("00000000-0000-0000-0100-000000000000"), result1.getUuidList().get(0));
 	}
 
 	@Test
@@ -327,11 +351,21 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0, data[0]);
 		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("00000000-0000-0000-0000-0000000000ff"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("00000000-0000-0000-0001-000000000000"), result1.getUuidList().get(0));
 	}
 
 	@Test
 	public void test_constructor_1_00008() {
+		byte[] data = getData();
+
+		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0, data[0]);
+		assertEquals(17, result1.getLength());
+		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
+		assertEquals(UUID.fromString("00000000-0000-0000-0000-060504030201"), result1.getUuidList().get(0));
+	}
+
+	@Test
+	public void test_constructor_1_00009() {
 		byte[] data = getData();
 
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0, data[0]);
@@ -341,15 +375,15 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 	}
 
 	@Test
-	public void test_constructor_1_00009() {
+	public void test_constructor_1_00010() {
 		byte[] data = getData();
 
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0, data[0]);
 		assertEquals(33, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
 		assertEquals(2, result1.getUuidList().size());
-		assertEquals(UUID.fromString("100f0e0d-0c0b-0a09-0807-060504030201"), result1.getUuidList().get(0));
-		assertEquals(UUID.fromString("201f1e1d-1c1b-1a19-1817-161514131211"), result1.getUuidList().get(1));
+		assertEquals(UUID.fromString("04030201-0605-0807-090a-100f0e0d0c0b"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("14131211-1615-1817-191a-201f1e1d1c1b"), result1.getUuidList().get(1));
 	}
 
 	@Test
@@ -389,7 +423,8 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		UUID uuid1 = UUID.randomUUID();
 		UUID uuid2 = UUID.randomUUID();
 
-		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(Arrays.asList(uuid1, uuid2));
+		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(
+				Arrays.asList(uuid1, uuid2));
 		assertEquals(33, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
 		assertEquals(2, result1.getUuidList().size());
@@ -424,7 +459,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0);
 		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("7f000000-0000-0000-0000-000000000000"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("04030201-0000-0000-0000-000000000000"), result1.getUuidList().get(0));
 	}
 
 	@Test
@@ -434,7 +469,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0);
 		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("00000000-0000-0000-0000-00000000007f"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("00000000-0201-0000-0000-000000000000"), result1.getUuidList().get(0));
 	}
 
 	@Test
@@ -444,7 +479,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0);
 		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("ffffffff-ffff-ffff-ffff-ffffffffffff"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("00000000-0000-0201-0000-000000000000"), result1.getUuidList().get(0));
 	}
 
 	@Test
@@ -454,7 +489,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0);
 		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("ff000000-0000-0000-0000-000000000000"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("00000000-0000-0000-0100-000000000000"), result1.getUuidList().get(0));
 	}
 
 	@Test
@@ -464,7 +499,7 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0);
 		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("00000000-0000-0000-0000-0000000000ff"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("00000000-0000-0000-0001-000000000000"), result1.getUuidList().get(0));
 	}
 
 	@Test
@@ -472,9 +507,9 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		byte[] data = getData();
 
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0);
-		assertEquals(1, result1.getLength());
+		assertEquals(17, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(0, result1.getUuidList().size());
+		assertEquals(UUID.fromString("00000000-0000-0000-0000-060504030201"), result1.getUuidList().get(0));
 	}
 
 	@Test
@@ -482,175 +517,21 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		byte[] data = getData();
 
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0);
-		assertEquals(33, result1.getLength());
-		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(2, result1.getUuidList().size());
-		assertEquals(UUID.fromString("100f0e0d-0c0b-0a09-0807-060504030201"), result1.getUuidList().get(0));
-		assertEquals(UUID.fromString("201f1e1d-1c1b-1a19-1817-161514131211"), result1.getUuidList().get(1));
-	}
-
-	@Test
-	public void test_constructor_3_00001() {
-		byte[] data = getData();
-
-		ByteBuffer bb;
-		List<UUID> uuidList = new ArrayList<>();
-		for (int i = 2; i < data[0] + 1; i += 16) {
-			bb = ByteBuffer.wrap(data, i, 16).order(ByteOrder.LITTLE_ENDIAN);
-			long lsb = bb.getLong();
-			long msb = bb.getLong();
-			uuidList.add(new UUID(msb, lsb));
-		}
-		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuidList);
-		assertEquals(17, result1.getLength());
-		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("00000000-0000-0000-0000-000000000000"), result1.getUuidList().get(0));
-	}
-
-	@Test
-	public void test_constructor_3_00002() {
-		byte[] data = getData();
-
-		ByteBuffer bb;
-		List<UUID> uuidList = new ArrayList<>();
-		for (int i = 2; i < data[0] + 1; i += 16) {
-			bb = ByteBuffer.wrap(data, i, 16).order(ByteOrder.LITTLE_ENDIAN);
-			long lsb = bb.getLong();
-			long msb = bb.getLong();
-			uuidList.add(new UUID(msb, lsb));
-		}
-		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuidList);
-		assertEquals(17, result1.getLength());
-		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("7f7f7f7f-7f7f-7f7f-7f7f-7f7f7f7f7f7f"), result1.getUuidList().get(0));
-	}
-
-	@Test
-	public void test_constructor_3_00003() {
-		byte[] data = getData();
-
-		ByteBuffer bb;
-		List<UUID> uuidList = new ArrayList<>();
-		for (int i = 2; i < data[0] + 1; i += 16) {
-			bb = ByteBuffer.wrap(data, i, 16).order(ByteOrder.LITTLE_ENDIAN);
-			long lsb = bb.getLong();
-			long msb = bb.getLong();
-			uuidList.add(new UUID(msb, lsb));
-		}
-		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuidList);
-		assertEquals(17, result1.getLength());
-		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("7f000000-0000-0000-0000-000000000000"), result1.getUuidList().get(0));
-	}
-
-	@Test
-	public void test_constructor_3_00004() {
-		byte[] data = getData();
-
-		ByteBuffer bb;
-		List<UUID> uuidList = new ArrayList<>();
-		for (int i = 2; i < data[0] + 1; i += 16) {
-			bb = ByteBuffer.wrap(data, i, 16).order(ByteOrder.LITTLE_ENDIAN);
-			long lsb = bb.getLong();
-			long msb = bb.getLong();
-			uuidList.add(new UUID(msb, lsb));
-		}
-		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuidList);
-		assertEquals(17, result1.getLength());
-		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("00000000-0000-0000-0000-00000000007f"), result1.getUuidList().get(0));
-	}
-
-	@Test
-	public void test_constructor_3_00005() {
-		byte[] data = getData();
-
-		ByteBuffer bb;
-		List<UUID> uuidList = new ArrayList<>();
-		for (int i = 2; i < data[0] + 1; i += 16) {
-			bb = ByteBuffer.wrap(data, i, 16).order(ByteOrder.LITTLE_ENDIAN);
-			long lsb = bb.getLong();
-			long msb = bb.getLong();
-			uuidList.add(new UUID(msb, lsb));
-		}
-		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuidList);
-		assertEquals(17, result1.getLength());
-		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("ffffffff-ffff-ffff-ffff-ffffffffffff"), result1.getUuidList().get(0));
-	}
-
-	@Test
-	public void test_constructor_3_00006() {
-		byte[] data = getData();
-
-		ByteBuffer bb;
-		List<UUID> uuidList = new ArrayList<>();
-		for (int i = 2; i < data[0] + 1; i += 16) {
-			bb = ByteBuffer.wrap(data, i, 16).order(ByteOrder.LITTLE_ENDIAN);
-			long lsb = bb.getLong();
-			long msb = bb.getLong();
-			uuidList.add(new UUID(msb, lsb));
-		}
-		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuidList);
-		assertEquals(17, result1.getLength());
-		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("ff000000-0000-0000-0000-000000000000"), result1.getUuidList().get(0));
-	}
-
-	@Test
-	public void test_constructor_3_00007() {
-		byte[] data = getData();
-
-		ByteBuffer bb;
-		List<UUID> uuidList = new ArrayList<>();
-		for (int i = 2; i < data[0] + 1; i += 16) {
-			bb = ByteBuffer.wrap(data, i, 16).order(ByteOrder.LITTLE_ENDIAN);
-			long lsb = bb.getLong();
-			long msb = bb.getLong();
-			uuidList.add(new UUID(msb, lsb));
-		}
-		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuidList);
-		assertEquals(17, result1.getLength());
-		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
-		assertEquals(UUID.fromString("00000000-0000-0000-0000-0000000000ff"), result1.getUuidList().get(0));
-	}
-
-	@Test
-	public void test_constructor_3_00008() {
-		byte[] data = getData();
-
-		ByteBuffer bb;
-		List<UUID> uuidList = new ArrayList<>();
-		for (int i = 2; i < data[0] + 1; i += 16) {
-			bb = ByteBuffer.wrap(data, i, 16).order(ByteOrder.LITTLE_ENDIAN);
-			long lsb = bb.getLong();
-			long msb = bb.getLong();
-			uuidList.add(new UUID(msb, lsb));
-		}
-		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuidList);
 		assertEquals(1, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
 		assertEquals(0, result1.getUuidList().size());
 	}
 
 	@Test
-	public void test_constructor_3_00009() {
+	public void test_constructor_2_00010() {
 		byte[] data = getData();
 
-		ByteBuffer bb;
-		List<UUID> uuidList = new ArrayList<>();
-		for (int i = 2; i < data[0] + 1; i += 16) {
-			bb = ByteBuffer.wrap(data, i, 16).order(ByteOrder.LITTLE_ENDIAN);
-			long lsb = bb.getLong();
-			long msb = bb.getLong();
-			uuidList.add(new UUID(msb, lsb));
-		}
-		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuidList);
+		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0);
 		assertEquals(33, result1.getLength());
 		assertEquals(LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE, result1.getDataType());
 		assertEquals(2, result1.getUuidList().size());
-		assertEquals(UUID.fromString("100f0e0d-0c0b-0a09-0807-060504030201"), result1.getUuidList().get(0));
-		assertEquals(UUID.fromString("201f1e1d-1c1b-1a19-1817-161514131211"), result1.getUuidList().get(1));
+		assertEquals(UUID.fromString("04030201-0605-0807-090a-100f0e0d0c0b"), result1.getUuidList().get(0));
+		assertEquals(UUID.fromString("14131211-1615-1817-191a-201f1e1d1c1b"), result1.getUuidList().get(1));
 	}
 
 	@Test
@@ -722,6 +603,110 @@ public class ListOf128BitServiceSolicitationUUIDsTest {
 		byte[] data = getData();
 
 		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(data, 0, data[0]);
+		assertArrayEquals(data, result1.getBytes());
+	}
+
+	@Test
+	public void test_parcelable_2_00101() {
+		byte[] data = new byte[2];
+		data[0] = 1;
+		data[1] = LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE;
+
+		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs();
+		assertArrayEquals(data, result1.getBytes());
+	}
+
+	@Test
+	public void test_parcelable_2_00102() {
+		UUID uuid1 = UUID.randomUUID();
+		byte[] data = new byte[18];
+		ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+		byteBuffer.put((byte) 17);
+		byteBuffer.put((byte) LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE);
+
+		long msb = uuid1.getMostSignificantBits();
+		byteBuffer.putInt((int) (msb >> 32));
+		byteBuffer.putShort((short) (msb >> 16));
+		byteBuffer.putShort((short) msb);
+
+		long lsb = uuid1.getLeastSignificantBits();
+		byteBuffer.put((byte) (lsb >> 56));
+		byteBuffer.put((byte) (lsb >> 48));
+		byteBuffer.putInt((int) lsb);
+		byteBuffer.putShort((short) (lsb >> 32));
+
+		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuid1);
+		assertArrayEquals(data, result1.getBytes());
+	}
+
+	@Test
+	public void test_parcelable_2_00103() {
+		UUID uuid1 = UUID.randomUUID();
+		UUID uuid2 = UUID.randomUUID();
+		byte[] data = new byte[34];
+		ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+		byteBuffer.put((byte) 33);
+		byteBuffer.put((byte) LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE);
+
+		long msb = uuid1.getMostSignificantBits();
+		byteBuffer.putInt((int) (msb >> 32));
+		byteBuffer.putShort((short) (msb >> 16));
+		byteBuffer.putShort((short) msb);
+
+		long lsb = uuid1.getLeastSignificantBits();
+		byteBuffer.put((byte) (lsb >> 56));
+		byteBuffer.put((byte) (lsb >> 48));
+		byteBuffer.putInt((int) lsb);
+		byteBuffer.putShort((short) (lsb >> 32));
+
+		msb = uuid2.getMostSignificantBits();
+		byteBuffer.putInt((int) (msb >> 32));
+		byteBuffer.putShort((short) (msb >> 16));
+		byteBuffer.putShort((short) msb);
+
+		lsb = uuid2.getLeastSignificantBits();
+		byteBuffer.put((byte) (lsb >> 56));
+		byteBuffer.put((byte) (lsb >> 48));
+		byteBuffer.putInt((int) lsb);
+		byteBuffer.putShort((short) (lsb >> 32));
+
+		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(uuid1, uuid2);
+		assertArrayEquals(data, result1.getBytes());
+	}
+
+	@Test
+	public void test_parcelable_2_00104() {
+		UUID uuid1 = UUID.randomUUID();
+		UUID uuid2 = UUID.randomUUID();
+		byte[] data = new byte[34];
+		ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+		byteBuffer.put((byte) 33);
+		byteBuffer.put((byte) LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE);
+
+		long msb = uuid1.getMostSignificantBits();
+		byteBuffer.putInt((int) (msb >> 32));
+		byteBuffer.putShort((short) (msb >> 16));
+		byteBuffer.putShort((short) msb);
+
+		long lsb = uuid1.getLeastSignificantBits();
+		byteBuffer.put((byte) (lsb >> 56));
+		byteBuffer.put((byte) (lsb >> 48));
+		byteBuffer.putInt((int) lsb);
+		byteBuffer.putShort((short) (lsb >> 32));
+
+		msb = uuid2.getMostSignificantBits();
+		byteBuffer.putInt((int) (msb >> 32));
+		byteBuffer.putShort((short) (msb >> 16));
+		byteBuffer.putShort((short) msb);
+
+		lsb = uuid2.getLeastSignificantBits();
+		byteBuffer.put((byte) (lsb >> 56));
+		byteBuffer.put((byte) (lsb >> 48));
+		byteBuffer.putInt((int) lsb);
+		byteBuffer.putShort((short) (lsb >> 32));
+
+		ListOf128BitServiceSolicitationUUIDs result1 = new ListOf128BitServiceSolicitationUUIDs(
+				Arrays.asList(uuid1, uuid2));
 		assertArrayEquals(data, result1.getBytes());
 	}
 

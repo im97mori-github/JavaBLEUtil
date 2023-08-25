@@ -110,7 +110,9 @@ public class DescriptorValueChanged implements ByteArrayInterface {
     /**
      * Constructor from byte array
      *
-     * @param values byte array from <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
+     * @param values
+     *            byte array from <a href=
+     *            "https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic#getValue()">BluetoothGattCharacteristic#getValue()</a>
      */
     public DescriptorValueChanged(@NonNull byte[] values) {
         mFlags = BLEUtils.createSInt16(values, 0);
@@ -120,8 +122,10 @@ public class DescriptorValueChanged implements ByteArrayInterface {
     /**
      * Constructor from parameters
      * 
-     * @param flags              Flags
-     * @param characteristicUUID Characteristic UUID
+     * @param flags
+     *            Flags
+     * @param characteristicUUID
+     *            Characteristic UUID
      */
     public DescriptorValueChanged(int flags, @NonNull byte[] characteristicUUID) {
         mFlags = flags;
@@ -136,73 +140,95 @@ public class DescriptorValueChanged implements ByteArrayInterface {
     }
 
     /**
-     * @return {@code true}:Source of Change Server, {@code false}:Source of Change Client
+     * @return {@code true}:Source of Change Server, {@code false}:Source of Change
+     *         Client
      */
     public boolean isFlagsSourceOfChangeServer() {
         return isFlagsMatched(FLAGS_SOURCE_OF_CHANGE_MASK, FLAGS_SOURCE_OF_CHANGE_SERVER);
     }
 
     /**
-     * @return {@code true}:Source of Change Client, {@code false}:Source of Change Server
+     * @return {@code true}:Source of Change Client, {@code false}:Source of Change
+     *         Server
      */
     public boolean isFlagsSourceOfChangeClient() {
         return isFlagsMatched(FLAGS_SOURCE_OF_CHANGE_MASK, FLAGS_SOURCE_OF_CHANGE_CLIENT);
     }
 
     /**
-     * @return {@code true}:Change to one or more ES Trigger Setting Descriptors False, {@code false}:Change to one or more ES Trigger Setting Descriptors True
+     * @return {@code true}:Change to one or more ES Trigger Setting Descriptors
+     *         False, {@code false}:Change to one or more ES Trigger Setting
+     *         Descriptors True
      */
     public boolean isFlagsChangeToOneOrMoreEsTriggerSettingDescriptorsFalse() {
-        return isFlagsMatched(FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_MASK, FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_FALSE);
+        return isFlagsMatched(FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_MASK,
+                FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_FALSE);
     }
 
     /**
-     * @return {@code true}:Change to one or more ES Trigger Setting Descriptors True, {@code false}:Change to one or more ES Trigger Setting Descriptors False
+     * @return {@code true}:Change to one or more ES Trigger Setting Descriptors
+     *         True, {@code false}:Change to one or more ES Trigger Setting
+     *         Descriptors False
      */
     public boolean isFlagsChangeToOneOrMoreEsTriggerSettingDescriptorsTrue() {
-        return isFlagsMatched(FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_MASK, FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_TRUE);
+        return isFlagsMatched(FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_MASK,
+                FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_TRUE);
     }
 
     /**
-     * @return {@code true}:Change to ES Configuration Descriptor False, {@code false}:Change to ES Configuration Descriptor True
+     * @return {@code true}:Change to ES Configuration Descriptor False,
+     *         {@code false}:Change to ES Configuration Descriptor True
      */
     public boolean isFlagsChangeToEsConfigurationDescriptorFalse() {
-        return isFlagsMatched(FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_MASK, FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_FALSE);
+        return isFlagsMatched(FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_MASK,
+                FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_FALSE);
     }
 
     /**
-     * @return {@code true}:Change to ES Configuration Descriptor True, {@code false}:Change to ES Configuration Descriptor False
+     * @return {@code true}:Change to ES Configuration Descriptor True,
+     *         {@code false}:Change to ES Configuration Descriptor False
      */
     public boolean isFlagsChangeToEsConfigurationDescriptorTrue() {
-        return isFlagsMatched(FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_MASK, FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_TRUE);
+        return isFlagsMatched(FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_MASK,
+                FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_TRUE);
     }
 
     /**
-     * @return {@code true}:Change to ES Measurement Descriptor False, {@code false}:Change to ES Measurement Descriptor True
+     * @return {@code true}:Change to ES Measurement Descriptor False,
+     *         {@code false}:Change to ES Measurement Descriptor True
      */
     public boolean isFlagsChangeToEsMeasurementDescriptorFalse() {
-        return isFlagsMatched(FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_MASK, FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_FALSE);
+        return isFlagsMatched(FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_MASK,
+                FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_FALSE);
     }
 
     /**
-     * @return {@code true}:Change to ES Measurement Descriptor True, {@code false}:Change to ES Measurement Descriptor False
+     * @return {@code true}:Change to ES Measurement Descriptor True,
+     *         {@code false}:Change to ES Measurement Descriptor False
      */
     public boolean isFlagsChangeToEsMeasurementDescriptorTrue() {
-        return isFlagsMatched(FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_MASK, FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_TRUE);
+        return isFlagsMatched(FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_MASK,
+                FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_TRUE);
     }
 
     /**
-     * @return {@code true}:Change to Characteristic User Description Descriptor False, {@code false}:Change to Characteristic User Description Descriptor True
+     * @return {@code true}:Change to Characteristic User Description Descriptor
+     *         False, {@code false}:Change to Characteristic User Description
+     *         Descriptor True
      */
     public boolean isFlagsChangeToCharacteristicUserDescriptionDescriptorFalse() {
-        return isFlagsMatched(FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_MASK, FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_FALSE);
+        return isFlagsMatched(FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_MASK,
+                FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_FALSE);
     }
 
     /**
-     * @return {@code true}:Change to Characteristic User Description Descriptor True, {@code false}:Change to Characteristic User Description Descriptor False
+     * @return {@code true}:Change to Characteristic User Description Descriptor
+     *         True, {@code false}:Change to Characteristic User Description
+     *         Descriptor False
      */
     public boolean isFlagsChangeToCharacteristicUserDescriptionDescriptorTrue() {
-        return isFlagsMatched(FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_MASK, FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_TRUE);
+        return isFlagsMatched(FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_MASK,
+                FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_TRUE);
     }
 
     /**
@@ -229,8 +255,19 @@ public class DescriptorValueChanged implements ByteArrayInterface {
             uuid = new UUID(msb | target, lsb);
         } else {
             ByteBuffer bb = ByteBuffer.wrap(mCharacteristicUUID, 0, 16).order(ByteOrder.LITTLE_ENDIAN);
-            long lsb = bb.getLong();
-            long msb = bb.getLong();
+
+            long msb = 0;
+            long lsb = 0;
+
+            msb |= ((long) bb.getInt()) << 32;
+            msb |= ((long) bb.getShort()) << 16;
+            msb |= (long) bb.getShort();
+
+            lsb |= ((long) bb.get()) << 56;
+            lsb |= ((long) bb.get()) << 48;
+            lsb |= ((long) bb.getShort());
+            lsb |= ((long) bb.getInt()) << 16;
+
             uuid = new UUID(msb, lsb);
         }
         return uuid;
@@ -252,8 +289,21 @@ public class DescriptorValueChanged implements ByteArrayInterface {
     /**
      * check Flags
      *
-     * @param mask   bitmask for expect
-     * @param expect one of {@link #FLAGS_SOURCE_OF_CHANGE_SERVER} , {@link #FLAGS_SOURCE_OF_CHANGE_CLIENT} , {@link #FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_FALSE} , {@link #FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_TRUE} , {@link #FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_FALSE} , {@link #FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_TRUE} , {@link #FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_FALSE} , {@link #FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_TRUE} , {@link #FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_FALSE} , {@link #FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_TRUE}
+     * @param mask
+     *            bitmask for expect
+     * @param expect
+     *            one of {@link #FLAGS_SOURCE_OF_CHANGE_SERVER} ,
+     *            {@link #FLAGS_SOURCE_OF_CHANGE_CLIENT} ,
+     *            {@link #FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_FALSE}
+     *            ,
+     *            {@link #FLAGS_CHANGE_TO_ONE_OR_MORE_ES_TRIGGER_SETTING_DESCRIPTORS_TRUE}
+     *            , {@link #FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_FALSE} ,
+     *            {@link #FLAGS_CHANGE_TO_ES_CONFIGURATION_DESCRIPTORS_TRUE} ,
+     *            {@link #FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_FALSE} ,
+     *            {@link #FLAGS_CHANGE_TO_ES_MEASUREMENT_DESCRIPTORS_TRUE} ,
+     *            {@link #FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_FALSE}
+     *            ,
+     *            {@link #FLAGS_CHANGE_TO_CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTORS_TRUE}
      * @return {@code true}:same as expect, {@code false}:not match
      */
     private boolean isFlagsMatched(int mask, int expect) {

@@ -70,7 +70,7 @@ public class ListOf16BitServiceSolicitationUUIDs extends AbstractAdvertisingData
     }
 
 	/**
-	 * Constructor for List of 128-bit Service Solicitation UUIDs
+	 * Constructor for List of 16-bit Service Solicitation UUIDs
 	 * 
 	 * @param uuidList UUID list
 	 */

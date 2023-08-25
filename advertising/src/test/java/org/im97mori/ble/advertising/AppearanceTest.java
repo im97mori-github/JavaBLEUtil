@@ -4,8 +4,6 @@ import static org.im97mori.ble.constants.DataType.APPEARANCE_DATA_TYPE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-import java.util.UUID;
-
 import org.im97mori.ble.BLEUtils;
 import org.im97mori.ble.constants.AppearanceValues;
 import org.junit.Test;

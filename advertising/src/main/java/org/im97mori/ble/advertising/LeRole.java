@@ -77,8 +77,8 @@ public class LeRole extends AbstractAdvertisingData {
     /**
      * Constructor from parameters
      * 
-     * @param advertisingInterval
-     *            Advertising Interval
+     * @param leRole
+     *            LE Role
      */
     public LeRole(int leRole) {
         super(2);

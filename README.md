@@ -81,8 +81,7 @@ project/module/build.gradle
         implementation "org.im97mori:ble-core-utils:${version}"
         
         // Advertising classes
-        // (Supplement to the Bluetooth Core Specification Revision: v10)
-        // Only EIR / AD / SRD / ACAD are supported.(no OOB)
+        // (Supplement to the Bluetooth Core Specification Revision: v11)
         implementation "org.im97mori:ble-advertising:${version}"
         
         // Characteristic package

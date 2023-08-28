@@ -36,8 +36,11 @@ public class UniformResourceIdentifier extends AbstractAdvertisingData {
 	private final URI mUri;
 
 	/**
-     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
-     * @param offset data offset
+	 * @param data
+	 *            byte array from <a href=
+	 *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+	 * @param offset
+	 *            data offset
 	 * @see #UniformResourceIdentifier(byte[], int, int)
 	 */
 	public UniformResourceIdentifier(@NonNull byte[] data, int offset) {
@@ -47,9 +50,13 @@ public class UniformResourceIdentifier extends AbstractAdvertisingData {
 	/**
 	 * Constructor for URI
 	 *
-	 * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
-	 * @param offset data offset
-	 * @param length 1st octet of Advertising Data
+	 * @param data
+	 *            byte array from <a href=
+	 *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+	 * @param offset
+	 *            data offset
+	 * @param length
+	 *            1st octet of Advertising Data
 	 */
 	public UniformResourceIdentifier(@NonNull byte[] data, int offset, int length) {
 		super(length);
@@ -57,10 +64,14 @@ public class UniformResourceIdentifier extends AbstractAdvertisingData {
 		String allString = new String(data, offset + 2, length - 1);
 
 		mScheme = allString.charAt(0);
-		mUriString = allString.substring(1);
-		if (Scheme.SCHEME_MAPPING.containsKey(mScheme)) {
-			mUri = URI.create(Scheme.SCHEME_MAPPING.get(mScheme) + mUriString);
+		if (Scheme.EMPTY_SCHEME_NAME_SCHEME.equals(mScheme)) {
+			mUriString = allString.substring(allString.indexOf(":") + 1);
+			mUri = URI.create(allString.substring(1));
+		} else if (Scheme.SCHEME_MAPPING.containsKey(mScheme)) {
+			mUriString = allString.substring(1);
+			mUri = URI.create(Scheme.SCHEME_MAPPING.get(mScheme) + allString.substring(1));
 		} else {
+			mUriString = null;
 			mUri = null;
 		}
 	}
@@ -68,17 +79,23 @@ public class UniformResourceIdentifier extends AbstractAdvertisingData {
 	/**
 	 * Constructor from parameters
 	 * 
-	 * @param scheme    Scheme
-	 * @param uriString URI text
+	 * @param scheme
+	 *            Scheme
+	 * @param uriString
+	 *            URI text
 	 */
 	public UniformResourceIdentifier(char scheme, @NonNull String uriString) {
 		super(Character.toString(scheme).getBytes().length + uriString.getBytes().length + 1);
 
 		mScheme = scheme;
-		mUriString = uriString;
-		if (Scheme.SCHEME_MAPPING.containsKey(mScheme)) {
-			mUri = URI.create(Scheme.SCHEME_MAPPING.get(mScheme) + mUriString);
+		if (Scheme.EMPTY_SCHEME_NAME_SCHEME.equals(mScheme)) {
+			mUriString = uriString.substring(uriString.indexOf(":") + 1);
+			mUri = URI.create(uriString);
+		} else if (Scheme.SCHEME_MAPPING.containsKey(mScheme)) {
+			mUriString = uriString;
+			mUri = URI.create(Scheme.SCHEME_MAPPING.get(mScheme) + uriString);
 		} else {
+			mUriString = null;
 			mUri = null;
 		}
 	}
@@ -126,7 +143,12 @@ public class UniformResourceIdentifier extends AbstractAdvertisingData {
 		byteBuffer.put((byte) getLength());
 		byteBuffer.put((byte) getDataType());
 		byteBuffer.put(Character.toString(mScheme).getBytes());
-		byteBuffer.put(mUriString.getBytes());
+		String uriString = mUri.toString();
+		if (Scheme.EMPTY_SCHEME_NAME_SCHEME.equals(mScheme)) {
+			byteBuffer.put(uriString.getBytes());
+		} else {
+			byteBuffer.put(uriString.substring(uriString.indexOf(":") + 1).getBytes());
+		}
 		return data;
 	}
 

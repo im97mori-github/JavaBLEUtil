@@ -75,7 +75,7 @@ public class PeriodicAdvertisingResponseTimingInformation extends AbstractAdvert
     }
 
     /**
-     * Constructor for EncryptedData
+     * Constructor for Periodic Advertising Response Timing Information
      *
      * @param data
      *            byte array from <a href=

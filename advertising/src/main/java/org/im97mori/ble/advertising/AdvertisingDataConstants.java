@@ -139,10 +139,10 @@ public class AdvertisingDataConstants {
         public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LL_PRIVACY = org.im97mori.ble.advertising.LeSupportedFeatures.FEATURE_LL_PRIVACY;
 
         /**
-         * Extended Scanner Filter Policies
+         * Extended Scanning Filter Policies
          */
         @Deprecated
-        public static final SimpleImmutableEntry<Integer, Integer> FEATURE_EXTENDED_SCANNER_FILTER_POLICIES = org.im97mori.ble.advertising.LeSupportedFeatures.FEATURE_EXTENDED_SCANNER_FILTER_POLICIES;
+        public static final SimpleImmutableEntry<Integer, Integer> FEATURE_EXTENDED_SCANNING_FILTER_POLICIES = org.im97mori.ble.advertising.LeSupportedFeatures.FEATURE_EXTENDED_SCANNING_FILTER_POLICIES;
 
         /**
          * LE 2M PHY

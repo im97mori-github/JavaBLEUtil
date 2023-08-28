@@ -20,10 +20,11 @@ import androidx.annotation.NonNull;
  */
 public class LeSupportedFeatures extends AbstractAdvertisingData {
 
-	/**
-	 * LE Encryption
-	 */
-	public static final SimpleImmutableEntry<Integer, Integer> FEATURE_SUPPORTED_FEATURE_LE_ENCRYPTION = new SimpleImmutableEntry<>(0, 0b00000001);
+    /**
+     * LE Encryption
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_SUPPORTED_FEATURE_LE_ENCRYPTION = new SimpleImmutableEntry<>(
+            0, 0b00000001);
 
     /**
      * Connection Parameters Request Procedure
@@ -62,9 +63,9 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
             0b01000000);
 
     /**
-     * Extended Scanner Filter Policies
+     * Extended Scanning Filter Policies
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_EXTENDED_SCANNER_FILTER_POLICIES = new SimpleImmutableEntry<>(
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_EXTENDED_SCANNING_FILTER_POLICIES = new SimpleImmutableEntry<>(
             0, 0b10000000);
 
     /**
@@ -212,21 +213,21 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
             3, 0b10000000);
 
     /**
-     * Isochronous Channels (Host Sup-port)
+     * Connected Isochronous Stream (Host Support)
      */
     public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ISOCHRONOUS_CHANNELS = new SimpleImmutableEntry<>(
             4, 0b00000001);
 
     /**
-     * LE Power Control Request
+     * LE Power Control Request (Bit position 33)
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_POWER_CONTROL_REQUEST = new SimpleImmutableEntry<>(
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_POWER_CONTROL_REQUEST_33 = new SimpleImmutableEntry<>(
             4, 0b00000010);
 
     /**
-     * LE Power Change Indication
+     * LE Power Control Request (Bit position 34)
      */
-    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_POWER_CHANGE_INDICATION = new SimpleImmutableEntry<>(
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_LE_POWER_CONTROL_REQUEST_34 = new SimpleImmutableEntry<>(
             4, 0b00000100);
 
     /**
@@ -260,25 +261,56 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
             4, 0b10000000);
 
     /**
+     * Advertising Coding Selection
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ADVERTISING_CODING_SELECTION = new SimpleImmutableEntry<>(
+            5, 0b00000001);
+
+    /**
+     * Advertising Coding Selection (Host Supsport)
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_ADVERTISING_CODING_SELECTION_HOST_SUPPORT = new SimpleImmutableEntry<>(
+            5, 0b00000010);
+
+    /**
+     * Periodic Advertising with Responses - Advertiser
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_PERIODIC_ADVERTISING_WITH_RESPONSES_ADVERTISER = new SimpleImmutableEntry<>(
+            5, 0b00000100);
+
+    /**
+     * Periodic Advertising with Responses - Scanner
+     */
+    public static final SimpleImmutableEntry<Integer, Integer> FEATURE_PERIODIC_ADVERTISING_WITH_RESPONSES_SCANNER = new SimpleImmutableEntry<>(
+            5, 0b00001000);
+
+    /**
      * LE Supported Features list
      */
     private final List<Integer> mLeSupportedFeaturesList;
 
-	/**
-     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
-     * @param offset data offset
-	 * @see #LeSupportedFeatures(byte[], int, int)
-	 */
-	public LeSupportedFeatures(@NonNull byte[] data, int offset) {
-		this(data, offset, data[offset]);
-	}
+    /**
+     * @param data
+     *            byte array from <a href=
+     *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset
+     *            data offset
+     * @see #LeSupportedFeatures(byte[], int, int)
+     */
+    public LeSupportedFeatures(@NonNull byte[] data, int offset) {
+        this(data, offset, data[offset]);
+    }
 
     /**
      * Constructor for LE Supported Features
      *
-     * @param data   byte array from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
-     * @param offset data offset
-     * @param length 1st octet of Advertising Data
+     * @param data
+     *            byte array from <a href=
+     *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
+     * @param offset
+     *            data offset
+     * @param length
+     *            1st octet of Advertising Data
      */
     public LeSupportedFeatures(@NonNull byte[] data, int offset, int length) {
         super(length);
@@ -289,17 +321,18 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
         }
         mLeSupportedFeaturesList = Collections.synchronizedList(Collections.unmodifiableList(leSupportedFeaturesList));
     }
-    
-	/**
-	 * Constructor from parameters
-	 * 
-	 * @param leSupportedFeaturesList LE Supported Features list
-	 */
-	public LeSupportedFeatures(@NonNull List<Integer> leSupportedFeaturesList) {
-		super(leSupportedFeaturesList.size() + 1);
 
-		mLeSupportedFeaturesList = Collections.synchronizedList(Collections.unmodifiableList(leSupportedFeaturesList));
-	}
+    /**
+     * Constructor from parameters
+     * 
+     * @param leSupportedFeaturesList
+     *            LE Supported Features list
+     */
+    public LeSupportedFeatures(@NonNull List<Integer> leSupportedFeaturesList) {
+        super(leSupportedFeaturesList.size() + 1);
+
+        mLeSupportedFeaturesList = Collections.synchronizedList(Collections.unmodifiableList(leSupportedFeaturesList));
+    }
 
     /**
      * {@inheritDoc}
@@ -385,13 +418,13 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     }
 
     /**
-     * check Extended Scanner Filter Policies
+     * check Extended Scanning Filter Policies
      *
-     * @return {@code true}:Extended Scanner Filter Policies bit is 1,
+     * @return {@code true}:Extended Scanning Filter Policies bit is 1,
      *         {@code false}:bit is 0;
      */
-    public boolean isExtendedScannerFilterPoliciesSupported() {
-        return check(FEATURE_EXTENDED_SCANNER_FILTER_POLICIES);
+    public boolean isExtendedScanningFilterPoliciesSupported() {
+        return check(FEATURE_EXTENDED_SCANNING_FILTER_POLICIES);
     }
 
     /**
@@ -646,17 +679,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      *         0;
      */
     public boolean isLePowerControlRequestSupported() {
-        return check(FEATURE_LE_POWER_CONTROL_REQUEST);
-    }
-
-    /**
-     * check LE Power Change Indication
-     *
-     * @return {@code true}:LE Power Change Indication bit is 1, {@code false}:bit
-     *         is 0;
-     */
-    public boolean isLePowerChangeIndicationSupported() {
-        return check(FEATURE_LE_POWER_CHANGE_INDICATION);
+        return check(FEATURE_LE_POWER_CONTROL_REQUEST_33) || check(FEATURE_LE_POWER_CONTROL_REQUEST_34);
     }
 
     /**
@@ -668,45 +691,98 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     public boolean isLePathLossMonitoringSupported() {
         return check(FEATURE_LE_PATH_LOSS_MONITORING);
     }
-    
+
     /**
      * check Periodic Advertising ADI support
      *
-     * @return {@code true}:Periodic Advertising ADI support bit is 1, {@code false}:bit is
+     * @return {@code true}:Periodic Advertising ADI support bit is 1,
+     *         {@code false}:bit is
      *         0;
      */
     public boolean isPeriodicAdvertisingAdiSupported() {
         return check(FEATURE_PERIODIC_ADVERTISING_ADI_SUPPORT);
     }
-    
+
     /**
      * check Connection Subrating support
      *
-     * @return {@code true}:Connection Subrating support bit is 1, {@code false}:bit is
+     * @return {@code true}:Connection Subrating support bit is 1, {@code false}:bit
+     *         is
      *         0;
      */
     public boolean isConnectionSubratingSupported() {
         return check(FEATURE_CONNECTION_SUBRATING);
     }
-    
+
     /**
      * check Connection Subrating (Host Support) support
      *
-     * @return {@code true}:Connection Subrating (Host Support) support bit is 1, {@code false}:bit is
+     * @return {@code true}:Connection Subrating (Host Support) support bit is 1,
+     *         {@code false}:bit is
      *         0;
      */
     public boolean isConnectionSubratingHostSupportSupported() {
         return check(FEATURE_CONNECTION_SUBRATING_HOST_SUPPORT);
     }
-    
+
     /**
      * check Channel Classification support
      *
-     * @return {@code true}:Channel Classification support bit is 1, {@code false}:bit is
+     * @return {@code true}:Channel Classification support bit is 1,
+     *         {@code false}:bit is
      *         0;
      */
     public boolean isChannelClassificationSupported() {
         return check(FEATURE_CHANNEL_CLASSIFICATION);
+    }
+
+    /**
+     * check Advertising Coding Selection support
+     *
+     * @return {@code true}:Advertising Coding Selection support bit is 1,
+     *         {@code false}:bit is
+     *         0;
+     */
+    public boolean isAdvertisingCodingSelectionSupported() {
+        return check(FEATURE_ADVERTISING_CODING_SELECTION);
+    }
+
+    /**
+     * check Advertising Coding Selection (Host Support) support
+     *
+     * @return {@code true}:Advertising Coding Selection (Host Support) support bit
+     *         is 1,
+     *         {@code false}:bit is
+     *         0;
+     */
+    public boolean isAdvertisingCodingSelectionHostSupportSupported() {
+        return check(FEATURE_ADVERTISING_CODING_SELECTION_HOST_SUPPORT);
+    }
+
+    /**
+     * check Periodic Advertising with Responses - Advertiser support
+     *
+     * @return {@code true}:Periodic Advertising with Responses - Advertiser support
+     *         bit
+     *         is 1,
+     *         {@code false}:bit is
+     *         0;
+     */
+    public boolean isPeriodicAdvertisingWithResponsesAdvertiserSupported() {
+        return check(FEATURE_PERIODIC_ADVERTISING_WITH_RESPONSES_ADVERTISER);
+    }
+
+    /**
+     * check Periodic Advertising with Responses - Scanner
+     *
+     * @return {@code true}:Periodic Advertising with Responses - Scanner support
+     *         bit
+     *         is 1,
+     *         {@code false}:bit is
+     *         0;
+     */
+    public boolean isPeriodicAdvertisingWithResponsesScannerSupported() {
+        return check(FEATURE_PERIODIC_ADVERTISING_WITH_RESPONSES_SCANNER);
     }
 
     /**
@@ -728,7 +804,8 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check flag
      *
-     * @param target one of {@link LeSupportedFeatures}'s constants
+     * @param target
+     *            one of {@link LeSupportedFeatures}'s constants
      * @return {@code true}:target bit is 1, {@code false}:target bit is 0
      */
     private boolean check(@NonNull SimpleImmutableEntry<Integer, Integer> target) {

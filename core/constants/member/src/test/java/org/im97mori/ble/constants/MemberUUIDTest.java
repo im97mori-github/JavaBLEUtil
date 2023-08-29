@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.UUID;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
 public class MemberUUIDTest extends TestBase {

@@ -33,7 +33,7 @@ public class LeBluetoothDeviceAddress extends AbstractAdvertisingData {
      *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset
      *            data offset
-     * @see #PublicTargetAddress(byte[], int, int)
+     * @see #LeBluetoothDeviceAddress(byte[], int, int)
      */
     public LeBluetoothDeviceAddress(@NonNull byte[] data, int offset) {
         this(data, offset, data[offset]);

@@ -8,6 +8,7 @@ import static org.im97mori.ble.constants.DeclarationUUID.SECONDARY_SERVICE_DECLA
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
 public class DeclarationUUIDTest extends TestBase {

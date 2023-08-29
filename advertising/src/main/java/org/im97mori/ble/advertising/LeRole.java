@@ -51,7 +51,7 @@ public class LeRole extends AbstractAdvertisingData {
      *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset
      *            data offset
-     * @see #AdvertisingInterval(byte[], int, int)
+     * @see #LeRole(byte[], int, int)
      */
     public LeRole(@NonNull byte[] data, int offset) {
         this(data, offset, data[offset]);

@@ -8,6 +8,7 @@ import org.im97mori.ble.ByteArrayInterface;
 public interface AdvertisingDataInterface extends ByteArrayInterface {
 
     /**
+     * 
      * @return data length
      */
     public int getLength();
@@ -18,6 +19,7 @@ public interface AdvertisingDataInterface extends ByteArrayInterface {
      * <p>
      * https://www.bluetooth.com/specifications/assigned-numbers/generic-access-profile/
      * </p>
+     * 
      * @return data type
      */
     public int getDataType();

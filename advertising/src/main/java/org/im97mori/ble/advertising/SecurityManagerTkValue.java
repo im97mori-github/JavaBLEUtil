@@ -30,7 +30,7 @@ public class SecurityManagerTkValue extends AbstractAdvertisingData {
      *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset
      *            data offset
-     * @see #TxPowerLevel(byte[], int, int)
+     * @see #SecurityManagerTkValue(byte[], int, int)
      */
     public SecurityManagerTkValue(@NonNull byte[] data, int offset) {
         this(data, offset, data[offset]);

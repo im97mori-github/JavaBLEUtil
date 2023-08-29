@@ -30,7 +30,7 @@ public class SecureSimplePairingHashC192 extends AbstractAdvertisingData {
      *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset
      *            data offset
-     * @see #TxPowerLevel(byte[], int, int)
+     * @see #SecureSimplePairingHashC192(byte[], int, int)
      */
     public SecureSimplePairingHashC192(@NonNull byte[] data, int offset) {
         this(data, offset, data[offset]);

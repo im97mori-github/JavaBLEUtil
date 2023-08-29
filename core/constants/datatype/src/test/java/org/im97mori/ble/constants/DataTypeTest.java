@@ -3,6 +3,7 @@ package org.im97mori.ble.constants;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.im97mori.ble.test.TestBase;
 import org.junit.Test;
 
 import static org.im97mori.ble.constants.DataType.*;
@@ -75,11 +76,11 @@ public class DataTypeTest extends TestBase {
 		assertEquals("LE Bluetooth Device Address", DATA_TYPE_MAPPING.get(LE_BLUETOOTH_DEVICE_ADDRESS_DATA_TYPE));
 		assertTrue(DATA_TYPE_MAPPING.containsKey(LE_ROLE_DATA_TYPE));
 		assertEquals("LE Role", DATA_TYPE_MAPPING.get(LE_ROLE_DATA_TYPE));
-		assertTrue(DATA_TYPE_MAPPING.containsKey(SIMPLE_PAIRING_HASH_C_256_DATA_TYPE));
-		assertEquals("Simple Pairing Hash C-256", DATA_TYPE_MAPPING.get(SIMPLE_PAIRING_HASH_C_256_DATA_TYPE));
-		assertTrue(DATA_TYPE_MAPPING.containsKey(SIMPLE_PAIRING_RANDOMIZER_R_256_DATA_TYPE));
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SIMPLE_PAIRING_HASH_C256_DATA_TYPE));
+		assertEquals("Simple Pairing Hash C-256", DATA_TYPE_MAPPING.get(SIMPLE_PAIRING_HASH_C256_DATA_TYPE));
+		assertTrue(DATA_TYPE_MAPPING.containsKey(SIMPLE_PAIRING_RANDOMIZER_R256_DATA_TYPE));
 		assertEquals("Simple Pairing Randomizer R-256",
-				DATA_TYPE_MAPPING.get(SIMPLE_PAIRING_RANDOMIZER_R_256_DATA_TYPE));
+				DATA_TYPE_MAPPING.get(SIMPLE_PAIRING_RANDOMIZER_R256_DATA_TYPE));
 		assertTrue(DATA_TYPE_MAPPING.containsKey(LIST_OF_32_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE));
 		assertEquals("List of 32-bit Service Solicitation UUIDs",
 				DATA_TYPE_MAPPING.get(LIST_OF_32_BIT_SERVICE_SOLICITATION_UUIDS_DATA_TYPE));

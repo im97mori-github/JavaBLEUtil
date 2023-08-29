@@ -64,7 +64,11 @@ subprojects {
     compileTestJava.options.encoding = defaultEncoding
     
     tasks.withType(Test) {
-       systemProperty "file.encoding", defaultEncoding
+        systemProperty "file.encoding", defaultEncoding
+    }
+
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
     }
 
     sourceCompatibility = 1.8

@@ -30,7 +30,7 @@ public class SecureSimplePairingRandomizerR192 extends AbstractAdvertisingData {
      *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset
      *            data offset
-     * @see #TxPowerLevel(byte[], int, int)
+     * @see #SecureSimplePairingRandomizerR192(byte[], int, int)
      */
     public SecureSimplePairingRandomizerR192(@NonNull byte[] data, int offset) {
         this(data, offset, data[offset]);

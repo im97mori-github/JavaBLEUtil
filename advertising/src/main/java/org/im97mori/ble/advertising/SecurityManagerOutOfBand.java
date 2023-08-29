@@ -45,7 +45,7 @@ public class SecurityManagerOutOfBand extends AbstractAdvertisingData {
      *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset
      *            data offset
-     * @see #TxPowerLevel(byte[], int, int)
+     * @see #SecurityManagerOutOfBand(byte[], int, int)
      */
     public SecurityManagerOutOfBand(@NonNull byte[] data, int offset) {
         this(data, offset, data[offset]);

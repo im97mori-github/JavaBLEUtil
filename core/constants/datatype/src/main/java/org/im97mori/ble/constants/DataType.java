@@ -209,12 +209,12 @@ public class DataType {
     /**
      * Simple Pairing Hash C-256 (Data Type Value: 0x1d)
      */
-    public static final int SIMPLE_PAIRING_HASH_C_256_DATA_TYPE = 0x1d;
+    public static final int SIMPLE_PAIRING_HASH_C256_DATA_TYPE = 0x1d;
 
     /**
      * Simple Pairing Randomizer R-256 (Data Type Value: 0x1e)
      */
-    public static final int SIMPLE_PAIRING_RANDOMIZER_R_256_DATA_TYPE = 0x1e;
+    public static final int SIMPLE_PAIRING_RANDOMIZER_R256_DATA_TYPE = 0x1e;
 
     /**
      * List of 32-bit Service Solicitation UUIDs (Data Type Value: 0x1f)

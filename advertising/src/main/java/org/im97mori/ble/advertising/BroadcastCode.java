@@ -28,7 +28,7 @@ public class BroadcastCode extends AbstractAdvertisingData {
      *            "https://developer.android.com/reference/android/bluetooth/le/ScanRecord#getBytes()">ScanRecord#getBytes()</a>
      * @param offset
      *            data offset
-     * @see #TxPowerLevel(byte[], int, int)
+     * @see #BroadcastCode(byte[], int, int)
      */
     public BroadcastCode(@NonNull byte[] data, int offset) {
         this(data, offset, data[offset]);
@@ -54,8 +54,8 @@ public class BroadcastCode extends AbstractAdvertisingData {
     /**
      * Constructor from parameters
      * 
-     * @param securityManagerTkValue
-     *            Security Manager TK Value
+     * @param broadcastCode
+     *            Broadcast_Code
      */
     public BroadcastCode(@NonNull byte[] broadcastCode) {
         super(broadcastCode.length + 1);

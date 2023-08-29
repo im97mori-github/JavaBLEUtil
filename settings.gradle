@@ -9,6 +9,8 @@
 
 rootProject.name = 'JavaBLEUtil'
 
+include ':test'
+
 include ':core:constants:appearance'
 include ':core:constants:characteristic'
 include ':core:constants:company'
@@ -496,5 +498,3 @@ include ':characteristic:u2bfc'
 include ':characteristic:u2bfd'
 include ':characteristic:u2bfe'
 include ':characteristic'
-
-include ':test'

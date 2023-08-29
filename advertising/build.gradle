@@ -1,8 +1,19 @@
 dependencies {
     api "${myGroupId}:${coreConstantsAppearance}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsCharacteristic}:${loadVersion}"
     api "${myGroupId}:${coreConstantsCompany}:${loadVersion}"
     api "${myGroupId}:${coreConstantsDataType}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsDeclaration}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsDescriptor}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsErrorCode}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsMember}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsProfile}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsProtocol}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsProtocol}:${loadVersion}"
     api "${myGroupId}:${coreConstantsScheme}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsSdo}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsService}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsUnit}:${loadVersion}"
     api apiCoreUtils
     testImplementation apiTestUtil
 }

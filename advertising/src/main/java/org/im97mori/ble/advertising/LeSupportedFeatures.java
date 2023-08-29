@@ -363,7 +363,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Connection Parameters Request Procedure
      *
      * @return {@code true}:Connection Parameters Request Procedure bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isConnectionParametersRequestProcedureSupported() {
         return check(FEATURE_CONNECTION_PARAMETERS_REQUEST_PROCEDURE);
@@ -373,7 +373,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Extended Reject Indication
      *
      * @return {@code true}:Extended Reject Indication bit is 1, {@code false}:bit
-     *         is 0;
+     *         is 0
      */
     public boolean isExtendedRejectIndicationSupported() {
         return check(FEATURE_EXTENDED_REJECT_INDICATION);
@@ -383,7 +383,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Peripheral-initiated Features Exchange
      *
      * @return {@code true}:Peripheral-initiated Features Exchange bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isPeripheralInitiatedFeaturesExchangeSupported() {
         return check(FEATURE_PERIPHERAL_INITIATED_FEATURES_EXCHANGE);
@@ -392,7 +392,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LE Ping
      *
-     * @return {@code true}:LE Ping bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE Ping bit is 1, {@code false}:bit is 0
      */
     public boolean isLePingSupported() {
         return check(FEATURE_LE_PING);
@@ -402,7 +402,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check LE Data Packet Length Extension
      *
      * @return {@code true}:LE Data Packet Length Extension bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isLeDataPacketLengthExtensionSupported() {
         return check(FEATURE_LE_DATA_PACKET_LENGTH_EXTENSION);
@@ -411,7 +411,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LL Privacy
      *
-     * @return {@code true}:LL Privacy bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LL Privacy bit is 1, {@code false}:bit is 0
      */
     public boolean isLlPrivacySupported() {
         return check(FEATURE_LL_PRIVACY);
@@ -421,7 +421,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Extended Scanning Filter Policies
      *
      * @return {@code true}:Extended Scanning Filter Policies bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isExtendedScanningFilterPoliciesSupported() {
         return check(FEATURE_EXTENDED_SCANNING_FILTER_POLICIES);
@@ -430,7 +430,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LE 2M PHY
      *
-     * @return {@code true}:LE 2M PHY bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE 2M PHY bit is 1, {@code false}:bit is 0
      */
     public boolean isLe2mPhySupported() {
         return check(FEATURE_LE_2M_PHY);
@@ -440,7 +440,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Stable Modulation Index - Transmitter
      *
      * @return {@code true}:Stable Modulation Index - Transmitter bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isStableModulationIndexTransmitterSupported() {
         return check(FEATURE_STABLE_MODULATION_INDEX_TRANSMITTER);
@@ -450,7 +450,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Stable Modulation Index - Receiver
      *
      * @return {@code true}:Stable Modulation Index - Receiver bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isStableModulationIndexReceiverSupported() {
         return check(FEATURE_STABLE_MODULATION_INDEX_RECEIVER);
@@ -459,7 +459,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LE Coded PHY
      *
-     * @return {@code true}:LE Coded PHY bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE Coded PHY bit is 1, {@code false}:bit is 0
      */
     public boolean isLeCodedPhySupported() {
         return check(FEATURE_LE_CODED_PHY);
@@ -469,7 +469,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check LE Extended Advertising
      *
      * @return {@code true}:LE Extended Advertising bit is 1, {@code false}:bit is
-     *         0;
+     *         0
      */
     public boolean isLeExtendedAdvertisingSupported() {
         return check(FEATURE_LE_EXTENDED_ADVERTISING);
@@ -479,7 +479,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check LE Periodic Advertising
      *
      * @return {@code true}:LE Periodic Advertising bit is 1, {@code false}:bit is
-     *         0;
+     *         0
      */
     public boolean isLePeriodicAdvertisingSupported() {
         return check(FEATURE_LE_PERIODIC_ADVERTISING);
@@ -489,7 +489,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Channel Selection Algorithm #2
      *
      * @return {@code true}:Channel Selection Algorithm #2 bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isChannelSelectionAlgorithm2Supported() {
         return check(FEATURE_CHANNEL_SELCTION_ALGORITHM_2);
@@ -498,7 +498,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check LE Power Class 1
      *
-     * @return {@code true}:LE Power Class 1 bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE Power Class 1 bit is 1, {@code false}:bit is 0
      */
     public boolean isLePowerClass1Supported() {
         return check(FEATURE_LE_POWER_CLASS_1);
@@ -508,7 +508,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Minimum Number of Used Channels Procedure
      *
      * @return {@code true}:Minimum Number of Used Channels Procedure bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isMinimumNumberOfUsedChannelsProcedureSupported() {
         return check(FEATURE_MINIMUM_NUMBER_OF_USED_CHANNELS_PROCEDURE);
@@ -517,7 +517,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Connection CTE Request
      *
-     * @return {@code true}:Connection CTE Request bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Connection CTE Request bit is 1, {@code false}:bit is 0
      */
     public boolean isConnectionCteRequestSupported() {
         return check(FEATURE_CONNECTION_CTE_REQUEST);
@@ -527,7 +527,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Connection CTE Response
      *
      * @return {@code true}:Connection CTE Response bit is 1, {@code false}:bit is
-     *         0;
+     *         0
      */
     public boolean isConnectionCteResponseSupported() {
         return check(FEATURE_CONNECTION_CTE_RESPONSE);
@@ -537,7 +537,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Connectionless CTE Transmitter
      *
      * @return {@code true}:Connectionless CTE Transmitter bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isConnectionlessCteTransmitterSupported() {
         return check(FEATURE_CONNECTIONLESS_CTE_TRANSMITTER);
@@ -547,7 +547,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Connectionless CTE Receiver
      *
      * @return {@code true}:Connectionless CTE Receiver bit is 1, {@code false}:bit
-     *         is 0;
+     *         is 0
      */
     public boolean isConnectionlessCteReceiverSupported() {
         return check(FEATURE_CONNECTIONLESS_CTE_RECEIVER);
@@ -557,7 +557,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Antenna Switching During CTE Transmission (AoD)
      *
      * @return {@code true}:Antenna Switching During CTE Transmission (AoD) bit is
-     *         1, {@code false}:bit is 0;
+     *         1, {@code false}:bit is 0
      */
     public boolean isAntennaSwitchingDuringCteTransmissionAodSupported() {
         return check(FEATURE_ANTENNA_SWITCHING_DURING_CTE_TRANSMISSION_AOD);
@@ -567,7 +567,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Antenna Switching During CTE Reception (AoA)
      *
      * @return {@code true}:Antenna Switching During CTE Transmission (AoD) bit is
-     *         1, {@code false}:bit is 0;
+     *         1, {@code false}:bit is 0
      */
     public boolean isAntennaSwitchingDuringCteReceptionAoaSupported() {
         return check(FEATURE_ANTENNA_SWITCHING_DURING_CTE_RECEPTION_AOA);
@@ -577,7 +577,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Receiving Constant Tone Extensions
      *
      * @return {@code true}:Receiving Constant Tone Extensions bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isReceivingConstantToneExtensionsSupported() {
         return check(FEATURE_RECEIVING_CONSTANT_TONE_EXTENSIONS);
@@ -587,7 +587,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Periodic Advertising Sync Transfer - Sender
      *
      * @return {@code true}:Periodic Advertising Sync Transfer - Sender bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isPeriodicAdvertisingSyncTransferSenderSupported() {
         return check(FEATURE_PERIODIC_ADVERTISING_SYNC_TRANSFER_SENDER);
@@ -597,7 +597,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Periodic Advertising Sync Transfer - Recipient
      *
      * @return {@code true}:Periodic Advertising Sync Transfer - Recipient bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isPeriodicAdvertisingSyncTransferRecipientSupported() {
         return check(FEATURE_PERIODIC_ADVERTISING_SYNC_TRANSFER_RECIPIENT);
@@ -607,7 +607,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Sleep Clock Accuracy Updates
      *
      * @return {@code true}:Sleep Clock Accuracy Updates bit is 1, {@code false}:bit
-     *         is 0;
+     *         is 0
      */
     public boolean isSleepClockAccuracyUpdatesSupported() {
         return check(FEATURE_SLEEP_CLOCK_ACCURACY_UPDATES);
@@ -617,7 +617,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Remote Public Key Validation
      *
      * @return {@code true}:Remote Public Key Validation bit is 1, {@code false}:bit
-     *         is 0;
+     *         is 0
      */
     public boolean isRemotePublicKeyValidationSupported() {
         return check(FEATURE_REMOTE_PUBLIC_KEY_VALIDATION);
@@ -627,7 +627,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Connected Isochronous Stream – Central
      *
      * @return {@code true}:Connected Isochronous Stream – Central bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isConnectedIsochronousStreamCentralSupported() {
         return check(FEATURE_CONNECTED_ISOCHRONOUS_STREAM_CENTRAL);
@@ -637,7 +637,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Connected Isochronous Stream – Peripheral
      *
      * @return {@code true}:Connected Isochronous Stream – Peripheral bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isConnectedIsochronousStreamPeripheralSupported() {
         return check(FEATURE_CONNECTED_ISOCHRONOUS_STREAM_PERIPHERAL);
@@ -647,7 +647,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Isochronous Broadcaster
      *
      * @return {@code true}:Isochronous Broadcaster bit is 1, {@code false}:bit is
-     *         0;
+     *         0
      */
     public boolean isIsochronousBroadcasterSupported() {
         return check(FEATURE_ISOCHRONOUS_BROADCASTER);
@@ -656,7 +656,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
     /**
      * check Synchronized Receiver
      *
-     * @return {@code true}:Synchronized Receiver bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Synchronized Receiver bit is 1, {@code false}:bit is 0
      */
     public boolean isSynchronizedReceiverSupported() {
         return check(FEATURE_ISOCHRONOUS_RECEIVER);
@@ -666,7 +666,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Isochronous Channels (Host Sup-port)
      *
      * @return {@code true}:Isochronous Channels (Host Sup-port) bit is 1,
-     *         {@code false}:bit is 0;
+     *         {@code false}:bit is 0
      */
     public boolean isIsochronousChannelsSupported() {
         return check(FEATURE_ISOCHRONOUS_CHANNELS);
@@ -676,7 +676,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check LE Power Control Request
      *
      * @return {@code true}:LE Power Control Request bit is 1, {@code false}:bit is
-     *         0;
+     *         0
      */
     public boolean isLePowerControlRequestSupported() {
         return check(FEATURE_LE_POWER_CONTROL_REQUEST_33) || check(FEATURE_LE_POWER_CONTROL_REQUEST_34);
@@ -686,7 +686,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check LE Path Loss Monitoring
      *
      * @return {@code true}:LE Path Loss Monitoring bit is 1, {@code false}:bit is
-     *         0;
+     *         0
      */
     public boolean isLePathLossMonitoringSupported() {
         return check(FEATURE_LE_PATH_LOSS_MONITORING);
@@ -696,8 +696,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Periodic Advertising ADI support
      *
      * @return {@code true}:Periodic Advertising ADI support bit is 1,
-     *         {@code false}:bit is
-     *         0;
+     *         {@code false}:bit is 0
      */
     public boolean isPeriodicAdvertisingAdiSupported() {
         return check(FEATURE_PERIODIC_ADVERTISING_ADI_SUPPORT);
@@ -707,8 +706,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Connection Subrating support
      *
      * @return {@code true}:Connection Subrating support bit is 1, {@code false}:bit
-     *         is
-     *         0;
+     *         is 0
      */
     public boolean isConnectionSubratingSupported() {
         return check(FEATURE_CONNECTION_SUBRATING);
@@ -718,8 +716,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Connection Subrating (Host Support) support
      *
      * @return {@code true}:Connection Subrating (Host Support) support bit is 1,
-     *         {@code false}:bit is
-     *         0;
+     *         {@code false}:bit is 0
      */
     public boolean isConnectionSubratingHostSupportSupported() {
         return check(FEATURE_CONNECTION_SUBRATING_HOST_SUPPORT);
@@ -729,8 +726,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Channel Classification support
      *
      * @return {@code true}:Channel Classification support bit is 1,
-     *         {@code false}:bit is
-     *         0;
+     *         {@code false}:bit is 0
      */
     public boolean isChannelClassificationSupported() {
         return check(FEATURE_CHANNEL_CLASSIFICATION);
@@ -740,8 +736,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Advertising Coding Selection support
      *
      * @return {@code true}:Advertising Coding Selection support bit is 1,
-     *         {@code false}:bit is
-     *         0;
+     *         {@code false}:bit is 0
      */
     public boolean isAdvertisingCodingSelectionSupported() {
         return check(FEATURE_ADVERTISING_CODING_SELECTION);
@@ -752,8 +747,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      *
      * @return {@code true}:Advertising Coding Selection (Host Support) support bit
      *         is 1,
-     *         {@code false}:bit is
-     *         0;
+     *         {@code false}:bit is 0
      */
     public boolean isAdvertisingCodingSelectionHostSupportSupported() {
         return check(FEATURE_ADVERTISING_CODING_SELECTION_HOST_SUPPORT);
@@ -763,10 +757,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Periodic Advertising with Responses - Advertiser support
      *
      * @return {@code true}:Periodic Advertising with Responses - Advertiser support
-     *         bit
-     *         is 1,
-     *         {@code false}:bit is
-     *         0;
+     *         bit is 1, {@code false}:bit is 0
      */
     public boolean isPeriodicAdvertisingWithResponsesAdvertiserSupported() {
         return check(FEATURE_PERIODIC_ADVERTISING_WITH_RESPONSES_ADVERTISER);
@@ -776,10 +767,7 @@ public class LeSupportedFeatures extends AbstractAdvertisingData {
      * check Periodic Advertising with Responses - Scanner
      *
      * @return {@code true}:Periodic Advertising with Responses - Scanner support
-     *         bit
-     *         is 1,
-     *         {@code false}:bit is
-     *         0;
+     *         bit is 1, {@code false}:bit is 0
      */
     public boolean isPeriodicAdvertisingWithResponsesScannerSupported() {
         return check(FEATURE_PERIODIC_ADVERTISING_WITH_RESPONSES_SCANNER);

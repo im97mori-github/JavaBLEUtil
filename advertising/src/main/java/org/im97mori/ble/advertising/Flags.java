@@ -106,7 +106,7 @@ public class Flags extends AbstractAdvertisingData {
     /**
      * check LE Limited Discoverable Mode
      *
-     * @return {@code true}:LE Limited Discoverable Mode bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE Limited Discoverable Mode bit is 1, {@code false}:bit is 0
      */
     public boolean isLeLimitedDiscoverableMode() {
         return check(FLAG_LE_LIMITED_DISCOVERABLE_MODE);
@@ -115,7 +115,7 @@ public class Flags extends AbstractAdvertisingData {
     /**
      * check LE General Discoverable Mode
      *
-     * @return {@code true}:LE General Discoverable Mode bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:LE General Discoverable Mode bit is 1, {@code false}:bit is 0
      */
     public boolean isLeGeneralDiscoverableMode() {
         return check(FLAG_LE_GENERAL_DISCOVERABLE_MODE);
@@ -124,7 +124,7 @@ public class Flags extends AbstractAdvertisingData {
     /**
      * check LE BR/EDR Not Supported
      *
-     * @return {@code true}:BR/EDR Not Supported bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:BR/EDR Not Supported bit is 1, {@code false}:bit is 0
      */
     public boolean isBrEdrNotSupported() {
         return check(FLAG_BR_EDR_NOT_SUPPORTED);
@@ -133,7 +133,7 @@ public class Flags extends AbstractAdvertisingData {
     /**
      * check Simultaneous LE and BR/EDR to Same Device Capable (Controller)
      *
-     * @return {@code true}:Simultaneous LE and BR/EDR to Same Device Capable (Controller) bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Simultaneous LE and BR/EDR to Same Device Capable (Controller) bit is 1, {@code false}:bit is 0
      */
     public boolean isSimultaneousController() {
         return check(FLAG_SIMULTANEOUS_LE_AND_BR_EDR_TO_SAME_DEVICE_CAPABLE_CONTROLLER);
@@ -142,7 +142,7 @@ public class Flags extends AbstractAdvertisingData {
     /**
      * check Simultaneous LE and BR/EDR to Same Device Capable (Host)
      *
-     * @return {@code true}:Simultaneous LE and BR/EDR to Same Device Capable (Host) bit is 1, {@code false}:bit is 0;
+     * @return {@code true}:Simultaneous LE and BR/EDR to Same Device Capable (Host) bit is 1, {@code false}:bit is 0
      */
     @Deprecated
     public boolean isSimultaneousHost() {

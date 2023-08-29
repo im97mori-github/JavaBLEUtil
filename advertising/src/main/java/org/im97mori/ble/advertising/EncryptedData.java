@@ -93,6 +93,7 @@ public class EncryptedData extends AbstractAdvertisingData {
     /**
      * @return Randomizer
      */
+    @NonNull
     public byte[] getRandomizer() {
         return mRandomizer;
     }
@@ -100,6 +101,7 @@ public class EncryptedData extends AbstractAdvertisingData {
     /**
      * @return Payload
      */
+    @NonNull
     public byte[] getPayload() {
         return mPayload;
     }
@@ -107,6 +109,7 @@ public class EncryptedData extends AbstractAdvertisingData {
     /**
      * @return MIC
      */
+    @NonNull
     public byte[] getMic() {
         return mMic;
     }

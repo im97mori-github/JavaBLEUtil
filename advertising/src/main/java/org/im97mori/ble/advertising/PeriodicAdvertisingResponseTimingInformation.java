@@ -132,6 +132,7 @@ public class PeriodicAdvertisingResponseTimingInformation extends AbstractAdvert
     /**
      * @return RspAA
      */
+    @NonNull
     public byte[] getRspAa() {
         return mRspAa;
     }

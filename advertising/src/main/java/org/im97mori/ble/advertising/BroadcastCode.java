@@ -1,28 +1,26 @@
 package org.im97mori.ble.advertising;
 
-import static org.im97mori.ble.constants.DataType.SECURITY_MANAGER_TK_VALUE_DATA_TYPE;
+import static org.im97mori.ble.constants.DataType.BROADCAST_CODE_DATA_TYPE;
 
-import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-
-import org.im97mori.ble.BLEUtils;
+import java.util.Arrays;
 
 import androidx.annotation.NonNull;
 
 /**
  * <p>
- * Security Manager TK Value
+ * Broadcast_Code
  * <p>
  * https://www.bluetooth.com/specifications/assigned-numbers/generic-access-profile/
  * </p>
  */
-public class SecurityManagerTkValue extends AbstractAdvertisingData {
+public class BroadcastCode extends AbstractAdvertisingData {
 
     /**
-     * Security Manager TK Value
+     * Broadcast_Code
      */
-    private final byte[] mSecurityManagerTkValue = new byte[16];
+    private final byte[] mBroadcastCode;
 
     /**
      * @param data
@@ -32,7 +30,7 @@ public class SecurityManagerTkValue extends AbstractAdvertisingData {
      *            data offset
      * @see #TxPowerLevel(byte[], int, int)
      */
-    public SecurityManagerTkValue(@NonNull byte[] data, int offset) {
+    public BroadcastCode(@NonNull byte[] data, int offset) {
         this(data, offset, data[offset]);
     }
 
@@ -47,10 +45,10 @@ public class SecurityManagerTkValue extends AbstractAdvertisingData {
      * @param length
      *            1st octet of Advertising Data
      */
-    public SecurityManagerTkValue(@NonNull byte[] data, int offset, int length) {
+    public BroadcastCode(@NonNull byte[] data, int offset, int length) {
         super(length);
 
-        System.arraycopy(data, 2, mSecurityManagerTkValue, 0, 16);
+        mBroadcastCode = Arrays.copyOfRange(data, 2, data.length);
     }
 
     /**
@@ -59,9 +57,10 @@ public class SecurityManagerTkValue extends AbstractAdvertisingData {
      * @param securityManagerTkValue
      *            Security Manager TK Value
      */
-    public SecurityManagerTkValue(@NonNull byte[] securityManagerTkValue) {
-        super(17);
-        System.arraycopy(securityManagerTkValue, 0, mSecurityManagerTkValue, 0, 16);
+    public BroadcastCode(@NonNull byte[] broadcastCode) {
+        super(broadcastCode.length + 1);
+        mBroadcastCode = new byte[broadcastCode.length];
+        System.arraycopy(broadcastCode, 0, mBroadcastCode, 0, broadcastCode.length);
     }
 
     /**
@@ -69,15 +68,15 @@ public class SecurityManagerTkValue extends AbstractAdvertisingData {
      */
     @Override
     public int getDataType() {
-        return SECURITY_MANAGER_TK_VALUE_DATA_TYPE;
+        return BROADCAST_CODE_DATA_TYPE;
     }
 
     /**
-     * @return Security Manager TK Value
+     * @return Broadcast_Code
      */
     @NonNull
-    public BigInteger getSecurityManagerTkValue() {
-        return BLEUtils.createUInt128(mSecurityManagerTkValue, 0);
+    public byte[] getBroadcastCode() {
+        return mBroadcastCode;
     }
 
     /**
@@ -90,7 +89,7 @@ public class SecurityManagerTkValue extends AbstractAdvertisingData {
         ByteBuffer byteBuffer = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
         byteBuffer.put((byte) getLength());
         byteBuffer.put((byte) getDataType());
-        byteBuffer.put(mSecurityManagerTkValue);
+        byteBuffer.put(mBroadcastCode);
         return data;
     }
 }

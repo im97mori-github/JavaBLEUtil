@@ -54,7 +54,7 @@ public class SecurityManagerOutOfBandTest extends TestBase {
 		assertEquals(0b00000001, result1.getSecurityManagerOutOfBandFlag());
 		assertTrue(result1.isOobFlagsField());
 		assertFalse(result1.isLeSupported());
-		assertFalse(result1.isAddressType());
+		assertFalse(result1.isRandomAddress());
 	}
 
 	@Test
@@ -67,7 +67,7 @@ public class SecurityManagerOutOfBandTest extends TestBase {
 		assertEquals(0b00000010, result1.getSecurityManagerOutOfBandFlag());
 		assertFalse(result1.isOobFlagsField());
 		assertTrue(result1.isLeSupported());
-		assertFalse(result1.isAddressType());
+		assertFalse(result1.isRandomAddress());
 	}
 
 	@Test
@@ -80,7 +80,7 @@ public class SecurityManagerOutOfBandTest extends TestBase {
 		assertEquals(0b00001000, result1.getSecurityManagerOutOfBandFlag());
 		assertFalse(result1.isOobFlagsField());
 		assertFalse(result1.isLeSupported());
-		assertTrue(result1.isAddressType());
+		assertTrue(result1.isRandomAddress());
 	}
 
 	@Test
@@ -93,7 +93,7 @@ public class SecurityManagerOutOfBandTest extends TestBase {
 		assertEquals(0b00000001, result1.getSecurityManagerOutOfBandFlag());
 		assertTrue(result1.isOobFlagsField());
 		assertFalse(result1.isLeSupported());
-		assertFalse(result1.isAddressType());
+		assertFalse(result1.isRandomAddress());
 	}
 
 	@Test
@@ -106,7 +106,7 @@ public class SecurityManagerOutOfBandTest extends TestBase {
 		assertEquals(0b00000010, result1.getSecurityManagerOutOfBandFlag());
 		assertFalse(result1.isOobFlagsField());
 		assertTrue(result1.isLeSupported());
-		assertFalse(result1.isAddressType());
+		assertFalse(result1.isRandomAddress());
 	}
 
 	@Test
@@ -119,7 +119,7 @@ public class SecurityManagerOutOfBandTest extends TestBase {
 		assertEquals(0b00001000, result1.getSecurityManagerOutOfBandFlag());
 		assertFalse(result1.isOobFlagsField());
 		assertFalse(result1.isLeSupported());
-		assertTrue(result1.isAddressType());
+		assertTrue(result1.isRandomAddress());
 	}
 
 	@Test
@@ -133,7 +133,7 @@ public class SecurityManagerOutOfBandTest extends TestBase {
 		assertEquals(0b00000001, result1.getSecurityManagerOutOfBandFlag());
 		assertTrue(result1.isOobFlagsField());
 		assertFalse(result1.isLeSupported());
-		assertFalse(result1.isAddressType());
+		assertFalse(result1.isRandomAddress());
 	}
 
 	@Test
@@ -147,7 +147,7 @@ public class SecurityManagerOutOfBandTest extends TestBase {
 		assertEquals(0b00000010, result1.getSecurityManagerOutOfBandFlag());
 		assertFalse(result1.isOobFlagsField());
 		assertTrue(result1.isLeSupported());
-		assertFalse(result1.isAddressType());
+		assertFalse(result1.isRandomAddress());
 	}
 
 	@Test
@@ -161,7 +161,7 @@ public class SecurityManagerOutOfBandTest extends TestBase {
 		assertEquals(0b00001000, result1.getSecurityManagerOutOfBandFlag());
 		assertFalse(result1.isOobFlagsField());
 		assertFalse(result1.isLeSupported());
-		assertTrue(result1.isAddressType());
+		assertTrue(result1.isRandomAddress());
 	}
 
 	@Test

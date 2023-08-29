@@ -118,7 +118,7 @@ public class SecurityManagerOutOfBand extends AbstractAdvertisingData {
      *
      * @return {@code true}: Random Address, {@code false}: Public Address
      */
-    public boolean isAddressType() {
+    public boolean isRandomAddress() {
         return SECURITY_MANAGER_ADDRESS_TYPE == mSecurityManagerOutOfBandFlag;
     }
 

@@ -8542,6 +8542,38 @@ public class LeSupportedFeaturesTest extends TestBase {
     }
 
     @Test
+    public void test_parcelable_2_00042() {
+        byte[] data = getData();
+
+        LeSupportedFeatures result1 = new LeSupportedFeatures(data, 0, data[0]);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable_2_00043() {
+        byte[] data = getData();
+
+        LeSupportedFeatures result1 = new LeSupportedFeatures(data, 0, data[0]);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable_2_00044() {
+        byte[] data = getData();
+
+        LeSupportedFeatures result1 = new LeSupportedFeatures(data, 0, data[0]);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
+    public void test_parcelable_2_00045() {
+        byte[] data = getData();
+
+        LeSupportedFeatures result1 = new LeSupportedFeatures(data, 0, data[0]);
+        assertArrayEquals(data, result1.getBytes());
+    }
+
+    @Test
     public void test_parcelable_2_00100() {
         byte[] data = getData();
 

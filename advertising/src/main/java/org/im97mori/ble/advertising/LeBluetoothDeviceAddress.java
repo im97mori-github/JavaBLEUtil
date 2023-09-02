@@ -64,6 +64,8 @@ public class LeBluetoothDeviceAddress extends AbstractAdvertisingData {
      * @param leBluetoothDeviceAddress
      *            LE Bluetooth Device Address
      * @param isRandomAddress
+     *            {@code true}: Random Device Address, {@code false}: Public Device
+     *            Address
      */
     public LeBluetoothDeviceAddress(@NonNull byte[] leBluetoothDeviceAddress, boolean isRandomAddress) {
         super(8);

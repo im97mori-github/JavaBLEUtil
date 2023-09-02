@@ -18,9 +18,9 @@ public class ClassOfDeviceTest extends TestBase {
 	//@formatter:off
     private static final byte[] data_00001;
     static {
-		int classOfDevice = MajorServiceClasses.LIMITED_DISCOVERABLE_MODE_MAJOR_SERVICE_CLASSES 
+		int classOfDevice = MajorServiceClasses.INFORMATION_MAJOR_SERVICE_CLASSES 
 		| MajorDeviceClass.COMPUTER_MAJOR_DEVICE_CLASS 
-		| MinorDeviceClass.COMPUTER_UNCATEGORIZED_MINOR_DEVICE_CLASS;
+		| MinorDeviceClass.COMPUTER_DESKTOP_WORKSTATION_MINOR_DEVICE_CLASS;
         byte[] data = new byte[5];
         data[0] = 4;
         data[1] = CLASSOF_DEVICE_DATA_TYPE;
@@ -39,9 +39,9 @@ public class ClassOfDeviceTest extends TestBase {
 		assertEquals(4, result1.getLength());
 		assertEquals(CLASSOF_DEVICE_DATA_TYPE, result1.getDataType());
 		long classOfDevice = (data[2] & 0xff) | ((data[3] & 0xff) << 8) | ((data[4] & 0xff) << 16);
-		assertEquals(MajorServiceClasses.LIMITED_DISCOVERABLE_MODE_MAJOR_SERVICE_CLASSES,
+		assertEquals(MajorServiceClasses.INFORMATION_MAJOR_SERVICE_CLASSES,
 				result1.getMajorServiceClasses());
-		assertEquals("Limited Discoverable Mode",
+		assertEquals("Information (WEB-server, WAP-server, ...)",
 				result1.getMajorServiceClassesName());
 		assertEquals(
 				MajorDeviceClass.COMPUTER_MAJOR_DEVICE_CLASS,
@@ -49,9 +49,9 @@ public class ClassOfDeviceTest extends TestBase {
 		assertEquals("Computer (desktop, notebook, PDA, organizer, ...)",
 				result1.getMajorDeviceClassName());
 		assertEquals(ClassOfDevice.CLASS_OF_DEVICE_MINOR_DEVICE_CLASS_MASK &
-				MinorDeviceClass.COMPUTER_UNCATEGORIZED_MINOR_DEVICE_CLASS,
+				MinorDeviceClass.COMPUTER_DESKTOP_WORKSTATION_MINOR_DEVICE_CLASS,
 				result1.getMinorDeviceClass());
-		assertEquals("Uncategorized, code for device not assigned",
+		assertEquals("Desktop workstation",
 				result1.getMinorDeviceClassName());
 	}
 
@@ -63,9 +63,9 @@ public class ClassOfDeviceTest extends TestBase {
 		assertEquals(4, result1.getLength());
 		assertEquals(CLASSOF_DEVICE_DATA_TYPE, result1.getDataType());
 		long classOfDevice = (data[2] & 0xff) | ((data[3] & 0xff) << 8) | ((data[4] & 0xff) << 16);
-		assertEquals(MajorServiceClasses.LIMITED_DISCOVERABLE_MODE_MAJOR_SERVICE_CLASSES,
+		assertEquals(MajorServiceClasses.INFORMATION_MAJOR_SERVICE_CLASSES,
 				result1.getMajorServiceClasses());
-		assertEquals("Limited Discoverable Mode",
+		assertEquals("Information (WEB-server, WAP-server, ...)",
 				result1.getMajorServiceClassesName());
 		assertEquals(
 				MajorDeviceClass.COMPUTER_MAJOR_DEVICE_CLASS,
@@ -73,9 +73,9 @@ public class ClassOfDeviceTest extends TestBase {
 		assertEquals("Computer (desktop, notebook, PDA, organizer, ...)",
 				result1.getMajorDeviceClassName());
 		assertEquals(ClassOfDevice.CLASS_OF_DEVICE_MINOR_DEVICE_CLASS_MASK &
-				MinorDeviceClass.COMPUTER_UNCATEGORIZED_MINOR_DEVICE_CLASS,
+				MinorDeviceClass.COMPUTER_DESKTOP_WORKSTATION_MINOR_DEVICE_CLASS,
 				result1.getMinorDeviceClass());
-		assertEquals("Uncategorized, code for device not assigned",
+		assertEquals("Desktop workstation",
 				result1.getMinorDeviceClassName());
 	}
 
@@ -87,9 +87,9 @@ public class ClassOfDeviceTest extends TestBase {
 		assertEquals(4, result1.getLength());
 		assertEquals(CLASSOF_DEVICE_DATA_TYPE, result1.getDataType());
 		long classOfDevice = (data[2] & 0xff) | ((data[3] & 0xff) << 8) | ((data[4] & 0xff) << 16);
-		assertEquals(MajorServiceClasses.LIMITED_DISCOVERABLE_MODE_MAJOR_SERVICE_CLASSES,
+		assertEquals(MajorServiceClasses.INFORMATION_MAJOR_SERVICE_CLASSES,
 				result1.getMajorServiceClasses());
-		assertEquals("Limited Discoverable Mode",
+		assertEquals("Information (WEB-server, WAP-server, ...)",
 				result1.getMajorServiceClassesName());
 		assertEquals(
 				MajorDeviceClass.COMPUTER_MAJOR_DEVICE_CLASS,
@@ -97,9 +97,9 @@ public class ClassOfDeviceTest extends TestBase {
 		assertEquals("Computer (desktop, notebook, PDA, organizer, ...)",
 				result1.getMajorDeviceClassName());
 		assertEquals(ClassOfDevice.CLASS_OF_DEVICE_MINOR_DEVICE_CLASS_MASK &
-				MinorDeviceClass.COMPUTER_UNCATEGORIZED_MINOR_DEVICE_CLASS,
+				MinorDeviceClass.COMPUTER_DESKTOP_WORKSTATION_MINOR_DEVICE_CLASS,
 				result1.getMinorDeviceClass());
-		assertEquals("Uncategorized, code for device not assigned",
+		assertEquals("Desktop workstation",
 				result1.getMinorDeviceClassName());
 	}
 

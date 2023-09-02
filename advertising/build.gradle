@@ -5,6 +5,7 @@ dependencies {
     api "${myGroupId}:${coreConstantsDataType}:${loadVersion}"
     api "${myGroupId}:${coreConstantsDeclaration}:${loadVersion}"
     api "${myGroupId}:${coreConstantsDescriptor}:${loadVersion}"
+    api "${myGroupId}:${coreConstantsDevice}:${loadVersion}"
     api "${myGroupId}:${coreConstantsErrorCode}:${loadVersion}"
     api "${myGroupId}:${coreConstantsMember}:${loadVersion}"
     api "${myGroupId}:${coreConstantsProfile}:${loadVersion}"

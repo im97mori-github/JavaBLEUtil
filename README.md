@@ -14,7 +14,7 @@ project/build.gradle
 
 project/module/build.gradle
 
-    def version = '0.8.13' 
+    def version = '0.8.14' 
     dependencies {
         
 	     // All package
